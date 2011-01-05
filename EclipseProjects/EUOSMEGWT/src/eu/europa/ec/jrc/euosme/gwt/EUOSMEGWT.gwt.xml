@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/***LICENSE START
+ * Copyright 2011 EUROPEAN UNION
+ * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by
+ * the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ * 
+ * http://ec.europa.eu/idabc/eupl
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and
+ * limitations under the Licence.
+ * 
+ * Date: 03 January 2011
+ * Authors: Marzia Grasso, Angelo Quaglia, Massimo Craglia
+LICENSE END***/
+ -->
+ 
+<module rename-to='euosmegwt'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name="com.google.gwt.user.User" />
+  <inherits name="com.google.gwt.i18n.I18N" />
+  <inherits name="com.google.gwt.json.JSON" />
+  <inherits name="com.google.gwt.xml.XML" />
+  <inherits name="com.google.gwt.http.HTTP" />
+  <inherits name="com.google.gwt.resources.Resources" />
+  <inherits name="com.google.gwt.maps.GoogleMaps" />
+  <inherits name="com.google.gwt.ajaxloader.AjaxLoader" />
+       
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT'/>
+  
+  <extend-property name="locale" values="en"/>  
+  <!--  Set Locale -->
+  <extend-property name="locale" values="bg"/>    
+  <extend-property name="locale" values="cs"/> 
+  <extend-property name="locale" values="da"/>
+  <extend-property name="locale" values="de"/>
+  <extend-property name="locale" values="el"/>
+  <extend-property name="locale" values="es"/>
+  <extend-property name="locale" values="et"/>
+  <extend-property name="locale" values="fi"/>
+  <extend-property name="locale" values="fr"/>  
+  <extend-property name="locale" values="hu"/> 
+  <extend-property name="locale" values="it"/>  
+  <extend-property name="locale" values="lt"/>
+  <extend-property name="locale" values="lv"/>
+  <extend-property name="locale" values="mt"/>
+  <extend-property name="locale" values="nl"/>
+  <extend-property name="locale" values="pl"/>
+  <extend-property name="locale" values="pt"/>
+  <extend-property name="locale" values="ro"/>
+  <extend-property name="locale" values="sk"/>
+  <extend-property name="locale" values="sl"/>
+  <extend-property name="locale" values="sv"/>
+   
+  <set-property-fallback name="locale" value="en"/>
+  
+  <!-- Specify the paths for translatable code  -->
+  <source path='client'/>
+ 
+</module>

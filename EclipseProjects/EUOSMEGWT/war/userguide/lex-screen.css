@@ -1,0 +1,105 @@
+body 	{
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+}
+
+/*  general links properties */
+a:link, a:visited{
+	color: #002579;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+	color: #002579;
+}
+a.none 	{
+	background: none;
+	text-decoration: none;
+}
+
+/* general header properties */
+h1 	{
+	font-size: 1.2em;
+	color: #757D8D;
+	margin: 10px 30px 10px 30px;
+}
+h2 	{
+	font-size: 1.0em;
+	color: #3B4662;
+	margin: 35px 35px 5px 35px;
+}
+h3 	{
+	font-size: 0.9em;
+	color: #3B4662;
+	margin: 5px 5px 5px 35px;
+}
+h4 	{
+	font-size: 0.8em;
+	
+	margin: 5px 5px 5px 35px;
+}
+p 	{
+	font-size: 0.8em;
+	margin: 10px 35px 10px 45px;
+}
+#managed {
+	Z-INDEX: 16; LEFT:50%; WIDTH: 50%; POSITION: absolute; 
+	font-size: 0.7em; 
+	text-align:right;
+}
+
+/* horizontal rule */
+hr 	{
+margin: 0px 30px 0px 30px;
+border-top: 1px solid #B0B6C3;
+height: 1px;
+}
+hr.homepage 	{
+	margin: 0px 0px 0px 0px;
+}
+
+/* cell of language listbox */ 
+.bglang		{
+	background-color: #284377;
+	height: 52px;
+	padding-right: 7px;
+	text-align: right;
+	color: #FFFFFF;
+	font-weight: normal;
+	background-position-x:0%; background-position-y:0%; background-image:url('http://eur-lex.europa.eu/LexUriServ/lex/images/ban_8.gif'); background-repeat:no-repeat
+}
+p.bglang 	{
+	background: none;
+	height: 52px;
+	margin: 0px 0px 0px 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	text-align: right;
+	font-size: 0.8em;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+em.bglang 	{
+	visibility : hidden; display: none;
+}
+
+/* property of lang links */
+a.langue:link, a.langue:visited {
+	font-size: 0.8em;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+/* style pour les textes html autonomes */
+#TexteOnly {
+	font-size: 0.9em;
+	margin: 0px 30px 10px 30px;
+	padding: 10px 10px 10px 10px;
+}
+#TexteOnly p {
+	font-size: 0.9em;
+	margin: 5px 15px 5px 15px;
+}

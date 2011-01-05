@@ -1,0 +1,112 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115"
+	xmlns:mybase="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui"	
+    ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+	<ui:style>
+    .pretty {
+    	width: 100%;
+    }
+    .pretty2 {
+    	height: 100%;
+    	width: 100%;
+    }
+   </ui:style>
+    <g:DockLayoutPanel ui:field="lp">
+		<g:north size='123'>
+			<g:VerticalPanel addStyleNames="{style.pretty}">
+		<g:HTML ui:field="myHeader">
+			<div id="top">
+  				<!-- Banner -->
+  					<div id="bannerBackground">
+          				<div class="bannerRight">
+              				<div class="title" id="title-en">
+              					<ui:attribute name='id' description='Title stylesheet in language' key='title-css'/>
+              				</div>
+              				<div id="imageBanner"><h1><ui:msg description="EU" key="EC">European Commission</ui:msg></h1></div>
+              				<div id="linkBox">
+                  				<div id="linkBoxTools">
+								<ul>
+								<!-- about this site --><li><a href="#" onclick="javascript:window.open('userguide/about.html','about','scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550');"><ui:msg description="About this site" key="About">About this site</ui:msg></a></li>
+								<!-- contact <li><a accesskey="7" href="#"><ui:attribute name='href' description='Link to page contact' key='link-contact'/><ui:msg description="Contact" key="Contact">Contact</ui:msg></a></li>-->
+								<!-- legal notice <li><a accesskey="8" id="legalNotice" href="/geninfo/legal_notices_en.htm"><ui:attribute name='href' description='Link to page legal notice' key='link-legalNotice'/><ui:msg description="Legal notice" key="legalNotice">Legal notice</ui:msg></a></li>-->
+								</ul>
+                  				</div>
+              				</div>
+          				</div>
+   	      				<div id="langsFormContainer"></div>
+   	      				<div id="linkBoxArrow"></div>
+                    <div id="langsSelector">
+       	              <ul id="official">
+                           <li><a href="#template_page#bg" lang="bg" hreflang="bg" title="български" class="lang">bg</a></li>
+                           <li><a href="#template_page#cs" lang="cs" hreflang="cs" title="čeština" class="lang">cs</a></li>
+                           <li><a href="#template_page#da" lang="da" hreflang="da" title="dansk" class="lang">da</a></li>
+                           <li><a href="#template_page#de" lang="de" hreflang="de" title="Deutsch" class="lang">de</a></li>
+                           <li><a href="#template_page#el" lang="el" hreflang="el" title="ελληνικά" class="lang">el</a></li>
+                           <li><a href="#template_page#en" lang="en" hreflang="en" title="English" class="curlang">en</a></li>
+                           <li><a href="#template_page#es" lang="es" hreflang="es" title="español" class="lang">es</a></li>
+                           <li><a href="#template_page#et" lang="et" hreflang="et" title="eesti keel" class="lang">et</a></li>
+                           <li><a href="#template_page#fi" lang="fi" hreflang="fi" title="suomi" class="lang">fi</a></li>
+                           <li><a href="#template_page#fr" lang="fr" hreflang="fr" title="français" class="lang">fr</a></li>
+                           <!--<li><a href="#template_page#ga" lang="ga" hreflang="ga" title="Gaeilge" class="lang">ga</a></li>-->
+                           <li><a href="#template_page#hu" lang="hu" hreflang="hu" title="magyar" class="lang">hu</a></li>
+                           <li><a href="#template_page#it" lang="it" hreflang="it" title="italiano" class="lang">it</a></li>
+                           <li><a href="#template_page#lt" lang="lt" hreflang="lt" title="lietuvių kalba" class="lang">lt</a></li>
+                           <li><a href="#template_page#lv" lang="lv" hreflang="lv" title="latviešu valoda" class="lang">lv</a></li>
+                           <li><a href="#template_page#mt" lang="mt" hreflang="mt" title="Malti" class="lang">mt</a></li>
+                           <li><a href="#template_page#nl" lang="nl" hreflang="nl" title="Nederlands" class="lang">nl</a></li>
+                           <li><a href="#template_page#pl" lang="pl" hreflang="pl" title="polski" class="lang">pl</a></li>
+                           <li><a href="#template_page#pt" lang="pt" hreflang="pt" title="português" class="lang">pt</a></li>
+                           <li><a href="#template_page#ro" lang="ro" hreflang="ro" title="română" class="lang">ro</a></li>
+                           <li><a href="#template_page#sk" lang="sk" hreflang="sk" title="slovenčina" class="lang">sk</a></li>
+                           <li><a href="#template_page#sl" lang="sl" hreflang="sl" title="slovenščina" class="lang">sl</a></li>		                          
+                           <li><a href="#template_page#sv" lang="sv" hreflang="sv" title="svenska" class="lang">sv</a></li>
+                      </ul>                              
+                			</div>
+					<div id="linkBoxLanguage"></div>
+				</div>
+      	        	<div id="path">
+          				<div>
+	                	<ul>
+	                    <li class="first-child">
+	                        <a id="firstTab" href="/index_en.htm"><ui:msg description="EU" key="EC">European Commission</ui:msg></a>
+	                    </li>
+	                    <li>EUOSME</li>
+	                	</ul>
+          				</div>
+      				</div>
+      				<!-- End banner -->
+      			</div>			
+		</g:HTML>
+   		<g:MenuBar ui:field="menuBar" />
+   	 		</g:VerticalPanel>
+   		</g:north>
+   		<g:center addStyleNames="auto">
+   			<g:SplitLayoutPanel ui:field="slp">
+   			<g:center addStyleNames="auto">
+   				<g:FormPanel ui:field="myForm" addStyleNames="{style.pretty2}">
+   					<mybase:Tabs ui:field="tabs"/>   							
+				</g:FormPanel>   			
+   			</g:center>
+   			<g:east size='250'>   			
+   				<g:StackLayoutPanel unit='PX'>
+  					<g:stack>
+    					<g:customHeader size='30'><g:HorizontalPanel><g:Label><ui:msg description="Basic" key="Basic">Basic</ui:msg></g:Label><g:Button ui:field="refreshHTML"/></g:HorizontalPanel></g:customHeader>
+    					<g:HTML ui:field="myHTML"/>    					
+  					</g:stack>
+  					<g:stack>
+    					<g:header size='30'><ui:msg description="Advanced" key="Advanced">Advanced</ui:msg></g:header>
+   						<g:Tree ui:field="myTree"/>   
+  					</g:stack>
+ 				</g:StackLayoutPanel> 					   			   			
+   			</g:east>
+   			</g:SplitLayoutPanel>   			   			
+   		</g:center>
+   		<g:south size="0"> 
+   			<g:HTML ui:field="userGuideHTM"/>
+   		</g:south> 		
+ 		</g:DockLayoutPanel>				
+</ui:UiBinder> 

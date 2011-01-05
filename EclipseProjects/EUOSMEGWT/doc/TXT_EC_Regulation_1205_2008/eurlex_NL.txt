@@ -1,0 +1,987 @@
+Verordening (EG) nr. 1205/2008 van de Commissie
+
+van 3 december 2008
+
+ter uitvoering van Richtlijn 2007/2/EG van het Europees Parlement en de Raad betreffende metagegevens
+
+(Voor de EER relevante tekst)
+
+DE COMMISSIE VAN DE EUROPESE GEMEENSCHAPPEN,
+
+Gelet op het Verdrag tot oprichting van de Europese Gemeenschap,
+
+Gelet op Richtlijn 2007/2/EG van het Europees Parlement en de Raad van 14 maart 2007 tot oprichting van een infrastructuur voor ruimtelijke informatie in de Gemeenschap (Inspire) [1], en met name op artikel 5, lid 4,
+
+Overwegende hetgeen volgt:
+
+(1) Richtlijn 2007/2/EG stelt algemene regels vast voor de oprichting van de infrastructuur voor ruimtelijke informatie in de Europese Gemeenschap. Aangezien het voor de goede werking van die infrastructuur noodzakelijk is dat een gebruiker verzamelingen ruimtelijke gegevens en diensten kan vinden en kan nagaan of en met welk doel zij mogen worden gebruikt, moeten de lidstaten beschrijvingen van die verzamelingen ruimtelijke gegevens en diensten ter beschikking stellen in de vorm van metagegevens. Aangezien de metagegevens compatibel en bruikbaar moeten zijn in een communautaire en grensoverschrijdende context, moeten er regels worden vastgesteld betreffende de metagegevens die worden gebruikt om de verzamelingen ruimtelijke gegevens en diensten te beschrijven overeenkomstig de in de bijlagen I, II en III bij Richtlijn 2007/2/EG vermelde thema’s.
+
+(2) Een reeks metagegevenselementen moet worden gedefinieerd om de identificatie van de informatiebron waarvoor metagegevens worden aangemaakt, mogelijk te maken, alsook de classificatie en identificatie van de geografische locatie ervan en de tijdsreferentie, kwaliteit en geldigheid, conformiteit met de uitvoeringsbepalingen inzake de interoperabiliteit van verzamelingen ruimtelijke gegevens en diensten, beperkingen betreffende toegang en gebruik en de organisatie die voor de bron verantwoordelijk is. Metagegevenselementen met betrekking tot metagegevens van een informatiebron zelf zijn ook noodzakelijk voor het bijhouden van de gecreëerde metagegevens en voor het identificeren van de organisatie die verantwoordelijk is voor de creatie en het onderhoud van de metagegevens. Dit is het minimale aantal metagegevenselementen dat vereist is om te voldoen aan Richtlijn 2007/2/EG en sluit de mogelijkheid niet uit voor organisaties om de informatiebronnen aan te vullen met extra elementen op grond van internationale normen of werkmethoden in hun belangengemeenschap. Het sluit evenmin de mogelijkheid uit om richtsnoeren vast te stellen die worden opgesteld en bijgehouden door de Commissie, in het bijzonder wanneer dit noodzakelijk is om de interoperabiliteit van metagegevens te garanderen.
+
+(3) Er zijn instructies nodig voor de validering van metagegevens overeenkomstig Richtlijn 2007/2/EG met betrekking tot de voorwaarden voor en de verwachte multipliciteit van elk metagegevenselement, met name of de waarden voor elk element naar verwachting altijd, slechts één keer of meer dan eens in metagegevens van een informatiebron zullen voorkomen.
+
+(4) Het waardedomein van elk metagegevenselement is noodzakelijk om de interoperabiliteit van de metagegevens in een meertalige context te garanderen; dat waardedomein moet de vorm kunnen aannemen van vrije tekst, datums, codes uit internationale normen, bijvoorbeeld taalcodes, trefwoorden uit gecontroleerde lijsten of thesauri, of tekenstrings.
+
+(5) De in deze verordening vervatte maatregelen zijn in overeenstemming met het advies van het bij artikel 22 van Richtlijn 2007/2/EG ingestelde comité,
+
+HEEFT DE VOLGENDE VERORDENING VASTGESTELD:
+
+Artikel 1
+
+Onderwerp
+
+Deze verordening stelt de vereisten vast voor het opstellen en bijhouden van metagegevens voor verzamelingen ruimtelijke gegevens, reeksen van dergelijke gegevens en diensten met betrekking tot ruimtelijke gegevens die overeenstemmen met de in de bijlagen I, II en III bij Richtlijn 2007/2/EG vermelde thema’s.
+
+Artikel 2
+
+Definities
+
+Voor de toepassing van deze verordening gelden, naast de definities van artikel 3 van Richtlijn 2007/2/EG, de in deel A van de bijlage bepaalde definities.
+
+Artikel 3
+
+Opstellen en bijhouden van metagegevens
+
+De metagegevens die betrekking hebben op verzamelingen ruimtelijke gegevens, reeksen van dergelijke gegevens en diensten met betrekking tot ruimtelijke gegevens omvatten de in deel B van de bijlage bepaalde metagegevenselementen of groepen metagegevenselementen en worden opgesteld en bijgehouden overeenkomstig de in de delen C en D van de bijlage vastgestelde regels.
+
+Artikel 4
+
+Inwerkingtreding
+
+Deze verordening treedt in werking op de twintigste dag volgende op die van haar bekendmaking in het Publicatieblad van de Europese Unie.
+
+Deze verordening is verbindend in al haar onderdelen en is rechtstreeks toepasselijk in elke lidstaat.
+
+Gedaan te Brussel, 3 december 2008.
+
+Voor de Commissie
+
+Stavros Dimas
+
+Lid van de Commissie
+
+[1] PB L 108 van 25.4.2007, blz. 1.
+
+--------------------------------------------------
+
+BIJLAGE
+
+REGELS VOOR DE TENUITVOERLEGGING VAN METAGEGEVENS
+
+DEEL A
+
+Interpretatie
+
+1. In deze verordening wordt verstaan onder:
+
+- "tekenstring": het waardedomein van metagegevenselementen die worden weergegeven als een reeks karakters die als geheel worden behandeld;
+
+- "vrije tekst": het waardedomein van metagegevenselementen dat in één of meer natuurlijke talen wordt uitgedrukt;
+
+- "algemene beschrijving herkomst": de geschiedenis van een verzameling gegevens, en de levenscyclus van vergaring en verwerving, via compilatie en afleiding tot de huidige vorm, overeenkomstig EN ISO 19101;
+
+- "metagegevenselement": een afzonderlijke eenheid metagegevens, overeenkomstig EN ISO 19115;
+
+- "namespace": een verzameling namen, geïdentificeerd aan de hand van een uri-referentie (Uniform Resource Identifier), die in xml-documenten (Extensible Markup Language) gebruikt worden als namen voor elementen en kenmerken;
+
+- "kwaliteit": alle kenmerken van een product die betrekking hebben op het vermogen om te voldoen aan de expliciete en impliciete behoeften, overeenkomstig EN ISO 19101;
+
+- "bron": een informatiebron die een directe of indirecte verwijzing bevat naar een specifieke plaats of geografisch gebied;
+
+- "reeks verzamelingen ruimtelijke gegevens": een geheel van verzamelingen ruimtelijke gegevens met dezelfde productspecificatie.
+
+2. Verwijzingen naar de geldigheid van verzamelingen ruimtelijke gegevens worden verondersteld betrekking te hebben op het volgende:
+
+- het ruimte- en tijdkader die betrekking hebben op de gegevens;
+
+- of de gegevens zijn gecontroleerd via een meting of prestatienorm;
+
+- de mate waarin de gegevens geschikt zijn voor het doel;
+
+- in voorkomend geval, de rechtsgeldigheid van de verzameling ruimtelijke gegevens.
+
+DEEL B
+
+Metagegevenselementen
+
+1. IDENTIFICATIE
+
+De volgende metagegevenselementen worden verstrekt:
+
+1.1. Titel van de bron
+
+Dit is een kenmerkende en vaak unieke naam waaronder de bron bekend staat.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+1.2. Samenvatting van de bron
+
+Een korte samenvatting van de inhoud van de bron.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+1.3. Type bron
+
+Het type bron dat door de metagegevens wordt beschreven.
+
+Het waardedomein van dit metagegevenselement wordt gedefinieerd in deel D.1.
+
+1.4. Resource locator
+
+De resource locator bevat de link(s) naar de bron en/of de link naar aanvullende informatie over de bron.
+
+Het waardedomein van dit metagegevenselement is een tekenstring, over het algemeen Uniform Resource Locator (url) genaamd.
+
+1.5. Unieke identifier van de bron
+
+Een waarde die de bron op een unieke manier identificeert.
+
+Het waardedomein van dit metagegevenselement is een verplichte tekenstringcode, over het algemeen toegewezen door de eigenaar van de gegevens, en een tekenstringnamespace die de context van de identificatiecode op een unieke manier beschrijft (bijvoorbeeld de eigenaar van de gegevens).
+
+1.6. Coupled resource
+
+Als de bron een dienst met betrekking tot ruimtelijke gegevens is, identificeert dit metagegevenselement, waar relevant, de beoogde verzameling(en) ruimtelijke gegevens via hun unieke identifiers (uri).
+
+Het waardedomein van dit metagegevenselement is een verplichte tekenstringcode, over het algemeen toegewezen door de eigenaar van de gegevens, en een tekenstringnamespace die de context van de identificatiecode op een unieke manier beschrijft (bijvoorbeeld de eigenaar van de gegevens).
+
+1.7. Taal van de bron
+
+De in de bron gebruikte taal of talen.
+
+Het waardedomein van dit metagegevenselement is beperkt tot de in ISO 639-2 bepaalde talen.
+
+2. CLASSIFICATIE VAN RUIMTELIJKE GEGEVENS EN DIENSTEN
+
+2.1. Onderwerpcategorie
+
+Dit is een hoogwaardig classificatieschema ter ondersteuning van de indeling en het zoeken op onderwerp van de beschikbare bronnen van ruimtelijke gegevens.
+
+Het waardedomein van dit metagegevenselement wordt gedefinieerd in deel D.2.
+
+2.2. Type dienst met betrekking tot ruimtelijke gegevens
+
+Dit is een classificatie ter ondersteuning van het zoeken naar beschikbare diensten met betrekking tot ruimtelijke gegevens. Een bepaalde dienst wordt slechts in één categorie opgenomen.
+
+Het waardedomein van dit metagegevenselement wordt gedefinieerd in deel D.3.
+
+3. TREFWOORD
+
+Als de bron een dienst met betrekking tot ruimtelijke gegevens is, wordt ten minste één trefwoord uit deel D.4 verstrekt.
+
+Als de bron een verzameling ruimtelijke gegevens of een reeks daarvan is, wordt ten minste één trefwoord verstrekt uit de algemene meertalige milieuthesaurus (GEMET) ter beschrijving van het relevante ruimtegegevensthema als bepaald in bijlage I, II of III bij Richtlijn 2007/2/EG.
+
+Voor elk trefwoord worden de volgende metagegevens verstrekt:
+
+3.1. Trefwoordwaarde
+
+De trefwoordwaarde is een algemeen gebruikt woord, een geformaliseerd woord of uitdrukking die wordt gebruikt om het onderwerp te beschrijven. De categorie alleen is te algemeen voor gedetailleerde zoekopdrachten; aan de hand van trefwoorden kan in de volledige tekst worden gezocht en kan men gestructureerd op trefwoord zoeken.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+3.2. Origineel gecontroleerd vocabulaire
+
+Als de trefwoordwaarde afkomstig is uit een gecontroleerd vocabulaire (thesaurus, ontologie), zoals GEMET, wordt het origineel gecontroleerd vocabulaire gebruikt.
+
+Deze verwijzing bevat ten minste de titel en een datum (datum van bekendmaking, laatste herziening of creatie) van het origineel gecontroleerd vocabulaire.
+
+4. GEOGRAFISCHE LOCATIE
+
+De in artikel 11, lid 2, onder e), van Richtlijn 2007/2/EG bedoelde geografische locatie wordt uitgedrukt aan de hand van het metagegevenselement geografische rechthoek.
+
+4.1. Geografische rechthoek
+
+Dit is de omvang van de bron in de geografische ruimte, weergegeven in een rechthoek.
+
+In deze rechthoek wordt de positie uitgedrukt in oostelijke en westelijke lengtegraad en in zuidelijke en noordelijke breedtegraad, in decimale graden, met ten minste 2 decimalen.
+
+5. TIJDSREFERENTIE
+
+Dit metagegevenselement betreft het vereiste om informatie te verstrekken over de tijdsdimensie van de gegevens, als bedoeld in artikel 8, lid 2, onder d), van Richtlijn 2007/2/EG. Ten minste één van de in de punten 5.1 tot 5.4 bepaalde metagegevenselementen moet worden verstrekt.
+
+Het waardedomein van de in de punten 5.1 tot 5.4 bedoelde metagegevenselementen is een reeks gegevens. Elk gegeven verwijst naar een tijdsreferentie en wordt uitgedrukt in een vorm die met dat systeem compatibel is. De verwijzing is standaard gebaseerd op de Gregoriaanse kalender en de datums worden weergegeven overeenkomstig ISO 8601.
+
+5.1. Temporele dekking
+
+De temporele dekking definieert de termijn waarover de inhoud van de bron zich uitstrekt. Deze termijn kan als volgt worden uitgedrukt:
+
+- één datum,
+
+- een interval van datums, weergegeven aan de hand van de begin- en einddatum van het interval,
+
+- een combinatie van individuele datums en intervallen van datums.
+
+5.2. Datum van bekendmaking
+
+Dit is de datum van bekendmaking van de bron, indien beschikbaar, of de datum van inwerkingtreding. Er kan meer dan één datum van bekendmaking zijn.
+
+5.3. Datum van laatste herziening
+
+Dit is de datum van laatste herziening van de bron, indien zij is herzien. Er kan slechts één datum van laatste herziening zijn.
+
+5.4. Aanmaakdatum
+
+Dit is de datum waarop de bron werd aangemaakt. Er kan slechts één aanmaakdatum zijn.
+
+6. KWALITEIT EN GELDIGHEID
+
+Aan de in artikel 5, lid 2, en artikel 11, lid 2, van Richtlijn 2007/2/EG bepaalde vereisten met betrekking tot de kwaliteit en de geldigheid van ruimtelijke gegevens wordt voldaan aan de hand van de volgende metagegevenselementen:
+
+6.1. Algemene beschrijving herkomst
+
+Dit heeft betrekking op de verwerkingsgeschiedenis en/of de algemene kwaliteit van de verzameling ruimtelijke gegevens. Waar aangewezen kan ook worden vermeld of de verzameling gegevens gevalideerd of de kwaliteit gegarandeerd is, of het de officiële versie betreft (als er meerdere versies bestaan) en of zij rechtsgeldig is.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+6.2. Ruimtelijke resolutie
+
+Ruimtelijke resolutie verwijst naar de graad van detail van de verzameling gegevens. Dit wordt weergegeven als een reeks resolutiewaarden van nul tot oneindig (typisch voor rastergegevens en beeldgebonden producten) of equivalente schalen (typisch voor kaarten of kaartgebonden producten).
+
+Een soortgelijke schaal wordt over het algemeen weergegeven als een gehele waarde die de schaalnoemer weergeeft.
+
+De resolutieafstand wordt weergegeven als een numerieke waarde met een lengte-eenheid.
+
+7. OVEREENSTEMMING
+
+Aan de in artikel 5, lid 2, onder a) en artikel 11, lid 2, onder d), van Richtlijn 2007/2/EG bedoelde vereisten met betrekking tot de (mate van) overeenstemming met de in het kader van artikel 7, lid 1, van Richtlijn 2007/2/EG genomen uitvoeringsbepalingen, wordt voldaan aan de hand van de volgende metagegevenselementen:
+
+7.1. Specificatie
+
+Dit is een opsomming van de bij artikel 7, lid 1, van Richtlijn 2007/2/EG genomen uitvoeringsbepalingen of een andere specificatie waaraan een bepaalde bron beantwoordt.
+
+Een bron kan aan meer dan één van de bij artikel 7, lid 1, van Richtlijn 2007/2/EG genomen uitvoeringsbepalingen of een andere specificatie beantwoorden.
+
+Deze rubriek bevat ten minste de titel en een referentiedatum (publicatiedatum, datum van laatste herziening of creatie) van de bij artikel 7, lid 1, van Richtlijn 2007/2/EG genomen uitvoeringsbepalingen of van de andere specificatie.
+
+7.2. Conformiteitsindicatie met de specificatie
+
+Dit is de indicatie van de overeenstemming van de bron met de bij artikel 7, lid 1, van Richtlijn 2007/2/EG genomen uitvoeringsbepalingen of een andere specificatie.
+
+Het waardedomein van dit metagegevenselement wordt gedefinieerd in deel D.5.
+
+8. BEPERKING MET BETREKKING TOT TOEGANG EN GEBRUIK
+
+Een beperking met betrekking tot toegang en gebruik kan betrekking hebben op:
+
+- een reeks voorwaarden die van toepassing zijn op toegang en gebruik (8.1) en/of
+
+- een reeks beperkingen op openbare toegang (8.2).
+
+8.1. Voorwaarden voor toegang en gebruik
+
+Dit metagegevenselement bepaalt de voorwaarden voor de toegang tot en het gebruik van verzamelingen ruimtelijke gegevens en diensten en, indien van toepassing, de daarmee samenhangende vergoedingen overeenkomstig artikel 5, lid 2, onder b) en artikel 11, lid 2, onder f), van Richtlijn 2007/2/EG.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+Het element moet waarden bevatten. Indien geen voorwaarden gelden voor de toegang en het gebruik van de bron, wordt "geen voorwaarden" vermeld. Als de voorwaarden niet bekend zijn, wordt "voorwaarden niet bekend" gebruikt.
+
+Dit element verstrekt ook informatie over eventuele vergoedingen voor toegang tot en gebruik van de bron, indien van toepassing, of bevat een verwijzing naar een Uniform Resource Locator (url) waar informatie over vergoedingen te vinden is.
+
+8.2. Beperkingen op openbare toegang
+
+Wanneer de lidstaten de openbare toegang tot verzamelingen en diensten met betrekking tot ruimtelijke gegevens in het kader van artikel 13 van Richtlijn 2007/2/EG beperken, wordt in dit metagegevenselement informatie verstrekt over de beperkingen en de redenen daarvoor.
+
+Als er geen beperkingen op openbare toegang zijn, wordt dat in dit metagegevenselement vermeld.
+
+Het waardedomein van dit metagegevenselement is vrije tekst.
+
+9. ORGANISATIES DIE VERANTWOORDELIJK ZIJN VOOR DE CREATIE, HET BEHEER, HET ONDERHOUD EN DE VERSPREIDING VAN VERZAMELINGEN RUIMTELIJKE GEGEVENS EN DIENSTEN
+
+In het kader van artikel 5, lid 2, onder d) en artikel 11, lid 2, onder g), van Richtlijn 2007/2/EG worden de volgende twee metagegevenselementen verstrekt:
+
+9.1. Verantwoordelijke organisatie bron
+
+Dit element omvat een beschrijving van de organisatie die verantwoordelijk is voor de creatie, het beheer, het onderhoud en de verspreiding van verzamelingen ruimtelijke gegevens en diensten.
+
+Deze beschrijving omvat:
+
+- de naam van de organisatie als vrije tekst,
+
+- een e-mailadres als tekenstring.
+
+9.2. Rol van de verantwoordelijke organisatie bron
+
+Dit is de rol van de verantwoordelijke organisatie bron.
+
+Het waardedomein van dit metagegevenselement wordt gedefinieerd in deel D.6.
+
+10. METAGEGEVENS OVER METAGEGEVENS
+
+In het kader van artikel 5, lid 1, van Richtlijn 2007/2/EG worden de volgende metagegevenselementen verstrekt:
+
+10.1. Contactpunt voor metagegevens
+
+Hier wordt de organisatie vermeld die verantwoordelijk is voor de creatie en het onderhoud van de metagegevens.
+
+Deze beschrijving omvat:
+
+- de naam van de organisatie als vrije tekst;
+
+- een e-mailadres als tekenstring.
+
+10.2. Datum van metagegevens
+
+De datum geeft aan wanneer de metagegevensbestanden werden aangemaakt of bijgewerkt.
+
+Deze datum wordt weergegeven volgens de norm ISO 8601.
+
+10.3. Taal van metagegevens
+
+Dit is de taal waarin de metagegevenselementen worden weergegeven.
+
+Het waardedomein van dit metagegevenselement is beperkt tot de officiële talen van de Gemeenschap volgens de norm ISO 639-2.
+
+DEEL C
+
+Instructies inzake multipliciteit en voorwaarden van metagegevenselementen
+
+De metagegevens die een bron beschrijven, omvatten, voor een (reeks) verzamelingen ruimtelijke gegevens, de in tabel 1 opgenomen metagegevenselementen of groepen metagegevenselementen en, voor diensten betreffende ruimtelijke gegevens, de in tabel 2 opgenomen metagegevenselementen of groepen metagegevenselementen.
+
+Die metagegevenselementen of groepen metagegevenselementen stemmen overeen met de in de tabellen 1 en 2 opgenomen verwachte multipliciteit en voorwaarden.
+
+Wanneer voor een bepaald metagegevenselement geen voorwaarde is bepaald, is dat element verplicht.
+
+De tabellen bevatten de volgende informatie:
+
+- de eerste kolom bevat de verwijzing naar de paragraaf in deel B van de bijlage waarin het metagegevenselement of de groep metagegevenselementen is gedefinieerd;
+
+- de tweede kolom bevat de naam van het metagegevenselement of de groep metagegevenselementen;
+
+- de derde kolom bepaalt de multipliciteit van een metagegevenselement. De multipliciteit wordt weergegeven volgens de Unified Modelling Language (uml):
+
+- 1 betekent dat het metagegevenselement slechts één keer voorkomt in een reeks resultaten,
+
+- 1..* betekent dat het element minstens één keer voorkomt in een reeks resultaten,
+
+- 0..1 geeft aan dat de aanwezigheid van het metagegevenselement in een reeks resultaten aan voorwaarden gebonden is maar slechts één keer kan voorkomen,
+
+- 0..* geeft aan dat de aanwezigheid van het metagegevenselement in een reeks resultaten aan voorwaarden gebonden is en één of meerdere keren kan voorkomen,
+
+- wanneer de multipliciteit 0..1 of 0..* is, wordt bij de voorwaarde aangegeven in welke gevallen de metagegevenselementen verplicht zijn;
+
+- de vierde kolom bevat voorwaarden voor het geval dat de multipliciteit van het element niet voor alle types van bronnen geldt. In de andere gevallen zijn alle elementen verplicht.
+
+Tabel 1
+
+Metagegevens voor (reeksen van) verzamelingen ruimtelijke gegevens
+
+Referentie | Metagegevenselementen | Multipliciteit | Voorwaarde |
+
+1.1 | Titel van de bron | 1 | |
+
+1.2 | Samenvatting van de bron | 1 | |
+
+1.3 | Type bron | 1 | |
+
+1.4 | Resource locator | 0..* | Als er een link met informatie over de bron en/of diensten met betrekking tot toegang beschikbaar is, is dit een verplicht element. |
+
+1.5 | Unieke identifier van de bron | 1..* | |
+
+1.7 | Taal van de bron | 0..* | Verplicht indien de bron informatie in tekstvorm omvat. |
+
+2.1 | Onderwerpcategorie | 1..* | |
+
+3 | Trefwoord | 1..* | |
+
+4.1 | Geografische rechthoek | 1..* | |
+
+5 | Tijdsreferentie | 1..* | |
+
+6.1 | Algemene beschrijving herkomst | 1 | |
+
+6.2 | Ruimtelijke resolutie | 0..* | Verplicht voor (reeksen van) verzamelingen gegevens indien een soortgelijke schaal of een resolutieafstand kan worden gespecificeerd. |
+
+7 | Overeenstemming | 1..* | |
+
+8.1 | Voorwaarden voor toegang en gebruik | 1..* | |
+
+8.2 | Beperkingen op openbare toegang | 1..* | |
+
+9 | Verantwoordelijke organisatie bron | 1..* | |
+
+10.1 | Verantwoordelijke organisatie metagegevens | 1..* | |
+
+10.2 | Datum van metagegevens | 1 | |
+
+10.3 | Taal van metagegevens | 1 | |
+
+Tabel 2
+
+Metagegevens voor diensten met betrekking tot ruimtelijke gegevens
+
+Referentie | Metagegevenselement | Multipliciteit | Voorwaarde |
+
+1.1 | Titel van de bron | 1 | |
+
+1.2 | Korte beschrijving van de bron | 1 | |
+
+1.3 | Type bron | 1 | |
+
+1.4 | Resource locator | 0..* | Verplicht als er een link naar de dienst beschikbaar is. |
+
+1.6 | Coupled resource | 0..* | Verplicht als er een link beschikbaar is naar de verzameling gegevens waarop de dienst is gebaseerd. |
+
+2.2 | Soort dienst met betrekking tot ruimtelijke gegevens | 1 | |
+
+3 | Trefwoord | 1..* | |
+
+4.1 | Geografische rechthoek | 0…* | Verplicht voor diensten met een expliciete geografische extent. |
+
+5 | Tijdsreferentie | 1..* | |
+
+6.2 | Ruimtelijke resolutie | 0..* | Verplicht wanneer er een beperking is op de ruimtelijke resolutie voor deze dienst. |
+
+7 | Overeenstemming | 1..* | |
+
+8.1 | Voorwaarden voor toegang en gebruik | 1..* | |
+
+8.2 | Beperkingen op openbare toegang | 1..* | |
+
+9 | Verantwoordelijke organisatie bron | 1..* | |
+
+10.1 | Verantwoordelijke organisatie metagegevens | 1..* | |
+
+10.2 | Datum van metagegevens | 1 | |
+
+10.3 | Taal van metagegevens | 1 | |
+
+DEEL D
+
+Waardedomeinen
+
+Waar dat zo bepaald is in de beschrijving van de metagegevenselementen in deel B, worden de in deel D.1 tot D.6 beschreven waardedomeinen gebruikt met de in de tabellen 1 en 2 van deel C bepaalde multipliciteit.
+
+Met betrekking tot een bepaald domein wordt elke waarde gedefinieerd aan de hand van:
+
+- een cijfercode,
+
+- voor personen, een naam in tekstvorm, die eventueel vertaald wordt in de verschillende talen van de Gemeenschap,
+
+- een taalneutrale naam voor computers (de tussen haakjes aangegeven waarde),
+
+- een beschrijving of definitie (optioneel).
+
+1. TYPE BRON
+
+1.1. Reeks verzamelingen ruimtelijke gegevens (series)
+
+1.2. Verzameling ruimtelijke gegevens (dataset)
+
+1.3. Diensten met betrekking tot ruimtelijke gegevens (services)
+
+2. ONDERWERPCATEGORIEËN OVEREENKOMSTIG EN ISO 19115
+
+2.1. Landbouw en veeteelt (farming)
+
+Kweken van dieren en/of gewassen.
+
+Deze categorie heeft betrekking op het in Richtlijn 2007/2/EG, bijlage III, punt 9, vermelde ruimtelijke-gegevensthema Faciliteiten voor landbouw en aquacultuur.
+
+2.2. Biota (biota)
+
+Flora en/of fauna in een natuurlijke omgeving.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 17: Biogeografische gebieden, bijlage III, punt 18: Habitats en biotopen, bijlage III, punt 19: Spreiding van soorten.
+
+2.3. Grenzen (boundaries)
+
+Wettelijke gebiedsbeschrijvingen.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage I, punt 4: Administratieve eenheden, bijlage III, punt 1: Statistische eenheden.
+
+2.4. Klimatologie/meteorologie/atmosfeer (climatologyMeteorologyAtmosphere)
+
+Atmosferische processen en fenomenen.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 13: Atmosferische omstandigheden, bijlage III, punt 14: Meteorologische geografische kenmerken.
+
+2.5. Economie (economy)
+
+Economische activiteiten, situatie en werkgelegenheid.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 20: Energiebronnen, bijlage III, punt 21: Minerale bronnen.
+
+2.6. Hoogte (elevation)
+
+Hoogte boven of onder zeeniveau.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage II, punt 1: Hoogte.
+
+2.7. Milieu (environment)
+
+Milieuhulpbronnen, -bescherming en -behoud.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage I, punt 9: Beschermde gebieden.
+
+2.8. Geowetenschappelijke informatie (geoscientificInformation)
+
+Informatie met betrekking tot aardwetenschappen.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 3: Bodem, bijlage II, punt 4: Geologie, bijlage III, punt 12: Gebieden met natuurrisico's.
+
+2.9. Gezondheid (health)
+
+Gezondheid, gezondheidszorg, menselijke ecologie en veiligheid.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage III, punt 5: Menselijke gezondheid en veiligheid.
+
+2.10. Beelden/Basiskaarten/grondgebruik (imageryBaseMapsEarthCover)
+
+Basiskaarten.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage II, punt 3: Orthobeeldvorming, bijlage II, punt 2: Bodemgebruik.
+
+2.11. Inlichtingen/militaire gegevens (intelligenceMilitary)
+
+Militaire basissen, structuren, activiteiten.
+
+Deze categorie heeft niet specifiek betrekking op enig thema uit Richtlijn 2007/2/EG.
+
+2.12. Binnenwateren (inlandWaters)
+
+Kenmerken van binnenwateren en afwateringssystemen.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage I, punt 8: Hydrografie.
+
+2.13. Locatie (location)
+
+Informatie en diensten met betrekking tot locaties.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage I, punt 3: Geografische namen, bijlage I, punt 5: Adressen.
+
+2.14. Oceanen (oceans)
+
+Eigenschappen en kenmerken van zoutwatergebieden (uitgezonderd binnenwateren).
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 16: Zeegebieden, bijlage III, punt 15: Oceanografische geografische kenmerken.
+
+2.15. Planning/kadaster (planningCadastre)
+
+Informatie die wordt gebruikt voor gerichte acties voor toekomstig grondgebruik.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage I, punt 6: Kadastrale percelen, bijlage III, punt 4: Bodemgebruik, bijlage III punt 11: Gebiedsbeheer, gebieden waar beperkingen gelden, gereguleerde gebieden en rapportage-eenheden.
+
+2.16. Maatschappij (society)
+
+Kenmerken van de maatschappij en van culturen.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 10: Spreiding van de bevolking — demografie.
+
+2.17. Structuur (structure)
+
+Door de mens gemaakte bouwwerken.
+
+Deze categorie heeft betrekking op de volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema's: bijlage III, punt 2: Gebouwen, bijlage III, punt 8: Faciliteiten voor productie en industrie, bijlage III, punt 7: Milieubewakingsvoorzieningen.
+
+2.18. Vervoer (transportation)
+
+Middelen voor het vervoer van personen en/of goederen.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage I, punt 7: Vervoersnetwerken.
+
+2.19. Nutsdiensten/communicatie (utilitiesCommunication)
+
+Energie-, water- en afvalsystemen en communicatie-infrastructuur en -diensten.
+
+Deze categorie heeft betrekking op het volgende, in Richtlijn 2007/2/EG opgenomen ruimtelijke-gegevensthema: bijlage III, punt 6: Nutsdiensten en overheidsdiensten.
+
+3. TYPE DIENST MET BETREKKING TOT RUIMTELIJKE GEGEVENS
+
+3.1. Zoekdienst (discovery)
+
+Diensten die het mogelijk maken verzamelingen ruimtelijke gegevens en diensten met betrekking tot ruimtelijke gegevens op te zoeken op basis van de inhoud van de overeenkomstige metagegevens, en de inhoud van de metagegevens weer te geven.
+
+3.2. Raadpleegdienst (view)
+
+Diensten die het minstens mogelijk maken raadpleegbare verzamelingen ruimtelijke gegevens weer te geven, in deze verzamelingen te navigeren, in of uit te zoomen, panoramisch of met overlays weer te geven en om de verklaring van de informatie en de relevantie van de metagegevens weer te geven.
+
+3.3. Downloaddienst (download)
+
+Diensten die het mogelijk maken kopieën van verzamelingen ruimtelijke gegevens geheel of gedeeltelijk te downloaden en er, waar praktisch mogelijk, rechtstreeks toegang toe te hebben.
+
+3.4. Verwerkingsdienst (transformation)
+
+Diensten die het mogelijk maken verzamelingen ruimtelijke gegevens te veranderen om tot interoperabiliteit te komen.
+
+3.5. Oproepdienst (invoke)
+
+Diensten die het mogelijk maken zowel de input als de output van gegevens omtrent diensten te definiëren, alsook een workflowketen die vele diensten combineert. Ook de externe webdiensteninterface van de workflowketen kan worden gedefinieerd.
+
+3.6. Andere dienst (other)
+
+4. CLASSIFICATIE VAN DIENSTEN MET BETREKKING TOT RUIMTELIJKE GEGEVENS
+
+De trefwoorden zijn gebaseerd op de taxonomie voor geografische diensten (EN ISO 19119). Deze taxonomie bestaat uit categorieën; de subcategorieën definiëren het waardedomein van de classificatie van ruimtelijke-gegevensdiensten.
+
+100 Geografische menselijke-interactiediensten (humanInteractionService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+101. Catalogus-viewer (humanCatalogueViewer)
+
+Klantendienst die de interactie mogelijk maakt tussen gebruiker en catalogus, waardoor metagegevens over geografische gegevens of diensten kunnen worden opgezocht, geraadpleegd en beheerd.
+
+102. Geografische viewer (humanGeographicViewer)
+
+Klantendienst waarmee een gebruiker één of meer verzamelingen of verslagen kan bekijken.
+
+103. Geografische spreadsheetviewer (humanGeographicSpreadsheetViewer)
+
+Klantendienst die de interactie mogelijk maakt tussen gebruiker en gegevensobjecten en waarmee de gebruiker berekeningen kan vragen als bij een rekenspreadsheet, maar uitgebreid tot geografische gegevens.
+
+104. Dienst-editor (humanServiceEditor)
+
+Klantendienst waarmee de gebruiker de geografische verwerkingsdiensten kan beheren.
+
+105. Chain definition editor (humanChainDefinitionEditor)
+
+Maakt de interactie mogelijk tussen de gebruiker en een ketendefinitiedienst.
+
+106. Workflowmanager (humanWorkflowEnactmentManager)
+
+Maakt de interactie mogelijk tussen de gebruiker en de workflowmanager.
+
+107. Editor voor geografische objecten (humanGeographicFeatureEditor)
+
+Geografische viewer die de interactie tussen gebruiker en objectgegevens mogelijk maakt.
+
+108. Editor voor geografische symbolen (humanGeographicSymbolEditor)
+
+Klantendienst waarmee de gebruiker symboolbibliotheken kan selecteren en beheren.
+
+109. Editor voor objectgeneralisatie (humanFeatureGeneralizationEditor)
+
+Klantendienst waarmee de gebruiker de cartografische kenmerken van een object of objectverzameling kan wijzigen door de visualisatie te vereenvoudigen, zonder dat de kernelementen verloren gaan — het ruimtelijke equivalent van vereenvoudiging.
+
+110. Viewer voor geografische-gegevensstructuur (humanGeographicDataStructureViewer)
+
+Klantendienst die de gebruiker toegang biedt tot een deel van een gegevensreeks, om de interne structuur ervan te raadplegen.
+
+200 Geografische dienst voor model- en informatiebeheer (infoManagementService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+201. Dienst objecttoegang (infoFeatureAccessService)
+
+Klantendienst voor toegang tot en beheer van een geheugen met geografische objecten.
+
+202. Dienst kaarttoegang (infoMapAccessService)
+
+Dienst die de klant toegang biedt tot weergaven van geografische gegevens, met name afbeeldingen.
+
+203. Dienst rastergegevenstoegang (infoCoverageAccessService)
+
+Klantendienst voor toegang tot en beheer van een geheugen met rastergegevens.
+
+204. Dienst sensorbeschrijving (infoSensorDescriptionService)
+
+Dienst die zorgt voor een omschrijving van een rastergegevenssensor, inclusief plaats en oriëntatie van de sensor, alsook de geometrische, dynamische en radiometrische kenmerken van de sensor met het oog op de verwerking van geografische gegevens.
+
+205. Dienst producttoegang (infoProductAccessService)
+
+Dienst voor toegang tot en beheer van een geheugen met geografische producten.
+
+206. Dienst objecteigenschappen (infoFeatureTypeService)
+
+Dienst voor toegang tot en beheer van een geheugen met definities van objecteigenschappen.
+
+207. Catalogusdienst (infoCatalogueService)
+
+Dienst voor het opzoeken van en het beheer van metagegevens in een geheugen.
+
+208. Registerdienst (infoRegistryService)
+
+Dienst die toegang biedt tot een geheugen van metagegevens over types.
+
+209. Dienst geografische index (infoGazetteerService)
+
+Dienst die toegang biedt tot een directory met reële fenomenen die informatie over de positie bevatten.
+
+210. Besteldienst (infoOrderHandlingService)
+
+Dienst waarmee de klant producten kan bestellen bij een leverancier.
+
+211. Dienst voorbestelling (infoStandingOrderService)
+
+Besteldienst waarmee een klant kan verzoeken dat een product over een geografisch gebied wordt verspreid zodra het beschikbaar wordt.
+
+300 Geografische workflow/taakbeheerdiensten (taskManagementService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+301. Dienst workflowbepaling (chainDefinitionService)
+
+Dienst die de workflow bepaalt en klaarmaakt voor uitvoering door de dienst workflowuitvoering.
+
+302. Dienst workflowuitvoering (workflowEnactmentService)
+
+De dienst workflowuitvoering interpreteert de workflow en controleert de concretisering van diensten en de opeenvolging van activiteiten.
+
+303. Abonnementsdienst (subscriptionService)
+
+Dienst waarmee klanten zich kunnen registreren om informatie over evenementen te krijgen.
+
+400 Geografische-verwerkingsdiensten — ruimtelijk (spatialProcessingService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+401. Dienst conversie coördinaten (spatialCoordinateConversionService)
+
+Dienst om coördinaten om te zetten van één coördinatensysteem naar een ander coördinatensysteem dat betrekking heeft op hetzelfde gegeven.
+
+402. Dienst transformatie coördinaten (spatialCoordinateTransformationService)
+
+Dienst om coördinaten van een op een bepaald gegeven gebaseerd coördinatensysteem om te zetten naar een ander coördinatensysteem dat betrekking heeft op een ander gegeven.
+
+403. Dienst conversie raster-/vectorgegevens (spatialCoverageVectorConversionService)
+
+Dienst om de ruimtelijke weergave te veranderen, van een rasterschema in een vectorschema of omgekeerd.
+
+404. Dienst conversie afbeeldingscoördinaten (spatialImageCoordinateConversionService)
+
+Dienst voor de transformatie of conversie van coördinaten om het coördinatensysteem voor een afbeelding te wijzigen.
+
+405. Rectificatiedienst (spatialRectificationService)
+
+Dienst voor de omzetting van een afbeelding in een verticale parallelle projectie en dus een constante schaal.
+
+406. Orthorectificatiedienst (spatialOrthorectificationService)
+
+Rectificatiedienst voor de correctie van kantelingen en verschuivingen van afbeeldingen door verhogingen in het terrein.
+
+407. Dienst aanpassing sensorgeometriemodellen (spatialSensorGeometryModelAdjustmentService)
+
+Dienst om de geometriemodellen van sensoren aan te passen zodat de afbeelding beter overeenstemt met andere beelden en/of bekende locaties.
+
+408. Dienst conversie afbeeldingsgeometriemodellen (spatialImageGeometryModelConversionService)
+
+Dienst om de geometriemodellen van sensoren om te zetten naar een ander maar equivalent geometriemodel.
+
+409. Dienst subsetting (spatialSubsettingService)
+
+Dienst om gegevens op te halen uit een bepaald artikel in een doorlopend ruimtelijk gebied, hetzij aan de hand van de geografische plaats, hetzij via rastercoördinaten.
+
+410. Bemonsteringsdienst (spatialSamplingService)
+
+Dienst om gegevens op te halen uit een bepaald artikel aan de hand van een consistent schema, hetzij aan de hand van de geografische plaats, hetzij via rastercoördinaten.
+
+411. Dienst rasteringsaanpassing (spatialTilingChangeService)
+
+Dienst om de rastering van geografische gegevens te veranderen.
+
+412. Dienst afmetingen (spatialDimensionMeasurementService)
+
+Dienst om de afmetingen te berekenen van in afbeeldingen zichtbare objecten of andere geografische gegevens.
+
+413. Dienst objectmanipulatie (spatialFeatureManipulationService)
+
+Indeling van objecten bij een ander object, afbeelding of een andere verzameling gegevens of coördinaten; correctie van relatieve verschuivingen, rotatieverschillen, schaalverschillen en perspectiefverschillen; controle van de topologische consistentie van de objecten in de objectverzameling met de topologieregels van de objectverzameling; identificatie en/of correctie van aan het licht gebrachte inconsistenties.
+
+414. Dienst objectkoppeling (spatialFeatureMatchingService)
+
+Dienst die bepaalt welke objecten en onderdelen van objecten uit verschillende gegevensbronnen dezelfde reële entiteit vertegenwoordigen, bv. zijdeaansluiting en beperkte samensmelting.
+
+415. Dienst objectgeneralisatie (spatialFeatureGeneralizationService)
+
+Dienst om de ruimtelijke variatie in een objectverzameling te beperken om de communicatie efficiënter te maken door de ongewenste gevolgen van gegevensreductie tegen te gaan.
+
+416. Dienst routebepaling (spatialRouteDeterminationService)
+
+Dienst om de optimale weg tussen twee specifieke punten te bepalen, gebaseerd op de in de objectverzameling opgenomen inputparameters en eigenschappen.
+
+417. Positioneringsdienst (spatialPositioningService)
+
+Door een positiebepalend apparaat verleende dienst om positie-informatie te verkrijgen, te gebruiken en ondubbelzinnig te interpreteren, en na te gaan of de resultaten voldoen aan de gebruiksvereisten.
+
+418. Dienst omgevingsanalyse (spatialProximityAnalysisService)
+
+Via deze dienst wordt voor een bepaalde positie of geografisch object gezocht naar alle objecten met bepaalde kenmerken die zich binnen een door de gebruiker ingegeven afstand van de positie of het object bevinden.
+
+500 Geografische-verwerkingsdiensten — thematisch (thematicProcessingService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+501. Dienst berekening geografische parameters (thematicGoparameterCalculationService)
+
+Dienst om applicatiegerichte resultaten te berekenen, die niet uit de ruwe gegevens zelf kunnen worden afgeleid.
+
+502. Dienst thematische classificatie (thematicClassificationService)
+
+Dienst om gebieden van geografische gegevens te classificeren aan de hand van thematische kenmerken.
+
+503. Dienst objectgeneralisatie (thematicFeatureGeneralizationService)
+
+Dienst om soorten objecten in een objectverzameling te generaliseren om de communicatie efficiënter te maken door de ongewenste gevolgen van gegevensreductie tegen te gaan.
+
+504. Dienst subsetting (thematicSubsettingService)
+
+Dienst om gegevens uit een artikel op te halen op basis van parameterwaarden.
+
+505. Geografische teldienst (thematicSpatialCountingService)
+
+Dienst om geografische objecten te tellen.
+
+506. Dienst wijzigingsopsporingen (thematicChangeDetectionService)
+
+Dienst om verschillen op te sporen tussen twee verzamelingen gegevens die op verschillende tijdstippen op hetzelfde geografische gebied betrekking hebben.
+
+507. Dienst ophaling geografische informatie (thematicGeographicInformationExtractionService)
+
+Diensten ter ondersteuning van de ophaling van object- en terreininformatie uit satellietbeelden en gescande afbeeldingen.
+
+508. Beeldbewerkingsdienst (thematicImageProcessingService)
+
+Dienst om de waarden van thematische kenmerken van een afbeelding te veranderen aan de hand van een wiskundige functie.
+
+509. Dienst resolutievermindering (thematicReducedResolutionGenerationService)
+
+Dienst om de resolutie van een afbeelding te verminderen.
+
+510. Dienst beeldmanipulatie (thematicImageManipulationService)
+
+Diensten voor het bewerken van gegevenswaarden in afbeeldingen: de kleur- en contrastwaarden veranderen, diverse filters toepassen, de afbeeldingsresolutie bewerken, ruisverwijdering, "striping", systematische radiometrische correcties, atmosferische demping, verandering van de lichtsterkte enz.
+
+511. Dienst beeldinterpretatie (thematicImageUnderstandingService)
+
+Diensten voor de automatische opsporing van beeldveranderingen, differentiatie van geregistreerde beelden, analyse en weergave van de betekenis van verschillen en differentiatie op grond van gebied en model.
+
+512. Dienst beeldsynthese (thematicImageSynthesisService)
+
+Diensten voor het creëren of omzetten van beelden aan de hand van ruimtelijke computermodellen, perspectieftransformaties en manipulatie van de beeldkenmerken, om de zichtbaarheid te verbeteren, de resolutie te verscherpen en/of de effecten van wolken of nevel te verminderen.
+
+513. Dienst multibandbeeldmanipulatie (thematicMultibandImageManipulationService)
+
+Diensten die een beeld wijzigen aan de hand van de diverse banden van de afbeelding.
+
+514. Dienst objectopsporing (thematicObjectDetectionService)
+
+Dienst om reële voorwerpen in een beeld op te sporen.
+
+515. Dienst geoanalyse (thematicGeoparsingService)
+
+Dienst om tekstdocumenten te doorzoeken naar plaatsverwijzingen, zoals plaatsnamen, adressen, postcodes enz., ter voorbereiding van een dienst geografische codering.
+
+516. Dienst geografische codering (thematicGeocodingService)
+
+Dienst om de toename van plaatsverwijzingen met geografische coördinaten (of een andere ruimtelijke verwijzing) te bevorderen.
+
+600 Geografische-verwerkingsdiensten — temporeel (temporalProcessingService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+601. Dienst transformatie tijdsreferentiesysteem (temporalReferenceSystemTransformationService)
+
+Dienst om de waarden van tijdsaanduidingen te wijzigen van één tijdsreferentiesysteem naar een ander.
+
+602. Dienst subsetting (temporalSubsettingService)
+
+Dienst om gegevens uit een artikel op te halen in een ononderbroken interval, gebaseerd op temporele positiewaarden.
+
+603. Bemonsteringsdienst (temporalSamplingService)
+
+Dienst om gegevens uit een artikel op te halen aan de hand van een consistent schema, gebaseerd op temporele positiewaarden.
+
+604. Dienst temporele omgevingsanalyse (temporalProximityAnalysisService)
+
+Via deze dienst wordt voor een bepaalde tijdsinterval of gebeurtenis gezocht naar alle objecten met bepaalde kenmerken die zich binnen een door de gebruiker ingegeven interval bevinden van de interval of het object.
+
+700 Geografische-verwerkingsdiensten — metagegevens (metadataProcessingService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+701. Dienst statistische berekeningen (metadataStatisticalCalculationService)
+
+Dienst om de statistieken van een gegevensverzameling te berekenen.
+
+702. Dienst geografische annotatie (metadataGeographicAnnotationService)
+
+Diensten om aanvullende informatie toe te voegen aan een afbeelding of een object in een objectverzameling.
+
+800 Geografische-communicatiediensten (comService)
+
+Deze categorie bestaat uit de volgende subcategorieën:
+
+801. Coderingsdienst (comEncodingService)
+
+Dienst die zorgt voor de implementatie van coderingsregels en voor een interface voor versleuteling (codering) en ontsleuteling (decodering).
+
+802. Dienst gegevensoverdracht (comTransferService)
+
+Dienst die zorgt voor de implementatie van één of meer overdrachtprotocollen, waardoor gegevens kunnen worden overgedragen tussen verspreide informatiesystemen via offline- of onlinecommunicatie.
+
+803. Dienst geografische compressie (comGeographicCompressionService)
+
+Dienst om de ruimtelijke onderdelen van een objectverzameling te comprimeren en te decomprimeren.
+
+804. Dienst formaatconversie (comGeographicFormatConversionService)
+
+Dienst voor de conversie van een bepaald geografisch gegevensformaat naar een ander.
+
+805. Berichtendienst (comMessagingService)
+
+Dienst waardoor meerdere gebruikers gelijktijdig objectverzamelingen kunnen bekijken, becommentariëren en een verzoek tot bewerking van de objectverzamelingen kunnen indienen.
+
+806. Dienst beheer van externe bestanden en programma’s (comRemoteFileAndExecutableManagement)
+
+Dienst die toegang biedt tot de extern opgeslagen geografische kenmerken, als waren die gegevens lokaal opgeslagen.
+
+5. CONFORMITEITSINDICATIE
+
+5.1. Conform (conformant)
+
+De bron is volledig conform de specificatie.
+
+5.2. Niet conform (notConformant)
+
+De bron is niet conform de specificatie.
+
+5.3. Niet beoordeeld (notEvaluated)
+
+De conformiteit is niet beoordeeld.
+
+6. ROL VAN DE VERANTWOORDELIJKE PARTIJ
+
+6.1. Bronverstrekker (resourceProvider)
+
+De partij die de bron verstrekt.
+
+6.2. Beheerder (custodian)
+
+Partij die verantwoordelijk is voor de gegevens en de bron zorgvuldig bijhoudt.
+
+6.3. Eigenaar (owner)
+
+De partij die eigenaar is van de bron.
+
+6.4. Gebruiker (user)
+
+De partij die de bron gebruikt.
+
+6.5. Verdeler (distributor)
+
+De partij die de bron verspreidt.
+
+6.6. Initiatiefnemer (originator)
+
+De partij die de bron heeft aangemaakt.
+
+6.7. Contactpunt (pointOfContact)
+
+De partij waarmee contact kan worden opgenomen voor informatie over de bron of om ze te verwerven.
+
+6.8. Hoofdonderzoeker (principalInvestigator)
+
+De partij die voornamelijk verantwoordelijk is voor informatievergaring en onderzoek.
+
+6.9. Bewerker (processor)
+
+De partij die de gegevens heeft bewerkt zodat de bron is gewijzigd.
+
+6.10. Uitgever (publisher)
+
+De partij die de bron publiceert.
+
+6.11. Auteur (author)
+
+De partij die auteur is van de bron.
+
+--------------------------------------------------

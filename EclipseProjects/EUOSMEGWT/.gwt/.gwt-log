@@ -1,0 +1,1373 @@
+Module location: file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/src/eu/europa/ec/jrc/euosme/gwt/EUOSMEGWT.gwt.xml
+Loading inherited module 'com.google.gwt.user.User'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/User.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/Core.gwt.xml
+      Loading inherited module 'com.google.gwt.dev.jjs.intrinsic.Intrinsic'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar!/com/google/gwt/dev/jjs/intrinsic/Intrinsic.gwt.xml
+         Loading inherited module 'com.google.gwt.lang.LongLib'
+            Module location: jar:file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/com.instantiations.designer.gwt.hosted.2_0.super_8.0.0.r35x201009140724.jar!/com/google/gwt/lang/LongLib.gwt.xml
+      Loading inherited module 'com.google.gwt.emul.Emulation'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/Emulation.gwt.xml
+         Loading inherited module 'com.google.gwt.logging.LogImpl'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/logging/LogImpl.gwt.xml
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xhr/XMLHttpRequest.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.CompilerParameters'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CompilerParameters.gwt.xml
+      Loading inherited module 'com.google.gwt.core.EmulateJsStack'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/EmulateJsStack.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.AsyncFragmentLoader'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/AsyncFragmentLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.core.XSLinker'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/XSLinker.gwt.xml
+   Loading inherited module 'com.google.gwt.text.Text'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/text/Text.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.event.Event'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/Event.gwt.xml
+      Loading inherited module 'com.google.gwt.event.EventBase'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/EventBase.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.dom.DomEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/dom/DomEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/dom/DOM.gwt.xml
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.UserAgent'
+               Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/UserAgent.gwt.xml
+               Loading inherited module 'com.google.gwt.emul.EmulationWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/EmulationWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.emul.Emulation'
+                     Module 'com.google.gwt.emul.Emulation' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.core.CoreWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CoreWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.core.Core'
+                     Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.logical.LogicalEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/logical/LogicalEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.animation.Animation'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/animation/Animation.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.resources.Resources'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/resources/Resources.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/http/HTTP.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+            Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.layout.Layout'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/layout/Layout.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.animation.Animation'
+         Module 'com.google.gwt.animation.Animation' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.uibinder.UiBinder'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/uibinder/UiBinder.gwt.xml
+      Loading inherited module 'com.google.gwt.resources.Resources'
+         Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.AsyncProxy'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/AsyncProxy.gwt.xml
+   Loading inherited module 'com.google.gwt.user.RemoteService'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RemoteService.gwt.xml
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DocumentRoot'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DocumentRoot.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DOM'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DOM.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Window.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.HTTPRequest'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/HTTPRequest.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.History'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/History.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.i18n.I18N'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/i18n/I18N.gwt.xml
+      Loading inherited module 'com.google.gwt.regexp.RegExp'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/regexp/RegExp.gwt.xml
+   Loading inherited module 'com.google.gwt.user.Popup'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Popup.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Form'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Form.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.TextBox'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/TextBox.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Focus'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Focus.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ImageBundle'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ImageBundle.gwt.xml
+      Loading inherited module 'com.google.gwt.user.ClippedImage'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ClippedImage.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ClippedImage'
+      Module 'com.google.gwt.user.ClippedImage' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.RichText'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RichText.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.SplitPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/SplitPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.CaptionPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/CaptionPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module 'com.google.gwt.user.Window' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Tree'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Tree.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Hyperlink'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Hyperlink.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.FileUpload'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/FileUpload.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.datepicker.DatePicker'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/datepicker/DatePicker.gwt.xml
+   Loading inherited module 'com.google.gwt.user.cellview.CellView'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/cellview/CellView.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.cell.Cell'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/cell/Cell.gwt.xml
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.view.View'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/view/View.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.user.Debug'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Debug.gwt.xml
+   Loading inherited module 'com.google.gwt.debug.Debug'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/debug/Debug.gwt.xml
+Loading inherited module 'com.google.gwt.i18n.I18N'
+   Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.json.JSON'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/json/JSON.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.xml.XML'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xml/XML.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.UserAgent'
+      Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.http.HTTP'
+   Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.resources.Resources'
+   Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.maps.GoogleMaps'
+   Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/GoogleMaps.gwt.xml
+   Loading inherited module 'com.google.gwt.user.User'
+      Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.maps.jsio.JSIO'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/jsio/JSIO.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/ajaxloader/AjaxLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.i18n.I18N'
+         Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+   Module 'com.google.gwt.ajaxloader.AjaxLoader' has already been loaded and will be skipped
+Public resources found in...
+   Refreshing resources
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/resources.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\resources.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/rt.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\rt.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jsse.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jsse.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jce.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jce.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/charsets.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\charsets.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/dnsns.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\dnsns.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/localedata.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\localedata.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunjce_provider.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunjce_provider.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunmscapi.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunmscapi.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunpkcs11.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunpkcs11.jar
+      Searching for resources within file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/org.junit_3.8.2.v20090203-1005/junit.jar
+         Indexing zip file: E:\grassma\Downloads\eclipse-java-galileo-SR1-win32\eclipse\plugins\org.junit_3.8.2.v20090203-1005\junit.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-fileupload-1.2.1.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-fileupload-1.2.1.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-io-1.4.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-io-1.4.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-maps.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-ajaxloader.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-ajaxloader.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-user.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-dev.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/GemetClientLibrary.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\GemetClientLibrary.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/javacsv.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\javacsv.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/log4j-1.2.14.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\log4j-1.2.14.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-api-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-api-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-log4j12-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-log4j12-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/ws-commons-util-1.0.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\ws-commons-util-1.0.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-client-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-client-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-common-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-common-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-server-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-server-3.1.2.jar
+Translatable source found in...
+   Refreshing resources
+Validating newly compiled units
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterStringMultiple_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterString_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.Tree.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method treeClosed
+         Adding image 'com.google.gwt.user.client.ui.Tree.Resources.treeClosed'
+      Preparing method treeLeaf
+         Adding image 'com.google.gwt.user.client.ui.Tree.Resources.treeLeaf'
+      Preparing method treeOpen
+         Adding image 'com.google.gwt.user.client.ui.Tree.Resources.treeOpen'
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.Tabs.TabsUiBinder
+   Adding '3' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.iso19115Constants
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.iso19115Constants
+         Generating method body for mandatoryFieldCombined6()
+         Generating method body for alternateTitle()
+         Generating method body for ci_onlineResource()
+         Generating method body for mandatoryFieldCombined4()
+         Generating method body for mandatoryFieldCombined3()
+         Generating method body for resourceAbstract()
+         Generating method body for savingFile()
+         Generating method body for mandatoryFieldCombined5()
+         Generating method body for hoursOfService()
+         Generating method body for qualityTabTitle()
+         Generating method body for measureIdentification()
+         Generating method body for deliveryPoint()
+         Generating method body for equivalentScale()
+         Generating method body for pointOfContactINSPIRE()
+         Generating method body for XMLValue()
+         Generating method body for geoBoundingBox()
+         Generating method body for electronicMailAddress()
+         Generating method body for constraintsTitle()
+         Generating method body for geographicSummary()
+         Generating method body for west()
+         Generating method body for conformity()
+         Generating method body for organizationSummary()
+         Generating method body for selectFile()
+         Generating method body for conformitySummary()
+         Generating method body for unableToLoadFile()
+         Generating method body for resourceAlternateTitle()
+         Generating method body for save()
+         Generating method body for constraints()
+         Generating method body for date()
+         Generating method body for city()
+         Generating method body for title()
+         Generating method body for unableToLoadFilemd_scopecode()
+         Generating method body for qualitySummary()
+         Generating method body for contactInstructions()
+         Generating method body for newSpatialDatasetSeries()
+         Generating method body for description()
+         Generating method body for availableKeywords()
+         Generating method body for explanationValue()
+         Generating method body for result()
+         Generating method body for version()
+         Generating method body for voice()
+         Generating method body for view()
+         Generating method body for coupledResource()
+         Generating method body for administrativeArea()
+         Generating method body for invalidURL()
+         Generating method body for otherConstraints()
+         Generating method body for mandatoryField()
+         Generating method body for mandatoryFieldCombined2()
+         Generating method body for metadataTitle()
+         Generating method body for invalidInteger()
+         Generating method body for pointOfContact()
+         Generating method body for conformant()
+         Generating method body for notEvaluated()
+         Generating method body for newISODataset()
+         Generating method body for spatialResolution()
+         Generating method body for dateType()
+         Generating method body for ci_telephone()
+         Generating method body for CI_Citation()
+         Generating method body for north()
+         Generating method body for country()
+         Generating method body for notConformant()
+         Generating method body for explanation()
+         Generating method body for keywordValue()
+         Generating method body for resourceIdentifier()
+         Generating method body for keywordSummary()
+         Generating method body for invalidDouble()
+         Generating method body for geographicQueryInstructions()
+         Generating method body for keyword()
+         Generating method body for formIsValid()
+         Generating method body for revisionDate()
+         Generating method body for distance()
+         Generating method body for info()
+         Generating method body for temporalTitle()
+         Generating method body for name()
+         Generating method body for add()
+         Generating method body for validate()
+         Generating method body for geographicTabTitle()
+         Generating method body for resource()
+         Generating method body for classificationTabTitle()
+         Generating method body for temporalTabTitle()
+         Generating method body for creationDate()
+         Generating method body for loadingData()
+         Generating method body for applicationProfile()
+         Generating method body for degree()
+         Generating method body for publicationDate()
+         Generating method body for temporalExtent()
+         Generating method body for linkage()
+         Generating method body for emptyString()
+         Generating method body for metadataLanguage()
+         Generating method body for errorDataTypeMultiple()
+         Generating method body for ci_responsibleParty()
+         Generating method body for close()
+         Generating method body for facsimile()
+         Generating method body for organisationName()
+         Generating method body for protocol()
+         Generating method body for errorDataType()
+         Generating method body for newSpatialDataset()
+         Generating method body for qualityServiceSummary()
+         Generating method body for useConstraints()
+         Generating method body for metadataSummary()
+         Generating method body for loadingFile()
+         Generating method body for metadataTabTitle()
+         Generating method body for saveFileButton()
+         Generating method body for classificationTitle()
+         Generating method body for role()
+         Generating method body for postalCode()
+         Generating method body for qualityTitle()
+         Generating method body for infoOnDownload()
+         Generating method body for submitButton()
+         Generating method body for conformityTabTitle()
+         Generating method body for showHideHelp()
+         Generating method body for temporalSummary()
+         Generating method body for referenceDate()
+         Generating method body for originatingControlledVocabulary()
+         Generating method body for accessConstraints()
+         Generating method body for classificationSummary()
+         Generating method body for emptyXMLValue()
+         Generating method body for individualName()
+         Generating method body for repositoryServiceFailed()
+         Generating method body for identificationSummary()
+         Generating method body for newSpatialDataService()
+         Generating method body for keywordType()
+         Generating method body for positionName()
+         Generating method body for ci_address()
+         Generating method body for resourceLanguage()
+         Generating method body for repository()
+         Generating method body for organizationTabTitle()
+         Generating method body for metadataDate()
+         Generating method body for function()
+         Generating method body for loading()
+         Generating method body for south()
+         Generating method body for errorDataType1()
+         Generating method body for selectValue()
+         Generating method body for isfalse()
+         Generating method body for errorDataType2()
+         Generating method body for beginDate()
+         Generating method body for errorCodeListValue()
+         Generating method body for keywordTitle()
+         Generating method body for conformityTitle()
+         Generating method body for UM()
+         Generating method body for errorDateTimeNotSupported()
+         Generating method body for openFileButton()
+         Generating method body for dataThemesServiceFailed()
+         Generating method body for identificationTabTitle()
+         Generating method body for useLimitation()
+         Generating method body for codeSpace()
+         Generating method body for runQuery()
+         Generating method body for east()
+         Generating method body for error()
+         Generating method body for serviceType()
+         Generating method body for invalidMail()
+         Generating method body for selectKeywordInfo()
+         Generating method body for lineage()
+         Generating method body for inspireDataThemes()
+         Generating method body for resourceType()
+         Generating method body for warning()
+         Generating method body for istrue()
+         Generating method body for load()
+         Generating method body for codelistServiceFailed()
+         Generating method body for endDate()
+         Generating method body for resourceLocator()
+         Generating method body for newFile()
+         Generating method body for ci_contact()
+         Generating method body for geographicTitle()
+         Generating method body for identificationTitle()
+         Generating method body for cancelButton()
+         Generating method body for showHideTree()
+         Generating method body for specification()
+         Generating method body for topicCategory()
+         Generating method body for organizationTitle()
+         Generating method body for mandatoryFieldCombined()
+         Generating method body for md_identifier()
+         Generating method body for resourceTitle()
+         Generating method body for code()
+         Generating method body for address()
+         Generating method body for constraintsSummary()
+         Generating method body for constraintsTabTitle()
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.TabMetadata.TabMetadataUiBinder
+   Adding '2' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CI.CIUiBinder
+   Adding '2' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.iso19115Messages
+   Invoking generator com.google.gwt.i18n.rebind.LocalizableGenerator
+      Processing interface eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.iso19115Messages
+         Generating method body for remove()
+         Generating method body for add()
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.user.client.ui.DisclosurePanel.DefaultImages
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method disclosurePanelClosed
+         Adding image 'com.google.gwt.user.client.ui.DisclosurePanel.DefaultImages.disclosurePanelClosed'
+      Preparing method disclosurePanelOpen
+         Adding image 'com.google.gwt.user.client.ui.DisclosurePanel.DefaultImages.disclosurePanelOpen'
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CI_CIUiBinderImpl_designTime1285573972030_GenBundle
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CharacterString.CharacterStringUiBinder
+   Adding '2' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CharacterString_CharacterStringUiBinderImpl_designTime1285573972373_GenBundle
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CharacterStringMultiple.CharacterStringMultipleUiBinder
+   Adding '2' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CharacterStringMultiple_CharacterStringMultipleUiBinderImpl_designTime1285573972639_GenBundle
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CodeList.CodeListUiBinder
+   Adding '2' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.CodeList_CodeListUiBinderImpl_designTime1285573973170_GenBundle
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy
+   Invoking generator com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator
+      Generating client proxy for remote service interface 'eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy'
+         Analyzing 'eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy' for serializable types
+            Analyzing methods:
+               public abstract com.google.gwt.user.client.ui.SuggestOracle.Response getQuote(java.lang.String uri, java.lang.String clientLanguage, com.google.gwt.user.client.ui.SuggestOracle.Request req) throws eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException
+                  Parameter: java.lang.String uri
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String clientLanguage
+                     java.lang.String is already a root type.
+               public abstract java.util.Map<java.lang.String, java.lang.String> invokeGemetService(java.lang.String clientLanguage) throws eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException
+                  Parameter: java.lang.String clientLanguage
+                     java.lang.String is already a root type.
+                  Throws:
+                     eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException is already a root type.
+               public abstract java.lang.String invokeGetRESTfulWebService(java.lang.String uri, java.lang.String contentType, java.lang.String clientLanguage) throws eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException
+                  Return type: java.lang.String
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String uri
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String contentType
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String clientLanguage
+                     java.lang.String is already a root type.
+                  Throws:
+                     eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException is already a root type.
+               public abstract java.lang.String invokePostRESTfulWebService(java.lang.String uri, java.lang.String postData) throws eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException
+                  Return type: java.lang.String
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String uri
+                     java.lang.String is already a root type.
+                  Parameter: java.lang.String postData
+                     java.lang.String is already a root type.
+                  Throws:
+                     eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException is already a root type.
+         Using a shard size of 0 for TypeSerializerCreator createMethodMap
+         Writing generated resource 'E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\.gwt\.tmp\shell\eu.europa.ec.jrc.euosme.gwt.EUOSMEGWT\799D30B699C06501C65F16D29BA35D90.gwt.rpc'
+         Writing generated resource 'E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\.gwt\.tmp\shell\eu.europa.ec.jrc.euosme.gwt.EUOSMEGWT\rpcPolicyManifest\manifests\64E636022B9CD82BB7F59C5881839648.txt'
+   Adding '16' new generated units
+      Removing invalidated units
+Refreshing module 'euosmegwt'
+   Refreshing resources
+   Refreshing resources
+   Refreshing resources
+Validating newly compiled units
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterStringMultiple_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterString_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Module location: file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/src/eu/europa/ec/jrc/euosme/gwt/EUOSMEGWT.gwt.xml
+Loading inherited module 'com.google.gwt.user.User'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/User.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/Core.gwt.xml
+      Loading inherited module 'com.google.gwt.dev.jjs.intrinsic.Intrinsic'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar!/com/google/gwt/dev/jjs/intrinsic/Intrinsic.gwt.xml
+         Loading inherited module 'com.google.gwt.lang.LongLib'
+            Module location: jar:file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/com.instantiations.designer.gwt.hosted.2_0.super_8.0.0.r35x201009140724.jar!/com/google/gwt/lang/LongLib.gwt.xml
+      Loading inherited module 'com.google.gwt.emul.Emulation'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/Emulation.gwt.xml
+         Loading inherited module 'com.google.gwt.logging.LogImpl'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/logging/LogImpl.gwt.xml
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xhr/XMLHttpRequest.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.CompilerParameters'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CompilerParameters.gwt.xml
+      Loading inherited module 'com.google.gwt.core.EmulateJsStack'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/EmulateJsStack.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.AsyncFragmentLoader'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/AsyncFragmentLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.core.XSLinker'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/XSLinker.gwt.xml
+   Loading inherited module 'com.google.gwt.text.Text'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/text/Text.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.event.Event'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/Event.gwt.xml
+      Loading inherited module 'com.google.gwt.event.EventBase'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/EventBase.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.dom.DomEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/dom/DomEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/dom/DOM.gwt.xml
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.UserAgent'
+               Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/UserAgent.gwt.xml
+               Loading inherited module 'com.google.gwt.emul.EmulationWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/EmulationWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.emul.Emulation'
+                     Module 'com.google.gwt.emul.Emulation' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.core.CoreWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CoreWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.core.Core'
+                     Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.logical.LogicalEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/logical/LogicalEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.animation.Animation'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/animation/Animation.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.resources.Resources'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/resources/Resources.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/http/HTTP.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+            Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.layout.Layout'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/layout/Layout.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.animation.Animation'
+         Module 'com.google.gwt.animation.Animation' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.uibinder.UiBinder'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/uibinder/UiBinder.gwt.xml
+      Loading inherited module 'com.google.gwt.resources.Resources'
+         Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.AsyncProxy'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/AsyncProxy.gwt.xml
+   Loading inherited module 'com.google.gwt.user.RemoteService'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RemoteService.gwt.xml
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DocumentRoot'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DocumentRoot.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DOM'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DOM.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Window.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.HTTPRequest'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/HTTPRequest.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.History'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/History.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.i18n.I18N'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/i18n/I18N.gwt.xml
+      Loading inherited module 'com.google.gwt.regexp.RegExp'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/regexp/RegExp.gwt.xml
+   Loading inherited module 'com.google.gwt.user.Popup'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Popup.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Form'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Form.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.TextBox'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/TextBox.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Focus'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Focus.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ImageBundle'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ImageBundle.gwt.xml
+      Loading inherited module 'com.google.gwt.user.ClippedImage'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ClippedImage.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ClippedImage'
+      Module 'com.google.gwt.user.ClippedImage' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.RichText'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RichText.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.SplitPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/SplitPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.CaptionPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/CaptionPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module 'com.google.gwt.user.Window' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Tree'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Tree.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Hyperlink'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Hyperlink.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.FileUpload'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/FileUpload.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.datepicker.DatePicker'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/datepicker/DatePicker.gwt.xml
+   Loading inherited module 'com.google.gwt.user.cellview.CellView'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/cellview/CellView.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.cell.Cell'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/cell/Cell.gwt.xml
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.view.View'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/view/View.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.user.Debug'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Debug.gwt.xml
+   Loading inherited module 'com.google.gwt.debug.Debug'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/debug/Debug.gwt.xml
+Loading inherited module 'com.google.gwt.i18n.I18N'
+   Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.json.JSON'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/json/JSON.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.xml.XML'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xml/XML.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.UserAgent'
+      Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.http.HTTP'
+   Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.resources.Resources'
+   Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.maps.GoogleMaps'
+   Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/GoogleMaps.gwt.xml
+   Loading inherited module 'com.google.gwt.user.User'
+      Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.maps.jsio.JSIO'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/jsio/JSIO.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/ajaxloader/AjaxLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.i18n.I18N'
+         Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+   Module 'com.google.gwt.ajaxloader.AjaxLoader' has already been loaded and will be skipped
+Public resources found in...
+   Refreshing resources
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/resources.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\resources.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/rt.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\rt.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jsse.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jsse.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jce.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jce.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/charsets.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\charsets.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/dnsns.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\dnsns.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/localedata.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\localedata.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunjce_provider.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunjce_provider.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunmscapi.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunmscapi.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunpkcs11.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunpkcs11.jar
+      Searching for resources within file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/org.junit_3.8.2.v20090203-1005/junit.jar
+         Indexing zip file: E:\grassma\Downloads\eclipse-java-galileo-SR1-win32\eclipse\plugins\org.junit_3.8.2.v20090203-1005\junit.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-fileupload-1.2.1.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-fileupload-1.2.1.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-io-1.4.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-io-1.4.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-maps.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-ajaxloader.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-ajaxloader.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-user.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-dev.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/GemetClientLibrary.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\GemetClientLibrary.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/javacsv.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\javacsv.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/log4j-1.2.14.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\log4j-1.2.14.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-api-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-api-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-log4j12-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-log4j12-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/ws-commons-util-1.0.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\ws-commons-util-1.0.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-client-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-client-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-common-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-common-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-server-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-server-3.1.2.jar
+Translatable source found in...
+   Refreshing resources
+Validating newly compiled units
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterString_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterStringMultiple_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Module location: file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/src/eu/europa/ec/jrc/euosme/gwt/EUOSMEGWT.gwt.xml
+Loading inherited module 'com.google.gwt.user.User'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/User.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/Core.gwt.xml
+      Loading inherited module 'com.google.gwt.dev.jjs.intrinsic.Intrinsic'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar!/com/google/gwt/dev/jjs/intrinsic/Intrinsic.gwt.xml
+         Loading inherited module 'com.google.gwt.lang.LongLib'
+            Module location: jar:file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/com.instantiations.designer.gwt.hosted.2_0.super_8.0.0.r35x201009140724.jar!/com/google/gwt/lang/LongLib.gwt.xml
+      Loading inherited module 'com.google.gwt.emul.Emulation'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/Emulation.gwt.xml
+         Loading inherited module 'com.google.gwt.logging.LogImpl'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/logging/LogImpl.gwt.xml
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xhr/XMLHttpRequest.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.CompilerParameters'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CompilerParameters.gwt.xml
+      Loading inherited module 'com.google.gwt.core.EmulateJsStack'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/EmulateJsStack.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.core.AsyncFragmentLoader'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/AsyncFragmentLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.core.XSLinker'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/XSLinker.gwt.xml
+   Loading inherited module 'com.google.gwt.text.Text'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/text/Text.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.event.Event'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/Event.gwt.xml
+      Loading inherited module 'com.google.gwt.event.EventBase'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/EventBase.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.dom.DomEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/dom/DomEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/dom/DOM.gwt.xml
+            Loading inherited module 'com.google.gwt.core.Core'
+               Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+            Loading inherited module 'com.google.gwt.user.UserAgent'
+               Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/UserAgent.gwt.xml
+               Loading inherited module 'com.google.gwt.emul.EmulationWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/emul/EmulationWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.emul.Emulation'
+                     Module 'com.google.gwt.emul.Emulation' has already been loaded and will be skipped
+               Loading inherited module 'com.google.gwt.core.CoreWithUserAgent'
+                  Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/core/CoreWithUserAgent.gwt.xml
+                  Loading inherited module 'com.google.gwt.core.Core'
+                     Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.event.logical.LogicalEvent'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/event/logical/LogicalEvent.gwt.xml
+         Loading inherited module 'com.google.gwt.event.EventBase'
+            Module 'com.google.gwt.event.EventBase' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.animation.Animation'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/animation/Animation.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.resources.Resources'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/resources/Resources.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/http/HTTP.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+            Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.User'
+            Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.layout.Layout'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/layout/Layout.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.animation.Animation'
+         Module 'com.google.gwt.animation.Animation' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.uibinder.UiBinder'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/uibinder/UiBinder.gwt.xml
+      Loading inherited module 'com.google.gwt.resources.Resources'
+         Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.AsyncProxy'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/AsyncProxy.gwt.xml
+   Loading inherited module 'com.google.gwt.user.RemoteService'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RemoteService.gwt.xml
+      Loading inherited module 'com.google.gwt.http.HTTP'
+         Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DocumentRoot'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DocumentRoot.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.DOM'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/DOM.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.dom.DOM'
+         Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Window.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.HTTPRequest'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/HTTPRequest.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.xhr.XMLHttpRequest'
+         Module 'com.google.gwt.xhr.XMLHttpRequest' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.History'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/History.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.i18n.I18N'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/i18n/I18N.gwt.xml
+      Loading inherited module 'com.google.gwt.regexp.RegExp'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/regexp/RegExp.gwt.xml
+   Loading inherited module 'com.google.gwt.user.Popup'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Popup.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Form'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Form.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.TextBox'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/TextBox.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Focus'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Focus.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ImageBundle'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ImageBundle.gwt.xml
+      Loading inherited module 'com.google.gwt.user.ClippedImage'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/ClippedImage.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+         Loading inherited module 'com.google.gwt.user.UserAgent'
+            Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.ClippedImage'
+      Module 'com.google.gwt.user.ClippedImage' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.RichText'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/RichText.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.SplitPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/SplitPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.CaptionPanel'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/CaptionPanel.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Window'
+      Module 'com.google.gwt.user.Window' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Tree'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Tree.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.Hyperlink'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Hyperlink.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.FileUpload'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/FileUpload.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.user.UserAgent'
+         Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.datepicker.DatePicker'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/datepicker/DatePicker.gwt.xml
+   Loading inherited module 'com.google.gwt.user.cellview.CellView'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/cellview/CellView.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.cell.Cell'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/cell/Cell.gwt.xml
+         Loading inherited module 'com.google.gwt.dom.DOM'
+            Module 'com.google.gwt.dom.DOM' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.view.View'
+         Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/view/View.gwt.xml
+         Loading inherited module 'com.google.gwt.core.Core'
+            Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.user.Debug'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/user/Debug.gwt.xml
+   Loading inherited module 'com.google.gwt.debug.Debug'
+      Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/debug/Debug.gwt.xml
+Loading inherited module 'com.google.gwt.i18n.I18N'
+   Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.json.JSON'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/json/JSON.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.xml.XML'
+   Module location: jar:file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar!/com/google/gwt/xml/XML.gwt.xml
+   Loading inherited module 'com.google.gwt.core.Core'
+      Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.user.UserAgent'
+      Module 'com.google.gwt.user.UserAgent' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.http.HTTP'
+   Module 'com.google.gwt.http.HTTP' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.resources.Resources'
+   Module 'com.google.gwt.resources.Resources' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.maps.GoogleMaps'
+   Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/GoogleMaps.gwt.xml
+   Loading inherited module 'com.google.gwt.user.User'
+      Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.maps.jsio.JSIO'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/maps/jsio/JSIO.gwt.xml
+      Loading inherited module 'com.google.gwt.core.Core'
+         Module 'com.google.gwt.core.Core' has already been loaded and will be skipped
+   Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+      Module location: jar:file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar!/com/google/gwt/ajaxloader/AjaxLoader.gwt.xml
+      Loading inherited module 'com.google.gwt.user.User'
+         Module 'com.google.gwt.user.User' has already been loaded and will be skipped
+      Loading inherited module 'com.google.gwt.i18n.I18N'
+         Module 'com.google.gwt.i18n.I18N' has already been loaded and will be skipped
+Loading inherited module 'com.google.gwt.ajaxloader.AjaxLoader'
+   Module 'com.google.gwt.ajaxloader.AjaxLoader' has already been loaded and will be skipped
+Public resources found in...
+   Refreshing resources
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/resources.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\resources.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/rt.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\rt.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jsse.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jsse.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/jce.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\jce.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/charsets.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\charsets.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/dnsns.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\dnsns.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/localedata.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\localedata.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunjce_provider.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunjce_provider.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunmscapi.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunmscapi.jar
+      Searching for resources within file:/C:/Program%20Files/Java/jre6/lib/ext/sunpkcs11.jar
+         Indexing zip file: C:\Program Files\Java\jre6\lib\ext\sunpkcs11.jar
+      Searching for resources within file:/E:/grassma/Downloads/eclipse-java-galileo-SR1-win32/eclipse/plugins/org.junit_3.8.2.v20090203-1005/junit.jar
+         Indexing zip file: E:\grassma\Downloads\eclipse-java-galileo-SR1-win32\eclipse\plugins\org.junit_3.8.2.v20090203-1005\junit.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-fileupload-1.2.1.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-fileupload-1.2.1.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/commons-io-1.4.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\commons-io-1.4.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-maps.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-maps.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/war/WEB-INF/lib/gwt-ajaxloader.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\war\WEB-INF\lib\gwt-ajaxloader.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-user.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-user.jar
+      Searching for resources within file:/C:/gwt/gwttemp_8348/trunk/build/lib/gwt-dev.jar
+         Indexing zip file: C:\gwt\gwttemp_8348\trunk\build\lib\gwt-dev.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/GemetClientLibrary.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\GemetClientLibrary.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/javacsv.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\javacsv.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/log4j-1.2.14.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\log4j-1.2.14.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-api-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-api-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/slf4j-log4j12-1.5.8.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\slf4j-log4j12-1.5.8.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/ws-commons-util-1.0.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\ws-commons-util-1.0.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-client-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-client-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-common-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-common-3.1.2.jar
+      Searching for resources within file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/lib/GemetClient/xmlrpc-server-3.1.2.jar
+         Indexing zip file: E:\grassma\EUOSME\sdi\euosme\trunk\EclipseProjects\EUOSMEGWT\lib\GemetClient\xmlrpc-server-3.1.2.jar
+Translatable source found in...
+   Refreshing resources
+Validating newly compiled units
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterString_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterStringMultiple_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units
+Refreshing module 'euosmegwt'
+   Refreshing resources
+   Refreshing resources
+   Refreshing resources
+Validating newly compiled units
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterString_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+   [ERROR] Errors in 'file:/E:/grassma/EUOSME/sdi/euosme/trunk/EclipseProjects/EUOSMEGWT/test/eu/europa/ec/jrc/euosme/gwt/client/CharacterStringMultiple_test.java'
+      [ERROR] Line 8: No source code is available for type com.google.gwt.junit.client.GWTTestCase; did you forget to inherit a required module?
+Removing invalidated units
+Rebinding com.google.gwt.user.client.impl.WindowImplIE.Resources
+   Adding '1' new generated units
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for percentPattern()
+         Generating method body for zeroDigit()
+         Generating method body for scientificPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for notANumber()
+         Generating method body for minusSign()
+         Generating method body for infinity()
+         Generating method body for exponentialSymbol()
+         Generating method body for plusSign()
+         Generating method body for currencyPattern()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for groupingSeparator()
+         Generating method body for perMill()
+         Generating method body for monetarySeparator()
+         Generating method body for decimalPattern()
+         Generating method body for percent()
+         Generating method body for defCurrencyCode()
+   Adding '3' new generated units
+      Removing invalidated units

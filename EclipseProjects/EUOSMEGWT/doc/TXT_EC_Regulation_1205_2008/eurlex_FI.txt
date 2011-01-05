@@ -1,0 +1,987 @@
+Komission asetus (EY) N:o 1205/2008,
+
+annettu 3 päivänä joulukuuta 2008,
+
+Euroopan parlamentin ja neuvoston direktiivin 2007/2/EY täytäntöönpanosta metatiedon osalta
+
+(ETA:n kannalta merkityksellinen teksti)
+
+EUROOPAN YHTEISÖJEN KOMISSIO, joka
+
+ottaa huomioon Euroopan yhteisön perustamissopimuksen,
+
+ottaa huomioon Euroopan yhteisön paikkatietoinfrastruktuurin (INSPIRE) perustamisesta 14 päivänä maaliskuuta 2007 annetun Euroopan parlamentin ja neuvoston direktiivin 2007/2/EY [1] ja erityisesti sen 5 artiklan 4 kohdan,
+
+sekä katsoo seuraavaa:
+
+(1) Direktiivillä 2007/2/EY säädetään Euroopan yhteisön paikkatietoinfrastruktuurin perustamista koskevista yleisistä säännöistä. Koska infrastruktuurin toimivuus edellyttää, että sen käyttäjän on voitava löytää tietyt paikkatietoaineistot ja -palvelut ja pystyttävä arvioimaan niiden soveltuvuus tiettyyn käyttötarkoitukseen, jäsenvaltioiden olisi laadittava metatietokuvaukset kyseisistä paikkatietoaineistoista ja -palveluista. Koska tällaisten metatietojen olisi oltava yhteensopivia ja käyttökelpoisia yhteisön tasolla ja maiden rajojen yli, on tarpeen vahvistaa säännöt metatiedoille, joita käytetään direktiivin 2007/2/EY liitteissä I, II ja III lueteltuja paikkatietoryhmiä vastaavien paikkatietoaineistojen ja -palvelujen kuvaamiseen.
+
+(2) Metatietoelementtien määrittely on tarpeen, jotta voidaan mahdollistaa metatiedon kohteena olevan tietoresurssin yksilöiminen, sen luokittelu ja maantieteellisen sijainnin ja ajankohdan osoittaminen, laadun ja käyttökelpoisuuden määrittely, paikkatietoaineistojen ja -palvelujen yhteentoimivuussääntöjen noudattamisen osoittaminen, saatavuuden ja käyttöoikeuksien rajoitusten ilmoittaminen ja resurssista vastaavan organisaation osoittaminen. Lisäksi tarvitaan metatietoelementtejä, jotka liittyvät metatietoon itseensä, jotta voidaan valvoa metatietojen ajantasaisuutta ja yksilöidä metatiedon luomisesta ja ylläpidosta vastaava organisaatio. Nämä ovat ne vähimmäismetatietoelementit, joita tarvitaan direktiivin 2007/2/EY noudattamiseen, mutta mikään ei estä organisaatioita kuvaamasta tietoresurssejaan laajemmin kansainvälisistä standardeista tai kulloisenkin aihealueen käytänteistä johdettujen lisäelementtien avulla. Myös komissio voi laatia ja ylläpitää lisäohjeita, varsinkin jos metatietojen yhteentoimivuus sitä edellyttää.
+
+(3) Ohjeita tarvitaan direktiivin 2007/2/EY mukaisten metatietojen kelpoisuuden toteamiseen kunkin metatietoelementin ehtojen ja oletetun esiintyvyyden suhteen eli sen määrittämiseksi, onko tietylle elementille aina löydyttävä metatietotietueessa ilmentymä, voiko ilmentymiä olla vain yksi tai voiko ilmentymiä olla useampi kuin yksi.
+
+(4) Kullekin metatietoelementille on määriteltävä arvoalue, jotta voidaan varmistaa metatietojen yhteentoimivuus monikielisessä toimintaympäristössä; arvoalueen olisi muodostuttava vapaasta tekstistä, päivämääristä, kansainvälisestä standardista johdetuista tunnuksista, kuten kielitunnuksista, rajatusta luettelosta tai sanastosta johdetuista avainsanoista taikka merkkijonoista.
+
+(5) Tässä asetuksessa säädetyt toimenpiteet ovat direktiivin 2007/2/EY 22 artiklalla perustetun komitean lausunnon mukaiset,
+
+ON ANTANUT TÄMÄN ASETUKSEN:
+
+1 artikla
+
+Kohde
+
+Tässä asetuksessa säädetään vaatimuksista, jotka koskevat direktiivin 2007/2/EY liitteessä I, II ja III lueteltuja tietoryhmiä vastaavia paikkatietoaineistoja, paikkatietoaineistosarjoja ja paikkatietopalveluja kuvaavan metatiedon luomista ja ylläpitoa.
+
+2 artikla
+
+Määritelmät
+
+Tässä asetuksessa käytetään direktiivin 2007/2/EY 3 artiklassa säädettyjen määritelmien lisäksi tämän asetuksen liitteen osassa A säädettyjä määritelmiä.
+
+3 artikla
+
+Metatiedon luominen ja ylläpito
+
+Paikkatietoaineistoa, paikkatietoaineistosarjaa tai paikkatietopalvelua kuvaavan metatiedon on koostuttava liitteen osassa B kuvatuista metatietoelementeistä tai metatietoelementtien ryhmistä ja metatietoa on luotava ja sitä on ylläpidettävä liitteen osassa C ja D säädettyjen sääntöjen mukaisesti.
+
+4 artikla
+
+Voimaantulo
+
+Tämä asetus tulee voimaan kahdentenakymmenentenä päivänä sen jälkeen, kun se on julkaistu Euroopan unionin virallisessa lehdessä.
+
+Tämä asetus on kaikilta osiltaan velvoittava, ja sitä sovelletaan sellaisenaan kaikissa jäsenvaltioissa.
+
+Tehty Brysselissä 3 päivänä joulukuuta 2008.
+
+Komission puolesta
+
+Stavros Dimas
+
+Komission jäsen
+
+[1] EUVL L 108, 25.4.2007, s. 1.
+
+--------------------------------------------------
+
+LIITE
+
+METATIEDON LAADINTASÄÄNNÖT
+
+OSA A
+
+Määritelmät
+
+1. Sovelletaan seuraavia määritelmiä:
+
+- "merkkijonolla" tarkoitetaan yksikkönä käsiteltävänä merkkijoukkona ilmaistavien metatietoelementtien arvoaluetta,
+
+- "vapaalla tekstillä" tarkoitetaan metatietoelementtien arvoaluetta, joka ilmaistaan yhdellä tai useammalla luonnollisella kielellä,
+
+- "historiatiedoilla" tarkoitetaan tietoaineiston historiaa ja elinkaarta tiedon keruusta ja hankinnasta tietoaineiston koostamisen ja johtamisen kautta nykyiseen muotoonsa, standardin EN ISO 19101 mukaisesti,
+
+- "metatietoelementillä" tarkoitetaan yksilöitävissä olevaa metatietoyksikköä, standardin EN ISO 19115 mukaisesti,
+
+- "nimiavaruudella" tarkoitetaan URI-viittauksella (Uniform Resource Identifier) yksilöitävää sanastoa, jonka sisältämiä nimiä käytetään XML-asiakirjoissa (Extensible Markup Language) elementtien ja attribuuttien niminä,
+
+- "laadulla" tarkoitetaan niistä tuotteen ominaisuuksista muodostuvaa kokonaisuutta, joihin perustuu tuotteen kyky täyttää sille asetetut vaatimukset ja siihen kohdistuvat odotukset, standardin EN ISO 19101 mukaisesti,
+
+- "resurssilla" tarkoitetaan tietoresurssia, joka sisältää suoran tai epäsuoran viittauksen tiettyyn paikkaan tai maantieteelliseen alueeseen,
+
+- "paikkatietoaineistosarjalla" tarkoitetaan sellaisten paikkatietoaineistojen joukkoa, joilla on sama tietotuoteseloste.
+
+2. Paikkatietoaineiston kelpoisuudella viitataan:
+
+- kohdealueeseen ja ajanjaksoon, jota tieto koskee,
+
+- siihen, onko tieto tarkastettu jonkin mittaus-, luotettavuus- tai muun vaatimusstandardin mukaisesti,
+
+- siihen, missä määrin tieto soveltuu kyseiseen käyttötarkoitukseen, tai
+
+- soveltuvin osin paikkatietoaineiston oikeudelliseen merkityksellisyyteen.
+
+OSA B
+
+Metatietoelementit
+
+1. YKSILÖIMINEN
+
+Seuraavat metatietoelementit ovat pakollisia:
+
+1.1 Resurssin nimi
+
+Luonnehtiva ja usein yksilöivä nimi, jolla resurssi tunnetaan.
+
+Tämä metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+1.2 Resurssin tiivistelmä
+
+Resurssin sisältöä kuvaileva tiivistelmä.
+
+Tämä metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+1.3 Resurssin tyyppi
+
+Metatiedon kohteena olevan resurssin tyyppi.
+
+Tämän metatietoelementin arvoalue määritellään kohdassa D.1.
+
+1.4 Resurssin osoite
+
+Ilmaisee linkin (linkit) resurssiin ja/tai resurssia koskevaan lisätietoon.
+
+Tämän metatietoelementin arvoalue koostuu merkkijonoista, yleensä URL-osoitteista (Uniform Resource Locator).
+
+1.5 Yksilöivä resurssitunniste
+
+Yksikäsitteinen tunniste, joka yksilöi resurssin.
+
+Tämän metatietoelementin arvoalue koostuu pakollisista merkkijonotunnuksista, jotka yleensä antaa tiedon omistaja, sekä merkkijonomuotoisesta nimiavaruudesta, joka yksilöi resurssitunnisteen asiayhteyden (esimerkiksi tiedon omistajan).
+
+1.6 Liitännäisresurssi
+
+Jos resurssi on paikkatietopalvelu, tämä metatietoelementti yksilöi soveltuvin osin palvelun kohteena olevat paikkatietoaineistot niiden URI-tunnisteiden avulla.
+
+Tämä metatietoelementin arvoalue koostuu pakollisista merkkijonotunnuksista, jotka yleensä antaa tiedon omistaja, sekä merkkijonomuotoisesta nimiavaruudesta, joka yksilöi tunnuksen asiayhteyden (esimerkiksi tiedon omistajan).
+
+1.7 Resurssin kieli
+
+Resurssissa esiintyvä kieli.
+
+Tämän metatietoelementin arvoalue koostuu standardissa ISO 639-2 määritellyistä kielistä.
+
+2. PAIKKATIETOJEN JA PAIKKATIETOPALVELUJEN LUOKITTELU
+
+2.1 Aiheluokka
+
+Aiheluokka ilmaisee ylätason luokittelun ja auttaa paikkatietoresurssien ryhmittelyssä ja aihehaussa.
+
+Tämän metatietoelementin arvoalue määritellään kohdassa D.2.
+
+2.2 Paikkatietopalvelutyyppi
+
+Tämä luokittelu helpottaa paikkatietopalvelujen hakemista. Kukin palvelu luokitellaan ainoastaan yhteen luokkaan.
+
+Tämän metatietoelementin arvoalue määritellään kohdassa D.3.
+
+3. AVAINSANA
+
+Jos resurssi on paikkatietopalvelu, on ilmoitettava vähintään yksi avainsana kohdasta D.4.
+
+Jos resurssi on paikkatietoaineisto tai paikkatietoaineistosarja, on ilmoitettava vähintään yksi GEMET-sanaston (General Environmental Multi-lingual Thesaurus) avainsana, joka kuvaa kyseistä paikkatiedon aihetta direktiivin 2007/2/EY liitteen I, II tai III mukaisesti.
+
+Kustakin avainsanasta on annettava seuraavat metatietoelementit:
+
+3.1 Avainsanan arvo
+
+Avainsanan arvona toimii aihetta kuvaava yleinen sana, jäsennetty asiasana tai lause. Aiheluokkajaottelu on liian ylimalkainen tarkempiin hakuihin, joten avainsanojen avulla voi täsmentää tekstihakuja ja tehdä rakenteisia avainsanahakuja.
+
+Tämän metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+3.2 Lähteenä oleva rajattu sanasto
+
+Jos avainsanan arvo on peräisin rajatusta sanastosta (asiasanastosta, ontologiasta), esimerkiksi GEMETistä, on annettava viittaus kyseiseen sanastoon.
+
+Viittauksen on sisällettävä ainakin sanaston nimi ja viitepäivämäärä (julkaisupäivä, viimeisimmän päivityksen ajankohta tai luomisajankohta).
+
+4. MAANTIETEELLINEN SIJAINTI
+
+Direktiivin 2007/2/EY 11 artiklan 2 kohdan e alakohdassa tarkoitettu maantieteellinen sijainti ilmaistaan metatietoelementtinä sijaintia rajaavalla suorakaiteella.
+
+4.1 Sijaintia rajaava suorakaide
+
+Tämä kuvaa rajaavan suorakaiteen avulla resurssin sijainnillista kattavuutta.
+
+Rajaava suorakaide määritellään läntisen tai itäisen pituuspiirin sekä eteläisen tai pohjoisen leveyspiirin avulla desimaaliasteina vähintään kahden desimaalin tarkkuudella.
+
+5. AIKAVIITE
+
+Tällä metatietoelementillä täytetään tiedon ajalliseen ulottuvuuteen liittyvä vaatimus, johon viitataan direktiivin 2007/2/EY 8 artiklan 2 kohdan d kohdassa. Aikaviitteenä on annettava ainakin yksi kohdissa 5.1–5.4 tarkoitetuista metatietoelementeistä.
+
+Kohdissa 5.1–5.4 tarkoitettujen metatietoelementtien arvoalue koostuu päivämääristä. Kunkin päivämäärän on oltava sidoksissa tiettyyn aikaviitejärjestelmään ja se on ilmaistava kyseisen järjestelmän mukaisesti. Oletusviitejärjestelmänä käytetään gregoriaanista kalenteria, jossa päivämäärät ilmaistaan standardin ISO 8601 mukaisesti.
+
+5.1 Ajallinen kattavuus
+
+Ajallinen kattavuus tarkoittaa ajanjaksoa, jota resurssin sisältö koskee. Ajanjakso voidaan ilmaista jollakin seuraavista:
+
+- yksittäinen päivämäärä,
+
+- aikaväli ilmaistuna alkupäivämäärän ja loppupäivämäärän avulla,
+
+- yhdistelmä yksittäisiä päivämääriä ja aikavälejä.
+
+5.2 Julkaisupäivä
+
+Resurssin julkaisupäivämäärä, jos se on tiedossa, tai voimaantulopäivä. Julkaisupäivämääriä voi olla useampia kuin yksi.
+
+5.3 Viimeisin päivitysajankohta
+
+Resurssin viimeisin päivitysajankohta, jos resurssia on päivitetty. Näitä ajankohtia voi olla vain yksi.
+
+5.4 Luontiajankohta
+
+Päivämäärä, jona resurssi on luotu. Luontiajankohtia voi olla vain yksi.
+
+6. LAATU JA KÄYTTÖKELPOISUUS
+
+Direktiivin 2007/2/EY 5 artiklan 2 kohdassa ja 11 artiklan 2 kohdassa tarkoitettua paikkatiedon laatua ja käyttökelpoisuutta kuvataan seuraavilla metatietoelementeillä:
+
+6.1 Historiatieto
+
+Selitys paikkatietoaineiston luontiprosessista ja/tai yleisestä laadukkuudesta. Voi tarvittaessa sisältää maininnan tiedon käyttökelpoisuuden todentamisesta tai laadunvarmistuksesta, version virallisuudesta (jos versioita on olemassa useampia) tai oikeudellisesta merkitsevyydestä.
+
+Tämän metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+6.2 Erotuskyky
+
+Viittaa tietoaineiston sijainnilliseen yksityiskohtaisuuteen. Ilmaistaan joukkona (0…*) näytepisteiden välisiä etäisyyksiä (tyypillisesti hila- ja kuvamuotoisen tiedon yhteydessä) tai mittakaavavastaavuuksia (tyypillisesti kartoissa tai kartoista johdetun tiedon yhteydessä).
+
+Mittakaava ilmaistaan yleensä mittakaavan nimittäjää ilmaisevalla kokonaisluvulla.
+
+Näytepisteiden välinen etäisyys ilmaistaan pituusmittayksikköön liitetyllä numeerisella arvolla.
+
+7. SÄÄNTÖJENMUKAISUUS
+
+Direktiivin 2007/2/EY 5 artiklan 2 kohdan a alakohdassa ja 11 artiklan 2 kohdan d alakohdassa tarkoitettua sääntöjenmukaisuutta ja sääntöjenmukaisuuden astetta suhteessa kyseisen direktiivin 7 artiklan 1 kohdan nojalla vahvistettuihin sääntöihin kuvataan seuraavilla metatietoelementeillä:
+
+7.1 Määrittely
+
+Viittaus direktiivin 2007/2/EY 7 artiklan 1 kohdan nojalla vahvistettuun säännöstöön tai muuhun eritelmään, jonka vaatimukset kyseinen resurssi täyttää.
+
+Resurssi voi täyttää useamman kuin yhden direktiivin 2007/2/EY 7 artiklan 1 kohdan nojalla vahvistetun säännöstön tai muun eritelmän vaatimukset.
+
+Viittauksen on sisällettävä ainakin direktiivin 2007/2/EY 7 artiklan 1 kohdan nojalla vahvistetun säännöstön tai muun eritelmän nimi ja viitepäivämäärä (julkaisupäivä, viimeisimmän päivityksen ajankohta tai luomisajankohta).
+
+7.2 Sääntöjenmukaisuusaste
+
+Kuvaa sitä, missä määrin resurssi täyttää direktiivin 2007/2/EY 7 artiklan 1 kohdan nojalla vahvistetun säännöstön tai muun spesifikaation vaatimukset.
+
+Tämän metatietoelementin arvoalue määritellään kohdassa D.5.
+
+8. SAATAVUUS- JA KÄYTTÖRAJOITUKSET
+
+Saatavuus- ja käyttörajoitukset ilmaistaan jommallakummalla tai molemmilla seuraavista:
+
+- saatavuus- ja käyttöehdot (8.1)
+
+- julkisen saatavuuden rajoitukset (8.2).
+
+8.1 Saatavuus- ja käyttöehdot
+
+Tämä metatietoelementti ilmaisee paikkatietoaineiston tai -palvelun saatavuus- ja käyttöehdot ja tarvittaessa vastaavat maksut direktiivin 2007/2/EY 5 artiklan 2 kohdan b alakohdassa ja 11 artiklan 2 kohdan f alakohdassa edellytetyn mukaisesti.
+
+Tämän metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+Elementille on annettava arvo. Jos resurssin saatavuuteen ja käyttöön ei sovelleta ehtoja, arvoksi annetaan "ei käyttöehtoja". Jos ehdot eivät ole tiedossa, arvoksi annetaan "käyttöehdot tuntemattomat".
+
+Elementin on sisällettävä tietoa myös mahdollisista resurssin käytöstä perittävistä maksuista tai viittaus URL-osoitteeseen, josta saa tietoa maksuista.
+
+8.2 Julkisen saatavuuden rajoitukset
+
+Jos jäsenvaltio on rajoittanut paikkatietoaineiston tai -palvelun julkista saatavuutta direktiivin 2007/2/EY 13 artiklan nojalla, tässä metatietoelementissä annetaan tietoa rajoituksista ja niiden syistä.
+
+Ellei julkista saatavuutta ole rajoitettu, metatietoelementissä on mainittava myös tästä.
+
+Tämän metatietoelementin arvoalue koostuu vapaasta tekstistä.
+
+9. PAIKKATIETOAINEISTOJEN JA -PALVELUJEN TUOTTAMISESTA, HALLINNASTA, YLLÄPIDOSTA JA JAKELUSTA VASTAAVAT ORGANISAATIOT
+
+Direktiivin 2007/2/EY 5 artiklan 2 kohdan d alakohdassa ja 11 artiklan 2 kohdan g alakohdassa asetettujen vaatimusten täyttämiseksi ilmoitetaan seuraavat kaksi metatietoelementtiä:
+
+9.1 Vastuutaho
+
+Resurssin tuottamisesta, hallinnasta, ylläpidosta ja jakelusta vastaavan tahon kuvaus.
+
+Kuvauksen on sisällettävä:
+
+- organisaation nimi vapaan tekstin muodossa,
+
+- sähköpostiosoite merkkijonona.
+
+9.2 Vastuutahon rooli
+
+Vastuullisen organisaation rooli resurssin suhteen.
+
+Tämän metatietoelementin arvoalue määritellään kohdassa D.6.
+
+10. METATIETOA KOSKEVAT METATIEDOT
+
+Direktiivin 2007/2/EY 5 artiklan 1 kohdassa asetettujen vaatimusten täyttämiseksi ilmoitetaan seuraavat metatietoelementit:
+
+10.1 Metatiedosta vastaava taho
+
+Metatiedon luomisesta ja ylläpidosta vastaavan tahon kuvaus.
+
+Kuvauksen on sisällettävä:
+
+- organisaation nimi vapaan tekstin muodossa,
+
+- sähköpostiosoite merkkijonona.
+
+10.2 Metatiedon päiväys
+
+Ajankohta, jona metatietotietue on luotu tai jona sitä on päivitetty.
+
+Päivämäärä ilmaistaan standardin ISO 8601 mukaisesti.
+
+10.3 Metatiedon kieli
+
+Luonnollinen kieli, jolla metatietoelementit on ilmaistu.
+
+Tämän metatietoelementin arvoalue koostuu yhteisön virallisista kielistä ilmaistuina standardin ISO 639-2 mukaisesti.
+
+OSA C
+
+Ohjeet metatietoelementtien kerrannaisuudesta ja ehdollisuuksista
+
+Resurssia kuvaavan metatiedon on sisällettävä paikkatietoaineiston tai paikkatietoaineistosarjan osalta taulukossa 1 luetellut metatietoelementit ja metatietoelementtien ryhmät sekä paikkatietopalvelun osalta taulukossa 2 luetellut metatietoelementit ja metatietoelementtien ryhmät.
+
+Metatietoelementtien ja niiden ryhmien on täytettävä taulukoissa 1 ja 2 asetetut kerrannaisuusehdot ja niiden ehdollisuudet.
+
+Ellei tietty metatietoelementti ole ehdollinen, se on pakollinen.
+
+Taulukot sisältävät seuraavat tiedot:
+
+- ensimmäinen sarake sisältää viittauksen liitteen osassa B olevaan kohtaan, jossa metatietoelementti tai metatietoelementtien ryhmä määritellään,
+
+- toinen sarake sisältää metatietoelementin tai metatietoelementtien ryhmän nimen,
+
+- kolmas sarake osoittaa metatietoelementin kerrannaisuuden. Kerrannaisuus ilmaistaan UML-merkintätavan mukaisesti:
+
+- 1 tarkoittaa, että tulosjoukossa saa esiintyä ainoastaan yksi tämän metatietoelementin ilmentymä,
+
+- 1..* tarkoittaa, että tulosjoukossa on esiinnyttävä ainakin yksi tämän metatietoelementin ilmentymä,
+
+- 0..1 tarkoittaa, että metatietoelementin esiintyminen tulosjoukossa on ehdollista ja ilmentymiä voi olla vain yksi,
+
+- 0..* tarkoittaa, että metatietoelementin esiintyminen tulosjoukossa on ehdollista ja ilmentymiä voi olla yksi tai useampia,
+
+- kun kerrannaisuus on 0..1 tai 0..*, esitetty ehto määrittelee sen, milloin metatietoelementti on pakollinen,
+
+- neljäs sarake sisältää ehdon, jos elementin kerrannaisuus ei koske kaikkia resurssityyppejä. Muissa tapauksissa kaikki elementit ovat pakollisia.
+
+Taulukko 1
+
+Paikkatietoaineiston tai paikkatietoaineistosarjan metatiedot
+
+Viite | Metatietoelementti | Kerrannaisuus | Ehto |
+
+1.1 | Resurssin nimi | 1 | |
+
+1.2 | Resurssin tiivistelmä | 1 | |
+
+1.3 | Resurssin tyyppi | 1 | |
+
+1.4 | Resurssin osoite | 0..* | Pakollinen, jos käytössä on URL-osoite, josta saa lisätietoa resurssista ja/tai sen saatavuuteen liittyviä palveluja. |
+
+1.5 | Yksilöivä resurssitunniste | 1..* | |
+
+1.7 | Resurssin kieli | 0..* | Pakollinen, jos resurssi sisältää tekstimuotoista informaatiota. |
+
+2.1 | Aiheluokka | 1..* | |
+
+3 | Avainsana | 1..* | |
+
+4.1 | Sijaintia rajaava suorakaide | 1..* | |
+
+5 | Aikaviite | 1..* | |
+
+6.1 | Historiatieto | 1 | |
+
+6.2 | Erotuskyky | 0..* | Pakollinen, jos tietoaineistolle tai tietoaineistosarjalle voidaan määritellä mittakaava tai näytetiheys. |
+
+7 | Sääntöjenmukaisuus | 1..* | |
+
+8.1 | Saatavuus- ja käyttöehdot | 1..* | |
+
+8.2 | Julkisen saatavuuden rajoitukset | 1..* | |
+
+9 | Vastuutaho | 1..* | |
+
+10.1 | Metatiedosta vastaava taho | 1..* | |
+
+10.2 | Metatiedon päiväys | 1 | |
+
+10.3 | Metatiedon kieli | 1 | |
+
+Taulukko 2
+
+Paikkatietopalvelujen metatiedot
+
+Viite | Metatietoelementti | Kerrannaisuus | Ehto |
+
+1.1 | Resurssin nimi | 1 | |
+
+1.2 | Resurssin tiivistelmä | 1 | |
+
+1.3 | Resurssin tyyppi | 1 | |
+
+1.4 | Resurssin osoite | 0..* | Pakollinen, jos palveluun on olemassa linkki. |
+
+1.6 | Liitännäisresurssi | 0..* | Pakollinen, jos palvelun käyttämiin tietoaineistoihin on olemassa linkki. |
+
+2.2 | Paikkatietopalvelutyyppi | 1 | |
+
+3 | Avainsana | 1..* | |
+
+4.1 | Sijaintia rajaava suorakaide | 0…* | Pakollinen palveluille, joilla on selkeä sijainnillinen kattavuus. |
+
+5 | Aikaviite | 1..* | |
+
+6.2 | Erotuskyky | 0..* | Pakollinen, jos sijaintitiedon erotuskykyä on palvelussa rajoitettu. |
+
+7 | Sääntöjenmukaisuus | 1..* | |
+
+8.1 | Saatavuus- ja käyttöehdot | 1..* | |
+
+8.2 | Julkisen saatavuuden rajoitukset | 1..* | |
+
+9 | Vastuutaho | 1..* | |
+
+10.1 | Metatiedoista vastaava taho | 1..* | |
+
+10.2 | Metatiedon päiväys | 1 | |
+
+10.3 | Metatiedon kieli | 1 | |
+
+OSA D
+
+Arvoalueet
+
+Kohdissa D.1–D.6 kuvattuja arvoalueita on käytettävä osassa B olevan metatietoelementtien kuvauksen mukaisesti ja noudattaen osan C taulukoissa 1 ja 2 esitettyjä kerrannaisuussääntöjä.
+
+Kunkin alueen kukin arvo on määritelty seuraavin tiedoin:
+
+- numerotunnus,
+
+- luonnollisella kielellä oleva nimi, joka voidaan kääntää Euroopan yhteisön eri kielille,
+
+- kielineutraali nimi tietokonekäyttöön (sulkeissa oleva merkkijono),
+
+- mahdollinen kuvaus tai määritelmä.
+
+1. RESURSSIN TYYPPI
+
+1.1 Paikkatietoaineistosarja (series)
+
+1.2 Paikkatietoaineisto (dataset)
+
+1.3 Paikkatietopalvelu (services)
+
+2. AIHELUOKKA STANDARDIN EN ISO 19115 MUKAISESTI
+
+2.1 Maatalous (farming)
+
+Kotieläinten kasvatus ja/tai kasvinviljely.
+
+Luokka koskee direktiivin 2007/2/EY liitteen III kohdan 9 paikkatietoaihetta "Maatalous- ja vesiviljelylaitokset".
+
+2.2 Eläin- ja kasvikunta (biota)
+
+Kasvisto ja eläimistö luonnonympäristössä.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 17 "Biomaantieteelliset alueet", kohta 18 "Elinympäristöt ja biotoopit", kohta 19 "Lajien levinneisyys".
+
+2.3 Rajat (boundaries)
+
+Lakisääteiset maan alueiden kuvaukset.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteiden paikkatietoaiheita: liitteen I kohta 4 "Hallinnolliset yksiköt", liitteen III kohta 1 "Tilastoyksiköt".
+
+2.4 Ilmastotiede/meteorologia/ilmakehä (climatologyMeteorologyAtmosphere)
+
+Ilmakehän prosessit ja ilmiöt.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 13 "Ilmakehän tila", kohta 14 "Ilmaston maantieteelliset ominaispiirteet".
+
+2.5 Talous (economy)
+
+Taloudellinen toimeliaisuus, taloudelliset olot ja työllisyys.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 20 "Energiavarat", kohta 21 "Mineraalivarat".
+
+2.6 Korkeus (elevation)
+
+Korkeus tai syvyys merenpinnasta.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen II paikkatietoaiheita: kohta 1 "Korkeus".
+
+2.7 Ympäristö (environment)
+
+Luonnonvarat, luonnonsuojelu ja ympäristönsuojelu.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen I paikkatietoaiheita: kohta 9 "Suojellut alueet".
+
+2.8 Geotieteet (geoscientificInformation)
+
+Geotieteisiin liittyvää informaatiota.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY paikkatietoaiheita: liitteen III kohta 3 "Maaperä", liitteen II kohta 4 "Geologia", liitteen III kohta 12 "Luonnonriskialueet".
+
+2.9 Terveys (health)
+
+Terveys, terveyspalvelut, sosiaaliekologia ja turvallisuus.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 5 "Väestön terveys ja turvallisuus".
+
+2.10 Kuvat/peruskartat/maanpeite (imageryBaseMapsEarthCover)
+
+Peruskartat.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen II paikkatietoaiheita: kohta 3 "Ortoilmakuvat", kohta 2 "Maanpeite".
+
+2.11 Tiedustelu/puolustus (intelligenceMilitary)
+
+Sotilastukikohdat, puolustusrakenteet, sotilastoiminta.
+
+Ei koske erityisesti mitään direktiivin 2007/2/EY paikkatietoaiheita.
+
+2.12 Sisävedet (inlandWaters)
+
+Sisävesikohteet, valumajärjestelmät ja niiden ominaispiirteet.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen I paikkatietoaiheita: kohta 8 "Hydrografia".
+
+2.13 Sijainti (location)
+
+Paikantamiseen liittyvä tieto tai palvelu.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen I paikkatietoaiheita: kohta 3 "Paikannimet", kohta 5 "Osoitteet".
+
+2.14 Valtameret (oceans)
+
+Suolaisten vesimassojen (lukuun ottamatta sisävesiä) ominaispiirteet.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 16 "Merialueet", kohta 15 "Merentutkimuksen maantieteelliset ominaispiirteet".
+
+2.15 Aluesuunnittelu/kiinteistöjärjestelmä (planningCadastre)
+
+Maan käyttöön ja suunnitteluun liittyvää informaatiota.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY paikkatietoaiheita: liitteen I kohta 6 "Kiinteistöt", liitteen III kohta 4 "Maankäyttö", liitteen III kohta 11 "Aluesuunnittelun, rajoitusten ja sääntelyn piiriin kuuluvat alueet ja raportointiyksiköt".
+
+2.16 Yhteiskunta (society)
+
+Yhteiskuntaa ja kulttuuria kuvaavat ominaispiirteet.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 10 "Väestöjakauma – demografia".
+
+2.17 Rakennelma (structure)
+
+Keinotekoiset rakenteet.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 2 "Rakennukset", kohta 8 "Tuotanto- ja teollisuuslaitokset", kohta 7 "Ympäristön tilan seurantalaitteet".
+
+2.18 Liikenne (transportation)
+
+Ihmisten ja tavaroiden kuljetukseen käytetyt tavat.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen I paikkatietoaiheita: kohta 7 "Liikenneverkot".
+
+2.19 Johtoverkot/viestintä (utilitiesCommunication)
+
+Energia-, vesi- ja jätejärjestelmät sekä viestintäinfrastruktuuri ja -palvelut.
+
+Luokka koskee seuraavia direktiivin 2007/2/EY liitteen III paikkatietoaiheita: kohta 6 "Yleishyödylliset ja muut julkiset palvelut".
+
+3. PAIKKATIETOPALVELUTYYPPI
+
+3.1 Hakupalvelu (discovery)
+
+Palvelu, joka mahdollistaa paikkatietoaineistojen ja -palvelujen etsimisen niiden metatietojen perusteella sekä metatiedon sisällön tarkastelun.
+
+3.2 Katselupalvelu (view)
+
+Palvelu, joka mahdollistaa vähintään paikkatietoaineistojen tarkastelun, liikkumisen aineistossa, katselumittakaavan muuttamisen, panoroinnin tai peittokuvat sekä selitetiedon ja metatietoon sisältyvän kaikenlaisen merkityksellisen tiedon katselun näytöllä.
+
+3.3 Latauspalvelu (download)
+
+Palvelu, joka mahdollistaa paikkatietoaineistojen ja niiden osien kopioinnin omalle tietokoneelle ja, mahdollisuuksien mukaan, suoran pääsyn niihin.
+
+3.4 Muunnospalvelu (transformation)
+
+Palvelu, joka mahdollistaa paikkatietoaineistojen muuntamisen yhteentoimivuuden saavuttamiseksi.
+
+3.5 Prosessigenerointipalvelu (invoke)
+
+Palvelu, joka mahdollistaa sekä paikkatietopalvelun edellyttämien syötteiden ja tulosteiden että useampia palveluja yhdistävien prosessien tai palveluketjujen määrittämisen. Se mahdollistaa myös prosessin tai palveluketjun ulkoisen verkkopalvelurajapinnan määrittämisen.
+
+3.6 Muu palvelu (other)
+
+4. PAIKKATIETOPALVELUJEN LUOKITTELU
+
+Avainsanat perustuvat standardin EN ISO 19119 mukaiseen maantieteellisten palvelujen luokitteluun. Luokittelussa luokat jakautuvat alaluokkiin, joilla määritellään paikkatietopalvelujen luokittelun arvoalue.
+
+100 Käyttöliittymäpalvelut (humanInteractionService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+101. Hakemistoselain (humanCatalogueViewer)
+
+Selainpalvelu, jonka avulla käyttäjä voi tarkastella hakemistoa ja paikantaa, selailla ja hallita metatietoa paikkatiedosta tai paikkatietopalveluista.
+
+102. Paikkatietoselain (humanGeographicViewer)
+
+Selainpalvelu, jonka avulla käyttäjä voi tarkastella yhä tai useampaa tietokohdekokoelmaa tai paikkatietojakaumaa.
+
+103. Maantieteellinen taulukkolaskentaselain (humanGeographicSpreadsheetViewer)
+
+Selainpalvelu, jonka avulla käyttäjä voi tarkastella kerrallaan useita dataobjekteja ja teettää paikkatiedolla laskelmia, jotka muistuttavat taulukkolaskentaohjelmalla tehtäviä laskelmia.
+
+104. Palvelueditori (humanServiceEditor)
+
+Editoripalvelu, jonka avulla käyttäjä voi hallita paikkatiedon prosessointipalveluja.
+
+105. Palveluketjueditori (humanChainDefinitionEditor)
+
+Editoripalvelu, jonka avulla käyttäjä voi hallita palveluketjupalvelua.
+
+106. Prosessinsäätöohjain (humanWorkflowEnactmentManager)
+
+Palvelu, jonka avulla käyttäjä voi hallita prosessinohjauspalvelua.
+
+107. Kohdetietoeditori (humanGeographicFeatureEditor)
+
+Paikkatietoeditori, jonka avulla käyttäjä voi käsitellä kohdetietoa.
+
+108. Symbolieditori (humanGeographicSymbolEditor)
+
+Editoripalvelu, jonka avulla käyttäjä voi valita ja hallinnoida symbolikirjastoja.
+
+109. Yleistyseditori (humanFeatureGeneralizationEditor)
+
+Editoripalvelu, jonka avulla käyttäjä voi muokata tietokohteen tai tietokohdekokoelman kartografista ilmentymää yksinkertaistamalla sen visualisointia menettämättä kuitenkaan sen pääpiirteitä.
+
+110. Paikkatiedon tietorakenteen selain (humanGeographicDataStructureViewer)
+
+Selainpalvelu, jonka avulla käyttäjä voi tarkastella osaa tietoaineistosta nähdäkseen sen sisäisen rakenteen.
+
+200 Tiedonhallintapalvelut (infoManagementService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+201. Tietokohdepalvelu (infoFeatureAccessService)
+
+Palvelu, jonka avulla asiakassovellus voi tarkastella ja hallinnoida tietokohdekokonaisuutta.
+
+202. Karttakuvapalvelu (infoMapAccessService)
+
+Palvelu, jonka avulla asiakassovellus voi käyttää maantieteellistä grafiikkaa eli kuvia paikkatiedosta.
+
+203. Jatkumotietopalvelu (infoCoverageAccessService)
+
+Palvelu, jonka avulla asiakassovellus voi tarkastella ja hallinnoida jatkumomuotoisen tiedon kokonaisuutta.
+
+204. Havaintolaitetietopalvelu (infoSensorDescriptionService)
+
+Palvelu, joka antaa tiedot havaintolaitteesta, muun muassa tiedot sen sijainnista ja suuntauksesta sekä geometrisistä, dynaamisista ja radiometrisistä ominaisuuksista geoprosessointitarkoituksiin.
+
+205. Tietotuotepalvelu (infoProductAccessService)
+
+Palvelu, jonka avulla voi saada käyttöönsä paikkatietotuotevalikoiman ja hallinnoida sitä.
+
+206. Tietokohdetyyppipalvelu (infoFeatureTypeService)
+
+Palvelu, jonka avulla asiakassovellus voi tarkastella ja hallinnoida tietokohdetyyppien määritelmien valikoimaa.
+
+207. Luettelopalvelu (infoCatalogueService)
+
+Palvelu, jonka avulla voi tehdä hakuja ilmentymiä koskevaan metadatakokonaisuuteen ja hallinnoida sitä.
+
+208. Rekisteripalvelu (infoRegistryService)
+
+Palvelu, jonka avulla pääsee tarkastelemaan tietokohteiden tyyppejä koskevaa metatietoa.
+
+209. Maantieteellinen hakemistopalvelu (infoGazetteerService)
+
+Palvelu, joka tarjoaa luettelon reaalimaailman ilmiöluokan tai -luokkien ilmentymistä, joihin sisältyy jonkinlaista sijaintia koskevaa tietoa.
+
+210. Tilaamispalvelu (infoOrderHandlingService)
+
+Palvelu, jonka avulla asiakas voi tilata tuotteita palveluntarjoajalta.
+
+211. Kestotilauspalvelu (infoStandingOrderService)
+
+Tilaamispalvelu, jonka kautta käyttäjä voi pyytää, että tiettyä maantieteellistä aluetta koskeva tuote toimitetaan aina sen tullessa saataville.
+
+300 Prosessinhallintapalvelut (taskManagementService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+301. Palveluketjun määrittelypalvelu (chainDefinitionService)
+
+Palvelu, jonka avulla määritetään käsittelyketju ja mahdollistetaan sen suorittaminen prosessinohjauspalvelussa.
+
+302. Prosessinohjauspalvelu (workflowEnactmentService)
+
+Prosessinohjauspalvelu tulkitsee ketjun sekä ohjaa palvelujen ilmentymien tuottamista ja toimintojen jaksottamista.
+
+303. Tilauspalvelu (subscriptionService)
+
+Palvelu, jonka avulla asiakassovellus voi rekisteröityä tilaajaksi tietynlaista tapahtumaa koskeville ilmoituksille.
+
+400 Paikkatiedon sijaintiprosessointipalvelut (spatialProcessingService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+401. Koordinaattikonversiopalvelu (spatialCoordinateConversionService)
+
+Palvelu, jolla muunnetaan koordinaatteja kahden samaan datumiin perustuvan koordinaattijärjestelmän välillä.
+
+402. Koordinaattimuunnospalvelu (spatialCoordinateTransformationService)
+
+Palvelu, jolla muunnetaan koordinaatteja kahden eri datumiin perustuvan koordinaattijärjestelmän välillä.
+
+403. Jatkumo/vektorikonversiopalvelu (spatialCoverageVectorConversionService)
+
+Palvelu, jolla paikkatiedon kuvaus muutetaan jatkumomuotoisesta skeemasta vektoriskeemaan tai päinvastoin.
+
+404. Kuvakoordinaattikonversiopalvelu (spatialImageCoordinateConversionService)
+
+Koordinaattien muunnos- tai konversiopalvelu, jolla muutetaan kuvan koordinaattijärjestelmä.
+
+405. Oikaisupalvelu (spatialRectificationService)
+
+Palvelu, jolla kuva muunnetaan kohtisuoraan yhdensuuntaisprojektioon ja näin ollen vakiomittakaavaan.
+
+406. Ortokorjauspalvelu (spatialOrthorectificationService)
+
+Oikaisupalvelu, joka poistaa kuvasta maankohoumista johtuvan vinoutuman ja vääristymisen.
+
+407. Havaintolaitegeometriamallia käyttävä oikaisupalvelu (spatialSensorGeometryModelAdjustmentService)
+
+Palvelu, joka käyttää havaintolaitteen geometriamallia kuvan sovittamiseksi paremmin muihin kuviin ja/tai tunnettuihin sijaintipisteisiin maassa.
+
+408. Kuvageometrian konversiopalvelu (spatialImageGeometryModelConversionService)
+
+Palvelu, joka muuntaa kuvauslaitteen geometriamallin toiseksi mutta vastaavaksi geometriamalliksi.
+
+409. Alueperusteinen osittamispalvelu (spatialSubsettingService)
+
+Palvelu, joka seuloo osan yhtenäistä aluetta koskevasta lähtötiedosta joko maantieteellisen sijainnin tai ruudustokoordinaattien perusteella.
+
+410. Näytteenottopalvelu (spatialSamplingService)
+
+Palvelu, joka seuloo lähtötietoa jatkuvana otantana joko maantieteellisen sijainnin tai ruudustokoordinaattien perusteella.
+
+411. Aluejakopalvelu (spatialTilingChangeService)
+
+Palvelu, joka muuttaa paikkatiedon ruutumaista aluejakoa.
+
+412. Ulottuvuuksienmittauspalvelu (spatialDimensionMeasurementService)
+
+Palvelu, jonka avulla voidaan määrittää kuvassa tai muussa paikkatiedossa esiintyvän kohteen ulottuvuudet.
+
+413. Tietokohteen muokkauspalvelu (spatialFeatureManipulationService)
+
+Rekisteröi tietokohteen toiseksi tietokohteeksi, kuvaksi tai muuksi tietoaineistoksi tai koordinaattikokonaisuudeksi; korjaa suhteellisen muunnoksen vääristymiä, kierrosta aiheutuvia eroja, mittakaavaeroja ja perspektiivieroja. Tarkastaa, että tietokohdekokoelman kaikki kohteet ovat topologisesti eheitä tietokohdekokoelman topologiasääntöjen mukaisesti sekä tunnistaa tai korjaa todetut epäjohdonmukaisuudet.
+
+414. Tietokohteiden vastaavuuspalvelu (spatialFeatureMatchingService)
+
+Palvelu, joka määrittelee, mitkä eri tietolähteistä peräisin olevat tietokohteet tai niiden osat liittyvät samaan reaalimaailman kohteeseen (esim. reunavertailussa ja rajoitetussa koostamisessa).
+
+415. Tietokohteiden yleistämispalvelu (spatialFeatureGeneralizationService)
+
+Palvelu, joka vähentää spatiaalista variaatiota tietokohdekokoelmassa sen havainnollisuuden parantamiseksi samalla ehkäisten datan vähentämisen kielteisiä vaikutuksia.
+
+416. Reitinmäärityspalvelu (spatialRouteDeterminationService)
+
+Palvelu, joka määrittelee optimaalisen reitin kahden pisteen välillä syöteparametrien ja tietokohdekokoelman sisältämien ominaisuuksien perusteella.
+
+417. Paikantamispalvelu (spatialPositioningService)
+
+Paikantamista tarjoavan laitteen tarjoama palvelu, jonka avulla voi käyttää, hankkia ja yksiselitteisesti tulkita sijaintitietoa, sekä päätellä, vastaavatko tulokset käyttötarkoituksen vaatimuksia.
+
+418. Läheisyysanalyysipalvelu (spatialProximityAnalysisService)
+
+Etsii kaikki tietyt attribuutit omaavat objektit, jotka sijaitsevat käyttäjän määrittelemän etäisyyden sisällä tietystä sijaintipisteestä tai paikkatietokohteesta.
+
+500 Paikkatiedon temaattiset prosessointipalvelut (thematicProcessingService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+501. Maantieteellisten muuttujien laskentapalvelu (thematicGoparameterCalculationService)
+
+Palvelu, joka tuottaa sovelluskohtaisia kvantitatiivisia tuloksia, joita ei voi saada suoraan raakadatasta.
+
+502. Teemaperusteinen luokittelupalvelu (thematicClassificationService)
+
+Palvelu, joka luokittelee paikkatietoa alueittain temaattisten attribuuttien perusteella.
+
+503. Tietokohteiden yleistämispalvelu (thematicFeatureGeneralizationService)
+
+Palvelu, joka yleistää tietokohteita tietokohdekokoelmassa sen havainnollisuuden parantamiseksi samalla ehkäisten datan vähentämisen kielteisiä vaikutuksia.
+
+504. Teemaperusteinen osittamispalvelu (thematicSubsettingService)
+
+Palvelu, joka seuloo osan yhtenäistä aluetta koskevasta lähtötiedosta temaattisten parametriarvojen perusteella.
+
+505. Lukumäärälaskentapalvelu (thematicSpatialCountingService)
+
+Palvelu, joka laskee teemaperusteisesti paikkatietokohteiden määriä.
+
+506. Muutosjäljityspalvelu (thematicChangeDetectionService)
+
+Palvelu, jolla etsitään eroja samaa maantieteellistä aluetta eri aikoina kuvaavan kahden tietoaineiston välillä.
+
+507. Paikkatietokohteiden tunnistuspalvelu (thematicGeographicInformationExtractionService)
+
+Palvelu, joka tukee tietokohteiden ja maaston tunnistamista kaukokartoitusaineistosta ja skannatuista kuvista.
+
+508. Kuvankäsittelypalvelu (thematicImageProcessingService)
+
+Palvelu, jolla voidaan muuttaa kuvan temaattisia attribuutteja matemaattisen mallin avulla.
+
+509. Erotuskyvyn alentamispalvelu (thematicReducedResolutionGenerationService)
+
+Palvelu, joka heikentää kuvan erotuskykyä.
+
+510. Kuvansäätöpalvelu (thematicImageManipulationService)
+
+Palvelut, joilla muokataan kuvadatan ominaisuuksia: väri- ja kontrastiarvojen muuttaminen, erilaisten suotimien käyttö, kuvan resoluution muokkaaminen, häiriönpoisto, raitaisuuden vähentäminen, systemaattis-radiometriset korjaukset, ilmakehän aiheuttama heikentyminen, muutokset valoisuusolosuhteissa jne.
+
+511. Kuvatulkintapalvelut (thematicImageUnderstandingService)
+
+Palvelut, jotka mahdollistavat automaattisen kuvaerojen jäljityksen, kuvaerojen rekisteröinnin, erojen merkityksen analysoinnin ja esittämisen sekä aluepohjaisen ja mallipohjaisen differentioinnin.
+
+512. Kuvasynteesipalvelut (thematicImageSynthesisService)
+
+Palvelut, joita käytetään kuvien luontiin tai muokkaamiseen tietokonepohjaisten tilamallien avulla, perspektiivimuunnoksiin sekä kuvan ominaisuuksien muokkaamiseen näkyvyyden parantamiseksi, erotuskyvyn lisäämiseksi ja/tai pilvipeitteen tai sumuisuuden vaikutusten vähentämiseksi.
+
+513. Monikanavakuvan muokkauspalvelu (thematicMultibandImageManipulationService)
+
+Palvelut, jotka muokkaavat kuvaa käyttämällä sen eri kanavia.
+
+514. Kohdetunnistuspalvelu (thematicObjectDetectionService)
+
+Palvelut, joilla kuvasta etsitään reaalimaailman kohteita.
+
+515. Geoseulontapalvelu (thematicGeoparsingService)
+
+Palvelu, joka seuloo tekstistä sijaintiviittauksia, kuten paikannimiä, osoitteita, postinumeroita jne. geokoodauspalvelussa käytettäviksi.
+
+516. Geokoodauspalvelu (thematicGeocodingService)
+
+Palvelu, jolla liitetään tekstimuotoisiin sijaintiviittauksiin maantieteelliset koordinaatit (tai joku muu sijaintiviite).
+
+600 Paikkatiedon ajalliset prosessointipalvelut (temporalProcessingService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+601. Aikaviitejärjestelmän muuntopalvelu (temporalReferenceSystemTransformationService)
+
+Palvelu, jolla muutetaan aikamääreilmentymä yhdestä aikaviitejärjestelmästä toiseen aikaviitejärjestelmään.
+
+602. Aikajaksotuspalvelu (temporalSubsettingService)
+
+Palvelu, joka seuloo dataa syötteestä jatkuvaan aikajaksotukseen ajallisen sijoittumisen perusteella.
+
+603. Näytteenottopalvelu (temporalSamplingService)
+
+Palvelu, joka seuloo lähtötietoa jatkuvana otantana ajallisen sijoittumisen perusteella.
+
+604. Aikaperusteinen läheisyysanalyysipalvelu (temporalProximityAnalysisService)
+
+Etsii kaikki tietyt attribuutit omaavat objektit, jotka sijaitsevat käyttäjän määrittelemän aikavälin sisällä tietystä aikavälistä tai ajankohdasta.
+
+700 Paikkatiedon metatietoa koskevat prosessointipalvelut (metadataProcessingService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+701. Tilastonlaskentapalvelu (metadataStatisticalCalculationService)
+
+Palvelu, jolla luodaan tilasto tietystä tietoaineistosta.
+
+702. Maantieteelliset annotointipalvelut (metadataGeographicAnnotationService)
+
+Palvelut, joilla liitetään lisätietoa kuvaan tai tietokohdekokoelman tietokohteeseen.
+
+800 Paikkatietoa koskevat tiedonvälityspalvelut (comService)
+
+Tähän luokkaan kuuluvat seuraavat alaluokat:
+
+801. Koodauspalvelu (comEncodingService)
+
+Palvelu, joka soveltaa koodaussääntöä ja tarjoaa rajapinnan koodaus- ja koodauksenpurkutoimintoihin.
+
+802. Tiedonsiirtopalvelu (comTransferService)
+
+Palvelu, joka yhtä tai useampaa yhteyskäytäntöä käyttäen toteuttaa tiedonsiirron hajautettujen tietojärjestelmien välillä verkon välityksellä tai tallennusvälineellä.
+
+803. Tiivistyspalvelu (comGeographicCompressionService)
+
+Palvelu, joka muuttaa tietokohdekokoelman tiivistettyyn muotoon ja takaisin.
+
+804. Formaatinmuuntopalvelu (comGeographicFormatConversionService)
+
+Palvelu, joka muuntaa tietoa yhdestä paikkatietoformaatista toiseen.
+
+805. Viestintäpalvelu (comMessagingService)
+
+Palvelu, jonka avulla useat käyttäjät voivat samanaikaisesti tarkastella ja kommentoida tietokohdekokoelmia ja tehdä niitä koskevia muutospyyntöjä.
+
+806. Ulkoisten tiedostojen ja ohjelmien hallinta (comRemoteFileAndExecutableManagement)
+
+Palvelu, joka mahdollistaa paikkatietokohteita sisältävän ulkoisen aineistopalvelimen käytön niin, että se näkyy asiakassovellukselle paikallisena.
+
+5. SÄÄNTÖJENMUKAISUUS
+
+5.1 Sääntöjen mukainen (conformant)
+
+Resurssi on kaikilta osin mainitun eritelmän mukainen.
+
+5.2 Ei sääntöjen mukainen (notConformant)
+
+Resurssi ei ole mainitun eritelmän mukainen.
+
+5.3 Ei arvioitu (notEvaluated)
+
+Sääntöjenmukaisuutta ei ole arvioitu.
+
+6. VASTUUTAHON ROOLI
+
+6.1 Resurssin tarjoaja (resourceProvider)
+
+Taho, jolta resurssi on saatavissa.
+
+6.2 Haltija (custodian)
+
+Taho, joka on vastuussa tiedosta ja varmistaa resurssin asianmukaisen hoidon ja ylläpidon.
+
+6.3 Omistaja (owner)
+
+Taho, joka omistaa resurssin.
+
+6.4 Käyttäjä (user)
+
+Taho, joka käyttää resurssia.
+
+6.5 Jakelija (distributor)
+
+Taho, joka jakelee resurssia.
+
+6.6 Tuottaja (originator)
+
+Taho, joka on luonut resurssin.
+
+6.7 Yhteystaho (pointOfContact)
+
+Taho, jolta saa tietoa resurssista tai sen hankinnasta.
+
+6.8 Päähankkija (principalInvestigator)
+
+Taho, joka suurimmalta osin vastaa tiedon keruusta ja tutkimuksesta.
+
+6.9 Käsittelijä (processor)
+
+Taho, joka on muokannut tietoa niin, että resurssi on muuttunut.
+
+6.10 Julkaisija (publisher)
+
+Taho, joka on julkaissut resurssin.
+
+6.11 Laatija (author)
+
+Taho, joka on laatinut resurssin.
+
+--------------------------------------------------

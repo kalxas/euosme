@@ -1,0 +1,987 @@
+Regolament tal-Kummissjoni (KE) Nru 1205/2008
+
+tat- 3 ta’ Diċembru 2008
+
+li jimplimenta d-Direttiva 2007/2/KE tal-Parlament Ewropew u tal-Kunsill fir-rigward tal-metadejta
+
+(Test b’relevanza għaż-ŻEE)
+
+IL-KUMMISSJONI TAL-KOMUNITAJIET EWROPEJ
+
+Wara li kkunsidrat it-Trattat li jistabbilixxi l-Komunità Ewropea,
+
+Wara li kkunsidrat id-Direttiva 2007/2/KE tal-Parlament Ewropew u tal-Kunsill ta’ l- 14 ta’ Marzu 2007 li tistabbilixxi Infrastruttura għall-Informazzjoni Ġeografika fil-Komunità Ewropea (INSPIRE) [1], u b’mod partikolari l-Artikolu 5(4) tiegħu,
+
+Billi:
+
+(1) Id-Direttiva 2007/2/KE tistabbilixxi regoli ġenerali għat-twaqqif ta’ infrastruttura għall-Informazzjoni Ġeografika fil-Komunità Ewropea. Billi għall-funzjonament xieraq ta’ dik l-infrastruttura, hemm bżonn li utent ikun jista’ jsib settijiet ta’ dejta u servizzi ġeografiċi u biex jistabbilixxi jekk jistgħux jintużaw u għal liema għan, l-Istati Membri għandhom jipprovdu deskrizzjonijiet fil-forma ta’ metadejta għal dawk is-settijiet ta’ dejta ġeografika u servizzi. Billi din il-metadejta għandha tkun kumpatibbli u utilizzabbli f’kuntest Komunitarju u transkonfinali, jeħtieġ li jiġu stabbiliti regoli dwar il-metadejta użata biex tiddeskrivi s-settijiet ta’ dejta ġeografika u servizzi li jikkorrespondu mat-temi elenkati fl-Anness I, II u III tad-Direttiva 2007/2/KE
+
+(2) Hija meħtieġa d-definizzjoni ta’ sett ta’ elementi ta’ metadejta biex tkun tista’ tiġi identifikata r-riżorsa ta’ informazzjoni li għaliha nħolqot il-metadejta, il-klassifikazzjoni tagħha u l-identifikazzjoni tal-pożizzjoni ġeografika tagħha u r-referenza temporali, il-kwalità u l-validità, il-konformità mar-regoli ta’ implimentazzjoni fuq l-interoperabbiltà tas-settijiet ta’ dejta ġeografika u servizzi, restrizzjonijiet fuq l-aċċess u l-użu, u organizzazzjoni responsabbli għar-riżorsa. Huma meħtieġa wkoll elementi ta’ metadejta relatati mar-rekord tal-metadejta nnifsu biex isir monitoraġġ ħalli l-metadejta maħluqa tinżamm aġġornata, u biex tiġi identifikata l-organizzazzjoni responsabbli għall-ħolqien u ż-żamma tal-metadejta. Dan huwa s-sett minimu ta’ elementi ta’ metadejta meħtieġ biex jikkonforma mad-Direttiva 2007/2/KE u ma jipprekludix il-possibbilità għall-organizzazzjonijiet biex jiddokumentaw ir-riżorsi ta’ l-informazzjoni b’mod aktar estensiv b’elementi addizzjonali miġjubin minn standards internazzjonali jew prattiċi tax-xogħol fil-komunità tagħhom ta’ interess. Dan lanqas ma jipprekludi l-possibbilità li jiġu adottati linji gwida stabbiliti u miżmumin aġġornati mill-Kummissjoni, partikolarment meta jkun meħtieġ li tiġi żgurata l-interoperabbiltà tal-metadejta.
+
+(3) Huma meħtieġa struzzjonijiet għall-validazzjoni ta’ metadejta skond id-Direttiva 2007/2/KE fir-rigward tal-kundizzjonijiet u l-moltipliċità mistennija ta’ kull element ta’ metadejta, jiġifieri, jekk il-valuri għal kull element huma dejjem mistennija fir-rekord tal-metadejta, jew jistgħux jiġru darba, jew jiġru aktar minn darba.
+
+(4) Id-dominju tal-valuri ta’ kull element ta’ metadejta huwa meħtieġ biex tiġi żgurata l-interoperabbiltà tal-metadejta f’kuntest multilingwi u li dak id-dominju tal-valuri għandu jieħu l-forma ta’ test liberu, dati, kodiċijiet ġejjin minn standards internazzjonali, bħall-kodiċijiet ta’ lingwa, kliem ewlieni ġej minn listi kkontrollati jew teżawri, jew sekwenzi ta’ karattri.
+
+(5) Il-miżuri stabbiliti f’dan ir-Regolament huma skond l-opinjoni tal-Kumitat stabbilit mill-Artikolu 22 tad-Direttiva 2007/2/KE,
+
+ADOTTAT DAN IR-REGOLAMENT:
+
+Artikolu 1
+
+Suġġett
+
+Dan ir-Regolament jistabbilixxi r-rekwiżiti għall-ħolqien u ż-żamma ta’ metadejta għal settijiet ta’ dejta ġeografika, sensiela ta’ settijiet ta’ dejta ġeografika u servizzi ta’ dejta ġeografika li jikkorrespondu mat-temi elenkati fl-Annessi I, II u III tad-Direttiva 2007/2/KE.
+
+Artikolu 2
+
+Definizzjonijiet
+
+Għall-finijiet ta’ dan ir-Regolament, flimkien mad-definizzjonijiet stabbiliti fl-Artikolu 3 tad-Direttiva 2007/2/KE, għandhom japplikaw id-definizzjonijiet stabbiliti fit-Taqsima A ta’ l-Anness.
+
+Artikolu 3
+
+Ħolqien u żamma ta’ metadejta
+
+Il-metadejta li tiddeskrivi sett ta’ dejta ġeografika, sensiela ta’ settijiet ta’ dejta ġeografika jew servizz ta’ dejta ġeografika għandha tinkludi l-elementi ta’ metadejta jew gruppi ta’ elementi ta’ metadejta stabbiliti fit-Taqsima B ta’ l-Anness u għandhom jinħolqu u jinżammu skond ir-regoli stabbiliti fit-Taqsimiet C u D tiegħu.
+
+Artikolu 4
+
+Id-dħul fis-seħħ
+
+Dan ir-Regolament għandu jidħol fis-seħħ fl-għoxrin jum wara l-pubblikazzjoni tiegħu f'Il-Ġurnal Uffiċjali ta’ l-Unjoni Ewropea.
+
+Dan ir-Regolament għandu jorbot fl-intier tiegħu u japplika direttament fl-Istati Membri kollha.
+
+Magħmul fi Brussell, 3 ta’ Diċembru 2008.
+
+Għall-Kummissjoni
+
+Stavros Dimas
+
+Membru tal-Kummissjoni
+
+[1] ĠU L 108, 25.4.2007, p. 1.
+
+--------------------------------------------------
+
+ANNESS
+
+REGOLI TA’ IMPLIMENTAZZJONI TA’ METADEJTA
+
+TAQSIMA A
+
+Interpretazzjoni
+
+1. Għandhom japplikaw t-tifsiriet li ġejjin:
+
+- "sekwenza ta’ karattri" tfisser id-dominju tal-valuri ta’ elementi ta’ metadejta mfissra bħala sett ta’ karattri kkunsidrati bħala unità;
+
+- "test liberu" ifisser dominju tal-valuri ta’ elementi ta’ metadejta mfissra f’lingwa naturali waħda jew iżjed;
+
+- "nisel" tfisser l-istorja ta’ sett ta’ dejta, u ċ-ċiklu ta’ ħajja mill-ġbir u l-kisba sal-kumpilazzjoni u d-derivazzjoni sal-forma kurrenti tiegħu, skond l-EN ISO 19101;
+
+- "element ta’ metadejta" ifisser unità separata ta’ metadejta, skond l-EN ISO 19115;
+
+- "namespace" tfisser kollezzjoni ta’ ismijiet, identifikata bir-referenza Uniform Resource Identifier (URI), li jintużaw fid-dokumenti ta’ Extensible Markup Language (XML) bħala ismijiet ta’ elementi u ismijiet ta’ attributi;
+
+- "kwalità" tfisser it-totalità ta’ karatteristiċi ta’ prodott li jkollha x’taqsam ma’ l-abbilità tiegħu li jissodisfa bżonnijiet espliċiti jew impliċiti, skond l-EN ISO 19101;
+
+- "riżorsa" tfisser riżorsa ta’ informazzjoni li għandha referenza diretta jew indiretta għal lokalità jew żona ġeografika speċifika;
+
+- "sensiela ta’ sett ta’ dejta ġeografika" tfisser kollezzjoni ta’ settijiet ta’ dejta ġeografika li għandha l-istess speċifikazzjoni ta’ prodott.
+
+2. Referenzi għall-validità ta’ settijiet ta’ dejta ġeografiċi għandhom jinftehmu li jirrigwardaw xi waħda minn dawn li ġejjin:
+
+- il-medda ta’ spazju u żmien li hija relevanti għad-dejta;
+
+- jekk id-dejta ġietx ivverifikata ma’ standard ta’ kejl jew prestazzjoni;
+
+- safejn id-dejta hija tajba għall-iskop previst;
+
+- meta jkun xieraq, il-validità legali tas-sett tad-dejta ġeografika.
+
+TAQSIMA B
+
+Elementi ta’ metadejta
+
+1. IDENTIFIKAZZJONI
+
+Għandhom jiġu pprovduti l-elementi ta’ metadejta li ġejjin:
+
+1.1. Titolu ta’ riżorsa
+
+Dan huwa isem karatteristiku u spiss uniku li bih tkun magħrufa r-riżorsa.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+1.2. Astratt ta’ riżorsa
+
+Dan huwa sunt narrattiv qasir tal-kontenut tar-riżorsa.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+1.3. Tip ta’ riżorsa
+
+Dan huwa t-tip ta’ riżorsa li qed jiġi deskritt mill-metadejta.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa ddefinit fit-Taqsima D.
+
+1.4. Identifikatur tar-riżorsa
+
+L-identifikatur tar-riżorsi jiddefinixxi l-link(s) għar-riżorsa u/jew il-link għall-informazzjoni addizzjonali dwar ir-riżorsa.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta hija sekwenza ta’ karattri, imfissra komunement bħala Uniform Resource Locator (URL) (identifikatur uniformi tar-riżorsa)
+
+1.5. Identifikatur tar-riżorsa uniku
+
+Valur li jidentifika r-riżorsa b’mod uniku.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa kodiċi ta’ sekwenza ta’ karattri obbligatorju, ġeneralment mogħti mill-proprjetarju tad-dejta, u namespace ta’ sekwenza ta’ karattri li jidentifika b’mod uniku il-kuntest tal-kodiċi ta’ identifikazzjoni (per eżempju l-proprjetarju tad-dejta).
+
+1.6. Riżorsa akkoppjata
+
+Jekk ir-riżorsa hija servizz ta’ dejta ġeografika, dan l-element ta’ metadejta jidentifika, meta jkun rilevanti, is-sett(ijiet) ta’ dejta ġeografika mmirata tas-servizz permezz tal-Unique Resource Identifiers (URI) (identifikaturi ta’ riżorsi uniċi) tiegħu(tagħhom).
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa kodiċi ta’ sekwenza ta’ karattri obbligatorju, ġeneralment mogħti mill-proprjetarju tad-dejta, u namespace ta’ sekwenza ta’ karattri li jidentifika b’mod uniku il-kuntest tal-kodiċi ta’ identifikazzjoni (per eżempju l-proprjetarju tad-dejta).
+
+1.7. Lingwa tar-riżorsa
+
+Il-lingwa (lingwi) użata(i) fir-riżorsa.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa limitat għal-lingwi ddefiniti fl-ISO 639-2.
+
+2. KLASSIFIKAZZJONI TA’ DEJTA U SERVIZZI ĠEOGRAFIĊI
+
+2.1. Kategorija tas-suġġett
+
+Il-kategorija tas-suġġett hija skema ta’ klassifikazzjoni ta’ livell għoli biex tassisti fir-raggruppar u tfittix ibbażat skond is-suġġett ta’ riżorsi ta’ dejta ġeografika.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa ddefinit fit-Taqsima D.2.
+
+2.2. Tip ta’ servizz ta’ dejta ġeografika
+
+Din hija klassifikazzjoni biex tassisti fit-tfittix ta’ servizzi ta’ dejta ġeografika disponibbli. Servizz speċifiku għandu jiġi kkategorizzat f’kategorija waħda biss.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa ddefinit fit-Taqsima D.3.
+
+3. KELMA EWLENIJA
+
+Jekk ir-riżorsa hija servizz ta’ dejta ġeografika, għandha tingħata ta’ l-anqas kelma ewlenija waħda mit-Taqsima D.4.
+
+Jekk riżorsa hija sett ta’ dejta ġeografika jew sensiela ta’ sett ta’ dejta ġeografika, għandha tingħata ta’ l-anqas kelma ewlenija waħda mill-General Environmental Multi-lingual Thesaurus (GEMET) [Teżawru Multilingwi Ambjentali Ġenerali] li tiddeskrivi t-tema tad-dejta ġeografika rilevanti kif deskritta fl-Anness I, II jew III tad-Direttiva 2007/2/KE.
+
+Għal kull kelma ewlenija, għandhom jingħataw l-elementi ta’ metadejta li ġejjin:
+
+3.1. Valur tal-kelma ewlenija
+
+Il-valur tal-kelma ewlenija huwa kelma użata komunement, kelma formalizzata jew frażi użata biex tiddeskrivi s-suġġett. Filwaqt li l-kategorija tas-suġġett mhijiex raffinata għal mistoqsijiet dettaljati, il-kliem ewlieni jgħin biex jonqos it-tfittix għal test sħiħ u jippermetti tfittix tal-kliem ewlieni strutturat.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+3.2. Vokabularju kkontrollat ta’ oriġini
+
+Jekk il-valur ta’ kelma ewlenija joriġina minn Vokabularju Kkontrollat (Teżawru, Ontoloġija), per eżempju GEMET, għandha tingħata r-referenza tal-Vokabularju Kkontrollat ta’ oriġini.
+
+Din ir-referenza għandha tinkludi ta’ l-anqas it-titolu u data ta’ referenza (data ta’ pubblikazzjoni, data ta’ l-aħħar reviżjoni jew tal-ħolqien) tal-vokabularju kkontrollat ta’ oriġini.
+
+4. POŻIZZJONI ĠEOGRAFIKA
+
+Il-ħtieġa għall-pożizzjoni ġeografika msemmija fl-Artikolu 11(2)(e) tad-Direttiva 2007/2/KE għandha titfisser permezz tal-kwadru ta’ delimitazzjoni ġeografika ta’ l-element ta’ metadejta.
+
+4.1. Kwadru ta’ delimitazzjoni ġeografika
+
+Dan huwa d-daqs tar-riżorsa fl-ispazju ġeografiku, mogħti bħala kwadru ta’ delimitazzjoni.
+
+Il-kwadru ta’ delimitazzjoni għandu jitfisser b’lonġitudnijiet għall-punent u għall-lvant u latitudnijiet għan-nofsinnhar u għat-tramuntana fi gradi deċimali, bi preċiżjoni ta’ mill-anqas 2 deċimali.
+
+5. REFERENZA TEMPORALI
+
+Dan l-element ta’ metadejta jindirizza l-ħtieġa biex ikun hemm informazzjoni fuq id-dimensjoni temporali tad-dejta kif msemmija fl-Artikolu 8(2)(d) tad-Direttiva 2007/2/KE. Għandu jingħata ta’ l-anqas wieħed mill-elementi ta’ metadejta msemmi fil-punti 5.1 sa 5.4.
+
+Id-dominju tal-valuri ta’ l-elementi ta’ metadejta msemmijin fil-punti 5.1 sa 5.4 huwa sett ta’ dati. Kull data għandha tirreferi għal sistema ta’ referenza temporali u għandha titfisser f’forma li hija kumpatibbli ma’ dik is-sistema. Is-sistema ta’ referenza standard għandha tkun il-kalendarju Gregorjan, bid-dati mfissra skond l-ISO 8601.
+
+5.1. Medda temporali
+
+Il-medda temporali tiddefinixxi l-perjodu ta’ żmien kopert bil-kontenut tar-riżorsa. Dan il-perjodu taż-żmien jista’ jitfisser bħala wieħed min dawn li ġejjin:
+
+- data individwali;
+
+- intervall ta’ dati mfissrin permezz tad-data tal-bidu u d-data tat-tmiem ta’ l-intervall;
+
+- taħlita ta’ dati individwali u intervalli ta’ dati.
+
+5.2. Data tal-pubblikazzjoni
+
+Din hija d-data ta’ pubblikazjoni tar-riżorsa meta tkun disponibbli, jew id-data tad-dħul fis-seħħ. Jista’ jkun hemm iżjed minn data waħda ta’ pubblikazzjoni.
+
+5.3. Data ta’ l-aħħar reviżjoni
+
+Din hija d-data ta’ l-aħħar reviżjoni tar-riżorsa, jekk ir-riżorsa ġiet riveduta. M’għandux ikun hemm iżjed minn data waħda ta’ l-aħħar reviżjoni.
+
+5.4. Data tal-ħolqien
+
+Din hija d-data tal-ħolqien tar-riżorsa. M’għandux ikun hemm iżjed minn data waħda ta’ ħolqien.
+
+6. KWALITÀ U VALIDITÀ
+
+Il-ħtiġijiet imsemmijin fl-Artikolu 5(2) u l-Artikolu 11(2) tad-Direttiva 2007/2/KE dwar il-kwalità u l-validità tad-dejta ġeografika għandhom jiġu indirizzati bl-elementi ta’ metadejta li ġejjin:
+
+6.1. Nisel
+
+Din hija stqarrija fuq l-istorja tal-proċess u/jew il-kwalità globali tas-sett ta’ dejta ġeografika. Meta jkun xieraq tista’ tinkludi stqarrija dwar jekk is-sett ta’ dejta ġiex ivvalidat jew ġietx żgurata l-kwalità, dwar jekk hijiex il-verżjoni uffiċjali (jekk jeżistu diversi verżjonijiet), u jekk għandhiex validità legali.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+6.2. Riżoluzzjoni ġeografika
+
+Ir-riżoluzzjoni ġeografika tirreferi għal-livell ta’ dettall tas-sett ta’ dejta. Għandha titfisser bħala sett ta’ żero sa ħafna distanzi ta’ riżoluzzjoni (tipikament għal dejta fi grilja u prodotti miġjubin minn immaġnijiet) jew skali ekwivalenti (tipiċi għal mapep jew prodotti dderivati minn mapep).
+
+Skala ekwivalenti ġeneralment titfisser bħala valur ta’ numru sħiħ (integer) li jfisser id-denominatur ta’ l-iskala.
+
+Distanza ta’ riżoluzzjoni għandha titfisser bħala valur numeriku assoċjat ma’ unità ta’ tul.
+
+7. KONFORMITÀ
+
+Il-ħtiġijiet imsemmijin fl-Artikolu 5(2)(a) u l-Artikolu 11(2)(d) tad-Direttiva 2007/2/KE dwar il-konformità, u l-grad ta’ konformità, mar-regoli implimentattivi skond l-Artikolu 7(1) tad-Direttiva 2007/2/KE għandhom jiġu indirizzati bl-elementi ta’ metadejta li ġejjin:
+
+7.1. L-Ispeċifikazzjoni
+
+Din hija referenza għar-regoli implimentattivi adottati skond l-Artikolu 7(1) tad-Direttiva 2007/2/KE jew xi speċifikazzjoni oħra li magħha tikkonforma riżorsa partikolari.
+
+Riżorsa tista’ tikkonforma ma’ aktar minn regola waħda implimentattiva adottata skond l-Artikolu 7(1) tad-Direttiva 2007/2/KE jew speċifikazzjoni oħra.
+
+Din ir-referenza għandha tinkludi ta’ l-anqas it-titolu u data ta’ referenza (data ta’ pubblikazzjoni, data ta’ l-aħħar reviżjoni jew tal-ħolqien) tar-regoli implimetattivi adottati skond l-Artikolu 7(1) tad-Direttiva 2007/2/KE jew ta’ l-ispeċifikazzjoni.
+
+7.2. Grad
+
+Dan huwa l-grad ta’ konformità tar-riżorsa mar-regoli implimentattivi adottati skond l-Artikolu 7(1) tad-Direttiva 2007/2/KE jew xi speċifikazzjoni oħra.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa ddefinit fit-Taqsima D.5.
+
+8. RESTRIZZJONI DWAR L-AĊĊESS U L-UŻU
+
+Restrizzjoni dwar l-aċċess u l-użu tista’ tkun waħda jew iż-żewġ affarijiet li ġejjin:
+
+- sett ta’ kundizzjonijiet li japplikaw għall-aċċess u l-użu (8.1)
+
+- sett ta’ limitazzjonijiet fuq l-aċċess pubbliku (8.2).
+
+8.1. Kundizzjonijiet li japplikaw għall-aċċess u l-użu
+
+Dan l-element ta’ metadejta jiddefinixxi l-kundizzjonijiet għall-aċċess u użu ta’ settijiet ta’ dejta u servizzi ġeografiċi, u meta japplika, tariffi korrispondenti kif meħtieġ mill-Artikolu 5(2)(b) u l-Artikolu 11(2)(f) tad-Direttiva 2007/2/KE.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+L-element għandu jkollu valuri. Jekk l-ebda kundizzjoni ma tapplika għall-aċċess u l-użu tar-riżorsa, għandha tintuża "l-ebda kundizzjoni ma tapplika". Jekk il-kundizzjonijiet mhumiex magħrufin, għandha tintuża "kundizzjonijiet mhumiex magħrufin".
+
+Dan l-element għandu jipprovdi wkoll informazzjoni fuq kull tariffa meħtieġa għall-aċċess u l-użu tar-riżorsa, jekk japplika, jew issir referenza għall-Uniform Resource Locator (URL) fejn tinstab l-informazzjoni fuq it-tariffi.
+
+8.2. Limitazzjonijiet fuq l-aċċess pubbliku
+
+Meta l-Istati Membri jillimitaw l-aċċess pubbliku għal settijiet ta’ dejta ġeografika u għal servizzi ta’ dejta ġeografika skond l-Artikolu 13 tad-Direttiva 2007/2/KE, dan l-element ta’ metadejta għandu jipprovdi informazzjoni fuq il-limitazzjonijiet u r-raġunijiet għalihom.
+
+Jekk m’hemmx limitazzjonijiet fuq l-aċċess pubbliku, dan l-element ta’ metadejta għandu jindika dak il-fatt.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa test liberu.
+
+9. L-ORGANIZZAZZJONIJIET RESPONSABBLI GĦALL-ISTABBILIMENT, L-AMMINISTRAZZJONI, IL-MANUTENZJONI U D-DISTRIBUZZJONI TA’ SETTIJIET TA’ DEJTA U SERVIZZI ĠEOGRAFIĊI
+
+Għall-finijiet ta’ l-Artikolu 5(2)(d) u l-Artikolu 11(2)(g) tad-Direttiva 2007/2/KE, għandhom jiġu pprovduti ż-żewġ elementi ta’ metadejta li ġejjin:
+
+9.1. Parti responsabbli
+
+Din hija d-deskrizzjoni ta’ l-organizzazzjoni responsabbli għall-istabbiliment, l-amministrazzjoni, il-manutenzjoni u d-distribuzzjoni tar-riżorsa.
+
+Din id-deskrizzjoni għandha tinkludi:
+
+- l-isem ta’ l-organizzazzjoni bħala test liberu,
+
+- indirizz ta’ e-mail għall-kuntatt bħala sekwenza ta’ karattri.
+
+9.2. Rwol tal-parti responsabbli
+
+Dan huwa r-rwol ta’ l-organizzazzjoni responsabbli.
+
+Id-dominju tal-valuri ta’ dan l-element ta’ metadejta huwa ddefinit fit-Taqsima D.6.
+
+10. METADEJTA DWAR METADEJTA
+
+Għall-finijiet ta’ l-Artikolu 5(1) tad-Direttiva 2007/2/KE għandhom jiġu pprovduti l-elementi ta’ metadejta li ġejjin:
+
+10.1. Punt ta’ kuntatt tal-metadejta
+
+Din hija d-deskrizzjoni ta’ l-organizzazzjoni responsabbli għall-ħolqien u l-manutenzjoni tal-metadejta.
+
+Din id-deskrizzjoni għandha tinkludi:
+
+- l-isem ta’ l-organizzazzjoni bħala test liberu;
+
+- indirizz ta’ e-mail għall-kuntatt bħala sekwenza ta’ karattri.
+
+10.2. Data tal-metadejta
+
+Id-data li tispeċifika meta r-rekord tal-metadejta nħoloq jew ġie aġġornat.
+
+Din id-data għandha tkun mfissra f’konformità ma’ l-ISO 8601.
+
+10.3. Lingwa tal-Metadejta
+
+Din hija l-lingwa li fiha huma mfissra l-elementi ta’ metadejta.
+
+Id-dominju tal-valur ta’ dan l-element ta’ metadejta huwa limitat għal-lingwi uffiċjali tal-Komunità mfissrin f’konformità ma’ l-ISO 639-2.
+
+TAQSIMA C
+
+Struzzjonijiet fuq il-Moltipliċità u l-Kundizzjonijiet ta’ l-Elementi ta’ Metadejta
+
+Il-metadejta li tiddeskrivi riżorsa għandha tinkludi, fir-rigward ta’ sett ta’ dejta ġeografika jew sensiela ta’ sett ta’ dejta ġeografika, l-elementi ta’ metadejta jew gruppi ta’ elementi ta’ metadejta elenkati fit-Tabella 1 u, fir-rigward ta’ servizz ta’ sett ta’ dejta ġeografika, l-elementi ta’ metadejta jew gruppi ta’ elementi ta’ metadejta elenkati fit-Tabella 2.
+
+Dawk l-elementi ta’ metadejta jew gruppi ta’ elementi ta’ metadejta għandhom ikunu skond il-moltipliċità mistennija u l-kundizzjonijiet relatati stabbiliti fit-Tabella 1 u t-Tabella 2.
+
+Meta ma tiġi mfissra l-ebda kundizzjoni fir-rigward ta’ element ta’ metadejta partikolari, dak l-element għandu jkun obbligatorju.
+
+It-tabelli jagħtu l-informazzjoni li ġejja:
+
+- l-ewwel kolonna fiha r-referenza għall-paragrafu fit-Taqsima B ta’ l-Anness li tiddefinixxi l-element ta’ metadejta jew grupp ta’ elementi ta’ metadejta;
+
+- it-tieni kolonna fiha l-isem ta’ l-element ta’ metadejta jew grupp ta’ elementi ta’ metadejta;
+
+- it-tielet kolonna tispeċifika l-moltipliċità ta’ element ta’ metadejta. L-espressjoni tal-moltipliċità ssegwi n-notazzjoni tal-Unified Modelling Language (UML) għall-moltipliċità, fejn:
+
+- 1 ifisser li f’sett ta’ riżultati, għandu jkun hemm dan l-element ta’ metadejta darba biss,
+
+- 1..* ifisser li għandu jkun hemm ta’ l-anqas darba dan element f’sett ta’ riżultati,
+
+- 0..1 jindika li l-preżenza ta’ l-element ta’ metadejta f’sett ta’ riżultati hija kondizzjonali imma tista’ tiġri darba biss,
+
+- 0..* jindika li l-preżenza ta’ l-element ta’ metadejta f’sett ta’ riżultati hija kondizzjonali imma l-element ta’ metadejta jista’ jiġri darba jew iżjed,
+
+- meta l-moltipliċità hija 0..1 jew 0..*, il-kundizzjoni tiddefinixi meta l-elementi ta’ metadejta jkunu obbligatorji,
+
+- ir-raba’ kolonna fiha stqarrija kondizzjonali f’każ li l-moltipliċità ta’ l-element ma tapplikax għat-tipi kollha ta’ riżorsi. L-elementi kollha huma obbligatorji f’ċirkustanzi oħrajn.
+
+Tabella 1
+
+Metadejta għal settijiet ta’ dejta ġeografika u sensiela ta’ settijiet ta’ dejta ġeografika
+
+Referenza | Elementi ta’ metadejta | Moltipliċità | Kundizzjoni |
+
+1.1 | Titolu ta’ riżorsa | 1 | |
+
+1.2 | Astratt ta’ riżorsa | 1 | |
+
+1.3 | Tip ta’ riżorsa | 1 | |
+
+1.4 | Identifikatur tar-riżorsa | 0..* | Obbligatorja jekk l-URL hija disponibbli biex tinkiseb aktar informazzjoni fuq ir-riżorsa, u/jew aċċess għal servizzi relatati. |
+
+1.5 | Identifikatur tar-riżorsa uniku | 1..* | |
+
+1.7 | Lingwa tar-riżorsa | 0..* | Obbligatorja jekk ir-riżorsa tinkludi informazzjoni testwali. |
+
+2.1 | Kategorija tas-suġġett | 1..* | |
+
+3 | Kelma Ewlenija | 1..* | |
+
+4.1 | Kwadru ta’ delimitazzjoni ġeografika | 1..* | |
+
+5 | Referenza temporali | 1..* | |
+
+6.1 | Nisel | 1 | |
+
+6.2 | Riżoluzzjoni ġeografika | 0..* | Obbligatorja għal settijiet ta’ dejta u sensiela ta’ settijiet ta’ dejta jekk skala ekwivalenti jew distanza ta’ riżoluzzjoni jistgħu jiġu speċifikati. |
+
+7 | Konformità | 1..* | |
+
+8.1 | Kundizzjonijiet għall-aċċess u l-użu | 1..* | |
+
+8.2 | Limitazzjonijiet fuq l-aċċess pubbliku | 1..* | |
+
+9 | Organizzazzjoni responsabbli | 1..* | |
+
+10.1 | Punt ta’ kuntatt tal-metadejta | 1..* | |
+
+10.2 | Data tal-metadejta | 1 | |
+
+10.3 | Lingwa tal-Metadejta | 1 | |
+
+Tabella 2
+
+Metadejta għal servizzi ta’ dejta ġeografika
+
+Referenza | Element ta’ metadejta | Moltipliċità | Kundizzjoni |
+
+1.1 | Titolu ta’ riżorsa | 1 | |
+
+1.2 | Astratt ta’ riżorsa | 1 | |
+
+1.3 | Tip ta’ riżorsa | 1 | |
+
+1.4 | Identifikatur tar-riżorsa | 0..* | Obbligatorja jekk ir-rabta mas-servizz hija disponibbli. |
+
+1.6 | Riżorsa akkoppjata | 0..* | Obbligatorja jekk ir-rabta mas-settijiet ta’ dejta li fuqhom jopera s-servizz huma disponibbli. |
+
+2.2 | Tip ta’ servizz ta’ dejta ġeografika | 1 | |
+
+3 | Kelma Ewlenija | 1..* | |
+
+4.1 | Kwadru ta’ delimitazzjoni ġeografika | 0…* | Obbligatorja għal servizzi b’daqs ġeografiku espliċitu |
+
+5 | Referenza temporali | 1..* | |
+
+6.2 | Riżoluzzjoni ġeografika | 0..* | Obbligatorja meta jkun hemm restrizzjoni fuq ir-riżoluzzjoni ġeografika għal dan is-servizz. |
+
+7 | Konformità | 1..* | |
+
+8.1 | Kundizzjonijiet għall-aċċess u l-użu | 1..* | |
+
+8.2 | Limitazzjonijiet fuq l-aċċess pubbliku | 1..* | |
+
+9 | Organizzazzjoni responsabbli | 1..* | |
+
+10.1 | Punt ta’ kuntatt tal-metadejta | 1..* | |
+
+10.2 | Data tal-metadejta | 1 | |
+
+10.3 | Lingwa tal-Metadejta | 1 | |
+
+TAQSIMA D
+
+Dominji tal-valuri
+
+Meta jkun speċifikat fid-deskrizzjoni ta’ l-elementi ta’ metadejta fit-Taqsima B, id-dominji tal-valuri deskritti fit-Taqsima D.1 sa D.6 għandhom jintużaw bil-moltipliċità mfissra fit-Tabella 1 u t-Tabella 2 tat-Taqsima C.
+
+Fir-rigward ta’ dominju partikolari, kull valur huwa ddefinit bi:
+
+- identifikatur numeriku;
+
+- isem testwali għall-bnedmin li jista’ jiġi tradott fil-lingwi differenti tal-Komunità;
+
+- isem newtrali fil-lingwa għall-kompjuters (il-valur imfisser bejn il-parentesi);
+
+- deskrizzjoni jew definizzjoni fakoltattiva.
+
+1. TIP TA’ RIŻORSA
+
+1.1. Sensiela ta’ settijiet ta’ dejta ġeografika (series).
+
+1.2. Sett ta’ dejta ġeografika (dataset)
+
+1.3. Servizzi ta’ dejta ġeografika (services)
+
+2 KATEGORIJI TAS-SUĠĠETT SKOND L-EN ISO 19115
+
+2.1. Biedja (farming)
+
+Trobbija ta’ l-annimali u/jew kultivazzjoni tal-pjanti.
+
+Din il-kategorija tapplika għat-tema dejta ġeografika tad-Direttiva 2007/2/KE Anness III(9) Faċilitajiet agrikoli u ta’ l-akkwakultura.
+
+2.2. Bijota (biota)
+
+Flora u/jew fawna f’ambjent naturali.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(17) Reġjuni bijoġeografiċi, Anness III(18) Ħabitats naturali u l-bijotopi, Anness III(19) Distribuzzjoni ta’ l-ispeċi.
+
+2.3. Konfini (boundaries)
+
+Deskrizzjonijiet ta’ l-art legali.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness I(4) Unitajiet amministrattivi, Anness III(1) Unitajiet statistiċi.
+
+2.4. Klimatoloġija / Meteoroloġija / Atmosfera (climatologyMeteorologyAtmosphere)
+
+Proċessi u fenomeni ta’ l-atmosfera.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(13) Kundizzjonijiet atmosferiċi, Anness III(14) Karatteristiċi ġeografiċi meteoroloġiċi.
+
+2.5. Ekonomija (economy)
+
+Attivitajiet ekonomiċi, kundizzjonijiet u impjieg.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(20) Riżorsi ta’ enerġija, Anness III(21) Riżorsi minerali.
+
+2.6. Elevazzjoni (elevation)
+
+Għoli 'l fuq jew 'l isfel mil-livell tal-baħar.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness II(1) Elevazzjoni.
+
+2.7. Ambjent (environment)
+
+Riżorsi ambjentali, protezzjoni u konservazzjoni.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness I(9) Siti protetti.
+
+2.8. Informazzjoni ġeoxjentifka (geoscientificInformation)
+
+Informazzjoni dwar ix-xjenzi tad-dinja.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(3) Ħamrija, Anness II(4) Ġeoloġija, Anness III(12) Żoni ta’ riskju naturali.
+
+2.9. Saħħa (health)
+
+Saħħa, servizzi tas-saħħa, ekoloġija umana, u sigurtà.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness III(5) Is-saħħa u s-siġurtà tal-bniedem.
+
+2.10. Mapep bażiċi b’immaġnijiet / Kopertura tad-dinja (imageryBaseMapsEarthCover)
+
+Mapep bażiċi.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness II(3) Orthoimagery, Anness II(2) Kopertura ta’ l-art.
+
+2.11. Intelliġenza / Militari (intelligenceMilitary)
+
+Bażijiet militari, strutturi, attivitajiet.
+
+Din il-kategorija ma tapplikax speċifikament għall-ebda tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE.
+
+2.12. Ilmijiet interni (inlandWaters)
+
+Karatteristiċi ta’ l-ilmijiet interni, sistemi ta’ dranaġġ u l-karatteristiiċi tagħhom.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness I(8) Idrografija.
+
+2.13. Lokalità (location)
+
+Informazzjoni u servizzi pożizzjonali.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness I(3) Ismijiet ġeografiċi, Anness I(5) Indirizzi.
+
+2.14. Oċeani (oceans)
+
+Karatterisitiċi ta’ korpi ta’ ilma salmastru (bl-esklużjoni ta’ ilmijiet interni).
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(16) Reġjuni tal-baħar, Anness III(15) Karatteristiċi ġeografiċi oċeanografiċi.
+
+2.15. Ippjanar / Katast (planningCadastre)
+
+Informazzjoni użata għal azzjonijiet xierqa għall-użu futur ta’ l-art.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness I(6) Pakketti katastali, Anness III(4) Użu ta’ l-art, Anness III(11) Amministrazzjoni ta’ żoni/restrizzjoni/żoni regolati u unitajiet ta’ rapportar.
+
+2.16. Soċjetà (society)
+
+Karatteristiċi ta’ soċjetà u kultura.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(10) Distribuzzjoni tal-popolazzjoni – demografija.
+
+2.17. Bini (structure)
+
+Bini mill-bniedem.
+
+Din il-kategorija tapplika għat-temi ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejjin: Anness III(2) Bini, Anness III(8) Faċilitajiet ta’ produzzjoni u industrijali, Anness III(7) Faċilitajiet ta’ monitoraġġ ambjentali.
+
+2.18. Trasport (transportation)
+
+Mezzi u għajnuniet għall-ġarr ta’ persuni u/jew oġġetti.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness I(7) Networks tat-trasport.
+
+2.19. Utilitajiet / Komunikazzjoni (utilitiesCommunication)
+
+Enerġija, sistemi ta’ l-ilma u ta’ l-iskart u infrastruttura u servizzi tal-komunikazzjoni.
+
+Din il-kategorija tapplika għat-tema ta’ dejta ġeografika tad-Direttiva 2007/2/KE li ġejja: Anness III(6) Servizzi ta’ utilità u tal-gvern.
+
+3 TIP TA’ SERVIZZ TA’ DEJTA ĠEOGRAFIKA
+
+3.1. Servizz ta’ sejbien (discovery)
+
+Servizzi li jagħmlu possibbli t-tfittix ta’ settijiet u servizzi ta’ dejta ġeografika abbażi tal-kontenut tal-metadejta korrispondenti u l-wiri tal-kontenut tal-metadejta.
+
+3.2. Servizz ta’ viżjoni (view)
+
+Servizz ta’ viżjoni li jagħmilha possibbli, bħala minimu, li jintwerew, jiġu nnavvigati, isir zooming 'il barra u 'l ġewwa, isir panning, jew jitqiegħdu fuq xulxin settijiet ta’ dejta ġeografika li jistgħu jkunu viżibbli u li jintwerew l-informazzjoni ta’ spjega u kwalunkwe kontenut rilevanti tal-metadejta.
+
+3.3. Servizz ta’ download (download)
+
+Servizz li jippermetti li kopji ta’ settijiet ta’ dejta ġeografika, jew partijiet minn tali settijiet jitniżżlu mill-Internet u, fejn prattikabbli jkun hemm aċċess dirett għalihom.
+
+3.4. Servizz ta’ trasformazzjoni (transformation)
+
+Servizz ta’ trasformazzjoni, li jippermetti li settijiet ta’ dejta ġeografika jiġu trasformati bil-għan li tinkiseb l-interoperabbiltà.
+
+3.5. Servizz ta’ Dejta Ġeografika Invoke (invoke)
+
+Servizz li jippermetti li jiġu ddefiniti kemm l-inputs tad-dejta u l-outputs tad-dejta mistennija mis-servizz ġeografiku u fluss tax-xogħol jew katina ta’ servizz li jikkombinaw servizzi multipli. Jippermetti wkoll li jiġi ddefinit l-interface ta’ servizz web estern tal-fluss tax-xogħol jew katina ta’ servizz.
+
+3.6. Servizzi oħrajn (other)
+
+4 KLASSIFIKAZZJONI TA’ SERVIZZI TA’ DEJTA ĠEOGRAFIKA
+
+Il-kliem ewlieni huwa bbażat fuq it-tassonomija ta’ servizzi ġeografiċi ta’ l-EN ISO 19119. Din it-tassonomija hija organizzata f’kategoriji, is-subkategoriji jiddefinixxu d-dominju tal-valuri tal-klassifikazzjoni tas-servizzi ta’ dejta ġeografika.
+
+100 Servizzi ta’ interazzjoni umana ġeografiċi (humanInteractionService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+101. Werrej tal-katalogi (humanCatalogueViewer)
+
+Servizz tal-klijent li jippermetti utent li jinteraġixxi ma’ katalogu biex isib, jibbrawsja u jamministra metadejta dwar dejta ġeografika jew servizzi ġeografiċi.
+
+102. Werrej ġeografiku (humanGeographicViewer)
+
+Servizz tal-klijent li jippermetti utent li jara kollezzjoni jew kopertura tal-karatteristiċi waħda jew iżjed.
+
+103. Werrej ġeografiku ta’ l-ispreadsheet (humanGeographicSpreadsheetViewer)
+
+Servizz tal-klijent li jippermetti utent li jinteraġixxi ma’ oġġetti ta’ dejta multipli u biex jintalbu kalkoli bħal spreadsheet aritmetika imma estiża għad-dejta ġeografika.
+
+104. Editur tas-servizzi (humanServiceEditor)
+
+Servizz tal-klijent li jippermetti utent jikkontrolla servizzi ta’ l-ipproċessar ġeografiċi.
+
+105. Editur tad-definizzjoni ta’ katina (humanChainDefinitionEditor)
+
+Jipprovdi interazzjoni għal servizz ta’ definizzjoni ta’ katina.
+
+106. Maniġer tal-workflow enactment(humanWorkflowEnactmentManager)
+
+Jipprovdi interazzjoni għal utent b’servizz ta’ workflow enactment.
+
+107. Editur ta’ karatteristiċi ġeografiċi (humanGeographicFeatureEditor)
+
+Werrej ġeografiku li jippermetti utent jinteraġixxi mad-dejta tal-karatteristiċi.
+
+108. Editur ta’ simboli ġeografiċi (humanGeographicSymbolEditor)
+
+Servizz ta’ klijent li jippermetti lil bniedem li jagħżel u jamministra libreriji ta’ simboli.
+
+109. Editur tal-ġeneralizzazzjoni ta’ karatteristiċi (humanFeatureGeneralizationEditor)
+
+Servizz ta’ klijent li jippermetti li utent jimmodifika l-karatteristiċi kartografiċi ta’ karatterisitika jew kollezzjoni ta’ karatteristiċi billi tiġi ssimplifikata l-viżwalizzazzjoni tagħha filwaqt li jinżammu l-elementi ewlenin tagħha – l-ekwivalenti ġeografiku ta’ simplifikazzjoni.
+
+110. Werrej ta’ l-istruttura tad-dejta ġeografika (humanGeographicDataStructureViewer)
+
+Servizz ta’ klijent li jippermetti utent li jaċċedi għal parti ta’ sett ta’ dejta biex jara l-istruttura interna.
+
+200 Mudell ġeografiku/servizz ta’ amministrazzjoni ta’ informazzjoni (infoManagementService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+201. Servizz ta’ aċċess għal karatteristiċi (infoFeatureAccessService)
+
+Servizz li jipprovdi klijent b’aċċess għal u amministrazzjoni ta’ ħażna ta’ karatteristiċi.
+
+202. Servizz ta’ aċċess għal mappa (infoMapAccessService)
+
+Servizz li jipprovdi klijent b’aċċess għall-grafika ġeografika, jiġifieri stampi ta’ dejta ġeografika.
+
+203. Servizz ta’ aċċess għall-kopertura (infoCoverageAccessService)
+
+Servizz li jipprovdi klijent aċċess għal u amministrazzjoni ta’ ħażna ta’ kopertura.
+
+204. Servizz ta’ deskrizzjoni ta’ sensuri (infoSensorDescriptionService)
+
+Servizz li jipprovdi d-deskrizzjoni ta’ sensur ta’ kopertura, inkluż il-lokalità u l-orjentazzjoni tas-sensur, kif ukoll il-karatteristiċi ġeometriċi, dinamiċi u radjumetriċi tas-sensur għall-finijiet ta’ ġeo-ipproċessar.
+
+205. Servizz ta’ aċċess għall-prodotti (infoProductAccessService)
+
+Servizz li jipprovdi aċċess għal u amministrazzjoni ta’ ħażna ta’ prodotti ġeografiċi.
+
+206. Servizz ta’ tipi ta’ karatterisitiċi (infoFeatureTypeService)
+
+Servizz li jipprovdi klijent b’aċċess għal u amministrazzjoni ta’ ħażna ta’ definizzjonijiet ta’ tipi ta’ karatterisitiċi.
+
+207. Servizz ta’ katalogu (infoCatalogueService)
+
+Servizz li jipprovdi servizzi ta’ sejbien u amministrazzjoni fuq ħażna ta’ metadejta dwar eżempji.
+
+208. Servizz ta’ reġistru (infoRegistryService)
+
+Servizz li jipprovdi aċċess għall-ħażna ta’ metadejta dwar tipi.
+
+209. Servizz ta’ direttorju ġeografiku (infoGazetteerService)
+
+Servizz li jipprovdi aċċess għal direttorju ta’ eżempji ta’ klassi jew klassijiet ta’ fenomeni fid-dinja reali li jkollhom xi informazzjoni dwar il-pożizzjoni.
+
+210. Servizz ta’ amministrazzjoni ta’ ordnijiet (infoOrderHandlingService)
+
+Servizz li jipprovdi klijent bil-kapaċità li jiġu ordnati prodotti minn provditur.
+
+211. Servizz ta’ ordnijiet permanenti (infoStandingOrderService)
+
+Servizz ta’ amministrazzjoni ta’ ordni li jippermetti lil utent li jitlob li prodott fuq żona ġeografika jitqassam meta jkun disponibbli.
+
+300 Servizzi ta’ fluss tax-xogħol/amministrazzjoni ta’ ħidmiet ġeografiċi (taskManagementService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+301. Servizz ta’ definizzjoni ta’ katina (chainDefinitionService)
+
+Servizz ta’ definizzjoni ta’ katina biex ikun jista’ jiġi esegwit servizz ta’ workflow enactment.
+
+302. Servizz ta’ workflow enactment (workflowEnactmentService)
+
+Is-servizz ta’ workflow enactment jinterpreta katina u jikkontrolla l-istanzazzjoni ta’ servizzi u attivitajiet ta’ sekwenzjar.
+
+303. Servizz ta’ abbonament (subscriptionService)
+
+Servizz biex jippermetti lil klijenti jirreġistraw għan-notifikazzjoni dwar ġrajjiet.
+
+400 Servizzi ta’ pproċessar ġeografiku – ġeografiku (spatialProcessingService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+401. Servizz ta’ konverżjoni ta’ koordinati (spatialCoordinateConversionService)
+
+Servizz għal bdil ta’ koordinati minn sistema waħda ta’ koordinati għal sistema ta’ koordinati oħra li hija relatata ma’ l-istess datum.
+
+402. Servizz ta’ trasformazzjoni ta’ koordinati (spatialCoordinateTransformationService)
+
+Servizz għal bdil ta’ koordinati minn sistema ta’ referenza ta’ koordinati bbażata fuq datum wieħed għal sistema ta’ referenza ta’ koordinati bbażati fuq datum ieħor.
+
+403. Servizz ta’ konverżjoni ta’ kopertura/vettur (spatialCoverageVectorConversionService)
+
+Servizz biex tinbidel ir-rappreżentazzjoni ġeografika minn skema ta’ kopertura għal skema ta’ vettur, jew viċi versa.
+
+404. Servizz ta’ konverżjoni ta’ koordinati ta’ immaġni (spatialImageCoordinateConversionService)
+
+Servizz ta’ trasformazzjoni ta’ koordinati jew konverżjoni ta’ koordinati biex tinbidel is-sistema ta’ referenza ta’ koordinati għal immaġni.
+
+405. Servizz ta’ rettifika (spatialRectificationService)
+
+Servizz għat-trasformazzjoni ta’ immaġni fi projezzjoni parallela perpendikulari u għalhekk ta’ skala kostanti.
+
+406. Servizz ta’ Ortorettifika (spatialOrthorectificationService)
+
+Servizz ta’ rettifika li jneħħi l-inklinazzjoni ta’ immaġni u l-ispostament minnħabba l-elevazzjoni ta’ l-art.
+
+407. Servizz ta’ aġġustament tal-mudell ta’ ġeometrija tas-sensur (spatialSensorGeometryModelAdjustmentService)
+
+Servizz li jaġġusta l-mudelli ta’ ġeometrija tas-sensur biex ikun hemm tqabbil aħjar ta’ l-immaġni ma’ immaġnijiet oħrajn u/jew pożizzjonijiet ta’ l-art magħrufin.
+
+408. Servizz tal-konverżjoni tal-mudell ta’ ġeometrija ta’ l-immaġni (spatialImageGeometryModelConversionService)
+
+Servizz li jikkonverti l-mudelli ta’ ġeometrija tas-sensur f’mudell ta’ ġeometija tas-sensur differenti imma ekwivalenti.
+
+409. Servizz ta’ subsettjar (spatialSubsettingService)
+
+Servizz li joħroġ dejta minn input minn reġjun ġeografiku kontinwu jew skond il-lokalità/pożizzjoni ġeografika jew bil-koordinati ta’ grilja.
+
+410. Servizz ta’ kampjunatura (spatialSamplingService)
+
+Servizz li joħroġ dejta minn input bl-użu ta’ skema ta’ kamjunatura konsistenti jew bil-lokalità ġeografika jew bil-koordinati ta’ grilja.
+
+411. Servizz ta’ bdil ta’ tiling (spatialTilingChangeService)
+
+Servizz li jibdel it-tiling ta’ dejta ġeografika.
+
+412. Servizz tal-kejl tad-dimensjonijiet (spatialDimensionMeasurementService)
+
+Servizz biex jiġu kkomputati d-dimensjonijiet ta’ oġġetti viżibbli f’immaġni jew ġeodejta oħra.
+
+413. Servizzi ta’ manipulazzjoni ta’ karatteristiċi (spatialFeatureManipulationService)
+
+Reġistrazzjoni ta’ karatteristika ma’ oħra, immaġni jew sett ta’ dejta jew sett ta’ koordinati oħra; korrezzjoni għaċ-ċaqliq relattiv, differenzi fir-rotazzjoni, differenzi fl-iskala, u differenzi fil-perspettiva. Dan is-servizz jivverifika li l-karatteristiċi kollha fil-Kollezzjoni ta’ Karatteristiċi huma konsistenti topoloġikament skond ir-regoli ta’ topoloġija tal-Kollezzjoni ta’ Karatteristiċi, u jidentifika u/jew jikkorreġi kull inkonsistenza li tinstab.
+
+414. Servizz ta’ tqabbil ta’ karatteristiċi (spatialFeatureMatchingService)
+
+Servizz li jiddetermina liema karatteristiċi u porzjonijiet ta’ karatteristiċi jirrappreżentaw l-istess entità fid-dinja reali minn sorsi ta’ dejta multipli, eż., tqabbil tat-trufijiet u tqabbil ikkombinat limitat.
+
+415. Servizz ta’ ġeneralizzazzjoni ta’ karatterisitċi (spatialFeatureGeneralizationService)
+
+Servizz li jnaqqas il-varjazzjoni ġeografika f’kollezzjoni ta’ karatteristiċi biex tiżdied l-effettività ta’ komunikazzjoni billi jkun hemm azzjoni kontra l-effetti mhux mixtieqa tat-tnaqqis ta’ dejta.
+
+416. Servizz tad-determinazzjoni tar-rotta (spatialRouteDeterminationService)
+
+Servizz biex jiddetermina l-aħjar mogħdija bejn żewġ punti speċifikati bbażat fuq il-parametri ta’ input u proprjetajiet li hemm fil-Kollezzjoni ta’ Karatteristiċi.
+
+417. Servizz ta’ pożizzjonar (spatialPositioningService)
+
+Servizz ipprovdut minn apparat li jipprovdi l-pożizzjoni biex juża, jikseb u jinterpreta bla ambigwità informazzjoni fuq il-pożizzjoni, u jiddetermina jekk ir-riżultati jħarsux il-ħtiġijiet ta’ l-użu.
+
+418. Servizz ta’ analiżi ta’ prossimità (spatialProximityAnalysisService)
+
+Mogħti pożizzjoni u karatteristika ġeografika, isib l-oġġetti kollha b’sett partikolari ta’ attributi li jinsabu f’distanza speċifikata mill-utenti ta’ pożizzjoni jew karattersitika.
+
+500 Servizzi ta’ pproċessar ġeografiku – tematiku (thematicProcessingService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+501. Servizz ta’ kalkolu ta’ ġeoparametri (thematicGoparameterCalculationService)
+
+Servizz biex ikun hemm riżultati kwantitattivi orjentati għall-applikazzjoni li ma jkunux disponibbli mid-dejta mhux ipproċessata nnifisha.
+
+502. Servizz ta’ klassifikazzjoni tematika (thematicClassificationService)
+
+Servizz għall-klassifikazzjoni ta’ reġjuni ta’ dejta ġeografika bbażat fuq attributi tematiċi.
+
+503. Servizz ta’ ġeneralizzazzjoni ta’ karatteristiċi (thematicFeatureGeneralizationService)
+
+Servizz li jiġġeneralizza tipi ta’ karatteristiċi f’kollezzjoni ta’ karatterisitiċi biex tiżdied l-effettività ta’ komunikazzjoni billi jkun hemm azzjoni kontra l-effetti mhux mixtieqa tat-tnaqqis ta’ dejta.
+
+504. Servizz ta’ subsettjar (thematicSubsettingService)
+
+Servizz li joħroġ dejta minn input ibbażat fuq valuri ta’ parametru.
+
+505. Servizz ta’ għadd ġeografiku (thematicSpatialCountingService)
+
+Servizz li jgħodd il-karatteristiċi ġeografiċi.
+
+506. Servizz ta’ bdil ta’ rilevament (thematicChangeDetectionService)
+
+Servizz biex isib id-differenzi bejn żewġ settijiet ta’ dejta li jirrappreżentaw l-istess żona ġeografika fi żminijiet differenti.
+
+507. Servizzi ta’ estrazzjoni ta’ informazzjoni ġeografika (thematicGeographicInformationExtractionService)
+
+Servizzi li jappoġġaw l-estrazzjoni ta’ informazzjoni tal-karatteristiċi u ta’ l-art minn immaġnijiet miġbura u skannjati mill-bogħod.
+
+508. Servizz ta’ l-ipproċessar ta’ l-immaġni (thematicImageProcessingService)
+
+Servizz għall-bdil ta’ valuri ta’ attributi tematiċi ta’ immaġni bl-użu ta’ funzjonijiet matematiċi.
+
+509. Servizz ta’ ġenerazzjoni ta’ riżoluzzjoni mnaqqsa (thematicReducedResolutionGenerationService)
+
+Servizz li jnaqqas ir-riżoluzzjoni ta’ immaġni.
+
+510. Servizzi għall-manipulazzjoni ta’ immaġni (thematicImageManipulationService)
+
+Servizzi għall-manipulazzjoni tal-valuri ta’ dejta f’immaġnijiet: bdil ta’ valuri tal-kulur u tal-kuntrast, l-applikazzjoni ta’ diversi filtri, manipulazzjoni ta’ riżoluzzjoni ta’ l-immaġni, tneħħija tal-ħoss, "striping", korrezzjonijiet sistematiċi-radjumetriċi, attenwazzjoni atmosferika, tibdil fl-illuminazzjoni tax-xena, eċċ.
+
+511. Servizzi biex tiftiehem l-immaġni (thematicImageUnderstandingService)
+
+Servizzi li jipprovdu rilevament tal-bidla ta’ immaġni awomatikament, differenzjar ta’ immaġni reġistrata, analiżi u wiri ta’ sinjifikat-ta’-differenza, u differenzjar skond iż-żona u skond il-mudell.
+
+512. Servizzi ta’ sinteżi ta’ immaġni (thematicImageSynthesisService)
+
+Servizzi għall-ħolqien jew għat-trasformazzjoni ta’ immaġnijiet bl-użu ta’ mudelli ġeografiċi bbażati fuq il-kompjuter, trasformazzjonijiet ta’ perspettiva, u manipulazzjonijiet ta’ karatteristiċi ta’ immaġni għat-titjib ta’ viżibbilità, biex ir-riżoluzzjoni tkun aktar akuta, u/jew biex jitnaqqsu l-effetti tal-kopertura tas-sħab jew taċ-ċpar.
+
+513. Manipulazzjoni ta’ l-immaġni multi-band (thematicMultibandImageManipulationService)
+
+Servizzi li jimmodifikaw immaġni bl-użu ta’ bands multipli ta’ l-immaġni.
+
+514. Servizz ta’ rilevament ta’ l-oġġett (thematicObjectDetectionService)
+
+Servizz biex oġġetti fid-dinja reali jiġu rilevati f’immaġni.
+
+515. Servizz ta’ geoparsing (thematicGeoparsingService)
+
+Servizz ta’ skannjar ta’ dokumenti b’testi għal referenzi bbażati fuq il-lokalità, bħall-isem ta’ post, indirizzi, kodiċijiet postali, eċċ, bi preparazzjoni għall-bidla għal servizz ta’ geocoding.
+
+516. Servizz ta’ geocoding (thematicGeocodingService)
+
+Servizz biex jiżdiedu r-referenzi ta’ test ibbażati fuq il-lokalità b’koordinati ġeografiċi (jew xi referenza ġeografika oħra).
+
+600 Servizzi ta’ pproċessar ġeografiku – temporali (temporalProcessingService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+601. Servizz ta’ trasformazzjoni ta’ sistema ta’ referenza temporali (temporalReferenceSystemTransformationService)
+
+Servizz biex jinbidlu l-valuri ta’ eżempji temporali minn sistema ta’ referenza waħda għal sistema ta’ referenza temporali oħra.
+
+602. Servizz ta’ subsettjar (temporalSubsettingService)
+
+Servizz ta’ estrazzjoni ta’ dejta minn input f’intervall kontinwu bbażat fuq valuri ta’ pożizzjoni temporali.
+
+603. Servizz ta’ kampjunatura (temporalSamplingService)
+
+Servizz ta’ estrazzjoni ta’ dejta minn input bl-użu ta’ skema ta’ kampjunatura konsistenti bbażata fuq valuri ta’ pożizzjoni temporali.
+
+604. Servizz ta’ analiżi ta’ prossimità temporali (temporalProximityAnalysisService)
+
+Minħabba intervall jew ġrajja temporali, dan is-servizz jinkludi l-oġġetti kollha b’sett ta’ attributi partikolari li jinsabu f’intervall speċifikat mill-utent, mill-intervall jew ġrajja.
+
+700 Servizzi ta’ pproċessar ġeografiku – metadejta (metadejtaProcessingService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+701. Servizz ta’ kalkolu ta’ statistika (metadejtaStatisticalCalculationService)
+
+Servizz biex tiġi kkalkulata l-istatistika ta’ sett ta’ dejta.
+
+702. Servizzi ta’ annotazzjoni ġeografika (metadejtaGeographicAnnotationService)
+
+Servizzi biex tiżdied informazzjoni anċillari f’immaġni jew karatteristika f’Kollezjoni ta’ Karatteristiċi.
+
+800 Servizzi ta’ komunikazzjoni ġeografika (comService)
+
+Din il-kategorija tikkomprendi s-subkategoriji li ġejjin:
+
+801. Servizz ta’ kodifikazzjoni (comEncodingService)
+
+Servizz li jipprovdi implimentazzjoni ta’ regola ta’ kodifikazzjoni u jipprovdi interface għall-funzjonalità ta’ kodifikazzjoni u dekodifikazzjoni.
+
+802. Servizz ta’ trasferiment (comTransferService)
+
+Servizz li jipprovdi implimentazzjoni ta’ protokoll ta’ trasferiment wieħed jew iżjed, li jippermetti t-trasferiment ta’ dejta bejn sistemi ta’ informazzjoni ddistribwita fuq mezzi ta’ komunikazzjoni off-line u on-line.
+
+803. Servizz ta’ kompressjoni ġeografika (comGeographicCompressionService)
+
+Servizz li jikkonverti porzjonijiet ġeografiċi ta’ kollezzjoni ta’ karatteristiċi fi u minn forma kompressa.
+
+804. Servizz ta’ konverżjoni ta’ format ġeografiku (comGeographicFormatConversionService)
+
+Servizz li jikkonverti minn format ta’ dejta ġeografika wieħed għal format ieħor.
+
+805. Servizz ta’ messaġġi (comMessagingService)
+
+Servizz li jħalli lil utenti multipli jaraw, jikkummentaw fuq, u jitolbu editjar ta’ kollezzjonijiet ta’ karatteristiċi simultanjament.
+
+806. Amministrazzjoni mill-bogħod ta’ fajls u ta’ fajls esegwibbli (comRemoteFileAndExecutableManagement)
+
+Servizz li jipprovdi aċċess għal ħażna sekondarja ta’ karatteristiċi ġeografiċi daqslikieku kienet lokali għall-klijent.
+
+5 GRAD TA’ KONFORMITÀ
+
+5.1. Tikkonforma (conformant)
+
+Ir-riżorsa tikkonforma għal kollox ma’ l-ispeċifikazzjoni ċċitata.
+
+5.2. Ma tikkonformax (notConformant)
+
+Ir-riżorsa ma tikkonformax ma’ l-ispeċifikazzjoni ċċitata.
+
+5.3. Mhux ivvalutata (notEvaluated)
+
+Il-konformità għadha ma ġietx ivvalutata.
+
+6 RWOL TAL-PARTI RESPONSABBLI
+
+6.1. Provditur ta’ riżorsa (resourceProvider)
+
+Parti li tissupplixxi r-riżorsa.
+
+6.2. Kustodju (custodian)
+
+Il-parti li taċċetta r-responsabbilità għad-dejta u tiżgura kura u manutenzjoni xierqa tar-riżorsa.
+
+6.3. Sid (owner)
+
+Parti li hija s-sid tar-riżorsa.
+
+6.4. Utent (user)
+
+Parti li tuża r-riżorsa.
+
+6.5. Distributur (distributor)
+
+Parti li tiddistribwixxi r-riżorsa.
+
+6.6. Oriġinatur (originator)
+
+Parti li ħolqot ir-riżorsa
+
+6.7. Punt ta’ kuntatt (pointOfContact)
+
+Parti li tista’ tiġi kkuntattjata biex jinkiseb tagħrif dwar ir-riżorsa jew l-akkwist tagħha.
+
+6.8. Investigatur Ewlieni (principalInvestigator)
+
+Parti ewlenija responsabbli għall-ġbir ta’ informazzjoni u biex issir ir-riċerka.
+
+6.9. Proċessur (processor)
+
+Parti li pproċessat id-dejta b’mod li r-riżorsa ġiet mmodifikata.
+
+6.10. Pubblikatur (publisher)
+
+Parti li ppubblikat r-riżorsa.
+
+6.11. Awtur (author)
+
+Parti li kienet l-awtriċi tar-riżorsa.
+
+--------------------------------------------------

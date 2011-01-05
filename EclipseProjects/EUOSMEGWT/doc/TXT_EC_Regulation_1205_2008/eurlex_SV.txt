@@ -1,0 +1,987 @@
+Kommissionens förordning (EG) nr 1205/2008
+
+av den 3 december 2008
+
+om genomförande av Europaparlamentets och rådets direktiv 2007/2/EG om metadata
+
+(Text av betydelse för EES)
+
+EUROPEISKA GEMENSKAPERNAS KOMMISSION HAR ANTAGIT DETTA BESLUT
+
+med beaktande av fördraget om upprättandet av Europeiska gemenskapen,
+
+med beaktande av Europaparlamentets och rådets direktiv 2007/2/EG av den 14 mars 2007 om upprättande av en infrastruktur för rumslig information i Europeiska gemenskapen (Inspire) [1], särskilt artikel 5.4, och
+
+av följande skäl:
+
+(1) I direktiv 2007/2/EG anges de allmänna reglerna för upprättandet av infrastrukturen för rumslig information i Europeiska gemenskapen. Eftersom det, för att infrastrukturen ska fungera väl, är nödvändigt att användarna kan hitta rumsliga data och tjänster och avgöra om de kan användas och i vilket syfte, ska medlemsstaterna tillhandahålla beskrivningar i form av metadata för dessa rumsliga data och tjänster. Eftersom sådana metadata bör vara kompatibla och användbara i EU-sammanhang och gränsöverskridande sammanhang är det nödvändigt att fastställa regler för de metadata som används för att beskriva rumsliga data och tjänster beträffande de områden som anges i bilagorna I, II och III till direktiv 2007/2/EG.
+
+(2) Det är nödvändigt att definiera metadataelement för att göra det möjligt att identifiera den informationsresurs för vilka metadata skapas, dess klassificering, geografiska läge och tidsmässiga referens, dess kvalitet och validitet, dess överensstämmelse med genomförandebestämmelser för rumsliga datamängders och rumsliga tjänsters interoperabilitet, begränsningar av åtkomst och användning och den organisation som ansvarar för resursen. Metadataelement som beskriver själva metadatamängden är också nödvändiga för att kontrollera att de metadata som skapas hålls uppdaterade, samt för att identifiera den organisation som är ansvarig för skapande och underhåll av metadata. Detta är den minsta uppsättningen metadataelement som krävs för uppfyllande av direktiv 2007/2/EG och utesluter inte att organisationer dokumenterar informationsresurserna mer utförligt med ytterligare element enligt internationella standarder eller arbetsrutiner inom det berörda området. Detta direktiv utesluter inte heller att riktlinjer, som fastställts och uppdaterats av kommissionen, antas, i synnerhet inte i de fall där det är nödvändigt att säkerställa metadatas interoperabilitet.
+
+(3) Instruktioner krävs för validering av metadata i enlighet med direktiv 2007/2/EG med hänsyn till förutsättningarna och den förväntade förekomsten av varje metadataelement, det vill säga, huruvida värden för varje element alltid kan förutsättas finnas i metadataregistret, kan förekomma endast en gång eller kan förekomma mer än en gång.
+
+(4) Värdedomänen för varje metadataelement är nödvändig för att säkerställa interoperabiliteten för metadata i flerspråkliga sammanhang, och dessa värdedomäner ska kunna vara i form av fri text, datum, koder enligt internationella standarder, t.ex. språkkoder, nyckelord från kontrollerade tesaurusar eller teckensträngar.
+
+(5) De åtgärder som anges i denna förordning är förenliga med yttrandet från den kommitté som inrättats genom artikel 22 i direktiv 2007/2/EG.
+
+HÄRIGENOM FÖRESKRIVS FÖLJANDE.
+
+Artikel 1
+
+Ämne
+
+I denna förordning anges kraven för skapande och underhåll av metadata för rumsliga datamängder, rumsliga datamängdsserier och rumsliga datatjänster för de teman som anges i bilagorna I, II och III till direktiv 2007/2/EG.
+
+Artikel 2
+
+Definitioner
+
+I denna förordning gäller, utöver de definitioner som fastställs i artikel 3 i direktiv 2007/2/EG, de definitioner som anges i del A i bilagan.
+
+Artikel 3
+
+Skapa och underhålla metadata
+
+De metadata som beskriver rumsliga datamängder, rumsliga datamängdsserier eller rumsliga datatjänster ska innehålla de metadataelement eller grupper av metadataelement som anges i del B i bilagan och ska skapas och underhållas i enlighet med de regler som fastställs i delarna C och D i bilagan.
+
+Artikel 4
+
+Ikraftträdande
+
+Denna förordning träder i kraft den tjugonde dagen efter det att den har offentliggjorts i Europeiska unionens officiella tidning.
+
+Denna förordning är till alla delar bindande och direkt tillämplig i alla medlemsstater.
+
+Utfärdad i Bryssel den 3 december 2008.
+
+På kommissionens vägnar
+
+Stavros Dimas
+
+Ledamot av kommissionen
+
+[1] EUT L 108, 25.4.2007, s. 1.
+
+--------------------------------------------------
+
+BILAGA
+
+GENOMFÖRANDEBESTÄMMELSER FÖR METADATA
+
+DEL A
+
+Tolkning
+
+1. I detta direktiv avses med
+
+— teckensträng : värdedomänen för metadataelement uttryckt som en uppsättning tecken, behandlad som en enhet,
+
+— fri text : värdedomänen för metadataelement uttryckt på ett eller flera naturliga språk,
+
+— tillkomsthistorik : en datamängds historik och levnadscykel från insamling och inhämtning genom sammanställning och härledning till dess nuvarande form i enlighet med EN ISO 19101,
+
+— metadataelement : en separat och urskiljbar del av metadata, i enlighet med EN ISO 19115,
+
+— namnrymd : en samling namn, identifierade med en URI-referens (Uniform Resource Identifier), som används i XML-dokument (Extensible Markup Language) som elementnamn och attributnamn,
+
+— kvalitet : en produkts samlade egenskaper som har att göra med dess förmåga att uppfylla uttalade och icke uttalade behov, i enlighet med EN ISO 19101,
+
+— resurs : en informationsresurs som är direkt eller indirekt kopplad till en specifik plats eller ett geografiskt område,
+
+— rumslig datamängdsserie : en samling rumsliga datamängder som har samma produktspecifikation.
+
+2. Hänvisningar till rumsliga datamängders validitet ska förstås som hänvisningar till något av följande:
+
+- Berörda datas rumsliga eller tidsmässiga utsträckning.
+
+- Huruvida berörda data har kontrollerats enligt en standard för mätning eller prestanda.
+
+- Den mån i vilken berörda data är lämpliga för syftet.
+
+- I förekommande fall, de rumsliga datamängdernas rättsliga status.
+
+DEL B
+
+Metadataelement
+
+1. IDENTIFIKATION
+
+Följande metadataelement ska tillhandahållas:
+
+1.1 Resursens titel
+
+Detta är en karaktäristisk, och ofta unik, beteckning på resursen.
+
+Värdedomänen för detta metadataelement är fri text.
+
+1.2 Resurssammanfattning
+
+Detta är en kortfattad beskrivande sammanfattning av resursens innehåll.
+
+Värdedomänen för detta metadataelement är fri text.
+
+1.3 Resurstyp
+
+Detta är den typ av resurs som beskrivs av metadata.
+
+Värdedomänen för detta metadataelement definieras i del D.1.
+
+1.4 Resursadress
+
+Resursadressen definierar länken/länkarna till resursen och/eller länken till ytterligare information om resursen.
+
+Värdedomänen för detta metadataelement är en teckensträng som vanligen uttrycks som URL (Uniform Resource Locator).
+
+1.5 Unik resursidentifierare
+
+Ett värde som unikt identifierar resursen.
+
+Värdedomänen för detta metadataelement är en obligatorisk teckensträngkod, i allmänhet tilldelad av dataägaren, och en namnrymd för teckensträngen som unikt identifierar identifieringskodens sammanhang (till exempel dataägaren).
+
+1.6 Sammankopplad resurs
+
+Om resursen är en rumslig datatjänst identifierar detta metadataelement, i förekommande fall, avsedd(a) rumslig(a) datamängd(er) för tjänsten genom dess URI (Unique Resource Identifier).
+
+Värdedomänen för detta metadataelement är en obligatorisk teckensträngkod, i allmänhet tilldelad av dataägaren, och ett namnområde för teckensträngen som unikt identifierar identifieringskodens kontext (till exempel dataägaren).
+
+1.7 Resursspråk
+
+Det/De språk som används i resursen.
+
+Värdedomänen för detta metadataelement är begränsat till de språk som anges i ISO 639-2.
+
+2. KLASSIFICERING AV RUMSLIGA DATA OCH TJÄNSTER
+
+2.1 Ämneskategori
+
+Ämneskategorin är ett klassificeringssystem på hög nivå som är avsett att underlätta gruppering och ämnesbaserade sökningar av tillgängliga rumsliga dataresurser.
+
+Värdedomänen för detta metadataelement definieras i del D.2.
+
+2.2 Typ av rumslig datatjänst
+
+Detta är en klassificering avsedd att underlätta sökningar av tillgängliga rumsliga dataresurser. En specifik tjänst ska kategoriseras i endast en kategori.
+
+Värdedomänen för detta metadataelement definieras i del D.3.
+
+3. NYCKELORD
+
+Om resursen är en rumslig datatjänst ska minst ett av nyckelorden i del D.4 anges.
+
+Om en resurs är en rumslig datamängd eller en rumslig datamängdsserie ska minst ett nyckelord anges från den allmänna flerspråkiga tesaurusen Gemet (General Environmental Multi-lingual Thesaurus). Nyckelordet ska beskriva det relevanta rumsliga datatemat såsom det definieras i bilagorna I, II eller III till direktiv 2007/2/EG.
+
+För varje nyckelord ska följande metadataelement anges:
+
+3.1 Nyckelordsvärde
+
+Nyckelordsvärdet är ett vanligt förekommande ord, ett formaliserat ord eller en fras som används för att beskriva ämnet. Även om ämneskategorin är för detaljerade vid sökningar gör nyckelord det lättare att begränsa fulltextsökningar och möjliggör strukturerade nyckelordssökningar.
+
+Värdedomänen för detta metadataelement är fri text.
+
+3.2 Härledning av kontrollerad ordlista
+
+Om nyckelordsvärdet härrör från en kontrollerad ordlista (tesaurus, ontologi), exempelvis Gemet, ska hänvisningen till den ursprungliga kontrollerade vokabulären anges.
+
+Denna hänvisning ska innehålla åtminstone beteckningen och ett referensdatum (publiceringsdatum, datum för senaste revidering eller för skapande) för den ursprungliga kontrollerade ordlistan.
+
+4. GEOGRAFISKT LÄGE
+
+Kravet på geografiskt läge som avses i artikel 11.2 e i direktiv 2007/2/EG ska anges med metadataelementet geografisk omskrivande rektangel.
+
+4.1 Geografisk omskrivande rektangel
+
+Detta är resursens geografiska utbredning, angiven som en omskrivande rektangel.
+
+Den omskrivande rektangeln ska anges med västlig och ostlig longitud och sydlig och nordlig latitud i decimalgrader, med en precision på minst 2 decimaler.
+
+5. TEMPORAL REFERENS
+
+Detta metadataelement tillgodoser kravet på information om den tidsmässiga dimensionen för de data som avses i artikel 8.2 d i direktiv 2007/2/EG. Minst ett av metadataelementen som avses i punkterna 5.1–5.4 ska anges.
+
+Värdedomänen för de metadataelement som avses i punkterna 5.1–5.4 är en uppsättning datum. Varje datum ska hänvisa till ett tidsreferenssystem och ska anges i en form som är kompatibel med detta system. Standardreferenssystemet ska vara den gregorianska kalendern och datumen ska anges i enlighet med ISO 8601.
+
+5.1 Temporal utsträckning
+
+Den temporala utsträckningen avser den tidsperiod som omfattas av resursens innehåll. Denna tidsperiod kan uttryckas som något av följande:
+
+- Ett enskilt datum.
+
+- Ett datumintervall uttryckt med intervallets startdatum och slutdatum.
+
+- En blandning av enskilda datum och datumintervall.
+
+5.2 Publiceringsdatum
+
+Detta är resursens publiceringsdatum, om det finns tillgängligt, eller datumet för ikraftträdande. Det kan finnas mer än ett publiceringsdatum.
+
+5.3 Datum för senaste revidering
+
+Detta är det datum då resursen senast reviderades, om resursen har reviderats. Det ska inte finnas mer än ett datum för senaste revidering.
+
+5.4 Skapandedatum
+
+Detta är det datum då resursen skapades. Det ska inte finnas mer än ett datum.
+
+6. KVALITET OCH VALIDITET
+
+De krav som anges i artikel 5.2 och artikel 11.2 i direktiv 2007/2/EG och som avser rumsliga datas kvalitet och validitet ska uppfyllas genom följande metadataelement:
+
+6.1 Tillkomsthistorik
+
+Detta är en förklaring om processhistorik och/eller rumsliga datamängders övergripande kvalitet. I de fall det är lämpligt kan den inbegripa ett meddelande om huruvida datamängden har validerats eller kvalitetssäkrats, huruvida den utgör den officiella versionen (om det finns flera versioner) samt huruvida dess rättsliga status.
+
+Värdedomänen för detta metadataelement är fri text.
+
+6.2 Rumslig upplösning
+
+Rumslig upplösning avser datamängdens detaljeringsnivå. Upplösningen ska anges med noll till flera uppgifter om antingen avstånd mellan observationer (typiskt för data i rutnätsystem och bildrelaterade produkter), eller skala (typiskt för kartor eller kartrelaterade produkter).
+
+En skala uttrycks i allmänhet som ett heltalsvärde som anger skalfaktorn.
+
+Ett avstånd mellan observationer ska anges som ett numeriskt värde i förhållande till en längdenhet.
+
+7. ÖVERENSSTÄMMELSE
+
+De krav som anges i artikel 5.2 a och artikel 11.2 d i direktiv 2007/2/EG och som avser överensstämmelsen, och graden av överensstämmelse, med tillämpningsföreskrifterna enligt artikel 7.1 i direktiv 2007/2/EG ska uppfyllas genom följande metadataelement:
+
+7.1 Specifikation
+
+Detta avser en hänvisning till genomförandebestämmelserna enligt artikel 7.1 i direktiv 2007/2/EG eller någon annan specifikation för en viss resurs.
+
+En resurs kan uppfylla mer än en av genomförandebestämmelserna enligt artikel 7.1 i direktiv 2007/2/EG eller någon annan specifikation.
+
+Denna hänvisning ska inbegripa åtminstone beteckningen och ett referensdatum (publiceringsdatum, datum för senaste revidering eller för skapande) för genomförandebestämmelserna enligt artikel 7.1 i direktiv 2007/2/EG, eller för specifikationen.
+
+7.2 Grad av överensstämmelse
+
+Detta är resursens grad av överensstämmelse med genomförandebestämmelserna enligt artikel 7.1 i direktiv 2007/2/EG eller någon annan specifikation.
+
+Värdedomänen för detta metadataelement definieras i del D.5.
+
+8. BEGRÄNSNING AV ÅTKOMST OCH ANVÄNDNING
+
+En begränsning av åtkomst och användning ska vara något av följande, eller båda:
+
+- En uppsättning villkor gällande åtkomst och användning 8.1.
+
+- En uppsättning begränsningar av den offentliga åtkomsten 8.2.
+
+8.1 Villkor för tillgång och utnyttjande.
+
+Det här metadataelementet definierar villkoren för tillgång och utnyttjande av rumsliga data och tjänster och, i förekommande fall, tillämpliga avgifter i enlighet med artikel 5.2 b och artikel 11.2 f i direktiv 2007/2/EG.
+
+Värdedomänen för detta metadataelement är fri text.
+
+Elementet måste ha värden. Om det inte finns några villkor gällande åtkomst och användning av resursen ska "inga tillämpliga villkor" användas. Om villkoren inte är kända ska "villkor okända" användas.
+
+Det här elementet ska även, i förekommande fall, tillhandahålla information om eventuella avgifter för åtkomst och användning av resursen eller hänvisa till en URL där information om avgifter ges.
+
+8.2 Begränsningar av offentlig åtkomst
+
+Om medlemsstaterna begränsar den offentliga åtkomsten till rumsliga data och rumsliga datatjänster enligt artikel 13 i direktiv 2007/2/EG ska detta metadataelement ge information om dessa begränsningar och skälen till dem.
+
+Om det inte finns några begränsningar av den offentliga åtkomsten ska metadataelementet indikera detta.
+
+Värdedomänen för detta metadataelement är fri text.
+
+9. ORGANISATIONER SOM ANSVARAR FÖR UPPRÄTTANDE, HANTERING, UNDERHÅLL OCH DISTRIBUTION AV RUMSLIGA DATA OCH TJÄNSTER
+
+För överensstämmelse med artikel 5.2 d och artikel 11.2 g i direktiv 2007/2/EG ska följande två metadataelement tillhandahållas:
+
+9.1 Ansvarig part
+
+Detta är beskrivningen av den organisation som ansvarar för upprättande, hantering, underhåll och distribution av resursen.
+
+Denna beskrivning ska inbegripa
+
+- organisationens namn som fri text,
+
+- en e-postadress för kontakt som teckensträng.
+
+9.2 Ansvarig parts funktion
+
+Detta är den ansvariga partens funktion.
+
+Värdedomänen för detta metadataelement definieras i del D.6.
+
+10. METADATA OM METADATA
+
+För överensstämmelse med artikel 5.1 i direktiv 2007/2/EG ska följande metadataelement tillhandahållas:
+
+10.1 Kontaktpunkt för metadata
+
+Detta är beskrivningen av den organisation som ansvarar för upprättande och underhåll av metadata.
+
+Denna beskrivning ska inbegripa
+
+- organisationens namn som fri text,
+
+- en e-postadress för kontakt som teckensträng.
+
+10.2 Metadatas datum
+
+Ett datum som specificerar när metadatamängden skapades eller uppdaterades.
+
+Detta datum ska anges i enlighet med ISO 8601.
+
+10.3 Metadataspråk
+
+Detta är det språk på vilket metadataelementen anges.
+
+Värdedomänen för detta metadataelement begränsas till unionens officiella språk i enlighet med ISO 639-2.
+
+DEL C
+
+Instruktioner för metadataelementens förekomst och villkor
+
+De metadata som beskriver en resurs ska, vad gäller rumsliga datamängder och rumsliga datamängdsserier, innehålla de metadataelement eller grupper av metadataelement som anges i tabell 1 och, vad gäller rumsliga datatjänster, de metadataelement eller grupper av metadataelement som anges i tabell 2.
+
+Dessa metadataelement eller grupper av metadataelement ska vara utformade i enlighet med den förväntade multipliciteten och de tillämpliga villkoren i tabell 1 och tabell 2.
+
+Om inga villkor anges för ett visst metadataelement ska detta element vara obligatoriskt.
+
+I tabellerna anges följande information:
+
+- Den första kolumnen innehåller en hänvisning till den paragraf i del B i bilagan där metadataelementet eller gruppen av metadataelement definieras.
+
+- Den andra kolumnen innehåller namnet på metadataelementet eller gruppen av metadataelement.
+
+- I den tredje kolumnen specificeras metadataelementets förekomst. Uppgiften om multiplicitet ska följa UML-beteckningen (Unified Modelling Language) för förekomst, enligt vilken
+
+- 1 betyder att det ska finnas endast en förekomst av detta metadataelement i ett resultat,
+
+- 1..* betyder att det ska finnas minst en förekomst av detta element i ett resultat,
+
+- 0..1 indikerar att förekomsten av detta metadataelement i ett resultat är villkorad men kan förekomma endast en gång,
+
+- 0..* indikerar att förekomsten av detta metadataelement i ett resultat är villkorad men att metadataelementet kan förekomma en eller flera gånger,
+
+- om förekomsten är 0..1 eller 0..* definierar villkoret när detta metadataelement krävs.
+
+- Den fjärde kolumnen innehåller en villkorlig uppgift om elementets förekomst inte gäller för alla typer av resurser. Alla element är obligatoriska under andra förhållanden.
+
+Tabell 1
+
+Metadata för rumsliga datamängder och rumsliga datamängdsserier
+
+Referens | Metadataelement | Multiplicitet | Villkor |
+
+1.1 | Resursens beteckning | 1 | |
+
+1.2 | Resurssammanfattning | 1 | |
+
+1.3 | Resurstyp | 1 | |
+
+1.4 | Resurslokator | 0..* | Obligatoriskt om det finns en URL till en plats där det finns mer information resursen och/eller åtkomstrelaterade tjänster. |
+
+1.5 | URI (Unique resource identifier) | 1..* | |
+
+1.7 | Resursspråk | 0..* | Obligatoriskt om resursen innehåller textinformation. |
+
+2.1 | Ämneskategori | 1..* | |
+
+3 | Nyckelord | 1..* | |
+
+4.1 | Geografisk omskrivande rektangel | 1..* | |
+
+5 | Tidsreferens | 1..* | |
+
+6.1 | Tillkomsthistorik | 1 | |
+
+6.2 | Rumslig upplösning | 0..* | Obligatoriskt för datamängder och datamängdsserier om en skala eller ett avstånd mellan observationer kan specificeras. |
+
+7 | Överensstämmelse | 1..* | |
+
+8.1 | Villkor för åtkomst och användning | 1..* | |
+
+8.2 | Begränsningar av offentlig åtkomst | 1..* | |
+
+9 | Ansvarig organisation | 1..* | |
+
+10.1 | Kontaktpunkt för metadata | 1..* | |
+
+10.2 | Metadatas datum | 1 | |
+
+10.3 | Metadataspråk | 1 | |
+
+Tabell 2
+
+Metadata för rumsliga datatjänster
+
+Referens | Metadataelement | Multiplicitet | Villkor |
+
+1.1 | Resursens beteckning | 1 | |
+
+1.2 | Resurssammanfattning | 1 | |
+
+1.3 | Resurstyp | 1 | |
+
+1.4 | Resurslokator | 0..* | Obligatoriskt om det finns länkning till tjänsten. |
+
+1.6 | Sammankopplad resurs | 0..* | Obligatoriskt om det finns länkning till de datamängder som tjänsten använder. |
+
+2.2 | Typ av rumslig datatjänst | 1 | |
+
+3 | Nyckelord | 1..* | |
+
+4.1 | Geografisk omskrivande rektangel | 0..* | Obligatoriskt för tjänster med en explicit geografisk utsträckning. |
+
+5 | Tidsreferens | 1..* | |
+
+6.2 | Rumslig upplösning | 0..* | Obligatoriskt om den det finns restriktioner på den rumsliga upplösningen för tjänsten. |
+
+7 | Överensstämmelse | 1..* | |
+
+8.1 | Villkor för åtkomst och användning | 1..* | |
+
+8.2 | Begränsningar av offentlig åtkomst | 1..* | |
+
+9 | Ansvarig organisation | 1..* | |
+
+10.1 | Kontaktpunkt för metadata | 1..* | |
+
+10.2 | Metadatas datum | 1 | |
+
+10.3 | Metadataspråk | 1 | |
+
+DEL D
+
+Värdedomäner
+
+I de fall det anges i beskrivningen av metadataelementen i del B ska de värdedomäner som beskrivs i del D.1 till D.6 användas med den multiplicitet som anges i tabell 1 och tabell 2 i del C.
+
+I förhållande till en specifik domän definieras varje värde av
+
+- en numerisk identifierare,
+
+- en ledtext för personer som kan översättas till unionens olika språk,
+
+- ett språkneutralt namn för datorer (värdet anges inom parentes),
+
+- en valfri beskrivning eller definition.
+
+1. RESURSTYP
+
+1.1 Rumslig datamängdsserie (serie)
+
+1.2 Rumslig datamängd (datamängd)
+
+1.3 Rumsliga datatjänster (tjänster)
+
+2. ÄMNESKATEGORIER ENLIGT EN ISO 19115
+
+2.1 Areella näringar (farming)
+
+Uppfödning av djur och/eller odling av grödor.
+
+Denna kategori omfattar teman för rumsliga data enligt direktiv 2007/2/EG bilaga III punkt 9, Jordbruks- och vattenbruksanläggningar.
+
+2.2 Biologi och ekologi (biota)
+
+Flora och/eller fauna i naturlig miljö.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 17, Biogeografiska regioner, bilaga III punkt 18, Naturtyper och biotoper, bilaga III punkt 19, Arters utbredning.
+
+2.3 Administrativa gränser (boundaries)
+
+Rättsliga arealbeskrivningar
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga I punkt 4, Administrativa enheter, bilaga III punkt 1, Statistiska enheter.
+
+2.4 Klimatologi och meteorologi (climatologyMeteorologyAtmosphere)
+
+Atmosfäriska processer och fenomen.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 13, Atmosfäriska förhållanden, bilaga III punkt 14, Geografiska meteorologiska förhållanden.
+
+2.5 Ekonomi (economy)
+
+Ekonomisk verksamhet, ekonomiska förhållanden och sysselsättning.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 20, Energiresurser, bilaga III punkt 21, Mineralfyndigheter.
+
+2.6 Höjddata (elevation)
+
+Höjd över eller under havsytan.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga II punkt 1, Höjd.
+
+2.7 Miljö (environment)
+
+Miljöresurser, skydd och miljövård.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga I punkt 9, Skyddade områden.
+
+2.8 Geovetenskap (geoscientificInformation)
+
+Information om geologiska förhållanden.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 3, Mark, bilaga II punkt 4, Geologi, bilaga III punkt 12, Naturliga riskområden.
+
+2.9 Hälsa (health)
+
+Hälsa, hälsovårdstjänster, humanekologi och säkerhet.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga III punkt 5, Människors hälsa och säkerhet.
+
+2.10 Arealtäckande bilder och bakgrundskartor (imageryBaseMapsEarthCover)
+
+Grundkartor.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga II punkt 3, Ortofoto, bilaga II punkt 2, Landtäcke.
+
+2.11 Försvar (intelligenceMilitary)
+
+Militärbaser, organisation, verksamhet.
+
+Denna kategori gäller inte specifikt för något tema för rumsliga data.
+
+2.12 Sjöar och vattendrag (inlandWaters)
+
+Inlandsvatten, dräneringssystem och dessas egenskaper.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga I punkt 8, Hydrografi.
+
+2.13 Positionering (location)
+
+Lägesinformation och tjänster.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga I punkt 3, Geografiska namn, bilaga I punkt 5, Adresser.
+
+2.14 Kust och hav (oceans)
+
+Förhållanden och egenskaper hos saltvattenförekomster (exklusive inlandsvatten).
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 16, Havsområden, bilaga III punkt 15, Geografiska oceanografiska förhållanden.
+
+2.15 Fastigheter och fysisk planering (planningCadastre)
+
+Information som används för att vidta lämpliga åtgärder för framtida användning av marken.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga I punkt 6, Fastighetsområden, bilaga III punkt 4, Markanvändning, bilaga III punkt 11, Områden med särskild förvaltning/begränsningar/reglering samt enheter för rapportering.
+
+2.16 Samhälle och kultur (society)
+
+Samhällens och kulturers egenskaper.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 10, Befolkningsfördelning – demografi
+
+2.17 Byggnader och byggnadsanläggningar (structure)
+
+Bebyggelse.
+
+Denna kategori omfattar följande teman för rumsliga data enligt direktiv 2007/2/EG: Bilaga III punkt 2, Byggnader, bilaga III punkt 8, Produktions- och industrianläggningar, bilaga III punkt 7, Anläggningar för miljöövervakning.
+
+2.18 Transporter (transportation)
+
+Färd- och hjälpmedel för att transportera människor och/eller varor.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga I punkt 7, Transportnät.
+
+2.19 Tekniska försörjningssystem (utilitiesCommunication)
+
+Energi-, vattenförsörjnings- och avloppssystem samt kommunikationer, infrastruktur och tjänster.
+
+Denna kategori omfattar följande rumsliga datatema enligt direktiv 2007/2/EG: Bilaga III punkt 6, Allmännyttiga och offentliga tjänster.
+
+3. TYP AV RUMSLIG DATATJÄNST
+
+3.1 Söktjänst (discovery)
+
+Tjänst som gör det möjligt att söka efter rumsliga datamängder och datatjänster med utgångspunkt i innehållet i tillhörande metadata, samt att visa metadatas innehåll.
+
+3.2 Visningstjänst (view)
+
+Tjänst som gör det möjligt att, åtminstone, visa, navigera, zooma in och ut i, panorera och överlagra visningsbara rumsliga datamängder samt att visa förklarande information och relevant innehåll i metadata.
+
+3.3 Nedladdningstjänst (download)
+
+Tjänst som gör det möjligt att ladda ned kopior av rumsliga datamängder eller delar av sådana och, i de fall det är möjligt, få direkt åtkomst.
+
+3.4 Omvandlingstjänst (transformation)
+
+Tjänst som gör det möjligt att omvandla rumsliga datamängder i syfte att uppnå interoperabilitet.
+
+3.5 Tjänst för förbindelse med datatjänster (invoke)
+
+Tjänst som gör det möjligt att definiera både indata och utdata som förväntas av den rumsliga tjänsten samt ett arbetsflöde eller en tjänstekedja som kombinerar flera tjänster. Denna tjänst gör det också möjligt att definiera det externa webbtjänstgränssnittet för arbetsflödet eller tjänstekedjan.
+
+3.6 Andra tjänster (other)
+
+4. KLASSIFICERING AV RUMSLIGA DATATJÄNSTER
+
+Nyckelorden är baserade på den geografiska tjänstetaxonomin i EN ISO 19119. Denna taxonomi är indelad i kategorier, där underkategorierna definierar värdedomänen för de rumsliga datatjänsternas klassificering.
+
+100 Geografiska tjänster för mänsklig interaktion (humanInteractionService)
+
+Denna kategori inbegriper följande underkategorier:
+
+101. Visningstjänst för datakatalog (humanCatalogueViewer)
+
+Klient som gör det möjligt för en användare att interagera med en datakatalog för att lokalisera, bläddra bland och hantera metadata om geografiska data eller geografiska tjänster.
+
+102. Geografiskt visningstjänst (humanGeographicViewer)
+
+Klient som gör det möjligt för en användare att visa ett eller flera geografiska objektsamlingar eller yttäckande datamängder.
+
+103. Tjänst för geografisk visning av kalkylblad (humanGeographicSpreadsheetViewer)
+
+Klient som gör det möjligt för en användare att interagera med flera dataobjekt och begära kalkyler liknande aritmetiska kalkylblad men utvidgade till att omfatta geografiska data.
+
+104. Tjänsteredigerare (humanServiceEditor)
+
+Klient som gör det möjligt för en användare att kontrollera geografiska bearbetningstjänster.
+
+105. Redigeringstjänst för tjänstekedjedefinition (humanChainDefinitionEditor)
+
+Möjliggör användarinteraktion med en tjänst för tjänstekedjedefinition.
+
+106. Hanteringstjänst för informationsflöden (humanWorkflowEnactmentManager)
+
+Möjliggör användarinteraktion med en tjänst för hantering av arbetsflöde.
+
+107. Redigeringstjänst för geografiska objekt (humanGeographicFeatureEditor)
+
+Geografiskt visningstjänst som gör det möjligt för en användare att interagera med objektdata.
+
+108. Redigeringstjänst för geografiska symboler (humanGeographicSymbolEditor)
+
+Tjänst som gör det möjligt för en användare att välja och hantera symbolförteckningar.
+
+109. Redigeringstjänst för generalisering av objekt (humanFeatureGeneralizationEditor)
+
+Tjänst som gör det möjligt för en användare att ändra de kartografiska egenskaperna hos ett objekt eller en samling objekt genom att förenkla dess visualisering, samtidigt som dess framträdande inslag bibehålls – den rumsliga motsvarigheten till förenkling.
+
+110. Visningstjänst för geografisk datastruktur (humanGeographicDataStructureViewer)
+
+Tjänst som ger en användare åtkomst till en del av en datamängd för att se dess interna struktur.
+
+200 Geografiska modell-/informationshanteringstjänster (infoManagementService)
+
+Denna kategori inbegriper följande underkategorier:
+
+201. Tjänst för åtkomst till objekt (infoFeatureAccessService)
+
+Tjänst som ger en användare åtkomst till och möjlighet att hantera lagrade objekt.
+
+202. Tjänst för åtkomst till karta (infoMapAccessService)
+
+Tjänst som ger användare åtkomst till geografisk grafik, t.ex. bilder av geografiska data.
+
+203. Tjänst för åtkomst till täckningsområde (infoCoverageAccessService)
+
+Tjänst som ger en användare åtkomst till och möjlighet att hantera yttäckande information
+
+204. Tjänst för sensorbeskrivning (infoSensorDescriptionService)
+
+Tjänst som ger en beskrivningar av en sensor, bland annat sensorns placering samt dess geometriska, dynamiska och radiometriska egenskaper för geo-bearbetning.
+
+205. Tjänst för produktåtkomst (infoProductAccessService)
+
+Tjänst som ger en användare åtkomst till och möjlighet att hantera en lagrad geografisk produkt.
+
+206. Tjänst för objekttypskatalog (infoFeatureTypeService)
+
+Tjänst som ger en användare åtkomst till och möjlighet att hantera objekttypsdefinitioner.
+
+207. Datakatalogtjänst (infoCatalogueService)
+
+Tjänst som ger åtkomst till och möjlighet att hantera lagrade metadata om instanser.
+
+208. Registertjänst (infoRegistryService)
+
+Tjänst som ger åtkomst till lagrade metadata om olika typer.
+
+209. Ortnamnstjänst (infoGazetteerService)
+
+Tjänst som ger åtkomst till en katalog med instanser av en typ eller olika typer av verkliga naturfenomen och som innehåller positionsinformation.
+
+210. Orderhanteringstjänst (infoOrderHandlingService)
+
+Tjänst som ger en användare möjlighet att beställa produkter från en leverantör.
+
+211. Tjänst för stående beställning (infoStandingOrderService)
+
+Orderhanteringstjänst som ger en användare möjlighet att begära att en produkt för ett geografiskt område levereras när den blir tillgänglig.
+
+300 Geografiska tjänster för flödesstyrning/uppgiftshantering (taskManagementService)
+
+Denna kategori inbegriper följande underkategorier:
+
+301. Tjänst för kedjedefinition (chainDefinitionService)
+
+Tjänst för att definiera en kedja och genomföra den med hjälp av tjänsten för tillämpning av arbetsflöde.
+
+302. Tjänst för tillämpning av arbetsflöde (workflowEnactmentService)
+
+Tjänsten för tillämpning av arbetsflöde tolkar en kedja och kontrollerar instansieringen av tjänster och sekvenseringen av aktiviteter.
+
+303. Prenumerationstjänst (subscriptionService)
+
+Tjänst som ger kunder möjlighet att registrera sig för att få meddelanden om händelser.
+
+400 Geografiska bearbetningstjänster – rumsliga (spatialProcessingService)
+
+Denna kategori inbegriper följande underkategorier:
+
+401. Tjänst för konvertering av koordinater (spatialCoordinateConversionService)
+
+Tjänst för att omvandla koordinater från ett koordinatsystem till ett annat koordinatsystem baserat på samma geodetiska datum.
+
+402. Tjänst för omvandling av koordinater (spatialCoordinateTransformationService)
+
+Tjänst för att omvandla koordinater från ett koordinatsystem baserat på ett geodetiskt datum till ett koordinatsystem som baseras på ett annat geodetiskt datum.
+
+403. Tjänst för konvertering av täckningsområde/vektor (spatialCoverageVectorConversionService)
+
+Tjänst för att ändra den rumsliga representationen mellan ett täckningsschema och ett vektorschema, eller vice versa.
+
+404. Tjänst för konvertering av bildkoordinater (spatialImageCoordinateConversionService)
+
+En tjänst för koordinatomvandling eller koordinatkonvertering som gör det möjligt att ändra en bilds koordinatreferenssystem.
+
+405. Rektifieringstjänst (spatialRectificationService)
+
+Tjänst som omvandla en bild till en vinkelrät parallell projektion och därigenom till konstant skala.
+
+406. Tjänst för ortorektifiering (spatialOrthorectificationService)
+
+En rektifieringstjänst som avlägsnar skevhet och förskjutningar i bilder på grund av upphöjningar i terrängen.
+
+407. Tjänst för justering av sensorgeometrimodeller (spatialSensorGeometryModelAdjustmentService)
+
+Tjänst som justerar sensorers geometrimodeller för att förbättra matchningen av en bild med andra bilder och/eller kända markpositioner.
+
+408. Tjänst för konvertering av bildgeometrimodeller (spatialImageGeometryModelConversionService)
+
+Tjänst som konverterar sensorers geometrimodeller till andra, likvärdiga, geometrimodeller.
+
+409. Selekteringstjänst (spatialSubsettingService)
+
+Tjänst som extraherar data från en indatamängd i en konstant rumslig region, antingen enligt geografisk placering eller rutnätkoordinater.
+
+410. Datainsamlingstjänst (spatialSamplingService)
+
+Tjänst som extraherar data från en indatamängd med hjälp av ett konsekvent insamlingssystem, antingen enligt geografisk placering eller nätkoordinater.
+
+411. Rutindelningsändringstjänst (spatialTilingChangeService)
+
+Tjänst som förändrar en rutindelning av geografiska data.
+
+412. Tjänst för mätning av dimensioner (spatialDimensionMeasurementService)
+
+Tjänst för att beräkna dimensionerna hos objekt som är synliga i en bild eller andra geodata.
+
+413. Tjänst för objektmodifiering (spatialFeatureManipulationService)
+
+Registrerar ett objekt till ett annat objekt, en bild eller en annan datamängd eller koordinatuppsättning för att korrigera relativa förändringar vid överföring, rotationsskillnader, skalskillnader och perspektivförskjutningar. Säkerställer att alla objekt i objektsamlingen är topologiskt konsekventa i enlighet med objektsamlingens topologistandard, och identifierar och/eller korrigerar eventuella inkonsekvenser.
+
+414. Tjänst för matchning av objekt (spatialFeatureMatchingService)
+
+Tjänst som fastställer vilka objekt och delar av objekt som representerar samma verkliga enhet, utifrån flera olika datakällor, t.ex. genom matchning av kanter och begränsad sammanläggning.
+
+415. Tjänst för generalisering av objekt (spatialFeatureGeneralizationService)
+
+Tjänst som minskar den rumsliga variationen i en objektsamling för att öka effektiviteten i kommunikationen genom att motverka datareduceringens oönskade effekter.
+
+416. Vägbeskrivningstjänst (spatialRouteDeterminationService)
+
+Tjänst för att fastställa den bästa vägen mellan två angivna punkter baserat på indataparametrarna och objektsamlingens egenskaper.
+
+417. Positioneringstjänst (spatialPositioningService)
+
+Tjänst som fungerar med hjälp av en anordning för positionsangivelse som använder, tar emot och entydigt tolkar positionsinformation. Tjänsten fastställer också huruvida resultaten uppfyller användningskraven.
+
+418. Tjänst för avståndsanalys (spatialProximityAnalysisService)
+
+Utgår från en angiven position eller ett angivet geografiskt objekt med en angiven uppsättning attribut som är belägna inom ett användarspecificerat avstånd från positionen eller objektet.
+
+500 Geografiska bearbetningstjänster – tematiska (thematicProcessingService)
+
+Denna kategori inbegriper följande underkategorier:
+
+501. Tjänst för beräkning av geografiska parametrar (thematicGeoparameterCalculationService)
+
+Tjänst för att få fram tillämpningsinriktade kvantitativa resultat som inte går att få fram från rådata.
+
+502. Tjänst för tematisk klassificering (thematicClassificationService)
+
+Tjänst för att klassificera geografiska regioner utifrån tematiska attribut.
+
+503. Tjänst för generalisering av objekt (thematicFeatureGeneralizationService)
+
+Tjänst som generaliserar objekttyper i en objektsamling för att förbättra effektiviteten i kommunikationen genom at motverka datareduceringens oönskade effekter.
+
+504. Selekteringstjänst (thematicSubsettingService)
+
+Tjänst som extraherar data från indata baserade på parametervärden.
+
+505. Rumslig räkningstjänst (thematicSpatialCountingService)
+
+Tjänst som räknar geografiska objekt.
+
+506. Tjänst för förändringsdetektering (thematicChangeDetectionService)
+
+Tjänst för att upptäcka skillnader mellan två datamängder som representerar samma geografiska område vid olika tidpunkter.
+
+507. Tjänst för extrahering av geografisk information (thematicGeographicInformationExtractionService)
+
+Tjänst som stöder extrahering av objekt- och terränginformation från fjärranalysbilder och skannade bilder.
+
+508. Bildbearbetningstjänst (thematicImageProcessingService)
+
+Tjänst för att ändra värden hos en bilds tematiska attribut med hjälp av en matematisk funktion.
+
+509. Tjänst för upplösningsreducering (thematicReducedResolutionGenerationService)
+
+Tjänst som minskar en bilds upplösning.
+
+510. Bildmodifieringstjänster (thematicImageManipulationService)
+
+Tjänster för att modifiera en bilds datavärden: ändra färg och kontrast, använda olika typer av filter, ändra bildupplösning, ta bort brus, "striping", systematiska/radiometriska korrigeringar, atmosfärisk dämpning, ändra ljus etc.
+
+511. Tjänster för bildförståelse (thematicImageUnderstandingService)
+
+Tjänster för automatisk bildförändringsdetektering, registrering av bilddifferentiering, analys och visning av förändringarnas betydelse och områdesbaserad och modellbaserad differentiering.
+
+512. Bildsyntestjänster (thematicImageSynthesisService)
+
+Tjänster för att skapa och omvandla bilder med hjälp av datorbaserade rumsliga modeller, perspektivomvandlingar och modifiering av bildegenskaper för att förbättra synbarheten, skärpa upplösningen och/eller minska effekterna av moln eller dimma.
+
+513. Modifiering av flerbandsbilder (thematicMultibandImageManipulationService)
+
+Tjänst som modifierar en bild med hjälp av bildens olika band.
+
+514. Tjänst för objektdetektering (thematicObjectDetectionService)
+
+Tjänst för att upptäcka verkliga objekt i en bild.
+
+515. Geoanalystjänst (thematicGeoparsingService)
+
+Tjänst för att skanna textdokument för platsbaserade referenser, t.ex. platsnamn, adresser, postnummer etc., i syfte att förbereda en övergång till en geokodningstjänst.
+
+516. Geokodningstjänst (thematicGeocodingService)
+
+Tjänst för att förstärka platsbaserade textreferenser med geografiska koordinater (eller andra rumsliga referenser).
+
+600 Geografiska bearbetningstjänster – temporala (temporalProcessingService)
+
+Denna kategori inbegriper följande underkategorier:
+
+601. Tjänst för omvandling av temporal referens (temporalReferenceSystemTransformationService)
+
+Tjänst för att ändra tidsinstansers värden från ett tidsreferenssystem till ett annat tidsreferenssystem.
+
+602. Selekteringstjänst (temporalSubsettingService)
+
+Tjänst som extraherar data från indata i konstanta intervall baserat på tidsmässiga värden.
+
+603. Urvalstjänst (temporalSamplingService)
+
+Tjänst som extraherar data från indata med hjälp av ett enhetligt urvalsschema baserat på temporala värden.
+
+604. Tjänst för analys av tidsavstånd (temporalProximityAnalysisService)
+
+Utifrån ett angivet tidsintervall eller en angiven händelse hittar tjänsten alla objekt med en angiven uppsättning attribut som är belägna inom det intervall som användaren specificerat, med utgångspunkt i intervallet eller händelsen.
+
+700 Geografiska bearbetningstjänster – metadata (metadataProcessingService)
+
+Denna kategori inbegriper följande underkategorier:
+
+701. Tjänst för statistisk beräkning (metadataStatisticalCalculationService)
+
+Tjänst för att utföra statistiska beräkningar i en datamängd.
+
+702. Tjänst för geografiska noteringar (metadataGeographicAnnotationService)
+
+Tjänst för att lägga till extra information till en bild eller ett objekt i en objektsamling.
+
+800 Geografiska kommunikationstjänster (comService)
+
+Denna kategori inbegriper följande underkategorier:
+
+801. Kodningstjänst (comEncodingService)
+
+Tjänst för tillämpning av kodningsregler och som tillhandahåller ett gränssnitt för kodning och avkodning.
+
+802. Överföringstjänst (comTransferService)
+
+Tjänst för tillämpning av ett eller flera protokoll (transfer protocols) för överföring av data mellan distribuerade informationssystem via kommunikationsmedia offline eller online.
+
+803. Geografisk komprimeringstjänst (comGeographicCompressionService)
+
+Tjänst som omvandlar rumsliga delar av en objektssamling till eller från komprimerad form.
+
+804. Tjänst för konvertering av geografiska dataformat (comGeographicFormatConversionService)
+
+Tjänst som konverterar från ett geografiskt dataformat till ett annat.
+
+805. Meddelandetjänst (comMessagingService)
+
+Tjänst som tillåter flera användare att samtidigt visa, kommentera och begära redigeringar av objektsamlingar.
+
+806. Fjärrhantering av filer och körbara filer (comRemoteFileAndExecutableManagement)
+
+Tjänst som ger tillgång till en sekundär lagringsplats för geografiska objekt som fungerar som om den vore en lokal tjänst.
+
+5. GRAD AV ÖVERENSSTÄMMELSE
+
+5.1 Överensstämmande (conformant)
+
+Resursen är helt överensstämmande med den angivna specifikationen.
+
+5.2 Ej överensstämmande (notConformant)
+
+Resursen överensstämmer inte med den angivna specifikationen.
+
+5.3 Ej utvärderad (notEvaluated)
+
+Ingen bedömning av överensstämmelse har gjorts.
+
+6. ANSVARIG PARTS FUNKTION
+
+6.1 Leverantör (resourceProvider)
+
+Den part som tillhandahåller resursen.
+
+6.2 Förvaltare (custodian)
+
+Den part som ansvarar för data och säkerställer att resursen hanteras och underhålls på lämpligt sätt.
+
+6.3 Ägare (owner)
+
+Den part som äger resursen.
+
+6.4 Användare (user)
+
+Den part som använder resursen.
+
+6.5 Distributör (distributor)
+
+Den part som distribuerar resursen.
+
+6.6 Producent (originator)
+
+Den part som har skapat resursen.
+
+6.7 Kontakt (pointOfContact)
+
+Part som kan kontaktas för att få information om eller tillgång till resursen.
+
+6.8 Undersökningsledare (principalInvestigator)
+
+Den part som ansvarar för insamling av information och genomförande av undersökningar.
+
+6.9 Vidareförädlare (processor)
+
+Part som har bearbetat data på ett sådant sätt att resursen har modifierats.
+
+6.10 Utgivare (publisher)
+
+Den part som har publicerat resursen.
+
+6.11 Upphovsman (author)
+
+Den part som är resursens upphovsman.
+
+--------------------------------------------------

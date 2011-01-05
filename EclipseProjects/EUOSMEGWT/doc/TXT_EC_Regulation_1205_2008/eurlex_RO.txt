@@ -1,0 +1,988 @@
+Regulamentul (CE) nr. 1205/2008 al Comisiei
+
+din 3 decembrie 2008
+
+de punere în aplicare a Directivei 2007/2/CE a Parlamentului European și a Consiliului în ceea ce privește metadatele
+
+(Text cu relevanță pentru SEE)
+
+COMISIA COMUNITĂȚILOR EUROPENE,
+
+având în vedere Tratatul de instituire a ComunităȚii Europene,
+
+având în vedere Directiva 2007/2/CE a Parlamentului European și a Consiliului din 14 martie 2007 de instituire a unei infrastructuri pentru informații spațiale în Comunitatea Europeană (Inspire) [1], în special articolul 5 alineatul (4),
+
+întrucât:
+
+(1) Directiva 2007/2/CE prevede norme generale pentru instituirea unei infrastructuri pentru informații spațiale în Comunitatea Europeană. Deoarece, pentru funcționarea adecvată a infrastructurii în cauză, este necesar ca un utilizator să poată găsi seturi și servicii de date spațiale pentru a stabili dacă acestea pot fi folosite și în ce scop, statele membre ar trebui să furnizeze descrieri sub formă de metadate pentru seturile și serviciile de date spațiale în cauză. Deoarece astfel de metadate ar trebui să fie compatibile și utilizabile în context comunitar și transfrontalier, este necesar să se prevadă norme privind metadatele utilizate pentru descrierea seturilor și a serviciilor de date spațiale corespunzătoare categoriilor enumerate în anexele I, II și III la Directiva 2007/2/CE.
+
+(2) Definirea unui set de elemente de metadate este necesară pentru a permite identificarea resursei de informații pentru care sunt create metadatele, clasificarea acestora și stabilirea amplasării geografice și a referinței temporale a acestora, a calității și a validității, a conformității cu normele de punere în aplicare privind interoperabilitatea seturilor și a serviciilor de date spațiale, a constrângerilor legate de acces și utilizare și a organizației responsabile pentru resursă. De asemenea, sunt necesare elemente de metadate asociate registrului de metadate, pentru a monitoriza crearea și actualizarea metadatelor, precum și pentru a identifica organizația responsabilă pentru crearea și păstrarea acestora. Acesta este setul minim de elemente de metadate necesar pentru conformarea cu Directiva 2007/2/CE și nu exclude posibilitatea ca organizațiile să completeze documentarea resurselor de informații cu elemente suplimentare derivate din standarde internaționale sau practici de lucru existente în comunitatea lor de interes. Acest lucru nu exclude posibilitatea adoptării orientărilor stabilite și actualizate de către Comisie, în special în cazul în care este necesară garantarea interoperabilității metadatelor.
+
+(3) Sunt necesare instrucțiuni pentru validarea metadatelor în conformitate cu Directiva 2007/2/CE în ceea ce privește condițiile și multiplicitatea preconizată a fiecărui element de metadate, adică dacă valorile pentru fiecare element trebuie să figureze întotdeauna în registrul de metadate, pot apărea doar o singură dată sau pot apărea de mai multe ori.
+
+(4) Domeniul de valori al fiecărui element de metadate este necesar pentru a asigura interoperabilitatea metadatelor într-un context multilingv și domeniul de valori în cauză ar trebui să poată lua forma de texte libere, date, coduri derivate din standarde internaționale, cum ar fi coduri lingvistice, cuvinte-cheie provenite din liste sau tezaure controlate sau șiruri de caractere.
+
+(5) Măsurile prevăzute în prezentul regulament sunt conforme cu avizul Comitetului înființat prin articolul 22 din Directiva 2007/2/CE,
+
+ADOPTĂ PREZENTUL REGULAMENT:
+
+Articolul 1
+
+Obiect
+
+Prezentul regulament stabilește cerințele pentru crearea și păstrarea metadatelor pentru seturile de date spațiale, seriile de seturi de date spațiale și serviciile de date spațiale corespunzătoare categoriilor enumerate în anexele I, II și III la Directiva 2007/2/CE.
+
+Articolul 2
+
+Definiții
+
+În sensul prezentului regulament, în plus față de definițiile prevăzute la articolul 3 din Directiva 2007/2/CE, se aplică definițiile stabilite în partea A a anexei.
+
+Articolul 3
+
+Crearea și păstrarea metadatelor
+
+Metadatele care descriu un set de date spațiale, o serie a unui set de date spațiale, un serviciu de date spațiale cuprind elementele de metadate sau grupurile de elemente de metadate stabilite în partea B a anexei și sunt create și păstrate în conformitate cu normele stabilite în părțile C și D ale acesteia.
+
+Articolul 4
+
+Intrare în vigoare
+
+Prezentul regulament intră în vigoare în a douăzecea zi de la data publicării în Jurnalul Oficial al Uniunii Europene.
+
+Prezentul regulament este obligatoriu în toate elementele sale și se aplică direct în toate statele membre.
+
+Adoptat la Bruxelles, 3 decembrie 2008.
+
+Pentru Comisie
+
+Stavros Dimas
+
+Membru al Comisiei
+
+[1] JO L 108, 25.4.2007, p. 1.
+
+--------------------------------------------------
+
+ANEXĂ
+
+NORME DE PUNERE ÎN APLICARE PRIVIND METADATELE
+
+PARTEA A
+
+Interpretare
+
+1. Se aplică următoarele definiții:
+
+- "șir de caractere" înseamnă domeniul de valori al elementelor de metadate exprimat ca un set de caractere tratate ca o unitate;
+
+- "text liber" înseamnă domeniul de valori al elementelor de metadate exprimate într-una sau mai multe limbi naturale;
+
+- "filiație" înseamnă istoricul unui set de date și ciclul de viață de la colectare și achiziție prin compilare și derivare până la forma sa actuală, în conformitate cu EN ISO 19101;
+
+- "element de metadate" înseamnă o unitate distinctă de metadate, în conformitate cu EN ISO 19115;
+
+- "spațiu de nume" înseamnă o colecție de nume, identificată de o referință de tip identificator uniform de resurse (URI), utilizată în documentele redactate în Extensible Markup Language (XML) ca nume de elemente și nume de atribute;
+
+- "calitate" înseamnă totalitatea caracteristicilor unui produs care se bazează pe capacitatea acestuia de a satisface necesitățile afirmate și presupuse, în conformitate cu EN ISO 19101;
+
+- "resursă" înseamnă o resursă de informație care are o trimitere directă sau indirectă la o locație sau la o zonă geografică specifică;
+
+- "serie de seturi de date spațiale" înseamnă o colecție de seturi de date spațiale care împărtășesc aceeași specificație a produsului.
+
+2. Trimiterile la validitatea seturilor de date spațiale sunt interpretate ca făcând referire la următoarele aspecte:
+
+- intervalul de spațiu și de timp pertinent pentru date;
+
+- dacă datele au fost verificate în funcție de un standard de măsurare sau de performanță;
+
+- măsura în care datele sunt adecvate scopului;
+
+- dacă este cazul, validitatea juridică a setului de date spațiale.
+
+PARTEA B
+
+Elemente de metadate
+
+1. IDENTIFICARE
+
+Se furnizează următoarele elemente de metadate:
+
+1.1. Titlul resursei
+
+Este un nume caracteristic, deseori unic, sub care este cunoscută o resursă.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+1.2. Rezumatul resursei
+
+Este un scurt rezumat narativ al conținutului resursei.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+1.3. Tipul resursei
+
+Este tipul de resursă care este descris prin metadate.
+
+Domeniul de valori al acestui element de metadate este definit în partea D.1.
+
+1.4. Adresa pentru localizarea resurselor
+
+Adresa pentru localizarea resurselor definește linkul (linkurile) către resursă și/sau linkul către informații suplimentare privind resursa.
+
+Domeniul de valori al acestui element de metadate este un șir de caractere, exprimat în mod curent sub formă de adresă pentru localizarea resurselor (Unique Resource Locator – URL).
+
+1.5. Identificator unic de resurse
+
+O valoare de identificare unică a resursei.
+
+Domeniul de valori al acestui element de metadate este un cod obligatoriu format dintr-un șir de caractere, atribuit, în general, de către proprietarul datelor și un spațiu de nume sub forma unui șir de caractere de identificare unică a contextului codului identificatorului (de exemplu, proprietarul datelor).
+
+1.6. Resursă cuplată
+
+Dacă resursa este un serviciu de date spațiale, acest element de metadate identifică, dacă este cazul, setul (seturile) țintă de date spațiale ale serviciului prin identificatorii lor unici de resurse (URI).
+
+Domeniul de valori al acestui element de metadate este un cod obligatoriu format dintr-un șir de caractere, atribuit, în general, de către proprietarul datelor și un spațiu de nume sub forma unui șir de caractere de identificare unică a contextului codului identificatorului (de exemplu, proprietarul datelor).
+
+1.7. Limba resursei
+
+Limba (limbile) utilizate în cadrul resursei.
+
+Domeniul de valori al acestui element de metadate este limitat la limbile definite în ISO 639-2.
+
+2. CLASIFICAREA DATELOR ȘI A SERVICIILOR DE DATE SPAȚIALE
+
+2.1. Categoria tematică
+
+Categoria tematică este o schemă de clasificare de nivel înalt care permite gruparea și căutarea după subiect a resurselor disponibile de date spațiale.
+
+Domeniul de valori al acestui element de metadate este definit în partea D.2.
+
+2.2. Tipuri de servicii de date spațiale
+
+Aceasta este o clasificare care permite căutarea de servicii disponibile de date spațiale. Un anumit serviciu este clasificat într-o singură categorie.
+
+Domeniul de valori al acestui element de metadate este definit în partea D.3.
+
+3. CUVÂNT-CHEIE
+
+Dacă resursa este un serviciu de date spațiale, se furnizează cel puțin un cuvânt-cheie din partea D.4.
+
+Dacă o resursă este un set de date spațiale sau o serie de seturi de date spațiale, se furnizează cel puțin un cuvânt-cheie din tezaurul General Environmental Multi-lingual Thesaurus (GEMET) care să descrie categoria relevantă a datelor spațiale astfel cum este definită în anexele I, II sau III la Directiva 2007/2/CE.
+
+Pentru fiecare cuvânt-cheie, se furnizează următoarele elemente de metadate:
+
+3.1. Valoarea cuvânt-cheie
+
+Valoarea cuvânt-cheie este un cuvânt folosit în mod curent, un cuvânt sau o expresie formalizată utilizată pentru a descrie subiectul. În timp ce categoria tematică este prea generală pentru căutări detaliate, cuvintele-cheie ajută la restrângerea căutării într-un text complet și permit o căutare structurată după cuvântul-cheie.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+3.2. Originea vocabularului controlat
+
+Dacă valoarea cuvânt-cheie provine dintr-un vocabular controlat (Tezaur, Ontologie), de exemplu GEMET, se menționează originea vocabularului controlat.
+
+Această mențiune include cel puțin titlul și o dată de referință (data publicării, data ultimei revizuiri sau a creării) a originii vocabularului controlat.
+
+4. LOCALIZAREA GEOGRAFICĂ
+
+Cerința privind localizarea geografică menționată la articolul 11 alineatul (2) litera (e) din Directiva 2007/2/CE se exprimă cu ajutorul elementului de metadate "dreptunghi de delimitare geografică".
+
+4.1. Dreptunghiul de delimitare geografică
+
+Acesta reprezintă extinderea resursei în spațiul geografic, sub forma unui dreptunghi de delimitare.
+
+Dreptunghiul de delimitare este exprimat prin longitudini vestice și estice și latitudini sudice și nordice în grade zecimale cu o exactitate de cel puțin 2 zecimale.
+
+5. REFERINȚĂ TEMPORALĂ
+
+Acest element de metadate răspunde cerinței de a furniza informații privind dimensiunea temporală a datelor, astfel cum se menționează la articolul 8 alineatul (2) litera (d) din Directiva 2007/2/CE. Trebuie furnizat cel puțin unul dintre elementele de metadate menționate la punctele 5.1-5.4.
+
+Domeniul de valori al elementelor de metadate menționate la punctele 5.1-5.4 este un set de date. Fiecare dată face trimitere la un sistem de referință temporal și este exprimată într-o formă compatibilă cu sistemul respectiv. Sistemul de referință prestabilit este calendarul gregorian, cu date exprimate în conformitate cu ISO 8601.
+
+5.1. Dimensiunea temporală
+
+Dimensiunea temporală definește perioada de timp acoperită de conținutul resursei. Această perioadă poate fi exprimată ca oricare dintre următoarele elemente:
+
+- o dată precisă;
+
+- un interval de date exprimat printr-o dată de început și o dată de încheiere intervalului;
+
+- o combinație de date precise și de intervale de date.
+
+5.2. Data publicării
+
+Este data publicării resursei, dacă este disponibilă, sau data intrării în vigoare. Pot fi mai multe date de publicare.
+
+5.3. Data ultimei revizuiri
+
+Este ultima revizuire a resursei, în cazul în care resursa a fost revizuită. Nu trebuie să existe mai mult de o dată a ultimei revizuiri.
+
+5.4. Data creării
+
+Este data creării resursei. Nu trebuie să existe mai mult de o dată a creării.
+
+6. CALITATE ȘI VALIDITATE
+
+Cerințele menționate la articolul 5 alineatul (2) și la articolul 11 alineatul (2) din Directiva 2007/2/CE referitoare la calitatea și validitatea datelor spațiale sunt îndeplinite prin următoarele elemente de metadate:
+
+6.1. Filiația
+
+Este o declarație privind istoricul procesului și/sau calitatea globală a setului de date spațiale. Dacă este cazul, aceasta poate include o declarație cu privire la faptul dacă setul de date a fost validat sau dacă calitatea a fost asigurată, dacă este vorba de versiunea oficială (în cazul în care există versiuni multiple) și dacă are validitate juridică.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+6.2. Rezoluție spațială
+
+Rezoluția spațială se referă la nivelul de detaliere al setului de date spațiale. Aceasta este exprimată ca un set de la zero la multe distanțe de rezoluție (tipic pentru datele Grid și pentru produsele derivate din imagini) sau scări echivalente (tipice pentru hărți sau produse derivate din hărți).
+
+O scară echivalentă este exprimată, în general, ca un număr întreg corespunzător numitorului scării.
+
+O distanță de rezoluție este exprimată ca valoare numerică asociată unei unități de lungime.
+
+7. CONFORMITATE
+
+Cerințele menționate la articolul 5 alineatul (2) litera (a) și la articolul 11 alineatul (2) litera (d) din Directiva 2007/2/CE referitoare la conformitate și gradul de conformitate cu normele de aplicare adoptate în temeiul articolului 7 alineatul (1) din Directiva 2007/2/CE trebuie îndeplinite prin intermediul următoarelor elemente de metadate:
+
+7.1. Specificație
+
+Aceasta este o mențiune privind normele de aplicare adoptate în temeiul articolului 7 alineatul (1) din Directiva 2007/2/CE sau alte specificații cu care se conformează o anumită resursă.
+
+O resursă poate fi conformă cu mai multe norme de aplicare adoptate în temeiul articolului 7 alineatul (1) din Directiva 2007/2/CE sau cu alte specificații.
+
+Mențiunea va include cel puțin titlul și o dată de referință (data publicării, data ultimei revizuiri sau a creării) a normelor de aplicare adoptate în temeiul articolului 7 alineatul (1) din Directiva 2007/2/CE sau a specificației.
+
+7.2. Grad de conformitate
+
+Acesta este gradul de conformitate a resursei cu normele de aplicare adoptate în temeiul articolului 7 alineatul (1) din Directiva 2007/2/CE sau al altei specificații.
+
+Domeniul de valori al acestui element de metadate este definit în partea D.5.
+
+8. CONSTRÂNGERI LEGATE DE ACCES ȘI UTILIZARE
+
+O constrângere legată de acces și de utilizare este una sau ambele din următoarele:
+
+- un ansamblu de condiții aplicabile accesului și utilizării (8.1);
+
+- un ansamblu de limitări ale accesului publicului (8.2).
+
+8.1. Condiții aplicabile accesului și utilizării
+
+Acest element de metadate definește condițiile pentru accesul la seturi și servicii de date spațiale și, după caz, la tarifele corespunzătoare și utilizarea acestora, în conformitate cu articolul 5 alineatul (2) litera (b) și articolul 11 alineatul (2) litera (f) din Directiva 2007/2/CE.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+Elementul trebuie să aibă valori. Dacă nu se aplică nicio condiție accesului și utilizării resursei, se utilizează mențiunea "fără condiții". Dacă nu se cunosc condițiile, se utilizează mențiunea "condiții necunoscute".
+
+Acest element furnizează, de asemenea, informații privind tarifele necesare accesului și utilizării resursei, după caz, sau face trimitere la o adresă pentru localizarea resurselor (URL) în cazul în care sunt disponibile informații privind tarifele.
+
+8.2. Limitarea accesului publicului
+
+În cazul în care statele membre limitează accesul la seturi și servicii de date spațiale în temeiul articolului 13 din Directiva 2007/2/CE, acest element de metadate furnizează informații privind limitările și motivele acestor limitări.
+
+Dacă nu există limitări privind accesul publicului, elementul de metadate indică acest lucru.
+
+Domeniul de valori al acestui element de metadate este textul liber.
+
+9. ORGANIZAȚIILE RESPONSABILE PENTRU STABILIREA, ADMINISTRAREA, ÎNTREȚINEREA ȘI DISTRIBUIREA SETURILOR ȘI A SERVICIILOR DE DATE SPAȚIALE
+
+În sensul articolului 5 alineatul (2) litera (d) și al articolului 11 alineatul (2) litera (g) din Directiva 2007/2/CE, trebuie furnizate următoarele două elemente de metadate:
+
+9.1. Partea responsabilă
+
+Este descrierea organizației responsabile pentru stabilirea, administrarea, întreținerea și distribuirea resursei.
+
+Această descriere include:
+
+- numele organizației sub formă de text liber;
+
+- o adresă electronică de contact sub formă de șir de caractere.
+
+9.2. Rolul părții responsabile
+
+Este rolul organizației responsabile.
+
+Domeniul de valori al acestui element de metadate este definit în partea D.6.
+
+10. METADATE PRIVIND METADATELE
+
+În sensul articolului 5 alineatul (1) din Directiva 2007/2/CE, trebuie furnizate următoarele elemente de metadate:
+
+10.1. Punctul de contact al metadatelor
+
+Este descrierea organizației responsabile pentru crearea și întreținerea metadatelor.
+
+Această descriere include:
+
+- numele organizației sub formă de text liber;
+
+- o adresă electronică de contact sub formă de șir de caractere.
+
+10.2. Data metadatelor
+
+Data care precizează când a fost creată sau actualizată înregistrarea metadatelor.
+
+Această dată este exprimată în conformitate cu ISO 8601.
+
+10.3. Limba metadatelor
+
+Este limba în care sunt exprimate elementele de metadate.
+
+Domeniul de valori al acestui element de metadate este limitat la limbile oficiale ale Comunității, în conformitate cu ISO 639-2.
+
+PARTEA C
+
+Instrucțiuni privind multiplicitatea și condițiile elementelor de metadate
+
+Metadatele care descriu o resursă cuprind, în ceea ce privește un set sau o serie de seturi de date spațiale, elementele de metadate sau grupurile de elemente de metadate enumerate în tabelul 1 și, în ceea ce privește un serviciu de seturi de date spațiale, elementele de metadate sau grupurile de elemente de metadate enumerate în tabelul 2.
+
+Elementele de metadate sau grupurile de elemente de metadate respective sunt conforme cu multiplicitatea prevăzută și cu condițiile aferente stabilite în tabelul 1 și în tabelul 2.
+
+În cazul în care nu este exprimată nicio condiție referitoare la un anumit element de metadate, elementul respectiv este obligatoriu.
+
+Tabelele prezintă următoarele informații:
+
+- prima coloană conține trimiterea la paragraful din partea B a anexei, în care este definit elementul de metadate sau grupul de elemente de metadate;
+
+- a doua coloană conține numele elementului de metadate sau al grupului de elemente de metadate;
+
+- a treia coloană precizează factorul de multiplicitate al unui element de metadate. Exprimarea factorului de multiplicitate respectă notația limbajului de modelare Unified Modelling Language (UML) pentru multiplicitate, în care:
+
+- 1 înseamnă că elementul de metadate apare o singură dată într-un ansamblu de rezultate;
+
+- 1..* înseamnă că elementul respectiv apare cel puțin o dată într-un ansamblu de rezultate;
+
+- 0..1 indică faptul că prezența elementului de metadate într-un ansamblu de rezultate este condițională, dar acesta poate să apară în ansamblul respectiv o singură dată;
+
+- 0..* indică faptul că prezența elementului de metadate într-un ansamblu de rezultate este condițională, dar elementul de metadate poate apărea o dată sau de mai multe ori;
+
+- când multiplicitatea este 0..1 sau 0..*, condiția definește când sunt obligatorii elementele de metadate;
+
+- a patra coloană conține o declarație de condiționalitate, în cazul în care multiplicitatea elementului nu se aplică tuturor tipurilor de resurse. Toate elementele sunt obligatorii în alte circumstanțe.
+
+Tabelul 1
+
+Metadate pentru seturile de date spațiale și seriile de seturi de date spațiale
+
+Referință | Elemente de metadate | Factor de multiplicitate | Condiție |
+
+1.1. | Titlul resursei | 1 | |
+
+1.2. | Rezumatul resursei | 1 | |
+
+1.3. | Tipul resursei | 1 | |
+
+1.4. | Adresa pentru localizarea resurselor | 0..* | Obligatorie dacă este disponibil un URL pentru obținerea de informații suplimentare privind resursa și/sau serviciile legate de acces. |
+
+1.5. | Identificator unic de resurse | 1..* | |
+
+1.7. | Limba resursei | 0..* | Obligatorie dacă resursa include informații textuale. |
+
+2.1. | Categoria tematică | 1..* | |
+
+3. | Cuvânt-cheie | 1..* | |
+
+4.1. | Dreptunghiul de delimitare geografică | 1..* | |
+
+5. | Referință temporală | 1..* | |
+
+6.1. | Filiația | 1 | |
+
+6.2. | Rezoluție spațială | 0..* | Obligatorie pentru seturile și seriile de seturi de date spațiale dacă poate fi specificată o scară echivalentă sau o distanță de rezoluție. |
+
+7. | Conformitate | 1..* | |
+
+8.1. | Condiții aplicabile accesului și utilizării | 1..* | |
+
+8.2. | Limitarea accesului publicului | 1..* | |
+
+9. | Organizația responsabilă | 1..* | |
+
+10.1. | Punctul de contact al metadatelor | 1..* | |
+
+10.2. | Data metadatelor | 1 | |
+
+10.3. | Limba metadatelor | 1 | |
+
+Tabelul 2
+
+Metadate pentru serviciile de date spațiale
+
+Referință | Elementul de metadate | Factor de multiplicitate | Condiție |
+
+1.1. | Titlul resursei | 1 | |
+
+1.2. | Rezumatul resursei | 1 | |
+
+1.3. | Tipul resursei | 1 | |
+
+1.4. | Adresa pentru localizarea resurselor | 0..* | Obligatorie dacă este disponibilă legătura către serviciu. |
+
+1.6. | Resursă cuplată | 0..* | Obligatorie dacă sunt disponibile legăturile către seturile de date cu care operează serviciul. |
+
+2.2. | Tip de servicii de date spațiale | 1 | |
+
+3. | Cuvânt-cheie | 1..* | |
+
+4.1. | Dreptunghiul de delimitare geografică | 0…* | Obligatorie pentru serviciile cu o dimensiune geografică explicită. |
+
+5. | Referință temporală | 1..* | |
+
+6.2. | Rezoluție spațială | 0..* | Obligatorie în cazul în care există o restricție privind rezoluția spațială pentru acest serviciu. |
+
+7. | Conformitate | 1..* | |
+
+8.1. | Condiții aplicabile accesului și utilizării | 1..* | |
+
+8.2. | Limitarea accesului publicului | 1..* | |
+
+9. | Organizația responsabilă | 1..* | |
+
+10.1. | Punctul de contact al metadatelor | 1..* | |
+
+10.2. | Data metadatelor | 1 | |
+
+10.3. | Limba metadatelor | 1 | |
+
+PARTEA D
+
+Domenii de valori
+
+Acolo unde este specificat în descrierea elementelor de metadate în partea B, domeniile de valori descrise în părțile D.1-D.6 vor fi folosite cu multiplicitatea exprimată în tabelul 1 și în tabelul 2 din partea C.
+
+În legătură cu un anumit domeniu, fiecare valoare este definită printr-o/printr-un:
+
+- identificator numeric;
+
+- nume textual pentru persoane ce poate fi tradus în diferitele limbi comunitare;
+
+- un nume neutru din punct de vedere lingvistic pentru calculatoare (valoarea exprimată între paranteze);
+
+- o descriere sau o definiție opțională.
+
+1. TIPUL RESURSEI
+
+1.1. Serie de seturi de date spațiale (series)
+
+1.2. Set de date spațiale (dataset)
+
+1.3. Servicii de date spațiale (services)
+
+2. CATEGORII TEMATICE ÎN CONFORMITATE CU EN ISO 19115
+
+2.1. Agricultură (farming)
+
+Creșterea animalelor și/sau cultivarea plantelor.
+
+Această categorie se aplică următoarei categorii de date spațiale din anexa III punctul 9 la Directiva 2007/2/CE: "Instalații agricole și pentru acvacultură".
+
+2.2. Biota (biota)
+
+Flora și/sau fauna în mediul natural.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 17 "Regiuni biogeografice", anexa III punctul 18 "Habitate și biotopuri", anexa III punctul 19 "Repartizarea speciilor".
+
+2.3. Limitări (boundaries)
+
+Descrieri cadastrale conform dispozițiilor legale.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 4 "Unități administrative", anexa III punctul 1 "Unități statistice".
+
+2.4. Climatologie/Meteorologie/Atmosferă (climatologyMeteorologyAtmosphere)
+
+Procese și fenomene atmosferice.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 13 "Condiții atmosferice", anexa III punctul 14 "Caracteristici geografice meteorologice".
+
+2.5. Economie (economy)
+
+Activități și condiții economice și ocuparea forței de muncă.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 20 "Resurse energetice", anexa III punctul 21 "Resurse minerale".
+
+2.6. Elevație (elevation)
+
+Altitudine peste nivelul mării și adâncime sub nivelul mării.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa II punctul 1 "Elevație".
+
+2.7. Mediu (environment)
+
+Resurse ale mediului, protecția și conservarea mediului.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 9 "Zone protejate".
+
+2.8. Informații geoștiințifice (geoscientificInformation)
+
+Informații referitoare la științele pământului.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 3 "Soluri", anexa II punctul 4 "Geologie", anexa III punctul 12 "Zone de risc natural".
+
+2.9. Sănătate (health)
+
+Sănătate, servicii de sănătate, ecologie umană și siguranță.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 5 "Sănătate și siguranță umană".
+
+2.10. Imagerie/Hărți de bază/Acoperire terestră (imageryBaseMapsEarthCover)
+
+Hărți de bază.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa II punctul 3 "Ortoimagini", anexa II punctul 2 "Acoperire terestră".
+
+2.11. Informații/Sector militar (intelligenceMilitary)
+
+Baze, structuri și activități militare.
+
+Această categorie nu se aplică în mod special niciunei categorii de date spațiale din Directiva 2007/2/CE.
+
+2.12. Ape interioare (inlandWaters)
+
+Caracteristici ale apelor interioare, sisteme de drenare și caracteristicile acestora.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 8 "Hidrografie".
+
+2.13. Localizare (location)
+
+Informații și servicii de poziționare.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 3 "Denumiri geografice", anexa I punctul 5 "Adrese".
+
+2.14. Oceane (oceans)
+
+Trăsături și caracteristici ale organismelor de apă sărată (excluzând apele interioare).
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 16 "Regiuni maritime", anexa III punctul 15 "Caracteristici oceanografice geografice".
+
+2.15. Planificare/Cadastru (planningCadastre)
+
+Informații folosite pentru acțiuni adecvate în vederea utilizării ulterioare a terenului.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 6 "Parcele cadastrale", anexa III punctul 4 "Utilizarea terenului", anexa III punctul 11 "Zone de administrare/restricție/reglementare și unități de raportare".
+
+2.16. Societate (society)
+
+Caracteristici ale societății și ale culturilor.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 10 "Repartizarea populației – demografie".
+
+2.17. Structură (structure)
+
+Construcții umane.
+
+Această categorie se aplică următoarelor categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 2 "Clădiri", anexa III punctul 8 "Instalații de producție și industriale", anexa III punctul 7 "Instalații de supraveghere a mediului".
+
+2.18. Transport (transportation)
+
+Mijloace și ajutoare pentru transportul persoanelor și/sau al bunurilor.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa I punctul 7 "Rețele de transport".
+
+2.19. Servicii de utilitate publică/Comunicare (utilitiesCommunication)
+
+Sisteme de distribuție a energiei și a apei și de colectare a deșeurilor și infrastructură și servicii de comunicare.
+
+Această categorie se aplică următoarei categorii de date spațiale din Directiva 2007/2/CE: anexa III punctul 6 "Servicii de utilitate publică și servicii publice".
+
+3. TIP DE SERVICII DE DATE SPAȚIALE
+
+3.1. Serviciul de căutare (discovery)
+
+Servicii care fac posibilă căutarea de seturi de date spațiale și servicii de date spațiale pe baza conținutului metadatelor corespunzătoare și prezentarea conținutului metadatelor.
+
+3.2. Serviciul de vizualizare (view)
+
+Serviciu care face posibilă cel puțin prezentarea, navigarea, micșorarea și mărirea, rotirea sau suprapunerea de seturi de date spațiale vizualizabile și prezentarea de informații în legendă, precum și a oricărui conținut relevant al metadatelor.
+
+3.3. Serviciul de descărcare (download)
+
+Serviciu care permite descărcarea de copii ale seturilor de date spațiale sau a unor părți ale acestor seturi și, dacă este posibil, accesarea directă a acestora.
+
+3.4. Serviciul de transformare (transformation)
+
+Serviciu care permite transformarea seturilor de date spațiale în vederea obținerii interoperabilității.
+
+3.5. Serviciul de solicitare a datelor spațiale (invoke)
+
+Serviciu care permite definirea atât a intrărilor cât și a ieșirilor solicitate de serviciul de date spațiale, precum și a unui flux de activitate sau lanț de servicii care combină servicii multiple. Acesta permite, de asemenea, definirea interfeței externe a serviciului web al fluxului de activitate sau al lanțului de servicii.
+
+3.6. Alte servicii (other)
+
+4. CLASIFICAREA SERVICIILOR DE DATE SPAȚIALE
+
+Cuvintele-cheie sunt bazate pe taxonomia serviciilor geografice a standardului EN ISO 19119. Această taxonomie este organizată în categorii, subcategoriile definind domeniul de valori al clasificării serviciilor de date spațiale.
+
+100 Servicii geografice cu interacțiune umană (humanInteractionService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+101. Vizualizator catalog (humanCatalogueViewer)
+
+Serviciu client care permite unui utilizator să interacționeze cu un catalog pentru a localiza, căuta sau administra metadate privind date sau servicii geografice.
+
+102. Vizualizator geografic (humanGeographicViewer)
+
+Serviciu client care permite unui utilizator să vizualizeze una sau mai multe colecții de elemente sau acoperiri.
+
+103. Vizualizator de foi de calcul geografice (humanGeographicSpreadsheetViewer)
+
+Serviciu client care permite unui utilizator să interacționeze cu obiecte de date multiple și să solicite calcule similare cu o foaie de calcul aritmetic, dar extinsă la date geografice.
+
+104. Serviciu editare (humanServiceEditor)
+
+Serviciu client care permite unui utilizator să controleze serviciile de procesare geografică.
+
+105. Editor pentru definirea lanțului (humanChainDefinitionEditor)
+
+Permite interacțiunea utilizatorului cu un serviciu de definire a lanțului.
+
+106. Administrator al fluxului de activitate (humanWorkflowEnactmentManager)
+
+Permite interacțiunea utilizatorului cu un serviciu de flux de activitate.
+
+107. Editor elemente geografice (humanGeographicFeatureEditor)
+
+Vizualizator geografic care permite unui utilizator să interacționeze cu date referitoare la elemente geografice.
+
+108. Editor simboluri geografice (humanGeographicSymbolEditor)
+
+Serviciu client care permite unui utilizator uman să selecteze și să administreze colecții de simboluri.
+
+109. Editor de generalizare de elemente (humanFeatureGeneralizationEditor)
+
+Serviciu client care permite unui utilizator să modifice caracteristicile cartografice ale unui element sau ale unei colecții de elemente prin simplificarea vizualizării sale, păstrând elementele esențiale – este vorba de echivalentul spațial al simplificării.
+
+110. Vizualizator de structuri de date geografice (humanGeographicDataStructureViewer)
+
+Serviciu client care permite unui utilizator să acceseze o parte din setul de date pentru a vedea structura internă a acestuia.
+
+200 Serviciu de gestionare a modelelor geografice/a informațiilor (infoManagementService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+201. Serviciu de acces la elemente (infoFeatureAccessService)
+
+Serviciu care permite accesul clientului la o colecție de elemente și administrarea acesteia.
+
+202. Serviciu de acces la hărți (infoMapAccessService)
+
+Serviciu care permite accesul clientului la grafice geografice, adică reprezentări ale datelor geografice.
+
+203. Serviciu de acces la date în format raster (infoCoverageAccessService)
+
+Serviciu care permite clientului accesul la o colecție de date în format raster și administrarea acesteia.
+
+204. Serviciu de descriere a senzorilor (infoSensorDescriptionService)
+
+Serviciu care permite descrierea unui senzor de date în format raster în scopul geoprocesării; aceasta include localizarea și orientarea senzorului, precum și caracteristicile geometrice, dinamice și radiometrice ale acestuia.
+
+205. Serviciu de acces la produs (infoProductAccessService)
+
+Serviciu care permite accesul clientului la o colecție de produse geografice și administrarea acesteia.
+
+206. Serviciu de tipuri de elemente (infoFeatureTypeService)
+
+Serviciu care permite accesul clientului la o colecție de definiții de tipuri de elemente și administrarea acesteia.
+
+207. Serviciu de catalog (infoCatalogueService)
+
+Serviciu care permite căutarea într-o colecție de metadate privind resursele de informații și administrarea acestora.
+
+208. Serviciu de registru (infoRegistryService)
+
+Serviciu care oferă acces la o colecție de metadate privind categoriile de resurse de informații.
+
+209. Serviciu toponimic (infoGazetteerService)
+
+Serviciu care oferă acces la un repertoriu cu exemple de una sau mai multe categorii de fenomene reale conținând anumite informații privind poziția.
+
+210. Serviciu de gestionare a comenzilor (infoOrderHandlingService)
+
+Serviciu care oferă clientului posibilitatea de a comanda produse de la un furnizor.
+
+211. Serviciu de comandă permanentă (infoStandingOrderService)
+
+Serviciu de gestionare a comenzilor care permite unui utilizator să solicite difuzarea unui produs într-o zonă geografică în momentul în care acesta devine disponibil.
+
+300 Servicii de gestionare a fluxului de activitate/a sarcinilor geografice (taskManagementService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+301. Serviciu de definire a lanțului (chainDefinitionService)
+
+Serviciul destinat să definească un lanț și să-i permită să fie executat de către serviciul de flux de activitate.
+
+302. Serviciu de adoptare a fluxului de muncă (workflowEnactmentService)
+
+Serviciul de adoptare a unui flux de muncă interpretează un lanț și controlează promptitudinea serviciilor și derularea activităților.
+
+303. Serviciu de abonamente (subscriptionService)
+
+Serviciul care permite clienților să se înregistreze pentru a fi informați cu privire la evenimente.
+
+400 Servicii de procesare geografică – aspecte spațiale (spatialProcessingService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+401. Serviciu de conversie a coordonatelor (spatialCoordinateConversionService)
+
+Serviciul care permite schimbarea coordonatelor dintr-un sistem de coordonate în alt sistem de coordonate bazat pe același punct de referință.
+
+402. Serviciu de transformare a coordonatelor (spatialCoordinateTransformationService)
+
+Serviciu care permite schimbarea coordonatelor dintr-un sistem de referință bazat pe un punct de referință într-un sistem de referință de coordonate bazat pe al doilea punct de referință.
+
+403. Serviciu de conversie raster/vector (spatialCoverageVectorConversionService)
+
+Serviciu care permite schimbarea reprezentării spațiale dintr-o schemă în format raster într-o schemă în format vectorial sau vice versa.
+
+404. Serviciu de conversie a coordonatelor imaginilor (spatialImageCoordinateConversionService)
+
+Serviciu de transformare sau de conversie a coordonatelor care permite schimbarea sistemului de referință a coordonatelor pentru o imagine.
+
+405. Serviciu de rectificare (spatialRectificationService)
+
+Serviciu care permite transformarea unei imagini într-o proiecție paralelă perpendiculară și, prin urmare, la o scară constantă.
+
+406. Serviciu de ortorectificare (spatialOrthorectificationService)
+
+Un sistem de rectificare care înlătură înclinațiile și decalajele imaginii apărute din cauza elevației terenului.
+
+407. Serviciu de ajustare a modelelor geometrice ale senzorului (spatialSensorGeometryModelAdjustmentService)
+
+Serviciu care ajustează modelele geometrice ale senzorilor pentru o mai bună potrivire a imaginii cu alte imagini și/sau alte poziții cunoscute la sol.
+
+408. Serviciu de conversie a modelelor geometrice ale imaginii (spatialImageGeometryModelConversionService)
+
+Serviciu care convertește modelele geometrice ale senzorilor într-un model geometric al senzorului diferit, dar echivalent.
+
+409. Serviciu de definire a subansamblurilor (spatialSubsettingService)
+
+Serviciu care permite extragerea de date dintr-un ansamblu spațial continuu fie prin localizare geografică, fie prin coordonate carteziene.
+
+410. Serviciu de eșantionare (spatialSamplingService)
+
+Serviciu care permite extragerea datelor utilizând un sistem de eșantionare coerent prin localizare geografică sau prin coordonate carteziene.
+
+411. Serviciu de modificare a pavării (spatialTilingChangeService)
+
+Serviciu care permite modificarea pavării datelor geografice.
+
+412. Serviciu de măsurare a dimensiunilor (spatialDimensionMeasurementService)
+
+Serviciu care permite calcularea dimensiunii obiectelor vizibile într-o imagine sau a altor date geografice.
+
+413. Servicii de manipulare a elementelor (spatialFeatureManipulationService)
+
+Servicii care permit înregistrarea unui element peste un altul, peste o imagine sau un alt set de date sau de coordonate; corectarea decalajelor relative, a diferențelor de rotație, a diferențelor de scară și a diferențelor de perspectivă. Aceste servicii verifică dacă toate elementele din colecția de elemente sunt coerente din punct de vedere topologic în conformitate cu regulile topologice din colecției de elemente și identifică și/sau corectează toate incoerențele constatate.
+
+414. Serviciu de potrivire a elementelor (spatialFeatureMatchingService)
+
+Serviciu care determină care elemente și care porțiuni ale elementelor provenite din diferite surse de date reprezintă aceeași entitate reală, de exemplu potrivirea contururilor și contopirea limitată.
+
+415. Serviciu de generalizare a elementelor (spatialFeatureGeneralizationService)
+
+Serviciu care reduce variația spațială într-o colecție de elemente pentru a crește eficiența comunicării prin contracararea efectelor nedorite ale reducerii datelor.
+
+416. Serviciu de determinare a itinerarului (spatialRouteDeterminationService)
+
+Serviciu care permite stabilirea traiectoriei optime între două puncte date, pe baza parametrilor de intrare și a proprietăților conținute în colecția de elemente.
+
+417. Serviciu de poziționare (spatialPositioningService)
+
+Serviciu furnizat de un dispozitiv de poziționare, care permite utilizarea, obținerea și interpretarea fără echivoc a informațiilor referitoare la poziție; acest serviciu permite, de asemenea, să se stabilească dacă rezultatele îndeplinesc cerințele de utilizare.
+
+418. Serviciu de analiză a proximității (spatialProximityAnalysisService)
+
+Acest serviciu găsește, ținând seama de o poziție sau un element geografic, toate obiectele având o serie specifică de atribute, care sunt localizate pe o distanță precizată de utilizator în ceea ce privește poziția sau elementul.
+
+500 Servicii de procesare geografică – aspecte tematice (thematicProcessingService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+501. Serviciu de calculare a parametrilor geospațiali (thematicGoparameterCalculationService)
+
+Serviciu care permite obținerea rezultatelor cantitative, orientate spre aplicații, care nu pot fi obținute din datele brute.
+
+502. Serviciu de clasificare tematică (hematicClassificationService)
+
+Serviciu care permite clasificarea zonelor de date geografice pe baza atributelor tematice.
+
+503. Serviciu de generalizare a elementelor (thematicFeatureGeneralizationService)
+
+Serviciu care generalizează tipurile de elemente conținute într-o colecție de elemente cu scopul de a crește eficiența comunicării prin contracararea efectelor nedorite ale reducerii datelor.
+
+504. Serviciu de definire a subansamblurilor (thematicSubsettingService)
+
+Serviciu permite extragerea de date pe baza parametrilor de intrare.
+
+505. Serviciu de numărare spațială (thematicSpatialCountingService)
+
+Serviciu care numără elementele geografice.
+
+506. Serviciu de detectare a schimbărilor (thematicChangeDetectionService)
+
+Serviciu care permite detectarea diferențelor dintre două seturi de date care reprezintă aceeași zonă geografică în momente diferite.
+
+507. Serviciu de extragere a informațiilor geografice (thematicGeographicInformationExtractionService)
+
+Serviciu care permite extragerea de informații referitoare la elemente și la teren din imagini din satelit și scanate.
+
+508. Serviciu de procesare a imaginilor (thematicImageProcessingService)
+
+Serviciu care permite modificarea valorilor atributelor tematice ale unei imagini prin intermediul unei funcții matematice.
+
+509. Serviciu de reducere a rezoluției (thematicReducedResolutionGenerationService)
+
+Serviciu care reduce rezoluția unei imagini.
+
+510. Servicii de manipulare a imaginilor (thematicImageManipulationService)
+
+Servicii care permit manipularea valorilor datelor în imagini: modificarea valorilor de culoare și de contrast, aplicarea diferitor filtre, manipularea rezoluției imaginii, îndepărtarea zgomotului de imagine, a dungilor, corecții radiometrice sistematice, atenuare atmosferică, modificări ale iluminării fundalului etc.
+
+511. Servicii de înțelegere a imaginilor (thematicImageUnderstandingService)
+
+Serviciu care permite detectarea automată a modificărilor imaginilor, diferențierea imaginilor rectificate, analiza și prezentarea importanței diferențelor și diferențiere în funcție de zonă și model.
+
+512. Servicii de sinteză a imaginilor (thematicImageSynthesisService)
+
+Servicii care permit crearea sau transformarea imaginilor prin utilizarea modelelor spațiale computerizate, crearea transformărilor de perspectivă și manipularea caracteristicilor imaginii în vederea îmbunătățirii vizibilității, a rezoluției și/sau pentru a reduce efectele norilor sau ale ceții.
+
+513. Manipularea imaginilor cu benzi multiple (thematicMultibandImageManipulationService)
+
+Serviciu care permite modificarea unei imagini prin utilizarea diferitor benzi ale imaginii.
+
+514. Serviciu de detectare a obiectelor (thematicObjectDetectionService)
+
+Serviciu de detectare a obiectelor reale dintr-o imagine.
+
+515. Serviciu de etichetare geografică (thematicGeoparsingService)
+
+Serviciu care permite căutarea în documente text a referințelor legate de poziția geografică, cum ar fi numele topice, adrese, coduri poștale etc., în perspectiva trecerii la un serviciu de codificare geografică.
+
+516. Serviciu de codificare geografică (thematicGeocodingService)
+
+Serviciu care permite completarea referințelor textuale privind poziția geografică cu coordonate geografice (sau cu alte referințe spațiale).
+
+600 Servicii de procesare geografică – aspecte temporale (temporalProcessingService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+601. Serviciu de transformare a sistemului de referință temporal (temporalReferenceSystemTransformationService)
+
+Serviciu care permite modificarea valorilor ocurențelor temporale dintr-un sistem de referință temporal în alt sistem de referință temporal.
+
+602. Serviciu de definire a subansamblurilor (temporalSubsettingService)
+
+Serviciu care permite extragerea de date într-un interval continuu pe baza unor valori de poziție temporală.
+
+603. Serviciu de eșantionare (temporalSamplingService)
+
+Serviciu care permite extragerea de date utilizând un sistem coerent de eșantionare pe baza unor valori de poziție temporală.
+
+604. Serviciu de analiză a proximității temporale (temporalProximityAnalysisService)
+
+Acest serviciu găsește, ținând seama de un interval sau de un eveniment temporal, toate obiectele având o serie specifică de atribute, care sunt localizate într-un interval precizat de utilizator în ceea ce privește intervalul sau evenimentul.
+
+700 Servicii de procesare geografică – metadate (metadataProcessingService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+701. Serviciu de calcul statistic (metadataStatisticalCalculationService)
+
+Serviciu care permite calcularea statisticilor unui set de date.
+
+702. Servicii de adnotare geografică (metadataGeographicAnnotationService)
+
+Servicii care permit adăugarea de informații auxiliare unei imagini sau unui element dintr-o colecție de elemente.
+
+800 Servicii de comunicare geografică (comService)
+
+Această categorie cuprinde următoarele subcategorii:
+
+801. Serviciu de codificare (comEncodingService)
+
+Serviciu care permite aplicarea unei reguli de codificare și oferă o interfață pentru funcția de codificare și de decodare.
+
+802. Serviciu de transfer (comTransferService)
+
+Serviciu care permite aplicarea unuia sau a mai multor protocoale de transfer, ceea ce permite transferul de date între sisteme de informare distribuite prin mijloace de comunicare off-line și on-line.
+
+803. Serviciu de compresie geografică (comGeographicCompressionService)
+
+Serviciu care convertește porțiuni spațiale dintr-o colecție de elemente dintr-o formă necomprimată într-o formă comprimată și invers.
+
+804. Serviciu de conversie a formatului datelor geografice (comGeographicFormatConversionService)
+
+Serviciu care permite trecerea de la un format de date geografice la altul.
+
+805. Serviciu de mesagerie (comMessagingService)
+
+Serviciu care permite simultan mai multor utilizatori să vizualizeze, să comenteze și să solicite ediții ale colecțiilor de elemente.
+
+806. Gestionarea fișierelor îndepărtate și a fișierelor executabile (comRemoteFileAndExecutableManagement)
+
+Serviciu care oferă acces la colecții secundare de elemente geografice în mod similar cu accesul la resursele locale.
+
+5. GRAD DE CONFORMITATE
+
+5.1. Conform (conformant)
+
+Resursa este pe deplin conformă cu specificația indicată.
+
+5.2. Neconform (notConformant)
+
+Resursa nu este conformă cu specificația indicată.
+
+5.3. Neevaluat (notEvaluated)
+
+Conformitatea nu a fost evaluată.
+
+6. ROLUL PĂRȚII RESPONSABILE
+
+6.1. Furnizorul resursei (resourceProvider)
+
+Partea care furnizează resursa.
+
+6.2. Gestionar (custodian)
+
+Partea care acceptă să își asume răspunderea pentru date și care asigură întreținerea și întreținerea adecvată a resursei.
+
+6.3. Proprietar (owner)
+
+Partea căreia îi aparține resursa.
+
+6.4. Utilizator (user)
+
+Partea care utilizează resursa.
+
+6.5. Distribuitor (distributor)
+
+Partea care distribuie resursa.
+
+6.6. Emitent (originator)
+
+Partea care a creat resursa.
+
+6.7. Punct de contact (pointOfContact)
+
+Partea care poate fi contactată pentru obținerea de informații privind resursa sau achiziționarea resursei.
+
+6.8. Cercetător principal (principalInvestigator)
+
+Partea principală responsabilă pentru colectarea informațiilor și efectuarea cercetărilor.
+
+6.9. Responsabil de prelucrarea datelor (procesator)
+
+Partea care a prelucrat datele astfel încât a fost modificată resursa.
+
+6.10. Editor (publisher)
+
+Partea care a publicat resursa.
+
+6.11. Autor (author)
+
+Partea care este autorul resursei.
+
+--------------------------------------------------
+

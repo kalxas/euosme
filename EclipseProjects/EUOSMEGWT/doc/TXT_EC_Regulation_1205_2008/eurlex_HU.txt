@@ -1,0 +1,987 @@
+A Bizottság 1205/2008/EK rendelete
+
+( 2008. december 3.)
+
+a 2007/2/EK európai parlamenti és tanácsi irányelv metaadatokra vonatkozó rendelkezéseinek végrehajtásáról
+
+(EGT-vonatkozású szöveg)
+
+AZ EURÓPAI KÖZÖSSÉGEK BIZOTTSÁGA,
+
+tekintettel az Európai Közösséget létrehozó szerződésre,
+
+tekintettel az Európai Közösségen belüli térinformációs infrastruktúra (INSPIRE) kialakításáról szóló, 2007. március 14-i 2007/2/EK európai parlamenti és tanácsi irányelvre [1] és különösen annak 5. cikke (4) bekezdésére,
+
+mivel:
+
+(1) A 2007/2/EK irányelv megállapítja az Európai Közösségen belüli térinformációs infrastruktúra létrehozására vonatkozó általános szabályokat. Az említett infrastruktúra csak akkor működhet megfelelően, ha a felhasználók igény szerint hozzá tudnak férni a téradatkészletekhez és -szolgáltatásokhoz, illetőleg mérlegelni tudják használatukat és ismerik alkalmazási területüket, ezért a tagállamoknak metaadatok formájában leírást kell készíteniük elérhető téradatkészleteikről és -szolgáltatásaikról. Ahhoz, hogy a metaadatok a Közösség egészén belül, határoktól függetlenül összeegyeztethetőek és használhatóak legyenek, rögzíteni kell a 2007/2/EK irányelv I., II. és III. mellékletében felsorolt téradattémák szerinti téradatkészletek és -szolgáltatások leírásához használt metaadatokra vonatkozó szabályokat.
+
+(2) Meg kell határozni a metaadatelemek készletét ahhoz, hogy azonosítani lehessen egy adott metadattal jellemzett forrást, meg lehessen állapítani annak osztályát, térbeli és időbeli jellemzőit, minőségét és érvényességét, a különböző téradatkészletek és -szolgáltatások interoperabilitására vonatkozó végrehajtási szabályok szerinti megfelelését, a használatra és a hozzáférésre vonatkozó korlátozásokat, és az adott forrásért felelős szervezetet. Magukhoz a metaadatrekordokhoz kapcsolódó metaadatelemekre is szükség van egyrészt a létrehozott metaadatok frissítésének nyomon követéséhez, másrészt a metaadat létrehozásáért és gondozásáért felelős szervezet megállapításához. Az említett minimális metaadatelem-készlet megadásával a 2007/2/EK irányelvben foglaltak teljesülnek, ám ez nem zárja ki annak lehetőségét, hogy az egyes szervezetek nemzetközi szabványok, illetve saját érdekeltségi területük munkamódszerei szerint forrásaikat részletesebben dokumentálva, további elemekkel egészítsék ki. A minimumkövetelmény teljesítése mellett természetesen lehetőség van a Bizottság által létrehozott és frissített iránymutatások átültetésére is, különösen, ha azok a metaadatok interoperabilitásának biztosításához szükségesek.
+
+(3) Ki kell dolgozni a metaadatok 2007/2/EK irányelv szerinti érvényesítési rendszerét, tekintettel az egyes metaadatelemek kardinalitására és használati módjára, azaz definiálni kell hogy az egyes elemekre vonatkozóan mindig kötelező-e legalább egy érték megadása, s amennyiben igen, hány érték szerepelhet az adott metaadat-rekordban.
+
+(4) Az egyes metaadatelemek értéktartományát szintén meg kell adni, mert soknyelvű környezetben így biztosítható a metaadatok interoperabilitása. Az értéktartomány lehet tetszőleges szöveges bejegyzés, dátum, nemzetközi szabvány alapú kód (például nyelvkód), előre összeállított szójegyzék vagy fogalomtár kulcsszavai, illetve karaktersor.
+
+(5) Az e rendeletben előírt intézkedések összhangban vannak a 2007/2/EK irányelv 22. cikke alapján létrehozott bizottság véleményével,
+
+ELFOGADTA EZT A RENDELETET:
+
+1. cikk
+
+Tárgy
+
+Ez a rendelet meghatározza a 2007/2/EK irányelv I., II. és III. mellékletében felsorolt téradattémák szerinti téradatkészletekhez, téradatkészletsorokhoz és téradat-szolgáltatásokhoz tartozó metaadatok létrehozására és karbantartására vonatkozó szabályokat.
+
+2. cikk
+
+Fogalommeghatározások
+
+E rendelet alkalmazásában a 2007/2/EK irányelv 3. cikkében megállapított fogalommeghatározásokon túlmenően a melléklet A. részében rögzített meghatározások az irányadók.
+
+3. cikk
+
+A metaadatok létrehozása és karbantartása
+
+A téradatkészleteket, téradatkészletsorokat és téradat-szolgáltatásokat leíró metaadatok alkotják a melléklet B. részében ismertetett metaadatelemeket vagy metaadatelem-csoportokat, létrehozásuk és karbantartásuk pedig a C. és a D. részben rögzített szabályokkal összhangban történik.
+
+4. cikk
+
+Hatálybalépés
+
+Ez a rendelet az Európai Unió Hivatalos Lapjában történő kihirdetését követő huszadik napon lép hatályba.
+
+Ez a rendelet teljes egészében kötelező és közvetlenül alkalmazandó valamennyi tagállamban.
+
+Kelt Brüsszelben, 2008. december 3-án.
+
+a Bizottság részéről
+
+Stavros Dimas
+
+a Bizottság tagja
+
+[1] HL L 108., 2007.4.25., 1. o.
+
+--------------------------------------------------
+
+MELLÉKLET
+
+VÉGREHAJTÁSI SZABÁLYOK A METAADATOKRA VONATKOZÓAN
+
+A. RÉSZ
+
+Fogalommagyarázat
+
+1. A következő meghatározásokat kell alkalmazni:
+
+- "karaktersor": metaadatelemek egységként értelmezett karaktersorozatban kifejezett értéktartománya,
+
+- "tetszőleges szöveges bejegyzés": metaadatelemek egy vagy több természetes nyelven kifejezett értéktartománya,
+
+- "adattörténet": egy adatkészlet eseménytörténete, azaz az életciklus leírása az adatgyűjtéstől és információszerzéstől kezdve az adatok összeállításán át az aktuális formátum leképezéséig, az EN ISO 19101 európai szabvány szerint,
+
+- "metaadatelem": diszkrét egységnyi metaadat, az EN ISO 19115 szabvány szerint,
+
+- "névjelzés": egységes forrásazonosítóval (URI) ellátott nevek gyűjteménye, amely XML (Extensible Markup Language) alapú dokumentumok esetében elem- és attribútumneveket jelent,
+
+- "minőség": egy adott termék EN ISO 19101 európai szabványnak megfelelően megadott jellemzőinek összessége, amelyek által képes kielégíteni bizonyos vele szemben támasztott vagy elvárt igényeket,
+
+- "forrás": egy konkrét helyre vagy földrajzi területre közvetlenül vagy közvetve utaló adatforrás,
+
+- "téradatkészletsor": ugyanazon specifikációkkal rendelkező téradatkészletek gyűjteménye.
+
+2. A téradatkészletek érvényességére való hivatkozás az alábbiakra való utalást jelenti:
+
+- az adatot jellemző tér- és időtartomány,
+
+- annak megállapítása, hogy a kérdéses adatot megfeleltették-e valamely mérési vagy teljesítményszabványnak,
+
+- az adatok adott célnak való megfelelésének mértéke,
+
+- amennyiben megadható, a téradatkészlet jogszerűsége.
+
+B. RÉSZ
+
+Metaadatelemek
+
+1. AZONOSÍTÁS
+
+Az alábbi metaadatelemeket kell megadni:
+
+1.1. A forrás címe
+
+A forrást jellemző, gyakran egyedi megnevezés, amely alapján azonosítható.
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+1.2. A forrás rövid ismertetése
+
+A forrás tartalmának tömör, narratív összegzése.
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+1.3. A forrás típusa
+
+A metaadattal jellemzett forrás típusát jelöli.
+
+E metaadatelem értéktartományára a D. rész 1. pontja vonatkozik.
+
+1.4. A forrás helyazonosítója
+
+A helyazonosító rögzíti a forrásra mutató hivatkozás(oka)t és/vagy az adott forrással kapcsolatos további információkra mutató hivatkozást.
+
+E metaadatelem értéktartománya karaktersor, általában egységes forrásazonosító (URL) formájában.
+
+1.5. Egyedi forrásazonosító
+
+Az adott forrást sajátosan jellemző érték.
+
+Ennek a metaadatelemnek az értéktartománya általában az adattulajdonos által hozzárendelt kötelező karaktersorkódból, valamint az azonosítókód kontextusát (például az adattulajdonost) egyedileg azonosító karaktersor-névjelzésből tevődik össze.
+
+1.6. Kapcsolt forrás
+
+Amennyiben a forrás téradat-szolgáltatás, e metaadatelem alapján azonosítható(k) a szolgáltatáson keresztül elérhető téradatkészlet(ek) azok egyedi forrásazonosítóinak (URI) segítségével.
+
+Ennek a metaadatelemnek az értéktartománya általában az adattulajdonos által hozzárendelt kötelező karaktersorkód, valamint az azonosítókód kontextusát (például az adattulajdonost) egyedileg azonosító karaktersor-névjelzés.
+
+1.7. A forrás nyelve
+
+A forráson belül használt nyelv(ek).
+
+Ezen metaadatelem értéktartománya az ISO 639-2 szabványban meghatározott nyelvekre korlátozódik.
+
+2. A TÉRADATOK ÉS -SZOLGÁLTATÁSOK OSZTÁLYOZÁSA
+
+2.1. Témakörcsoportok
+
+A témakörcsoport magas szintű osztályozási rendszer, amely a rendelkezésre álló téradatforrások témakör alapú szűrésében és csoportosításában segít.
+
+E metaadatelem értéktartományára a D. rész 2. pontja vonatkozik.
+
+2.2. A téradat-szolgáltatás típusa
+
+Osztályozási forma, mely lehetővé teszi a keresést az elérhető téradat-szolgáltatások között. Egy szolgáltatás egy és csakis egy osztályba kerülhet.
+
+E metaadatelem értéktartományára a D. rész 3. pontja vonatkozik.
+
+3. KULCSSZÓ
+
+Ha a forrás téradat-szolgáltatás, a D. rész 4. pontja alapján legalább egy kulcsszót meg kell adni.
+
+Amennyiben a forrás téradatkészlet vagy téradatkészletsor, legalább egy kulcsszót meg kell adni az általános környezeti fogalmak többnyelvű értelmező szótárából (General Environmental Multi-lingual Thesaurus (GEMET)) a 2007/2/EK irányelv I., II. és III. mellékletében meghatározott, vonatkozó téradattéma leírására.
+
+Az egyes kulcsszavakhoz az alábbi metaadatelemeket kell megadni:
+
+3.1. A kulcsszó értéke
+
+A kulcsszó értéke a tárgyat leíró közhasználatú szó, terminus vagy kifejezés. Míg a témakörcsoport szerinti kereséssel csak korlátozott mértékig szűkíthetők le a találatok, a kulcsszavak használata módot nyújt a teljes szövegű keresésre és a strukturált kulcsszavas keresésre.
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+3.2. Hivatkozás elfogadott fogalomtár szócikkére
+
+Ha a kulcsszó értéke elfogadott fogalomtárból (szójegyzék, ontológia), például a GEMET-ből származik, hivatkozni kell az alapul szolgáló fogalomtárra.
+
+A hivatkozásnak legalább a felhasznált fogalomtár címét és referenciadátumát (a kiadás, az utolsó módosítás vagy a létrehozás dátuma) tartalmaznia kell.
+
+4. FÖLDRAJZI HELY
+
+A 2007/2/EK irányelv 11. cikke (2) bekezdésének e) pontjában rögzített földrajzi hely megadásának követelménye a földrajzi határolókeret metaadaelemmel teljesül.
+
+4.1. Földrajzi határolókeret
+
+A forrás térbeli kiterjedése, befoglaló téglalap formájában megadva.
+
+A befoglaló téglalapot nyugati és keleti hosszúság, valamint déli és északi szélesség szerint, fokokban kifejezve, legalább két tizedesjegy pontosságig kell megadni.
+
+5. IDŐBELI REFERENCIA
+
+Az adatok időbeli dimenziójára vonatkozó metaadatot a 2007/2/EK irányelv 8. cikke (2) bekezdésének d) pontja szerinti követelmény alapján, az 5.1–5.4. pontban meghatározott metaadatelemek legalább egyikével kell megadni.
+
+Az 5.1–5.4. pontban meghatározott metaadatelemek értéktartománya dátumcsoport. Minden dátum adott időreferencia-rendszerre utal, az abban érvényes formátumban kifejezve. Az alapértelmezett referenciarendszer a Gergely-naptár, a dátumformátum alapja pedig az ISO 8601 szabvány.
+
+5.1. Időtartam
+
+Az időtartam értéke írja le a forrás tárgya által lefedett időszakot. Ez az időszak az alábbi formákban fejezhető ki:
+
+- egyedi dátum,
+
+- kezdő- és záródátummal jelzett időintervallum,
+
+- egyedi dátumok és időintervallumok együttes használata.
+
+5.2. A közzététel időpontja
+
+A forrás közzétételének vagy hatálybalépésének napja. Több közzétételi időpont is létezhet.
+
+5.3. Az utolsó módosítás időpontja
+
+A forrás utolsó módosításának napja, amennyiben módosították. Az utolsó módosítás értéke csak egyetlen időpontot lehet.
+
+5.4. A létrehozás napja
+
+A forrás létrehozásának dátuma. Mindössze egy létrehozási dátum létezhet.
+
+6. MINŐSÉG ÉS ÉRVÉNYESSÉG
+
+A 2007/2/EK irányelv 5. cikke (2) bekezdésében és 11. cikke (2) bekezdésében rögzített, a téradatok minőségére és érvényességére vonatkozó követelmény az alábbi metaadatelemek megadásával teljesül:
+
+6.1. Adattörténet
+
+A téradatkészleten végrehajtott műveleteket áttekintő és/vagy az általános minőséget ismertető megállapítás. Tartalmazhat továbbá az adott adatkészletre vonatkozó minőség-ellenőrzési és hitelesítési információt, illetve leírhatja, hogy az adatok hivatalos, illetve jogerős változatnak számítanak-e (ha több változat is létezik).
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+6.2. Térbeli felbontás
+
+A térbeli felbontás az adatkészlet részletességének szintjét jelzi. Kifejezendő a felbontás mértékével (nulla vagy több felbontásitávolság-érték), elsősorban raszteres adatok, szabályos adatrácsok, illetve leképezésből származtatott termékek esetében. A térbeli felbontás megadható ekvivalens méretaránnyal is, jellemzően térképek vagy térképekből származtatott termékek esetében.
+
+Az ekvivalens méretarányt a méretarány nevezőjében található egész szám fejezi ki.
+
+A felbontás mértéke egy adott hosszmértékhez rendelt számmal fejezendő ki.
+
+7. JOGSZABÁLYI MEGFELELÉS
+
+A 2007/2/EK irányelv 7. cikkének (1) bekezdésében rögzített végrehajtási szabályoknak való megfelelést és a megfelelés mértékét rögzítő 5. cikk (2) bekezdésének a) pontjában, illetőleg a 11. cikk (2) bekezdésének d) pontjában foglaltak az alábbi metaadatelemek megadásával teljesülnek:
+
+7.1. Adatspecifikáció
+
+Ez az elem utalás a 2007/2/EK irányelv 7. cikkének (1) bekezdése értelmében elfogadott végrehajtási szabályokra, illetve azokra az egyéb előírásokra, amelyeknek az adott forrás megfelel.
+
+A forrás a 2007/2/EK irányelv 7. cikkének (1) bekezdése vagy egyéb előírások értelmében elfogadott több végrehajtási szabálynak is megfelelhet.
+
+A hivatkozásnak legalább a 2007/2/EK irányelv 7. cikkének (1) bekezdése vagy egyéb előírás értelmében elfogadott rendeletre történő hivatkozás estén a végrehajtási szabály címét és referenciadátumát (a kiadás, az utolsó módosítás vagy a létrehozás dátuma) meg kell jelölni.
+
+7.2. A megfelelés mértéke (konformitás)
+
+Ez a metaadat jelzi a 2007/2/EK irányelv 7. cikkének (1) bekezdése vagy egyéb előírások értelmében elfogadott végrehajtási szabályoknak való megfelelés mértékét.
+
+E metaadatelem értéktartományára a D. rész 5. pontja vonatkozik.
+
+8. AZ ADATHASZNÁLATRA ÉS A HOZZÁFÉRÉSRE VONATKOZÓ KORLÁTOZÁSOK
+
+Az adathasználat és a hozzáférés az alábbiak együttes vagy önálló alkalmazásával korlátozható:
+
+- a hozzáférésre és a használatra érvényes általános feltételrendszer alapján (8.1),
+
+- a nyilvános hozzáférés korlátozása alapján (8.2).
+
+8.1. A használatra és a hozzáférésre vonatkozó általános feltételek
+
+Ez a metaadaelem határozza meg a téradatkészleteknek és -szolgáltatásoknak a 2007/2/EK irányelv 5. cikke (2) bekezdésének b) pontjában és 11. cikke (2) bekezdésének f) pontjában említett hozzáférési és felhasználási feltételeket, illetve adott esetben a díjakat.
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+Az elem értékét kötelező megadni. Amennyiben a forrás használata és hozzáférése nem kötött egyetlen feltételhez sem, a "nincs vonatkozó feltétel" értéket kell választani. Ha a feltételek nem ismertek, az "ismeretlen feltételek" érték alkalmazandó.
+
+Ez a metaadatelem tájékoztat az esetleges használati vagy hozzáférési díjakról is, illetve tartalmazza azt az egységes forrásazonosítót (URL), ahol a díjakra vonatkozó tájékoztatás található.
+
+8.2. A nyilvános hozzáférés korlátozásai
+
+Ha egy tagállam a 2007/2/EK irányelv 13. cikkének megfelelően korlátozza a téradatkészletek és -szolgáltatások nyilvános hozzáférését, ez a metaadatelem jelzi ezt a korlátozást és annak indokait.
+
+Ha a nyilvános hozzáférés nem korlátozott, akkor a metaadatelem ennek megfelelő bejegyzést tartalmaz.
+
+E metaadatelem értéktartománya tetszőleges szöveges bejegyzés.
+
+9. A TÉRADATKÉSZLETEK ÉS TÉRADAT-SZOLGÁLTATÁSOK LÉTREHOZÁSÁÉRT, KEZELÉSÉÉRT, KARBANTARTÁSÁÉRT ÉS TERJESZTÉSÉÉRT FELELŐS SZERVEZETEK
+
+A 2007/2/EK irányelv 5. cikke (2) bekezdésének d) pontjában és 11. cikke (2) bekezdésének g) pontjában foglaltak szerint az alábbi két metaadatelemet kell megadni:
+
+9.1. Felelős szervezet
+
+A forrás létrehozásáért, kezeléséért, karbantartásáért és terjesztéséért felelős szervezet leírása,
+
+a következők szerint:
+
+- a szervezet neve tetszőleges szöveges bejegyzésként,
+
+- a kapcsolattartó e-mail címe karaktersor formájában.
+
+9.2. A felelős szervezet szerepköre
+
+A felelős szervezet szerepkörének ismertetése.
+
+E metaadatelem értéktartományára a D. rész 6. pontja vonatkozik.
+
+10. A METAADATOKRÓL SZÓLÓ METAADATOK
+
+A 2007/2/EK irányelv 5. cikkének (1) bekezdése szerint az alábbi metaadatelemeket kell megadni:
+
+10.1. A metaadatokkal foglalkozó kapcsolattartó
+
+A metaadatok létrehozásáért és karbantartásáért felelős szervezet leírása,
+
+a következők szerint:
+
+- a szervezet neve tetszőleges szöveges bejegyzésként,
+
+- a kapcsolattartó e-mail címe karaktersor formájában.
+
+10.2. A metaadat dátuma
+
+A metaadatrekord létrehozásának vagy módosításának időpontja.
+
+A dátum formátumára az ISO 8601 szabvány az irányadó.
+
+10.3. A metaadat nyelve
+
+A metaadatelemek leírásának nyelve.
+
+Ezen metaadatelem értéktartománya az Európai Unió hivatalos nyelveire korlátozódik az ISO 639-2 szabványban meghatározott rövidítések szerint.
+
+C. RÉSZ
+
+A metaadatelemek számosságára (kardinalitására) és használatára vonatkozó utasítások
+
+A forrást leíró metaadatokat téradatkészlet vagy téradatkészletsor esetén az 1. táblázat, téradat-szolgáltatás esetén pedig a 2. táblázat metaadatelemei vagy metaadatelem-csoportjai alkotják.
+
+A metaadatelemek vagy metaadatelem-csoportok többszöri előfordulását és vonatkozó feltételeit az 1. és a 2. táblázat rögzíti.
+
+Ha egy adott metaadatelemre vonatkozóan nincs rögzítve külön feltétel, akkor az elem használata kötelezőnek tekintendő.
+
+A táblázatok az alábbi adatokat tartalmazzák:
+
+- az első oszlop a melléklet B. részének azon bekezdésére utal, amely meghatározza a metaadatelemeket vagy azok csoportjait,
+
+- a második oszlop a metaadatelem vagy metaadatelem-csoport nevét tartalmazza,
+
+- a harmadik oszlop határozza meg a metaadatelem számosságát, kardinalitását. A számosság meghatározása az egységes modellező nyelv (UML) jelölését követi, azaz
+
+- az "1" azt jelenti, hogy az eredményhalmazban az adott metaadatelem egy és csakis egy értéket vehet fel,
+
+- az "1..*" azt jelenti, hogy az eredményhalmazban az adott metaadatelemnek legalább egy értéke létezik,
+
+- "0..1" jelzi, ha az adott metaadatelem előfordulása az eredményhalmazban feltételes, s megléte esetén csak egy értéket vehet fel,
+
+- "0..*" jelzi, ha az adott metaadatelem előfordulása az eredményhalmazban feltételes, s megléte esetén több értéket is felvehet,
+
+- ha a számosság jelzése "0..1" vagy "0..*", a megadott feltétel határozza meg, hogy kötelező-e az adott metaadatelem,
+
+- a negyedik oszlop feltételes utasítást tartalmaz arra az esetre, ha az elem kardinalitása nem vonatkozik minden forrástípusra. A fel nem sorolt esetekben minden elem kötelezőnek tekintendő.
+
+1. táblázat
+
+Téradatkészletekre és téradatkészletsorokra vonatkozó metaadatok
+
+Hivatkozás | Metaadatelem | Számosság | Feltétel |
+
+1.1. | A forrás címe | 1 | |
+
+1.2. | A forrás rövid ismertetése | 1 | |
+
+1.3. | A forrás típusa | 1 | |
+
+1.4. | A forrás helyazonosítója | 0..* | Kötelező megadni, ha a forrásról további információkat biztosító URL és/vagy kapcsolódó szolgáltatások állnak rendelkezésre. |
+
+1.5. | Egyedi forrásazonosító | 1..* | |
+
+1.7. | A forrás nyelve | 0..* | Kötelező megadni, ha a forrás szöveges adatokat tartalmaz. |
+
+2.1. | Témakörcsoportok | 1..* | |
+
+3. | Kulcsszó | 1..* | |
+
+4.1. | Befoglaló téglalap | 1..* | |
+
+5. | Időbeli referencia | 1..* | |
+
+6.1. | Adattörténet | 1 | |
+
+6.2. | Térbeli felbontás | 0..* | Adatkészletek és adatkészletsorok esetében kötelező megadni, ha meg lehet határozni a felbontás léptékét vagy egy ekvivalens méretarányt. |
+
+7. | Jogszabályi megfelelés | 1..* | |
+
+8.1. | A használatra és a hozzáférésre vonatkozó feltételek | 1..* | |
+
+8.2. | A nyilvános hozzáférés korlátozásai | 1..* | |
+
+9. | Felelős szervezet | 1..* | |
+
+10.1. | A metaadatokkal foglalkozó kapcsolattartó | 1..* | |
+
+10.2. | A metaadat dátuma | 1 | |
+
+10.3. | A metaadat nyelve | 1 | |
+
+2. táblázat
+
+Téradat-szolgáltatásokra vonatkozó metaadatok
+
+Hivatkozás | Metaadatelem | Számosság | Feltétel |
+
+1.1. | A forrás címe | 1 | |
+
+1.2. | A forrás rövid ismertetése | 1 | |
+
+1.3. | A forrás típusa | 1 | |
+
+1.4. | A forrás helyazonosítója | 0..* | Megadása kötelező, ha a szolgáltatás URL-je ismert. |
+
+1.6. | Kapcsolt forrás | 0..* | Megadása kötelező, ha létezik társítás a szolgáltatás működésének alapjául szolgáló adatkészletekhez. |
+
+2.2. | A téradat-szolgáltatás típusa | 1 | |
+
+3. | Kulcsszó | 1..* | |
+
+4.1. | Befoglaló téglalap | 0…* | Megadása kötelező az explicit földrajzi kiterjedéssel jellemezhető szolgáltatások esetében. |
+
+5. | Időbeli referencia | 1..* | |
+
+6.2. | Térbeli felbontás | 0..* | Megadása kötelező, ha egy adott szolgáltatás térbeli felbontásával kapcsolatban korlátozások élnek. |
+
+7. | Jogszabályi megfelelés | 1..* | |
+
+8.1. | A használatra és a hozzáférésre vonatkozó feltételek | 1..* | |
+
+8.2. | A nyilvános hozzáférés korlátozásai | 1..* | |
+
+9. | Felelős szervezet | 1..* | |
+
+10.1. | A metaadatokkal foglalkozó kapcsolattartó | 1..* | |
+
+10.2. | A metaadat dátuma | 1 | |
+
+10.3. | A metaadat nyelve | 1 | |
+
+D. RÉSZ
+
+Értéktartományok
+
+Amennyiben a B. rész a metaadatelemek értéktartománya tekintetében a D. rész 1. és 6. pontjára hivatkozik, a metaadatokat a C. rész 1. és 2. táblázatában rögzített számosság figyelembevételével kell megadni.
+
+Az egyes tartományokon belül minden értéket az alábbiak megadásával kell meghatározni:
+
+- numerikus azonosító,
+
+- személyek esetében szöveges név, amely a Közösség hivatalos nyelveire lefordítható,
+
+- számítógépek esetében nyelvfüggetlen név (zárójelben megadva),
+
+- opcionális leírás vagy meghatározás.
+
+1. A FORRÁS TÍPUSA
+
+1.1. Téradatkészletsor (series)
+
+1.2. Téradatkészlet (dataset)
+
+1.3. Téradat-szolgáltatások (services)
+
+2. TÉMAKÖRCSOPORTOK AZ EN ISO 19115 SZABVÁNY SZERINT
+
+2.1. Gazdálkodás (farming)
+
+Állattenyésztés és/vagy növénytermesztés.
+
+Ez a kategória a 2007/2/EK irányelv III. mellékletének (9) bekezdésében rögzített téradattémának, a mezőgazdasági és akvakultúra-ágazati létesítményeknek a leírására vonatkozik.
+
+2.2. Bióta (biota)
+
+A természetes környezet növény- és/vagy állatvilága.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (17) bekezdése: biogeográfiai régiók; III. melléklet (18) bekezdése: élőhelyek és biotópok; III. melléklet (19) bekezdése: a fajok megoszlása.
+
+2.3. Közigazgatási határok (boundaries)
+
+A terület közigazgatási szempontú jellemzése.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: I. melléklet (4) bekezdése: közigazgatási egységek; III. melléklet (1) bekezdés: statisztikai egységek.
+
+2.4. Éghajlattan / Meteorológia / Légkör (climatologyMeteorologyAtmosphere)
+
+A légkörben lejátszódó folyamatok és jelenségek.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (13) bekezdése: légköri viszonyok; III. melléklet (14) bekezdése: meteorológiai földrajzi jellemzők.
+
+2.5. Gazdaság (economy)
+
+Gazdasági tevékenységek, feltételek és a foglalkoztatás.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (20) bekezdése: energiaforrások; III. melléklet (21) bekezdése: ásványi nyersanyagok.
+
+2.6. Domborzat (elevation)
+
+A tengerszint feletti magasság.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: II. melléklet (1) bekezdése: domborzat.
+
+2.7. Környezet (environment)
+
+A környezeti erőforrások, a környezet védelme és megőrzése.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: I. melléklet (9) bekezdése: védett helyek.
+
+2.8. Földtani adatok (geoscientificInformation)
+
+Földtudományos információk.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (3) bekezdése: talaj; II. melléklet (4) bekezdése: földtan; III. melléklet (12) bekezdése: természeti kockázati zónák.
+
+2.9. Egészség (health)
+
+Egészség, egészségügyi ellátás, humánökológia és biztonság.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: III. melléklet (5) bekezdése: emberi egészség és biztonság.
+
+2.10. Képalkotás / Alaptérképek / Földtakaró (imageryBaseMapsEarthCover)
+
+Alaptérképek.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: II. melléklet (3) bekezdése: ortofotók; II. melléklet (2) bekezdése: a felszín borítása.
+
+2.11. Hírszerzés / Katonaság (intelligenceMilitary)
+
+Katonai támaszpontok, építmények, műveletek.
+
+Ez a kategória nem kapcsolódik közvetlenül a 2007/2/EK irányelv téradattémáinak egyikéhez sem.
+
+2.12. Szárazföldi vizek (inlandWaters)
+
+Szárazföldi víztestek vízrajza, vízelvezető rendszerek és jellemzőik.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: I. melléklet (8) bekezdése: vízrajz.
+
+2.13. Földrajzi fekvés (location)
+
+Helymeghatározással kapcsolatos adatok és szolgáltatások.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: I. melléklet (3) bekezdése: földrajzi nevek; I. melléklet (5) bekezdése: címek.
+
+2.14. Óceánok (oceans)
+
+Sós vízű víztestek jellemzői és vízrajza (a szárazföldi vizek kivételével).
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (16) bekezdése: tengeri régiók; III. melléklet (15) bekezdése: oceanográfiai földrajzi jellemzők.
+
+2.15. Tervezés / Kataszter (planningCadastre)
+
+A földterület jövőbeni felhasználásával kapcsolatos intézkedésekhez szükséges információk.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: I. melléklet (6) bekezdése: kataszteri parcellák; III. melléklet (4) bekezdése: földhasználat; III. melléklet (11) bekezdése: területgazdálkodási/-korlátozási/-szabályozási övezetek és adatszolgáltató egységek;
+
+2.16. Társadalom (society)
+
+A társadalom és a kultúrák jellemzői.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (10) bekezdése: a népesség eloszlása – demográfia.
+
+2.17. Építmények (structure)
+
+Az ember által épített környezet.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémáira vonatkozik: III. melléklet (2) bekezdése: épületek; III. melléklet (8) bekezdése: termelő és ipari létesítmények; III. melléklet (7) bekezdése: környezetvédelmi monitoringlétesítmények.
+
+2.18. Szállítás (transportation)
+
+Személy- és áruszállításhoz használt eszközök és módszerek.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: I. melléklet (7) bekezdése: közlekedési hálózatok.
+
+2.19. Közüzemi szolgáltatások / Távközlés (utilitiesCommunication)
+
+Energia- és vízellátó, hulladékgazdálkodási rendszerek, távközlési infrastruktúra és szolgáltatások.
+
+Ez a kategória a 2007/2/EK irányelv alábbi téradattémájára vonatkozik: III. melléklet (6) bekezdése: közüzemi és közszolgáltatások.
+
+3. A TÉRADAT-SZOLGÁLTATÁS TÍPUSA
+
+3.1. Keresőszolgáltatások (discovery)
+
+Keresőszolgáltatások, amelyek lehetővé teszik a téradatkészletekre és -szolgáltatásokra vonatkozó keresést a megfelelő metaadatok tartalma alapján, valamint a metaadatok tartalmának megjelenítését.
+
+3.2. Megtekintési szolgáltatások (view)
+
+Megjelenítési szolgáltatás, amely lehetővé teszi legalább a megjelenítést, a navigálást, a kicsinyítést és nagyítást, a megjelenített téradatkészletek pásztázását vagy átlapozását, továbbá a magyarázó jellegű információ és a metaadatok megfelelő tartalmának megjelenítését.
+
+3.3. Letöltési szolgáltatások (download)
+
+Letöltési szolgáltatás, amely lehetővé teszi a téradatkészletek másolatának vagy az ilyen készletek egyes részeinek letöltését, valamint – amennyiben az megvalósítható – az azokhoz való közvetlen hozzáférést.
+
+3.4. Átalakítási szolgáltatások (transformation)
+
+Átalakítási szolgáltatás, amely lehetővé teszi a téradatkészletek konvertálását az interoperabilitás biztosítása céljából;
+
+3.5. Téradatszolgáltatás lehívása (invoke)
+
+Szolgáltatás, amely lehetővé teszi mind a bemenő, mind a kibocsátandó adatok meghatározását egy adott téradat-szolgáltatás vonatkozásában, és módot nyújt több különböző szolgáltatásból álló munkafolyamatok és szolgáltatásláncok kialakítására. Ezen túlmenően a munkafolyamat vagy szolgáltatáslánc külső webes felületének meghatározását is lehetővé teszi.
+
+3.6. Egyéb szolgáltatás (other)
+
+4. A TÉRADAT-SZOLGÁLTATÁSOK OSZTÁLYOZÁSA
+
+A kulcsszavak a térinformatikai szolgáltatásokra vonatkozó EN ISO 19119 szabvány taxonómiáját követik. E szerint az adatok kategóriákra, és a téradat-szolgáltatások értéktartományát meghatározó alkategóriákra tagolódnak.
+
+100 Térinformatikai interaktív felhasználói szolgáltatások (humanInteractionService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+101. Katalógusmegjelenítő (humanCatalogueViewer)
+
+Kliensszolgáltatás, mely révén a felhasználók a térinformatikai adatok vagy szolgáltatások metaadatainak kikereséséhez, böngészéséhez és kezeléséhez adatcserét bonyolíthatnak a katalógussal.
+
+102. Térinformatikai megjelenítő (humanGeographicViewer)
+
+Egy vagy több vektoros adatállomány vagy fedvény megtekintésére módot nyújtó kliensszolgáltatás.
+
+103. Térinformatikai táblázatmegjelenítő (humanGeographicSpreadsheetViewer)
+
+Kliensszolgáltatás, melynek segítségével a felhasználók több adatobjektummal folytathatnak adatcserét, és az aritmetikai táblázathoz hasonló, de térinformatikai adatokra kiterjesztett számításokat kérhetnek.
+
+104. Szolgáltatásszerkesztő (humanServiceEditor)
+
+Térinformatikai adatfeldolgozó szolgáltatások vezérlésére szolgáló kliensszolgáltatás.
+
+105. Szolgáltatáslánc-szerkesztő (humanChainDefinitionEditor)
+
+Interaktív felhasználói felület szolgáltatási láncának meghatározásához.
+
+106. Munkafolyamat-végrehajtó kezelőalkalmazás (humanWorkflowEnactmentManager)
+
+Interaktív felhasználói felület munkafolyamat-végrehajtó szolgáltatáshoz.
+
+107. Térinformatikai objektumszerkesztő (humanGeographicFeatureEditor)
+
+Térinformatikai megjelenítő, amely interaktív felhasználói felületet biztosít az objektumadatokhoz.
+
+108. Térinformatikai jelkulcsszerkesztő (humanGeographicSymbolEditor)
+
+Kliensszolgáltatás a jelkulcsok felhasználói kezeléséhez.
+
+109. Objektumgeneralizáló szerkesztőalkalmazás (humanFeatureGeneralizationEditor)
+
+Kliensszolgáltatás, mely révén a felhasználó a megjelenítés egyszerűsítésével, de a lényeges elemek megtartásával módosíthatja egy objektum vagy objektumgyűjtemény kartográfiai jellemzőit – az egyszerűsítés térbeli megfelelője.
+
+110. Térinformatikai adatszerkezetek megjelenítője (humanGeographicDataStructureViewer)
+
+Kliensszolgáltatás, mely révén a felhasználó az adatkészlet egy részéhez hozzáférve megtekintheti annak belső szerkezetét.
+
+200 Térinformatikai modellezés/információkezelés (infoManagementService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+201. Objektum-hozzáférést biztosító szolgáltatás (infoFeatureAccessService)
+
+A kliens számára az objektumtárhoz való hozzáférést és annak kezelését biztosító szolgáltatás.
+
+202. Térkép-hozzáférést biztosító szolgáltatás (infoMapAccessService)
+
+Földrajzi grafikákhoz, azaz a térinformatikai adatok képeihez klienshozzáférést biztosító szolgáltatás.
+
+203. Fedvény-hozzáférést biztosító szolgáltatás (infoCoverageAccessService)
+
+A kliens számára a fedvénytárhoz való hozzáférést és annak kezelését biztosító szolgáltatás.
+
+204. Érzékelő eszközt leíró szolgáltatás (infoSensorDescriptionService)
+
+A felületet érzékelő eszköz leírását, ezen belül az érzékelő helyének és tájolásának, valamint az érzékelő geometriai, dinamikai és radiometriás jellemzőinek meghatározását biztosító szolgáltatás téradatműveletek elvégzéséhez.
+
+205. Termékhozzáférést biztosító szolgáltatás (infoProductAccessService)
+
+A térinformatikai terméktárhoz való hozzáférést és annak kezelését biztosító szolgáltatás.
+
+206. Objektumtípus-szolgáltatás (infoFeatureTypeService)
+
+A kliens számára az objektumtípus-leírások tárához való hozzáférést és annak kezelését biztosító szolgáltatás.
+
+207. Katalógusszolgáltatás (infoCatalogueService)
+
+Metaadattárra vonatkozó információfeltárást és -kezelést biztosító szolgáltatás.
+
+208. Regiszterszolgáltatás (infoRegistryService)
+
+Típusleíró metaadattárhoz hozzáférést biztosító szolgáltatás.
+
+209. Földrajzinévtár-szolgáltatás (infoGazetteerService)
+
+A valós világ entitásainak vagy entitásosztályainak helymeghatározását tartalmazó jegyzékéhez hozzáférést biztosító szolgáltatás.
+
+210. Megrendeléskezelési szolgáltatás (infoOrderHandlingService)
+
+Szolgáltatás, melynek segítségével a kliens egy adott szolgáltatótól termékeket rendelhet.
+
+211. Állandó megbízási szolgáltatás (infoStandingOrderService)
+
+Megrendeléskezelési szolgáltatás, mely révén a felhasználó megbízást adhat termékek terjesztésére egy megadott földrajzi területen belül, amint azok rendelkezésre állnak.
+
+300 Térinformatikai munkafolyamat-/feladatkezelés (taskManagementService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+301. Láncdefiniáló szolgáltatás (chainDefinitionService)
+
+Szolgáltatás, amely meghatározza a láncot, és elvégezhetővé teszi a munkafolyamat-végrehajtó szolgáltatás számára.
+
+302. Munkafolyamat-végrehajtó szolgáltatás (workflowEnactmentService)
+
+A munkafolyamat-végrehajtó szolgáltatás értelmezi a láncot, valamint vezérli a szolgáltatások példányosítását és a műveletek sorba rendezését.
+
+303. Feliratkoztatási szolgáltatás (subscriptionService)
+
+Szolgáltatás, mely segítségével feiratkozhatnak az ügyfelek, ha értesítést kívánnak kapni a különböző eseményekről.
+
+400 Térbeli téradat-feldolgozást biztosító szolgáltatások (spatialProcessingService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+401. Koordinátakonvertáló szolgáltatás (spatialCoordinateConversionService)
+
+Ugyanazon földrajzi alapfelületen alapuló koordinátarendszerek közti koordinátaátváltás.
+
+402. Koordinátatranszformáló szolgáltatás (spatialCoordinateTransformationService)
+
+Koordináták átszámítása ugyanazon alapfelületen alapuló koordinátarendszerek között.
+
+403. Fedvény-/vektorkonvertáló szolgáltatás (spatialCoverageVectorConversionService)
+
+Térbeli ábrázolás átváltása fedvénysémáról vektorsémára, illetve fordítva.
+
+404. Képkoordináta-konvertálás (spatialImageCoordinateConversionService)
+
+Adott kép koordinátarendszerének módosítása koordinátakonvertálással vagy koordinátatranszformálással.
+
+405. Képátalakítás (spatialRectificationService)
+
+Képátalakítási eljárás a párhuzamos vetítéssel elérhető állandó méretarány létrehozásának céljából.
+
+406. Ortorektifikálás (spatialOrthorectificationService)
+
+A képdőlésből és a domborzatból fakadó eltolódások javítását szolgáló képátalakítás.
+
+407. Érzékelő eszköz geometriai modelljének beállítása (spatialSensorGeometryModelAdjustmentService)
+
+Az érzékelő eszköz geometriai modelljét beállító szolgáltatás az érzékelő által alkotott kép más képekhez és/vagy ismert alappontokhoz való pontosabb illeszkedése érdekében.
+
+408. Képgeometriai modellek konvertálása (spatialImageGeometryModelConversionService)
+
+Érzékelő eszközök geometriai modelljét más, de egyenértékű geometriai modellre konvertáló szolgáltatás.
+
+409. Térbeli adatok kivonatolása (részhalmazba rendezése) (spatialSubsettingService)
+
+Folyamatos térbeli régióra vonatkozó adatok földrajzi hely vagy rácskoordináták alapján történő kiválasztása.
+
+410. Mintavételezés (spatialSamplingService)
+
+Adatokat földrajzi hely vagy rácskoordináták alapján, konzisztens mintavételezési eljárással kivonatoló szolgáltatás.
+
+411. Szelvényezés módosítása (spatialTilingChangeService)
+
+Földrajzi adatok szelvényezését módosító szolgáltatás.
+
+412. Méretszámítás (spatialDimensionMeasurementService)
+
+Egy képen vagy egyéb geoadaton látható objektumok méreteinek kiszámítása.
+
+413. Objektumátalakítás (spatialFeatureManipulationService)
+
+Egy adott objektum kapcsolása egy másik objektumhoz, képhez, adatkészlethez vagy koordinátákhoz, amely során a relatív elfordítás, eltolódás, méretarány és/vagy leképezési különbségek javításra kerülnek. Ellenőrzi továbbá, hogy a forrás és cél állományok objektumai topológiailag konzisztensek-e, és feltárja és/vagy helyesbíti az esetleges eltéréseket.
+
+414. Objektummegfeleltetés (spatialFeatureMatchingService)
+
+Ez a szolgáltatás több különböző adatforrásból meghatározza, mely objektumok vagy objektumrészek képezik le ugyanazt a valós világbeli entitást (például kontúrillesztéssel vagy korlátozott konflációval).
+
+415. Objektumgeneralizálás (spatialFeatureGeneralizationService)
+
+Adott objektumállományon belül a térbeli változatosságot csökkentő szolgáltatás, amely a lényeges elemek hangsúlyozásával növeli a kommunikáció hatékonyságát, s ezzel csökkenti az adatok egyszerűsítésének nemkívánatos hatásait.
+
+416. Útvonal-meghatározás (spatialRouteDeterminationService)
+
+Szolgáltatás, mely két megadott pont között meghatározza az optimális útvonalat a megadott adatok és az objektumállomány paraméterei alapján.
+
+417. Helymeghatározás (spatialPositioningService)
+
+Helymeghatározó eszköz szolgáltatása térbeli helyzet meghatározására, lekérésére és egyértelmű értelmezésére, amely azt is megállapítja, hogy az eredmények megfelelnek-e a használati feltételeknek.
+
+418. Szomszédságelemzés (spatialProximityAnalysisService)
+
+Adott pozícióból vagy térbeli objektumból kiindulva e szolgáltatás a felhasználó által meghatározott távolságon belül minden, megadott attribútumkészlettel rendelkező tereptárgyat megjelöl.
+
+500 Tematikus téradat-feldolgozást biztosító szolgáltatások (thematicProcessingService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+501. Térparaméter-számítás (thematicGoparameterCalculationService)
+
+Alkalmazásközpontú, kvantitatív, a feldolgozatlan adatokból közvetlenül nem adódó eredményeket származtató szolgáltatás.
+
+502. Tematikus osztályozás (thematicClassificationService)
+
+Földrajzi adatrégiók osztályozása tematikus attribútumok alapján.
+
+503. Objektumgeneralizálás (thematicFeatureGeneralizationService)
+
+Adott objektumállományon belül az objektumtípusokat általánosító szolgáltatás, amely a lényeges elemek kiemelésével növeli a kommunikáció hatékonyságát, ellensúlyozva az adatcsökkentés nemkívánatos hatásait.
+
+504. Részhalmazba rendezés (thematicSubsettingService)
+
+Adatok kivonatolása bemeneteli paraméterértékek alapján.
+
+505. Térbeli számlálás (thematicSpatialCountingService)
+
+Földrajzi objektumokat számláló szolgáltatás.
+
+506. Változásértékelés (thematicChangeDetectionService)
+
+Ugyanazon földrajzi terület különböző időpontokban leképezett adatkészletei közötti különbségek feltárása.
+
+507. Térinformatikai adatkinyerés (thematicGeographicInformationExtractionService)
+
+Távérzékelt vagy beolvasott képekből objektum- és terepadatok kinyerését támogató szolgáltatás.
+
+508. Képfeldolgozás (thematicImageProcessingService)
+
+Kép tematikus attribútumértékeinek módosítása matematikai függvény használatával.
+
+509. Képfelbontás-csökkentés (thematicReducedResolutionGenerationService)
+
+Kép felbontásának csökkentése.
+
+510. Képmódosító eljárások (thematicImageManipulationService)
+
+Képpontokon végzett műveletek: szín és kontraszt módosítása, szűrők alkalmazása, képfelbontás módosítása, zajszűrés, csíkozás, szisztematikus radiometriai korrekciók, légköri elnyelés hatásai, megvilágításbeli különbségek stb.
+
+511. Képértelmezés (thematicImageUnderstandingService)
+
+Automatikus képváltozás-vizsgálat, regisztrált képek közötti különbségszámítás, különbség szignifikanciájának elemzése és megjelenítése, valamint terület- és modell-alapú különbségszámítás.
+
+512. Képszintézis (thematicImageSynthesisService)
+
+Képek létrehozása és transzformálása számítógépes térbeli modellek és transzformációk alkalmazásával, a kép olvashatóságának javítása képelemek szerkesztésével az élesebb felbontás és/vagy a felhőtakaró, illetve ködfátyol hatásainak csökkentése érdekében.
+
+513. Többsávos képszerkesztés (thematicMultibandImageManipulationService)
+
+A képet az alkotó sávok alapján szerkesztő szolgáltatás.
+
+514. Objektumérzékelés (thematicObjectDetectionService)
+
+Valós tereptárgyak érzékelése egy képen.
+
+515. Téradatlokátor (spatialPositioningService)
+
+Szöveges dokumentumokban helyre utaló hivatkozások, pl. helységnevek, címek, irányítószámok stb. keresése, a geokódolási tevékenység előkészítéseként.
+
+516. Geokódolás (thematicGeocodingService)
+
+Helyre utaló szöveges hivatkozások bővítése földrajzi koordinátákkal (vagy egyéb térbeli hivatkozással).
+
+600 Időbeli téradat-feldolgozást biztosító szolgáltatások (temporalProcessingService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+601. Időreferencia-rendszer szerinti átalakítás (temporalReferenceSystemTransformationService)
+
+Időbeli események értékeinek módosítása a különböző időreferencia-rendszerek között.
+
+602. Időbeli adatok kivonatolása (részhalmazba rendezése) (temporalSubsettingService)
+
+Konkrét időpontokra vonatkozó adatkinyerés folyamatos intervallum alapján.
+
+603. Mintavételezés (temporalSamplingService)
+
+Adatértékek kinyerése időbeli értékeken alapuló konzisztens séma szerint.
+
+604. Időbeli közelségelemzés (temporalProximityAnalysisService)
+
+A felhasználó által megadott időintervallumba eső és attribútumkészlettel rendelkező objektumok kiválasztása egy adott időintervallumhoz vagy eseményhez viszonyítva.
+
+700 Téradat-feldolgozást biztosító szolgáltatások – metaadatok (metadataProcessingService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+701. Statisztikai számítás (metadataStatisticalCalculationService)
+
+Egy adatkészlet statisztikai adatainak kiszámítása.
+
+702. Térinformatikai annotáció (metadataGeographicAnnotationService)
+
+Objektumgyűjtemény képeihez vagy objektumaihoz kiegészítő információkat fűző szolgáltatás.
+
+800 Térinformatikai kommunikációs szolgáltatások (comService)
+
+Ez a kategória az alábbi alkategóriákra tagolódik:
+
+801. Kódolás (comEncodingService)
+
+Kódolási szabályt érvényesítő szolgáltatás, amely a kódoláshoz és dekódoláshoz szükséges felületet biztosítja.
+
+802. Adatátvitel (comTransferService)
+
+Adatátviteli protokollt (vagy protokollokat) megvalósító szolgáltatás, amely lehetővé teszi az osztott informatikai rendszerek közötti adatátvitelt offline vagy online kommunikációs adathordozón.
+
+803. Térinformatikai tömörítés (comGeographicCompressionService)
+
+Adott objektumállományok térbeli részeinek tömörítése vagy kifejtése.
+
+804. Térinformatikai formátum konvertálása (comGeographicFormatConversionService)
+
+Konvertálás térinformatikai adatformátumok között.
+
+805. Üzenetkezelés (comMessagingService)
+
+Objektumállományok több felhasználó általi egyidejű megtekintésére, véleményezésére, valamint változtatásának kérelmezésére módot nyújtó szolgáltatás.
+
+806. Fájlok és utasítások távkezelése (comRemoteFileAndExecutableManagement)
+
+Térinformatikai objektumok másodlagos tárához való hozzáférés a kliens szempontjából helyi szintű eléréssel.
+
+5. A MEGFELELÉS MÉRTÉKE
+
+5.1. Megfelel (conformant)
+
+A forrás teljes mértékben megfelel a hivatkozott előírásnak.
+
+5.2. Nem felel meg (notConformant)
+
+A forrás nem teljesíti a hivatkozott előírás követelményeit.
+
+5.3. Nem vizsgált (notEvaluated)
+
+A megfelelés értékelésére nem történtek vizsgálatok.
+
+6. A FELELŐS FÉL SZEREPKÖRE
+
+6.1. Forrásszolgáltató (resourceProvider)
+
+A forrást biztosító fél.
+
+6.2. Adatgazda (custodian)
+
+Az adatokért felelősséget vállaló, elszámoltatható fél, aki megfelelően gondozza és karbantartja a forrást.
+
+6.3. Tulajdonos (owner)
+
+A forrás tulajdonosa.
+
+6.4. Felhasználó (user)
+
+A forrást használó fél.
+
+6.5. Terjesztő (distributor)
+
+A forrást terjesztő fél.
+
+6.6. Létrehozó (originator)
+
+A forrást létrehozó fél.
+
+6.7. Kapcsolattartó (pointOfContact)
+
+Az a fél, aki felvilágosítást tud adni a forrással vagy annak beszerzésével kapcsolatban.
+
+6.8. Vezető kutató (principalInvestigator)
+
+Az adatgyűjtésért és a kutatásért elsősorban felelős fél.
+
+6.9. Adatfeldolgozó (processor)
+
+A forrás módosítását eredményező adatfeldolgozási tevékenységet végző fél.
+
+6.10. Kibocsátó (publisher)
+
+A forrást kibocsátó fél.
+
+6.11. Szerző (author)
+
+A forrást kezdeményező, szerző fél.
+
+--------------------------------------------------

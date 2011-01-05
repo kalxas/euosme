@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115"
+	xmlns:mybase="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui">
+	<ui:style>
+	 .pretty {
+    	width: 100%;
+    }
+    .pretty2 {
+    	height: 100%;
+    }
+    .auto {
+    	overflow: auto;
+    }
+   </ui:style>
+	<g:TabLayoutPanel ui:field="tabs" barUnit='PX' barHeight='30'>
+		<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="metadataTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabMetadata addStyleNames="tabcontent" ui:field="tabMetadataObj"/>			    			    	
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="identificationTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabIdentification addStyleNames="tabcontent" ui:field="tabIdentificationObj"/>	
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="classificationTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabClassification addStyleNames="tabcontent" ui:field="tabClassificationObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="keywordTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabKeyword addStyleNames="tabcontent" ui:field="tabKeywordObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="geographicTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabGeographic addStyleNames="tabcontent" ui:field="tabGeographicObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="temporalTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabTemporal addStyleNames="tabcontent" ui:field="tabTemporalObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="qualityTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabQuality addStyleNames="tabcontent" ui:field="tabQualityObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="conformityTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabConformity addStyleNames="tabcontent" ui:field="tabConformityObj"/>
+	  	</g:tab>
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="constraintsTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabConstraints addStyleNames="tabcontent" ui:field="tabConstraintsObj"/>
+	  	</g:tab>
+		<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="organizationTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabOrganization addStyleNames="tabcontent" ui:field="tabOrganizationObj"/>
+	  	</g:tab>			  
+ 	</g:TabLayoutPanel>
+</ui:UiBinder> 

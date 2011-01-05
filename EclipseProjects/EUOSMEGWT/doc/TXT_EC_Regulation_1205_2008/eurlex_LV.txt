@@ -1,0 +1,987 @@
+Komisijas Regula (EK) Nr. 1205/2008
+
+( 2008. gada 3. decembris)
+
+par Eiropas Parlamenta un Padomes Direktīvas 2007/2/EK īstenošanu attiecībā uz metadatiem
+
+(Dokuments attiecas uz EEZ)
+
+EIROPAS KOPIENU KOMISIJA,
+
+ņemot vērā Eiropas Kopienas dibināšanas līgumu,
+
+ņemot vērā Eiropas Parlamenta un Padomes 2007. gada 14. marta Direktīvu 2007/2/EK, ar ko izveido Telpiskās informācijas infrastruktūru Eiropas Kopienā (INSPIRE) [1], un jo īpaši tās 5. panta 4. punktu,
+
+tā kā:
+
+(1) Direktīvā 2007/2/EK noteikti vispārīgi principi, pēc kuriem Eiropas Kopienā izveido Telpiskās informācijas infrastruktūru. Šīs infrastruktūras pienācīgai darbībai ir nepieciešams, lai lietotājs varētu atrast telpisko datu kopas un pakalpojumus un varētu novērtēt to izmantošanas iespējas un lietojuma jomu, tāpēc dalībvalstīm jāsniedz šo datu kopu un pakalpojumu apraksts metadatu veidā. Tā kā šiem metadatiem jābūt savietojamiem un izmantojamiem visā Kopienā un pārrobežu kontekstā, ir jāparedz noteikumi par metadatiem, kurus izmanto telpisko datu kopu un pakalpojumu aprakstīšanai pa Direktīvas 2007/2/EK I, II un III pielikumā norādītajiem telpisko datu tematiem.
+
+(2) Ir jādefinē metadatu elementu kopa, lai varētu identificēt to informācijas resursu, kuram metadati izveidoti, klasificēt informācijas resursu un identificēt tā ģeogrāfisko atrašanās vietu un laika posma aptvērumu, kvalitāti un validitāti, atbilstību īstenošanas noteikumiem par telpisko datu kopu un pakalpojumu sadarbspēju, piekļuves un izmantošanas ierobežojumus, kā arī organizāciju, kuras pārziņā ir minētais resurss. Lai uzraudzītu, vai izveidotos metadatus pastāvīgi aktualizē, un lai identificētu organizāciju, kuras pārziņā ir metadatu izveide un uzturēšana, ir vajadzīgi arī pašu metadatu ierakstu raksturojoši metadatu elementi. Šī ir minimālā metadatu elementu kopa, kas vajadzīga, lai izpildītu Direktīvā 2007/2/EK noteiktās prasības; taču tas organizācijām neliedz plašāk dokumentēt informācijas resursus, izmantojot papildu elementus, kas izriet no starptautiskiem standartiem vai darba prakses kopīgo interešu jomā. Tāpat tas neliedz iespēju pieņemt Komisijas izstrādātās un pastāvīgi aktualizētās vadlīnijas, jo īpaši gadījumos, kad tas vajadzīgs, lai nodrošinātu metadatu sadarbspēju.
+
+(3) Metadatu validācijai, kas notiek atbilstīgi Direktīvas 2007/2/EK prasībām, ir vajadzīgi norādījumi par nosacījumiem un prognozējamo katra metadatu elementa multiplicitāti, proti, vai katram elementam metadatu ierakstā vērtība piešķirama vienmēr, tikai vienreiz vai vairākas reizes.
+
+(4) Lai nodrošinātu metadatu sadarbspēju daudzvalodu aspektā, katram metadatu elementam ir vajadzīga vērtību kopa; šo vērtību kopu jāspēj definēt kā brīvtekstu, datumu, kodus, kas izriet no starptautiskiem standartiem (piemēram, valodas kodus), atslēgvārdus no kontrolētiem sarakstiem vai tēzauriem vai arī rakstzīmju virkni.
+
+(5) Šajā regulā paredzētie pasākumi ir saskaņā ar atzinumu, ko sniegusi komiteja, kura izveidota saskaņā ar Direktīvas 2007/2/EK 22. pantu,
+
+IR PIEŅĒMUSI ŠO REGULU.
+
+1. pants
+
+Priekšmets
+
+Šajā regulā noteiktas prasības telpisko datu kopu, telpisko datu kopu grupu un telpisko datu pakalpojumu metadatu izveidošanai un uzturēšanai atbilstīgi Direktīvas 2007/2/EK I, II un III pielikumā norādītajiem telpisko datu tematiem.
+
+2. pants
+
+Definīcijas
+
+Šajā regulā papildus Direktīvas 2007/2/EK 3. pantā noteiktajām definīcijām izmanto definīcijas, kas noteiktas šīs regulas pielikuma A daļā.
+
+3. pants
+
+Metadatu izveidošana un uzturēšana
+
+Metadatiem, kas apraksta telpisko datu kopu, telpisko datu kopu grupas vai telpisko datu pakalpojumu, atbilst pielikuma B daļā norādītie metadatu elementi vai metadatu elementu grupas, un tos izveido un uztur atbilstīgi pielikuma C un D daļā izklāstītajiem noteikumiem.
+
+4. pants
+
+Stāšanās spēkā
+
+Šī regula stājas spēkā divdesmitajā dienā pēc tās publicēšanas Eiropas Savienības Oficiālajā Vēstnesī.
+
+Šī regula uzliek saistības kopumā un ir tieši piemērojama visās dalībvalstīs.
+
+Briselē, 2008. gada 3. decembrī
+
+Komisijas vārdā —
+
+Komisijas loceklis
+
+Stavros Dimas
+
+[1] OV L 108, 25.4.2007., 1. lpp.
+
+--------------------------------------------------
+
+PIELIKUMS
+
+ĪSTENOŠANAS NOTEIKUMI PAR METADATIEM
+
+A DAĻA
+
+Interpretācija
+
+1. Izmanto šādas definīcijas:
+
+- "rakstzīmju virkne" ir metadatu elementu vērtību kopa, ko veido rakstzīmju kopa, kuru uzskata par vienu veselumu,
+
+- "brīvteksts" ir metadatu elementu vērtību kopa, kuras vērtības izteiktas vienā vai vairākās dabiskās valodās,
+
+- "izcelsme" ir datu kopas vēsture un tās dzīves cikls, sākot no vākšanas un iegūšanas līdz kompilācijai un atvasināšanai tās pašreizējā formā (saskaņā ar EN ISO 19101),
+
+- "metadatu elements" ir atsevišķa metadatu vienība (saskaņā ar EN ISO 19115),
+
+- "vārdtelpa" ir ar vienota resursu identifikatora (Uniform Resource Identifier, URI) norādi identificēta tādu nosaukumu kolekcija, kuri XML (Extensible Markup Language) dokumentos lietoti kā elementu vai atribūtu nosaukumi,
+
+- "kvalitāte" ir produkta raksturlielumu kopums, kas saskaņā ar standartu EN ISO 19101 nosaka tā spēju atbilst noteiktajām un paredzamajām vajadzībām,
+
+- "resurss" ir informācijas resurss, kam ir tieša vai netieša norāde par konkrētu vietu vai ģeogrāfisko apgabalu,
+
+- "telpisko datu kopu grupa" ir telpisko datu kopu kolekcija, kurā visām kopām ir vienāda produkta specifikācija.
+
+2. Norādes par telpisko datu kopu validitāti ir saistītas ar šādiem aspektiem:
+
+- datu aptvertā telpa un laiks,
+
+- vai ir pārbaudīta datu atbilstība mērījumu vai raksturlielumu standartiem,
+
+- cik lielā mērā dati atbilst paredzētajam lietojumam,
+
+- telpisko datu kopas juridiskais spēks (vajadzības gadījumā).
+
+B DAĻA
+
+Metadatu elementi
+
+1. IDENTIFIKĀCIJA
+
+Jābūt norādītiem šādiem metadatu elementiem.
+
+1.1. Resursa nosaukums
+
+Tas ir raksturīgs, parasti unikāls nosaukums, ar kuru resurss ir pazīstams.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+1.2. Resursa atreferējums
+
+Tas ir īss resursa satura kopsavilkums.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+1.3. Resursa tips
+
+Ar metadatiem aprakstītā resursa tips.
+
+Šā metadatu elementa vērtību kopa ir noteikta D daļas 1. punktā.
+
+1.4. Resursa vietrādis
+
+Resursa vietrādī definē saiti(-es) uz resursu un/vai saiti uz papildu informāciju par resursu.
+
+Šā metadatu elementa vērtību kopa ir rakstzīmju virkne, parasti vienotā resursu vietrāža (Uniform Resource Locator, URL) veidā.
+
+1.5. Unikāls resursa identifikators
+
+Vērtība, kas unikālā veidā identificē resursu.
+
+Šā metadatu elementa vērtību kopa ir obligāts rakstzīmju virknes kods, kuru parasti piešķir datu īpašnieks, un vārdvietas rakstzīmju virkne, kas unikālā veidā identificē identifikācijas koda kontekstu (piemēram, datu īpašnieku).
+
+1.6. Saistīts resurss
+
+Ja resurss ir telpisko datu pakalpojums, tad attiecīgā gadījumā šis metadatu elements identificē pakalpojuma telpisko datu mērķkopu(-as), izmantojot mērķopas(-u) unikālo resursa identifikatoru.
+
+Šā metadatu elementa vērtību kopa ir obligāts rakstzīmju virknes kods, kuru parasti piešķir datu īpašnieks, un vārdvietas rakstzīmju virkne, kas unikālā veidā identificē identifikācijas koda kontekstu (piemēram, datu īpašnieku).
+
+1.7. Resursa valoda
+
+Resursā izmantotā valoda vai valodas.
+
+Šā metadatu elementa vērtību kopā ietilpst tikai ISO 639-2 norādītās valodas.
+
+2. TELPISKO DATU UN PAKALPOJUMU KLASIFIKĀCIJA
+
+2.1. Temata kategorija
+
+Temata kategorija ir augstākā klasifikācijas vienība, kas atvieglo pieejamo telpisko datu resursu grupēšanu un meklēšanu pēc datu tematiem.
+
+Šā metadatu elementa vērtību kopa ir noteikta D daļas 2. punktā.
+
+2.2. Telpisko datu pakalpojuma tips
+
+Šī klasifikācija atvieglo pieejamo telpisko datu pakalpojumu meklēšanu. Konkrētais pakalpojums jāklasificē tikai vienā kategorijā.
+
+Šā metadatu elementa vērtību kopa ir noteikta D daļas 3. punktā.
+
+3. ATSLĒGVĀRDS
+
+Ja resurss ir telpisko datu pakalpojums, jānorāda vismaz viens no D daļas 4. punktā noteiktajiem atslēgvārdiem.
+
+Ja resurss ir telpisko datu kopa vai telpisko datu kopu grupa, vismaz vienam atslēgvārdam jābūt no Vispārīgā vides terminu daudzvalodu tēzaura (General Environmental Multi-lingual Thesaurus, GEMET), kas apraksta attiecīgo telpisko datu tematu, kā noteikts Direktīvas 2007/2/EK I, II vai III pielikumā.
+
+Katram atslēgvārdam jābūt norādītiem šādiem metadatu elementiem.
+
+3.1. Atslēgvārda vērtība
+
+Atslēgvārda vērtība ir subjekta aprakstam ikdienas valodā lietots vārds, formāls vārds vai frāze. Tematu kategorijas ir pārāk vispārīgas, lai tās izmantotu precīzākai meklēšanai, tāpēc atslēgvārdi palīdz sašaurināt pilnteksta meklēšanu un nodrošināt strukturētu meklēšanu pēc atslēgvārdiem.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+3.2. Izmantotā kontrolētā vārdnīca
+
+Ja par atslēgvārda vērtību izmanto kontrolētās vārdnīcas (tēzauri, ontoloģija), piemēram, GEMET, jānorāda attiecīgā atsauce uz to.
+
+Atsaucē norāda vismaz izmantotā normalizētās leksikas avota nosaukumu ar datuma norādi (publicēšanas datums, pēdējās redakcijas datums vai izveidošanas datums).
+
+4. ĢEOGRĀFISKĀ ATRAŠANĀS VIETA
+
+Direktīvas 2007/2/EK 11. panta 2. punkta e) apakšpunktā minētā prasība par ģeogrāfisko atrašanās vietu jāizsaka ar metadatu elementu "ģeogrāfiskais izgriezums".
+
+4.1. Ģeogrāfiskais izgriezums
+
+Tas ir resursa lielums ģeogrāfiskajā telpā, kas attēlots kā izgriezums.
+
+Ģeogrāfisko izgriezumu definē, izsakot decimālgrādos ar precizitāti vismaz divas decimālzīmes, norādot ģeogrāfisko garumu tā galējiem punktiem rietumu un austrumu virzienā un ģeogrāfisko platumu tā galējiem punktiem dienvidu un ziemeļu virzienā.
+
+5. LAIKA PIESAISTE
+
+Šis metadatu elements nodrošina Direktīvas 2007/2/EK 8. panta 2. punkta d) apakšpunktā minētās prasības ievērošanu par telpisko datu laika dimensiju. Jāizmanto vismaz viens no 5.1. līdz 5.4. punktā minētajiem metadatu elementiem.
+
+Vērtību kopa 5.1. līdz 5.4. punktā minētajiem metadatu elementiem ir datumu kopa. Visiem datumiem ir jābūt saistītiem ar laika skaitīšanas sistēmu, un tie jāizsaka ar minēto sistēmu saderīgā formā. Pieņemtā laika skaitīšanas sistēma ir Gregora kalendārs, kurā datumus norāda atbilstīgi standarta ISO 8601 prasībām.
+
+5.1. Laika tvērums
+
+Ar laika tvērumu norāda laikposmu, kuru raksturo resursa saturs. Minēto laikposmu var norādīt:
+
+- ar vienu atsevišķu datumu,
+
+- ar datumu intervālu, kas uzdots ar attiecīgā laika intervāla sākuma un beigu dienas datumu,
+
+- kombinējot atsevišķus datumus un datumu intervālus.
+
+5.2. Publicēšanas datums
+
+Tas ir resursa publicēšanas datums, ja ir zināms, vai spēkā stāšanās dienas datums. Var būt vairāki publicēšanas datumi.
+
+5.3. Pēdējās redakcijas datums
+
+Ja resurss ir rediģēts, tas ir resursa pēdējās redakcijas datums. Nevar būt vairāki pēdējās redakcijas datumi.
+
+5.4. Izveidošanas datums
+
+Tas ir resursa izveidošanas datums. Nevar būt vairāki izveidošanas datumi.
+
+6. KVALITĀTE UN VALIDITĀTE
+
+Lai izpildītu Direktīvas 2007/2/EK 5. panta 2. punktā un 11. panta 2. punktā minēto prasību par telpisko datu kvalitāti un validitāti, izmanto šādus metadatu elementus.
+
+6.1. Datu izcelsme
+
+Tas ir pārskats par attiecīgās telpisko datu kopas izveidošanas procesa vēsturi un/vai to vispārējo kvalitāti. Vajadzības gadījumā tajā var iekļaut ziņas par to, vai datu kopa ir validēta, vai ziņas par datu kopas kvalitāti, ziņas par to, vai šī ir oficiālā versija (ja ir vairākas versijas) un vai tai ir juridisks spēks.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+6.2. Telpiskā izšķirtspēja
+
+Telpiskā izšķirtspēja raksturo datu kopas detalizācijas līmeni. Parasti to norāda ar skaitļu kopu no nulles līdz dažādiem izšķiršanas attālumiem (parasti datiem ar koordinātu tīklu un no attēliem iegūtiem produktiem) vai izmantojot mērogu noteiktību (parasti kartēm vai no kartēm atvasinātiem produktiem).
+
+Mēroga noteiktību parasti izsaka ar veselu skaitli, kas ir mēroga rādītājs.
+
+Telpiskās izšķiršanas spējas attālums skaitliski jāizsaka garuma vienībās, norādot mērvienību.
+
+7. ATBILSTĪBA
+
+Lai izpildītu Direktīvas 2007/2/EK 5. panta 2. punkta a) apakšpunktā un 11. panta 2. punkta d) apakšpunktā minētās prasības par atbilstību un atbilstības pakāpi īstenošanas noteikumiem, kas pieņemti saskaņā ar Direktīvas 2007/2/EK 7. panta 1. punktu, jāizmanto šādi metadatu elementi.
+
+7.1. Specifikācija
+
+Tā ir atsauce uz īstenošanas noteikumiem, kas pieņemti saskaņā ar Direktīvas 2007/2/EK 7. panta 1. punktu, vai uz citu specifikāciju, kurai atbilst konkrētais resurss.
+
+Resurss var atbilst vairākiem īstenošanas noteikumiem, kas pieņemti saskaņā ar Direktīvas 2007/2/EK 7. panta 1. punktu, vai vairākām citām specifikācijām.
+
+Atsaucē jānorāda vismaz saskaņā ar Direktīvas 2007/2/EK 7. panta 1. punktu pieņemto īstenošanas noteikumu vai attiecīgas specifikācijas nosaukums un datums (publicēšanas datums, pēdējās redakcijas datums vai izveidošanas datums).
+
+7.2. Atbilstības pakāpe
+
+Tā raksturo resursa atbilstības pakāpi īstenošanas noteikumiem, kas pieņemti saskaņā ar Direktīvas 2007/2/EK 7. panta 1. punktu, vai kādai citai specifikācijai.
+
+Šā metadatu elementa vērtību kopa ir noteikta D daļas 5. punktā.
+
+8. PIEKĻUVES UN LIETOŠANAS IEROBEŽOJUMI
+
+Izmanto vienu vai abus no šiem piekļuves un lietošanas ierobežojumiem:
+
+- piekļuves un lietošanas nosacījumu kopa (8.1.),
+
+- publiskās piekļuves ierobežojumu kopa (8.2.).
+
+8.1. Piekļuves un lietošanas nosacījumi
+
+Ar šo metadatu elementu definē telpisko datu kopu un pakalpojumu piekļuves un lietošanas nosacījumus, un attiecīgos gadījumos arī lietošanas maksu saskaņā ar Direktīvas 2007/2/EK 5. panta 2. punkta b) apakšpunktu un 11. panta 2. punkta f) apakšpunktu.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+Šim elementam jābūt piešķirtām vērtībām. Ja par piekļuvi konkrētajam resursam un tā izmantošanu nekādi nosacījumi nav paredzēti, tad tam piešķir vērtību "bez nosacījumiem". Ja nosacījumi nav zināmi, tā vērtība ir "nosacījumi nav zināmi".
+
+Šis elements sniedz arī informāciju par konkrētā resursa piekļuves un lietošanas maksu, ja tā ir noteikta, vai arī tajā vienotā resursu vietrāža (Uniform Resource Locator, URL) veidā norādīts, kur atrodama informācija attiecībā uz maksu.
+
+8.2. Publiskās piekļuves ierobežojumi
+
+Gadījumos, kad dalībvalstis ierobežo publisko piekļuvi telpisko datu kopām un telpisko datu pakalpojumiem saskaņā ar Direktīvas 2007/2/EK 13. pantu, šis metadatu elements sniedz informāciju par attiecīgajiem ierobežojumiem un to noteikšanas iemesliem.
+
+Ja publiskai piekļuvei ierobežojumu nav, minēto faktu norāda šajā metadatu elementā.
+
+Šā metadatu elementa vērtību kopa ir brīvteksts.
+
+9. PAR TELPISKO DATU KOPU UN PAKALPOJUMU IZVEIDOŠANU, PĀRVALDĪŠANU, UZTURĒŠANU UN IZPLATĪŠANU ATBILDĪGĀS ORGANIZĀCIJAS
+
+Saskaņā ar Direktīvas 2007/2/EK 5. panta 2. punkta d) apakšpunktu un 11. panta 2. punkta g) apakšpunktu jābūt diviem šādiem metadatu elementiem.
+
+9.1. Atbildīgā persona
+
+Par resursa izveidošanu, pārvaldīšanu, uzturēšanu un izplatīšanu atbildīgās organizācijas apraksts.
+
+Aprakstā jābūt:
+
+- organizācijas nosaukumam brīvteksta veidā,
+
+- e-pasta adresei saziņai rakstzīmju virknes veidā.
+
+9.2. Atbildīgās personas loma
+
+Tā ir atbildīgās organizācijas loma.
+
+Šā metadatu elementa vērtību kopa ir noteikta D daļas 6. punktā.
+
+10. METADATI PAR METADATIEM
+
+Saskaņā ar Direktīvas 2007/2/EK 5. panta 1. punktu jābūt šādiem metadatu elementiem.
+
+10.1. Metadatu kontaktpunkts
+
+Tas ir par metadatu izveidošanu un uzturēšanu atbildīgās organizācijas apraksts.
+
+Aprakstā jābūt:
+
+- organizācijas nosaukumam brīvteksta veidā,
+
+- e-pasta adresei saziņai rakstzīmju virknes veidā.
+
+10.2. Metadatu datums
+
+Tas ir metadatu ieraksta izveidošanas vai aktualizēšanas dienas datums.
+
+Šis datums jānorāda saskaņā ar standartu ISO 8601.
+
+10.3. Metadatu valoda
+
+Tā ir valoda, kurā izteikti metadatu elementi.
+
+Šā metadatu elementa vērtību kopā izmanto tikai Kopienas oficiālās valodas, kas izteiktas saskaņā ar standartu ISO 639-2.
+
+C DAĻA
+
+Norādījumi par metadatu elementu multiplicitāti un nosacījumiem
+
+Metadati, ar kuriem apraksta resursu, sastāv no 1. tabulā norādītajiem metadatu elementiem vai metadatu elementu grupām (aprakstot telpisko datu kopu vai telpisko datu kopu grupas) un no 2. tabulā norādītajiem metadatu elementiem vai metadatu elementu grupām (aprakstot telpisko datu kopas pakalpojumus).
+
+Šiem metadatu elementiem vai metadatu elementu grupām ir jāatbilst 1. un 2. tabulā norādītajai prognozētajai multiplicitātei un saistītajiem nosacījumiem.
+
+Ja par konkrēto metadatu elementu nekādu īpašu noteikumu nav, tad tas nozīmē, ka šis elements ir obligāts.
+
+Tabulās norādīta šāda informācija:
+
+- pirmajā ailē – norāde uz B daļas punktu, kurā aprakstīts metadatu elements vai metadatu elementu grupa,
+
+- otrajā ailē – metadatu elementa vai metadatu elementu grupas nosaukums,
+
+- trešajā ailē – metadatu elementa multiplicitāte. Multiplicitāte norādīta saskaņā ar vienotās modelēšanas valodas (Unified Modelling Language, UML) notāciju par multiplicitāti, kurā:
+
+- 1 nozīmē, ka rezultātu kopā attiecīgais metadatu elements var būt tikai vienreiz,
+
+- 1..* nozīmē, ka rezultātu kopā attiecīgajam metadatu elementam jābūt vismaz vienreiz,
+
+- 0..1 nozīmē, ka attiecīgā metadatu elementa iekļaušanai rezultātu kopā ir jāievēro nosacījumi, taču elements rezultātu kopā var būt tikai vienreiz,
+
+- 0..* nozīmē, ka attiecīgā metadatu elementa iekļaušanai rezultātu kopā ir jāievēro nosacījumi, taču elements rezultātu kopā var būt vienu vai vairākas reizes,
+
+- ja multiplicitāte ir 0..1 vai 0..*, ar nosacījumu definē, kad metadatu elementi ir jālieto obligāti,
+
+- ceturtajā ailē ir nosacījums par to, kā rīkoties, ja elementa multiplicitāte nav spēkā visiem resursa tipiem. Pārējos gadījumos visi elementi ir obligātie elementi.
+
+1. tabula
+
+Metadati par telpisko datu kopām un telpisko datu kopu grupām
+
+Atsauce | Metadatu elements | Multiplicitāte | Nosacījumi |
+
+1.1. | Resursa nosaukums | 1 | |
+
+1.2. | Resursa atreferējums | 1 | |
+
+1.3. | Resursa tips | 1 | |
+
+1.4. | Resursa vietrādis | 0..* | Obligāti, ja ir pieejams URL, lai par resursu iegūtu plašāku informāciju, un/vai piekļuve saistītiem pakalpojumiem. |
+
+1.5. | Unikāls resursa identifikators | 1..* | |
+
+1.7. | Resursa valoda | 0..* | Obligāti, ja resursā ir tekstveida informācija. |
+
+2.1. | Temata kategorija | 1..* | |
+
+3. | Atslēgvārds | 1..* | |
+
+4.1. | Ģeogrāfiskais izgriezums | 1..* | |
+
+5. | Laika piesaiste | 1..* | |
+
+6.1. | Datu izcelsme | 1 | |
+
+6.2. | Telpiskā izšķirtspēja | 0..* | Datu kopām un datu kopu grupām obligāti norādāms, ja iespējams norādīt ekvivalento mērogu vai izšķirtspējas attālumu. |
+
+7. | Atbilstība | 1..* | |
+
+8.1. | Piekļuves un lietošanas nosacījumi | 1..* | |
+
+8.2. | Publiskās piekļuves ierobežojumi | 1..* | |
+
+9. | Atbildīgā organizācija | 1..* | |
+
+10.1. | Metadatu kontaktpunkts | 1..* | |
+
+10.2. | Metadatu datums | 1 | |
+
+10.3. | Metadatu valoda | 1 | |
+
+2. tabula
+
+Metadati par telpisko datu pakalpojumiem
+
+Atsauce | Metadatu elements | Multiplicitāte | Nosacījumi |
+
+1.1. | Resursa nosaukums | 1 | |
+
+1.2. | Resursa atreferējums | 1 | |
+
+1.3. | Resursa tips | 1 | |
+
+1.4. | Resursa vietrādis | 0..* | Obligāti, ja pieejama saite uz resursu. |
+
+1.6. | Saistīts resurss | 0..* | Obligāti, ja pieejama saite uz datu kopām, kuras izmanto pakalpojumam. |
+
+2.2. | Telpisko datu pakalpojuma tips | 1 | |
+
+3. | Atslēgvārds | 1..* | |
+
+4.1. | Ģeogrāfiskais izgriezums | 0..* | Obligāti pakalpojumiem ar nepārprotamu ģeogrāfisku saturu. |
+
+5. | Laika piesaiste | 1..* | |
+
+6.2. | Telpiskā izšķirtspēja | 0..* | Obligāti gadījumos, kad konkrētajam pakalpojumam ir telpiskās izšķirtspējas ierobežojums. |
+
+7. | Atbilstība | 1..* | |
+
+8.1. | Piekļuves un lietošanas nosacījumi | 1..* | |
+
+8.2. | Publiskās piekļuves ierobežojumi | 1..* | |
+
+9. | Atbildīgā organizācija | 1..* | |
+
+10.1. | Metadatu kontaktpunkts | 1..* | |
+
+10.2. | Metadatu datums | 1 | |
+
+10.3. | Metadatu valoda | 1 | |
+
+D DAĻA
+
+Vērtību kopas
+
+Ja B daļā iekļautajā metadatu elementu aprakstā ir tā norādīts, tad D daļas 1. līdz 6. punktā aprakstītās vērtību kopas jāizmanto, ņemot vērā C daļas 1. un 2. tabulā norādīto multiplicitāti.
+
+Katru kopas vērtību definē:
+
+- ciparu identifikators,
+
+- cilvēkiem paredzēts tekstuāls nosaukums, kuru var tulkot Kopienas valodās,
+
+- valodas ziņā neitrāls nosaukums, kas paredzēts datoriem (vērtība norādīta iekavās),
+
+- pēc izvēles iekļauts apraksts vai definīcija.
+
+1. RESURSA TIPS
+
+1.1. Telpisko datu kopu grupa (series)
+
+1.2. Telpisko datu kopa (dataset)
+
+1.3. Telpisko datu pakalpojumi (services)
+
+2. TEMATU KATEGORIJAS SASKAŅĀ AR STANDARTU EN ISO 19115
+
+2.1. Lauksaimniecība (farming)
+
+Mājdzīvnieku un/vai kultūraugu audzēšana.
+
+Šī kategorija attiecas uz Direktīvas 2007/2/EK III pielikuma 9. punktā minēto telpisko datu tematu "Lauksaimniecības un akvakultūras iekārtas".
+
+2.2. Biota (biota)
+
+Dabas vides flora un/vai fauna.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 17. punkts "Bioģeogrāfiskie reģioni", III pielikuma 18. punkts "Dzīvotnes un biotopi", III pielikuma 19. punkts "Sugu izplatība".
+
+2.3. Robežas (boundaries)
+
+Zemes juridiskie apraksti.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: I pielikuma 4. punkts "Administratīvas vienības", III pielikuma 1. punkts "Statistikas vienības".
+
+2.4. Klimatoloģija/meteoroloģija/atmosfēra (climatologyMeteorologyAtmosphere)
+
+Atmosfēras procesi un parādības.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 13. punkts "Atmosfēras apstākļi", III pielikuma 14. punkts "Meteoroloģiski ģeogrāfiskie raksturlielumi".
+
+2.5. Ekonomika (economy)
+
+Ekonomiskā darbība, apstākļi un nodarbinātība.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 20. punkts "Enerģijas resursi", III pielikuma 21. punkts "Derīgo izrakteņu resursi".
+
+2.6. Reljefs (elevation)
+
+Augstums virs vai zem jūras līmeņa.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: II pielikuma 1. punkts "Augstums".
+
+2.7. Vide (environment)
+
+Vides resursi, vides aizsardzība un saglabāšana.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: I pielikuma 9. punkts "Aizsargājamas teritorijas".
+
+2.8. Zemeszinātņu informācija (geoscientificInformation)
+
+Ar zemes zinātnēm saistītā informācija.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 3. punkts "Augsne", II pielikuma 4. punkts "Ģeoloģija", III pielikuma 12. punkts "Dabas apdraudējuma zonas".
+
+2.9. Veselība (health)
+
+Veselība, veselības aprūpes pakalpojumi, cilvēka ekoloģija un drošība.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: III pielikuma 5. punkts "Cilvēku veselība un drošība".
+
+2.10. Attēlu pamatkartes/Zemes virsmas apaugums (imageryBaseMapsEarthCover)
+
+Pamatkartes.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK noteiktajiem telpisko datu tematiem: II pielikuma 3. punkts "Ortofotogrāfija", II pielikuma 2. punkts "Zemes virsma".
+
+2.11. Militārā izlūkošana (intelligenceMilitary)
+
+Karabāzes, militārās būves un darbības.
+
+Uz šo kategoriju īpaši neattiecas neviens no Direktīvā 2007/2/EK noteiktajiem telpisko datu tematiem.
+
+2.12. Iekšzemes ūdeņi (inlandWaters)
+
+Iekšējo ūdeņu raksturpazīmes, drenāžas sistēmas un to parametri.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: I pielikuma 8. punkts "Hidrogrāfija".
+
+2.13. Ģeogrāfiskā atrašanās vieta (location)
+
+Informācija par atrašanās vietu un pakalpojumi.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: I pielikuma 3. punkts "Toponīmi", I pielikuma 5. punkts "Adreses".
+
+2.14. Okeāni (oceans)
+
+Sāļūdeņu raksturpazīmes un to parametri (izņemot iekšējos ūdeņus).
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK noteiktajiem telpisko datu tematiem: III pielikuma 16. punkts "Jūru reģioni", III pielikuma 15. punkts "Okeanogrāfiski ģeogrāfiskie raksturlielumi".
+
+2.15. Plānošana/kadastrs (planningCadastre)
+
+Informācija, kuru izmanto zemes pareizas izmantošanas plānošanai.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: I pielikuma 6. punkts "Kadastrāli zemes gabali", III pielikuma 4. punkts "Zemes izmantošana", III pielikuma 11. punkts "Apgabala pārvaldības/ierobežojumu/reglamentētas zonas un ziņošanas vienības".
+
+2.16. Sabiedrība (society)
+
+Sabiedrību un kultūru raksturojoši dati.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 10. punkts "Iedzīvotāju sadalījums – demogrāfija".
+
+2.17. Būves (structure)
+
+Ēkas un būves.
+
+Šī kategorija attiecas uz šādiem Direktīvā 2007/2/EK minētajiem telpisko datu tematiem: III pielikuma 2. punkts "Ēkas", III pielikuma 8. punkts "Ražošanas un rūpniecības iekārtas", III pielikuma 7. punkts "Vides monitoringa iekārtas".
+
+2.18. Transports (transportation)
+
+Cilvēku un kravu pārvietošanās līdzekļi un infrastruktūra.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: I pielikuma 7. punkts "Transporta tīkli".
+
+2.19. Komunālie dienesti/sakari (utilitiesCommunication)
+
+Energoapgādes, ūdensapgādes un kanalizācijas sistēmas, sakaru infrastruktūra un pakalpojumi.
+
+Šī kategorija attiecas uz šādu Direktīvā 2007/2/EK minēto telpisko datu tematu: III pielikuma 6. punkts "Komunālie un valsts dienesti".
+
+3. TELPISKO DATU PAKALPOJUMU TIPI
+
+3.1. Meklēšanas pakalpojums (discovery)
+
+Pakalpojumi, kas nodrošina telpisko datu kopu un pakalpojumu meklēšanas iespējas pēc attiecīgo metadatu satura un izvadīt uz ekrāna šo metadatu saturu.
+
+3.2. Skatīšanas pakalpojums (view)
+
+Pakalpojums, kas nodrošina vismaz šādas darbības: skatāmo telpisko datu izvadīšana uz ekrāna, navigācija, tuvināšana vai tālināšana, panoramēšana un pārklāšana, kā arī paskaidrojošas informācijas (leģendas) un attiecīgā metadatu satura izvadīšana uz ekrāna.
+
+3.3. Lejupielādēšanas pakalpojums (download)
+
+Pakalpojums, kas nodrošina telpisko datu kopu vai to daļu kopiju lejupielādēšanu vai (ja iespējams) tiešu piekļuvi tiem.
+
+3.4. Transformācijas pakalpojums (transformation)
+
+Pakalpojums, kas nodrošina telpisko datu kopu transformēšanu, lai nodrošinātu sadarbspēju.
+
+3.5. Telpisko datu izsaukšanas pakalpojums (invoke)
+
+Pakalpojums, kas nodrošina iespējas definēt datu ievades vai izvades, ko pieprasa telpisko datu pakalpojums un darbplūsma vai pakalpojumu ķēde, kurā apvienoti vairāki pakalpojumi. Tas arī dod iespēju norādīt darbplūsmas vai pakalpojumu ķēdes ārējā tīmekļa pakalpojuma saskarni.
+
+3.6. Cits pakalpojums (other)
+
+4. TELPISKO DATU PAKALPOJUMU KLASIFIKĀCIJA
+
+Atslēgvārdi izraudzīti, ņemot vērā ģeogrāfisko pakalpojumu taksonomiju, kas noteikta standartā EN ISO 19119. Šī taksonomija organizēta kategoriju veidā, ar apakškategorijām definējot telpisko datu pakalpojumu klasifikācijas vērtību kopu.
+
+100. Ģeogrāfiskie pakalpojumi ar cilvēka mijiedarbību (humanInteractionService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+101. Kataloga skatītājs (humanCatalogueViewer)
+
+Pakalpojums klientiem, kas lietotājam dod iespēju izmantot katalogu, lai atrastu, pārlūkotu un pārvaldītu ģeogrāfisko datu vai pakalpojumu metadatus.
+
+102. Ģeogrāfiskais skatītājs (humanGeographicViewer)
+
+Pakalpojums klientiem, kas lietotājam dod iespēju skatīt vienu vai vairākas raksturpazīmju kolekcijas vai pārklājumus.
+
+103. Ģeogrāfiskās rēķintabulas skatītājs (humanGeographicSpreadsheetViewer)
+
+Pakalpojums klientiem, kas lietotājam dod iespēju izvēlēties vairākus datu objektus un veikt ar ģeogrāfiskajiem datiem aprēķinus, kas līdzinās aprēķiniem, ko veic aritmētiskā rēķintabulā.
+
+104. Pakalpojuma redaktors (humanServiceEditor)
+
+Pakalpojums klientiem, kas dod lietotājam iespēju vadīt ģeogrāfisko datu apstrādes pakalpojumus.
+
+105. Ķēdes definīcijas redaktors (humanChainDefinitionEditor)
+
+Dod lietotājam iespēju veikt darbības ar virknes ķēdes definēšanas pakalpojumu.
+
+106. Darbplūsmas uzsākšanas pārvaldnieks (humanWorkflowEnactmentManager)
+
+Dod lietotājam iespēju veikt darbības ar darbplūsmas uzsākšanas pakalpojumu.
+
+107. Ģeogrāfisko objektu redaktors (humanGeographicFeatureEditor)
+
+Ģeogrāfiskais pārlūkotājs, kas dod lietotājam iespēju veikt darbības ar objekta datiem.
+
+108. Ģeogrāfisko simbolu redaktors (humanGeographicSymbolEditor)
+
+Pakalpojums klientiem, kas lietotājam dod iespēju atlasīt un pārvaldīt simbolu bibliotēkas.
+
+109. Objekta ģeneralizācijas redaktors (humanFeatureGeneralizationEditor)
+
+Pakalpojums klientiem, kas lietotājam dod iespēju modificēt objektu vai to kolekciju kartogrāfiskos parametrus, vienkāršojot to attēlojumu, vienlaikus saglabājot pamatelementus – vienkāršošanas telpisko ekvivalentu.
+
+110. Ģeogrāfisko datu struktūras skatītājs (humanGeographicDataStructureViewer)
+
+Pakalpojums klientiem, kas dod lietotājam iespējas piekļūt datu kopas daļai un apskatīt tās iekšējo struktūru.
+
+200. Ģeogrāfisko modeļu/informācijas pārvaldības pakalpojums (infoManagementService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+201. Raksturpazīmju piekļuves pakalpojums (infoFeatureAccessService)
+
+Pakalpojums, kas klientiem nodrošina piekļuvi raksturpazīmju krātuvei un nodrošina iespēju pārvaldīt minēto krātuvi.
+
+202. Karšu piekļuves pakalpojums (infoMapAccessService)
+
+Pakalpojums, kas klientiem nodrošina piekļuvi ģeogrāfiskajai grafikai, t. i., ģeogrāfisko datu attēliem.
+
+203. Aptvēruma piekļuves pakalpojums (infoCoverageAccessService)
+
+Pakalpojums, kas klientiem nodrošina piekļuvi aptvēruma krātuvei un nodrošina iespēju pārvaldīt minēto krātuvi.
+
+204. Sensoru apraksta pakalpojums (infoSensorDescriptionService)
+
+Pakalpojums, kas dod pārklājuma sensora aprakstu, kurā iekļauta sensora atrašanās vieta un orientācija, kā arī ģeogrāfisko datu apstrādei izmantojamie sensora ģeometriskie, dinamiskie un radiometriskie parametri.
+
+205. Produktu piekļuves pakalpojums (infoProductAccessService)
+
+Pakalpojums, kas klientiem nodrošina piekļuvi ģeogrāfisko produktu krātuvei un nodrošina iespēju pārvaldīt minēto krātuvi.
+
+206. Objektu tipu pakalpojums (infoFeatureTypeService)
+
+Pakalpojums, kas klientiem nodrošina piekļuvi objektu tipu definīciju krātuvei un nodrošina iespēju pārvaldīt minēto krātuvi.
+
+207. Kataloga pakalpojums (infoCatalogueService)
+
+Pakalpojums, kas nodrošina iespēju meklēt un pārvaldīt metadatu krātuvē esošas metadatu kopas.
+
+208. Reģistra pakalpojums (infoRegistryService)
+
+Pakalpojums, kas nodrošina piekļuvi tipus raksturojošo metadatu krātuvei.
+
+209. Ģeogrāfisko nosaukumu rādītāja (kataloga) pakalpojums (infoGazetteerService)
+
+Pakalpojums, kas nodrošina piekļuvi reālu parādību klases vai klašu objektu direktorijam, kurā ir informācija par atrašanās vietu.
+
+210. Pasūtījumu apkalpošanas pakalpojums (infoOrderHandlingService)
+
+Pakalpojums, kas klientam nodrošina iespējas pasūtīt produktus no piegādātāja.
+
+211. Pastāvīgā pasūtījuma pakalpojums (infoStandingOrderService)
+
+Pastāvīgā pasūtījuma pakalpojums, kas dod lietotājam iespēju pieprasīt, lai produkts par konkrētu ģeogrāfisko zonu tiek izplatīts, tiklīdz tas kļūst pieejams.
+
+300. Ģeogrāfisko datu darbplūsmas/uzdevumu pārvaldības pakalpojums (taskManagementService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+301. Ķēdes definēšanas pakalpojums (chainDefinitionService)
+
+Pakalpojums, kura uzdevums ir definēt ķēdi un aktivēt to, lai to varētu izpildīt darbplūsmas iedarbināšanas pakalpojums.
+
+302. Darbplūsmas uzsākšanas pakalpojums (workflowEnactmentService)
+
+Darbplūsmas uzsākšanas pakalpojums interpretē ķēdi, kontrolē pakalpojumu konkretizāciju un darbību sekvenci.
+
+303. Parakstīšanās pakalpojums (subscriptionService)
+
+Pakalpojums, kas klientiem dod iespējas reģistrēties paziņojumu saņemšanai par notikumiem.
+
+400. Ģeogrāfisko datu apstrādes pakalpojumi – telpiskie dati (spatialProcessingService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+401. Koordinātu konversijas pakalpojums (spatialCoordinateConversionService)
+
+Pakalpojums koordinātu pārveidošanai no vienas koordinātu sistēmas citā koordinātu sistēmā, kas ir saistīta ar to pašu bāzes atskaites sistēmu.
+
+402. Koordinātu transformācijas pakalpojums (spatialCoordinateTransformationService)
+
+Pakalpojums koordinātu pārveidošanai no vienas koordinātu sistēmas pie vienas bāzes atskaites sistēmas otrā koordinātu sistēmā ar citu bāzes atskaites sistēmu.
+
+403. Aptvēruma/vektoru konversijas pakalpojums (spatialCoverageVectorConversionService)
+
+Pakalpojums telpisko datu attēlojuma maiņai no aptvēruma (virsmas) shēmas uz vektoru shēmu vai otrādi.
+
+404. Attēla koordinātu konversijas pakalpojums (spatialImageCoordinateConversionService)
+
+Koordinātu transformācijas vai koordinātu pārvēršanas pakalpojums attēla koordinātu atskaites sistēmas maiņai.
+
+405. Rektifikācijas pakalpojums (spatialRectificationService)
+
+Pakalpojums attēla transformēšanai perpendikulārā projekcijā attēlam paralēlā plaknē, tādējādi izmantojot konstantu mērogu.
+
+406. Ortorektifikācijas pakalpojums (spatialOrthorectificationService)
+
+Rektifikācijas pakalpojums, kas novērš ar reljefa augstumu saistītos attēla kropļojumus un nobīdi.
+
+407. Sensoru ģeometrijas modeļu korekcijas pakalpojums (spatialSensorGeometryModelAdjustmentService)
+
+Pakalpojums, kas koriģē sensoru ģeometrijas modeļus, lai uzlabotu attēla sakritību ar citiem attēliem un/vai zināmiem atskaites punktiem uz zemes.
+
+408. Attēlu ģeometrijas modeļu konversijas pakalpojums (spatialImageGeometryModelConversionService)
+
+Pakalpojums, kas pārveido vienus sensoru ģeometrijas modeļus citos atšķirīgos, taču ekvivalentos sensoru ģeometrijas modeļos.
+
+409. Telpisko apakškopu veidošanas pakalpojums (spatialSubsettingService)
+
+Pakalpojums, kas no datiem par telpiski plašāku reģionu iegūst datus pēc ģeogrāfiskās atrašanās vietas vai pēc tīkla koordinātām.
+
+410. Telpisko paraugkopu atlases pakalpojums (spatialSamplingService)
+
+Pakalpojums, kas, izmantojot saskaņotu atlases shēmu, no ievaddatiem iegūst datus pēc ģeogrāfiskās atrašanās vietas vai pēc koordinātu tīkla koordinātām.
+
+411. Lapu sakārtojuma maiņas pakalpojums (spatialTilingChangeService)
+
+Pakalpojums, kas maina ģeogrāfisko datu lapu sakārtojumu.
+
+412. Izmēru noteikšanas pakalpojums (spatialDimensionMeasurementService)
+
+Pakalpojums attēlā vai citos zemes datos redzamo objektu izmēru aprēķināšanai.
+
+413. Objektu manipulēšanas pakalpojumi (spatialFeatureManipulationService)
+
+Vienu objektu piesaista citam objektam, attēlam, citai datu kopai vai citai koordinātu kopai; labo relatīvās translēšanas pārbīdes, rotācijas atšķirības, mēroga atšķirības un perspektīvas atšķirības. Pārbauda, vai visi objektu kolekcijā (Feature Collection) iekļautie objekti atbilst attiecīgās objektu kolekcijas topoloģijas noteikumiem, kā arī identificē un/vai labo visas atklātās neatbilstības.
+
+414. Objektu sakritības pakalpojums (spatialFeatureMatchingService)
+
+Pakalpojums, kas nosaka, kuri objekti un to daļas no vairākiem datu avotiem reprezentē vienu un to pašu reālo objektu, piemēram, kontūru sakritība un daļēja saplūšana.
+
+415. Objektu ģeneralizācijas pakalpojums (spatialFeatureGeneralizationService)
+
+Pakalpojums, kas objektu kolekcijas telpisko datu dažādību samazina, lai sakaru efektivitāti uzlabotu, pretdarbojoties datu apjoma samazināšanas nevēlamajiem efektiem.
+
+416. Maršruta noteikšanas pakalpojums (spatialRouteDeterminationService)
+
+Pakalpojums, kas nosaka optimālo maršrutu no viena norādītā punkta līdz citam, ņemot vērā objektu kolekcijā iekļautos ievades parametrus un īpašības.
+
+417. Vietnoteices pakalpojums (spatialPositioningService)
+
+Pakalpojums, ko sniedz ģeogrāfiskās vietnoteices ierīce atrašanās vietas pozicionēšanas informācijas lietošanai, iegūšanai un nepārprotamai interpretācijai un nosaka, vai rezultāti atbilst lietošanas prasībām.
+
+418. Apkārtnes analīzes pakalpojums (spatialProximityAnalysisService)
+
+Izmantojot atrašanās vietu vai ģeogrāfisko objektu, pakalpojums atrod visus objektus ar norādīto atribūtu kopumu, kuri atrodas lietotāja norādītajā attālumā no atrašanās vietas vai raksturpazīmes.
+
+500. Ģeogrāfisko datu apstrādes pakalpojumi – tematiskā apstrāde (thematicProcessingService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+501. Ģeogrāfisko parametru aprēķināšanas pakalpojums (thematicGoparameterCalculationService)
+
+Pakalpojums tādu uz lietojumu orientētu kvantitatīvu rezultātu iegūšanai, kurus paši neapstrādātie izejas dati nesatur.
+
+502. Tematiskās klasifikācijas pakalpojums (thematicClassificationService)
+
+Pakalpojums ģeogrāfisko datu apgabalu klasifikācijai pēc tematu atribūtiem.
+
+503. Raksturpazīmju vispārināšanas pakalpojums (thematicFeatureGeneralizationService)
+
+Pakalpojums, kas raksturpazīmju kolekcijā ietilpstošos raksturpazīmju tipus ģeneralizē, lai sakaru efektivitāti uzlabotu, pretdarbojoties datu apjoma samazināšanas nevēlamajiem efektiem.
+
+504. Tematisko apakškopu veidošanas pakalpojums (thematicSubsettingService)
+
+Pakalpojums, kas no plašākiem datiem iegūst datus pēc parametru vērtībām.
+
+505. Skaitīšanas pakalpojums (thematicSpatialCountingService)
+
+Pakalpojums, kas skaita ģeogrāfiskās raksturpazīmes.
+
+506. Izmaiņu konstatācijas pakalpojums (thematicChangeDetectionService)
+
+Pakalpojums, kas atrod divu tādu datu kopu atšķirības, kuras vienu ģeogrāfisko apgabalu reprezentē dažādos laika momentos.
+
+507. Ģeogrāfiskās informācijas ieguves pakalpojumi (thematicGeographicInformationExtractionService)
+
+Pakalpojumi, kas atbalsta objektu un reljefa informācijas ieguvi no distanciālās zondēšanas un skenētiem attēliem.
+
+508. Attēlu apstrādes pakalpojums (thematicImageProcessingService)
+
+Pakalpojums attēla tematisko atribūtu vērtību mainīšanai, izmantojot matemātisku funkciju.
+
+509. Mazākas izšķirtspējas ģenerēšanas pakalpojums (thematicReducedResolutionGenerationService)
+
+Pakalpojums, kas samazina attēla izšķirtspēju.
+
+510. Attēlu manipulēšanas pakalpojumi (thematicFeatureManipulationService)
+
+Pakalpojums datu vērtību manipulēšanai attēlos: krāsas un kontrasta vērtības mainīšana, dažādu filtru lietošana, attēla izšķirtspējas mainīšana, traucējumu noņemšana, joslu veidošana, sistemātiskās–radiometriskās korekcijas, atmosfēras vājināšana, novērojamās ainas apgaismojuma izmaiņas u. c.
+
+511. Attēlu interpretācijas pakalpojumi (thematicImageUnderstandingService)
+
+Pakalpojumi, kas automātiski detektē attēlu izmaiņas, reģistrē attēlu diferenciāciju, veic izmaiņu būtiskuma analīzi un attēlo iegūtos rezultātus, kā arī diferenciāciju pēc apgabaliem vai modeļiem.
+
+512. Attēlu sintēzes pakalpojumi (thematicImageSynthesisService)
+
+Pakalpojumi, kas paredzēti attēlu izveidei un transformēšanai, izmantojot datorizētus telpiskos modeļus, kā arī perspektīvas transformēšanai un attēla parametru mainīšanai, lai uzlabotu redzamību, palielinātu asumu un/vai samazinātu mākoņu segas vai dūmakas ietekmi.
+
+513. Attēlu daudzfrekvenču apstrāde (thematicMultibandImageManipulationService)
+
+Pakalpojumi attēlu modificēšanai, izmantojot vairākas attēla frekvenču joslas.
+
+514. Objektu atpazīšanas pakalpojums (thematicObjectDetectionService)
+
+Pakalpojums reālu objektu atpazīšanai attēlos.
+
+515. Ģeoparsinga pakalpojums (thematicGeoparsingService)
+
+Pakalpojums teksta dokumentu skenēšanai, lai atrastu tādas ar ģeogrāfisko atrašanās vietu saistītas norādes kā vietvārdi, adreses, pasta indeksi u. c., un datus sagatavotu ģeokodēšanas pakalpojuma vajadzībām.
+
+516. Ģeokodēšanas pakalpojums (thematicGeocodingService)
+
+Pakalpojums ģeogrāfiskās atrašanās vietas norāžu teksta papildināšanai ar ģeogrāfiskajām koordinātām (vai kādu citu telpisku norādi).
+
+600. Ģeogrāfisko datu apstrādes pakalpojumi – laika dati (temporalProcessingService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+601. Laika atskaites sistēmas transformācijas pakalpojums (temporalReferenceSystemTransformationService)
+
+Pakalpojums laika instanču vērtību maiņai no vienas laika atskaites sistēmas citā laika atskaites sistēmā.
+
+602. Laika apakškopu veidošanas pakalpojums (temporalSubsettingService)
+
+Pakalpojums, kas no datiem par plašāku laika intervālu iegūst datus pēc laika momenta vērtības.
+
+603. Laika paraugkopu atlases pakalpojums (temporalSamplingService)
+
+Pakalpojums, kas no ievaddatiem, izmantojot saskaņotu atlases shēmu, iegūst datus pēc laika momenta vērtības.
+
+604. Laika analīzes pakalpojums (temporalProximityAnalysisService)
+
+Izmantojot laika intervālu vai notikumu, atrod visus objektus ar norādīto atribūtu kopumu, kuri atrodas lietotāja norādītajās robežās no laika intervāla vai notikuma.
+
+700. Ģeogrāfisko datu apstrādes pakalpojumi – metadati (metadataProcessingService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+701. Statistisko rādītāju aprēķināšanas pakalpojums (metadataStatisticalCalculationService)
+
+Pakalpojums datu kopas statistisko rādītāju aprēķināšanai.
+
+702. Ģeogrāfiskās anotācijas pakalpojumi (metadataGeographicAnnotationService)
+
+Pakalpojumi palīginformācijas pievienošanai attēlam vai raksturpazīmei raksturpazīmju kolekcijā.
+
+800. Ģeogrāfisko datu pārraides pakalpojumi (comService)
+
+Šajā kategorijā ir šādas apakškategorijas.
+
+801. Kodēšanas pakalpojums (comEncodingService)
+
+Pakalpojums, kas izpilda kodēšanas noteikumu un nodrošina saskarni kodēšanas un dekodēšanas funkcionalitātei.
+
+802. Pārsūtīšanas pakalpojums (comTransferService)
+
+Pakalpojums, kas izpilda vienu vai vairākus datu pārsūtīšanas protokolus, kuri nodrošina datu pārsūtīšanu starp dalītām informācijas sistēmām, izmantojot nesaistes vai tiešsaistes sakaru vidi.
+
+803. Ģeogrāfisko datu saspiešanas pakalpojums (comGeographicCompressionService)
+
+Pakalpojums, kas nodrošina raksturpazīmju kolekcijas telpisko datu porcijas saspiešanu un atspiešanu.
+
+804. Ģeogrāfisko datu formāta konversijas pakalpojums (comGeographicFormatConversionService)
+
+Pakalpojums, kas pārveido ģeogrāfiskos datus no viena formāta citā.
+
+805. Ziņojumapmaiņas pakalpojums (comMessagingService)
+
+Pakalpojums, kas vairākiem lietotājiem vienlaikus nodrošina iespējas skatīt, komentēt un pieprasīt objektu kolekciju redakcijas.
+
+806. Failu un izpildāmo failu attālā pārvaldība (comRemoteFileAndExecutableManagement)
+
+Pakalpojums, kas piekļuvi ģeogrāfisko raksturpazīmju sekundārajai atmiņai nodrošina tā, it kā klientam tā būtu lokālā atmiņa.
+
+5. ATBILSTĪBAS PAKĀPE
+
+5.1. Atbilstīgs (conformant)
+
+Resurss pilnībā atbilst norādītajai specifikācijai.
+
+5.2. Neatbilstīgs (notConformant)
+
+Resurss neatbilst norādītajai specifikācijai.
+
+5.3. Nav novērtēts (notEvaluated)
+
+Atbilstība nav novērtēta.
+
+6. ATBILDĪGĀS PERSONAS LOMA
+
+6.1. Resursa sniedzējs (resourceProvider)
+
+Persona, kas piegādā resursu.
+
+6.2. Pārvaldītājs (custodian)
+
+Persona, kas par datiem uzņemas atbildību un pienākumus un nodrošina resursa aprūpi un uzturēšanu.
+
+6.3. Īpašnieks (owner)
+
+Persona, kurai resurss pieder.
+
+6.4. Lietotājs (user)
+
+Persona, kas lieto resursu.
+
+6.5. Izplatītājs (distributor)
+
+Persona, kas resursu izplata.
+
+6.6. Oriģinators (originator)
+
+Persona, kas izveidojusi resursu.
+
+6.7. Kontaktpunkts (pointOfContact)
+
+Persona, ar kuru var sazināties, lai uzzinātu ko vairāk par resursu vai noskaidrotu, kā to iegūt.
+
+6.8. Galvenais meklētājs (principalInvestigator)
+
+Vadošā persona, kas atbild par informācijas vākšanu un izpēti.
+
+6.9. Apstrādātājs (processor)
+
+Persona, kas apstrādājusi datus, resursu modificējot.
+
+6.10. Publicētājs (publisher)
+
+Persona, kas resursu publicējusi.
+
+6.11. Autors (author)
+
+Persona, kas resursu autorējusi.
+
+--------------------------------------------------

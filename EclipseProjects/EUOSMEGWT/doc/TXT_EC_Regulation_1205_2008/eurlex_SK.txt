@@ -1,0 +1,987 @@
+Nariadenie Komisie (ES) č. 1205/2008
+
+z 3. decembra 2008,
+
+ktorým sa vykonáva smernica Európskeho parlamentu a Rady 2007/2/ES, pokiaľ ide o metaúdaje
+
+(Text s významom pre EHP)
+
+KOMISIA EURÓPSKYCH SPOLOČENSTIEV,
+
+so zreteľom na Zmluvu o založení Európskeho spoločenstva,
+
+so zreteľom na smernicu Európskeho parlamentu a Rady 2007/2/ES zo 14. marca 2007, ktorou sa zriaďuje Infraštruktúra pre priestorové informácie v Európskom spoločenstve (INSPIRE) [1], a najmä na jej článok 5 ods. 4,
+
+keďže:
+
+(1) V smernici 2007/2/ES sa ustanovujú všeobecné pravidlá zriadenia Infraštruktúry pre priestorové informácie v Európskom spoločenstve. Keďže na správne fungovanie tejto infraštruktúry je potrebné, aby užívateľ mohol nájsť súbory a služby priestorových údajov a určiť, či sa môžu použiť a na aký účel, členské štáty by mali pre tieto súbory a služby priestorových údajov zabezpečiť opisy vo forme metaúdajov. Keďže by tieto metaúdaje mali byť zlučiteľné a používateľné v rámci Spoločenstva i cezhranične, je potrebné ustanoviť pravidlá týkajúce sa metaúdajov používaných na opis súborov a služieb priestorových údajov, ktoré zodpovedajú témam uvedeným v prílohách I, II a III k smernici 2007/2/ES.
+
+(2) Je potrebné zadefinovanie súboru prvkov metaúdajov, aby sa umožnila identifikácia zdrojov informácií, pre ktoré sa metaúdaje vytvárajú, ich klasifikácia a identifikácia ich geografickej polohy a časového vymedzenia, kvality a platnosti, súladu s vykonávacími predpismi týkajúcimi sa interoperability súborov a služieb priestorových údajov, obmedzení prístupu a použitia a organizácie zodpovednej za zdroj. Prvky metaúdajov týkajúce sa samotného záznamu metaúdajov sú taktiež potrebné na monitorovanie toho, či sa vytvorené metaúdaje aktualizujú, a na identifikáciu organizácie zodpovednej za vytváranie a uchovávanie metaúdajov. Toto je minimálny súbor prvkov metaúdajov potrebný na dodržanie súladu s ustanoveniami smernice 2007/2/ES a nebráni tomu, aby organizácie mali možnosť dokumentovať zdroje informácií rozsiahlejšie spolu s dodatočnými prvkami pochádzajúcimi z medzinárodných noriem alebo z pracovných postupov v oblasti ich záujmu. Nebráni ani možnosti, aby Komisia prijala a aktualizovala ustanovené usmernenia, najmä ak je to potrebné na zabezpečenie interoperability metaúdajov.
+
+(3) Pokyny sú potrebné na kontrolu platnosti metaúdajov v súlade so smernicou 2007/2/ES vzhľadom na podmienky a očakávanú početnosť každého prvku metaúdajov; inými slovami, v prípade každého prvku je potrebné stanoviť, či sa hodnoty vždy budú uvádzať v zázname o metaúdajoch a či je ich potrebné uviesť iba raz alebo sa môžu uviesť viackrát.
+
+(4) Doména hodnôt každého prvku metaúdajov je potrebná na zabezpečenie interoperability metaúdajov vo viacjazyčnom kontexte a na to, aby táto doména hodnôt mohla mať formu voľného textu, dátumov, kódov pochádzajúcich z medzinárodných noriem, ako sú jazykové kódy, kľúčové slová odvodené z riadených zoznamov alebo tezaurov, alebo reťazcov znakov.
+
+(5) Opatrenia stanovené v tomto nariadení sú v súlade so stanoviskom výboru zriadeného na základe článku 22 smernice 2007/2/ES,
+
+PRIJALA TOTO NARIADENIE:
+
+Článok 1
+
+Predmet úpravy
+
+V tomto nariadení sa vymedzujú požiadavky na vytváranie a uchovávanie metaúdajov pre súbory priestorových údajov, série súborov priestorových údajov a služby priestorových údajov, ktoré zodpovedajú témam uvedeným v prílohách I, II a III k smernici 2007/2/ES.
+
+Článok 2
+
+Vymedzenia pojmov
+
+Na účely tohto nariadenia sa okrem definícií uvedených v článku 3 smernice 2007/2/ES uplatňujú definície uvedené v časti A prílohy.
+
+Článok 3
+
+Vytváranie a uchovávanie metaúdajov
+
+Metaúdaje, ktoré opisujú súbor priestorových údajov, série súborov priestorových údajov alebo služby priestorových údajov, obsahujú prvky metaúdajov alebo skupiny prvkov metaúdajov uvedené v časti B prílohy, ktoré sa vytvárajú a uchovávajú v súlade s predpismi stanovenými v častiach C a D prílohy.
+
+Článok 4
+
+Nadobudnutie účinnosti
+
+Toto nariadenie nadobúda účinnosť dvadsiatym dňom po jeho uverejnení v Úradnom vestníku Európskej únie.
+
+Toto nariadenie je záväzné v celom rozsahu a priamo uplatniteľné vo všetkých členských štátoch.
+
+V Bruseli 3. decembra 2008
+
+Za Komisiu
+
+Stavros Dimas
+
+člen Komisie
+
+[1] Ú. v. EÚ L 108, 25.4.2007, s. 1.
+
+--------------------------------------------------
+
+PRÍLOHA
+
+VYKONÁVACIE PREDPISY PRE METAÚDAJE
+
+ČASŤ A
+
+Výklad
+
+1. Uplatňujú sa tieto vymedzenia pojmov:
+
+- "reťazec znakov" znamená doménu hodnôt prvkov metaúdajov vyjadrenú ako súbor znakov považovaných za jednotku,
+
+- "voľný text" znamená doménu hodnôt prvkov metaúdajov vyjadrenú v jednom alebo viacerých prirodzených jazykoch,
+
+- "pôvod" znamená históriu súboru údajov a životný cyklus od zberu a nadobudnutia cez kompiláciu a odvodenie do jeho súčasnej formy v súlade s EN ISO 19101,
+
+- "prvok metaúdajov" znamená samostatnú jednotku metaúdaja v súlade s EN ISO 19115,
+
+- "menný priestor" znamená zber názvov identifikovaných prostredníctvom jednotného identifikátora zdroja (Uniform Resource Identifier – URI), ktoré sa používajú v dokumentoch rozšíriteľného značkovacieho jazyka (Extensible Markup Language – XML) ako názvy prvkov a názvy atribútov,
+
+- "kvalita" znamená súbor vlastností výrobku, ktoré súvisia s jeho schopnosťou uspokojiť uvedené a odvodené potreby v súlade s EN ISO 19101,
+
+- "zdroj" znamená zdroj informácií, ktorý má priame alebo nepriame prepojenie na konkrétnu lokalitu alebo geografickú oblasť,
+
+- "séria súborov priestorových údajov" znamená zber súborov priestorových údajov, ktoré majú rovnakú produktovú špecifikáciu.
+
+2. Odkazy na platnosť súborov priestorových údajov sa považujú za odkazy týkajúce sa akejkoľvek z týchto skutočností:
+
+- priestorového a časového rozsahu súvisiaceho s údajmi,
+
+- či údaje boli skontrolované vzhľadom na normy merania alebo výkonnosti,
+
+- rozsahu, do ktorého sa údaje hodia na daný účel,
+
+- v prípade potreby právoplatnosť súboru priestorových údajov.
+
+ČASŤ B
+
+Prvky metaúdajov
+
+1. IDENTIFIKÁCIA
+
+Poskytujú sa tieto prvky metaúdajov:
+
+1.1. Názov zdroja
+
+Ide o charakteristický a často jedinečný názov, pod ktorým je zdroj známy.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+1.2. Obsah zdroja
+
+Ide o stručné opisné zhrnutie obsahu zdroja.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+1.3. Druh zdroja
+
+Ide o druh zdroja, ktorý sa opisuje metaúdajmi.
+
+Doména hodnôt tohto prvku metaúdajov je zadefinovaná v časti D.1.
+
+1.4. Lokátor zdroja
+
+Lokátor zdroja vymedzuje prepojenie(-ia) na zdroj a/alebo väzbu s dodatočnými informáciami o zdroji.
+
+Doména hodnôt tohto prvku metaúdajov je reťazec znakov zvyčajne vyjadrený ako jednotný lokátor zdroja (Uniform Resource Locator – URL).
+
+1.5. Jedinečný identifikátor zdroja
+
+Hodnota jedinečne identifikujúca zdroj.
+
+Doména hodnôt tohto prvku metaúdajov je povinný kód reťazca znakov, ktorý zvyčajne prideľuje vlastník údajov, a menný priestor reťazca znakov, ktorý jedinečne identifikuje kontext kódu identifikátora (napríklad vlastník údajov).
+
+1.6. Združený zdroj
+
+Ak je zdrojom služba priestorových údajov, tento prvok metaúdajov identifikuje v prípade potreby cieľový(-é) súbor(-y) priestorových údajov služby pomocou jedinečných identifikátorov zdroja (Unique Resource Identifiers – URI).
+
+Doména hodnôt tohto prvku metaúdajov je povinný kód reťazca znakov, ktorý zvyčajne prideľuje vlastník údajov, a menný priestor reťazca znakov, ktorý jedinečne identifikuje kontext kódu identifikátora (napríklad vlastník údajov).
+
+1.7. Jazyk zdroja
+
+Jazyk(-y) používaný(-é) v rámci zdroja.
+
+Doména hodnôt tohto prvku metaúdajov sa obmedzuje na jazyky definované v ISO 639-2.
+
+2. KLASIFIKÁCIA PRIESTOROVÝCH ÚDAJOV A SLUŽIEB
+
+2.1. Tematická kategória
+
+Tematická kategória je systém klasifikácie na vysokej úrovni, ktorý má pomôcť pri zoskupovaní a vyhľadávaní dostupných zdrojov priestorových údajov na základe tém.
+
+Doména hodnôt tohto prvku metaúdajov je zadefinovaná v časti D.2.
+
+2.2. Druh služieb priestorových údajov
+
+Ide o klasifikáciu, ktorá má pomôcť pri vyhľadávaní dostupných služieb priestorových údajov. Konkrétna služba sa zaraďuje iba do jednej kategórie.
+
+Doména hodnôt tohto prvku metaúdajov je zadefinovaná v časti D.3.
+
+3. KĽÚČOVÉ SLOVO
+
+Ak je zdrojom služba priestorových údajov, poskytuje sa aspoň jedno kľúčové slovo uvedené v časti D.4.
+
+Ak je zdrojom súbor priestorových údajov alebo séria súborov priestorových údajov, uvedie sa aspoň jedno kľúčové slovo zo všeobecného viacjazyčného environmentálneho tezauru (GEMET), ktoré opisuje príslušnú tému priestorových údajov, ako sa definuje v prílohe I, II alebo III k smernici 2007/2/ES.
+
+Pri každom kľúčovom slove sa uvádzajú tieto prvky metaúdajov:
+
+3.1. Hodnota kľúčového slova
+
+Hodnota kľúčového slova je bežne používané slovo, formalizované slovo alebo veta používaná na opis predmetu. Keďže tematická kategória je príliš obšírna na podrobné otázky, kľúčové slová pomáhajú pri zúžení vyhľadávania plného textu a umožňujú štruktúrované vyhľadávanie podľa kľúčových slov.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+3.2. Východiskový riadený slovník
+
+Ak hodnota kľúčového slova pochádza z riadeného slovníka (tezaurus, ontológia), napríklad GEMET, uvedie sa citácia z východiskového riadeného slovníka.
+
+Táto citácia obsahuje minimálne názov a referenčný dátum (dátum uverejnenia, dátum poslednej revízie alebo vytvorenia) východiskového riadeného slovníka.
+
+4. GEOGRAFICKÁ POLOHA
+
+Požiadavka spojená s geografickou polohou uvedená v článku 11 ods. 2 písm. e) smernice 2007/2/ES sa vyjadruje prvkom metaúdajov geografické ohraničenie.
+
+4.1. Geografické ohraničenie
+
+Ide o rozsah zdroja v geografickom priestore uvedený ako geografické ohraničenie.
+
+Ohraničenie sa vyjadruje prostredníctvom západnej a východnej geografickej dĺžky a južnej a severnej geografickej šírky v desatinných stupňoch s presnosťou aspoň na 2 desatinné miesta.
+
+5. ČASOVÉ REFERENCIE
+
+Tento prvok metaúdajov sa zameriava na požiadavku dostupnosti informácií o časovom rozmere údajov uvedenú v článku 8 ods. 2 písm. d) smernice 2007/2/ES. Poskytuje sa aspoň jeden z prvkov metaúdajov uvedených v bodoch 5.1 až 5.4.
+
+Doména hodnôt prvkov metaúdajov uvedených v bodoch 5.1 až 5.4 je súbor dátumov. Každý dátum sa vzťahuje na systém časovej referencie a vyjadruje sa vo forme, ktorá je zlučiteľná s týmto systémom. Štandardným referenčným systémom je gregoriánsky kalendár s dátumami vyjadrenými v súlade s ISO 8601.
+
+5.1. Časový rozsah
+
+Časový rozsah definuje časové obdobie, na ktoré sa vzťahuje obsah zdroja. Toto časové obdobie sa môže vyjadriť akýmkoľvek z nasledujúcich spôsobov:
+
+- jednotlivý dátum,
+
+- interval dátumov vyjadrený dátumom začiatku a dátumom konca intervalu,
+
+- kombinácia jednotlivých dátumov a intervalov dátumov.
+
+5.2. Dátum uverejnenia
+
+Ide o dátum uverejnenia zdroja, ak je dostupný, alebo dátum nadobudnutia účinnosti. Dátumov uverejnenia môže byť viacero.
+
+5.3. Dátum poslednej revízie
+
+Ide o dátum poslednej revízie zdroja v prípade, ak bol zdroj revidovaný. Nesmie sa uviesť viac ako jeden dátum poslednej revízie.
+
+5.4. Dátum vytvorenia
+
+Ide o dátum vytvorenia zdroja. Nesmie sa uviesť viac ako jeden dátum vytvorenia zdroja.
+
+6. KVALITA A PLATNOSŤ
+
+Požiadavky uvedené v článku 5 ods. 2 a článku 11 ods. 2 smernice 2007/2/ES týkajúce sa kvality a platnosti priestorových údajov sa plnia pomocou týchto prvkov metaúdajov:
+
+6.1. Pôvod
+
+Ide o vyhlásenie týkajúce sa histórie procesu a/alebo celkovej kvality súboru priestorových údajov. V prípade potreby môže obsahovať vyhlásenie o tom, či bol súbor údajov overený alebo či bola zaručená kontrola kvality, či ide o oficiálnu verziu (ak existuje viacero verzií) a či má právnu platnosť.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+6.2. Priestorové rozlíšenie
+
+Priestorové rozlíšenie sa vzťahuje na mieru podrobnosti súboru údajov. Vyjadruje sa ako súbor hodnôt priestorového rozlíšenia, ktoré prípadne nemusia byť známe (zvyčajne v prípade mriežkových údajov a produktov odvodených zo snímok) alebo v ekvivalentných mierkach (zvyčajne v prípade máp alebo produktov odvodených z máp).
+
+Ekvivalentná mierka sa vo všeobecnosti vyjadruje ako celočíselná hodnota vyjadrujúca mierkové číslo.
+
+Hodnota rozlíšenia sa vyjadruje ako numerická hodnota spojená s jednotkou dĺžky.
+
+7. SÚLAD
+
+Požiadavky uvedené v článku 5 ods. 2 písm. a) a článku 11 ods. 2 písm. d) smernice 2007/2/ES týkajúce sa súladu a miery súladu s vykonávacími predpismi prijatými na základe článku 7 ods. 1 smernice 2007/2/ES sa plnia pomocou týchto prvkov metaúdajov:
+
+7.1. Špecifikácia
+
+Ide o citáciu vykonávacích predpisov prijatých na základe článku 7 ods. 1 smernice 2007/2/ES alebo inej špecifikácie, s ktorou je konkrétny zdroj v súlade.
+
+Zdroj môže byť v súlade s viacerými vykonávacími predpismi prijatými na základe článku 7 ods. 1 smernice 2007/2/ES alebo inou špecifikáciou.
+
+Táto citácia obsahuje aspoň názov a referenčný dátum (dátum uverejnenia, dátum poslednej revízie alebo vytvorenia) vykonávacích predpisov prijatých na základe článku 7 ods. 1 smernice 2007/2/ES alebo špecifikácie.
+
+7.2. Stupeň
+
+Ide o stupeň súladu zdroja s vykonávacími predpismi prijatými na základe článku 7 ods. 1 smernice 2007/2/ES alebo inou špecifikáciou.
+
+Doména hodnôt tohto prvku metaúdajov je zadefinovaná v časti D.5.
+
+8. OBMEDZENIA TÝKAJÚCE SA PRÍSTUPU A POUŽITIA
+
+Obmedzenia týkajúce sa prístupu a používania môže predstavovať jedna alebo obidve z týchto možností:
+
+- súbor podmienok uplatňovaných na prístup a používanie (bod 8.1),
+
+- súbor obmedzení prístupu verejnosti (bod 8.2).
+
+8.1. Podmienky uplatňované na prístup a použitie
+
+Tento prvok metaúdajov definuje podmienky prístupu a používania súborov a služieb priestorových údajov a prípadne zodpovedajúce poplatky, ako sa vyžaduje v článku 5 ods. 2 písm. b) a v článku 11 ods. 2 písm. f) smernice 2007/2/ES.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+Prvok musí mať hodnoty. Ak sa na prístup k zdroju a jeho používanie neuplatňujú žiadne podmienky, uvádza sa "neuplatňujú sa žiadne podmienky". Ak sú podmienky neznáme, uvádza sa "podmienky neznáme".
+
+Tento prvok poskytuje aj informácie o všetkých prípadných poplatkoch potrebných na získanie prístupu k zdroju a jeho používanie alebo sa odvoláva na jednotný lokátor zdroja (Uniform Resource Locator – URL), kde sú dostupné informácie o poplatkoch.
+
+8.2. Obmedzenia verejného prístupu
+
+Ak členské štáty obmedzia prístup verejnosti k súborom a službám priestorových údajov na základe článku 13 smernice 2007/2/ES, tento prvok metaúdajov poskytne informácie o obmedzeniach a ich odôvodnenia.
+
+Ak neexistujú obmedzenia prístupu verejnosti, táto skutočnosť sa uvádza v tomto prvku metaúdajov.
+
+Doména hodnôt tohto prvku metaúdajov je voľný text.
+
+9. ORGANIZÁCIE ZODPOVEDNÉ ZA VYTVÁRANIE, SPRÁVU, UCHOVÁVANIE A ROZŠIROVANIE SÚBOROV A SLUŽIEB PRIESTOROVÝCH ÚDAJOV
+
+Na účely článku 5 ods. 2 písm. d) a článku 11 ods. 2 písm. g) smernice 2007/2/ES sa poskytujú tieto dva prvky metaúdajov:
+
+9.1. Zodpovedná strana
+
+Ide o opis organizácie zodpovednej za vytváranie, správu, uchovávanie a rozširovanie zdrojov.
+
+Tento opis obsahuje:
+
+- názov organizácie ako voľný text,
+
+- kontaktnú e-mailovú adresu ako reťazec znakov.
+
+9.2. Úloha zodpovednej strany
+
+Ide o úlohu zodpovednej organizácie.
+
+Doména hodnôt tohto prvku metaúdajov je zadefinovaná v časti D.6.
+
+10. METAÚDAJE O METAÚDAJOCH
+
+Na účely článku 5 ods. 1 smernice 2007/2/ES sa poskytujú tieto prvky metaúdajov:
+
+10.1. Kontaktné miesto pre metaúdaje
+
+Ide o opis organizácie zodpovednej za vytváranie a uchovávanie metaúdajov.
+
+Tento opis obsahuje:
+
+- názov organizácie ako voľný text,
+
+- kontaktnú e-mailovú adresu ako reťazec znakov.
+
+10.2. Dátum metaúdajov
+
+Dátum, ktorý spresňuje, kedy bol záznam metaúdajov vytvorený alebo aktualizovaný.
+
+Tento údaj sa vyjadruje v súlade s ISO 8601.
+
+10.3. Jazyk metaúdajov
+
+Ide o jazyk, v ktorom sú vyjadrené prvky metaúdajov.
+
+Doména hodnôt tohto prvku metaúdajov sa obmedzuje na úradné jazyky Spoločenstva vyjadrené v súlade s ISO 639-2.
+
+ČASŤ C
+
+Pokyny týkajúce sa početnosti a podmienok prvkov metaúdajov
+
+Metaúdaje, ktoré opisujú zdroje, obsahujú v súvislosti so súborom priestorových údajov alebo sériou súborov priestorových údajov prvky metaúdajov alebo skupiny prvkov metaúdajov uvedené v tabuľke 1 a v súvislosti so službami súborov priestorových údajov prvky metaúdajov alebo skupiny prvkov metaúdajov uvedené v tabuľke 2.
+
+Tieto prvky metaúdajov alebo skupiny prvkov metaúdajov sú v súlade s očakávanou početnosťou a súvisiacimi podmienkami stanovenými v tabuľke 1 a tabuľke 2.
+
+Ak v súvislosti s konkrétnym prvkom metaúdajov nie je vyjadrená žiadna podmienka, tento prvok je povinný.
+
+Tabuľky obsahujú tieto informácie:
+
+- prvý stĺpec obsahuje odkaz na odsek v časti B prílohy a definuje sa v ňom prvok metaúdajov alebo skupina prvkov metaúdajov,
+
+- druhý stĺpec obsahuje názov prvku metaúdajov alebo skupiny prvkov metaúdajov,
+
+- v treťom stĺpci sa špecifikuje početnosť prvku metaúdajov. Pri vyjadrení početnosti sa vychádza z koncepcie početnosti uvedenej v jednotnom modelovacom jazyku (Unified Modelling Language – UML), podľa ktorej:
+
+- 1 znamená, že sa vo výslednom súbore uvádza iba jeden príklad tohto prvku metaúdajov,
+
+- 1..* znamená, že vo výslednom súbore je aspoň jeden príklad tohto prvku,
+
+- 0..1 naznačuje, že prítomnosť prvku metaúdajov vo výslednom súbore je podmienečná, môže sa však vyskytnúť iba raz,
+
+- 0..* naznačuje, že prítomnosť prvku metaúdajov vo výslednom súbore je podmienečná, môže sa však vyskytnúť raz alebo viackrát,
+
+- ak je početnosť 0..1 alebo 0..*, na základe podmienky sa stanoví, kedy sú prvky metaúdajov povinné,
+
+- štvrtý stĺpec obsahuje podmienečné vyhlásenie v prípade, ak sa početnosť prvku neuplatňuje na všetky druhy zdrojov. Za iných okolností sú povinné všetky prvky.
+
+Tabuľka 1
+
+Metaúdaje pre súbory priestorových údajov a série súborov priestorových údajov
+
+Odkaz | Prvky metaúdajov | Početnosť | Podmienky |
+
+1.1 | Názov zdroja | 1 | |
+
+1.2 | Obsah zdroja | 1 | |
+
+1.3 | Druh zdroja | 1 | |
+
+1.4 | Lokátor zdroja | 0..* | Povinné, ak je dostupný URL na získanie viac informácií o zdroji a/alebo službách týkajúcich sa prístupu. |
+
+1.5 | Jedinečný identifikátor zdroja | 1..* | |
+
+1.7 | Jazyk zdroja | 0..* | Povinné, ak zdroj obsahuje textové informácie. |
+
+2.1 | Tematická kategória | 1..* | |
+
+3 | Kľúčové slovo | 1..* | |
+
+4.1 | Geografické ohraničenie | 1..* | |
+
+5 | Časové referencie | 1..* | |
+
+6.1 | Pôvod | 1 | |
+
+6.2 | Priestorové rozlíšenie | 0..* | Povinné pre súbory údajov a série súborov údajov, ak možno vymedziť rovnocennú stupnicu alebo vzdialenosť rozlíšenia. |
+
+7 | Súlad | 1..* | |
+
+8.1 | Podmienky týkajúce sa prístupu a použitia | 1..* | |
+
+8.2 | Obmedzenia verejného prístupu | 1..* | |
+
+9 | Zodpovedná organizácia | 1..* | |
+
+10.1 | Kontaktné miesto pre metaúdaje | 1..* | |
+
+10.2 | Dátum metaúdajov | 1 | |
+
+10.3 | Jazyk metaúdajov | 1 | |
+
+Tabuľka 2
+
+Metaúdaje pre služby priestorových údajov
+
+Odkaz | Prvok metaúdajov | Početnosť | Podmienky |
+
+1.1 | Názov zdroja | 1 | |
+
+1.2 | Obsah zdroja | 1 | |
+
+1.3 | Druh zdroja | 1 | |
+
+1.4 | Lokátor zdroja | 0..* | Povinné, ak je dostupná väzba na službu. |
+
+1.6 | Združený zdroj | 0..* | Povinné, ak je dostupné prepojenie na súbory údajov, na základe ktorých sa služba prevádzkuje. |
+
+2.2 | Druh služieb priestorových údajov | 1 | |
+
+3 | Kľúčové slovo | 1..* | |
+
+4.1 | Geografické ohraničenie | 0…* | Povinné v prípade služieb s jednoznačne vymedzeným geografickým rozsahom. |
+
+5 | Časové vymedzenie | 1..* | |
+
+6.2 | Priestorové rozlíšenie | 0..* | Povinné, ak existuje obmedzenie týkajúce sa priestorového rozlíšenia v prípade tejto služby. |
+
+7 | Súlad | 1..* | |
+
+8.1 | Podmienky týkajúce sa prístupu a použitia | 1..* | |
+
+8.2 | Obmedzenia verejného prístupu | 1..* | |
+
+9 | Zodpovedná organizácia | 1..* | |
+
+10.1 | Kontaktné miesto pre metaúdaje | 1..* | |
+
+10.2 | Dátum metaúdajov | 1 | |
+
+10.3 | Jazyk metaúdajov | 1 | |
+
+ČASŤ D
+
+Domény hodnôt
+
+Ak sa to uvádza v opise prvkov metaúdajov v časti B, domény hodnôt uvedené v častiach D.1 až D.6 sa používajú v súvislosti s početnosťou vyjadrenou v tabuľke 1 a tabuľke 2 časti C.
+
+Vzhľadom na konkrétnu doménu sa každá hodnota definuje prostredníctvom:
+
+- číselného identifikátora,
+
+- textového mena osôb, ktoré sa môže preložiť do rôznych jazykov Spoločenstva,
+
+- jazykovo neutrálneho názvu počítačov (hodnota vyjadrená v úvodzovkách),
+
+- voliteľného opisu alebo definície.
+
+1. DRUH ZDROJA
+
+1.1. Série súborov priestorových údajov (series)
+
+1.2. Súbor priestorových údajov (dataset)
+
+1.3. Služby priestorových údajov (services)
+
+2. TEMATICKÉ KATEGÓRIE V SÚLADE S EN ISO 19115
+
+2.1. Poľnohospodárstvo (farming)
+
+Chov zvierat a/alebo pestovanie rastlín.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES v prílohe III ods. 9 – Poľnohospodárske zariadenia a zariadenia akvakultúry.
+
+2.2. Biota (biota)
+
+Flóra a/alebo fauna v prirodzenom prostredí.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 17 – Biogeografické regióny, v prílohe III ods. 18 – Habitaty a biotopy, v prílohe III ods. 19 – Výskyt druhov.
+
+2.3. Hranice (boundaries)
+
+Opisy právnych vzťahov k pozemkom.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe I ods. 4 – Správne jednotky, v prílohe III ods. 1 – Štatistické jednotky.
+
+2.4. Klimatológia/meteorológia/podnebie (climatologyMeteorologyAtmosphere)
+
+Atmosférické procesy a javy.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 13 – Atmosférické podmienky, v prílohe III ods. 14 – Meteorologické geografické prvky.
+
+2.5. Hospodárstvo (economy)
+
+Hospodárske činnosti, podmienky a zamestnanosť.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 20 – Zdroje energie, v prílohe III ods. 21 – Zdroje nerastných surovín.
+
+2.6. Nadmorská výška (elevation)
+
+Výška nad alebo pod hladinou mora.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe II ods. 1 – Výška.
+
+2.7. Životné prostredie (environment)
+
+Zdroje, ochrana a zachovanie životného prostredia.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe I ods. 9 – Chránené územia.
+
+2.8. Geovedné informácie (geoscientificInformation)
+
+Informácie týkajúce sa vied o Zemi.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 3 – Pôda, v prílohe II ods. 4 – Geológia, v prílohe III ods. 12 – Zóny prírodného rizika.
+
+2.9. Zdravie (health)
+
+Zdravie, zdravotnícke služby, humánna ekológia a bezpečnosť.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe III ods. 5 – Ľudské zdravie a bezpečnosť.
+
+2.10. Letecké snímkovanie/základné mapy/krajinná pokrývka (imageryBaseMapsEarthCover)
+
+Základné mapy.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe II ods. 3 – Ortometria, v prílohe II ods. 2 – Krajinná pokrývka.
+
+2.11. Spravodajská služba/armáda (intelligenceMilitary)
+
+Vojenské základne, štruktúry, aktivity.
+
+Táto kategória sa konkrétne nevzťahuje na žiadnu tému priestorových údajov uvedenú v smernici 2007/2/ES.
+
+2.12. Vnútrozemské vody (inlandWaters)
+
+Charakteristiky vnútrozemských vôd, odvodňovacie systémy a ich charakteristiky.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe I ods. 8 – Hydrografia.
+
+2.13. Poloha (location)
+
+Informácie a služby týkajúce sa polohy.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe I ods. 3 – Zemepisné názvy, v prílohe I ods. 5 – Adresy.
+
+2.14. Oceány (oceans)
+
+Vlastnosti a charakteristika útvarov slanej vody (okrem vnútrozemských vôd).
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 16 – "Morské regióny", v prílohe III ods. 15 – Oceánografické geografické prvky.
+
+2.15. Územné plánovanie/kataster (planningCadastre)
+
+Informácie používané na prijatie vhodných opatrení týkajúcich sa budúceho využívania pôdy.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe I ods. 6 – Katastrálne parcely, v prílohe III ods. 4 – Využitie územia, v prílohe III ods. 11 – Spravované/obmedzené/regulované zóny a jednotky podávajúce správy.
+
+2.16. Spoločnosť (society)
+
+Charakteristika spoločnosti a kultúr.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe III ods. 10 – Rozmiestnenie obyvateľstva – demografia.
+
+2.17. Štruktúra (structure)
+
+Výstavba uskutočňovaná ľuďmi.
+
+Táto kategória sa vzťahuje na tieto témy priestorových údajov uvedené v smernici 2007/2/ES: v prílohe III ods. 2 – Stavby, v prílohe III ods. 8 – Výrobné a priemyselné zariadenia, v prílohe III ods. 7 – Zariadenia na monitorovanie životného prostredia.
+
+2.18. Doprava (transportation)
+
+Prostriedky a pomôcky na prepravu osôb a/alebo tovarov.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe I ods. 7 – Dopravné siete.
+
+2.19. Inžinierske siete (utilitiesCommunication)
+
+Energetické, vodné a odpadové systémy a komunikačná infraštruktúra a služby.
+
+Táto kategória sa vzťahuje na tému priestorových údajov uvedenú v smernici 2007/2/ES: v prílohe III ods. 6 – Verejné a štátne služby.
+
+3. DRUH SLUŽIEB PRIESTOROVÝCH ÚDAJOV
+
+3.1. Vyhľadávacie služby (discovery)
+
+Služby, ktoré umožňujú vyhľadávať súbory a služby priestorových údajov na základe obsahu zodpovedajúcich metaúdajov a zobraziť obsah týchto metaúdajov.
+
+3.2. Služby prezerania (view)
+
+Služby, ktoré umožňujú aspoň zobraziť, nasmerovať, priblížiť/vzdialiť, panoramaticky zobraziť alebo prekryť súbory priestorových údajov a zobraziť vysvetlivky a akýkoľvek relevantný obsah metaúdajov.
+
+3.3. Služby sťahovania údajov (download)
+
+Služby, ktoré umožňujú sťahovanie kópií súborov priestorových údajov alebo ich častí a prípadný priamy prístup k týmto súborom.
+
+3.4. Transformačné služby (transformation)
+
+Služby, ktoré umožňujú transformovať súbory priestorových údajov na účely dosiahnutia interoperability.
+
+3.5. Služba, ktorá umožňuje spustenie služieb priestorových údajov (invoke)
+
+Služby, ktoré umožňujú definovanie vstupných aj výstupných údajov, ktoré sa očakávajú pri priestorovej službe, a procesy alebo reťazenie služieb, pri ktorých sa spájajú viaceré služby. Umožňujú aj definovanie vonkajšieho rozhrania internetovej služby procesov alebo reťazenia služieb.
+
+3.6. Ostatné služby (other)
+
+4. KLASIFIKÁCIA SLUŽIEB PRIESTOROVÝCH ÚDAJOV
+
+Kľúčové slová sa zakladajú na taxonómii geografických služieb podľa EN ISO 19119. Táto taxonómia je rozdelená do kategórií a podkategórií, v ktorých sa definuje doména hodnôt klasifikácie služieb priestorových údajov.
+
+100. Geografické služby ľudskej interakcie (humanInteractionService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+101. Prehliadač katalógov (humanCatalogueViewer)
+
+Užívateľská služba, ktorá užívateľovi umožňuje interakciu s katalógom s cieľom nájsť, prehliadať a spravovať metaúdaje o geografických údajoch alebo službách.
+
+102. Geografický prehliadač (humanGeographicViewer)
+
+Užívateľská služba, ktorá užívateľovi umožňuje prehliadať jednu alebo viacero vektorových, alebo rastrových zbierok.
+
+103. Prehliadač geografických tabuliek (humanGeographicSpreadsheetViewer)
+
+Užívateľská služba, ktorá užívateľovi umožňuje interakciu s viacerými objektmi, a jej prostredníctvom môže požiadať o výpočty podobné aritmetickým tabuľkám, avšak rozšírené o geografické údaje.
+
+104. Editor služieb (humanServiceEditor)
+
+Užívateľská služba, ktorá užívateľovi umožňuje kontrolovať služby geografického spracovania.
+
+105. Editor definície reťazca (humanChainDefinitionEditor)
+
+Zabezpečuje interakciu užívateľa so službou definície reťazca.
+
+106. Manažér procesov (humanWorkflowEnactmentManager)
+
+Zabezpečuje interakciu užívateľa so službou riadenia procesov.
+
+107. Editor geografických prvkov (humanGeographicFeatureEditor)
+
+Geografický prehliadač, ktorý užívateľovi umožňuje interakciu s prvkami údajov.
+
+108. Editor geografických symbolov (humanGeographicSymbolEditor)
+
+Užívateľská služba, ktorá ľuďom umožňuje vybrať a riadiť knižnice symbolov.
+
+109. Editor zovšeobecňovania prvkov (humanFeatureGeneralizationEditor)
+
+Užívateľská služba, ktorá užívateľovi umožňuje meniť kartografické vlastnosti prvkov alebo súboru prvkov zjednodušením ich zobrazovania pri zachovaní ich charakteristických prvkov – priestorový ekvivalent zjednodušenia.
+
+110. Prehliadač štruktúry geografických údajov (humanGeographicDataStructureViewer)
+
+Užívateľská služba, ktorá užívateľovi umožňuje prístup k časti súboru údajov, aby mohol vidieť jeho vnútornú štruktúru.
+
+200. Služba riadenia geografických modelov/informácií (infoManagementService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+201. Služba prístupu k prvkom (infoFeatureAccessService)
+
+Služba, ktorá užívateľovi umožňuje prístup k zdroju prvkov a jej riadenie.
+
+202. Služba prístupu k mapám (infoMapAccessService)
+
+Služba, ktorá užívateľovi poskytuje prístup ku geografickej grafike, t. j. obrazom geografických údajov.
+
+203. Služba prístupu k rastrom (infoCoverageAccessService)
+
+Služba, ktorá užívateľovi umožňuje prístup k zdroju rastrov a jej riadenie.
+
+204. Služba opisu snímača (infoSensorDescriptionService)
+
+Služba, ktorá poskytuje opis rastrového snímača vrátane umiestnenia a orientácie snímača, ako aj geometrických, dynamických a rádiometrických vlastností snímača na geografické spracovateľské účely.
+
+205. Služba prístupu k produktom (infoProductAccessService)
+
+Služba, ktorá umožňuje prístup k zdroju geografických produktov a jej riadenie.
+
+206. Služba týkajúca sa typov prvkov (infoFeatureTypeService)
+
+Služba, ktorá zabezpečuje klientovi prístup k zdroju definícií typov prvkov a jej riadenie.
+
+207. Katalógová služba (infoCatalogueService)
+
+Služba, ktorá poskytuje služby vyhľadávania a riadenia týkajúce sa zdroja metaúdajov o jednotlivých príkladoch.
+
+208. Služba registra (infoRegistryService)
+
+Služba, ktorá poskytuje prístup k zdroju metaúdajov týkajúcich sa jednotlivých typov.
+
+209. Služba geografického názvoslovia (infoGazetteerService)
+
+Služba, ktorá poskytuje prístup k adresárom príkladov triedy alebo tried skutočných javov obsahujúcim určité informácie týkajúce sa polohy.
+
+210. Služba spracovania objednávok (infoOrderHandlingService)
+
+Služba, ktorá užívateľovi poskytuje možnosť objednať si produkty od poskytovateľa.
+
+211. Služba trvalého príkazu (infoStandingOrderService)
+
+Služba spracovania objednávok, ktorá užívateľovi umožňuje požiadať o rozšírenie produktu v geografickej oblasti, keď sa stane dostupným.
+
+300. Služba riadenia geografických procesov/úloh (taskManagementService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+301. Služba definície reťazca (chainDefinitionService)
+
+Služba, ktorá umožňuje definíciu reťazca a jeho vykonanie prostredníctvom služby zabezpečujúcej procesy.
+
+302. Služba zabezpečujúca procesy (workflowEnactmentService)
+
+Služba zabezpečujúca procesy vysvetľuje reťazec a kontroluje konkretizáciu služieb a zoradenie činností.
+
+303. Služba predplatného (subscriptionService)
+
+Služba, ktorá užívateľom umožňuje zaregistrovať sa s cieľom dostávať oznámenia o podujatiach.
+
+400. Služby geografického spracovania – priestorové (spatialProcessingService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+401. Služba konverzie súradníc (spatialCoordinateConversionService)
+
+Služba určená na prevod súradníc z jedného súradnicového systému do iného súradnicového systému, ktorý sa vzťahuje na rovnaký elipsoid.
+
+402. Služba transformácie súradníc (spatialCoordinateTransformationService)
+
+Služba určená na transformáciu súradníc z referenčného súradnicového systému vztiahnutého k jednému elipsoidu do referenčného súradnicového systému vztiahnutému k inému elipsoidu.
+
+403. Služba konverzie rastrov/vektorov (spatialCoverageVectorConversionService)
+
+Služba určená na zmenu priestorovej reprezentácie zo schémy rastrovej na schému vektorovú alebo naopak.
+
+404. Služba konverzie súradníc snímky (spatialImageCoordinateConversionService)
+
+Služba transformácie súradníc alebo konverzie súradníc určená na zmenu referenčného súradnicového systému pre snímku.
+
+405. Služba rektifikácie (spatialRectificationService)
+
+Služba určená na transformáciu snímky do zvislej paralelnej projekcie, a tým konštantnej mierky.
+
+406. Služba ortorektifikácie (spatialOrthorectificationService)
+
+Služba ortorektifikácie, ktorá odstraňuje vychýlenie snímky a posun v dôsledku výšky terénu.
+
+407. Služba úpravy geografických modelov snímačov(spatialSensorGeometryModelAdjustmentService)
+
+Služba, ktorá upravuje geografické modely snímačov s cieľom zlepšiť súlad snímky s ostatnými snímkami a/alebo známymi pozemnými polohami.
+
+408. Služba konverzie geometrického modelu snímky (spatialImageGeometryModelConversionService)
+
+Služba, ktorá konvertuje geografické modely snímačov do iného, ale rovnocenného geografického modelu snímača.
+
+409. Služba tvorby podsúborov (spatialSubsettingService)
+
+Služba, ktorá vyberá údaje zo vstupu v súvislom priestorovom regióne buď pomocou geografickej polohy, alebo rastrových súradníc.
+
+410. Služba výberu vzorky (spatialSamplingService)
+
+Služba, ktorá vyberá údaje zo vstupu pri použití systému dôkladného výberu vzorky buď pomocou geografickej polohy, alebo rastrových súradníc.
+
+411. Služba zmeny delenia (spatialTilingChangeService)
+
+Služba, ktorá mení delenie geografických údajov.
+
+412. Služba merania rozmerov (spatialDimensionMeasurementService)
+
+Služba určená na výpočet rozmerov predmetov viditeľných na snímke alebo na iných geografických údajoch.
+
+413. Služba manipulácie s prvkami (spatialFeatureManipulationService)
+
+Zaznamenáva jeden prvok do iného prvku, snímky alebo iného súboru údajov alebo súboru súradníc; upravuje prípadné posuny pri prenose, rozdiely pri rotácii, rozdiely v stupnici a rozdiely v perspektíve. Overuje, či sú všetky prvky v zbierke prvkov topologicky v súlade s topologickými pravidlami zbierky prvkov a identifikuje a/alebo opravuje všetky zistené nezrovnalosti.
+
+414. Služba porovnávania prvkov (spatialFeatureMatchingService)
+
+Služba, ktorou sa stanovuje, ktoré prvky a časti prvkov predstavujú rovnaký skutočný subjekt z viacerých zdrojov údajov, napr. porovnávanie okrajov a obmedzené spájanie.
+
+415. Služba zovšeobecňovania prvkov (spatialFeatureGeneralizationService)
+
+Služba, ktorá obmedzuje priestorové variácie v zbierke prvkov s cieľom zvýšiť účinnosť komunikácie vyvážením neželaných účinkov obmedzenia údajov.
+
+416. Služba stanovenia trasy (spatialRouteDeterminationService)
+
+Služba určená na stanovenie optimálnej trasy medzi dvoma konkrétnymi bodmi na základe vstupných parametrov a vlastností obsiahnutých v zbierke prvkov.
+
+417. Služba zisťovania polohy (spatialPositioningService)
+
+Služba je poskytovaná pomocou prístroja na zisťovanie polohy s cieľom používať, získať a jednoznačne interpretovať informácie o polohe a stanovuje, či výsledky spĺňajú požiadavky na použitie.
+
+418. Služba analýzy blízkosti (spatialProximityAnalysisService)
+
+Na základe polohy alebo geografického prvku služba nachádza všetky predmety s určeným súborom atribútov, ktoré sa nachádzajú v užívateľom špecifikovanej vzdialenosti polohy alebo prvku.
+
+500. Služby geografického spracovania – tematické (thematicProcessingService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+501. Služba výpočtu geografických parametrov (thematicGoparameterCalculationService)
+
+Služba určená na odvodenie kvantitatívnych výsledkov zameraných na aplikácie, ktoré nie sú dostupné zo samotných nespracovaných údajov.
+
+502. Služba tematickej klasifikácie (thematicClassificationService)
+
+Služba určená na klasifikáciu regiónov geografických údajov na základe tematických atribútov.
+
+503. Služba zovšeobecňovania prvkov (thematicFeatureGeneralizationService)
+
+Služba, ktorá zovšeobecňuje typy prvkov v zbierke prvkov s cieľom zvýšiť účinnosť komunikácie odstránením vyvážením účinkov obmedzenia údajov.
+
+504. Služba tvorby podsúborov (thematicSubsettingService)
+
+Služba, ktorou sa vyberú údaje zo vstupu na základe hodnôt parametrov.
+
+505. Služba priestorového počítania (thematicSpatialCountingService)
+
+Služba, ktorá počíta geografické prvky.
+
+506. Služba zisťovania zmien (thematicChangeDetectionService)
+
+Služba, ktorá nájde rozdiely medzi dvoma súbormi údajov, ktoré predstavujú rovnakú geografickú oblasť v rôznych časových úsekoch.
+
+507. Služby extrakcie geografických informácií (thematicGeographicInformationExtractionService)
+
+Služba, ktorá podporuje extrakciu prvkov a informácií o území z diaľkovo snímaných a skenovaných snímok.
+
+508. Služba spracovania snímok (thematicImageProcessingService)
+
+Služba, ktorá mení hodnoty tematických atribútov snímok pri použití matematickej funkcie.
+
+509. Služba znižovania rozlíšenia (thematicReducedResolutionGenerationService)
+
+Služba, ktorá znižuje rozlíšenie snímky.
+
+510. Služby manipulácie so snímkou (thematicImageManipulationService)
+
+Služby manipulácie s hodnotami údajov v snímkach: zmena hodnôt farby a kontrastu, používanie rôznych filtrov, manipulácia s rozlíšením snímky, odstránenie šumu, obmedzovanie pásov, systematické rádiometrické opravy, atmosférické tlmenie, zmeny osvetlenia scény atď.
+
+511. Služby porozumenia snímky (thematicImageUnderstandingService)
+
+Služby, ktoré zabezpečujú automatické zistenie zmeny snímky, odlišnosť v porovnaní so zaznamenanou snímkou, analýzu a zobrazenie významu rozdielu a odlišnosť na základe oblasti a modelu.
+
+512. Služby syntézy snímok (thematicImageSynthesisService)
+
+Služby určené na vytváranie alebo transformáciu snímok používajúce počítačové priestorové modely, transformáciu perspektívy a manipuláciu s vlastnosťami snímok s cieľom zlepšiť viditeľnosť, zvýšiť rozlíšenie a/alebo znížiť účinky oblačnosti alebo hmly.
+
+513. Manipulácia s viacpásmovými snímkami (thematicMultibandImageManipulationService)
+
+Služba, ktorá mení snímku pri použití viacerých pásiem snímky.
+
+514. Služba detekcie predmetov (thematicObjectDetectionService)
+
+Služba určená na detekciu skutočných premetov na snímke.
+
+515. Služba geografickej analýzy (thematicGeoparsingService)
+
+Služba určená na vyhľadávanie odkazov týkajúcich sa polohy v textových dokumentoch, ako sú napríklad názvy miest, adresy, poštové smerovacie čísla atď., v rámci prípravy na službu geografického kódovania.
+
+516. Služba geografického kódovania (thematicGeocodingService)
+
+Služba určená na kompletizáciu textových odkazov týkajúcich sa polohy o geografické súradnice (alebo iné priestorové odkazy).
+
+600. Služby geografického spracovania – časové (temporalProcessingService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+601. Služba transformácie systému časových referencií (temporalReferenceSystemTransformationService)
+
+Služba, ktorá slúži na zmenu hodnôt časových príkladov z jedného systému časových referencií na iný systém časových referencií.
+
+602. Služba tvorby podsúborov (temporalSubsettingService)
+
+Služba, ktorá vyberá údaje zo vstupu v trvalom intervale na základe hodnôt časovej polohy.
+
+603. Služba výberu vzorky (temporalSamplingService)
+
+Služba, ktorá vyberá údaje zo vstupu pri použití systému dôkladného výberu vzorky na základe hodnôt časovej polohy.
+
+604. Služba analýzy časovej blízkosti (temporalProximityAnalysisService)
+
+Na základe časového intervalu alebo udalosti služba nachádza všetky predmety s daným súborom atribútov, ktoré sa nachádzajú v intervale zadanom užívateľom, v súvislosti s intervalom alebo udalosťou.
+
+700. Služby geografického spracovania – metaúdaje (metadataProcessingService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+701. Služba štatistických výpočtov (metadataStatisticalCalculationService)
+
+Služba výpočtu štatistík súboru údajov.
+
+702. Služby geografických poznámok (metadataGeographicAnnotationService)
+
+Služby určené na pridanie pomocných informácií k snímke alebo prvku v zbierke prvkov.
+
+800. Služby geografickej komunikácie (comService)
+
+Táto kategória obsahuje tieto podkategórie:
+
+801. Kódovacia služba (comEncodingService)
+
+Služba, ktorá zabezpečuje vykonávanie kódovacieho pravidla a poskytuje rozhranie pre funkcie kódovania a dekódovania.
+
+802. Služba prenosu (comTransferService)
+
+Služba, ktorá zabezpečuje vykonávanie jedného alebo viacerých protokolov prenosu, ktorý umožňuje prenos údajov medzi rozšírenými informačnými systémami cez komunikačné prostriedky offline alebo online.
+
+803. Služba geografickej kompresie (comGeographicCompressionService)
+
+Služba, ktorá konvertuje priestorové časti zbierky prvkov z nekomprimovanej podoby do komprimovanej a naopak.
+
+804. Služba konverzie geografického formátu (comGeographicFormatConversionService)
+
+Služba, ktorá konvertuje jeden formát geografických údajov na iný.
+
+805. Odkazová služba (comMessagingService)
+
+Služba, ktorá umožňuje viacerým užívateľom súčasne prehliadať zbierky prvkov, vyjadrovať k nim svoje pripomienky a požadovať ich úpravy.
+
+806. Riadenie vzdialených súborov (comRemoteFileAndExecutableManagement)
+
+Služba, ktorá poskytuje prístup k sekundárnemu zdroju geografických prvkov, akoby šlo o miestne zdroje.
+
+5. STUPEŇ SÚLADU
+
+5.1. V súlade (conformant)
+
+Zdroj je v plnom rozsahu v súlade s uvedenou špecifikáciou.
+
+5.2. Nie je v súlade (notConformant)
+
+Zdroj nie je v súlade s uvedenou špecifikáciou.
+
+5.3. Nehodnotený (notEvaluated)
+
+Súlad nebol hodnotený.
+
+6. ÚLOHA ZODPOVEDNEJ STRANY
+
+6.1. Poskytovateľ zdroja (resourceProvider)
+
+Strana, ktorá poskytuje zdroj.
+
+6.2. Správca (custodian)
+
+Strana, ktorá preberá zodpovednosť za údaje a zabezpečuje náležitú starostlivosť o zdroj a jeho uchovávanie.
+
+6.3. Vlastník (owner)
+
+Strana, ktorá vlastní zdroj.
+
+6.4. Užívateľ (user)
+
+Strana, ktorá zdroj používa.
+
+6.5. Distribútor (distributor)
+
+Stana, ktorá zdroj distribuuje.
+
+6.6. Pôvodca (originator)
+
+Strana, ktorá zdroj vytvorila.
+
+6.7. Kontaktné miesto (pointOfContact)
+
+Strana, ktorú možno kontaktovať s cieľom získať poznatky o zdroji alebo získaní zdroja.
+
+6.8. Hlavný výskumník (principalInvestigator)
+
+Kľúčová strana zodpovedná za získavanie informácií a vedenie výskumu.
+
+6.9. Spracovateľ (procesor)
+
+Strana, ktorá údaje spracovala spôsobom, ktorý viedol k zmene zdroja.
+
+6.10. Vydavateľ (publisher)
+
+Strana, ktorá zdroj uverejnila.
+
+6.11. Autor (author)
+
+Strana, ktorá je autorom zdroja.
+
+--------------------------------------------------

@@ -1,0 +1,987 @@
+Reglamento (CE) no 1205/2008 de la Comisión
+
+de 3 de diciembre de 2008
+
+por el que se ejecuta la Directiva 2007/2/CE del Parlamento Europeo y del Consejo en lo que se refiere a los metadatos
+
+(Texto pertinente a efectos del EEE)
+
+LA COMISIÓN DE LAS COMUNIDADES EUROPEAS,
+
+Visto el Tratado constitutivo de la Comunidad Europea,
+
+Vista la Directiva 2007/2/CE del Parlamento Europeo y del Consejo, de 14 de marzo de 2007, por la que se establece una Infraestructura de Información Espacial en la Comunidad Europea (Inspire) [1], y, en particular, su artículo 5, apartado 4,
+
+Considerando lo siguiente:
+
+(1) La Directiva 2007/2/CE establece normas generales para la creación de una Infraestructura de Información Espacial en la Comunidad Europea. Dado que, para el adecuado funcionamiento de esa infraestructura, es necesario que el usuario pueda encontrar conjuntos y servicios de datos espaciales y determinar si pueden utilizarse y con qué fin, los Estados miembros deben aportar descripciones, en forma de metadatos, de esos conjuntos y servicios de datos espaciales. Como esos metadatos deben ser compatibles y utilizables en un contexto comunitario y transfronterizo, es necesario establecer normas sobre los metadatos utilizados para describir los conjuntos y servicios de datos espaciales correspondientes a los temas citados en los anexos I, II y III de la Directiva 2007/2/CE.
+
+(2) Asimismo, es necesaria la definición de un conjunto de elementos de metadatos que permitan identificar y clasificar el recurso de información para el que se haya creado el metadato, y determinar su localización geográfica y su referencia temporal, así como la calidad y validez de los metadatos, la conformidad con las normas de aplicación sobre la interoperabilidad de los servicios y conjuntos de datos espaciales, las restricciones de acceso y uso, y la organización responsable del recurso. También son necesarios elementos de metadatos relacionados con el registro de metadatos mismo a fin de controlar que los metadatos creados se mantengan al día, y para identificar la organización responsable de la creación y el mantenimiento de los metadatos. Este es el conjunto de elementos de metadatos mínimo que se requiere para el cumplimiento de la Directiva 2007/2/CE y no excluye la posibilidad de que las organizaciones documenten los recursos de información de manera más amplia con elementos complementarios derivados de las normas internacionales o de las prácticas de trabajo existentes en su comunidad de intereses. Tampoco excluye la posibilidad de adoptar las orientaciones preparadas y actualizadas por la Comisión, especialmente cuando sea necesario para asegurar la interoperabilidad de los metadatos.
+
+(3) Por otra parte, son necesarias instrucciones para la validación de los metadatos de conformidad con la Directiva 2007/2/CE en lo que respecta a las condiciones y la multiplicidad previstas para cada elemento de metadatos, es decir, se trata de determinar si, en el registro de metadatos, siempre han de figurar valores para cada elemento o si estos solo pueden aparecer una vez o más de una vez.
+
+(4) El dominio de valores de cada elemento de metadatos es necesario para asegurar la interoperabilidad de los metadatos en un contexto multilingüe y ese dominio debe poder adoptar la forma de texto libre, fecha, código tomado de normas internacionales —como código de lengua—, palabra clave tomada de listas o tesauros controlados, o cadena de caracteres.
+
+(5) Las medidas previstas en el presente Reglamento se ajustan al dictamen del Comité establecido en virtud del artículo 22 de la Directiva 2007/2/CE.
+
+HA ADOPTADO EL PRESENTE REGLAMENTO:
+
+Artículo 1
+
+Objeto
+
+El presente Reglamento establece los requisitos para la creación y el mantenimiento de metadatos para conjuntos de datos espaciales, series de conjuntos de datos espaciales y servicios de datos espaciales correspondientes a los temas indicados en los anexos I, II y III de la Directiva 2007/2/CE.
+
+Artículo 2
+
+Definiciones
+
+A los efectos del presente Reglamento, además de las definiciones contenidas en el artículo 3 de la Directiva 2007/2/CE, se aplicarán las definiciones recogidas en la parte A del anexo.
+
+Artículo 3
+
+Creación y mantenimiento de metadatos
+
+Los metadatos que describan un conjunto de datos espaciales, una serie de conjuntos de datos espaciales o un servicio de datos espaciales comprenderán los elementos de metadatos o grupos de elementos de metadatos indicados en la parte B del anexo. Estos metadatos se crearán y mantendrán con arreglo a las normas establecidas en las partes C y D del anexo.
+
+Artículo 4
+
+Entrada en vigor
+
+El presente Reglamento entrará en vigor el vigésimo día siguiente al de su publicación en el Diario Oficial de la Unión Europea.
+
+El presente Reglamento será obligatorio en todos sus elementos y directamente aplicable en cada Estado miembro.
+
+Hecho en Bruselas, el 3 de diciembre de 2008.
+
+Por la Comisión
+
+Stavros Dimas
+
+Miembro de la Comisión
+
+[1] DO L 108 de 25.4.2007, p. 1.
+
+--------------------------------------------------
+
+ANEXO
+
+NORMAS DE APLICACIÓN SOBRE METADATOS
+
+PARTE A
+
+Interpretación
+
+1. Se aplicarán las siguientes definiciones:
+
+- "cadena de caracteres": dominio de valores de los elementos de metadatos expresado como un conjunto de caracteres tratados como una unidad,
+
+- "texto libre": dominio de valores de los elementos de metadatos expresado en una o varias lenguas naturales,
+
+- "linaje": historia de un conjunto de datos y su ciclo de vida desde su recogida y adquisición hasta su compilación y derivación hasta su forma actual, con arreglo a la norma EN ISO 19101,
+
+- "elemento de metadatos": unidad discreta de metadatos, de acuerdo con la norma EN ISO 19115,
+
+- "espacio de nombres": colección de nombres, que se identifican mediante un Identificador Uniforme de Recursos [Uniform Resource Identifier (URI)], utilizados en documentos en Lenguaje de Etiquetas Extensible [Extensible Markup Language (XML)] como nombres de elemento y nombres de atributo,
+
+- "calidad": totalidad de características de un producto que influyen en su capacidad para satisfacer necesidades implícitas y explícitas, con arreglo a la norma EN ISO 19101,
+
+- "recurso": recurso de información que se refiere de manera directa o indirecta a una ubicación o zona geográfica específicas,
+
+- "series de conjuntos de datos espaciales": colección de conjuntos de datos espaciales que comparten las mismas especificaciones de producto.
+
+2. Las referencias a la validez de conjuntos de datos espaciales se entenderán con referencia a alguno de los siguientes aspectos:
+
+- el intervalo de espacio y tiempo pertinente para los datos,
+
+- si los datos han sido o no verificados con una norma de medida o de rendimiento,
+
+- el grado de idoneidad de los datos para el uso previsto,
+
+- en su caso, la validez legal del conjunto de datos espaciales.
+
+PARTE B
+
+Elementos de metadatos
+
+1. IDENTIFICACIÓN
+
+Deberán aportarse los siguientes elementos de metadatos:
+
+1.1. Título del recurso
+
+El título del recurso es un nombre característico, y a menudo único, por el que se conoce el recurso.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+1.2. Resumen del recurso
+
+Se trata de un breve resumen narrativo del contenido del recurso.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+1.3. Tipo del recurso
+
+Se entiende por tal el tipo de recurso que describen los metadatos.
+
+El dominio de valores de este elemento de metadatos se define en la parte D.1.
+
+1.4. Localizador del recurso
+
+El localizador del recurso define el enlace o enlaces al recurso o el enlace a información adicional sobre el recurso.
+
+El dominio de valores de este elemento de metadatos es una cadena de caracteres expresada habitualmente como un Localizador Uniforme de Recursos [Uniform Resource Locator (URL)].
+
+1.5. Identificador único de recursos
+
+Valor que identifica el recurso de manera inequívoca.
+
+El dominio de valores de este elemento de metadatos es un código obligatorio, en forma de cadena de caracteres, generalmente asignado por el propietario de los datos, y un espacio de nombres de cadenas de caracteres que identifica inequívocamente el contexto del código identificador (por ejemplo, el propietario de los datos).
+
+1.6. Recurso acoplado
+
+Si el recurso es un servicio de datos espaciales, este elemento de metadatos identifica, en su caso, el conjunto o conjuntos de datos espaciales en los que se basa el servicio mediante su Identificador Uniforme de Recursos [Uniform Resource Identifier (URI)].
+
+El dominio de valores de este elemento de metadatos es un código obligatorio en forma de cadena de caracteres, generalmente asignado por el propietario de los datos, y un espacio de nombres de cadenas de caracteres que identifica inequívocamente el contexto del código identificador (por ejemplo, el propietario de los datos).
+
+1.7. Lengua del recurso
+
+La lengua o lenguas utilizadas dentro del recurso.
+
+El dominio de valores de este elemento de metadatos se limita a las lenguas definidas en la norma ISO 639-2.
+
+2. CLASIFICACIÓN DE DATOS Y SERVICIOS ESPACIALES
+
+2.1. Categoría temática
+
+La categoría temática es un esquema de clasificación de alto nivel que ayuda a la agrupación y a la búsqueda por temas de los recursos de datos espaciales disponibles.
+
+El dominio de valores de este elemento de metadatos s se define en la parte D.2.
+
+2.2. Tipo de servicio de datos espaciales
+
+El tipo de servicio de datos espaciales consiste en una clasificación que ayuda en la búsqueda de servicios de datos espaciales disponibles. Cada servicio específico será clasificado en una única categoría.
+
+El dominio de valores de este elemento de metadatos se define en la parte D.3.
+
+3. PALABRA CLAVE
+
+Si el recurso es un servicio de datos espaciales, se aportará, como mínimo, una palabra clave de la parte D.4.
+
+Si el recurso es un conjunto de datos espaciales o una serie de conjuntos de datos espaciales, se aportará, como mínimo, una palabra clave del Tesauro Multilingüe Europeo para el Medio Ambiente [General Environmental Multi-lingual Thesaurus (GEMET)] que describa el tema de los datos espaciales correspondientes según las definiciones de los anexos I, II o III de la Directiva 2007/2/CE.
+
+Para cada palabra clave, deberán aportarse los siguientes elementos de metadatos:
+
+3.1. Valor de la palabra clave
+
+El valor de la palabra clave es una palabra, palabra formalizada o frase utilizada normalmente para describir el tema. Mientras que la categoría temática es demasiado imprecisa para búsquedas detalladas, las palabras clave ayudan a reducir el campo de la búsqueda de texto completo y permiten una búsqueda estructurada por palabras clave.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+3.2. Vocabulario controlado de origen
+
+Si el valor de la palabra clave procede de un vocabulario controlado (tesauro, ontología), por ejemplo el GEMET, se aportará la mención del vocabulario controlado de origen.
+
+Esta mención incluirá, al menos, el título y una fecha de referencia (fecha de publicación, fecha de la última revisión o de la creación) del vocabulario controlado de origen.
+
+4. LOCALIZACIÓN GEOGRÁFICA
+
+El requisito de localización geográfica indicado en el artículo 11, apartado 2, letra e), de la Directiva 2007/2/CE se expresará mediante el elemento de metadatos rectángulo geográfico envolvente
+
+4.1. Rectángulo geográfico envolvente
+
+Es la extensión del recurso en el espacio geográfico dado mediante un rectángulo envolvente.
+
+Este rectángulo se expresará mediante las longitudes este y oeste, y las latitudes norte y sur, en grados decimales, con una precisión de al menos 2 decimales.
+
+5. REFERENCIA TEMPORAL
+
+Este elemento de metadatos responde al requisito de disponer de información sobre la dimensión temporal de los datos, tal y como se indica en el artículo 8, apartado 2, letra d), de la Directiva 2007/2/CE. Como mínimo, se proporcionará uno de los elementos de metadatos indicados en los puntos 5.1 a 5.4.
+
+El dominio de valores de los elementos de metadatos indicados en los puntos 5.1 a 5.4 es un conjunto de fechas. Cada fecha se referirá a un sistema de referencia temporal y se expresará en una forma compatible con dicho sistema. El sistema de referencia por defecto será el calendario gregoriano y las fechas se expresarán conforme a la norma ISO 8601.
+
+5.1. Extensión temporal
+
+La extensión temporal define el período de tiempo cubierto por el contenido del recurso. Este período puede expresarse de cualquiera de las siguientes maneras:
+
+- una fecha concreta,
+
+- un intervalo de fechas expresado mediante la fecha de inicio y la de finalización del intervalo,
+
+- una mezcla de fechas e intervalos.
+
+5.2. Fecha de publicación
+
+Esta es la fecha de publicación del recurso, cuando se conozca, o la fecha de entrada en vigor. Puede haber más de una fecha de publicación.
+
+5.3. Fecha de la última revisión
+
+Se trata de la fecha de la última revisión, si se ha revisado el recurso. No deberá haber más de una fecha de última revisión.
+
+5.4. Fecha de creación
+
+Esta es la fecha de creación del recurso. No deberá haber más de una fecha de creación.
+
+6. CALIDAD Y VALIDEZ
+
+Los requisitos establecidos en el artículo 5, apartado 2, y el artículo 11, apartado 2, de la Directiva 2007/2/CE en lo que se refiere a la calidad y validez de los datos espaciales, se cumplirán mediante los siguientes elementos de metadatos:
+
+6.1. Linaje
+
+El linaje es una declaración sobre la historia del proceso o la calidad general del conjunto de datos espaciales. En su caso, puede incluir también una declaración que indique si el conjunto de datos ha sido validado o sometido a control de calidad, si es la versión oficial (en caso de que existan múltiples versiones), y si tiene validez legal.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+6.2. Resolución espacial
+
+La resolución espacial se refiere al nivel de detalle del conjunto de datos. Se expresará mediante un conjunto que irá de cero a muchas resoluciones (distancias) (habitual para datos malla y productos derivados de imágenes) o escalas equivalentes (habitual para mapas y productos derivados de mapas).
+
+Una escala equivalente se expresa generalmente en un valor entero que expresa el denominador de la escala.
+
+Una resolución (distancia) se expresará mediante un valor numérico asociado a una unidad de longitud.
+
+7. CONFORMIDAD
+
+Los requisitos establecidos en el artículo 5, apartado 2, letra a), y el artículo 11, apartado 2, letra d), de la Directiva 2007/2/CE en lo que se refiere a la conformidad y al grado de conformidad con las normas de ejecución adoptadas en virtud del artículo 7, apartado 1, de la Directiva 2007/2/CE, se cumplirán mediante los siguientes elementos de metadatos:
+
+7.1. Especificación
+
+La especificación consiste en una mención de las normas de ejecución adoptadas en virtud del artículo 7, apartado 1, de la Directiva 2007/2/CE o de otra especificación a la que se ajuste el recurso.
+
+Un recurso puede ajustarse a más de una norma de ejecución adoptada en virtud del artículo 7, apartado 1, de la Directiva 2007/2/CE u otra especificación.
+
+La mención incluirá al menos el título y la fecha de referencia (fecha de publicación, fecha de la última revisión o fecha de creación) de las normas de ejecución adoptadas en virtud del artículo 7, apartado 1, de la Directiva 2007/2/CE o de otras especificaciones.
+
+7.2. Grado de conformidad
+
+Este elemento es el grado de conformidad del recurso con las normas de ejecución adoptadas en virtud del artículo 7, apartado 1, de la Directiva 2007/2/CE o con otra especificación.
+
+El dominio de valores de este elemento de metadatos se define en la parte D.5.
+
+8. CONSTRICCIONES RELACIONADAS CON EL ACCESO Y EL USO
+
+Se entiende por constricción relacionada con el acceso y el uso una de las indicadas a continuación o las dos:
+
+- un conjunto de condiciones aplicables al acceso y al uso (8.1),
+
+- un conjunto de limitaciones del acceso público (8.2).
+
+8.1. Condiciones aplicables al acceso y el uso
+
+Este elemento de metadatos define las condiciones de acceso y uso de los conjuntos de datos y servicios espaciales y, en su caso, las tasas correspondientes según lo dispuesto en el artículo 5, apartado 2, letra b), y el artículo 11, apartado 2, letra f), de la Directiva 2007/2/CE.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+El elemento debe tener valores. Si no se aplican condiciones al acceso al recurso y a su uso, se utilizará "no se aplican condiciones". Si no se conocen condiciones, se utilizará "condiciones desconocidas".
+
+Este elemento también aportará información sobre cualquier tasa de acceso y uso del recurso, si procede, o remitirá a un Localizador Uniforme de Recursos [Uniform Resource Locator (URL)] donde pueda encontrarse información sobre las tasas.
+
+8.2. Restricciones del acceso público
+
+Cuando los Estados miembros limiten el acceso público a los conjuntos y servicios de datos espaciales según lo dispuesto en el artículo 13 de la Directiva 2007/2/CE, este elemento de metadatos aportará información sobre las restricciones y las razones en las que se basen.
+
+Si no hay restricciones del acceso público, este elemento de metadatos lo indicará.
+
+El dominio de valores de este elemento de metadatos es texto libre.
+
+9. ORGANIZACIONES RESPONSABLES DEL ESTABLECIMIENTO, GESTIÓN, MANTENIMIENTO Y DISTRIBUCIÓN DE LOS CONJUNTOS Y SERVICIOS DE DATOS ESPACIALES
+
+A los efectos del artículo 5, apartado 2, letra d), y el artículo 11, apartado 2, letra g), de la Directiva 2007/2/CE, se aportarán los dos elementos de metadatos siguientes:
+
+9.1. Parte responsable
+
+Este elemento consiste en una descripción de la organización responsable del establecimiento, la gestión, el mantenimiento y la distribución del recurso.
+
+Esta descripción deberá incluir:
+
+- el nombre de la organización, en texto libre,
+
+- una dirección de correo electrónico mediante una cadena de caracteres.
+
+9.2. Función de la parte responsable
+
+Se describe aquí el papel de la parte responsable.
+
+El dominio de valores de este elemento de metadatos se define en la parte D.6.
+
+10. METADATOS SOBRE METADATOS
+
+A los efectos del artículo 5, apartado 1, de la Directiva 2007/2/CE, se aportarán los dos elementos de metadatos siguientes:
+
+10.1. Punto de contacto de los metadatos
+
+Este elemento consiste en una descripción de la organización responsable de la creación y mantenimiento del recurso.
+
+Esta descripción deberá incluir:
+
+- el nombre de la organización, en texto libre,
+
+- una dirección de correo electrónico mediante una cadena de caracteres.
+
+10.2. Fecha de los metadatos
+
+La fecha que especifica cuando se creó o actualizó el registro del metadato.
+
+Esta fecha se expresará según la norma ISO 8601.
+
+10.3. Lengua de los metadatos
+
+Este elemento es la lengua en la que se expresan los elementos de metadatos.
+
+El dominio de valores de este elemento de metadatos se limita a las lenguas oficiales de la Comunidad expresadas conforme a lo dispuesto en la norma ISO 639-2.
+
+PARTE C
+
+Instrucciones sobre multiplicidad y condiciones de los elementos de metadatos
+
+Los metadatos que describan un recurso comprenderán, en lo que se refiere a conjuntos de datos espaciales o series de conjuntos de datos espaciales, los elementos de metadatos o grupos de elementos de metadatos indicados en el cuadro 1 y, en lo que se refiere a servicios de conjuntos de datos espaciales, los elementos de metadatos o grupos de elementos de metadatos indicados en el cuadro 2.
+
+Estos elementos de metadatos o grupos de elementos de metadatos se ajustarán a la multiplicidad prevista y las condiciones conexas especificadas en los cuadros 1 y 2.
+
+Cuando no se exprese ninguna condición en relación con un elemento de metadatos determinado, ese elemento será obligatorio.
+
+En los cuadros se presentará la siguiente información:
+
+- la primera columna contendrá la referencia al párrafo de la parte B del anexo que define el elemento de metadatos o el grupo de elementos de metadatos,
+
+- la segunda columna contendrá el nombre del elemento de metadatos o el grupo de elementos de metadatos,
+
+- la tercera columna especificará la multiplicidad del elemento de metadatos; la expresión de la multiplicidad seguirá la notación del Lenguaje Unificado de Modelado (UML) [Unified Modelling Language (UML)] para la multiplicidad, en el cual:
+
+- 1 significa que solo habrá una instancia de este elemento de metadatos en un conjunto de resultados,
+
+- 1..* significa que habrá, como mínimo, una instancia de este elemento en un conjunto de resultados,
+
+- 0..1 indica que la presencia del elemento de metadatos en un conjunto de resultados es condicional pero puede darse solo una vez,
+
+- 0..* indica que la presencia del elemento de metadatos en un conjunto de resultados es condicional pero puede darse una vez o más,
+
+- cuando la multiplicidad es 0..1 o 0..*, la condición define cuando los elementos de metadatos son obligatorios,
+
+- la cuarta columna contiene una declaración condicional si la multiplicidad del elemento no se aplica a todos los tipos de recursos; en otras circunstancias todos los elementos son obligatorios.
+
+Cuadro 1
+
+Metadatos para conjuntos y servicios de datos espaciales
+
+Referencia | Elementos de metadatos | Multiplicidad | Condición |
+
+1.1 | Título del recurso | 1 | |
+
+1.2 | Resumen del recurso | 1 | |
+
+1.3 | Tipo del recurso | 1 | |
+
+1.4 | Localizador del recurso | 0..* | Obligatorio si hay disponible una URL donde se dé más información sobre el recurso, o servicios de acceso relacionados. |
+
+1.5 | Identificador único de recursos | 1..* | |
+
+1.7 | Lengua del recurso | 0..* | Obligatorio si el recurso incluye información textual. |
+
+2.1 | Categoría temática | 1..* | |
+
+3 | Palabra clave | 1..* | |
+
+4.1 | Rectángulo geográfico envolvente | 1..* | |
+
+5 | Referencia temporal | 1..* | |
+
+6.1 | Linaje | 1 | |
+
+6.2 | Resolución espacial | 0..* | Obligatorio para conjuntos de datos y series de conjuntos de datos si puede especificarse una escala equivalente o una resolución (distancia). |
+
+7 | Conformidad | 1..* | |
+
+8.1 | Condiciones de acceso y uso | 1..* | |
+
+8.2 | Restricciones de acceso público | 1..* | |
+
+9 | Organización responsable | 1..* | |
+
+10.1 | Punto de contacto de los metadatos | 1..* | |
+
+10.2 | Fecha de los metadatos | 1 | |
+
+10.3 | Lengua de los metadatos | 1 | |
+
+Cuadro 2
+
+Metadatos para servicios espaciales
+
+Referencia | Elementos de metadatos | Multiplicidad | Condición |
+
+1.1 | Título del recurso | 1 | |
+
+1.2 | Resumen del recurso | 1 | |
+
+1.3 | Tipo de recurso | 1 | |
+
+1.4 | Localizador del recurso | 0..* | Obligatorio si se dispone de enlace con el servicio. |
+
+1.6 | Recurso acoplado | 0..* | Obligatorio si se dispone de enlace con conjuntos de datos sobre los que opera el servicio. |
+
+2.2 | Tipo de servicio de datos espaciales | 1 | |
+
+3 | Palabra clave | 1..* | |
+
+4.1 | Rectángulo geográfico envolvente | 0…* | Obligatorio para los servicios con una extensión geográfica explícita. |
+
+5 | Referencia temporal | 1..* | |
+
+6.2 | Resolución espacial | 0..* | Obligatorio cuando hay una restricción de la resolución espacial para este servicio. |
+
+7 | Conformidad | 1..* | |
+
+8.1 | Condiciones de acceso y uso | 1..* | |
+
+8.2 | Restricciones de acceso público | 1..* | |
+
+9 | Organización responsable | 1..* | |
+
+10.1 | Punto de contacto de los metadatos | 1..* | |
+
+10.2 | Fecha de los metadatos | 1 | |
+
+10.3 | Lengua de los metadatos | 1 | |
+
+PARTE D
+
+Dominios de valores
+
+Cuando se especifique en la descripción de los elementos de metadatos de la parte B, los dominios de valores descritos en la parte D.1 a D.6 se utilizarán con la multiplicidad expresada en los cuadros 1 y 2 de la parte C.
+
+En relación con un dominio determinado, cada valor viene definido por:
+
+- un identificador numérico,
+
+- un nombre textual para las personas que pueda traducirse a las diferentes lenguas comunitarias,
+
+- un nombre neutral respecto a las lenguas, para los ordenadores (el valor expresado entre paréntesis), y
+
+- una descripción o definición opcionales.
+
+1. TIPO DEL RECURSO
+
+1.1. Serie de conjuntos de datos espaciales (series)
+
+1.2. Conjunto de datos espaciales (dataset)
+
+1.3. Servicio de datos espaciales (services)
+
+2. CATEGORÍAS DE TEMAS CONFORME A LA NORMA EN ISO 19115
+
+2.1. Agricultura (farming)
+
+Cría de animales o cultivo de plantas.
+
+Esta categoría se aplica al tema de datos espaciales del anexo III, punto 9, de la Directiva 2007/2/CE: Instalaciones agrícolas y de acuicultura.
+
+2.2. Biota (biota)
+
+Flora o fauna en el medio natural.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 17: Regiones biogeográficas, anexo III, punto 18: Hábitat y biotopos, y anexo III, punto 19: Distribución de especies.
+
+2.3. Límites (boundaries)
+
+Descripciones legales del terreno.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 4: Unidades administrativas, y anexo III, punto 1: Unidades estadísticas.
+
+2.4. Atmósfera climatológica y meteorológica (climatologyMeteorologyAtmosphere)
+
+Procesos y fenómenos de la atmósfera.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 13: Condiciones atmosféricas, y anexo III, punto 14: Aspectos geográficos de carácter meteorológico.
+
+2.5. Economía (economy)
+
+Actividades y condiciones económicas y empleo.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 20: Recursos energéticos, y anexo III, punto 21: Recursos minerales.
+
+2.6. Elevación (elevation)
+
+Altura sobre o bajo el nivel del mar.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo II, punto 1: Elevaciones.
+
+2.7. Medio ambiente (environment)
+
+Recursos medioambientales, protección y conservación.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 9: Lugares protegidos.
+
+2.8. Información geocientífica (geoscientificInformation)
+
+Información perteneciente a las ciencias de la Tierra.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 3: Suelo, anexo II, punto 4: Geología, y anexo III, punto 12: Zonas de riesgos naturales.
+
+2.9. Salud (health)
+
+Salud, servicios sanitarios, ecología humana y seguridad.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 5: Salud y seguridad humanas.
+
+2.10. Cobertura de la Tierra con mapas básicos e imágenes (imageryBaseMapsEarthCover)
+
+Cartografía básica.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo II, punto 3: Ortoimágenes, y anexo II, punto 2: Cubierta terrestre.
+
+2.11. Inteligencia militar (intelligenceMilitary)
+
+Bases, estructuras y actividades militares.
+
+Esta categoría no se aplica concretamente a ningún tema de datos espaciales de la Directiva 2007/2/CE.
+
+2.12. Aguas interiores (inlandWaters)
+
+Fenómenos de las aguas interiores, sistemas de drenaje y sus características.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 8: Hidrografía.
+
+2.13. Localización (location)
+
+Información y servicios de posicionamiento
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 3: Nombres geográficos, y anexo I, punto 5: Direcciones.
+
+2.14. Océanos (oceans)
+
+Fenómenos y características de las aguas saladas (excluidas las aguas interiores).
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 16: Regiones marinas, y anexo III, punto 15: Fenómenos geográficos oceanográficos.
+
+2.15. Planeamiento catastral (planningCadastre)
+
+Información utilizada para actuaciones en relación con el uso futuro del suelo.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 6: Parcelas catastrales, anexo III, punto 4: Uso del suelo, y anexo III, punto 11: Zonas sujetas a ordenación, a restricciones o reglamentaciones y unidades de notificación.
+
+2.16. Sociedad (society)
+
+Características de la sociedad y la cultura.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 10: Distribución de la población. Demografía.
+
+2.17. Estructura (structure)
+
+Construcciones hechas por el hombre.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 2: Edificios, anexo III, punto 8: Instalaciones de producción e industriales, y anexo III, punto 7: Instalaciones de observación del medio ambiente.
+
+2.18. Transporte (transportation)
+
+Medios y ayudas para transportar personas o mercancías.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo I, punto 7: Redes de transporte.
+
+2.19. Redes de suministro (utilitiesCommunication)
+
+Redes de agua, de energía, de retirada de residuos, de infraestructuras de comunicaciones y servicios.
+
+Esta categoría se aplica a los siguientes temas de datos espaciales de la Directiva 2007/2/CE: anexo III, punto 6: Servicios de utilidad pública y estatales.
+
+3. TIPO DE SERVICIO DE DATOS ESPACIALES
+
+3.1. Servicio de localización (discovery)
+
+Servicio que permite buscar conjuntos y servicios de datos espaciales a partir del contenido de los metadatos correspondientes, y mostrar el contenido de dichos metadatos.
+
+3.2. Servicio de visualización (view)
+
+Servicio que permite, como mínimo, mostrar, navegar, acercarse o alejarse mediante zoom o contemplar, en visión panorámica o superposición, conjuntos de datos espaciales, así como mostrar los signos convencionales o cualquier contenido pertinente de los metadatos.
+
+3.3. Servicio de descarga (download)
+
+Servicio que permite descargar copias de conjuntos de datos espaciales, o partes de estos y, cuando sea posible, acceder directamente a ellos.
+
+3.4. Servicio de transformación (transformation)
+
+Servicio que permite transformar conjuntos de datos espaciales con vistas a lograr su interoperabilidad.
+
+3.5. Servicio de acceso a datos espaciales (invoke)
+
+Servicio que permite definir tanto las entradas de datos como las salidas que se esperan del servicio espacial, así como un flujo de trabajo o cadena de servicios que combina múltiples servicios También permite definir la interfaz del servicio de Web externo del flujo de trabajo o de la cadena de servicios.
+
+3.6. Otros servicios (other)
+
+4. CLASIFICACIÓN DE LOS SERVICIOS DE DATOS ESPACIALES
+
+Las palabras clave se basan en la taxonomía de servicios geográficos de la norma EN ISO 19119. Esta taxonomía se organiza en categorías, divididas en subcategorías que definen el dominio de valores de la clasificación de los servicios de datos espaciales.
+
+100 Servicios geográficos de interacción humana (humanInteractionService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+101. Visor de catálogos (humanCatalogueViewer)
+
+Servicio cliente que permite al usuario interactuar con un catálogo para localizar, navegar y gestionar metadatos sobre datos geográficos o servicios geográficos.
+
+102. Visor geográfico (humanGeographicViewer)
+
+Servicio cliente que permite al usuario visualizar una o más colecciones de fenómenos o coberturas.
+
+103. Visor geográfico de hoja de cálculo (humanGeographicSpreadsheetViewer)
+
+Servicio cliente que permite al usuario interactuar con múltiples objetos de datos y solicitar cálculos similares a los de una hoja de cálculo aritmético pero extendidos a datos geográficos.
+
+104. Editor de servicios (humanServiceEditor)
+
+Servicio cliente que permite al usuario controlar servicios geográficos de procesamiento.
+
+105. Editor de definición de cadenas (humanChainDefinitionEditor)
+
+Este editor permite la interacción del usuario con un servicio de definición de cadenas.
+
+106. Gestor de lanzamiento de flujos de trabajo (humanWorkflowEnactmentManager)
+
+Este gestor permite la interacción con un servicio de lanzamiento de flujos de trabajo.
+
+107. Editor de fenómenos geográficos (humanGeographicFeatureEditor)
+
+Visor geográfico que permite al usuario interactuar con datos de fenómenos.
+
+108. Editor de símbolos geográficos (humanGeographicSymbolEditor)
+
+Servicio cliente que permite a una persona seleccionar y gestionar bibliotecas de símbolos.
+
+109. Editor de generalización de fenómenos (humanFeatureGeneralizationEditor)
+
+Servicio cliente que permite al usuario modificar las características cartográficas de un fenómeno o colección de fenómenos simplificando su visualización pero manteniendo sus elementos más destacados (equivalente espacial de la simplificación).
+
+110. Visor de estructuras de datos geográficos (humanGeographicDataStructureViewer)
+
+Servicio cliente que permite al usuario acceder a una parte de un conjunto de datos para ver su estructura interna.
+
+200 Servicio de gestión de modelos/información geográficos (infoManagementService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+201. Servicio de acceso a fenómenos (infoFeatureAccessService)
+
+Servicio que permite al cliente acceder a un almacén de fenómenos y gestionarlo.
+
+202. Servicio de acceso a mapas (infoMapAccessService)
+
+Servicio que permite a un cliente acceder a gráficos geográficos, es decir, a imágenes de datos geográficos.
+
+203. Servicio de acceso a coberturas (infoCoverageAccessService)
+
+Servicio que permite al cliente acceder a un almacén de coberturas y gestionarlo.
+
+204. Servicio de descripción de sensores (infoSensorDescriptionService)
+
+Servicio que suministra la descripción de un sensor de coberturas, incluyendo la localización y orientación del sensor, así como las características geométricas, dinámicas y radiométricas con fines de geoprocesamiento.
+
+205. Servicio de acceso a productos (infoProductAccessService)
+
+Servicio que permite acceder a un almacén de productos geográficos y gestionarlo.
+
+206. Servicio de tipos de fenómenos (infoFeatureTypeService)
+
+Servicio que permite al cliente acceder a un almacén de definiciones de tipos de fenómenos y gestionarlo.
+
+207. Servicio de catálogo (infoCatalogueService)
+
+Servicio que suministra servicios de localización y gestión en un almacén de metadatos acerca de instancias.
+
+208. Servicio de registro (infoRegistryService)
+
+Servicio que suministra acceso a un almacén de metadatos sobre tipos.
+
+209. Servicio de nomenclátor (infoGazetteerService)
+
+Servicio que da acceso a un directorio de instancias de una o varias clases de fenómenos del mundo real que contienen alguna información sobre su posición.
+
+210. Servicio de gestión de pedidos (infoOrderHandlingService)
+
+Servicio que permite al cliente pedir productos a un proveedor.
+
+211. Servicio de pedidos permanente (infoStandingOrderService)
+
+Servicio de gestión de pedidos que permite al usuario solicitar que se reparta un producto en una zona geográfica cuando esté disponible.
+
+300 Servicios de gestión de flujos de trabajo/tareas en el ámbito geográfico (taskManagementService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+301. Servicio de definición de cadenas (chainDefinitionService)
+
+Servicio que define una cadena y permite ejecutarla mediante el servicio de lanzamiento de un flujo de trabajo.
+
+302. Servicio de lanzamiento de un flujo de trabajo (workflowEnactmentService)
+
+El servicio de lanzamiento de un flujo de trabajo interpreta una cadena y controla la instanciación de los servicios y la secuencia de las actividades.
+
+303. Servicio de suscripción (subscriptionService)
+
+Servicio que permite a los clientes registrarse para la notificación de eventos.
+
+400 Servicios geográficos de procesamiento de tipo espacial (spatialProcessingService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+401. Servicio de conversión de coordenadas (spatialCoordinateConversionService)
+
+Servicio que cambia coordenadas de un sistema de coordenadas a otro relacionado con el mismo dato.
+
+402. Servicio de transformación de coordenadas (spatialCoordinateTransformationService)
+
+Servicio que cambia coordenadas de un sistema de referencia de coordenadas basado en un dato a otro sistema basado en otro dato diferente.
+
+403. Servicio de conversión de cobertura/vector (spatialCoverageVectorConversionService)
+
+Servicio que cambia la representación espacial de un esquema de cobertura a un esquema vectorial o viceversa.
+
+404. Servicio de conversión de coordenadas de imagen (spatialImageCoordinateConversionService)
+
+Servicio de conversión de coordenadas o de transformación de coordenadas que cambia el sistema de referencia de coordenadas de una imagen.
+
+405. Servicio de rectificación (spatialRectificationService)
+
+Servicio para la transformación de una imagen en una proyección paralela perpendicular y, por tanto, de escala constante.
+
+406. Servicio de ortorrectificación (spatialOrthorectificationService)
+
+Servicio de rectificación que elimina las inclinaciones y los desplazamientos de la imagen debidos a la elevación del terreno.
+
+407. Servicio de ajuste del modelo de geometría del sensor (spatialSensorGeometryModelAdjustmentService)
+
+Servicio que ajusta los modelos de geometría del sensor para mejorar el ajuste de la imagen con otras imágenes o posiciones conocidas en el terreno.
+
+408. Servicio de conversión del modelo de geometría de la imagen (spatialImageGeometryModelConversionService)
+
+Servicio que convierte el modelo de geometría del sensor en un modelo de geometría del sensor diferente pero equivalente.
+
+409. Servicio de subdivisión (spatialSubsettingService)
+
+Servicio que extrae datos de una entrada de una región espacial continua bien por localización geográfica bien por coordenadas de malla.
+
+410. Servicio de muestreo (spatialSamplingService)
+
+Servicio que extrae datos de una entrada usando un esquema de muestreo coherente bien por localización geográfica bien por coordenadas de malla.
+
+411. Servicio de cambio de división en hojas (spatialTilingChangeService)
+
+Servicio que cambia la división en hojas de los datos geográficos.
+
+412. Servicio de medición de dimensiones (spatialDimensionMeasurementService)
+
+Servicio que calcula las dimensiones de objetos visibles en una imagen u otros datos geográficos.
+
+413. Servicio de manipulación de fenómenos (spatialFeatureManipulationService)
+
+Servicio que permite registrar un fenómeno respecto a otro, una imagen u otro conjunto de datos o de coordenadas, y corregir desplazamientos relativos, diferencias de rotación, diferencias de escala y diferencias de perspectiva. También permite verificar que todos los fenómenos de una colección de fenómenos sean topológicamente coherentes según las reglas de topología de la colección de fenómenos, y detectar o corregir cualquier incoherencia.
+
+414. Servicio de emparejamiento de fenómenos (serviciotiporasgossinfo)
+
+Servicio que determina qué fenómenos y porciones de fenómenos representan la misma entidad del mundo real a partir de fuentes de datos múltiples, por ejemplo: correspondencia de bordes y conflación limitada.
+
+415. Servicio de generalización de fenómenos (serviciotiporasgossinfo)
+
+Servicio que reduce la variación espacial de una colección de fenómenos para aumentar la eficacia de la comunicación al contrarrestar los efectos indeseables de la reducción de datos.
+
+416. Servicio de determinación de rutas (spatialRouteDeterminationService)
+
+Servicio que determina el camino mínimo entre dos puntos dados basándose en los parámetros y propiedades de entrada contenidas en la colección de fenómenos.
+
+417. Servicio de posicionamiento (spatialPositioningService)
+
+Servicio proporcionado por un dispositivo que suministra posiciones para usar, obtener e interpretar sin ambigüedad información sobre la posición; además este servicio determina si el resultado satisface los requisitos de uso.
+
+418. Servicio de análisis de proximidad (spatialProximityAnalysisService)
+
+Dada una posición o un fenómeno geográfico, este servicio encuentra todos los objetos con un conjunto dado de atributos que están localizados dentro de una distancia, especificada por el usuario, desde la posición o el fenómeno dado.
+
+500 Servicios geográficos de procesamiento de tipo temático (thematicProcessingService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+501. Servicio de cálculo de geoparámetros (thematicGoparameterCalculationService)
+
+Servicio que obtiene resultados cuantitativos orientados a aplicaciones que no están disponibles en los datos brutos en sí.
+
+502. Servicio de clasificación temática (thematicClassificationService)
+
+Servicio que clasifica regiones de datos geográficos basándose en atributos temáticos.
+
+503. Servicio de generalización de fenómenos (thematicFeatureGeneralizationService)
+
+Servicio que generaliza tipos de fenómeno de una colección de fenómenos para aumentar la eficacia de la comunicación contrarrestando los efectos indeseables de la reducción de datos.
+
+504. Servicio de subdivisión (thematicSubsettingService)
+
+Servicio que extrae datos de entrada basándose en valores de parámetros.
+
+505. Servicio de recuento espacial (thematicSpatialCountingService)
+
+Servicio que cuenta fenómenos geográficos.
+
+506. Servicio de detección de cambios (thematicChangeDetectionService)
+
+Servicio que encuentra las diferencias entre dos conjuntos de datos que representan la misma zona geográfica en diferentes momentos.
+
+507. Servicios de extracción de información geográfica (thematicGeographicInformationExtractionService)
+
+Servicios que soportan la extracción de información sobre fenómenos y sobre el terreno a partir de imágenes capturadas por teledetección e imágenes escaneadas.
+
+508. Servicio de procesamiento de imágenes (thematicImageProcessingService)
+
+Servicio que cambia los valores de los atributos temáticos de una imagen usando una función matemática.
+
+509. Servicio de generación de resolución reducida (thematicReducedResolutionGenerationService)
+
+Servicio que reduce la resolución de una imagen.
+
+510. Servicio de manipulación de imágenes (thematicImageManipulationService)
+
+Servicio para la manipulación de los valores de datos en una imagen: cambio de valores de color y contraste, aplicación de filtros diversos, manipulación de la resolución de imágenes, eliminación de ruidos, eliminación del "efecto de bandeado"(striping), aplicación de correcciones radiométricas sistemáticas, atenuación atmosférica, cambios en la iluminación de la escena, etc.
+
+511. Servicio de comprensión de imágenes (thematicImageUnderstandingService)
+
+Servicio que proporcionan detección automática de cambios de imagen, registro de diferencias en la imagen, análisis y visualización de diferencias significativas, y diferenciación basada en superficies y en modelos.
+
+512. Servicio de síntesis de imágenes (thematicImageSynthesisService)
+
+Servicio de creación y transformación de imágenes que utiliza modelos espaciales automatizados, transformaciones de perspectiva, y manipulaciones de características de la imagen para mejorar la visibilidad, afinar la resolución o reducir los efectos de coberturas nubosas y neblinas.
+
+513. Manipulación de imágenes multibanda (thematicMultibandImageManipulationService)
+
+Servicio que modifica una imagen usando sus múltiples bandas.
+
+514. Servicio de detección de objetos (thematicObjectDetectionService)
+
+Servicio que detecta objetos del mundo real en una imagen.
+
+515. Servicio de geoanálisis sintáctico (thematicGeoparsingService)
+
+Servicio que escanea documentos de texto para encontrar referencias basadas en la localización, por ejemplo, topónimos, direcciones, códigos postales, etc., como preparación para pasar a un servicio de geocodificación.
+
+516. Servicio de geocodificación (thematicGeocodingService)
+
+Servicio que mejora las referencias textuales basadas en la localización con coordenadas geográficas (o a alguna otra referencia espacial).
+
+600 Servicios geográficos de procesamiento de tipo temporal (temporalProcessingService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+601. Servicio de transformación de sistemas de referencia temporal (temporalReferenceSystemTransformationService)
+
+Servicio que cambia los valores de las instancias temporales de un sistema de referencia temporal a otro.
+
+602. Servicio de subdivisión (temporalSubsettingService)
+
+Servicio que extrae datos de una entrada en un intervalo continuo basándose en valores de posición temporal.
+
+603. Servicio de muestreo (temporalSamplingService)
+
+Servicio que extrae datos de una entrada usando un esquemade muestreo coherente basado en valores de posición temporal.
+
+604. Servicio de análisis de proximidad temporal (temporalProximityAnalysisService)
+
+Dado un intervalo temporal o un evento, este servicio encuentra todos los objetos con un conjunto dado de atributos que están localizados dentro de un intervalo temporal, especificado por el usuario, con respecto al intervalo o evento dado.
+
+700 Servicios geográficos de procesamiento de tipo metadatos (metadataProcessingService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+701. Servicio de cálculo estadístico (metadataStatisticalCalculationService)
+
+Servicio que calcula las estadísticas de un conjunto de datos.
+
+702. Servicios geográficos de anotación (metadataGeographicAnnotationService)
+
+Servicios que añaden información complementaria a una imagen o fenómeno de una colección de fenómenos.
+
+800 Servicios geográficos de comunicación (comService)
+
+Esta categoría comprende las siguientes subcategorías:
+
+801. Servicio de codificación (comEncodingService)
+
+Servicio que permite la implementación de una regla de codificación y proporciona una interfaz con la función de codificación y decodificación.
+
+802. Servicio de transferencia (comTransferService)
+
+Servicio que permite la implementación de uno o más protocolos de transferencia que permiten la transferencia de datos entre sistemas de información distribuidos por medios de comunicación en línea o fuera de línea.
+
+803. Servicio de compresión de datos geográficos (comGeographicCompressionService)
+
+Servicio que comprime o descomprime porciones espaciales de una colección de fenómenos.
+
+804. Servicio de conversión de formato de datos geográficos (comGeographicFormatConversionService)
+
+Servicio que convierte datos geográficos de un formato a otro.
+
+805. Servicio de mensajería (comMessagingService)
+
+Servicio que permite a múltiples usuarios ver simultáneamente colecciones de fenómenos, así como comentarlas y solicitar su edición.
+
+806. Gestión de ejecutables y ficheros remotos (comRemoteFileAndExecutableManagement)
+
+Servicio que proporciona acceso a un almacenamiento secundario de fenómenos geográficos como si fuera local para el cliente.
+
+5. GRADO DE CONFORMIDAD
+
+5.1. Conforme (conformant)
+
+El recurso es totalmente conforme a la especificación citada.
+
+5.2. No conforme (notConformant)
+
+El recurso no es conforme a la especificación citada.
+
+5.3. No evaluado (notEvaluated)
+
+No se ha evaluado la conformidad.
+
+6. FUNCIÓN DE LA PARTE RESPONSABLE
+
+6.1. Proveedor del recurso (resourceProvider)
+
+Parte que suministra el recurso.
+
+6.2. Conservador (custodian)
+
+Parte que asume la responsabilidad de los datos y asegura la atención y el mantenimiento del recurso.
+
+6.3. Propietario (owner)
+
+Parte que posee el recurso.
+
+6.4. Usuario (user)
+
+Parte que utiliza el recurso.
+
+6.5. Distribuidor (distributor)
+
+Parte que distribuye el recurso.
+
+6.6. Creador (originator)
+
+Parte que ha creado el recurso.
+
+6.7. Punto de contacto (pointOfContact)
+
+Parte a la que el cliente puede dirigirse para adquirir conocimientos sobre el recurso o para adquirirlo.
+
+6.8. Investigador principal (principalInvestigator)
+
+Parte clave responsable de reunir información y efectuar investigaciones.
+
+6.9. Procesador (processor)
+
+Parte que ha tratado los datos de manera tal que ha modificado el recurso.
+
+6.10. Editor (publisher)
+
+Parte que ha publicado el recurso.
+
+6.11. Autor (author)
+
+Parte autora del recurso.
+
+--------------------------------------------------

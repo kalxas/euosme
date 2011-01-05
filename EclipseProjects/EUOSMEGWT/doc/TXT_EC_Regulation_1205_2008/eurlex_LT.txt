@@ -1,0 +1,987 @@
+Komisijos reglamentas (EB) Nr. 1205/2008
+
+2008 m. gruodžio 3 d.
+
+kuriuo įgyvendinamos Europos Parlamento ir Tarybos direktyvos 2007/2/EB nuostatos dėl metaduomenų
+
+(Tekstas svarbus EEE)
+
+EUROPOS BENDRIJŲ KOMISIJA,
+
+atsižvelgdama į Europos bendrijos steigimo sutartį,
+
+atsižvelgdama į 2007 m. kovo 14 d. Europos Parlamento ir Tarybos direktyvą 2007/2/EB, sukuriančią Europos bendrijos erdvinės informacijos infrastruktūrą (INSPIRE) [1], ypač į jos 5 straipsnio 4 dalį,
+
+kadangi:
+
+(1) Direktyvoje 2007/2/EB nustatytos bendrosios Europos bendrijos erdvinės informacijos infrastruktūros sukūrimo taisyklės. Kad toji infrastruktūra tinkamai veiktų, vartotojui turi būti sudaryta galimybė gauti erdvinių duomenų rinkinius bei paslaugas ir išsiaiškinti, ar juos galima naudoti ir, jei galima, kokiam tikslui, todėl valstybės narės turėtų pateikti tų erdvinių duomenų rinkinių ir paslaugų aprašymus metaduomenų forma. Kadangi šie metaduomenys turėtų būti suderinti ir tinkami naudoti Bendrijoje ir už jos ribų, būtina nustatyti taisykles dėl metaduomenų, naudojamų erdvinių duomenų rinkiniams ir paslaugoms, atitinkantiems Direktyvos 2007/2/EB I, II ir III prieduose išvardytas temas, aprašyti.
+
+(2) Metaduomenų elementų rinkinį būtina apibrėžti tam, kad būtų galima nustatyti informacijos ištekliaus, kuriam rengiami metaduomenys, tapatybę, klasifikavimą, geografinę vietovę, laiko nuorodą, kokybę, galiojimo patvirtinimą, atitiktį erdvinių duomenų rinkinių ir paslaugų suderinamumo įgyvendinimo taisyklėms, prieigos bei naudojimo apribojimus ir už tą išteklių atsakingą organizaciją. Be to, kad būtų galima stebėti, ar parengti metaduomenys nuolat atnaujinami, ir nustatyti už metaduomenų rengimą bei tvarkymą atsakingą organizaciją, būtina turėti su pačiu metaduomenų įrašu susijusius metaduomenų elementus. Tai būtinas metaduomenų elementų rinkinys, reikalingas tam, kad būtų laikomasi Direktyvos 2007/2/EB, tačiau organizacijos informacijos išteklius gali aprašyti išsamiau, įtraukdamos papildomų elementų, nustatytų vadovaujantis tarptautiniais standartais arba jų interesų bendruomenės taikoma darbo praktika. Be to, galima patvirtinti Komisijos parengtas ir jos nuolat atnaujinamas gaires, ypač jei tai būtina metaduomenų suderinamumui užtikrinti.
+
+(3) Būtina parengti metaduomenų galiojimo patvirtinimo pagal Direktyvą 2007/2/EB instrukcijas, kuriose kiekvienam metaduomenų elementui būtų nustatyti tam tikri reikalavimai ir pageidaujama kiekvieno metaduomenų elemento įvairovė, t. y. būtų nustatyta, ar reikšmės, kurios visada turėtų būti metaduomenų įraše, gali būti pateiktos tik vieną kartą ar daugiau.
+
+(4) Siekiant užtikrinti metaduomenų suderinamumą įvairiakalbėje aplinkoje, būtina apibrėžti kiekvieno metaduomenų elemento reikšmių sritį, ir toje srityje turėtų būti galima įvesti laisvąjį tekstą, datas, pagal tarptautinius standartus nustatytus kodus, pavyzdžiui, kalbų kodus, iš kontroliuojamų sąrašų arba žodynų paimtus reikšminius žodžius arba ženklų eilutes.
+
+(5) Šiame reglamente nustatytos priemonės atitinka komiteto, įsteigto Direktyvos 2007/2/EB 22 straipsniu, nuomonę,
+
+PRIĖMĖ ŠĮ REGLAMENTĄ:
+
+1 straipsnis
+
+Dalykas
+
+Šiuo reglamentu nustatomi metaduomenų, skirtų erdvinių duomenų rinkiniams, erdvinių duomenų rinkinių serijoms ir erdvinių duomenų paslaugoms, atitinkantiems Direktyvos 2007/2/EB I, II ir III prieduose išvardytas temas, rengimo ir tvarkymo reikalavimai.
+
+2 straipsnis
+
+Apibrėžtys
+
+Šiame reglamente, be Direktyvos 2007/2/EB 3 straipsnyje nustatytų apibrėžčių, taikomos priedo A dalyje nustatytos apibrėžtys.
+
+3 straipsnis
+
+Metaduomenų rengimas ir tvarkymas
+
+Erdvinių duomenų rinkinį, erdvinių duomenų rinkinių seriją arba erdvinių duomenų paslaugą aprašančius metaduomenis sudaro priedo B dalyje nustatyti metaduomenų elementai arba tų metaduomenų elementų grupės, ir šie metaduomenys rengiami bei tvarkomi pagal to priedo C ir D dalyse nustatytas taisykles.
+
+4 straipsnis
+
+Įsigaliojimas
+
+Šis reglamentas įsigalioja 20-ą dieną nuo jo paskelbimo Europos Sąjungos oficialiajame leidinyje.
+
+Šis reglamentas yra privalomas visas ir tiesiogiai taikomas visose valstybėse narėse.
+
+Priimta Briuselyje, 2008 m. gruodžio 3 d.
+
+Komisijos vardu
+
+Stavros Dimas
+
+Komisijos narys
+
+[1] OL L 108, 2007 4 25, p. 1.
+
+--------------------------------------------------
+
+PRIEDAS
+
+NUOSTATŲ DĖL METADUOMENŲ ĮGYVENDINIMO TAISYKLĖS
+
+A DALIS
+
+Paaiškinimai
+
+1. Taikomos šios apibrėžtys:
+
+- ženklų eilutė – ženklų rinkiniu, kaip vienetu, išreikšta metaduomenų elementų reikšmių sritis,
+
+- laisvasis tekstas – metaduomenų elementų, išreikštų viena natūraliąja kalba arba daugiau, reikšmių sritis,
+
+- kilmė – duomenų rinkinio istorija ir naudojimo ciklas nuo kaupimo bei gavimo renkant ir apskaičiuojant iki dabartinės formos, kaip nustatyta standarte EN ISO 19101,
+
+- metaduomenų elementas – tam tikras metaduomenų vienetas, kaip nustatyta EN ISO 19155,
+
+- vardų sritis – vardų, apibrėžiamų nurodant universalųjį ištekliaus identifikatorių (angl. Uniform Resource Identifier, URI) ir XML (angl. Extensible Markup Language) dokumentuose naudojamų kaip elementų pavadinimai ir požymių pavadinimai, rinkinys,
+
+- kokybė – produkto, gebančio patenkinti nustatytus ir numanomus poreikius, charakteristikų visuma, kaip apibrėžta EN ISO 19101,
+
+- išteklius – informacijos išteklius, tiesiogiai arba netiesiogiai susijęs su tam tikra vieta arba geografine vietove,
+
+- erdvinių duomenų rinkinių serija – erdvinių duomenų rinkinių, atitinkančių tą pačią produkto specifikaciją, grupė.
+
+2. Kai kalbama apie erdvinių duomenų rinkinių galiojimą, turima galvoje kuris nors iš šių dalykų:
+
+- su duomenimis susijęs erdvės ir laiko intervalas,
+
+- ar duomenys buvo patikrinti pagal matavimo arba kokybės standartą,
+
+- kiek duomenys yra tinkami tam tikram tikslui,
+
+- tam tikrais atvejais – erdvinių duomenų rinkinio teisinis galiojimas.
+
+B DALIS
+
+Metaduomenų elementai
+
+1. TAPATYBĖ
+
+Teikiami šie metaduomenų elementai:
+
+1.1. Ištekliaus pavadinimas
+
+Tipinis, neretai unikalus pavadinimas, kuriuo vadinamas išteklius.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+1.2. Ištekliaus santrauka
+
+Glausta ištekliaus turinio aprašomojo pobūdžio santrauka.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+1.3. Ištekliaus tipas
+
+Metaduomenimis aprašomo ištekliaus tipas.
+
+Šio metaduomenų elemento reikšmių sritis apibrėžta D dalies 1 skirsnyje.
+
+1.4. Ištekliaus adresas
+
+Ištekliaus adresas apibrėžia sąsają (-as) su ištekliumi ir (arba) sąsają su papildoma informacija apie išteklių.
+
+Šio metaduomenų elemento reikšmių sritis yra ženklų eilutė, paprastai išreiškiama universaliuoju adresu (angl. Uniform Resource Locator, URL).
+
+1.5. Unikalusis ištekliaus identifikatorius
+
+Išteklių unikaliai identifikuojanti reikšmė.
+
+Šio metaduomenų elemento reikšmių sritis yra privalomasis ženklų eilutės kodas, kurį paprastai priskiria duomenų savininkas, ir ženklų eilutės vardų sritis, unikaliai identifikuojanti identifikatoriaus kodo priskyrimo aplinkybes (pavyzdžiui, duomenų savininką).
+
+1.6. Sujungtas išteklius
+
+Jei išteklius yra erdvinių duomenų paslauga, šis metaduomenų elementas tam tikromis aplinkybėmis, naudojant unikaliuosius ištekliaus identifikatorius (URI), apibrėžia paslaugos paskirties erdvinių duomenų rinkinį (-ius).
+
+Šio metaduomenų elemento reikšmių sritis yra privalomasis ženklų eilutės kodas, kurį paprastai priskiria duomenų savininkas, ir ženklų eilutės vardų sritis, unikaliai identifikuojanti identifikatoriaus kodo priskyrimo aplinkybes (pavyzdžiui, duomenų savininką).
+
+1.7. Ištekliaus kalba
+
+Ištekliuje naudojama (-os) kalba (-os).
+
+Šio metaduomenų elemento reikšmių sritis apribota kalbomis, nurodytomis ISO 639-2.
+
+2. ERDVINIŲ DUOMENŲ IR PASLAUGŲ KLASIFIKAVIMAS
+
+2.1. Temos kategorija
+
+Temos kategorija yra labai išsami klasifikavimo schema, skirta padėti grupuoti turimus erdvinių duomenų išteklius ir atlikti teminę jų paiešką.
+
+Šio metaduomenų elemento reikšmių sritis apibrėžta D dalies 2 skirsnyje.
+
+2.2. Erdvinių duomenų paslaugų tipas
+
+Klasifikacija, skirta padėti ieškoti turimų erdvinių duomenų paslaugų. Konkreti paslauga priskiriama tik vienai kategorijai.
+
+Šio metaduomenų elemento reikšmių sritis apibrėžta D dalies 3 skirsnyje.
+
+3. REIKŠMINIS ŽODIS
+
+Jei išteklius yra erdvinių duomenų paslauga, turi būti pateiktas bent vienas D dalies 4 skirsnyje nurodytas reikšminis žodis.
+
+Jei išteklius yra erdvinių duomenų rinkinys arba erdvinių duomenų rinkinių serija, turi būti pateiktas bent vienas reikšminis žodis, paimtas iš Bendrojo aplinkos apsaugos daugiakalbio žodyno (BAADŽ) ir apibūdinantis susijusią erdvinių duomenų temą, kaip apibrėžta Direktyvos 2007/2/EB I, II arba III priede.
+
+Su kiekvienu reikšminiu žodžiu pateikiami šie metaduomenų elementai:
+
+3.1. Reikšminis žodis
+
+Reikšminis žodis paprastai yra bendrinės kalbos žodis, formalizuotas žodis arba frazė, skirti temai apibūdinti. Kadangi atliekant išsamias užklausas, temos kategorija yra pernelyg platus kriterijus, reikšminiai žodžiai padeda susiaurinti išsamią teksto paiešką ir leidžia atlikti struktūrinę reikšminių žodžių paiešką.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+3.2. Kontroliuojamasis kilmės žodynėlis
+
+Jei reikšminis žodis paimtas iš kontroliuojamojo žodynėlio (tezauro, ontologijos), pavyzdžiui, iš BAADŽ, šis žodynėlis turi būti nurodytas.
+
+Pateikiant nuorodą, nurodomas bent kontroliuojamojo kilmės žodynėlio pavadinimas ir susijusi data (išleidimo data, paskutinio atnaujinimo arba parengimo data).
+
+4. GEOGRAFINĖ VIETOVĖ
+
+Direktyvos 2007/2/EB 11 straipsnio 2 dalies e punkte pateiktas reikalavimas dėl geografinės vietovės įgyvendinamas nurodant metaduomenų elemento geografinės aprėpties langelį.
+
+4.1. Geografinės aprėpties langelis
+
+Ištekliaus geografinės erdvės mastas, pateikiamas kaip aprėpties langelis.
+
+Aprėpties langelis apibrėžiamas nurodant vakarinės ribos bei rytinės ribos ilgumos linijų ir pietinės bei šiaurinės ribų platumos linijų koordinates laipsniais su dešimtainėmis trupmenomis ne mažiau kaip šimtųjų dalių tikslumu.
+
+5. LAIKO NUORODA
+
+Šis metaduomenų elementas susijęs su reikalavimu turėti informacijos apie duomenų laikinumo dimensiją, kaip nurodyta Direktyvos 2007/2/EB 8 straipsnio 2 dalies d punkte. Turi būti pateiktas bent vienas 5.1–5.4 punktuose nurodytas metaduomenų elementas.
+
+5.1–5.4 punktuose nurodytų metaduomenų elementų reikšmių sritis yra datų rinkinys. Kiekviena data turi būti susieta su laiko skaičiavimo sistema ir turi būti išreikšta taip, kad derėtų su ta sistema. Numatytoji skaičiavimo sistema yra Grigaliaus kalendorius, datas nurodant pagal ISO 8601.
+
+5.1. Laikotarpis
+
+Laikotarpis apibrėžia ištekliaus turinio taikymo trukmę. Laikotarpis gali būti išreikštas kuriuo nors iš šių būdų:
+
+- kaip konkreti data,
+
+- kaip datų intervalas, išreiškiamas nurodant to intervalo pradžios datą ir pabaigos datą,
+
+- kaip konkrečių datų ir datų intervalų rinkinys.
+
+5.2. Paskelbimo data
+
+Parengto ištekliaus paskelbimo arba įsigaliojimo data. Gali būti taikoma daugiau kaip viena paskelbimo data.
+
+5.3. Paskutinio atnaujinimo data
+
+Ištekliaus paskutinio atnaujinimo data, jei išteklius buvo atnaujintas. Gali būti taikoma ne daugiau kaip viena paskutinio atnaujinimo data.
+
+5.4. Parengimo data
+
+Ištekliaus parengimo data. Gali būti taikoma ne daugiau kaip viena parengimo data.
+
+6. KOKYBĖ IR GALIOJIMAS
+
+Direktyvos 2007/2/EB 5 straipsnio 2 dalyje ir 11 straipsnio 2 dalyje nurodyti erdvinių duomenų kokybės ir galiojimo reikalavimai įgyvendinami šiais metaduomenų elementais:
+
+6.1. Kilmė
+
+Informacija apie proceso istoriją ir (arba) bendrąją erdvinių duomenų rinkinio kokybę. Tam tikrais atvejais galima nurodyti, ar buvo patvirtintas duomenų rinkinio galiojimas arba ar buvo garantuota duomenų rinkinio kokybė, ar tai oficiali versija (jei esama keleto versijų), ar ji galioja teisiniu požiūriu.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+6.2. Erdvinė skiriamoji geba
+
+Erdvinė skiriamoji geba parodo duomenų rinkinio išsamumo lygį. Ji išreiškiama kaip skiriamosios gebos atstumų, kurių skaičius gali kisti nuo nulio iki daugelio (paprastai taikoma tinkleliu pateikiamiems duomenims ir vaizdu pagrįstuose produktuose), rinkinys arba kaip ekvivalentiniai masteliai (paprastai taikoma žemėlapiuose arba jais pagrįstuose produktuose).
+
+Ekvivalentinis mastelis paprastai išreiškiamas sveikuoju skaičiumi, nurodančiu skalės vardiklį.
+
+Skiriamosios gebos atstumas išreiškiamas skaitine reikšme, susieta su ilgio vienetu.
+
+7. ATITIKTIS
+
+Direktyvos 2007/2/EB 5 straipsnio 2 dalies a punkte ir 11 straipsnio 2 dalies d punkte nurodyti atitikties reikalavimai, atitikties laipsnis ir tų reikalavimų įgyvendinimo taisyklės, priimtos pagal Direktyvos 2007/2/EB 7 straipsnio 1 dalį, nagrinėjami pagal šiuos metaduomenų elementus:
+
+7.1. Specifikacija
+
+Įgyvendinimo taisyklių, priimtų pagal Direktyvos 2007/2/EB 7 straipsnio 1 dalį, nuoroda arba kitokia specifikacija, kurią atitinka tam tikras išteklius.
+
+Išteklius gali atitikti daugiau kaip vienas įgyvendinimo taisykles, priimtas pagal Direktyvos 2007/2/EB 7 straipsnio 1 dalį, arba daugiau kaip vieną kitokią specifikaciją.
+
+Pateikiant nuorodą, nurodomas bent įgyvendinimo taisyklių, priimtų pagal Direktyvos 2007/2/EB 7 straipsnio 1 dalį, arba kitokios specifikacijos pavadinimas ir susijusi data (paskelbimo data, paskutinio atnaujinimo arba parengimo data).
+
+7.2. Laipsnis
+
+Ištekliaus atitikties įgyvendinimo taisyklėms, priimtoms pagal Direktyvos 2007/2/EB 7 straipsnio 1 dalį, arba kitokiai specifikacijai laipsnis.
+
+Šio metaduomenų elemento reikšmių sritis apibrėžta D dalies 5 skirsnyje.
+
+8. PRIEIGOS IR NAUDOJIMO APRIBOJIMAI
+
+Prieigos ir naudojimo apribojimai – tai (bent vienas iš toliau pateiktų variantų):
+
+- prieigos ir naudojimo sąlygų rinkinys (8.1),
+
+- viešosios prieigos apribojimų rinkinys (8.2).
+
+8.1. Prieigos ir naudojimo sąlygos
+
+Šis metaduomenų elementas apibrėžia erdvinių duomenų rinkinių ir paslaugų prieigos bei naudojimo sąlygas, o tam tikrais atvejais – ir susijusius mokesčius, kaip reikalaujama pagal Direktyvos 2007/2/EB 5 straipsnio 2 dalies b punktą ir 11 straipsnio 2 dalies f punktą.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+Šis elementas privalo turėti kokią nors reikšmę. Jei ištekliaus prieiga ir naudojimas neribojami, turi būti nurodoma "Netaikomos jokios sąlygos". Jei sąlygos nežinomos, turi būti nurodoma "Sąlygos nežinomos".
+
+Be to, šis elementas teikia informaciją apie mokesčius, kuriuos reikia sumokėti už ištekliaus prieigą ir naudojimą, jei tokie taikomi, arba nurodo universalųjį adresą (URL), kuriuo pateikiama informacija apie mokesčius.
+
+8.2. Viešosios prieigos apribojimai
+
+Jei valstybės narės pagal Direktyvos 2007/2/EB 13 straipsnį riboja viešąją prieigą prie erdvinių duomenų rinkinių ir erdvinių duomenų paslaugų, šis metaduomenų elementas pateikia informaciją apie apribojimus ir jų priežastis.
+
+Jei viešoji prieiga neribojama, šis metaduomenų elementas turi tai nurodyti.
+
+Šio metaduomenų elemento reikšmių sritis yra laisvasis tekstas.
+
+9. UŽ ERDVINIŲ DUOMENŲ RINKINIŲ IR PASLAUGŲ SUKŪRIMĄ, VALDYMĄ, PRIEŽIŪRĄ IR PLATINIMĄ ATSAKINGOS ORGANIZACIJOS
+
+Įgyvendinant Direktyvos 2007/2/EB 5 straipsnio 2 dalies d punkto ir 11 straipsnio 2 dalies g punkto reikalavimus, turi būti teikiami šie du metaduomenų elementai:
+
+9.1. Atsakinga šalis
+
+Organizacijos, atsakingos už ištekliaus sukūrimą, valdymą, priežiūrą ir platinimą, aprašas.
+
+Šiame apraše pateikiama:
+
+- organizacijos pavadinimas, kaip laisvasis tekstas,
+
+- kontaktinis el. pašto adresas, kaip ženklų eilutė.
+
+9.2. Atsakingos šalies funkcijos
+
+Atsakingos organizacijos funkcijos.
+
+Šio metaduomenų elemento reikšmių sritis apibrėžta D dalies 6 skirsnyje.
+
+10. METADUOMENYS APIE METADUOMENIS
+
+Įgyvendinant Direktyvos 2007/2/EB 5 straipsnio 1 dalies reikalavimus, turi būti teikiami šie metaduomenų elementai:
+
+10.1. Kontaktinis asmuo metaduomenų klausimais
+
+Organizacijos, atsakingos už metaduomenų rengimą ir tvarkymą, aprašas.
+
+Šiame apraše pateikiama:
+
+- organizacijos pavadinimas, kaip laisvasis tekstas,
+
+- kontaktinis el. pašto adresas, kaip ženklų eilutė.
+
+10.2. Metaduomenų data
+
+Data, nurodanti, kada buvo parengtas arba atnaujintas metaduomenų įrašas.
+
+Ši data pateikiama pagal ISO 8601.
+
+10.3. Metaduomenų kalba
+
+Kalba, kuria pateikti metaduomenų elementai.
+
+Šio metaduomenų elemento reikšmių sritis apribota oficialiomis Bendrijos kalbomis, vartojamomis pagal ISO 639-2.
+
+C DALIS
+
+Instrukcijos dėl metaduomenų elementų įvairovės ir šiems metaduomenų elementams taikomos sąlygos
+
+Išteklių aprašančius metaduomenis, kai jie susiję su erdvinių duomenų rinkiniu arba erdvinių duomenų rinkinių serija, sudaro 1 lentelėje išvardyti metaduomenų elementai arba jų grupės, ir, kai jie susiję su erdvinių duomenų rinkinio paslauga, 2 lentelėje išvardyti metaduomenų elementai arba jų grupės.
+
+Šie metaduomenų elementai arba jų grupės turi atitikti numatytos įvairovės ir susijusias sąlygas, nustatytas 1 ir 2 lentelėse.
+
+Jei dėl tam tikro metaduomenų elemento jokių sąlygų nenurodyta, tas elementas yra privalomas.
+
+Lentelėse pateikiama ši informacija:
+
+- pirmajame stulpelyje pateikiama nuoroda į priedo B dalies pastraipą, kurioje apibrėžiamas metaduomenų elementas arba jų grupė,
+
+- antrajame stulpelyje pateikiamas metaduomenų elemento arba metaduomenų elementų grupės pavadinimas,
+
+- trečiajame stulpelyje nurodoma metaduomenų elemento įvairovė. Įvairovė nurodoma universaliojoje modeliavimo kalboje (angl. Unified Modelling Language, UML) taikomu įvairovės žymeniu, kur:
+
+- "1" reiškia, kad parengtame rinkinyje šis metaduomenų elementas turi būti pateikiamas tik vieną kartą,
+
+- "1..*" reiškia, kad parengtame rinkinyje šis elementas turi būti pateikiamas bent vieną kartą,
+
+- "0..1" rodo, kad metaduomenų elemento parengtame rinkinyje gali ir nebūti, bet jei yra, jis turi būti pateikiamas tik vieną kartą,
+
+- "0..*" rodo, kad metaduomenų elemento parengtame rinkinyje gali ir nebūti, bet jei yra, jis gali būti pateikiamas vieną kartą arba daugiau,
+
+- jei įvairovės žymuo yra "0..1" arba "0..*", jo būtinumas nustatomas atsižvelgiant į tam tikrą sąlygą,
+
+- ketvirtajame stulpelyje, jei elemento įvairovei taikoma kitokia sąlyga nei visiems išteklių tipams, pateikiama tam tikra sąlyga. Kitais atvejais privalomi visi elementai.
+
+1 lentelė
+
+Erdvinių duomenų rinkiniams ir erdvinių duomenų rinkinių serijoms skirti metaduomenys
+
+Nuoroda | Metaduomenų elementai | Įvairovė | Sąlyga |
+
+1.1 | Ištekliaus pavadinimas | 1 | |
+
+1.2 | Ištekliaus santrauka | 1 | |
+
+1.3 | Ištekliaus tipas | 1 | |
+
+1.4 | Ištekliaus adresas | 0..* | Privaloma, jei yra URL, kuriuo galima gauti daugiau informacijos apie išteklių ir (arba) su prieiga susijusias paslaugas |
+
+1.5 | Unikalusis ištekliaus identifikatorius | 1..* | |
+
+1.7 | Ištekliaus kalba | 0..* | Privaloma, jei išteklius apima tekstinę informaciją |
+
+2.1 | Temos kategorija | 1..* | |
+
+3 | Reikšminis žodis | 1..* | |
+
+4.1 | Geografinės aprėpties langelis | 1..* | |
+
+5 | Laiko nuoroda | 1..* | |
+
+6.1 | Kilmė | 1 | |
+
+6.2 | Erdvinė skiriamoji geba | 0..* | Privaloma, jei tai duomenų rinkiniai arba duomenų rinkinių serijos ir jei galima nurodyti skiriamosios gebos atstumą |
+
+7 | Atitiktis | 1..* | |
+
+8.1 | Prieigos ir naudojimo sąlygos | 1..* | |
+
+8.2 | Viešosios prieigos apribojimai | 1..* | |
+
+9 | Atsakinga organizacija | 1..* | |
+
+10.1 | Kontaktinis asmuo metaduomenų klausimais | 1..* | |
+
+10.2 | Metaduomenų data | 1 | |
+
+10.3 | Metaduomenų kalba | 1 | |
+
+2 lentelė
+
+Erdvinių duomenų paslaugoms skirti metaduomenys
+
+Nuoroda | Metaduomenų elementas | Įvairovė | Sąlyga |
+
+1.1 | Ištekliaus pavadinimas | 1 | |
+
+1.2 | Ištekliaus santrauka | 1 | |
+
+1.3 | Ištekliaus tipas | 1 | |
+
+1.4 | Ištekliaus adresas | 0..* | Privaloma, jei yra sąsaja su paslauga |
+
+1.6 | Sujungtas išteklius | 0..* | Privaloma, jei yra sąsajų su duomenų rinkiniais, kuriais pagrįstas paslaugos veikimas |
+
+2.2 | Erdvinių duomenų paslaugų tipas | 1 | |
+
+3 | Reikšminis žodis | 1* | |
+
+4.1 | Geografinės aprėpties langelis | 0..* | Privaloma, jei tai paslaugos, kurioms būdingas aiškus geografinis mastas |
+
+5 | Laiko nuoroda | 1..* | |
+
+6.2 | Erdvinė skiriamoji geba | 0..* | Privaloma, jei šiai paslaugai taikomas erdvinės skiriamosios gebos apribojimas |
+
+7 | Atitiktis | 1..* | |
+
+8.1 | Prieigos ir naudojimo sąlygos | 1..* | |
+
+8.2 | Viešosios prieigos apribojimai | 1..* | |
+
+9 | Atsakinga organizacija | 1..* | |
+
+10.1 | Kontaktinis asmuo metaduomenų klausimais | 1..* | |
+
+10.2 | Metaduomenų data | 1 | |
+
+10.3 | Metaduomenų kalba | 1 | |
+
+D DALIS
+
+Reikšmių sritys
+
+D dalies 1–6 skirsniuose aprašytos reikšmių sritys, nurodytos B dalyje pateiktuose metaduomenų elementų aprašuose, turi būti naudojamos taikant įvairovės reikalavimus, pateiktus C dalies 1 ir 2 lentelėse.
+
+Konkrečios srities reikšmės apibrėžiamos:
+
+- skaitiniu identifikatoriumi,
+
+- žmonėms skirtu tekstiniu pavadinimu, kurį galima išversti į įvairias Bendrijos kalbas,
+
+- kalbos požiūriu neutraliu pavadinimu, skirtu kompiuteriams (reikšmė pateikiama lenktiniuose skliaustuose),
+
+- neprivalomu aprašu arba apibrėžtimi.
+
+1. IŠTEKLIAUS TIPAS
+
+1.1. Erdvinių duomenų rinkinių serija (series).
+
+1.2. Erdvinių duomenų rinkinys (dataset).
+
+1.3. Erdvinių duomenų paslaugos (services).
+
+2. TEMŲ KATEGORIJOS PAGAL EN ISO 19115
+
+2.1. Žemės ūkis (farming)
+
+Gyvulininkystė ir (arba) augalininkystė.
+
+Ši kategorija taikoma Direktyvos 2007/2/EB III priedo 9 skirsnyje nurodytai erdvinių duomenų temai "Žemės ūkio ir akvakultūros infrastruktūra".
+
+2.2. Biota (biota)
+
+Natūralios aplinkos flora ir (arba) fauna.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 17 skirsnis – "Biogeografiniai regionai", III priedo 18 skirsnis – "Buveinės ir biotopai", III priedo 19 skirsnis – "Rūšių pasiskirstymas".
+
+2.3. Ribos (boundaries)
+
+Juridiniai žemės aprašai.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: I priedo 4 skirsnis – "Administraciniai vienetai", III priedo 1 skirsnis – "Statistiniai vienetai".
+
+2.4. Klimatologija/meteorologija/atmosfera (climatologyMeteorologyAtmosphere)
+
+Atmosferos procesai ir reiškiniai.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 13 skirsnis – "Atmosferos sąlygos", III priedo 14 skirsnis – "Meteorologinės geografinės sąlygos".
+
+2.5. Ekonomika (economy)
+
+Ekonominės veiklos rūšys, sąlygos ir užimtumas.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 20 skirsnis – "Energijos ištekliai", III priedo 21 skirsnis – "Naudingosios iškasenos".
+
+2.6. Aukštis (elevation)
+
+Aukštis virš jūros lygio arba žemiau jūros lygio.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: II priedo 1 skirsnis – "Aukštis".
+
+2.7. Aplinka (environment)
+
+Aplinkos ištekliai, apsauga ir išsaugojimas.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: I priedo 9 skirsnis – "Saugomos teritorijos".
+
+2.8. Geomokslinė informacija (geoscientificInformation)
+
+Informacija, susijusi su Žemės mokslais.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 3 skirsnis – "Dirvožemis", II priedo 4 skirsnis – "Geologija", III priedo 12 skirsnis – "Gamtinių pavojų zonos".
+
+2.9. Sveikata (health)
+
+Sveikata, medicinos paslaugos, žmonių ekologija ir sauga.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: III priedo 5 skirsnis – "Žmonių sveikata ir sauga".
+
+2.10. Vaizdiniai/pagrindiniai žemėlapiai/žemės danga (imageryBaseMapsEarthCover)
+
+Pagrindiniai žemėlapiai.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: II priedo 3 skirsnis – "Ortofotografinis vaizdavimas", II priedo 2 skirsnis – "Žemės danga".
+
+2.11. Žvalgyba/kariuomenė (intelligenceMilitary)
+
+Karinės bazės, statiniai, veikla.
+
+Ši kategorija netaikoma jokiai konkrečiai Direktyvos 2007/2/EB erdvinių duomenų temai.
+
+2.12. Vidaus vandenys (inlandWaters)
+
+Vidaus vandenų savybės, sausinimo sistemos ir jų charakteristikos.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: I priedo 8 skirsnis – "Hidrografija".
+
+2.13. Vieta (location)
+
+Su padėties nustatymu susijusi informacija ir paslaugos.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: I priedo 3 skirsnis – "Geografiniai pavadinimai", I priedo 5 skirsnis – "Adresai".
+
+2.14. Vandenynai (oceans)
+
+Druskingų vandenų (išskyrus vidaus vandenis) savybės ir charakteristikos.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 16 skirsnis – "Jūrų regionai", III priedo 15 skirsnis – "Okeanografinės geografinės sąlygos".
+
+2.15. Planavimas/kadastrai (planningCadastre)
+
+Informacija apie tam tikrus būsimus žemės naudojimo būdus.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: I priedo 6 skirsnis – "Kadastro sklypai", III priedo 4 skirsnis – "Žemės naudojimas", III priedo 11 skirsnis – "Tvarkomos teritorijos, ribojamos ir reglamentuojamos zonos bei vienetai, už kuriuos atsiskaitoma".
+
+2.16. Visuomenė (society)
+
+Visuomenės ir kultūros charakteristikos.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 10 skirsnis – "Gyventojų pasiskirstymas – demografija".
+
+2.17. Statiniai (structure)
+
+Žmonių pastatytas statinys.
+
+Ši kategorija taikoma šioms Direktyvos 2007/2/EB erdvinių duomenų temoms: III priedo 2 skirnis – "Pastatai", III priedo 8 skirsnis – "Gamybos ir pramonės įrenginiai", III priedo 7 skirsnis – "Aplinkos stebėjimo priemonės".
+
+2.18. Vežimas (transportation)
+
+Priemonės, įskaitant pagalbines, skirtos žmonėms ir (arba) prekėms vežti.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: I priedo 7 skirsnis – "Transporto tinklai".
+
+2.19. Komunalinės/ryšių paslaugos (utilitiesCommunication)
+
+Energijos, vandens ir atliekų sistemos bei ryšių infrastruktūra ir paslaugos.
+
+Ši kategorija taikoma šiai Direktyvos 2007/2/EB erdvinių duomenų temai: III priedo 6 skirsnis – "Komunalinės įmonės ir valstybės tarnybos".
+
+3. ERDVINIŲ DUOMENŲ PASLAUGŲ TIPAS
+
+3.1. Paieškos paslauga (discovery)
+
+Paslaugos, suteikiančios galimybę ieškoti erdvinių duomenų rinkinių ir paslaugų pagal atitinkamų metaduomenų turinį ir parodyti tokių metaduomenų turinį.
+
+3.2. Peržiūros paslauga (view)
+
+Paslauga, suteikianti galimybę bent jau parodyti, naršyti, priartinti arba nutolinti, rodyti panoraminį vaizdą ar vieną ant kito uždėti peržiūrimus erdvinių duomenų rinkinius ir parodyti sutartinius ženklus bei atitinkamą metaduomenų turinį.
+
+3.3. Parsisiųsdinimo paslauga (download)
+
+Paslauga, suteikianti galimybę parsisiųsdinti erdvinių duomenų rinkinių kopijas arba jų dalis ir, kai naudinga, tiesiogiai jomis naudotis.
+
+3.4. Transformavimo paslauga (transformation)
+
+Paslauga, suteikianti galimybę transformuoti erdvinių duomenų rinkinius siekiant užtikrinti suderinamumą.
+
+3.5. Erdvinių duomenų paslaugos aktyvinimas (invoke)
+
+Paslauga, suteikianti galimybę apibrėžti naudojantis erdvine paslauga numatomus įvesti bei gauti duomenis ir procedūrą arba paslaugų seką, sujungiančią keletą paslaugų. Be to, ši paslauga suteikia galimybę apibrėžti išorinę interneto paslaugų sąsają, skirtą minėtai procedūrai arba paslaugų sekai.
+
+3.6. Kita paslauga (other)
+
+4. ERDVINIŲ DUOMENŲ PASLAUGŲ KLASIFIKAVIMAS
+
+Reikšminiai žodžiai grindžiami geografinių paslaugų klasifikatoriumi, nustatytu standarte EN ISO 19119. Šis klasifikatorius suskirstytas į kategorijas, kurių subkategorijos apibrėžia erdvinių duomenų paslaugų klasifikatoriaus reikšmines sritis.
+
+100 Geografinės žmonių bendravimo paslaugos (humanInteractionService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+101. Katalogo žiūryklė (humanCatalogueViewer)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę interaktyviai naudojant katalogą rasti, naršyti ir tvarkyti metaduomenis, susijusius su geografiniais duomenimis arba geografinėmis paslaugomis.
+
+102. Geografinė žiūryklė (humanGeographicViewer)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę peržiūrėti vieną savybių rinkinį ar aprėpties zoną arba daugiau.
+
+103. Geografinės skaičiuoklės žiūryklė (humanGeographicSpreadsheetViewer)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę interaktyviai naudoti įvairius duomenų objektus ir atlikti apskaičiavimus, panašius į atliekamus naudojant aritmetinę skaičiuoklę, bet pritaikytą geografiniams duomenims.
+
+104. Paslaugos rengyklė (humanServiceEditor)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę valdyti geografinės informacijos apdorojimo paslaugas.
+
+105. Sekos apibrėžties rengyklė (humanChainDefinitionEditor)
+
+Vartotojui suteikia galimybę interaktyviai naudoti sekos apibrėžties paslaugą.
+
+106. Procedūros aktyvinimo tvarkytuvė (humanWorkflowEnactmentManager)
+
+Suteikia vartotojui galimybę interaktyviai naudoti procedūros aktyvinimo paslaugą.
+
+107. Geografinių savybių rengyklė (humanGeographicFeatureEditor)
+
+Geografinių savybių žiūryklė, jos vartotojui suteikianti galimybę interaktyviai naudoti savybių duomenis.
+
+108. Geografinių ženklų rengyklė (humanGeographicSymbolEditor)
+
+Klientui teikiama paslauga, individui suteikianti galimybę pasirinkti ir tvarkyti ženklų bibliotekas.
+
+109. Savybių apibendrinimo rengyklė (humanFeatureGeneralizationEditor)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę keisti savybės arba savybių rinkinio kartografines charakteristikas, supaprastinant jų vaizdinio pateikimo būdą, tačiau paliekant svarbiausius elementus; tai erdvinis supaprastinimo atitikmuo.
+
+110. Geografinių duomenų struktūros žiūryklė (humanGeographicDataStructureViewer)
+
+Klientui teikiama paslauga, jos vartotojui suteikianti galimybę gauti tam tikrą duomenų rinkinio dalį, kad būtų galima pamatyti vidinę to duomenų rinkinio struktūrą.
+
+200 Geografinio modelio ir (arba) geografinės informacijos valdymo paslauga (infoManagementService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+201. Savybės prieigos paslauga (infoFeatureAccessService)
+
+Paslauga, klientui suteikianti galimybę prisijungti prie savybių saugyklos ir ją tvarkyti.
+
+202. Žemėlapio prieigos paslauga (infoMapAccessService)
+
+Paslauga, klientui suteikianti galimybę naudotis geografiniais grafiniais objektais, t. y. geografinių duomenų atvaizdais.
+
+203. Aprėpties zonos prieigos paslauga (infoCoverageAccessService)
+
+Paslauga, klientui suteikianti galimybę prisijungti prie aprėpties zonos duomenų saugyklos ir ją tvarkyti.
+
+204. Jutiklio aprašo paslauga (infoSensorDescriptionService)
+
+Paslauga, pateikianti aprėpties jutiklio aprašą, įskaitant jutiklio vietą ir kryptinę padėtį, taip pat jutiklio geometrines, dinamines ir radiometrines charakteristikas, naudojamas geografinių duomenų apdorojimo tikslais.
+
+205. Produkto prieigos paslauga (infoProductAccessService)
+
+Paslauga, suteikianti galimybę prisijungti prie geografinių produktų saugyklos ir ją tvarkyti.
+
+206. Savybės tipo paslauga (infoFeatureTypeService)
+
+Paslauga, klientui suteikianti galimybę prisijungti prie savybių tipų apibrėžčių saugyklos ir ją tvarkyti.
+
+207. Katalogo paslauga (infoCatalogueService)
+
+Paslauga, suteikianti galimybę ieškoti paslaugų metaduomenų apie įvykius saugykloje ir juos tvarkyti.
+
+208. Registro paslauga (infoRegistryService)
+
+Paslauga, suteikianti galimybę prisijungti prie metaduomenų apie tipus saugyklos.
+
+209. Geografijos vadovo paslauga (infoGazetteerService)
+
+Paslauga, suteikianti galimybę prisijungti prie tam tikros rūšies arba rūšių gamtos reiškinių katalogo, kuriame pateikiama tam tikros informacijos apie padėtį.
+
+210. Užsakymų tvarkymo paslauga (infoOrderHandlingService)
+
+Paslauga, klientui suteikianti galimybę užsakyti produktus iš tiekėjo.
+
+211. Nuolatinio užsakymo paslauga (infoStandingOrderService)
+
+Užsakymų tvarkymo paslauga, jos vartotojui suteikianti galimybę pareikalauti, kad produktas visoje tam tikroje geografinėje zonoje būtų pateikiamas iš karto, kai jis parengiamas.
+
+300 Geografinių procedūrų ir (arba) užduočių valdymo paslaugos (taskManagementService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+301. Sekos apibrėžties paslauga (chainDefinitionService)
+
+Paslauga, skirta sekai apibrėžti ir jai aktyvinti, naudojant procedūros aktyvinimo paslaugą.
+
+302. Procedūros aktyvinimo paslauga (workflowEnactmentService)
+
+Procedūros aktyvinimo paslauga interpretuoja seką ir kontroliuoja paslaugų aktyvinimą bei veiksmų eilės tvarką.
+
+303. Prenumeratos paslauga (subscriptionService)
+
+Paslauga, suteikianti klientams galimybę užsiregistruoti dėl pranešimų apie įvykius.
+
+400 Geografinių duomenų apdorojimo paslaugos – erdvinės (spatialProcessingService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+401. Koordinačių konvertavimo paslauga (spatialCoordinateConversionService)
+
+Paslauga, skirta koordinatėms, išreikštoms pagal vieną koordinačių sistemą, pakeisti koordinatėmis, išreikštomis pagal kitą koordinačių sistemą.
+
+402. Koordinačių transformavimo paslauga (spatialCoordinateTransformationService)
+
+Paslauga, skirta pagal vienu dydžiu pagrįstą koordinačių atskaitos sistemą nurodytoms koordinatėms pakeisti koordinatėmis, išreikštomis pagal kitu dydžiu pagrįstą koordinačių atskaitos sistemą.
+
+403. Aprėpties–krypties konvertavimo paslauga (spatialCoverageVectorConversionService)
+
+Paslauga, skirta aprėpties schema pagrįstai erdvinei pateikčiai pakeisti krypties schema pagrįsta erdvine pateiktimi arba atvirkščiai.
+
+404. Atvaizdo koordinačių konvertavimo paslauga (spatialImageCoordinateConversionService)
+
+Koordinačių transformavimo arba konvertavimo paslauga, skirta atvaizdo koordinačių atskaitos sistemai pakeisti.
+
+405. Pataisų sistema (spatialRectificationService)
+
+Paslauga, skirta atvaizdui transformuoti į statmenąją lygiagrečiąją projekciją, taip išsaugant vienodą mastelį.
+
+406. Ortografinių pataisų paslauga (spatialOrthorectificationService)
+
+Pataisų paslauga, pašalinanti atvaizdo posvyrį ir poslinkį, susidariusius dėl vietovės pakilumos.
+
+407. Jutiklio geometrinio modelio koregavimo paslauga (spatialSensorGeometryModelAdjustmentService)
+
+Paslauga, leidžianti pakoreguoti jutiklių geometrinį modelį ir taip pagerinti atvaizdo derėjimą su kitais atvaizdais ir (arba) žinomomis žemės padėtimis.
+
+408. Atvaizdo geometrinio modelio konvertavimo paslauga (spatialImageGeometryModelConversionService)
+
+Paslauga, konvertuojanti jutiklio geometrinį modelį į kitokį lygiavertį jutiklio geometrinį modelį.
+
+409. Skaidymo paslauga (spatialSubsettingService)
+
+Duomenų išrinkimo iš įvesties duomenų, gaunamų ištisiniame erdviniame regione, remiantis geografine vietove arba tinklelio koordinatėmis, paslauga.
+
+410. Atrankos paslauga (spatialSamplingService)
+
+Duomenų išrinkimo iš įvesties duomenų, taikant atitinkamą atrankos schemą arba remiantis geografine vietove arba tinklelio koordinatėmis, paslauga.
+
+411. Išdėstymo keitimo paslauga (spatialTilingChangeService)
+
+Geografinių duomenų išdėstymo keitimo paslauga.
+
+412. Dydžio matavimo paslauga (spatialDimensionMeasurementService)
+
+Paslauga, skirta atvaizde arba kituose geografiniuose duomenyse pateiktų objektų dydžiui apskaičiuoti.
+
+413. Savybių apdorojimo paslaugos (spatialFeatureManipulationService)
+
+Savybės priskyrimas kitai savybei, atvaizdui, kitam duomenų arba koordinačių rinkiniui; susijusių perskaičiavimo paklaidų, keitimo skirtumų, mastelio skirtumų ir perspektyvos skirtumų taisymas. Tikrinama, ar visos savybių rinkinyje pateiktos savybės topologiniu požiūriu atitinka savybių rinkinio topologijos taisykles, ir nurodomi ir (arba) ištaisomi visi nustatyti trūkumai.
+
+414. Savybės suderinimo paslauga (spatialFeatureMatchingService)
+
+Paslauga, skirta pagal įvairius duomenų šaltinius nustatyti, kurios savybės ir jų dalys atitinka tą patį realų objektą, pvz., tai gali būti susiję su kraštų atitiktimi ir daliniu sujungimu.
+
+415. Savybių apibendrinimo paslauga (spatialFeatureGeneralizationService)
+
+Paslauga, skirta sumažinti savybių rinkinio erdvinę įvairovę ir taip padidinti perduodamos informacijos veiksmingumą, kartu atsižvelgiant į nepageidaujamus duomenų kiekio mažinimo padarinius.
+
+416. Maršruto nustatymo paslauga (spatialRouteDeterminationService)
+
+Paslauga, skirta tinkamiausiam keliui iš vieno taško į kitą nustatyti, remiantis įvestais dydžiais ir savybių rinkinyje esančiomis savybėmis.
+
+417. Padėties nustatymo paslauga (spatialPositioningService)
+
+Padėties nustatymo įtaiso teikiama paslauga, skirta padėties informacijai gauti, jai vienareikšmiškai aiškinti ir naudoti bei nustatyti, ar rezultatai atitinka naudojimo reikalavimus.
+
+418. Artumo analizės paslauga (spatialProximityAnalysisService)
+
+Naudojant šią paslaugą, įvedus padėtį arba geografinę savybę, randami visi objektai, atitinkantys nurodytą požymių rinkinį ir esantys vartotojo nurodytu atstumu nuo padėties ar savybės.
+
+500 Geografinių duomenų apdorojimo paslaugos – teminės (thematicProcessingService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+501. Geografinių dydžių apskaičiavimo paslauga (thematicGoparameterCalculationService)
+
+Paslauga, skirta tam tikrai taikomajai programai tinkantiems kiekybiniams rezultatams, kurie nepateikiami su pačiais pirminiais duomenimis, apskaičiuoti.
+
+502. Teminio klasifikavimo paslauga (thematicClassificationService)
+
+Paslauga, skirta geografinių duomenų regionams klasifikuoti pagal teminius požymius.
+
+503. Savybių apibendrinimo paslauga (thematicFeatureGeneralizationService)
+
+Paslauga, apibendrinanti savybių rinkinyje pateiktų savybių tipus ir taip padidinanti perduodamos informacijos veiksmingumą, kartu atsižvelgiant į nepageidaujamus duomenų kiekio mažinimo padarinius.
+
+504. Skaidymo paslauga (thematicSubsettingService)
+
+Duomenų išrinkimo iš įvestų duomenų pagal dydžių reikšmes paslauga.
+
+505. Erdvinių duomenų apskaičiavimo paslauga (thematicSpatialCountingService)
+
+Geografinių savybių apskaičiavimo paslauga.
+
+506. Pokyčių nustatymo paslauga (thematicChangeDetectionService)
+
+Paslauga, skirta dviejų duomenų rinkinių, skirtų tai pačiai geografinei vietovei, tačiau susijusių su skirtingu laiku, skirtumams nustatyti.
+
+507. Geografinės informacijos išrinkimo paslaugos (thematicGeographicInformationExtractionService)
+
+Paslaugos, padedančios išrinkti savybę ir vietovės informaciją iš nuotoliniu būdu surastų ir nuskaitytų atvaizdų.
+
+508. Atvaizdų apdorojimo paslauga (thematicImageProcessingService)
+
+Paslauga, skirta atvaizdo teminių požymių reikšmėms pakeisti, naudojant matematinę funkciją.
+
+509. Mažesnės skiriamosios gebos generavimo paslauga (thematicReducedResolutionGenerationService)
+
+Atvaizdo skiriamosios gebos mažinimo paslauga.
+
+510. Atvaizdų apdorojimo paslaugos (thematicImageManipulationService)
+
+Atvaizdų duomenų reikšmių apdorojimo paslauga: spalvų ir kontrastingumo reikšmių keitimas, įvairių filtrų taikymas, atvaizdo skiriamosios gebos keitimas, triukšmo šalinimas, "ardymas", sisteminių radiometrinių pataisų darymas, atmosferinis slopinimas, vaizdo apšvietimo keitimas ir kt.
+
+511. Atvaizdų aiškinimo paslaugos (thematicImageUnderstandingService)
+
+Paslaugos, kurias naudojant automatiškai randami atvaizdų pokyčiai, diferencijuojami registruoti atvaizdai, atliekama ir pateikiama skirtumų svarbos analizė, atliekamas vietove ir modeliu pagrįstas diferencijavimas.
+
+512. Atvaizdų sintezės paslaugos (thematicImageSynthesisService)
+
+Paslaugos, skirtos atvaizdams kurti arba transformuoti, naudojant kompiuterinius erdvinius modelius, taikant perspektyvos transformacijas ir apdorojant atvaizdų charakteristikas, siekiant pagerinti matomumą, padidinti skiriamąją gebą ir (arba) sumažinti debesų dangos arba rūko įtaką.
+
+513. Daugiajuosčių atvaizdų apdorojimas (thematicMultibandImageManipulationService)
+
+Atvaizdo keitimo, naudojant įvairias atvaizdo juostas, paslaugos.
+
+514. Objektų suradimo paslauga (thematicObjectDetectionService)
+
+Paslauga, skirta realiems objektams rasti atvaizde.
+
+515. Geografinių duomenų analizės paslauga (thematicGeoparsingService)
+
+Paslauga, skirta tekstiniuose dokumentuose esančioms vietų nuorodoms, pvz., vietų pavadinimus, adresus, pašto kodus ir kt., nuskaityti, rengiantis šiems duomenims taikyti geografinių duomenų kodavimo paslaugą.
+
+516. Geografinių duomenų kodavimo paslauga (thematicGeocodingService)
+
+Paslauga, skirta vietų tekstinėms nuorodoms papildyti geografinėmis koordinatėmis (arba kitokia erdvine nuoroda).
+
+600 Geografinių duomenų apdorojimo paslaugos – susijusios su laiku (temporalProcessingService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+601. Laiko skaičiavimo sistemos transformavimo paslauga (temporalReferenceSystemTransformationService)
+
+Paslauga, skirta laiko reikšmėms, išreikštoms pagal vieną laiko skaičiavimo sistemą, pakeisti laiko vertėmis, išreikštomis pagal kitą laiko sistemą.
+
+602. Skaidymo paslauga (temporalSubsettingService)
+
+Paslauga, skirta duomenims iš įvestų duomenų išrinkti pagal dydžių reikšmes.
+
+603. Atrankos paslauga (temporalSamplingService)
+
+Duomenų išrinkimo iš įvestų duomenų pagal padėties tam tikru metu reikšmes, taikant tam tikrą atrankos sistemą, paslauga.
+
+604. Artumo laiko atžvilgiu analizės paslauga (temporalProximityAnalysisService)
+
+Įvedus laiko intervalą arba įvykį, randami visi objektai, atitinkantys nurodytą požymių rinkinį ir intervalo arba įvykio atžvilgiu esančius vartotojo nurodytu intervalu.
+
+700 Geografinių duomenų apdorojimo paslaugos – metaduomenys (metadataProcessingService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+701. Statistinių apskaičiavimų paslauga (metadataStatisticalCalculationService)
+
+Paslauga, skirta duomenų rinkinio statistiniams rodikliams apskaičiuoti.
+
+702. Pastabų dėl geografinių duomenų teikimo paslauga (metadataGeographicAnnotationService)
+
+Paslaugos, skirtos papildomai informacijai apie savybių rinkinyje esantį atvaizdą arba savybę pateikti.
+
+800 Geografinių duomenų perdavimo paslaugos (comService)
+
+Šią kategoriją sudaro šios subkategorijos:
+
+801. Kodavimo paslauga (comEncodingService)
+
+Kodavimo taisyklės taikymo ir kodavimo bei dekodavimo sąsajos užtikrinimo paslauga.
+
+802. Perdavimo paslauga (comTransferService)
+
+Paslauga, skirta taikyti vienam ar daugiau perdavimo protokolų, kad, naudojant prijungtas ir atjungtas ryšių priemones, duomenis būtų galima perduoti iš vienos paskirstytosios informacinės sistemos į kitą.
+
+803. Geografinių duomenų glaudinimo paslauga (comGeographicCompressionService)
+
+Savybių rinkinio erdvinių dalių konvertavimo į suglaudintą formą ir atvirkščiai paslauga.
+
+804. Geografinių duomenų formato konvertavimo paslauga (comGeographicFormatConversionService)
+
+Vieno geografinių duomenų formato konvertavimo į kitą duomenų formatą paslauga.
+
+805. Pranešimų paslauga (comMessagingService)
+
+Paslauga, keliems ar daugiau vartotojų suteikianti galimybę tuo pačiu metu peržiūrėti savybių rinkinius, teikti dėl jų pastabas ir prašyti juos pakoreguoti.
+
+806. Nuotolinis rinkmenų ir vykdomųjų programų valdymas (comRemoteFileAndExecutableManagement)
+
+Paslauga, suteikianti galimybę prisijungti prie antrinės geografinių savybių saugyklos, tarsi klientui ji būtų vietinė.
+
+5. ATITIKTIES LAIPSNIS
+
+5.1. Atitinka (conformant)
+
+Išteklius visiškai atitinka nurodytą specifikaciją.
+
+5.2. Neatitinka (nonConformant)
+
+Išteklius neatitinka nurodytos specifikacijos.
+
+5.3. Neįvertinta (notEvaluated)
+
+Atitiktis nebuvo įvertinta.
+
+6. ATSAKINGOS ŠALIES FUNKCIJOS
+
+6.1. Ištekliaus tiekėjas (resourceProvider)
+
+Išteklių tiekianti šalis.
+
+6.2. Saugotojas (custodian)
+
+Šalis, prisiimanti atskaitomybės ir atsakomybės už duomenis įsipareigojimus ir užtikrinanti tinkamą ištekliaus saugojimą bei priežiūrą.
+
+6.3. Savininkas (owner)
+
+Šalis, kuriai priklauso išteklius.
+
+6.4. Naudotojas (user)
+
+Išteklių naudojanti šalis.
+
+6.5. Platintojas (distributor)
+
+Išteklių platinanti šalis.
+
+6.6. Pradininkas (originator)
+
+Išteklių parengusi šalis.
+
+6.7. Kontaktinis asmuo (pointOfContact)
+
+Šalis, į kurią galima kreiptis, norint gauti informacijos apie išteklių arba sužinoti, kaip jį įsigyti.
+
+6.8. Pagrindinis tyrėjas (principalInvestigator)
+
+Pagrindinė šalis, atsakinga už informacijos rinkimą ir tyrimų atlikimą.
+
+6.9. Apdorotojas (processor)
+
+Šalis, duomenis apdorojusi taip, kad išteklius dėl to pasikeitė.
+
+6.10. Leidėjas (publisher)
+
+Išteklių išleidusi šalis.
+
+6.11. Autorius (author)
+
+Išteklių sukūrusi šalis.
+
+--------------------------------------------------

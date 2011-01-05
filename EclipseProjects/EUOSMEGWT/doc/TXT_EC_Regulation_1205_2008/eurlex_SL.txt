@@ -1,0 +1,987 @@
+Uredba Komisije (ES) št. 1205/2008
+
+z dne 3. decembra 2008
+
+o izvajanju Direktive 2007/2/ES Evropskega parlamenta in Sveta glede metapodatkov
+
+(Besedilo velja za EGP)
+
+KOMISIJA EVROPSKIH SKUPNOSTI JE –
+
+ob upoštevanju Pogodbe o ustanovitvi Evropske skupnosti,
+
+ob upoštevanju Direktive 2007/2/ES Evropskega parlamenta in Sveta z dne 14. marca 2007 o vzpostavitvi infrastrukture za prostorske informacije v Evropski skupnosti (INSPIRE) [1] in zlasti člena 5(4) Direktive,
+
+ob upoštevanju naslednjega:
+
+(1) Direktiva 2007/2/ES določa splošna pravila za vzpostavitev infrastrukture za prostorske informacije v Evropski skupnosti. Ker je za pravilno delovanje te infrastrukture potrebno, da lahko uporabnik najde zbirke prostorskih podatkov in storitve v zvezi s prostorskimi podatki ter da lahko ugotovi, ali jih je mogoče uporabiti in za kakšen namen jih je mogoče uporabiti, morajo države članice zagotoviti opise za te zbirke prostorskih podatkov in storitve v zvezi s prostorskimi podatki v obliki metapodatkov. Ker morajo biti takšni metapodatki združljivi in uporabni v Skupnosti in čezmejnem okviru, je treba določiti pravila glede metapodatkov, ki se uporabljajo za opis zbirk prostorskih podatkov in storitev v zvezi s prostorskimi podatki, ki ustrezajo temam, navedenim v prilogah I, II in III k Direktivi 2007/2/ES.
+
+(2) Opredelitev zbirke metapodatkovnih elementov je potrebna, da se omogočijo prepoznavanje informacijskega vira, za katerega so bili metapodatki ustvarjeni, njegova razvrstitev in določanje njegovega geografskega položaja in časovnega sklicevanja, kakovosti in veljavnosti, skladnosti z izvedbenimi pravili o medopravilnosti zbirk prostorskih podatkov in storitev v zvezi s prostorskimi podatki, omejitev, povezanih z dostopom in uporabo, ter organizacija, ki je odgovorna za vir. Metapodatkovni elementi, povezani z zapisom z metapodatki, so potrebni tudi za spremljanje, ali se ustvarjeni metapodatki redno posodabljajo, in za prepoznavanje organizacije, ki je odgovorna za vzpostavljanje in vzdrževanje metapodatkov. To je najmanjši nabor metapodatkovnih elementov, potrebnih za izpolnjevanje Direktive 2007/2/ES, in ne izključuje možnosti, da organizacije dokumentirajo vire informacij obširneje z dodatnimi elementi, ki izhajajo iz mednarodnih standardov ali delovne prakse v njihovi interesni skupnosti. Prav tako to ne izključuje možnosti sprejemanja smernic, ki jih določa in posodablja Komisija, še posebno ko je treba zagotoviti medopravilnost metapodatkov.
+
+(3) Navodila so potrebna za potrjevanje metapodatkov v skladu z Direktivo 2007/2/ES glede na stanje in pričakovano števnost vsakega metapodatkovnega elementa, se pravi glede na to, ali so vrednosti za vsak element vedno pričakovane v zapisu z metapodatki, se lahko pojavijo samo enkrat ali pa se lahko pojavijo več kot enkrat.
+
+(4) Zaloga vrednosti (domena) vsakega metapodatkovnega elementa je potrebna za zagotovitev medopravilnosti metapodatkov v večjezičnem okviru, in ta zaloga vrednosti mora biti sposobna prevzeti obliko poljubnega besedila, datumov, kod, izpeljanih iz mednarodnih standardov, npr. oznake jezika, ključnih besed, ki so izpeljane iz nadzorovanih seznamov ali tezavrov, ali pa obliko nizov znakov.
+
+(5) Ukrepi, predvideni s to uredbo, so v skladu z mnenjem odbora, ustanovljenega s členom 22 Direktive 2007/2/ES –
+
+SPREJELA NASLEDNJO UREDBO:
+
+Člen 1
+
+Vsebina
+
+V tej uredbi so določene zahteve za vzpostavljanje in vzdrževanje metapodatkov za zbirke prostorskih podatkov, skupine zbirk prostorskih podatkov in storitve v zvezi s prostorskimi podatki, ki ustrezajo temam, navedenim v prilogah I, II in III k Direktivi 2007/2/ES.
+
+Člen 2
+
+Opredelitev pojmov
+
+V tej uredbi se poleg opredelitev pojmov iz člena 3 Direktive 2007/2/ES uporabljajo opredelitve pojmov iz dela A Priloge.
+
+Člen 3
+
+Vzpostavljanje in vzdrževanje metapodatkov
+
+Metapodatki, ki opisujejo zbirko prostorskih podatkov, skupino zbirk prostorskih podatkov ali storitev v zvezi s prostorskimi podatki, vsebujejo metapodatkovne elemente ali skupine metapodatkovnih elementov, določene v delu B Priloge, ter se vzpostavljajo in vzdržujejo v skladu s pravili, ki so določeni v delih C in D Priloge.
+
+Člen 4
+
+Začetek veljavnosti
+
+Ta uredba začne veljati dvajseti dan po objavi v Uradnem listu Evropske unije.
+
+Ta uredba je v celoti zavezujoča in se neposredno uporablja v vseh državah članicah.
+
+V Bruslju, 3. decembra 2008
+
+Za Komisijo
+
+Stavros Dimas
+
+Član Komisije
+
+[1] UL L 108, 25.4.2007, str. 1.
+
+--------------------------------------------------
+
+PRILOGA
+
+IZVEDBENA PRAVILA ZA METAPODATKE
+
+DEL A
+
+Razlaga
+
+1. Uporabljajo se naslednje opredelitve pojmov:
+
+- "niz znakov" pomeni zalogo vrednosti metapodatkovnih elementov, ki je dana kot niz znakov, obravnavanih kot enota,
+
+- "poljubno besedilo" pomeni zalogo vrednosti metapodatkovnih elementov, izraženo v enem ali več naravnih jezikih,
+
+- "poreklo" pomeni zgodovino zbirke podatkov in njen življenjski cikel od zbiranja in pridobivanja prek sestavljanja in izpeljevanja do njene sedanje oblike v skladu s standardom EN ISO 19101,
+
+- "metapodatkovni element" pomeni ločeno enoto metapodatkov v skladu s standardom EN ISO 19115,
+
+- "imenski prostor" pomeni zbirko imen, ki jih opredeljuje sklic URI (Uniform Resource Identifier) in se uporabljajo v dokumentih XML (Extensible Markup Language) kot imena elementov in imena atributov,
+
+- "kakovost" pomeni celoto značilnosti in lastnosti izdelka, ki se nanašajo na njegovo sposobnost, da zadovolji izražene ali vsebovane zahteve v skladu s standardom EN ISO 19101,
+
+- "vir" pomeni informacijski vir, ki se neposredno ali posredno nanaša na posamezno lokacijo ali geografsko območje,
+
+- "skupina zbirk prostorskih podatkov" pomeni zbirko zbirk prostorskih podatkov, ki imajo enako specifikacijo izdelka.
+
+2. Sklicevanje na veljavnost zbirk prostorskih podatkov se razume kot sklicevanje, ki se nanaša na kar koli izmed naslednjega:
+
+- prostorski in časovni obseg podatkov,
+
+- ali so bili podatki preverjeni glede na standard za meritve ali delovanje,
+
+- stopnjo, do katere so podatki primerni za predvideni namen,
+
+- kadar je to primerno, pravno veljavnost zbirke prostorskih podatkov.
+
+DEL B
+
+Metapodatkovni elementi
+
+1. OPREDELITEV
+
+Navedejo se naslednji metapodatkovni elementi:
+
+1.1 Naslov vira
+
+To je značilno in velikokrat enolično ime, pod katerim je vir poznan.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+1.2 Povzetek vira
+
+To je kratek opisni povzetek vsebine vira.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+1.3 Vrsta vira
+
+To je vrsta vira, ki ga opisujejo metapodatki.
+
+Zaloga vrednosti tega metapodatkovnega elementa je opredeljena v delu D.1.
+
+1.4 Internetni naslov vira
+
+Internetni naslov vira opredeljuje povezavo ali povezave do vira in/ali povezavo do dodatnih podatkov o viru.
+
+Zaloga vrednosti tega metapodatkovnega elementa je niz znakov, običajno izražen kot URL (Uniform Resource Locator).
+
+1.5 Enolična označba vira
+
+Vrednost, ki enolično določa vir.
+
+Zaloga vrednosti tega metapodatkovnega elementa je obvezna koda iz niza znakov, ki jo običajno določi lastnik podatkov, in imenski prostor iz niza znakov, ki enolično označuje kontekst identifikacijske oznake (na primer lastnika podatkov).
+
+1.6 Povezani vir
+
+Če je vir storitev v zvezi s prostorskimi podatki, ta metapodatkovni element določa, kadar je to ustrezno, ciljno zbirko ali zbirke prostorskih podatkov ali storitve z njihovim sklicem URI (Unique Resource Identifier).
+
+Zaloga vrednosti tega metapodatkovnega elementa je obvezna koda iz niza znakov, ki jo običajno določi lastnik podatkov, in imenski prostor iz niza znakov, ki enolično označuje kontekst identifikacijske oznake (na primer lastnika podatkov).
+
+1.7 Jezik vira
+
+Jezik ali jeziki, ki se uporabljajo v viru.
+
+Zaloga vrednosti tega metapodatkovnega elementa je omejena na jezike, opredeljene v standardu ISO 639-2.
+
+2. RAZVRSTITEV PROSTORSKIH PODATKOV IN STORITEV V ZVEZI S PROSTORSKIMI PODATKI
+
+2.1 Kategorija teme
+
+Kategorija teme je sistem razvrščanja visoke ravni, ki pripomore k razvrščanju in iskanju virov prostorskih podatkov po temi.
+
+Zaloga vrednosti tega metapodatkovnega elementa je določena v delu D.2.
+
+2.2 Vrsta storitve v zvezi s prostorskimi podatki
+
+To je razvrstitev, ki pomaga pri iskanju storitev v zvezi z dostopnimi prostorskimi podatki. Posebna storitev se razvrsti v samo eno kategorijo.
+
+Zaloga vrednosti tega metapodatkovnega elementa je določena v delu D.3.
+
+3. KLJUČNA BESEDA
+
+Če je vir storitev v zvezi s prostorskimi podatki, se navede vsaj ena ključna beseda iz dela D.4.
+
+Če je vir zbirka prostorskih podatkov ali skupina zbirk prostorskih podatkov, se iz tezavra GEMET (General Environmental Multi-lingual Thesaurus) navede vsaj ena ključna beseda, ki opisuje ustrezno temo v zvezi s prostorskimi podatki, kot je določeno v prilogi I, II ali III k Direktivi 2007/2/ES.
+
+Za vsako ključno besedo se navedejo naslednji metapodatkovni elementi:
+
+3.1 Vrednost ključne besede
+
+Vrednost ključne besede je pogosto uporabljana beseda, formalizirana beseda ali stavek, ki se uporablja za opis vsebine. Medtem ko je kategorija teme premalo natančna za podrobne poizvedbe, ključne besede pripomorejo k zoževanju iskanja po vsem besedilu in omogočajo strukturirano iskanje po ključnih besedah.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+3.2 Izvorni besednjak
+
+Če vrednost ključne besede izvira iz nadzorovanega besednjaka (tezavra, ontologije), na primer tezavra GEMET, se doda navedba izvornega besednjaka.
+
+Ta navedba vsebuje vsaj naslov in referenčni datum (datum objave, datum zadnje spremembe ali nastanka) izvornega besednjaka.
+
+4. GEOGRAFSKI POLOŽAJ
+
+Zahteve za geografski položaj iz člena 11(2)(e) Direktive 2007/2/ES se izrazijo z metapodatkovnim elementom, imenovanim geografski prostorski obseg.
+
+4.1 Geografski prostorski obseg
+
+To je obseg vira v geografskem prostoru, podan kot mejni pravokotnik.
+
+Mejni pravokotnik se izrazi z zahodno in vzhodno zemljepisno dolžino ter južno in severno zemljepisno širino v decimalnih stopinjah z natančnostjo najmanj dveh decimalk.
+
+5. ČASOVNO SKLICEVANJE
+
+Ta metapodatkovni element obravnava zahtevo za vsebovanje informacij o časovni dimenziji podatkov, kot je določeno v členu 8(2)(d) Direktive 2007/2/ES. Navede se vsaj eden od metapodatkovnih elementov, navedenih v točkah od 5.1 do 5.4.
+
+Zaloga vrednosti metapodatkovnih elementov, navedenih v točkah od 5.1 do 5.4, je niz datumov. Vsak datum se nanaša na sistem časovnega sklicevanja in se izrazi v obliki, združljivi s tem sistemom. Privzeti sistem sklicevanja je gregorijanski koledar, datumi pa se izražajo v skladu s standardom ISO 8601.
+
+5.1 Časovni obseg
+
+Časovni obseg opredeljuje časovno obdobje, na katerega se nanaša vsebina vira. To časovno obdobje se lahko izrazi kot:
+
+- posamezni datum,
+
+- obdobje, izraženo z začetnim in končnim datumom obdobja,
+
+- kombinacija posameznih datumov in obdobij.
+
+5.2 Datum objave
+
+To je datum objave vira, kadar je na voljo, ali pa datum začetka veljavnosti. Obstaja lahko več kot en datum objave.
+
+5.3 Datum zadnje spremembe
+
+To je datum zadnje spremembe vira, če je bil vir spremenjen. Obstaja lahko največ en datum zadnje spremembe.
+
+5.4 Datum nastanka
+
+To je datum nastanka vira. Obstaja lahko največ en datum nastanka.
+
+6. KAKOVOST IN VELJAVNOST
+
+Zahteve iz člena 5(2) in člena 11(2) Direktive 2007/2/ES, ki se nanašajo na kakovost in veljavnost prostorskih podatkov, obravnavajo naslednji metapodatkovni elementi:
+
+6.1 Poreklo
+
+To so podatki o zgodovini postopka in/ali splošni kakovosti zbirke prostorskih podatkov. Kadar je to primerno, lahko vsebuje tudi podatke o tem, ali je bila zbirka podatkov preverjena in ali je bila zagotovljena kakovost, ali je to uradna različica (če jih obstaja več) in ali ima pravno veljavo.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+6.2 Prostorska ločljivost
+
+Prostorska ločljivost se nanaša na stopnjo podrobnosti v zbirki podatkov. Izrazi se kot razdalja, ki jo velikost mrežne celice v zbirki podatkov predstavlja v naravi (običajno pri podatkih v mreži in izdelkih, ki temeljijo na podobah) ali v merilu, ki določa razmerje med enako razdaljo v zbirki in v resničnem svetu (običajno za karte ali izdelke, ki temeljijo na kartah).
+
+Merilo se običajno izrazi kot celo število, ki določa imenovalec merila.
+
+Razdalja se izrazi kot številska vrednost v povezavi z dolžinsko enoto.
+
+7. SKLADNOST
+
+Zahteve iz člena 5(2)(a) in člena 11(2)(d) Direktive 2007/2/ES, ki se nanašajo na skladnost in stopnjo skladnosti z izvedbenimi pravili, kot so določena v členu 7(1) Direktive 2007/2/ES, obravnavajo naslednji metapodatkovni elementi:
+
+7.1 Specifikacija
+
+To je navedba izvedbenih pravil, sprejetih na podlagi člena 7(1) Direktive 2007/2/ES ali druge specifikacije, s katero je neki vir skladen.
+
+Vir je lahko skladen z več izvedbenimi pravili, sprejetimi na podlagi člena 7(1) Direktive 2007/2/ES ali druge specifikacije.
+
+Ta navedba vsebuje vsaj naslov in referenčni datum (datum objave, datum zadnje spremembe ali nastanka) izvedbenih pravil, sprejetih na podlagi člena 7(1) Direktive 2007/2/ES ali specifikacije.
+
+7.2 Stopnja
+
+To je stopnja skladnosti vira z izvedbenimi pravili, sprejetimi na podlagi člena 7(1) Direktive 2007/2/ES ali druge specifikacije.
+
+Zaloga vrednosti tega metapodatkovnega elementa je določena v delu D.5.
+
+8. OMEJITEV, POVEZANA Z DOSTOPOM IN UPORABO
+
+Omejitev, povezana z dostopom in uporabo, je lahko eno ali oboje od naslednjega:
+
+- niz pogojev, ki veljajo za dostop in uporabo (8.1),
+
+- niz omejitev za javni dostop (8.2).
+
+8.1 Pogoji, ki veljajo za dostop in uporabo
+
+Ta metapodatkovni element določa pogoje za dostop do zbirk prostorskih podatkov in storitev v zvezi s prostorskimi podatki in njihovo uporabo, ter kadar je to ustrezno, ustrezne pristojbine, kot je zahtevano v členu 5(2)(b) in členu 11(2)(f) Direktive 2007/2/ES.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+Element mora imeti vnesene vrednosti. Če se za dostop in uporabo ne uporabljajo nobeni pogoji, se uporabi vnos "ne velja noben pogoj". Če pogoji niso znani, se uporabi vnos "pogoji niso znani".
+
+Ta element daje tudi informacije o pristojbinah, ki jih je treba plačati za dostop in uporabo vira, če je to ustrezno, ali pa vsebovati naslov URL (Uniform Resource Locator), na katerem so na voljo informacije o pristojbinah.
+
+8.2 Omejitev javnega dostopa
+
+Kadar države članice omejijo javni dostop do zbirk prostorskih podatkov ali storitev v zvezi s prostorskimi podatki v skladu s členom 13 Direktive 2007/2/ES, ta metapodatkovni element zagotavlja podatke o omejitvah in razlogih zanje.
+
+Če omejitev za javni dostop ni, to navaja ta metapodatkovni element.
+
+Zaloga vrednosti tega metapodatkovnega elementa je poljubno besedilo.
+
+9. ORGANIZACIJE, PRISTOJNE ZA VZPOSTAVITEV, UPRAVLJANJE, VZDRŽEVANJE IN RAZŠIRJANJE ZBIRK PROSTORSKIH PODATKOV IN STORITEV V ZVEZI S PROSTORSKIMI PODATKI.
+
+Za namene člena 5(2)(d) in člena 11(2)(g) Direktive 2007/2/ES se zagotovita naslednja dva metapodatkovna elementa:
+
+9.1 Odgovorna organizacija
+
+To je opis organizacije, ki je odgovorna za vzpostavitev, upravljanje, vzdrževanje in razširjanje vira.
+
+Ta opis vključuje:
+
+- ime organizacije kot poljubno besedilo,
+
+- kontaktni e-naslov kot niz znakov.
+
+9.2 Vloga odgovorne organizacije
+
+To je vloga odgovorne organizacije.
+
+Zaloga vrednosti tega metapodatkovnega elementa je določena v delu D.6.
+
+10. METAPODATKI O METAPODATKIH
+
+Za namene člena 5(1) Direktive 2007/2/ES se zagotovijo naslednji metapodatkovni elementi:
+
+10.1 Metapodatkovna točka za stike
+
+To je opis organizacije, ki je odgovorna za vzpostavljanje in vzdrževanje metapodatkov.
+
+Ta opis vključuje:
+
+- ime organizacije kot poljubno besedilo,
+
+- kontaktni e-naslov kot niz znakov.
+
+10.2 Metapodatkovni datum
+
+Datum, ki opredeljuje, kdaj je bil metapodatkovni zapis ustvarjen ali posodobljen.
+
+Ta datum se izrazi v skladu s standardom ISO 8601.
+
+10.3 Metapodatkovni jezik
+
+To je jezik, v katerem so metapodatkovni elementi izraženi.
+
+Zaloga vrednosti tega metapodatkovnega elementa je omejena na uradne jezike Skupnosti, izražene v skladu s standardom ISO 639-2.
+
+DEL C
+
+Navodila o števnosti in pogojih metapodatkovnih elementov
+
+Metapodatki, ki opisujejo zbirke prostorskih podatkov ali skupine zbirk prostorskih podatkov, obsegajo metapodatkovne elemente ali skupine metapodatkovnih elementov, navedene v preglednici 1, v primeru storitev v zvezi s prostorskimi podatki pa metapodatkovne elemente ali skupine metapodatkovnih elementov, ki so navedeni v preglednici 2.
+
+Ti metapodatkovni elementi ali skupine metapodatkovnih elementov ustrezajo pričakovani števnosti in povezanim pogojem, določenim v preglednici 1 in preglednici 2.
+
+Kadar v povezavi z nekim metapodatkovnim elementom ni izražen noben pogoj, je ta element obvezen.
+
+Preglednice vsebujejo naslednje podatke:
+
+- prvi stolpec vsebuje sklic na odstavek v delu B Priloge, ki opredeljuje metapodatkovni element ali skupino metapodatkovnih elementov,
+
+- drugi stolpec vsebuje ime metapodatkovnega elementa ali skupine metapodatkovnih elementov,
+
+- tretji stolpec opredeljuje števnost metapodatkovnega elementa. Izraz za števnost je enak zapisu za števnost v jeziku UML (Unified Modelling Language), v katerem:
+
+- 1 pomeni, da v nizu rezultatov obstaja samo en obvezen primerek tega metapodatkovnega elementa,
+
+- 1..* pomeni, da v nizu rezultatov obstaja vsaj en obvezen ali več primerkov tega elementa,
+
+- 0..1 označuje, da je prisotnost metapodatkovnega elementa v nizu rezultatov pogojna, vendar se lahko pojavi največ enkrat,
+
+- 0..* označuje, da je prisotnost metapodatkovnega elementa v nizu rezultatov pogojna, vendar se lahko metapodatkovni element pojavi enkrat ali večkrat,
+
+- ko je števnost 0..1 ali 0..*, ta pogoj določa tudi, da je metapodatkovni element neobvezen,
+
+- četrti stolpec vsebuje pogojni stavek, če števnost elementa ne velja za vse vrste virov. Drugače so vsi elementi obvezni.
+
+Preglednica 1
+
+Metapodatki za zbirke prostorskih podatkov in skupine zbirk prostorskih podatkov
+
+Sklic | Metapodatkovni elementi | Števnost | Pogoj |
+
+1.1 | naslov vira | 1 | |
+
+1.2 | povzetek vira | 1 | |
+
+1.3 | vrsta vira | 1 | |
+
+1.4 | internetni naslov vira | 0..* | Obvezen, če je na voljo URL, na katerem je mogoče dobiti več podatkov o viru in/ali storitvah, povezanih z dostopom. |
+
+1.5 | enolična označba vira | 1..* | |
+
+1.7 | jezik vira | 0..* | Obvezen, če vir vključuje besedilne podatke. |
+
+2.1 | kategorija teme | 1..* | |
+
+3 | ključna beseda | 1..* | |
+
+4.1 | geografski prostorski obseg | 1..* | |
+
+5 | časovno sklicevanje | 1..* | |
+
+6.1 | poreklo | 1 | |
+
+6.2 | prostorska ločljivost | 0..* | Obvezna za zbirke podatkov in skupine zbirk podatkov, če je mogoče opredeliti enakovredno merilo ali ločljivostno razdaljo. |
+
+7 | skladnost | 1..* | |
+
+8.1 | pogoji za dostop in uporabo | 1..* | |
+
+8.2 | omejitev javnega dostopa | 1..* | |
+
+9 | odgovorna organizacija | 1..* | |
+
+10.1 | metapodatkovna točka za stike | 1..* | |
+
+10.2 | metapodatkovni datum | 1 | |
+
+10.3 | metapodatkovni jezik | 1 | |
+
+Preglednica 2
+
+Metapodatki za storitve v zvezi s prostorskimi podatki
+
+Sklic | Metapodatkovni element | Števnost | Pogoj |
+
+1.1 | naslov vira | 1 | |
+
+1.2 | povzetek vira | 1 | |
+
+1.3 | vrsta vira | 1 | |
+
+1.4 | internetni naslov vira | 0..* | Obvezen, če je na voljo povezava do storitve. |
+
+1.6 | povezani vir | 0..* | Obvezen, če je na voljo povezava do zbirk podatkov, na podlagi katerih storitev deluje. |
+
+2.2 | vrsta storitve v zvezi s prostorskimi podatki | 1 | |
+
+3 | ključna beseda | 1..* | |
+
+4.1 | geografski prostorski obseg | 0…* | Obvezen za storitve z izrecnim geografskim obsegom. |
+
+5 | časovno sklicevanje | 1..* | |
+
+6.2 | prostorska ločljivost | 0..* | Obvezna, kadar obstaja omejitev za prostorsko ločljivost za to storitev. |
+
+7 | skladnost | 1..* | |
+
+8.1 | pogoji za dostop in uporabo | 1..* | |
+
+8.2 | omejitev javnega dostopa | 1..* | |
+
+9 | odgovorna organizacija | 1..* | |
+
+10.1 | metapodatkovna točka za stike | 1..* | |
+
+10.2 | metapodatkovni datum | 1 | |
+
+10.3 | metapodatkovni jezik | 1 | |
+
+DEL D
+
+Zaloge vrednosti
+
+Kadar je to opredeljeno v opisu metapodatkovnih elementov v delu B, se zaloge vrednosti, opisane v delih od D.1 do D.6, uporabijo s števnostjo, navedeno v preglednici 1 in preglednici 2 dela C.
+
+Glede na določeno zalogo vrednosti je vsaka vrednost določena s:
+
+- številskim identifikatorjem,
+
+- besedilnim imenom za ljudi, ki se lahko prevede v različne jezike Skupnosti,
+
+- jezikovno nevtralnim imenom za računalnike (vrednost, izražena med oklepaji),
+
+- izbirnim imenom ali opredelitvijo.
+
+1. VRSTA VIRA
+
+1.1 Skupina zbirk prostorskih podatkov (series)
+
+1.2 Zbirka prostorskih podatkov (dataset)
+
+1.3 Storitve v zvezi s prostorskimi podatki (services)
+
+2. KATEGORIJE TEM V SKLADU S STANDARDOM EN ISO 19115
+
+2.1 Kmetovanje (farming)
+
+Reja živali in/ali gojenje rastlin.
+
+Ta kategorija se nanaša na temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(9) Objekti in naprave za kmetijstvo in ribogojstvo.
+
+2.2 Organizmi (biota)
+
+Flora in/ali favna v naravnem okolju.
+
+Ta kategorija se nanaša na naslednje teme prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(17) Biogeografske regije, Priloga III(18) Habitati in biotopi, Priloga III(19) Porazdelitev vrst.
+
+2.3 Meje (boundaries)
+
+Uradna določitev območij
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(4) Upravne enote, Priloga III(1) Statistični okoliši.
+
+2.4 Klimatologija/meteorologija/atmosfera (climatologyMeteorologyAtmosphere)
+
+Procesi in pojavi v atmosferi.
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(13) Ozračje, Priloga III(14) Meteorološke značilnosti.
+
+2.5 Gospodarstvo (economy)
+
+Gospodarske dejavnosti, pogoji in zaposlovanje.
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(20) Energetski viri, Priloga III(21) Mineralni viri.
+
+2.6 Nadmorska višina (elevation)
+
+Višina nad gladino morja ali globina pod njo.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga II(1) Digitalni model višin.
+
+2.7 Okolje (environment)
+
+Okoljski viri, zaščita in ohranjanje.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(9) Zavarovana območja.
+
+2.8 Geoznanstveni podatki (geoscientificInformation)
+
+Podatki, ki se nanašajo na geoznanosti.
+
+Ta kategorija se nanaša na naslednje teme prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(3) Tla, Priloga II(4) Geologija, Priloga III(12) Območja nevarnosti naravnih nesreč.
+
+2.9 Zdravje (health)
+
+Zdravje, zdravstvene storitve, socialna ekologija in varnost.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(5) Zdravje in varnost prebivalstva.
+
+2.10 Podobe/Osnovne karte/Pokrovnost tal (imageryBaseMapsEarthCover)
+
+Osnovne karte.
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga II(3) Ortofoto, Priloga II(2) Pokrovnost tal.
+
+2.11 Obveščevalna dejavnost/Vojska (intelligenceMilitary)
+
+Vojaška oporišča, zgradbe, dejavnosti.
+
+Ta kategorija se ne nanaša na nobeno temo prostorskih podatkov iz Direktive 2007/2/ES posebej.
+
+2.12 Celinske vode (inlandWaters)
+
+Lastnosti celinskih voda, odvajalni sistemi in njihove lastnosti.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(8) Hidrografija.
+
+2.13 Položaj (location)
+
+Lokacijski podatki in storitve.
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(3) Zemljepisna imena, Priloga I(5) Naslovi.
+
+2.14 Oceani (oceans)
+
+Lastnosti in značilnosti slanih voda (razen celinskih voda).
+
+Ta kategorija se nanaša na naslednji temi prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(16) Morske regije, Priloga III(15) Oceanogeografske značilnosti.
+
+2.15 Načrtovanje/Kataster (planningCadastre)
+
+Podatki, ki se uporabljajo za ustrezne ukrepe za uporabo zemljišč v prihodnosti.
+
+Ta kategorija se nanaša na naslednje teme prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(6) Katastrske parcele, Priloga III(4) Namenska raba tal, Priloga III(11) Območja upravljanja/zaprta območja/regulirana območja in poročevalske enote.
+
+2.16 Družba (society)
+
+Značilnosti družbe in kultur.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(10) Porazdelitev prebivalstva – demografski podatki.
+
+2.17 Zgradba (structure)
+
+Naprave in objekti, ki jih je ustvaril človek.
+
+Ta kategorija se nanaša na naslednje teme prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(2) Stavbe, Priloga III(8) Proizvodni in industrijski objekti in naprave, Priloga III(7) Naprave in objekti za monitoring okolja.
+
+2.18 Prevozna sredstva (transportation)
+
+Sredstva in pripomočki za prevoz oseb in/ali blaga.
+
+Ta kategorija se nanaša na naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga I(7) Prometna omrežja.
+
+2.19 Komunala/Komunikacije (utilitiesCommunication)
+
+Energetski in komunalni sistemi, sistemi za ravnanje z odpadki ter elektronske komunikacije.
+
+Ta kategorija se uporablja za naslednjo temo prostorskih podatkov iz Direktive 2007/2/ES: Priloga III(6) Komunalne in javne storitve.
+
+3. VRSTA STORITVE V ZVEZI S PROSTORSKIMI PODATKI
+
+3.1 Storitev iskanja (discovery)
+
+Storitve, ki omogočajo iskanje zbirk prostorskih podatkov in storitev v zvezi s prostorskimi podatki na podlagi vsebine ustreznih metapodatkov ter prikazovanje vsebine metapodatkov.
+
+3.2 Storitev pregledovanja (view)
+
+Storitev, ki omogoča vsaj prikazovanje, krmarjenje, povečanje in pomanjšanje, panoramski pregled ali prekritje vidnih zbirk prostorskih podatkov ter prikazovanje napotkov in ustreznih vsebin metapodatkov.
+
+3.3 Storitev prenosa (download)
+
+Storitev, ki omogoča prenos izvodov zbirk ali delov zbirk prostorskih podatkov, ter kadar je izvedljivo, neposredni dostop do podatkov.
+
+3.4 Storitev preoblikovanja (transformation)
+
+Storitev, ki omogoča spreminjanje zbirk prostorskih podatkov z namenom doseganja medopravilnosti.
+
+3.5 Storitev priklica storitve v zvezi s prostorskimi podatki (invoke)
+
+Storitev, ki omogoča opredeljevanje vhodnih in izhodnih podatkov, ki jih pričakuje storitev v zvezi s prostorom, in potek dela ali verige storitve z združevanjem več storitev. Omogoča tudi opredeljevanje zunanjega spletnega vmesnika storitve poteka dela ali verige storitev.
+
+3.6 Druga storitev (other)
+
+4. RAZVRSTITEV STORITEV V ZVEZI S PROSTORSKIMI PODATKI
+
+Ključne besede temeljijo na taksonomiji geografskih storitev iz standarda EN ISO 19119. Ta taksonomija je razvrščena v kategorije, pri čemer podkategorije opredeljujejo zalogo vrednosti za razvrstitev storitev v zvezi s prostorskimi podatki.
+
+100 Geografske storitve s človeško interakcijo (humanInteractionService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+101. Pregledovalnik kataloga (humanCatalogueViewer)
+
+Odjemalska storitev, ki uporabniku omogoča uporabo kataloga, tako da lahko najde metapodatke o geografskih podatkih ali geografskih storitvah, brska po njih in jih upravlja.
+
+102. Geografski pregledovalnik (humanGeographicViewer)
+
+Odjemalska storitev, ki uporabniku omogoča vpogled v eno ali več zbirk prostorskih podatkov ali slojev.
+
+103. Geografski pregledovalnik preglednic (humanGeographicSpreadsheetViewer)
+
+Odjemalska storitev, ki uporabniku omogoča uporabo več podatkovnih objektov in izračune, podobne kot v aritmetični preglednici, vendar prirejene za geografske podatke.
+
+104. Urejevalnik storitve (humanServiceEditor)
+
+Odjemalska storitev, ki uporabniku omogoča nadzor nad geografskimi storitvami za obdelavo.
+
+105. Urejevalnik določitve verige (humanChainDefinitionEditor)
+
+Omogoča uporabniku določitev verige.
+
+106. Upravitelj za določanje poteka dela (humanWorkflowEnactmentManager)
+
+Omogoča uporabniku določanje poteka dela.
+
+107. Urejevalnik geografskih pojavov (humanGeographicFeatureEditor)
+
+Geografski pregledovalnik, ki uporabniku omogoča urejati prostorske podatke.
+
+108. Urejevalnik geografskih znakov (humanGeographicSymbolEditor)
+
+Odjemalska storitev, ki omogoča izbiranje knjižnic znakov in njihovo upravljanje.
+
+109. Urejevalnik za generalizacijo pojavov (humanFeatureGeneralizationEditor)
+
+Odjemalska storitev, ki uporabniku omogoča spreminjanje kartografskih značilnosti pojava ali zbirk podatkov s poenostavitvijo prikaza, pri tem pa se ohranijo njeni pomembni elementi – prostorska inačica generalizacije.
+
+110. Geografski pregledovalnik podatkovne strukture (humanGeographicDataStructureViewer)
+
+Odjemalska storitev, ki uporabniku omogoča dostop do dela zbirke podatkov za ogled notranje zgradbe zbirke podatkov.
+
+200 Storitve upravljanja geografskega modela/informacij (infoManagementService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+201. Storitev dostopa do pojavov (infoFeatureAccessService)
+
+Storitev, ki odjemalcu omogoča dostop do skladišča pojavov in njegovo upravljanje.
+
+202. Storitev dostopa do kart (infoMapAccessService)
+
+Storitev, ki odjemalcu omogoča dostop do grafike, denimo do podob ali kart.
+
+203. Storitev dostopa do podatkovnih slojev (infoCoverageAccessService)
+
+Storitev, ki odjemalcu omogoča dostop do skladišča podatkovnih slojev pokrovnosti in njegovo upravljanje.
+
+204. Storitev opisa senzorja (infoSensorDescriptionService)
+
+Storitev, ki omogoča opis senzorja za podatkovni sloj, vključno s položajem in usmerjenostjo senzorja, ter geometrične, dinamične in radiometrične značilnosti senzorja za namene geoprocesiranja.
+
+205. Storitev dostopa do izdelkov (infoProductAccessService)
+
+Storitev, ki odjemalcu omogoča dostop do skladišča geografskih izdelkov in njegovo upravljanje.
+
+206. Storitev pojavnih tipov (infoFeatureTypeService)
+
+Storitev, ki odjemalcu omogoča dostop do skladišča z opredelitvami pojavnih tipov in njegov upravljanje.
+
+207. Storitev kataloga (infoCatalogueService)
+
+Storitev, ki omogoča iskanje in upravljanje s skladiščem metapodatkov.
+
+208. Storitev registra (infoRegistryService)
+
+Storitev, ki omogoča dostop do skladišča metapodatkov o tipih.
+
+209. Storitev geografskega leksikona (infoGazetteerService)
+
+Storitev, ki omogoča dostop do imenika primerov razreda ali razredov resničnih stvarnih pojavov, ki vsebuje podatke o položaju.
+
+210. Storitev upravljanja naročil (infoOrderHandlingService)
+
+Storitev, ki odjemalcu omogoča naročanje izdelkov pri ponudniku.
+
+211. Storitev trajnih naročil (infoStandingOrderService)
+
+Storitev, s katero lahko uporabnik zahteva, da se izdelek na geografskem območju posreduje, ko postane na voljo.
+
+300 Storitve upravljanja poteka geografskega dela/nalog (taskManagementService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+301. Storitev opredeljevanja verig (chainDefinitionService)
+
+Storitev za opredelitev verige in omogočanje njenega izvajanja v storitvi določanja poteka dela.
+
+302. Storitev določanja poteka dela (workflowEnactmentService)
+
+Storitev za določanje poteka dela pojasnjuje verigo ter nadzoruje uresničevanje storitev in določanje zaporedja dejavnosti.
+
+303. Storitev naročanja (subscriptionService)
+
+Storitev za prijavo na obvestila o dogodkih.
+
+400 Storitve geografske obdelave – prostorske (spatialProcessingService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+401. Storitev translacije koordinat (spatialCoordinateConversionService)
+
+Storitev za pretvorbo koordinat med dvema koordinatnima sistemoma, ki temeljita na istem geodetskem datumu.
+
+402. Storitev transformacije koordinat (spatialCoordinateTransformationService)
+
+Storitev za pretvorbo koordinat iz koordinatnega referenčnega sistema, ki temelji na enem geodetskem datumu, v koordinatni referenčni sistem, ki temelji na drugem geodetskem datumu.
+
+403. Storitev pretvorbe rastrov/vektorjev (spatialCoverageVectorConversionService)
+
+Storitev za spreminjanje prostorskega prikaza iz rastrske v vektorsko obliko ali obratno.
+
+404. Storitev pretvorbe koordinat rastrskih podob (spatialImageCoordinateConversionService)
+
+Storitev za transformacijo ali translacijo koordinat za spremembo koordinatnega referenčnega sistema podobe.
+
+405. Storitev rektifikacije (spatialRectificationService)
+
+Storitev za pretvorbo rastrske podobe v ortogonalno projekcijo z ohranitvijo merila.
+
+406. Storitev ortorektifikacije (spatialOrthorectificationService)
+
+Storitev za odstranitev posledic nagiba in zamika podobe zaradi razgibanosti terena.
+
+407. Storitev uravnavanja modela geometrije senzorja (spatialSensorGeometryModelAdjustmentService)
+
+Storitev, ki s pomočjo drugih podob in/ali poznanih položajev na terenu prilagodi geometrijski model senzorja za izboljšavo usklajenosti podobe.
+
+408. Storitev pretvorbe modela geometrije podobe (spatialImageGeometryModelConversionService)
+
+Storitev, ki pretvori med različnimi, a enakovrednimi modeli geometrije senzorjev.
+
+409. Storitev za izrezovanje (spatialSubsettingService)
+
+Storitev, ki iz vhodnih podatkov izreže prostorsko območje na podlagi geografske lokacije ali mrežnih koordinat.
+
+410. Storitev vzorčenja (spatialSamplingService)
+
+Storitev, ki iz vhodnih podatkov izpiše iskane podatke z uporabo konsistentne sheme vzorčenja na podlagi geografske lokacije ali mrežnih koordinat.
+
+411. Storitev spremembe razpostavitve (spatialTilingChangeService)
+
+Storitev, ki spremeni razpostavitev geografskih podatkov.
+
+412. Storitev merjenja razsežnosti (spatialDimensionMeasurementService)
+
+Storitev za računanje razsežnosti objektov, ki so vidni na rastrskih podobah ali drugih prostorskih podatkih.
+
+413. Storitev ravnanja s pojavi (spatialFeatureManipulationService)
+
+Registriranje dveh značilnosti, podobi ali drugih zbirk podatkov ali koordinat s popravkom relativnih premikov pri pretvorbi, razlik zaradi vrtenja, razlik v merilu in razlik v perspektivi. V zbirki podatkov se tudi za vse pojave preveri topološka skladnost s topološkimi pravili zbirke in/ali odpravijo morebitne ugotovljene nekonsistentnosti.
+
+414. Storitev ujemanja pojavov (spatialFeatureMatchingService)
+
+Storitev, ki iz več podatkovnih virov ugotovi identične stvarne pojave, npr. z ujemanjem robov in delnim zlivanjem.
+
+415. Storitev generalizacije pojavov (spatialFeatureGeneralizationService)
+
+Storitev, ki zmanjša prostorsko variacijo v zbirki podatkov za povečanje učinkovitosti komunikacije z nevtraliziranjem neželenih učinkov pri zmanjšanju količine podatkov.
+
+416. Storitev določanja poti (spatialRouteDeterminationService)
+
+Storitev za določanje optimalne poti med dvema izbranima točkama na podlagi določenih parametrov in lastnosti, ki jih vsebuje zbirka podatkov.
+
+417. Storitev določanja položaja (spatialPositioningService)
+
+Storitev, ki jo omogoča naprava za določanje položaja, namenjena pa je uporabi, pridobivanju in nedvoumnemu pojasnjevanju podatkov o položaju, hkrati pa tudi ugotovi, ali rezultati ustrezajo zahtevam za uporabo.
+
+418. Storitev analize prostorske bližine (spatialProximityAnalysisService)
+
+Storitev, ki najde vse objekte z danim naborom lastnosti, ki ležijo znotraj uporabniško določene oddaljenosti od določene lokacije ali pojava.
+
+500 Storitve geografske obdelave – tematske (thematicProcessingService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+501. Storitev izračuna geografskih parametrov (thematicGoparameterCalculationService)
+
+Storitev za izpeljavo uporabniško usmerjenih kvantitativnih rezultatov, ki niso na voljo iz samih neobdelanih podatkov.
+
+502. Storitev tematske razvrstitve (thematicClassificationService)
+
+Storitev za razvrstitev območij geografskih podatkov na podlagi tematskih atributov.
+
+503. Storitev generalizacije pojavov (thematicFeatureGeneralizationService)
+
+Storitev, ki posploši tipe značilnosti v zbirki podatkov za povečanje učinkovitosti komunikacije z nevtraliziranjem neželenih učinkov pri zmanjšanju količine podatkov.
+
+504. Storitev izrezovanja (thematicSubsettingService)
+
+Storitev, ki iz vhodnih podatkov izloči iskane podatke na podlagi vrednosti parametrov.
+
+505. Storitev prostorskega štetja (thematicSpatialCountingService)
+
+Storitev, ki šteje geografske pojave.
+
+506. Storitev iskanja sprememb (thematicChangeDetectionService)
+
+Storitev za iskanje razlik med dvema zbirkama podatkov, ki se nanašata na isto geografsko območje ob različnih časovnih trenutkih.
+
+507. Storitve izločitev geografskih informacij (thematicGeographicInformationExtractionService)
+
+Storitve, ki podpirajo izločitev podatkov o pojavih na terenu iz daljinsko zaznanih in skeniranih podob.
+
+508. Storitev obdelave podob (thematicImageProcessingService)
+
+Storitev za spreminjanje vrednosti tematskih atributov podobe z uporabo matematične funkcije.
+
+509. Storitev za zmanjšanje ločljivosti (thematicReducedResolutionGenerationService)
+
+Storitev, ki zmanjša ločljivost podobe.
+
+510. Storitev spreminjanja podob (thematicImageManipulationService)
+
+Storitve za spreminjanje podatkovnih vrednosti v podobah: spreminjanje barv in vrednosti kontrastov, uporaba različnih filtrov, spreminjanje ločljivosti podobe, odstranjevanje šuma, popravki "črtaste podobe", sistematični radiometrični popravki, popravki atmosferskih vplivov, spremembe v osvetlitvi itd.
+
+511. Storitve razumevanja podob (thematicImageUnderstandingService)
+
+Storitve, ki omogočajo samodejno zaznavanje sprememb podobe, diferenciacijo registrirane podobe, analizo in prikaz pomembnosti razlike ter diferenciacijo na podlagi območja in modela.
+
+512. Storitev sinteze podob (thematicImageSynthesisService)
+
+Storitve za ustvarjanje ali pretvarjanje podob z uporabo računalniških prostorskih modelov in perspektivne transformacije ter spreminjanje značilnosti podob za izboljšanje vidljivosti, izboljšanje ločljivosti in/ali zmanjšanje učinka zaradi oblakov ali meglic.
+
+513. Večpasovno spreminjanje podobe (thematicMultibandImageManipulationService)
+
+Storitve, ki spremenijo podobo z uporabo več pasov podobe.
+
+514. Storitev odkrivanja objektov (thematicObjectDetectionService)
+
+Storitev za zaznavo stvarnih objektov na podobi.
+
+515. Geoparsing service (thematicGeoparsingService)
+
+Storitev za iskanje sklicev na lokacije v skeniranih besedilnih dokumentih, kot so imena krajev, naslovi, poštne številke itd., za pripravo za prehod na storitev geokodiranja.
+
+516. Storitev geokodiranja (thematicGeocodingService)
+
+Storitev za povezovanje sklicev na lokacijo v besedilu z geografskimi koordinatami (ali drugo vrsto prostorske lokacije).
+
+600 Storitve geografske obdelave – časovne (temporalProcessingService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+601. Storitev pretvorbe časovnega referenčnega sistema (temporalReferenceSystemTransformationService)
+
+Storitev za spreminjanje vrednosti časovnih navedb iz enega časovnega referenčnega sistema v drug časovni referenčni sistem.
+
+602. Storitev izločanja (temporalSubsettingService)
+
+Storitev, ki iz vhodnih podatkov izloči iskane podatke v določenem obdobju na podlagi časovnih vrednosti.
+
+603. Storitev vzorčenja (temporalSamplingService)
+
+Storitev, ki iz vhodnih podatkov izpiše iskane podatke z uporabo konsistentne sheme vzorčenja na podlagi časovne vrednosti.
+
+604. Storitev analize časovne bližine (temporalProximityAnalysisService)
+
+Storitev s podanim časovnim intervalom ali dogodkom najde vse objekte z danim naborom lastnosti, ki ležijo znotraj uporabniško določenega intervala od podanega intervala ali dogodka.
+
+700 Storitve geografske obdelave – metapodatki (metadataProcessingService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+701. Storitev statističnega izračuna (metadataStatisticalCalculationService)
+
+Storitev za računanje statistike iz zbirke podatkov.
+
+702. Storitve geografskih označb (metadataGeographicAnnotationService)
+
+Storitve za dodajanje informacij k podobi ali značilnosti v zbirki podatkov.
+
+800 Geografske komunikacijske storitve (comService)
+
+Ta kategorija vsebuje naslednje podkategorije:
+
+801. Storitev kodiranja (comEncodingService)
+
+Storitev, ki omogoča uporabo pravila za kodiranje ter vključuje vmesnik za kodiranje in dekodiranje.
+
+802. Storitev prenosa (comTransferService)
+
+Storitev, ki omogoča uporabo enega ali več protokolov za prenos podatkov med porazdeljenimi informacijskimi sistemi prek povezanih ali nepovezanih sredstev za komunikacijo.
+
+803. Geografska storitev stiskanja (comGeographicCompressionService)
+
+Storitev, ki pretvori prostorske sestavine zbirke podatkov v stisnjeno obliko.
+
+804. Geografska storitev pretvarjanja formata (comGeographicFormatConversionService)
+
+Storitev, ki pretvori podatke iz enega formata geografskih podatkov v drugega.
+
+805. Storitev sporočanja (comMessagingService)
+
+Storitev, ki omogoča, da si več uporabnikov hkrati ogleduje, komentira in predlaga urejanje podatkovnih zbirk.
+
+806. Oddaljeno upravljanje izvrševanja oddaljenih datotek (comRemoteFileAndExecutableManagement)
+
+Storitev, ki omogoča dostop do sekundarnega skladišča geografskih podatkov, kot če bi bili lokalno dostopni.
+
+5. STOPNJA SKLADNOSTI
+
+5.1 Skladno (conformant)
+
+Vir je v celoti skladen z navedeno specifikacijo.
+
+5.2 Ni skladno (notConformant)
+
+Vir ni skladen z navedeno specifikacijo.
+
+5.3 Ni ocenjeno (notEvaluated)
+
+Skladnost ni bila ocenjena.
+
+6. VLOGA ODGOVORNE ORGANIZCIJE
+
+6.1 Ponudnik vira (resourceProvider)
+
+Organizacija, ki daje vir na voljo.
+
+6.2 Skrbnik (custodian)
+
+Organizacija, ki prevzema odgovornost za podatke ter primerno skrbi za vir in ga vzdržuje.
+
+6.3 Lastnik (owner)
+
+Organizacija, ki je lastnik vira.
+
+6.4 Uporabnik (user)
+
+Organizacija, ki vir uporablja.
+
+6.5 Distributer (distributor)
+
+Organizacija, ki vir distribuira.
+
+6.6 Izdajatelj (originator)
+
+Organizacija, ki je vir ustvarila.
+
+6.7 Kontaktna točka (pointOfContact)
+
+Organizacija, na katero se lahko obrnete, da izveste več o viru ali pa ga pridobite.
+
+6.8 Glavni raziskovalec (principalInvestigator)
+
+Ključna Organizacija, ki je odgovorna za zbiranje podatkov in izvajanje raziskave.
+
+6.9 Obdelovalec (processor)
+
+Organizacija, ki je urejala podatke tako, da je bil vir spremenjen.
+
+6.10 Izdajatelj (publisher)
+
+Organizacija, ki je vir objavila.
+
+6.11 Avtor (author)
+
+Organizacija, ki je avtor vira.
+
+--------------------------------------------------

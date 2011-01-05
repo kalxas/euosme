@@ -1,0 +1,987 @@
+Verordnung (EG) Nr. 1205/2008 der Kommission
+
+vom 3. Dezember 2008
+
+zur Durchführung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates hinsichtlich Metadaten
+
+(Text von Bedeutung für den EWR)
+
+DIE KOMMISSION DER EUROPÄISCHEN GEMEINSCHAFTEN —
+
+gestützt auf den Vertrag zur Gründung der Europäischen Gemeinschaft,
+
+gestützt auf die Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates vom 14. März 2007 zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft (INSPIRE) [1], insbesondere Artikel 5 Absatz 4,
+
+in Erwägung nachstehender Gründe:
+
+(1) Die Richtlinie 2007/2/EG enthält allgemeine Bestimmungen zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft. Da es für das ordnungsgemäße Funktionieren dieser Infrastruktur erforderlich ist, dass Nutzer in der Lage sind, Geodatensätze und -dienste zu finden und zu klären, ob und für welche Zwecke sie genutzt werden können, müssen die Mitgliedstaaten zu diesen Geodatensätzen und -diensten Beschreibungen in Form von Metadaten bereitstellen. Da solche Metadaten kompatibel und im gemeinschaftlichen wie im grenzüberschreitenden Kontext nutzbar sein sollen, müssen Vorschriften für Metadaten zur Beschreibung von Geodatensätzen und -diensten erlassen werden, die unter die in den Anhängen I, II und III der Richtlinie 2007/2/EG aufgeführten Themen fallen.
+
+(2) Die Definition eines Satzes von Metadatenelementen ist für die Identifizierung der Informationsressource, für die Metadaten erstellt werden, und für ihre Klassifizierung erforderlich, sowie für die Identifizierung ihres geografischen Standorts und ihres zeitlichen Bezugs, ihrer Qualität und Gültigkeit, ihrer Übereinstimmung mit den Durchführungsbestimmungen zur Interoperabilität der Geodatensätze und -dienste, ihrer Zugangs- und Nutzungseinschränkungen sowie der für die Ressource zuständigen Organisation. Ferner werden Metadatenelemente benötigt, die sich auf den Metadatensatz selbst beziehen, damit überwacht werden kann, ob die erstellten Metadaten aktualisiert werden, und damit die Organisation ermittelt werden kann, die für die Erstellung und Pflege der Metadaten zuständig ist. Dieser Satz von Metadatenelementen ist mindestens erforderlich, um den Anforderungen der Richtlinie 2007/2/EG zu entsprechen, womit aber die Möglichkeit nicht ausgeschlossen wird, dass Organisationen die Informationsressourcen durch zusätzliche Elemente ausführlicher dokumentieren, die sich aus internationalen Normen oder der Arbeitspraxis ihrer Interessengemeinschaft ergeben. Dies schließt auch nicht aus, dass die Kommission insbesondere dann Leitlinien aufstellt und auf dem neuesten Stand hält, wenn dies notwendig ist, um die Interoperabilität der Metadaten zu sichern.
+
+(3) Für die Validierung von Metadaten nach der Richtlinie 2007/2/EG in Bezug auf die Bedingungen und die erwartete Multiplizität der einzelnen Metadatenelemente werden Anweisungen benötigt, d. h., es ist festzulegen, ob für ein Element des Metadatensatzes immer Werte zu erwarten sind und ob sie genau einmal oder auch öfter vorkommen können.
+
+(4) Für jedes Metadatenelement ist die Angabe eines Wertebereichs erforderlich, um die Interoperabilität der Metadaten in einem mehrsprachigen Umfeld zu gewährleisten, und dieser Wertebereich sollte folgende Formen annehmen können: Freitext, Daten, aus internationalen Normen abgeleitete Codes wie z. B. Sprachcodes, aus kontrollierten Listen oder Thesauri abgeleitete Schlüsselwörter oder Zeichenketten.
+
+(5) Die in dieser Verordnung vorgesehenen Maßnahmen entsprechen der Stellungnahme des nach Artikel 22 der Richtlinie 2007/2/EG eingesetzten Ausschusses —
+
+HAT FOLGENDE VERORDNUNG ERLASSEN:
+
+Artikel 1
+
+Gegenstand
+
+Diese Verordnung legt die Erfordernisse für die Erstellung und Pflege von Metadaten über Geodatensätze, Geodatensatzreihen und Geodatendienste fest, die unter die in den Anhängen I, II und III der Richtlinie 2007/2/EG aufgeführten Themen fallen.
+
+Artikel 2
+
+Begriffsbestimmungen
+
+Für die Zwecke dieser Verordnung gelten neben den Begriffsbestimmungen des Artikels 3 der Richtlinie 2007/2/EG die in Teil A des Anhangs festgelegten Begriffsbestimmungen.
+
+Artikel 3
+
+Erstellung und Pflege von Metadaten
+
+Metadaten, die einen Geodatensatz, eine Geodatensatzreihe oder einen Geodatendienst beschreiben, bestehen aus den in Teil B des Anhangs festgelegten Metadatenelementen oder Gruppen von Metadatenelementen und sind nach den in den Teilen C und D des Anhangs festgelegten Vorschriften zu erstellen und zu pflegen.
+
+Artikel 4
+
+Inkrafttreten
+
+Diese Verordnung tritt am zwanzigsten Tag nach ihrer Veröffentlichung im Amtsblatt der Europäischen Union in Kraft.
+
+Diese Verordnung ist in allen ihren Teilen verbindlich und gilt unmittelbar in jedem Mitgliedstaat.
+
+Brüssel, den 3. Dezember 2008
+
+Für die Kommission
+
+Stavros Dimas
+
+Mitglied der Kommission
+
+[1] ABl. L 108 vom 25.4.2007, S. 1.
+
+--------------------------------------------------
+
+ANHANG
+
+DURCHFÜHRUNGSBESTIMMUNGEN FÜR METADATEN
+
+TEIL A
+
+Auslegung
+
+1. Es gelten die folgenden begriffsbestimmungen:
+
+- "Zeichenkette": Wertebereich von Metadatenelementen, ausgedrückt durch eine Menge von Zeichen, die als Einheit behandelt wird;
+
+- "Freitext": Wertebereich von Metadatenelementen, ausgedrückt in einer oder mehreren natürlichen Sprachen;
+
+- "Herkunft": Geschichte des Datensatzes nach EN ISO 19101, einschließlich seines Lebenszyklus von der Sammlung und Erfassung über die Zusammenstellung und Ableitung bis zu seiner derzeitigen Form;
+
+- "Metadatenelement": diskrete Metadateneinheit nach EN ISO 19115;
+
+- "Namensraum": durch einen einheitlichen Bezeichner für Ressourcen (URI) identifizierte Sammlung von Namen, die in Dokumenten, die in einer erweiterbaren Auszeichnungssprache (XML) abgefasst sind, als Element- und Attributnamen verwendet werden;
+
+- "Qualität": nach EN ISO 19101 die Gesamtheit der Merkmale eines Produkts, die sich auf dessen Eignung beziehen, festgelegte oder vorausgesetzte Erfordernisse zu erfüllen;
+
+- "Ressource": Informationsressource mit direktem oder indirektem Bezug zu einem bestimmten Standort oder geografischen Gebiet;
+
+- "Geodatensatzreihe": Sammlung von Geodatensätzen mit derselben Produktspezifikation.
+
+2. Verweise auf die gültigkeit von geodatensätzen beziehen sich auf einen der folgenden aspekte:
+
+- von den Daten abgedeckter räumlicher und zeitlicher Bereich,
+
+- ob die Daten gegen eine Messungs- oder Leistungsnorm geprüft worden sind,
+
+- den Grad, in dem die Daten für ihren Einsatzzweck geeignet sind, und
+
+- gegebenenfalls die Rechtsgültigkeit des Geodatensatzes.
+
+TEIL B
+
+Metadatenelemente
+
+1. IDENTIFIZIERUNG
+
+Folgende Metadatenelemente sind anzugeben:
+
+1.1. Ressourcenbezeichnung (resource title)
+
+Charakteristische und häufig eindeutige Bezeichnung, unter der die Ressource bekannt ist.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+1.2. Ressourcenüberblick (resource abstract)
+
+Kurze beschreibende Zusammenfassung des Ressourceninhalts.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+1.3. Ressourcenart (resource type)
+
+Art bzw. Typ der durch die Metadaten beschriebenen Ressource.
+
+Der Wertebereich dieses Metadatenelements wird in Teil D Ziffer 1 festgelegt.
+
+1.4. Ressourcenverweis (resource locator)
+
+Der Ressourcenverweis definiert den/die Link(s) auf die Ressource und/oder auf zusätzliche Informationen zur Ressource.
+
+Der Wertebereich dieses Metadatenelements ist eine Zeichenkette, in der Regel in Form eines einheitlichen Ressourcenverweises (uniform resource locator — URL).
+
+1.5. Eindeutiger Ressourcenbezeichner (unique resource identifier)
+
+Ein Wert, durch den die Ressource eindeutig gekennzeichnet wird.
+
+Der Wertebereich dieses Metadatenelements ist ein obligatorischer Zeichenkettencode, der in der Regel vom Eigentümer der Daten zugeordnet wird, und ein Zeichenketten-Namensraum, der das Umfeld des Bezeichnercodes eindeutig bestimmt (z. B. den Eigentümer der Daten).
+
+1.6. Gekoppelte Ressource (coupled resource)
+
+Handelt es sich bei der Ressource um einen Geodatendienst, kennzeichnet dieses Metadatenelement gegebenenfalls den oder die Zielgeodatensätze des Dienstes durch deren eindeutige Ressourcenbezeichner (URI).
+
+Der Wertebereich dieses Metadatenelements ist ein obligatorischer Zeichenkettencode, der in der Regel vom Eigentümer der Daten zugeordnet wird, und ein Zeichenketten-Namensraum, der das Umfeld des Bezeichnercodes eindeutig bestimmt (z. B. den Eigentümer der Daten).
+
+1.7. Ressourcensprache (resource language)
+
+In der Ressource genutzte Sprache(n).
+
+Der Wertebereich dieses Metadatenelements ist auf die in ISO 639-2 festgelegten Sprachen begrenzt.
+
+2. KLASSIFIZIERUNG VON GEODATEN UND GEODATENDIENSTEN
+
+2.1. Themenkategorie (topic category)
+
+Die Themenkategorie ist ein übergeordnetes Klassifikationssystem, das die Zusammenstellung von verfügbaren Geodatenressourcen und die themengestützte Suche darin erleichtert.
+
+Der Wertebereich dieses Metadatenelements wird in Teil D Ziffer 2 festgelegt.
+
+2.2. Art des Geodatendienstes (spatial data service type)
+
+Diese Klassifikation erleichtert die Suche nach verfügbaren Geodatendiensten. Ein bestimmter Dienst ist nur einer Kategorie zuzuordnen.
+
+Der Wertebereich dieses Metadatenelements wird in Teil D Ziffer 3 festgelegt.
+
+3. SCHLÜSSELWORT
+
+Handelt es sich bei der Ressource um einen Geodatendienst, ist mindestens ein Schlüsselwort aus Teil D Ziffer 4 anzugeben.
+
+Handelt es sich bei der Ressource um einen Geodatensatz oder eine Geodatensatzreihe, ist mindestens ein Schlüsselwort aus dem allgemeinen mehrsprachigen Umwelt-Thesaurus (GEMET) anzugeben, das sich auf das in den Anhängen I, II und III der Richtlinie 2007/2/EG aufgeführte einschlägige Geodatenthema bezieht.
+
+Für jedes Schlüsselwort sind die folgenden Metadatenelemente anzugeben:
+
+3.1. Wert des Schlüsselworts (keyword value)
+
+Der Wert des Schlüsselworts ist ein gebräuchliches Wort, ein formalisiertes Wort oder ein Satz, mit dem der Gegenstand beschrieben wird. Da die Themenkategorie für eine detaillierte Suche zu grob ist, können Schlüsselwörter die Volltextsuche einengen und eine strukturierte Schlüsselwortsuche ermöglichen.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+3.2. Herkunft des kontrollierten Vokabulars (originating controlled vocabulary)
+
+Stammt das Schlüsselwort aus einem kontrollierten Vokabular (Thesaurus oder Ontologie) wie z. B. GEMET, ist die Quelle des kontrollierten Vokabulars anzugeben.
+
+Diese Quellenangabe schließt mindestens die Bezeichnung des kontrollierten Vokabulars und eine Datumsangabe (Datum der Veröffentlichung, der letzten Überarbeitung oder der Erstellung) mit ein.
+
+4. GEOGRAFISCHER STANDORT
+
+Für die nach Artikel 11 Absatz 2 Buchstabe e der Richtlinie 2007/2/EG erforderliche Angabe des geografischen Standorts ist als Metadatenelement ein geografisches Begrenzungsrechteck zu verwenden.
+
+4.1. Geografisches Begrenzungsrechteck (geographic bounding box)
+
+Beschreibt die Ausdehnung der Ressource im geografischen Raum durch ein Begrenzungsrechteck.
+
+Das Begrenzungsrechteck wird durch seine westliche und östliche Länge sowie durch seine nördliche und südliche Breite in Dezimalgrad mit einer Genauigkeit von mindestens 2 Dezimalstellen definiert.
+
+5. ZEITBEZUG
+
+Mit diesem Metadatenelement werden die nach Artikel 8 Absatz 2 Buchstabe d der Richtlinie 2007/2/EG erforderlichen Informationen zur zeitlichen Datendimension bereitgestellt. Mindestens eines der in den Unterabsätzen 5.1 bis 5.4 aufgeführten Metadatenelemente ist anzugeben.
+
+Der Wertebereich der in den Unterabsätzen 5.1 bis 5.4 aufgeführten Metadatenelemente ist eine Menge von Datumsangaben. Jedes Datum ist einem zeitlichen Bezugssystem zugeordnet und in einer zu diesem System kompatiblen Form auszudrücken. Die Voreinstellung für dieses Bezugssystem ist der Gregorianische Kalender mit Datumsangaben, die ISO 8601 entsprechen.
+
+5.1. Zeitliche Ausdehnung (temporal extent)
+
+Die zeitliche Ausdehnung beschreibt den Zeitraum, der vom Inhalt der Ressource erfasst wird. Dieser Zeitraum kann in einer der folgenden Weisen ausgedrückt werden:
+
+- als Einzeldatum,
+
+- als Datumsintervall unter Angabe von Anfangs- und Enddatum des Intervalls oder
+
+- als Kombination von Einzeldaten und Datumsintervallen.
+
+5.2. Datum der Veröffentlichung (date of publication)
+
+Hier ist das Veröffentlichungsdatum der Ressource anzugeben, soweit verfügbar, oder das Datum des Inkrafttretens. Es kann mehr als ein Veröffentlichungsdatum geben.
+
+5.3. Datum der letzten Überarbeitung (date of last revision)
+
+Das Datum der letzten Überarbeitung der Ressource, wenn sie überarbeitet worden ist. Es darf nur ein Datum der letzten Überarbeitung geben.
+
+5.4. Erstellungsdatum (date of creation)
+
+Das Datum, an dem die Ressource erstellt worden ist. Es darf nur ein Erstellungsdatum geben.
+
+6. QUALITÄT UND GÜLTIGKEIT
+
+Die nach Artikel 5 Absatz 2 und Artikel 11 Absatz 2 der Richtlinie 2007/2/EG erforderlichen Angaben zur Qualität und Gültigkeit der Geodaten sind mit den folgenden Metadatenelementen bereitzustellen:
+
+6.1. Herkunft (lineage)
+
+Angaben zum Ablauf der Datenerstellung und/oder zur Gesamtqualität des Geodatensatzes. Gegebenenfalls kann hierzu auch eine Angabe gehören, ob der Datensatz validiert oder einer Qualitätssicherung unterzogen worden ist, ob es sich (im Fall mehrerer Versionen) um die amtliche Version handelt und ob er Rechtsgültigkeit besitzt.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+6.2. Räumliche Auflösung (spatial resolution)
+
+Die räumliche Auflösung bezieht sich auf den Detaillierungsgrad des Datensatzes und ist als Menge von null bis vielen Auflösungsabständen (in der Regel für Gitterdaten und aus Bildern abgeleitete Produkte) oder als äquivalente Maßstäbe (in der Regel für Karten und daraus abgeleitete Produkte) anzugeben.
+
+Ein äquivalenter Maßstab wird im Allgemeinen als ganze Zahl angegeben, die den Nenner des Maßstabs bezeichnet.
+
+Ein Auflösungsabstand ist als numerischer Wert zusammen mit einer Längeneinheit anzugeben.
+
+7. ÜBEREINSTIMMUNG
+
+Die nach Artikel 5 Absatz 2 Buchstabe a und Artikel 11 Absatz 2 Buchstabe d der Richtlinie 2007/2/EG erforderlichen Informationen zur Übereinstimmung und zum Grad der Übereinstimmung mit den nach Artikel 7 Absatz 1 der Richtlinie 2007/2/EG erlassenen Durchführungsbestimmungen sind mit den folgenden Metadatenelementen bereitzustellen:
+
+7.1. Spezifikation (specification)
+
+Quellenangabe zu den nach Artikel 7 Absatz 1 der Richtlinie 2007/2/EG erlassenen Durchführungsbestimmungen oder zu einer anderen Spezifikation, mit der eine bestimmte Ressource übereinstimmt.
+
+Eine Ressource kann mit mehreren nach Artikel 7 Absatz 1 der Richtlinie 2007/2/EG erlassenen Durchführungsbestimmungen oder sonstigen Spezifikationen übereinstimmen.
+
+Diese Quellenangabe schließt mindestens die Bezeichnung und ein Bezugsdatum (Datum der Veröffentlichung, der letzten Überarbeitung oder der Erstellung) der nach Artikel 7 Absatz 1 der Richtlinie 2007/2/EG erlassenen Durchführungsbestimmungen oder der sonstigen Spezifikationen ein.
+
+7.2. Grad (degree)
+
+Grad der Übereinstimmung der Ressource mit den nach Artikel 7 Absatz 1 der Richtlinie 2007/2/EG erlassenen Durchführungsbestimmungen oder mit einer anderen Spezifikation.
+
+Der Wertebereich dieses Metadatenelements wird in Teil D Ziffer 5 festgelegt.
+
+8. ZUGANGS- UND NUTZUNGSBESCHRÄNKUNGEN
+
+Zugangs- und Nutzungsbeschränkungen ergeben sich
+
+- als eine Reihe von Bedingungen für den Zugang und die Nutzung (8.1) und/oder
+
+- als eine Reihe von Beschränkungen des öffentlichen Zugangs (8.2).
+
+8.1. Bedingungen für den Zugang und die Nutzung (conditions applying to access and use)
+
+Mit diesem Metadatenelement sind die nach Artikel 5 Absatz 2 Buchstabe b und Artikel 11 Absatz 2 Buchstabe f der Richtlinie 2007/2/EG erforderlichen Angaben zu den Bedingungen für den Zugang zu Geodatensätzen und -diensten und deren Nutzung sowie gegebenenfalls zu entsprechenden Gebühren bereitzustellen.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+Das Element muss Werte enthalten. Gelten für den Zugang zur Ressource und ihre Nutzung keine Bedingungen, ist "Es gelten keine Bedingungen" anzugeben. Sind die Bedingungen unbekannt, ist "Bedingungen unbekannt" anzugeben.
+
+Gegebenenfalls soll das Element außerdem über Gebühren informieren, die für den Zugang zur Ressource und ihre Nutzung zu entrichten sind, oder einen einheitlichen Ressourcenverweis (URL) anführen, unter dem Gebühreninformationen abgerufen werden können.
+
+8.2. Beschränkungen des öffentlichen Zugangs (limitations on public access)
+
+Beschränken Mitgliedstaaten den öffentlichen Zugang zu Geodatensätzen und -diensten nach Artikel 13 der Richtlinie 2007/2/EG, stellt dieses Metadatenelement Informationen zu den Beschränkungen und ihren Gründen bereit.
+
+Ist der öffentliche Zugang nicht beschränkt, muss das Metadatenelement auf diesen Umstand hinweisen.
+
+Der Wertebereich dieses Metadatenelements ist Freitext.
+
+9. FÜR DIE SCHAFFUNG, VERWALTUNG, ERHALTUNG UND VERBREITUNG VON GEODATENSÄTZEN UND -DIENSTEN ZUSTÄNDIGE STELLE
+
+Für die Zwecke von Artikel 5 Absatz 2 Buchstabe d und Artikel 11 Absatz 2 Buchstabe g der Richtlinie 2007/2/EG sind die folgenden beiden Metadatenelemente bereitzustellen:
+
+9.1. Zuständige Stelle (responsible party)
+
+Beschreibt die für die Schaffung, Verwaltung, Erhaltung und Verbreitung der Ressource zuständige Stelle.
+
+Zur Beschreibung gehören
+
+- der Name der Stelle als Freitext und
+
+- eine E-Mail-Kontaktadresse als Zeichenkette.
+
+9.2. Funktion der zuständigen Stelle (responsible party role)
+
+Beschreibt die Funktion der zuständigen Stelle.
+
+Der Wertebereich dieses Metadatenelements wird in Teil D Ziffer 6 festgelegt.
+
+10. METADATEN ÜBER METADATEN
+
+Für die Zwecke von Artikel 5 Absatz 1 der Richtlinie 2007/2/EG sind die folgenden Metadatenelemente bereitzustellen:
+
+10.1. Kontakt für die Metadaten (metadata point of contact)
+
+Beschreibung der Stelle, die für die Erstellung und Pflege der Metadaten zuständig ist.
+
+Zur Beschreibung gehören
+
+- der Name der Stelle als Freitext und
+
+- eine E-Mail-Kontaktadresse als Zeichenkette.
+
+10.2. Datum der Metadaten (metadata date)
+
+Dieses Datum gibt an, wann der Metadatensatz erstellt oder aktualisiert wurde.
+
+Die Datumsangabe erfolgt nach ISO 8601.
+
+10.3. Sprache der Metadaten (metadata language)
+
+Bezeichnet die für die Dokumentation der Metadaten verwendete Sprache.
+
+Der Wertebereich dieses Metadatenelements ist auf die Amtssprachen der Gemeinschaft beschränkt und wird nach ISO 639-2 dargestellt.
+
+TEIL C
+
+Anweisungen zur Multiplizität und zu den Bedingungen der Metadatenelemente
+
+Die Metadaten, die eine Ressource beschreiben, sollen im Fall eines Geodatensatzes oder einer Geodatensatzreihe aus den in Tabelle 1 und im Fall eines Geodatendienstes aus den in Tabelle 2 aufgeführten Metadatenelementen oder Gruppen von Metadatenelementen bestehen.
+
+Diese Metadatenelemente oder Gruppen von Metadatenelementen müssen der erwarteten Multiplizität und den zugehörigen Bedingungen aus Tabelle 1 und 2 entsprechen.
+
+Wird für ein bestimmtes Metadatenelement keine Bedingung angeführt, ist dieses Element obligatorisch.
+
+Die Tabellen enthalten folgende Informationen:
+
+- Die erste Spalte enthält einen Verweis auf den Absatz von Teil B, in dem das Metadatenelement oder die Gruppe von Metadatenelementen definiert ist.
+
+- Die zweite Spalte enthält den Namen des Metadatenelements oder der Gruppe von Metadatenelementen.
+
+- In der dritten Spalte wird die Multiplizität des Metadatenelements festgelegt. Der Ausdruck für die Multiplizität folgt der Notation der vereinheitlichten Modellierungssprache (UML), in der
+
+- 1 bedeutet, dass das Metadatenelement in der Ergebnismenge genau einmal auftritt;
+
+- 1..* bedeutet, dass dieses Element in der Ergebnismenge mindestens einmal auftritt;
+
+- 0..1 bedeutet, dass das Auftreten des Metadatenelements in der Ergebnismenge von Bedingungen abhängt, dass es aber nur genau einmal auftreten kann;
+
+- 0..* bedeutet, dass das Auftreten des Metadatenelements in der Ergebnismenge von Bedingungen abhängt, dass es aber auch mehrfach auftreten kann.
+
+- Bei einer Multiplizität von 0..1 oder 0..* hängt es von der Bedingung ab, ob die Metadatenelemente obligatorisch sind.
+
+- Die vierte Spalte enthält eine Bedingung, wenn die Multiplizität nicht für alle Arten von Ressourcen gilt. Sonst sind alle Elemente obligatorisch.
+
+Tabelle 1
+
+Metadaten für Geodatensätze und Geodatensatzreihen
+
+Verweis | Metadatenelemente | Multiplizität | Bedingung |
+
+1.1 | Ressourcenbezeichnung | 1 | |
+
+1.2 | Ressourcenüberblick | 1 | |
+
+1.3 | Ressourcenart | 1 | |
+
+1.4 | Ressourcenverweis | 0..* | Obligatorisch, wenn es eine URL gibt, unter der weitere Informationen über die Ressource verfügbar sind, und/oder bei zugangsbezogenen Diensten |
+
+1.5 | Eindeutiger Ressourcenbezeichner | 1..* | |
+
+1.7 | Ressourcensprache | 0..* | Obligatorisch, wenn die Ressource Textinformationen enthält |
+
+2.1 | Themenkategorie | 1..* | |
+
+3 | Schlüsselwort | 1..* | |
+
+4.1 | Geografisches Begrenzungsrechteck | 1..* | |
+
+5 | Zeitbezug | 1..* | |
+
+6.1 | Herkunft | 1 | |
+
+6.2 | Räumliche Auflösung | 0..* | Obligatorisch für Datensätze und Datensatzreihen, für die ein äquivalenter Maßstab oder ein Auflösungsabstand angegeben werden kann |
+
+7 | Übereinstimmung | 1..* | |
+
+8.1 | Zugangs- und Nutzungsbedingungen | 1..* | |
+
+8.2 | Beschränkungen des öffentlichen Zugangs | 1..* | |
+
+9 | Zuständige Stelle | 1..* | |
+
+10.1 | Kontakt für die Metadaten | 1..* | |
+
+10.2 | Datum der Metadaten | 1 | |
+
+10.3 | Sprache der Metadaten | 1 | |
+
+Tabelle 2
+
+Metadaten für Geodatendienste
+
+Verweis | Metadatenelement | Multiplizität | Bedingung |
+
+1.1 | Ressourcenbezeichnung | 1 | |
+
+1.2 | Ressourcenüberblick | 1 | |
+
+1.3 | Ressourcenart | 1 | |
+
+1.4 | Ressourcenverweis | 0..* | Obligatorisch, wenn ein Link auf den Dienst verfügbar ist |
+
+1.6 | Gekoppelte Ressource | 0..* | Obligatorisch, wenn Links auf die Datensätze, mit denen der Dienst arbeitet, verfügbar sind |
+
+2.2 | Art des Geodatendienstes | 1 | |
+
+3 | Schlüsselwort | 1..* | |
+
+4.1 | Geografisches Begrenzungsrechteck | 0…* | Obligatorisch für Dienste mit einer expliziten geografischen Ausdehnung |
+
+5 | Zeitbezug | 1..* | |
+
+6.2 | Räumliche Auflösung | 0..* | Obligatorisch, wenn es bezüglich der räumlichen Auflösung eine Einschränkung für diesen Dienst gibt |
+
+7 | Übereinstimmung | 1..* | |
+
+8.1 | Zugangs- und Nutzungsbedingungen | 1..* | |
+
+8.2 | Beschränkungen des öffentlichen Zugangs | 1..* | |
+
+9 | Zuständige Stelle | 1..* | |
+
+10.1 | Kontakt für die Metadaten | 1..* | |
+
+10.2 | Datum der Metadaten | 1 | |
+
+10.3 | Sprache der Metadaten | 1 | |
+
+TEIL D
+
+Wertebereiche
+
+Wo dies in der Beschreibung der Metadatenelemente in Teil B festgelegt wurde, sind die in Teil D Ziffern 1 bis 6 beschriebenen Wertebereiche mit der in Teil C Tabellen 1 und 2 festgelegten Multiplizität zu verwenden.
+
+Jeder Wert eines bestimmten Bereichs wird durch Folgendes bestimmt:
+
+- eine Kennzahl,
+
+- eine Textbezeichnung für den menschlichen Gebrauch, die in die verschiedenen Gemeinschaftssprachen übersetzt werden kann,
+
+- eine sprachneutrale Bezeichnung für den EDV-Gebrauch (der in Klammern angegebene Wert) und
+
+- als Option eine Beschreibung oder Definition.
+
+1. RESSOURCENART
+
+1.1. Geodatensatzreihe (series)
+
+1.2. Geodatensatz (dataset)
+
+1.3. Geodatendienste (services)
+
+2. THEMENKATEGORIEN NACH EN ISO 19115
+
+2.1. Landwirtschaft (farming)
+
+Tierzucht und/oder Pflanzenanbau.
+
+In diese Kategorie fällt folgendes Geodatenthema der Richtlinie 2007/2/EG: Anhang III Ziffer 9 "Landwirtschaftliche Anlagen und Aquakulturanlagen".
+
+2.2. Biologie (biota)
+
+Flora und/oder Fauna in der natürlichen Umgebung.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 17 "Biogeografische Regionen", Ziffer 18 "Lebensräume und Biotope" und Ziffer 19 "Verteilung der Arten".
+
+2.3. Grenzen (boundaries)
+
+Gesetzlich festgelegte Grenzen.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang I Ziffer 4 "Verwaltungseinheiten" und Anhang III Ziffer 1 "Statistische Einheiten".
+
+2.4. Klimatologie/Meteorologie/Atmosphäre (climatologyMeteorologyAtmosphere)
+
+Prozesse und Phänomene der Atmosphäre inklusive Klimatologie und Meteorologie
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 13 "Atmosphärische Bedingungen" und Ziffer 14 "Meteorologisch-geografische Kennwerte".
+
+2.5. Wirtschaft (economy)
+
+Wirtschaftliche Aktivitäten, Verhältnisse und Beschäftigung.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 20 "Energiequellen" und Ziffer 21 "Mineralische Bodenschätze".
+
+2.6. Höhenangaben (elevation)
+
+Höhenangabe bezogen auf ein Höhenreferenzsystem.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang II Ziffer 1 "Höhe".
+
+2.7. Umwelt (environment)
+
+Umweltressourcen, Umweltschutz und Umwelterhaltung.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang I Ziffer 4 "Schutzgebiete".
+
+2.8. Geowissenschaften (geoscientificInformation)
+
+Geowissenschaftliche Informationen.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 3 "Boden", Anhang II Ziffer 4 "Geologie" und Anhang III Ziffer 12 "Gebiete mit naturbedingten Risiken".
+
+2.9. Gesundheitswesen (health)
+
+Gesundheit, Gesundheitsdienste, Humanökologie und Sicherheit.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang III Ziffer 5 "Gesundheit und Sicherheit".
+
+2.10 Bilddaten/Basiskarten/Landbedeckung (imageryBaseMapsEarthCover)
+
+Basisdaten und -karten.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang II Ziffer 3 "Orthofotografie" und Ziffer 2, "Bodenbedeckung".
+
+2.11. Aufklärung/Militär (intelligenceMilitary)
+
+Militärbasen, militärische Einrichtungen und Aktivitäten.
+
+In diese Kategorie fällt kein Geodatenthema der Richtlinie 2007/2/EG.
+
+2.12. Binnengewässer (inlandWaters)
+
+Binnengewässermerkmale, Gewässernetze und deren Eigenschaften.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang I Ziffer 8 "Gewässernetz".
+
+2.13. Ortsangaben (location)
+
+Positionierungsangaben und -dienste.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang I Ziffer 3 "Geografische Bezeichnungen" und Ziffer 5 "Adressen".
+
+2.14. Meere (oceans)
+
+Merkmale und Eigenschaften von Salzwasserkörpern (außer Binnengewässern).
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 16 "Meeresregionen" und Ziffer 15 "Ozeanografisch-geografische Kennwerte".
+
+2.15. Planungsunterlagen/Kataster (planningCadastre)
+
+Informationen für die Flächennutzungsplanung.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang I Ziffer 6 "Flurstücke/Grundstücke (Katasterparzellen)", Anhang III Ziffer 4 "Bodennutzung" und Ziffer 11 "Bewirtschaftungsgebiete/Schutzgebiete/geregelte Gebiete und Berichterstattungseinheiten".
+
+2.16. Gesellschaft (society)
+
+Kulturelle und gesellschaftliche Merkmale.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang III Ziffer 10 "Verteilung der Bevölkerung — Demografie".
+
+2.17. Bauwerke (structure)
+
+Anthropogene Bauten.
+
+In diese Kategorie fallen die folgenden Geodatenthemen der Richtlinie 2007/2/EG: Anhang III Ziffer 2 "Gebäude", Ziffer 8 "Produktions- und Industrieanlagen" und Ziffer 7 "Umweltüberwachung".
+
+2.18. Verkehrswesen (transportation)
+
+Mittel und Wege zur Beförderung von Personen und/oder Gütern.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang I Ziffer 7 "Verkehrsnetze".
+
+2.19. Ver- und Entsorgung/Nachrichtenwesen (utilitiesCommunication)
+
+Energie-, Wasser- und Abfallsysteme, Kommunikationsinfrastruktur und -dienste.
+
+In diese Kategorie fällt das folgende Geodatenthema der Richtlinie 2007/2/EG: Anhang III Ziffer 6 "Versorgungswirtschaft und staatliche Dienste".
+
+3. ART DES GEODATENDIENSTES
+
+3.1. Suchdienste (discovery)
+
+Dienste, die es ermöglichen, auf Grundlage des Inhalts entsprechender Metadaten nach Geodatensätzen und -diensten zu suchen und den Inhalt der Metadaten anzuzeigen.
+
+3.2. Darstellungsdienste (view)
+
+Dienste, die es mindestens ermöglichen, darstellbare Geodatensätze anzuzeigen, in ihnen zu navigieren, sie zu vergrößern/verkleinern, zu verschieben, Daten zu überlagern sowie Informationen aus Legenden und sonstige relevante Inhalte von Metadaten anzuzeigen.
+
+3.3. Download-Dienste (download)
+
+Dienste, mit denen Kopien von vollständigen Geodatensätzen oder Teilen solcher Sätze heruntergeladen werden können oder die gegebenenfalls den direkten Zugriff darauf ermöglichen.
+
+3.4. Transformationsdienste (transformation)
+
+Dienste zur Umwandlung von Geodatensätzen, um Interoperabilität zu erreichen.
+
+3.5. Dienste zum Abrufen von Geodatendiensten (invoke)
+
+Dienste, über die von einem Geodatendienst erwartete Datenein- und Datenausgaben sowie eine Bearbeitungs- oder Dienstleistungskette zur Zusammenfassung mehrerer Dienste festgelegt werden können. Sie ermöglichen auch die Festlegung einer externen Webdienstschnittstelle für die Bearbeitungs- oder Dienstleistungskette.
+
+3.6. Sonstige Dienste (other)
+
+4. EINTEILUNG DER GEODATENDIENSTE
+
+Grundlage der Schlüsselwörter ist die Taxonomie für geografische Dienste in EN ISO 19119. Diese Taxonomie ist unterteilt in Klassen, zu deren Unterklassen der erlaubte Wertebereich der zugehörigen Geodatendienste angegeben wird.
+
+100 Geografische Dienste für Anwender (humanInteractionService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+101. Katalogdienst (humanCatalogueViewer)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, Metadaten zu Geodatensätzen oder Geodatendiensten in einem Katalog aufzufinden, sie zu betrachten und zu bearbeiten.
+
+102. Dienst für geografische Visualisierung (humanGeographicViewer)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, eine oder mehrere Objektgruppen oder Rasterdaten zu betrachten.
+
+103. Dienst für geografische Tabellenkalkulation (humanGeographicSpreadsheetViewer)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, mehrere Datenobjekte auszuwählen und damit Berechnungen durchzuführen, ähnlich einer Tabellenkalkulation, aber erweitert auf Geodaten.
+
+104. Editor für Verarbeitungsdienste (humanServiceEditor)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, geografische Verarbeitungsdienste zu steuern.
+
+105. Editor für die Definition von Bearbeitungsketten (humanChainDefinitionEditor)
+
+Ermöglicht dem Nutzer die interaktive Arbeit mit einem Dienst für die Definition von Bearbeitungsketten.
+
+106. Aufrufprogramm für Bearbeitungsketten (humanWorkflowEnactmentManager)
+
+Ermöglicht dem Nutzer die interaktive Arbeit mit einem Dienst zur Ausführung von Bearbeitungsketten.
+
+107. Editor für geografische Objekte (humanGeographicFeatureEditor)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, Daten geografischer Objekte zu bearbeiten.
+
+108. Editor für geografische Symbole (humanGeographicSymbolEditor)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, Symbolbibliotheken auszuwählen und zu verwalten.
+
+109. Editor für die Objektgeneralisierung (humanFeatureGeneralizationEditor)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, die kartografische Darstellung eines Objekts oder einer Objektgruppe unter Beibehaltung ihrer wesentlichen Elemente zu vereinfachen.
+
+110. Betrachter für geografische Datenstrukturen (humanGeographicDataStructureViewer)
+
+Als Dienst bereitgestellte Anwendung, die es dem Nutzer ermöglicht, die innere Struktur (von Teilen) eines Datensatzes zu betrachten.
+
+200 Geografische Dienste für die Verwaltung von Daten und Datenmodellen (infoManagementService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+201. Dienst für den Zugriff auf Objekte (infoFeatureAccessService)
+
+Dienst, der es einer Anwendung ermöglicht, auf einen Datenspeicher mit geografischen Objekten zuzugreifen und diesen zu verwalten.
+
+202. Dienst für den Zugriff auf grafische Darstellungen (infoMapAccessService)
+
+Dienst, der es einer Anwendung ermöglicht, auf grafische Darstellungen von geografischen Daten zuzugreifen.
+
+203. Dienst für den Zugriff auf Rasterdaten (infoCoverageAccessService)
+
+Dienst, der es einer Anwendung ermöglicht, auf einen Datenspeicher mit Rasterdaten zuzugreifen und diesen zu verwalten.
+
+204. Dienst für die Beschreibung von Sensoren (infoSensorDescriptionService)
+
+Dienst, der die Beschreibung eines Rasterdatensensors für Zwecke der Geodatenverarbeitung bereitstellt. Zur Beschreibung gehören Standort und Orientierung des Sensors sowie seine geometrischen, dynamischen und radiometrischen Eigenschaften.
+
+205. Dienst für den Zugriff auf Produkte (infoProductAccessService)
+
+Dienst, der es ermöglicht, auf einen Datenspeicher mit geografischen Produkten zuzugreifen und diesen zu verwalten.
+
+206. Dienst für den Zugriff auf Objektarten (infoFeatureAccessService)
+
+Dienst, der es einer Anwendung ermöglicht, auf einen Datenspeicher mit Definitionen von Objektarten zuzugreifen und diesen zu verwalten.
+
+207. Katalogdienst (infoCatalogueService)
+
+Dienst für die Suche in einer Sammlung von Metadaten über Instanzen und ihre Verwaltung.
+
+208. Registerdienst (infoRegistryService)
+
+Dienst für die Suche in einer Sammlung von Metadaten über Datentypen und ihre Verwaltung.
+
+209. Gazetteerdienst (infoGazetteerService)
+
+Dienst, der real existierenden Objekten aus einem Verzeichnis der Instanzen einer oder mehrerer Klassen Positionsangaben zuordnet.
+
+210. Auftragsdienst (infoOrderHandlingService)
+
+Dienst, der es einer Anwendung ermöglicht, bei einem Anbieter Produkte zu bestellen.
+
+211. Dauerauftragsdienst (infoStandingOrderService)
+
+Dienst, der es einem Nutzer ermöglicht, ein Produkt über ein geografisches Gebiet zu bestellen, das nach Erscheinen ausgeliefert wird.
+
+300 Geografische Dienste für die Verwaltung von Bearbeitungsketten und Aufgaben (taskManagementService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+301. Dienst für die Definition von Bearbeitungsketten (chainDefinitionService)
+
+Dienst für die Definition von Bearbeitungsketten und für die Veranlassung ihrer Ausführung durch den folgenden Dienst (302).
+
+302. Dienst für die Ausführung von Bearbeitungsketten (workflowEnactmentService)
+
+Dieser Dienst interpretiert eine Bearbeitungskette und steuert die Instanzenbildung von Diensten sowie den Ablauf der Bearbeitungsschritte.
+
+303. Abonnementdienst (subscriptionService)
+
+Dienst, der es Anwendungen ermöglicht, über Ereignisse benachrichtigt zu werden.
+
+400 Geografische Verarbeitungsdienste — raumbezogen (spatialProcessingService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+401. Dienst für die Konversion von Koordinaten (spatialCoordinateConversionService)
+
+Dienst, der Koordinaten aus einem Bezugssystem in die eines anderen mit gleichem Datum umrechnet.
+
+402. Dienst für die Transformation von Koordinaten (spatialCoordinateTransformationService)
+
+Dienst, der Koordinaten aus einem Bezugssystem in die eines anderen mit abweichendem Datum umrechnet.
+
+403. Dienst für die Umwandlung zwischen Raster- und Vektordaten (spatialCoverageVectorConversionService)
+
+Dienst, der bei der räumlichen Abbildung von Daten vom Raster- zum Vektorschema oder umgekehrt übergeht.
+
+404. Dienst für die Konversion von Bildkoordinaten (spatialImageCoordinateConversionService)
+
+Koordinatentransformations- oder Koordinatenkonversionsdienst für den Wechsel des Bezugssystems von Bilddaten.
+
+405. Entzerrungsdienst (spatialRectificationService)
+
+Dienst für die Transformation von Bilddaten in eine rechtwinklige Parallelprojektion und damit in einen einheitlichen Maßstab.
+
+406. Ortho-Entzerrungsdienst (spatialOrthorectificationService)
+
+Entzerrungsdienst, der eine durch unterschiedliche Geländehöhe bedingte Schieflage des Bildes und Verschiebungen entfernt.
+
+407. Dienst für die Justierung von Geometriemodellen von Sensoren (spatialSensorGeometryModelAdjustmentService)
+
+Dieser Dienst justiert Geometriemodelle von Sensoren, um die Bilddaten an andere Bilder und/oder bekannte Bezugspunkte am Boden anzupassen.
+
+408. Dienst für die Konversion von Geometriemodellen (spatialImageGeometryModelConversionService)
+
+Dieser Dienst rechnet das Geometriemodell eines Sensors in ein anderes, äquivalentes Geometriemodell um.
+
+409. Geografischer Ausschneidedienst (spatialSubsettingService)
+
+Dienst, der aus Eingabedaten anhand von Ortsangaben oder Gitterkoordinaten ein zusammenhängendes Gebiet ausschneidet.
+
+410. Raumbezogener Auswahldienst (spatialSamplingService)
+
+Dienst, der aus Eingabedaten anhand von Ortsangaben oder Gitterkoordinaten nach einem konsistenten Schema bestimmte Daten auswählt.
+
+411. Kachelungsdienst (spatialTilingChangeService)
+
+Dieser Dienst ändert die Kachelung von Geodaten.
+
+412. Messungsdienst (spatialDimensionMeasurementService)
+
+Dienst, der die Abmessungen von Objekten in Bilddaten oder anderen Geodaten berechnet.
+
+413. Objektbearbeitungsdienste (spatialFeatureManipulationService)
+
+Zuordnung eines Objektes zu einem anderen Objekt, zu einem Bild, zu einem anderen Daten- oder Koordinatensatz; Korrektur von relativen Verschiebungen sowie von Unterschieden im Drehwinkel, im Maßstab und in der Perspektive. Überprüfung, ob alle Objekte in der Objektgruppe mit den Topologieregeln der Gruppe übereinstimmen; dieser Dienst identifiziert und/oder korrigiert alle entdeckten unlogischen Sachverhalte.
+
+414. Vergleichsdienst (spatialFeatureMatchingService)
+
+Dieser Dienst ermittelt z. B. durch Kantenabgleich und begrenzte Verschmelzung, welche Objekte und Objektteile aus verschiedenen Datenquellen dasselbe reale Objekt darstellen.
+
+415. Generalisierungsdienst (spatialFeatureGeneralizationService)
+
+Dienst, der den räumlichen Detaillierungsgrad einer Objektgruppe vermindert, um Sachverhalte klarer darzustellen, ohne auf wesentliche Bestandteile zu verzichten.
+
+416. Routensuchdienst (spatialRouteDeterminationService)
+
+Dieser Dienst bestimmt die für gegebene Eingabeparameter und Eigenschaften der Objektgruppe optimale Verbindung zwischen zwei vorgegebenen Punkten.
+
+417. Positionierungsdienst (spatialPositioningService)
+
+Von einem positionsgebenden Gerät bereitgestellter Dienst für die Nutzung, Ermittlung und eindeutige Interpretation von Positionsangaben sowie für die Prüfung, ob die erhaltenen Angaben den Nutzungsanforderungen genügen.
+
+418. Analysedienst für räumliche Nachbarschaftsbeziehungen (spatialProximityAnalysisService)
+
+Dieser Dienst ermittelt zu einer gegebenen Position oder einem gegebenen geografischen Objekt alle Objekte mit gegebenen Eigenschaften, die innerhalb einer vom Nutzer festgelegten Entfernung liegen.
+
+500 Geografische Verarbeitungsdienste – themenbezogen (thematicProcessingService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+501. Berechnungsdienst für Geoparameter (thematicGoparameterCalculationService)
+
+Dienst zur Berechnung von anwendungsspezifischen Datenwerten, die in den Rohdaten nicht enthalten sind.
+
+502. Dienst für die thematische Klassifizierung (thematicClassificationService)
+
+Dieser Dienst klassifiziert Gebiete geografischer Daten anhand thematischer Attribute.
+
+503. Generalisierungsdienst für Objektarten (thematicFeatureGeneralizationService)
+
+Dienst, der die Objektarten in einer Objektgruppe vermindert, um Sachverhalte klarer darzustellen, ohne auf wesentliche Bestandteile zu verzichten.
+
+504. Themenbezogener Ausschneidedienst (thematicSubsettingService)
+
+Dienst, der je nach vorgegebenen Parametern Daten aus einer Eingabemenge auswählt.
+
+505. Zähldienst (thematicSpatialCountingService)
+
+Dieser Dienst zählt geografische Objekte.
+
+506. Erkennungsdienst für Veränderungen (thematicChangeDetectionService)
+
+Dieser Dienst ermittelt Unterschiede zwischen zwei Datensätzen, die dasselbe geografische Gebiet zu verschiedenen Zeitpunkten beschreiben.
+
+507. Auszugsdienst für geografische Informationen (thematicGeographicInformationExtractionService)
+
+Dieser Dienst unterstützt die Berechnung von Objekt- und Geländeinformationen aus Bilddaten der Fernerkundung.
+
+508. Themenbezogener Bildverarbeitungsdienst (thematicImageProcessingService)
+
+Dienst, der die Werte themenbezogener Bildeigenschaften über eine mathematische Funktion verändert.
+
+509. Auflösungsreduzierungsdienst (thematicReducedResolutionGenerationService)
+
+Dienst, der die Auflösung eines Bildes verringert.
+
+510. Bildbearbeitungsdienste (thematicImageManipulationService)
+
+Dienste, mit denen sich die Datenwerte von Bildern bearbeiten lassen: Änderung von Farben und Kontrast, Anwendung von Filtern, Änderung der Auflösung, Entrauschen, Streifenbildung, systematische radiometrische Korrekturen, atmosphärische Abschwächung, Änderung der Helligkeit usw.
+
+511. Interpretationsdienste für Bilder (thematicImageUnderstandingService)
+
+Dienste für die automatisierte Erkennung von Bildveränderungen, für Differenzverfahren zwischen zugeordneten Bildern, die Analyse und Darstellung der Bedeutung von Differenzen sowie für die flächen- und modellbasierte Differenzbildung.
+
+512. Bildsynthesedienste (thematicImageSynthesisService)
+
+Dienste zur Erzeugung oder Umformung von Bildern unter Nutzung von computergestützten räumlichen Modellen, Perspektiv-Transformationen und Methoden der Bildbearbeitung, um die Sichtbarkeit zu verbessern, die Auflösung zu schärfen und/oder die Wirkung von Wolkenbedeckung oder Dunst zu verringern.
+
+513. Multiband-Bildbearbeitungsdienst (thematicMultibandImageManipulationService)
+
+Dienst für die Bildbearbeitung unter Nutzung der verschiedenen in den Bilddaten enthaltenen Frequenzbänder.
+
+514. Objekterkennungsdienst (thematicObjectDetectionService)
+
+Dienst zur Erkennung realer Objekte in einem Bild.
+
+515. Geoparserdienst (thematicGeoparsingService)
+
+Um die Übergabe an einen Geocodierungsdienst vorzubereiten, können Textdokumente mit diesem Dienst nach Ortsangaben wie Ortsnamen, Adressen, Postleitzahlen usw. durchsucht werden.
+
+516. Geocodierungsdienst (thematicGeocodingService)
+
+Dienst, mit dem Ortsangaben in Texten durch geografische Koordinaten (oder einen anderen Raumbezug) ergänzt werden können.
+
+600 Geografische Verarbeitungsdienste — zeitbezogen (temporalProcessingService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+601. Transformationsdienst für den Zeitbezug (temporalReferenceSystemTransformationService)
+
+Mit diesem Dienst können Zeitangaben aus einem Zeitbezugssystem in ein anderes umgerechnet werden.
+
+602. Zeitbezogener Ausschneidedienst (temporalSubsettingService)
+
+Dienst, der aus Eingabedaten Daten auswählt, die in einem zusammenhängenden Zeitintervall mit vorgegebenem Anfangs- und Endzeitpunkt liegen.
+
+603. Zeitbezogener Auswahldienst (temporalSamplingService)
+
+Dienst, der aus Eingabedaten anhand von Zeitangaben nach einem konsistenten Schema bestimmte Daten auswählt.
+
+604. Analysedienst für zeitbezogene Nachbarschaftsbeziehungen (temporalProximityAnalysisService)
+
+Dieser Dienst ermittelt zu einem gegebenen Zeitraum oder Ereignis alle Objekte mit gegebenen Eigenschaften, deren zeitlicher Abstand vom Bezugszeitraum oder Bezugsereignis einen vom Nutzer festgelegten Wert nicht überschreitet.
+
+700 Geografische Verarbeitungsdienste — Metadaten (metadataProcessingService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+701. Dienst für statistische Berechnungen (metadataStatisticalCalculationService)
+
+Dieser Dienst berechnet statistische Daten aus einem Datensatz.
+
+702. Ergänzungsdienst für Geodaten (metadataGeographicAnnotationService)
+
+Dienst, mit dem sich Bildern oder Objekten einer Objektgruppe ergänzende Informationen hinzufügen lassen.
+
+800 Geografische Nachrichtenübermittlungsdienste (comService)
+
+Zu dieser Klasse gehören folgende Unterklassen:
+
+801. Codierungsdienst (comEncodingService)
+
+Dienst, der nach einer Verschlüsselungsvorschrift arbeitet und eine Schnittstelle zur Verschlüsselung (Codierung) und Entschlüsselung (Decodierung) besitzt.
+
+802. Übertragungsdienst (comTransferService)
+
+Dienst, der nach einem oder mehreren Übertragungsprotokollen arbeitet und damit die Datenübertragung zwischen verteilten Informationssystemen über Online- oder Offline-Medien ermöglicht.
+
+803. Kompressionsdienst für Geodaten (comGeographicCompressionService)
+
+Dienst, der Daten zu räumlich abgegrenzten Teilen einer Objektgruppe in eine komprimierte Form oder komprimierte Daten zurück in die Ausgangsform wandelt.
+
+804. Umformatierungsdienst für Geodaten (comGeographicFormatConversionService)
+
+Dienst, der das Format von Geodaten ändert.
+
+805. Nachrichtenübermittlungsdienst (comMessagingService)
+
+Dienst, der es verschiedenen Nutzern ermöglicht, gleichzeitig Objektgruppen zu betrachten und zu kommentieren sowie Änderungsanträge zu stellen.
+
+806. Dienst für den Zugriff auf externe Daten und Programme (comRemoteFileAndExecutableManagement)
+
+Mit diesem Dienst kann auf externe Speichermedien für geografische Objekte und Programme zugegriffen werden, als ob diese lokal verfügbar wären.
+
+5. GRAD DER ÜBEREINSTIMMUNG
+
+5.1. Konform (conformant)
+
+Die Ressource stimmt mit der angegebenen Spezifikation in vollem Umfang überein.
+
+5.2. Nicht konform (notConformant)
+
+Die Ressource stimmt mit der angegebenen Spezifikation nicht überein.
+
+5.3. Nicht überprüft (notEvaluated)
+
+Die Übereinstimmung ist nicht überprüft worden.
+
+6. FUNKTION DER ZUSTÄNDIGEN STELLE
+
+6.1. Ressourcenanbieter (resourceProvider)
+
+Anbieter der Ressource.
+
+6.2. Verwalter (custodian)
+
+Person/Stelle, welche die Zuständigkeit und Verantwortlichkeit für einen Datensatz übernommen hat und seine sachgerechte Pflege und Wartung sichert.
+
+6.3. Eigentümer (owner)
+
+Eigentümer der Ressource.
+
+6.4. Nutzer (user)
+
+Nutzer der Ressource.
+
+6.5. Vertrieb (distributor)
+
+Person oder Stelle für den Vertrieb.
+
+6.6. Urheber (originator)
+
+Erzeuger der Ressource.
+
+6.7. Ansprechpartner (pointOfContact)
+
+Kontakt für Informationen zur Ressource oder deren Bezugsmöglichkeiten.
+
+6.8. Projektleitung (principalInvestigator)
+
+Person oder Stelle, die verantwortlich für die Erhebung der Daten und die Untersuchung ist.
+
+6.9. Bearbeiter (processor)
+
+Person oder Stelle, welche die Ressource modifiziert.
+
+6.10. Herausgeber (publisher)
+
+Person oder Stelle, welche die Ressource veröffentlicht.
+
+6.11. Autor (author)
+
+Verfasser der Ressource.
+
+--------------------------------------------------

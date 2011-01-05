@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115"
+	xmlns:widgets="urn:import:eu.europa.ec.jrc.euosme.gwt.client.widgets">
+	<g:HTMLPanel>
+    	<g:Label addStyleNames="h2" ui:field="titleLabel"/>
+		<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
+		<widgets:CharacterStringLong addStyleNames="auto" ui:field="lineageObj"/>
+		<widgets:CIMultiple ui:field="spatialResolutionContainerObj"/>	
+		<g:Label ui:field="mandatoryFieldLabel"/>
+  	</g:HTMLPanel>
+</ui:UiBinder> 

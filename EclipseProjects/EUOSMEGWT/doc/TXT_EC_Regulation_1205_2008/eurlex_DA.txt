@@ -1,0 +1,987 @@
+Kommissionens forordning (EF) nr. 1205/2008
+
+af 3. december 2008
+
+om gennemførelse af Europa-Parlamentets og Rådets direktiv 2007/2/EF med hensyn til metadata
+
+(EØS-relevant tekst)
+
+KOMMISSIONEN FOR DE EUROPÆISKE FÆLLESSKABER HAR —
+
+under henvisning til traktaten om oprettelse af Det Europæiske Fællesskab,
+
+under henvisning til Europa-Parlamentets og Rådets direktiv 2007/2/EF af 14. marts 2007 om opbygning af en infrastruktur for geografisk information i Det Europæiske Fællesskab (Inspire) [1], særlig artikel 5, stk. 4, og
+
+ud fra følgende betragtninger:
+
+(1) I direktiv 2007/2/EF fastsættes de generelle regler for oprettelse af infrastrukturen for geografisk information i Det Europæiske Fællesskab. For at denne infrastruktur kan fungere korrekt, er det nødvendigt, at brugeren kan finde geodatasæt og -tjenester for at fastslå, om de må bruges og til hvilket formål, og medlemsstaterne skal derfor stille beskrivelser i form af metadata for disse geodatasæt og -tjenester til rådighed. Eftersom sådanne metadata skal være kompatible og anvendelige i fællesskabssammenhæng og på tværs af grænserne, er det nødvendigt at fastlægge regler for de metadata, der bruges til at beskrive geodatasæt og -tjenester svarende til de temaer, der er anført i bilag I, II og III til direktiv 2007/2/EF.
+
+(2) Det er nødvendigt at definere et sæt metadataelementer for at gøre det muligt at identificere den informationsressource, der er fremstillet metadata for, dens klassificering og afdækning af dens geografiske beliggenhed og tidsmæssige reference, kvalitet og validitet, overensstemmelse med gennemførelsesreglerne om geodatasæt og -tjenesters interoperabilitet, begrænsninger for adgang og brug samt den organisation, der har ansvaret for ressourcen. Det er også nødvendigt at have metadataelementer for selve metadataregistret for at overvåge, at de metadata, der fremstilles, holdes ajour, og for at kunne finde frem til, hvilken organisation der er ansvarlig for at fremstille og vedligeholde metadataene. Det er det minimumssæt af metadataelementer, som er nødvendigt for at leve op til direktiv 2007/2/EF, og det udelukker ikke muligheden for, at organisationer giver en mere omfattende dokumentation af informationsressourcerne med supplerende elementer afledt af internationale standarder eller arbejdsmetoder inden for deres interessefællesskab. Det udelukker heller ikke muligheden for at indføre retningslinjer, som Kommissionen udarbejder og opdaterer, især når det er nødvendigt for at sikre metadataenes interoperabilitet.
+
+(3) Instruktioner er nødvendige for validering af metadata i overensstemmelse med direktiv 2007/2/EF med hensyn til hvert metadataelements betingelser og forventede multiplicitet, dvs. hvorvidt man altid kan forvente, at værdierne for hvert element i metadataregistret kun kan optræde én gang eller kan optræde mere end én gang.
+
+(4) Hvert metadataelements værdidomæne er nødvendigt for at sikre metadataenes interoperabilitet i en flersproget kontekst, og det pågældende værdidomæne skal kunne antage form af fritekst, datoer, koder afledt af internationale standarder såsom sprogkoder, nøgleord fra kontrollerede lister eller tesaurusser eller tegnstrenge.
+
+(5) De i denne forordning fastsatte foranstaltninger er i overensstemmelse med udtalelsen fra det udvalg, der er nedsat ved artikel 22 i direktiv 2007/2/EF —
+
+UDSTEDT FØLGENDE FORORDNING:
+
+Artikel 1
+
+Genstand
+
+Denne forordning indeholder kravene til fremstilling og vedligeholdelse af metadata til geodatasæt, geodatasætserier og geodatatjenester svarende til de temaer, der er anført i bilag I, II og III til direktiv 2007/2/EF.
+
+Artikel 2
+
+Definitioner
+
+Med henblik på denne forordning gælder ud over definitionerne i artikel 3 i direktiv 2007/2/EF definitionerne i del A i bilaget.
+
+Artikel 3
+
+Fremstilling og vedligeholdelse af metadata
+
+De metadata, der beskriver et geodatasæt, en geodatasætserie eller en geodatatjeneste, skal omfatte de metadataelementer eller grupper af metadataelementer, som er anført i del B i bilaget, og skal fremstilles og vedligeholdes i overensstemmelse med reglerne i del C og del D.
+
+Artikel 4
+
+Ikrafttræden
+
+Denne forordning træder i kraft på tyvendedagen efter offentliggørelsen i Den Europæiske Unions Tidende.
+
+Denne forordning er bindende i alle enkeltheder og gælder umiddelbart i hver medlemsstat.
+
+Udfærdiget i Bruxelles, den 3. december 2008.
+
+På Kommissionens vegne
+
+Stavros Dimas
+
+Medlem af Kommissionen
+
+[1] EUT L 108 af 25.4.2007, s. 1.
+
+--------------------------------------------------
+
+BILAG
+
+GENNEMFØRELSESBESTEMMELSER FOR METADATA
+
+DEL A
+
+Fortolkning
+
+1. Der gælder følgende definitioner:
+
+- "tegnstreng" er metadataelementers værdidomæne udtrykt som en række tegn, der behandles som en enhed
+
+- "fritekst" er metadataelementers værdidomæne udtrykt på et eller flere naturlige sprog
+
+- "dannelseshistorik" er et datasæts historie og livscyklus fra indsamling og registrering over kompilering og afledning til dets aktuelle form i overensstemmelse med EN ISO 19101
+
+- "metadataelement" er en adskilt metadataenhed i overensstemmelse med EN ISO 19115
+
+- "navneområde" er en samling navne, som identificeres af en URI-reference (Uniform Resource Identifier), der bruges i XML-dokumenter (Extensible Markup Language) som elementnavne og attributnavne
+
+- "kvalitet" er et produkts karakteristiske træk set som helhed, der har noget at gøre med dets evne til at opfylde specificerede eller underforståede behov i overensstemmelse med EN ISO 19101
+
+- "ressource" er en informationsressource, der har en direkte eller indirekte reference til en bestemt beliggenhed eller et bestemt geografisk område
+
+- "geodatasætserie" er en samling geodatasæt, der har samme produktspecifikation.
+
+2. Referencer til et geodatasæts validitet skal opfattes som vedrørende et eller flere af følgende:
+
+- det rumomfang og det tidsrum, der er relevant for dataene
+
+- spørgsmålet om, hvorvidt dataene er blevet kontrolleret i forhold til en målings- eller resultatstandard
+
+- spørgsmålet om, i hvilket omfang dataene passer til formålet
+
+- hvor det er relevant, geodatasættets retlige gyldighed.
+
+DEL B
+
+Metadataelementer
+
+1. IDENTIFIKATION
+
+Der skal stilles følgende metadataelementer til rådighed:
+
+1.1. Ressourcetitel
+
+Det er et karakteristisk og ofte unikt navn, som ressourcen kendes under.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+1.2. Ressourceresumé
+
+Det er en kort, summarisk gengivelse af ressourcens indhold.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+1.3. Ressourcetype
+
+Det er den type ressource, der beskrives af metadataene.
+
+Værdidomænet for dette metadataelement er defineret i del D.1.
+
+1.4. Ressourcefinder
+
+Ressourcefinderen definerer linket/linkene til ressourcen og/eller linket til supplerende oplysninger om ressourcen.
+
+Værdidomænet for dette metadataelement er en tegnstreng, der normalt kaldes en enhedsressourcefinder (Uniform Ressource Locator, URL).
+
+1.5. Entydigt ressource-id (Unique resource identifier, URI)
+
+En værdi, der entydigt identificerer ressourcen.
+
+Værdidomænet for dette metadataelement er en obligatorisk tegnstrengskode, der normalt tildeles af dataejeren, og et tegnstrengsnavneområde, der entydigt identificerer identifikationskodens (f.eks. dataejerens) kontekst.
+
+1.6. Associeret ressource
+
+Hvis ressourcen er en geodatatjeneste, identificerer dette metadataelement, hvor det er relevant, tjenestens ønskede geodatasæt gennem deres entydige ressource-id (URI).
+
+Værdidomænet for dette metadataelement er en obligatorisk tegnstrengskode, der normalt tildeles af dataejeren, og et tegnstrengsnavneområde, der entydigt identificerer identifikationskodens (f.eks. dataejerens) kontekst.
+
+1.7. Ressourcesprog
+
+De(t) sprog, der bruges i ressourcen.
+
+Værdidomænet for dette metadataelement er begrænset til de sprog, der er defineret i ISO 639-2.
+
+2. KLASSIFICERING AF GEODATA OG -TJENESTER
+
+2.1. Emnekategori
+
+Emnekategorien er et klassifikationsskema på højt niveau, der kan fremme den grupperings- og emnebaserede søgning efter tilgængelige geodataressourcer.
+
+Værdidomænet for dette metadataelement er defineret i del D.2.
+
+2.2. Geodatatjenestetype
+
+Det er en klassifikation, der skal fremme søgningen efter tilgængelige geodatatjenester. En bestemt tjeneste skal kun kategoriseres i én kategori.
+
+Værdidomænet for dette metadataelement er defineret i del D.3.
+
+3. NØGLEORD
+
+Hvis ressourcen er en geodatatjeneste, skal der fastsættes mindst ét nøgleord fra del D.4.
+
+Hvis en ressource er et geodatasæt eller en geodatasætserie, skal der fastsættes mindst ét nøgleord fra General Environmental Multi-lingual Thesaurus (GEMET), hvori det relevante geodatatema beskrives som defineret i bilag I, II eller III til direktiv 2007/2/EF.
+
+Der skal fastsættes følgende metadataelementer for hvert nøgleord:
+
+3.1. Nøgleordsværdi
+
+Nøgleordsværdien er et almindeligt brugt ord, et formaliseret ord eller en sætning, der bruges til at beskrive emnet. Mens emnekategorien er for grov til detaljerede forespørgsler, hjælper nøgleordene med at indsnævre en fuldtekstsøgning, og de giver mulighed for en struktureret søgning på nøgleord.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+3.2. Oprettelse af kontrolleret ordforråd
+
+Hvis nøgleordsværdien stammer fra et kontrolleret ordforråd (tesaurus, ontologi), f.eks. GEMET, skal der henvises til det pågældende kontrollerede ordforråd.
+
+Denne henvisning skal som minimum indeholde titlen og en referencedato (dato for offentliggørelse, dato for seneste revision eller for oprettelse) på det pågældende kontrollerede ordforråd.
+
+4. GEOGRAFISK PLACERING
+
+Kravet til geografisk placering som omhandlet i artikel 11, stk. 2, litra e), i direktiv 2007/2/EF skal udtrykkes med den geografiske tegnkasse for metadataelementet.
+
+4.1. Geografisk tegnkasse
+
+Det er ressourcens omfang i det geografiske rum opgivet som en tegnkasse.
+
+Tegnkassen skal udtrykkes med vestlige og østlige længdegrader og sydlige og nordlige breddegrader i decimalgrader med en præcision på mindst 2 decimaler.
+
+5. TIDSREFERENCE
+
+Dette metadataelement vedrører kravet om at få oplysninger om dataenes tidsdimension som anført i artikel 8, stk. 2, litra d), i direktiv 2007/2/EF. Der skal fastsættes mindst ét af de metadataelementer, som er anført i punkt 5.1 til 5.4.
+
+Værdidomænet for de metadataelementer, der omtales i punkt 5.1 til 5.4, er et sæt datoer. Hver dato skal henvise til et tidsreferencesystem og skal udtrykkes i en form, der er kompatibel med det system. Standardreferencesystemet skal være den gregorianske kalender med datoer udtrykt i overensstemmelse med ISO 8601.
+
+5.1. Tidsmæssigt omfang
+
+Det tidsmæssige omfang definerer den tidsperiode, der dækkes af ressourceindholdet. Denne tidsperiode kan udtrykkes som en af følgende:
+
+- en individuel dato
+
+- et interval af datoer udtrykt ved intervallets start- og slutdato
+
+- en blanding af individuelle datoer og datointervaller.
+
+5.2. Offentliggørelsesdato
+
+Det er datoen for ressourcens offentliggørelse, når den foreligger, eller ikrafttrædelsesdatoen. Der kan være mere end én offentliggørelsesdato.
+
+5.3. Dato for seneste revision
+
+Det er datoen for den seneste revision af ressourcen, hvis denne er blevet revideret. Der må kun være én dato for seneste revision.
+
+5.4. Oprettelsesdato
+
+Det er datoen for oprettelse af ressourcen. Der må kun være én oprettelsesdato.
+
+6. KVALITET OG GYLDIGHED
+
+Kravene i artikel 5, stk. 2, og artikel 11, stk. 2, i direktiv 2007/2/EF vedrørende geodatas kvalitet og gyldighed skal opfyldes gennem følgende metadataelementer:
+
+6.1. Dannelseshistorik
+
+Det er en angivelse af geodatasættets proceshistorie og/eller overordnede kvalitet. Hvor det er relevant, kan den omfatte en angivelse af, om datasættet er blevet valideret eller kvalitetssikret, om det er den officielle version (hvis der foreligger mange versioner), og om det har retlig gyldighed.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+6.2. Geografisk opløsning
+
+Geografisk opløsning henviser til datasættets detaljeringsgrad. Det skal udtrykkes som et sæt af nul til mange opløsningsafstande (typisk til data i kvadratnet og billedafledte produkter) eller tilsvarende målestok (typisk for kort eller kortafledte produkter).
+
+En tilsvarende målestok udtrykkes normalt som en heltalsværdi, der udtrykker målestokstallet.
+
+En opløsningsafstand skal udtrykkes som en numerisk værdi tilknyttet en længdeenhed.
+
+7. OVERENSSTEMMELSE
+
+Kravene i artikel 5, stk. 2, litra a), og artikel 11, stk. 2, litra d), i direktiv 2007/2/EF om overensstemmelse og graden af overensstemmelse med gennemførelsesbestemmelserne, der vedtages i henhold til artikel 7, stk. 1, i direktiv 2007/2/EF, skal opfyldes gennem følgende metadataelementer:
+
+7.1. Specifikation
+
+Det er en henvisning til gennemførelsesbestemmelserne, der er vedtages i henhold til artikel 7, stk. 1, i direktiv 2007/2/EF eller anden specifikation, som en bestemt ressource er i overensstemmelse med.
+
+En ressource kan være i overensstemmelse med mere end én gennemførelsesbestemmelse, der vedtages i henhold til artikel 7, stk. 1, i direktiv 2007/2/EF, eller anden specifikation.
+
+Denne henvisning skal mindst omfatte titel og en referencedato (offentliggørelsesdato, dato for seneste revision eller for oprettelse) for de gennemførelsesbestemmelser, der er vedtaget i henhold til artikel 7, stk. 1, i direktiv 2007/2/EF, eller for specifikationen.
+
+7.2. Grad
+
+Det er ressourcens grad af overensstemmelse med gennemførelsesbestemmelserne, der vedtages i henhold til artikel 7, stk. 1, i direktiv 2007/2/EF, eller anden specifikation.
+
+Værdidomænet for dette metadataelement er defineret i del D.5.
+
+8. BEGRÆNSNING FOR ADGANG OG BRUG
+
+En begrænsning for adgang og brug skal være en af følgende eller begge to:
+
+- en række betingelser for adgang og brug (8.1)
+
+- en række begrænsninger på offentlig adgang (8.2).
+
+8.1. Betingelser for adgang og brug
+
+Dette metadataelement definerer betingelser for adgang til og brug af geodatasæt og -tjenester og om nødvendigt dertil hørende gebyrer, jf. artikel 5, stk. 2, litra b), og artikel 11, stk. 2, litra f), i direktiv 2007/2/EF.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+Elementet skal have værdier. Hvis der ikke gælder nogen betingelser for adgang til og brug af ressourcen, skal der bruges "ingen betingelser". Hvis betingelserne er ukendte, skal "betingelser ukendte" bruges.
+
+Dette element skal også give information om eventuelle gebyrer for at få adgang til og mulighed for at bruge ressourcen eller henvise til en enhedsressourcefinder (URL), hvor der foreligger information om gebyrer.
+
+8.2. Begrænsninger på offentlig adgang
+
+Når medlemsstater begrænser offentlig adgang til geodatasæt og geodatatjenester i henhold til artikel 13 i direktiv 2007/2/EF, skal dette metadataelement give oplysninger om begrænsningerne og årsagerne hertil.
+
+Hvis der ikke er begrænsninger på offentlig adgang, skal metadataelementet anføre det forhold.
+
+Værdidomænet for dette metadataelement er fritekst.
+
+9. ORGANISATIONER, DER ER ANSVARLIGE FOR OPBYGNING, FORVALTNING, VEDLIGEHOLDELSE OG DISTRIBUTION AF GEODATASÆTTENE OG -TJENESTERNE
+
+I forbindelse med anvendelsen af artikel 5, stk. 2, litra d), og artikel 11, stk. 2, litra g), i direktiv 2007/2/EF skal følgende to metadataelementer fastlægges:
+
+9.1. Ansvarlig part
+
+Det er beskrivelsen af den organisation, der har ansvaret for opbygning, forvaltning, vedligeholdelse og distribution af ressourcen.
+
+Denne beskrivelse skal indeholde:
+
+- navnet på organisationen som fritekst
+
+- en e-mail-kontaktadresse som en tegnstreng.
+
+9.2. Den ansvarlige parts rolle
+
+Det er den ansvarlige organisations rolle.
+
+Værdidomænet for dette metadataelement er defineret i del D.6.
+
+10. METADATA OM METADATA
+
+I forbindelse med anvendelsen af artikel 5, stk. 1, i direktiv 2007/2/EF skal følgende metadataelementer fastlægges:
+
+10.1. Kontaktpunkt for metadata
+
+Det er beskrivelsen af den organisation, der har ansvaret for at fremstille og vedligeholde metadataene.
+
+Beskrivelsen skal indeholde:
+
+- navnet på organisationen som fritekst
+
+- en e-mail-kontaktadresse som en tegnstreng.
+
+10.2. Metadatadato
+
+Den dato, der specificerer, hvornår metadataregistret blev oprettet eller ajourført.
+
+Denne dato skal udtrykkes i overensstemmelse med ISO 8601.
+
+10.3. Metadatasprog
+
+Det er det sprog, metadataelementerne udtrykkes på.
+
+Værdidomænet for dette metadataelement er begrænset til Fællesskabets officielle sprog udtrykt i overensstemmelse med ISO 639-2.
+
+DEL C
+
+Instruktioner om multiplicitet og betingelser for metadataelementerne
+
+Metadata, der beskriver en ressource, skal, for så vidt angår et geodatasæt eller en geodatasætserie, omfatte de metadataelementer eller grupper af metadataelementer, der er anført i tabel 1, og for så vidt angår en geodatatjeneste, de metadataelementer eller grupper af metadataelementer, der er anført i tabel 2.
+
+Metadataelementerne eller grupperne af metadataelementer skal være i overensstemmelse med den forventede multiplicitet og de dertil hørende betingelser, der er anført i tabel 1 og tabel 2.
+
+Når der ikke er udtrykt nogen betingelse for et bestemt metadataelement, skal det pågældende element være obligatorisk.
+
+Tabellerne indeholder følgende oplysninger:
+
+- første spalte indeholder henvisningen til afsnittet i del B i bilaget, hvor metadataelementet eller gruppen af metadataelementer er defineret
+
+- anden spalte indeholder navnet på metadataelementet eller gruppen af metadataelementer
+
+- i tredje spalte specificeres et metadataelements multiplicitet. Multipliciteten udtrykkes ifølge notationen for multiplicitet i Unified Modelling Language (UML), hvori
+
+- 1 betyder, at der kun skal være én instans af dette metadataelement i et resultatsæt
+
+- 1..* betyder, at der skal være mindst én instans af dette metadataelement i et resultatsæt
+
+- 0..1 viser, at tilstedeværelsen af metadataelementet i et resultatsæt er betinget, men kun kan optræde én gang
+
+- 0..* viser, at tilstedeværelsen af metadataelementet i et resultatsæt er betinget, men metadataelementet kan optræde en eller flere gange
+
+- når multipliciteten er 0..1 eller 0..*, definerer betingelsen, hvornår metadataelementerne er påbudt
+
+- fjerde spalte indeholder en betinget angivelse, hvis elementets multiplicitet ikke gælder for alle typer ressourcer. Alle elementer er under andre omstændigheder obligatoriske.
+
+Tabel 1
+
+Metadata for geodatasæt og geodatasætserier
+
+Reference | Metadataelementer | Multiplicitet | Betingelse |
+
+1.1. | Ressourcetitel | 1 | |
+
+1.2. | Ressourceresumé | 1 | |
+
+1.3. | Ressourcetype | 1 | |
+
+1.4. | Ressourcefinder | 0..* | Obligatorisk, hvis der foreligger en URL, så der kan opnås mere information om ressourcen og/eller adgangsrelaterede tjenester. |
+
+1.5. | Entydigt ressource-id | 1..* | |
+
+1.7. | Ressourcesprog | 0..* | Obligatorisk, hvis ressourcen omfatter tekstinformation. |
+
+2.1. | Emnekategori | 1..* | |
+
+3. | Nøgleord | 1..* | |
+
+4.1. | Geografisk tegnkasse | 1..* | |
+
+5. | Tidsreference | 1..* | |
+
+6.1. | Dannelseshistorik | 1 | |
+
+6.2. | Geografisk opløsning | 0..* | Obligatorisk for datasæt og datasætserier, hvis der kan specificeres en tilsvarende målestok eller en opløsningsafstand. |
+
+7. | Overensstemmelse | 1..* | |
+
+8.1. | Betingelser for adgang og brug | 1..* | |
+
+8.2. | Begrænsninger på offentlig adgang | 1..* | |
+
+9. | Ansvarlig organisation | 1..* | |
+
+10.1. | Kontaktpunkt for metadata | 1..* | |
+
+10.2. | Metadatadato | 1 | |
+
+10.3. | Metadatasprog | 1 | |
+
+Tabel 2
+
+Metadata for geodatatjenester
+
+Reference | Metadataelement | Multiplicitet | Betingelse |
+
+1.1. | Ressourcetitel | 1 | |
+
+1.2. | Ressourceresumé | 1 | |
+
+1.3. | Ressourcetype | 1 | |
+
+1.4. | Ressourcefinder | 0..* | Obligatorisk, hvis der er link til tjenesten. |
+
+1.6. | Associeret ressource | 0..* | Obligatorisk, hvis der er link til de datasæt, tjenesten opererer på. |
+
+2.2. | Geodatatjenestetype | 1 | |
+
+3. | Nøgleord | 1..* | |
+
+4.1. | Geografisk tegnkasse | 0…* | Obligatorisk for tjenester med en eksplicit geografisk udstrækning. |
+
+5. | Tidsreference | 1..* | |
+
+6.2. | Geografisk opløsning | 0..* | Obligatorisk, når der er en restriktion på den geografiske opløsning for denne tjeneste. |
+
+7. | Overensstemmelse | 1..* | |
+
+8.1. | Betingelser for adgang og brug | 1..* | |
+
+8.2. | Begrænsninger på offentlig adgang | 1..* | |
+
+9. | Ansvarlig organisation | 1..* | |
+
+10.1. | Kontaktpunkt for metadata | 1..* | |
+
+10.2. | Metadatadato | 1 | |
+
+10.3. | Metadatasprog | 1 | |
+
+DEL D
+
+Værdidomæner
+
+Hvor det er specificeret i beskrivelsen af metadataelementerne i del B, skal de i del D.1 til D.6 beskrevne værdidomæner bruges med den multiplicitet, der er anført i tabel 1 og tabel 2 i del C.
+
+I forbindelse med et bestemt domæne defineres hver værdi ved:
+
+- et identifikationsnummer
+
+- et tekstnavn for personer, der kan oversættes til de forskellige fællesskabssprog
+
+- et sprogneutralt navn til computere (værdien udtrykt i parentes)
+
+- en valgfri beskrivelse eller definition.
+
+1. RESSOURCETYPE
+
+1.1. Geodatasætserier (series).
+
+1.2. Geodatasæt (dataset)
+
+1.3. Geodatatjenester (services)
+
+2. EMNEKATEGORIER I OVERENSSTEMMELSE MED EN ISO 19115
+
+2.1. Landbrug (farming)
+
+Opdræt af dyr og/eller dyrkning af planter.
+
+Denne kategori gælder for geodatatemaet landbrugs- og akvakulturanlæg i bilag III, punkt 9, til direktiv 2007/2/EF.
+
+2.2. Biota (biota)
+
+Flora og/eller fauna i naturligt miljø.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 17 Biogeografiske regioner, bilag III, punkt 18 Levesteder og biotoper, bilag III, punkt 19 Artsfordeling.
+
+2.3. Grænser (boundaries)
+
+Retlige arealbeskrivelser
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag I, punkt 4 Administrative enheder, bilag III, punkt 1 Statistiske enheder.
+
+2.4. Klimatologi/Meteorologi/Atmosfære (climatology/Meteorology/Atmosphere)
+
+Processer og fænomener i atmosfæren.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 13 Atmosfæriske forhold, bilag III, punkt 14 Meteorologisk-geografiske forhold.
+
+2.5. Økonomi (economy)
+
+Økonomiske aktiviteter, betingelser og beskæftigelse.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 20 Energiressourcer, bilag III punkt 21 Mineralressourcer.
+
+2.6. Højde (elevation)
+
+Højde over eller under havoverfladen.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag II, punkt 1 Højde.
+
+2.7. Miljø (environment)
+
+Miljøressourcer, -beskyttelse og -bevaring.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag I, punkt 9 Beskyttede lokaliteter.
+
+2.8. Geovidenskabelig information (geoscientificInformation)
+
+Information vedrørende geovidenskaber.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 3 Jord, bilag II, punkt 4 Geologi, bilag III, punkt 12 Områder med naturlige risici.
+
+2.9. Sundhed (health)
+
+Sundhed, sundhedstjenester, humanøkologi og sikkerhed.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag III, punkt 5 Sikkerhed og sundhed.
+
+2.10. Billeder grundkort/Jorddække (imagery BaseMaps/EarthCover)
+
+Grundkort.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag II, punkt 3 Ortofoto, bilag II, punkt 2 Arealdække.
+
+2.11. Efterretninger/Militær (intelligenceMilitary)
+
+Militærbaser, strukturer, aktiviteter.
+
+Denne kategori gælder ikke specifikt for noget geodatatema i direktiv 2007/2/EF.
+
+2.12. Indlandsvandområder (inlandWaters)
+
+Træk ved indlandsvandområder, dræningssystemer og forhold i den forbindelse.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag I, punkt 8 Hydrografi.
+
+2.13. Placering (location)
+
+Positionsoplysninger og -tjenester.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag I, punkt 3 Stednavne, bilag I, punkt 5 Adresser.
+
+2.14. Oceaner (oceans)
+
+Forhold og karakteristika for saltvandsforekomster (eksklusive indlandsvandområder).
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 16 Havområder, bilag III, punkt 15 Oceanografiske/geografiske forhold.
+
+2.15. Planlægning/Matrikelregister (planning/Cadastre)
+
+Information til brug for hensigtsmæssige foranstaltninger med henblik på fremtidig arealanvendelse.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag I, punkt 6 Matrikulære parceller, bilag III, punkt 4 Arealanvendelse, bilag III, punkt 11 Forvaltede og regulerede områder samt områder med brugsbegrænsning og indberetningsenheder.
+
+2.16. Samfund (society)
+
+Karakteristiske træk ved samfund og kulturer.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 10 Befolkningsfordeling — demografi.
+
+2.17. Struktur (structure)
+
+Menneskeskabte konstruktioner.
+
+Denne kategori gælder for følgende geodatatemaer i direktiv 2007/2/EF: bilag III, punkt 2 Bygninger, bilag III, punkt 8 Produktions- og industrifaciliteter, bilag III, punkt 7 Miljøovervågningsfaciliteter.
+
+2.18. Transport (transportation)
+
+Måder og midler til at transportere personer og/eller varer.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag I, punkt 7 Transportnet.
+
+2.19. Offentlig forsyningsvirksomhed/Kommunikation (utilities/Communication)
+
+Energi, vand- og affaldssystemer samt kommunikationsinfrastruktur og -tjenester.
+
+Denne kategori gælder for følgende geodatatema i direktiv 2007/2/EF: bilag III, punkt 6 Offentlig forsyningsvirksomhed og offentlige tjenesteydelser.
+
+3. GEODATATJENESTETYPE
+
+3.1. Søgetjeneste (discovery)
+
+Søgetjenester, der gør det muligt at søge efter geodatasæt og -tjenester ud fra indholdet af de tilsvarende metadata og at fremvise indholdet af metadata.
+
+3.2. Visningstjeneste (view)
+
+Tjeneste, der som et minimum gør det muligt at vise, navigere, zoome ind og ud, panorere eller overlejre geodatasæt, der kan vises, og at vise signaturforklaringer og relevant metadataindhold.
+
+3.3. Downloadtjeneste (download)
+
+Tjenester, der gør det muligt at downloade kopier af geodatasæt eller dele af sådanne sæt og, hvor det er muligt, at opnå direkte adgang hertil.
+
+3.4. Transformationstjeneste (transformation)
+
+Tjeneste, der gør det muligt at transformere geodatasæt med henblik på at opnå interoperabilitet.
+
+3.5. Aktivering af geodatatjeneste (invoke)
+
+Tjeneste, der gør det muligt at definere både datainput og dataoutput, som forventes af geotjenesten og et workflow eller en tjenestekæde, der kombinerer mange tjenester. Den gør det også muligt at definere den eksterne webtjenestes interface for workflow eller tjenestekæde.
+
+3.6. Anden tjeneste (other)
+
+4. KLASSIFICERING AF GEODATATJENESTER
+
+Nøgleordene er baseret på de geografiske tjenesters taksonomi i EN ISO 19119. Denne taksonomi er organiseret i kategorier, idet underkategorierne definerer værdidomænet for klassificeringen af geodatatjenester.
+
+100 Geografiske humane interaktionstjenester (humanInteractionService)
+
+Denne kategori omfatter følgende underkategorier:
+
+101. Katalogvisning (humanCatalogueViewer)
+
+Kundetjeneste, der giver brugeren mulighed for at interagere med et katalog for at lokalisere, browse og forvalte metadata om geografiske data eller geografiske tjenester.
+
+102. Geografisk visning (humanGeographicViewer)
+
+Kundetjeneste, der giver brugeren mulighed for at se en eller flere objektsamlinger eller -dækninger.
+
+103. Geografisk regnearksvisning (humanGeographicSpreadsheetViewer)
+
+Kundetjeneste, der giver brugeren mulighed for at interagere med mange dataobjekter og anmode om beregninger i lighed med et aritmetisk regneark, men udvidet til geografiske data.
+
+104. Tjenesteeditor (humanServiceEditor)
+
+Kundetjeneste, der giver brugeren mulighed for at kontrollere geografiske behandlingstjenester.
+
+105. Kædedefinitionseditor (humanChainDefinitionEditor)
+
+Giver brugerinteraktion med en kædedefinitionstjeneste.
+
+106. Workflow enactment manager (humanWorkflowEnactmentManager)
+
+Giver brugerinteraktion med en workflow enactment-tjeneste.
+
+107. Geografisk objekteditor (humanGeographicFeatureEditor)
+
+Geografisk fremvisningsprogram, der giver brugeren mulighed for at interagere med objektdata.
+
+108. Geografisk symboleditor (humanGeographicSymbolEditor)
+
+Klienttjeneste, der giver et menneske mulighed for at udvælge og forvalte symbolbiblioteker.
+
+109. Objektgeneraliseringseditor (humanFeatureGeneralizationEditor)
+
+Kundetjeneste, der giver brugeren mulighed for at ændre et objekts eller en objektsamlings kartografiske karakteristika ved at forenkle visualiseringen heraf, samtidig med at de iøjnefaldende elementer bevares — den geografiske ækvivalent for forenkling.
+
+110. Geografisk datastrukturviser (humanGeographicDataStructureViewer)
+
+Kundetjeneste, der giver brugeren adgang til en del af datasættet for at se dets indre struktur.
+
+200 Geografisk model-/informationsstyringstjeneste (infoManagementService)
+
+Denne kategori omfatter følgende underkategorier:
+
+201. Objektadgangstjeneste (infoFeatureAccessService)
+
+Tjeneste, der giver kunden adgang til og mulighed for at styre et objektlager.
+
+202. Kortadgangstjeneste (infoMapAccessService)
+
+Tjeneste, der giver kunden adgang til geografisk grafik, dvs. billeder af geografiske data.
+
+203. Dækningsadgangstjeneste (infoCoverageAccessService)
+
+Tjeneste, der giver kunden adgang til og mulighed for at styre et dækningslager.
+
+204. Sensorbeskrivelsestjeneste (infoSensorDescriptionService)
+
+Tjeneste, der giver beskrivelsen af en dækningssensor, herunder sensorplacering og -retning samt sensorens geometriske, dynamiske og radiometriske karakteristika til brug ved geoprocessing.
+
+205. Produktadgangstjeneste (infoProductAccessService)
+
+Tjeneste, der giver adgang til og mulighed for at styre et geografisk produktlager.
+
+206. Objekttypetjeneste (infoFeatureTypeService)
+
+Tjeneste, der giver kunden adgang til og mulighed for at styre et lager af objekttypedefinitioner.
+
+207. Katalogtjeneste (infoCatalogueService)
+
+Tjeneste, der leverer søge- og styringstjenester på et lager af metadata om instanser.
+
+208. Registertjeneste (infoRegistryService)
+
+Tjeneste, der giver adgang til lager af metadata om typer.
+
+209. Leksikontjeneste (infoGazetteerService)
+
+Tjeneste, der giver adgang til et leksikon over instanser for en eller flere klasser af fænomener fra den virkelige verden med visse positionsinformationer.
+
+210. Ordrebehandlingstjeneste (infoOrderHandlingService)
+
+Tjeneste, der giver kunden mulighed for at bestille produkter fra en leverandør.
+
+211. Stående ordre-tjeneste (infoStandingOrderService)
+
+Ordrebehandlingstjeneste, der giver brugeren mulighed for at anmode om, at et produkt over et geografisk område bliver udsendt, når det foreligger.
+
+300 Geografisk workflow-/opgavestyringstjeneste (taskManagementService)
+
+Denne kategori omfatter følgende underkategorier:
+
+301. Kædedefinitionstjeneste (chainDefinitionService)
+
+Tjeneste, der definerer en kæde og sikrer, at den kan udføres af workflow enactment- tjenesten.
+
+302. Workflow enactment-tjeneste (workflowEnactmentService)
+
+Workflow enactment-tjenesten fortolker en kæde og kontrollerer instantieringen af tjenesterne og aktiviteternes rækkefølge.
+
+303. Abonnementstjeneste (subscriptionService)
+
+Tjeneste, der giver kunder mulighed for at blive registreret, så de får besked om begivenheder.
+
+400 Geografiske behandlingstjenester — geo- (spatialProcessingService)
+
+Denne kategori omfatter følgende underkategorier:
+
+401. Koordinatkonverteringstjeneste (spatialCoordinateConversionService)
+
+Tjeneste, der ændrer koordinater fra ét koordinatsystem til et andet koordinatsystem, som vedrører samme datum.
+
+402. Koordinattransformationstjeneste (spatialCoordinateTransformationService)
+
+Tjeneste, der ændrer koordinater fra ét koordinatreferencesystem baseret på et datum til et koordinatreferencesystem baseret på et andet datum.
+
+403. Dæknings-/vektorkonverteringstjeneste (spatialCoverageVectorConversionService)
+
+Tjeneste, der ændrer den geografiske repræsentation fra et dækningsskema til et vektorskema eller omvendt.
+
+404. Billedkoordinatkonverteringstjeneste (spatialImageCoordinateConversionService)
+
+En koordinattransformations- eller koordinatkonverteringstjeneste, der ændrer et billedes koordinatreferencesystem.
+
+405. Korrektionstjeneste (spatialRectificationService)
+
+Tjeneste, der transformerer et billede til en vinkelret parallelprojektion og derfor en konstant målestok.
+
+406. Ortokorrektionstjeneste (spatialOrthorectificationService)
+
+En korrektionstjeneste, der flytter billedhældning og -forskydning på grund af terrænhøjde.
+
+407. Justeringstjeneste til sensorgeometrimodeller (spatialSensorGeometryModelAdjustmentService)
+
+Tjeneste, der justerer sensorgeometrimodeller for at forbedre billedets match med andre billeder og/eller kendte jordpositioner.
+
+408. Konverteringstjeneste til billedgeometrimodeller (spatialImageGeometryModelConversionService)
+
+Tjeneste, der konverterer sensorgeometrimodeller til en anden, men ækvivalent, sensorgeometrimodel.
+
+409. Subsettingtjeneste (spatialSubsettingService)
+
+Tjeneste, der uddrager data fra et input i et kontinuert geografisk område enten ved geografisk placering eller ved koordinatnet.
+
+410. Samplingtjeneste (spatialSamplingService)
+
+Tjeneste, der uddrager data fra et input ved hjælp af et konsistent samplingskema enten ved geografisk placering eller ved koordinatnet.
+
+411. Tiling-ændringstjeneste (spatialTilingChangeService)
+
+Tjeneste, der ændrer tilingen af geografiske data.
+
+412. Dimensionsmålingstjeneste (spatialDimensionMeasurementService)
+
+Tjeneste, der beregner dimensioner på objekter, som er synlige på et billede eller andre geodata.
+
+413. Objektmanipulationstjenester (spatialFeatureManipulationService)
+
+Registrerer et objekt til et andet, et billede eller andre datasæt eller koordinatsæt, idet de korrigerer for relative translationsskift, rotationsforskelle, målestoksforskelle og perspektivforskelle. Kontrollerer, at alle objekter i objektsamlingen er topologisk konsistente ifølge de topologiske regler for objektsamlingen og identificerer og/eller korrigerer eventuelle uoverensstemmelser, der opdages.
+
+414. Objektmatchingtjeneste (spatialFeatureMatchingService)
+
+Tjeneste, der fastslår, hvilke objekter og objektdele der repræsenterer den samme enhed fra den virkelige verden fra mange datakilder, f.eks. kanttilpasning og begrænset konflation.
+
+415. Objektgeneraliseringstjeneste (spatialFeatureGeneralizationService)
+
+Tjeneste, der mindsker geografisk variation i en objektsamling for at øge kommunikationseffektiviteten ved at modvirke de uønskede effekter af datareduktion.
+
+416. Rutevalgstjeneste (spatialRouteDeterminationService)
+
+Tjeneste, der fastlægger den optimale sti mellem to bestemte punkter ud fra inputparametre og egenskaber i objektsamlingen.
+
+417. Lokaliseringstjeneste (spatialPositioningService)
+
+Tjeneste, der leveres af en lokaliseringsanordning til at bruge, opnå og utvetydigt fortolke lokaliseringsinformation samt fastslå, hvorvidt resultaterne opfylder brugskravene.
+
+418. Nærhedsanalysetjeneste (spatialProximityAnalysisService)
+
+Finder med udgangspunkt i en position eller et geografisk objekt alle objekter med et givet sæt attributter, der er placeret inden for en brugerspecificeret afstand af position eller objekt.
+
+500 Geografiske behandlingstjenester — tematisk (thematicProcessingService)
+
+Denne kategori omfatter følgende underkategorier:
+
+501. Geoparameterberegningstjeneste (thematicGoparameterCalculationService)
+
+Tjeneste, der afleder applikationsorienterede kvantitative resultater, som ikke foreligger ud fra selve rådataene.
+
+502. Tematisk klassifikationstjeneste (thematicClassificationService)
+
+Tjeneste, der klassificerer geografiske dataområder baseret på tematiske attributter.
+
+503. Objektgeneraliseringstjeneste (thematicFeatureGeneralizationService)
+
+Tjeneste, der generaliserer objekttyper i en objektsamling for at øge kommunikationseffektiviteten ved at modvirke de uønskede effekter af datareduktion.
+
+504. Subsettingtjeneste (thematicSubsettingService)
+
+Tjeneste, der uddrager data fra et input baseret på parameterværdier.
+
+505. Geografisk tælletjeneste (thematicSpatialCountingService)
+
+Tjeneste, der tæller geografiske objekter.
+
+506. Ændringsdetekteringstjeneste (thematicChangeDetectionService)
+
+Tjeneste, der finder forskelle mellem to datasæt, som repræsenterer det samme geografiske område på forskellige tidspunkter.
+
+507. Geografiske informationsudtagningstjenester (thematicGeographicInformationExtractionService)
+
+Tjenester, der understøtter udtagningen af objekt- og terræninformation fra fjernlæste og -skannede billeder.
+
+508. Billedbehandlingstjeneste (thematicImageProcessingService)
+
+Tjeneste, der ændrer værdierne af et billedes tematiske attributter ved hjælp af en matematisk funktion.
+
+509. Reduceret opløsningsgenerationstjeneste (thematicReducedResolutionGenerationService)
+
+Tjenester, der reducerer et billedes opløsning.
+
+510. Billedmanipulationstjenester (thematicImageManipulationService)
+
+Tjenester til at manipulere dataværdier i billeder: ændre farve- og kontrastværdier, påføre forskellige filtre, manipulere billedopløsning, fjerne støj, foretage "striping", systematisk-radiometriske korrektioner, atmosfærisk afdæmpning, ændringer i scenebelysning osv.
+
+511. Billedfortolkningstjenester (thematicImageUnderstandingService)
+
+Tjenester, der leverer automatisk billedændringsdetektering, registreret billeddifferensberegning, analyse og display af forskelsbetydning samt område- og modelbaseret differensberegning.
+
+512. Billedsyntesetjenester (thematicImageSynthesisService)
+
+Tjenester til at skabe eller transformere billeder ved hjælp af computerbaserede geografiske modeller, perspektivtransformationer og manipulationer af billedkarakteristika for at forbedre synligheden, skærpe opløsningen og/eller reducere virkningerne af skydække eller dis.
+
+513. Multibåndsbilledmanipulation (thematicMultibandImageManipulationService)
+
+Tjenester, der ændrer et billede ved hjælp af billedets multibånd.
+
+514. Objektdetekteringstjeneste (thematicChangeDetectionService)
+
+Tjeneste, der detekterer objekter fra den virkelige verden i et billede.
+
+515. Geoparsing-tjeneste (thematicGeoparsingService)
+
+Tjeneste, der skanner tekstdokumenter for referencer til beliggenhed såsom stednavne, adresser, postnumre osv. som forberedelse til overgang til en geokodningstjeneste.
+
+516. Geokodningstjeneste (thematicGeocodingService)
+
+Tjeneste, der supplerer placeringsbaserede tekstreferencer med geografiske koordinater (eller anden geografisk reference).
+
+600 Geografiske behandlingstjenester — temporale (temporalProcessingService)
+
+Denne kategori omfatter følgende underkategorier:
+
+601. Transformationstjeneste til tidsreferencesystemer (temporalReferenceSystemTransformationService)
+
+Tjeneste, der ændrer værdierne i tidsinstanser fra ét tidsreferencesystem til et andet tidsreferencesystem.
+
+602. Subsettingtjeneste (temporalSubsettingService)
+
+Tjeneste, der uddrager data fra et input i et kontinuerligt interval baseret på temporale positionsværdier.
+
+603. Samplingtjeneste (temporalSamplingService)
+
+Tjeneste, der uddrager data fra et input ved hjælp af et konsistent samplingskema baseret på temporale positionsværdier.
+
+604. Temporal nærhedsanalysetjeneste (temporalProximityAnalysisService)
+
+Finder med udgangspunkt i et tidsinterval eller en tidsbegivenhed alle objekter med et givet sæt attributter, der er placeret inden for et brugerspecificeret interval af intervallet eller begivenheden.
+
+700 Geografiske behandlingstjenester — metadata (metadataProcessingService)
+
+Denne kategori omfatter følgende underkategorier:
+
+701. Statistisk beregningstjeneste (metadataStatisticalCalculationService)
+
+Tjeneste, der beregner et datasæts statistik.
+
+702. Geografiske annotationstjenester (metadataGeographicAnnotationService)
+
+Tjenester, der tilføjer supplerende oplysninger til et billede eller objekt i en objektsamling.
+
+800 Geografiske kommunikationstjenester (comService)
+
+Denne kategori omfatter følgende underkategorier:
+
+801. Kodningstjeneste (comEncodingService)
+
+Tjeneste, der sikrer implementering af en kodningsregel og leverer et interface til kodnings- og afkodningsfunktionerne.
+
+802. Overførselstjeneste (comTransferService)
+
+Tjeneste, der sikrer implementering af en eller flere overførselsprotokoller, som giver mulighed for dataoverførsel mellem distribuerede informationssystemer over offline eller online kommunikationsmedier.
+
+803. Geografisk komprimeringstjeneste (comGeographicCompressionService)
+
+Tjeneste, der konverterer geografiske dele af en objektsamling til og fra komprimeret form.
+
+804. Geografisk formatkonverteringstjeneste (comGeographicFormatConversionService)
+
+Tjeneste, der konverterer fra ét geografisk dataformat til et andet.
+
+805. Meddelelsestjeneste (comMessagingService)
+
+Tjeneste, der giver mange brugere mulighed for samtidig at se, kommentere og anmode om redigering af objektsamlinger.
+
+806. Fjernfil og eksekverbar styring (comRemoteFileAndExecutableManagement)
+
+Tjeneste, der giver adgang til sekundær lagring af geografiske objekter, som om det var lokalt i forhold til kunden.
+
+5. OVERENSSTEMMELSESGRAD
+
+5.1. Overensstemmende (conformant)
+
+Ressourcen er helt i overensstemmelse med den anførte specifikation.
+
+5.2. Ikke overensstemmende (notConformant)
+
+Ressourcen er ikke i overensstemmelse med den anførte specifikation.
+
+5.3. Ikke vurderet (notEvaluated)
+
+Overensstemmelsen er ikke vurderet.
+
+6. DEN ANSVARLIGE PARTS ROLLE
+
+6.1. Ressourceleverandør (resourceProvider)
+
+Den part, der leverer ressourcen.
+
+6.2. Depositar (custodian)
+
+Den part, der accepterer ansvaret for dataene og sørger for at tage vare på og vedligeholde ressourcen.
+
+6.3. Ejer (owner)
+
+Den part, der ejer ressourcen.
+
+6.4. Bruger (user)
+
+Den part, der bruger ressourcen.
+
+6.5. Distributør (distributor)
+
+Den part, der distribuerer ressourcen.
+
+6.6. Ophavsmand (originator)
+
+Den part, der skabte ressourcen.
+
+6.7. Kontaktpunkt (pointOfContact)
+
+Den part, der kan kontaktes, hvis man ønsker viden om ressourcen eller ønsker at købe den.
+
+6.8. Primær undersøger (principalInvestigator)
+
+Den nøglepart, der er ansvarlig for at indsamle information og lede forskning.
+
+6.9. Behandler (processor)
+
+Den part, der har behandlet dataene på en sådan måde, at ressourcen er blevet ændret.
+
+6.10. Udgiver (publisher)
+
+Den part, der har udgivet ressourcen.
+
+6.11. Ophav (author)
+
+Den part, der er ophav til ressourcen.
+
+--------------------------------------------------

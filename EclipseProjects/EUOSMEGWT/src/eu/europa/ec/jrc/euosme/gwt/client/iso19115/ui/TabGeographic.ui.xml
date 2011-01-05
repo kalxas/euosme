@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:eu.europa.ec.jrc.euosme.gwt.client.iso19115"
+	xmlns:widgets="urn:import:eu.europa.ec.jrc.euosme.gwt.client.widgets"
+	xmlns:gm="urn:import:com.google.gwt.maps.client"
+	ui:generateFormat="com.google.gwt.i18n.rebind.format.PropertiesFormat"
+    ui:generateKeys="com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator"
+    ui:generateLocales="default">
+	<ui:style>
+    .aligncenter {
+    	text-align: center;
+    }	
+    </ui:style>
+	<g:DockLayoutPanel addStyleNames="geographic" ui:field="dock" unit="PCT">
+		<g:west size="100">
+			<g:VerticalPanel addStyleNames="geographic">
+				<g:Label addStyleNames="h2" ui:field="titleLabel"/>
+				<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
+				<g:VerticalPanel ui:field="queryPanel">
+					<g:Label ui:field="queryLabel"/>
+					<g:HorizontalPanel>
+						<g:TextBox ui:field="queryTextBox"/>
+						<g:Button ui:field="queryButton"/>
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+				<widgets:GeoBoundsMultiple ui:field="geoBoundsObj"/>
+				<g:HorizontalPanel ui:field="mapPanel"></g:HorizontalPanel>								
+			</g:VerticalPanel>
+		</g:west>
+	</g:DockLayoutPanel>
+</ui:UiBinder>
+ 
