@@ -1,8 +1,13 @@
 European Open Source Metadata Editor (EUOSME)
 This product is licenced under the EUPL © the European Union 2011
 
+Source code for this project can be downloaded from OSOR ( https://forge.osor.eu/projects/euosme/ )
+
+
 License Information regarding Bundled Third-Party Software
+
 The following software is distributed with EUOSME and is provided under other licenses and/or has source available from other locations.
+
 =====================================================================================================================================================================
 Package                                           Copyright                                   License                           Source Code Availability
 =====================================================================================================================================================================
