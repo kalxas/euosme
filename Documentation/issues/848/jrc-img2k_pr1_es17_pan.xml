@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geonet="http://www.fao.org/geonetwork" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd">
+<gmd:MD_Metadata xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<gmd:fileIdentifier>
-		<gco:CharacterString xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx">jrc-img2k_pr1_es17_pan</gco:CharacterString>
+		<gco:CharacterString>jrc-img2k_pr1_es17_pan</gco:CharacterString>
 	</gmd:fileIdentifier>
 	<gmd:language>
-		<gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#LanguageCode" codeListValue="eng"/>
+		<gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
 	</gmd:language>
 	<gmd:characterSet>
-		<gmd:MD_CharacterSetCode codeListValue="8859part1" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CharacterSetCode"/>
+		<gmd:MD_CharacterSetCode codeSpace="ISOTC211/19115" codeListValue="8859part1" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CharacterSetCode">8859part1</gmd:MD_CharacterSetCode>
 	</gmd:characterSet>
 	<gmd:parentIdentifier>
 		<gco:CharacterString>jrc-img2k_es17</gco:CharacterString>
 	</gmd:parentIdentifier>
 	<gmd:hierarchyLevel>
-		<gmd:MD_ScopeCode codeListValue="dataset" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode"/>
+		<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
 	</gmd:hierarchyLevel>
 	<gmd:contact>
 		<gmd:CI_ResponsibleParty>
@@ -25,9 +25,6 @@
 			</gmd:organisationName>
 			<gmd:contactInfo>
 				<gmd:CI_Contact>
-					<gmd:phone>
-						<gmd:CI_Telephone/>
-					</gmd:phone>
 					<gmd:address>
 						<gmd:CI_Address>
 							<gmd:electronicMailAddress>
@@ -45,7 +42,7 @@
 				</gmd:CI_Contact>
 			</gmd:contactInfo>
 			<gmd:role>
-				<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="pointOfContact"/>
+				<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
 			</gmd:role>
 		</gmd:CI_ResponsibleParty>
 	</gmd:contact>
@@ -53,10 +50,10 @@
 		<gco:DateTime xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx">2010-07-01T14:32:23</gco:DateTime>
 	</gmd:dateStamp>
 	<gmd:metadataStandardName>
-		<gco:CharacterString xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx">ISO 19115:2003/19139</gco:CharacterString>
+		<gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
 	</gmd:metadataStandardName>
 	<gmd:metadataStandardVersion>
-		<gco:CharacterString xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx">1.0</gco:CharacterString>
+		<gco:CharacterString>1.0</gco:CharacterString>
 	</gmd:metadataStandardVersion>
 	<gmd:spatialRepresentationInfo>
 		<gmd:MD_Georectified>
@@ -66,7 +63,7 @@
 			<gmd:axisDimensionProperties>
 				<gmd:MD_Dimension>
 					<gmd:dimensionName>
-						<gmd:MD_DimensionNameTypeCode codeListValue="column" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_DimensionNameTypeCode"/>
+						<gmd:MD_DimensionNameTypeCode codeListValue="column" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_DimensionNameTypeCode">column</gmd:MD_DimensionNameTypeCode>
 					</gmd:dimensionName>
 					<gmd:dimensionSize>
 						<gco:Integer>18860</gco:Integer>
@@ -76,7 +73,7 @@
 			<gmd:axisDimensionProperties>
 				<gmd:MD_Dimension>
 					<gmd:dimensionName>
-						<gmd:MD_DimensionNameTypeCode codeListValue="row" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_DimensionNameTypeCode"/>
+						<gmd:MD_DimensionNameTypeCode codeListValue="row" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_DimensionNameTypeCode">row</gmd:MD_DimensionNameTypeCode>
 					</gmd:dimensionName>
 					<gmd:dimensionSize>
 						<gco:Integer>17000</gco:Integer>
@@ -84,7 +81,7 @@
 				</gmd:MD_Dimension>
 			</gmd:axisDimensionProperties>
 			<gmd:cellGeometry>
-				<gmd:MD_CellGeometryCode codeListValue="area" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CellGeometryCode"/>
+				<gmd:MD_CellGeometryCode codeListValue="area" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CellGeometryCode">area</gmd:MD_CellGeometryCode>
 			</gmd:cellGeometry>
 			<gmd:transformationParameterAvailability>
 				<gco:Boolean>true</gco:Boolean>
@@ -122,7 +119,7 @@
 			<gmd:referenceSystemIdentifier>
 				<gmd:RS_Identifier>
 					<gmd:code>
-						<gco:CharacterString>PROJCS["ED_1950_UTM_Zone_30N",GEOGCS["GCS_European_1950",DATUM["D_European_1950",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",-3.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]</gco:CharacterString>
+						<gco:CharacterString>PROJCS[&quot;ED_1950_UTM_Zone_30N&quot;,GEOGCS[&quot;GCS_European_1950&quot;,DATUM[&quot;D_European_1950&quot;,SPHEROID[&quot;International_1924&quot;,6378388.0,297.0]],PRIMEM[&quot;Greenwich&quot;,0.0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;False_Easting&quot;,500000.0],PARAMETER[&quot;False_Northing&quot;,0.0],PARAMETER[&quot;Central_Meridian&quot;,-3.0],PARAMETER[&quot;Scale_Factor&quot;,0.9996],PARAMETER[&quot;Latitude_Of_Origin&quot;,0.0],UNIT[&quot;Meter&quot;,1.0]]</gco:CharacterString>
 					</gmd:code>
 				</gmd:RS_Identifier>
 			</gmd:referenceSystemIdentifier>
@@ -141,12 +138,18 @@
 								<gco:Date>2000-07-30</gco:Date>
 							</gmd:date>
 							<gmd:dateType>
-								<gmd:CI_DateTypeCode codeListValue="creation" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+								<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
 							</gmd:dateType>
 						</gmd:CI_Date>
 					</gmd:date>
 					<gmd:identifier>
 						<gmd:RS_Identifier>
+							<gmd:code>
+								<gco:CharacterString>jrc-img2k_footprints:IDSTD_TXT:200_030</gco:CharacterString>
+							</gmd:code>
+							<gmd:codeSpace>
+								<gco:CharacterString>http://image2000.jrc.ec.europa.eu</gco:CharacterString>
+							</gmd:codeSpace>
 							<gmd:authority>
 								<gmd:CI_Citation>
 									<gmd:title>
@@ -158,18 +161,12 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
 								</gmd:CI_Citation>
 							</gmd:authority>
-							<gmd:code>
-								<gco:CharacterString>jrc-img2k_footprints:IDSTD_TXT:200_030</gco:CharacterString>
-							</gmd:code>
-							<gmd:codeSpace>
-								<gco:CharacterString>http://image2000.jrc.ec.europa.eu</gco:CharacterString>
-							</gmd:codeSpace>
 						</gmd:RS_Identifier>
 					</gmd:identifier>
 					<gmd:citedResponsibleParty>
@@ -224,7 +221,7 @@
 								</gmd:CI_Contact>
 							</gmd:contactInfo>
 							<gmd:role>
-								<gmd:CI_RoleCode codeListValue="originator" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"/>
+								<gmd:CI_RoleCode codeListValue="originator" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode">originator</gmd:CI_RoleCode>
 							</gmd:role>
 						</gmd:CI_ResponsibleParty>
 					</gmd:citedResponsibleParty>
@@ -280,7 +277,7 @@
 								</gmd:CI_Contact>
 							</gmd:contactInfo>
 							<gmd:role>
-								<gmd:CI_RoleCode codeListValue="publisher" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"/>
+								<gmd:CI_RoleCode codeListValue="publisher" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode">publisher</gmd:CI_RoleCode>
 							</gmd:role>
 						</gmd:CI_ResponsibleParty>
 					</gmd:citedResponsibleParty>
@@ -290,13 +287,13 @@
 				</gmd:CI_Citation>
 			</gmd:citation>
 			<gmd:abstract>
-				<gco:CharacterString>IMAGE2000 product 1 individual orthorectified scenes. IMAGE2000 was  produced from ETM+ Landsat 7 satellite data and provides a consistent 	  European coverage of individual orthorectified scenes in national map projection systems. 	  The year 2000 was targeted as reference year, but a deviation of maximum 1-year was allowed to obtain a full coverage of Europe, 	  which involves approximately 450 Landsat TM Frames. Where Landsat 7 data were not available, Landsat 5 data have been used instead. 	  The spatial resolution is 25 metres for multispectral and 12.5 metres 	  for panchromatic imagery.</gco:CharacterString>
+				<gco:CharacterString>IMAGE2000 product 1 individual orthorectified scenes. IMAGE2000 was  produced from ETM+ Landsat 7 satellite data and provides a consistent   European coverage of individual orthorectified scenes in national map projection systems.   The year 2000 was targeted as reference year, but a deviation of maximum 1-year was allowed to obtain a full coverage of Europe,   which involves approximately 450 Landsat TM Frames. Where Landsat 7 data were not available, Landsat 5 data have been used instead.   The spatial resolution is 25 metres for multispectral and 12.5 metres   for panchromatic imagery.</gco:CharacterString>
 			</gmd:abstract>
 			<gmd:purpose>
-				<gco:CharacterString>Image2000 products are intended to be the main source of data for updating the European Land Cover database (CORINE Land Cover), 	  but are also reference data in themselves. Primarily derived from Landsat 7 Enhanced Thematic Mapper ETM+ imagery, they are georeferenced and 	  orthorectified, resulting in a consistent, high quality product.</gco:CharacterString>
+				<gco:CharacterString>Image2000 products are intended to be the main source of data for updating the European Land Cover database (CORINE Land Cover),   but are also reference data in themselves. Primarily derived from Landsat 7 Enhanced Thematic Mapper ETM+ imagery, they are georeferenced and   orthorectified, resulting in a consistent, high quality product.</gco:CharacterString>
 			</gmd:purpose>
 			<gmd:status>
-				<gmd:MD_ProgressCode codeListValue="completed" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ProgressCode"/>
+				<gmd:MD_ProgressCode codeListValue="completed" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ProgressCode">completed</gmd:MD_ProgressCode>
 			</gmd:status>
 			<gmd:pointOfContact>
 				<gmd:CI_ResponsibleParty>
@@ -340,14 +337,14 @@
 						</gmd:CI_Contact>
 					</gmd:contactInfo>
 					<gmd:role>
-						<gmd:CI_RoleCode codeListValue="pointOfContact" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"/>
+						<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
 					</gmd:role>
 				</gmd:CI_ResponsibleParty>
 			</gmd:pointOfContact>
 			<gmd:resourceMaintenance>
 				<gmd:MD_MaintenanceInformation>
 					<gmd:maintenanceAndUpdateFrequency>
-						<gmd:MD_MaintenanceFrequencyCode codeListValue="notPlanned" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_MaintenanceFrequencyCode"/>
+						<gmd:MD_MaintenanceFrequencyCode codeListValue="notPlanned" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_MaintenanceFrequencyCode">notPlanned</gmd:MD_MaintenanceFrequencyCode>
 					</gmd:maintenanceAndUpdateFrequency>
 				</gmd:MD_MaintenanceInformation>
 			</gmd:resourceMaintenance>
@@ -356,9 +353,6 @@
 					<gmd:keyword>
 						<gco:CharacterString>ES</gco:CharacterString>
 					</gmd:keyword>
-					<gmd:type>
-						<gmd:MD_KeywordTypeCode codeListValue="place" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"/>
-					</gmd:type>
 					<gmd:thesaurusName>
 						<gmd:CI_Citation>
 							<gmd:title>
@@ -370,7 +364,7 @@
 										<gco:Date>2000-01-01</gco:Date>
 									</gmd:date>
 									<gmd:dateType>
-										<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+										<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
 									</gmd:dateType>
 								</gmd:CI_Date>
 							</gmd:date>
@@ -394,7 +388,7 @@
 										<gco:Date>2008-06-01</gco:Date>
 									</gmd:date>
 									<gmd:dateType>
-										<gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="publication"/>
+										<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
 									</gmd:dateType>
 								</gmd:CI_Date>
 							</gmd:date>
@@ -405,14 +399,14 @@
 			<gmd:resourceConstraints>
 				<gmd:MD_Constraints>
 					<gmd:useLimitation>
-						<gco:CharacterString>The product can only be used for non-commercial purposes and not further disseminated to third parties. Download of datasets is subject to registration and agreement to terms and conditions. 					For registration goto  http://image2000.jrc.ec.europa.eu/index.cfm/page/registration</gco:CharacterString>
+						<gco:CharacterString>The product can only be used for non-commercial purposes and not further disseminated to third parties. Download of datasets is subject to registration and agreement to terms and conditions. For registration goto  http://image2000.jrc.ec.europa.eu/index.cfm/page/registration</gco:CharacterString>
 					</gmd:useLimitation>
 				</gmd:MD_Constraints>
 			</gmd:resourceConstraints>
 			<gmd:resourceConstraints>
 				<gmd:MD_LegalConstraints>
 					<gmd:accessConstraints>
-						<gmd:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+						<gmd:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode>
 					</gmd:accessConstraints>
 					<gmd:otherConstraints>
 						<gco:CharacterString>(e) intellectual property rights;</gco:CharacterString>
@@ -420,7 +414,7 @@
 				</gmd:MD_LegalConstraints>
 			</gmd:resourceConstraints>
 			<gmd:spatialRepresentationType>
-				<gmd:MD_SpatialRepresentationTypeCode codeListValue="grid" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode"/>
+				<gmd:MD_SpatialRepresentationTypeCode codeListValue="grid" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode">grid</gmd:MD_SpatialRepresentationTypeCode>
 			</gmd:spatialRepresentationType>
 			<gmd:spatialResolution>
 				<gmd:MD_Resolution>
@@ -430,16 +424,13 @@
 				</gmd:MD_Resolution>
 			</gmd:spatialResolution>
 			<gmd:language>
-				<gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#LanguageCode" codeListValue="eng"/>
+				<gmd:LanguageCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
 			</gmd:language>
 			<gmd:topicCategory>
 				<gmd:MD_TopicCategoryCode>imageryBaseMapsEarthCover</gmd:MD_TopicCategoryCode>
 			</gmd:topicCategory>
 			<gmd:extent>
 				<gmd:EX_Extent>
-					<gmd:description>
-						<gco:CharacterString>ULX: -2.3978376; ULY: 44.152744; URX: 0.13832182; URY: 43.78384; LLX: -2.7948592; LLY: 42.569168; LRX: -0.32016218; LRY: 42.210564</gco:CharacterString>
-					</gmd:description>
 					<gmd:geographicElement>
 						<gmd:EX_GeographicBoundingBox>
 							<gmd:westBoundLongitude>
@@ -456,10 +447,13 @@
 							</gmd:northBoundLatitude>
 						</gmd:EX_GeographicBoundingBox>
 					</gmd:geographicElement>
+					<gmd:description>
+						<gco:CharacterString>ULX: -2.3978376; ULY: 44.152744; URX: 0.13832182; URY: 43.78384; LLX: -2.7948592; LLY: 42.569168; LRX: -0.32016218; LRY: 42.210564</gco:CharacterString>
+					</gmd:description>
 				</gmd:EX_Extent>
 			</gmd:extent>
 			<gmd:supplementalInformation>
-				<gco:CharacterString>Image2000 products currently cover the entire European Union plus Bulgaria, Romania, Liechtenstein, Croatia. 	  Image2000 data are multi-user and multi-purpose, covering a wide range of potential applications. The resolution and radiometry of satellite data is 	  compatible with satellite data used for former Corine Land Cover (CLC90). No atmospheric calibration is applied, 	  only standard radiometric corrections such as destriping, dropline correction and bit errors.</gco:CharacterString>
+				<gco:CharacterString>Image2000 products currently cover the entire European Union plus Bulgaria, Romania, Liechtenstein, Croatia.   Image2000 data are multi-user and multi-purpose, covering a wide range of potential applications. The resolution and radiometry of satellite data is   compatible with satellite data used for former Corine Land Cover (CLC90). No atmospheric calibration is applied,   only standard radiometric corrections such as destriping, dropline correction and bit errors.</gco:CharacterString>
 			</gmd:supplementalInformation>
 		</gmd:MD_DataIdentification>
 	</gmd:identificationInfo>
@@ -469,7 +463,7 @@
 				<gco:RecordType>attributeDescription</gco:RecordType>
 			</gmd:attributeDescription>
 			<gmd:contentType>
-				<gmd:MD_CoverageContentTypeCode codeListValue="image" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CoverageContentTypeCode"/>
+				<gmd:MD_CoverageContentTypeCode codeListValue="image" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CoverageContentTypeCode">image</gmd:MD_CoverageContentTypeCode>
 			</gmd:contentType>
 		</gmd:MD_ImageDescription>
 	</gmd:contentInfo>
@@ -477,12 +471,8 @@
 		<gmd:MD_Distribution>
 			<gmd:distributionFormat>
 				<gmd:MD_Format>
-					<gmd:name>
-						<gco:CharacterString>BIL</gco:CharacterString>
-					</gmd:name>
-					<gmd:version>
-						<gco:CharacterString>ArcSDE 8.3</gco:CharacterString>
-					</gmd:version>
+					<gmd:name gco:nilReason="inapplicable"/>
+					<gmd:version gco:nilReason="inapplicable"/>
 					<gmd:specification>
 						<gco:CharacterString>Band Sequential</gco:CharacterString>
 					</gmd:specification>
@@ -539,7 +529,7 @@
 								</gmd:CI_Contact>
 							</gmd:contactInfo>
 							<gmd:role>
-								<gmd:CI_RoleCode codeListValue="distributor" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode"/>
+								<gmd:CI_RoleCode codeListValue="distributor" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode">distributor</gmd:CI_RoleCode>
 							</gmd:role>
 						</gmd:CI_ResponsibleParty>
 					</gmd:distributorContact>
@@ -563,13 +553,10 @@
 								<gmd:URL>http://image2000.jrc.ec.europa.eu</gmd:URL>
 							</gmd:linkage>
 							<gmd:description>
-								<gco:CharacterString>Current ordering process is to contact the Distributor. The image2000 dedicated web site, provides facilities for 			  registration and specific download requests can be put here following approval by the Image2000 Team.</gco:CharacterString>
+								<gco:CharacterString>Current ordering process is to contact the Distributor. The image2000 dedicated web site, provides facilities for   registration and specific download requests can be put here following approval by the Image2000 Team.</gco:CharacterString>
 							</gmd:description>
 						</gmd:CI_OnlineResource>
 					</gmd:onLine>
-					<gmd:offLine>
-						<gmd:MD_Medium/>
-					</gmd:offLine>
 				</gmd:MD_DigitalTransferOptions>
 			</gmd:transferOptions>
 		</gmd:MD_Distribution>
@@ -579,14 +566,51 @@
 			<gmd:scope>
 				<gmd:DQ_Scope>
 					<gmd:level>
-						<gmd:MD_ScopeCode codeListValue="series" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode"/>
+						<gmd:MD_ScopeCode codeListValue="series" codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode">series</gmd:MD_ScopeCode>
 					</gmd:level>
 				</gmd:DQ_Scope>
 			</gmd:scope>
 			<gmd:report>
+				<gmd:DQ_DomainConsistency xsi:type="gmd:DQ_DomainConsistency_Type">
+					<gmd:measureIdentification>
+						<gmd:RS_Identifier>
+							<gmd:code>
+								<gco:CharacterString>Conformity_001</gco:CharacterString>
+							</gmd:code>
+							<gmd:codeSpace>
+								<gco:CharacterString>INSPIRE</gco:CharacterString>
+							</gmd:codeSpace>
+						</gmd:RS_Identifier>
+					</gmd:measureIdentification>
+					<gmd:result>
+						<gmd:DQ_ConformanceResult xsi:type="gmd:DQ_ConformanceResult_Type">
+							<gmd:specification>
+								<gmd:CI_Citation>
+									<gmd:title>
+										<gco:CharacterString>Test Specification</gco:CharacterString>
+									</gmd:title>
+									<gmd:date>
+										<gmd:CI_Date>
+											<gmd:date>
+												<gco:Date>2011-01-05</gco:Date>
+											</gmd:date>
+											<gmd:dateType>
+												<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+											</gmd:dateType>
+										</gmd:CI_Date>
+									</gmd:date>
+								</gmd:CI_Citation>
+							</gmd:specification>
+							<gmd:explanation>
+								<gco:CharacterString>See the referenced specification</gco:CharacterString>
+							</gmd:explanation>
+							<gmd:pass/>
+						</gmd:DQ_ConformanceResult>
+					</gmd:result>
+				</gmd:DQ_DomainConsistency>
 				<gmd:DQ_TemporalConsistency>
 					<gmd:measureDescription>
-						<gco:CharacterString>To assure temporal consistency, satellite data was required for the reference year 2000, allowing a 		  deviation of maximum 1-year (1999/2001). For land cover purposes, identification data was selected within an 		  optimal acquisition period for each country.</gco:CharacterString>
+						<gco:CharacterString>To assure temporal consistency, satellite data was required for the reference year 2000, allowing a   deviation of maximum 1-year (1999/2001). For land cover purposes, identification data was selected within an   optimal acquisition period for each country.</gco:CharacterString>
 					</gmd:measureDescription>
 					<gmd:result>
 						<gmd:DQ_ConformanceResult>
@@ -601,7 +625,7 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
@@ -635,7 +659,7 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
@@ -654,7 +678,7 @@
 			<gmd:report>
 				<gmd:DQ_GriddedDataPositionalAccuracy>
 					<gmd:measureDescription>
-						<gco:CharacterString>Geometry consistency: As a multi-purpose product, Image2000 meets user requirements at National and European level. 		  The images are delivered orthorectified in National projection systems, and one European projection system.</gco:CharacterString>
+						<gco:CharacterString>Geometry consistency: As a multi-purpose product, Image2000 meets user requirements at National and European level.   The images are delivered orthorectified in National projection systems, and one European projection system.</gco:CharacterString>
 					</gmd:measureDescription>
 					<gmd:result>
 						<gmd:DQ_ConformanceResult>
@@ -669,7 +693,7 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
@@ -688,7 +712,7 @@
 			<gmd:report>
 				<gmd:DQ_ConceptualConsistency>
 					<gmd:measureDescription>
-						<gco:CharacterString>Image purchase, orthorectification and quality control were centralised. This centralised approach had 		  advantages in overall management and assures consistency in quality of the end product.</gco:CharacterString>
+						<gco:CharacterString>Image purchase, orthorectification and quality control were centralised. This centralised approach had   advantages in overall management and assures consistency in quality of the end product.</gco:CharacterString>
 					</gmd:measureDescription>
 					<gmd:result>
 						<gmd:DQ_ConformanceResult>
@@ -703,7 +727,7 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
@@ -722,7 +746,7 @@
 			<gmd:lineage>
 				<gmd:LI_Lineage>
 					<gmd:statement>
-						<gco:CharacterString>Product 1 scenes correspond to the path/row of the Landsat orbit. All Image2000 product 1 scenes are ortho-corrected.  The ortho-correction method consisted of using a physical model of the satellite's flight during the scene acquisition, which was then complemented with Ground Control Points (GCP's) and a Digital Elevation Model (DEM). Map projection information is attached to the model.  The resulting product has excellent accuracy between the spectral bands, sub-pixel location accuracy throughout the image and excellent  preservation of radiometric characteristics. The geometric correction was done on a Country basis - according to the relevant national map projection system(s). A rigorous orbital model was used. Control point measurements were used in a weighted least squares adjustment to estimate optimal values for the orbital and attitude parameters. The adjusted parameters were used to resample the raw scene by cubic convolution in a single step, instead of the usual two step procedure of first producing a system-corrected scene and then resampling a second time, thus causing unnecessary smoothing of the data. The final pixel size after resampling is 12.5m for the panchromatic band, 25m for the multispectral bands and 60m for the thermal band. All the orthorectified scenes are well within the requirement of Root Mean Square Error (RMSE) &lt; 25m. Quality Control - Internal and External quality checking. Within the Image2000 project, quality control was performed in three steps at National and European level: a) Internal quality control, performed by the contractor in charge of ortho-rectification. b) External quality control, of one Test Image per country - performed by the JRC. c) Overall accuracy assessment of the European coverage - performed by the JRC.National level - Validation of test images: Before launching the operational ortho-rectification of a country, one test image per country was selected and validated. This in order to avoid error propagation related to errors in the definition of the projection system, or in transformation parameters used for the geometric correction of the images. European Level Overall accuracy assessment: At the completion of the image coverage, based on a sample, about 10% of all Image 2000 products were subject to external geometric quality assessment, in order to establish an overall accuracy and to ensure that the product quality corresponds to project specifications. Geometric quality requirements of Image2000: The geometric quality of Image2000 products is a RMSE less than 25 metres (x and y).  Current available results of Test Images:a) Reports of quality assessment per country/test image can be found at: http://image2000.jrc.ec.europa.eu/index.cfm/page/qc_reports . Visualisation of ground control points used during Quality Checking can be found at: http://image2000.jrc.ec.europa.eu/index.cfm/page/qc_points. Image Selection - criteria for selection: JRC developed the appropriate criteria and procedures for image selection, and data were selected in close cooperation with National Administrations. Catalogues were made available to assist in these selections, which had the following priorities: a) images should be cloud free ( i.e. 0 % or, in difficult regions &lt;5 % cloud coverage)  b) images should be acquired within the year 2000  c) images should be within a specified date range (restricted window, then extended). First priority:For the reference year 2000, cloud free images acquired within the restricted time window should be selected as a first priority. Second priority:When no cloud free images were available for this year/window, the selection searched successively: a) in extended acquisition window for year 2000; b) in restricted acquisition window for year 1999; c) in extended acquisition window for year 1999. Third priority:When no cloud free images were available on the campaigns 1999 and 2000, the search continued in 2001, in restricted, then in extended acquisition windows.</gco:CharacterString>
+						<gco:CharacterString>Product 1 scenes correspond to the path/row of the Landsat orbit. All Image2000 product 1 scenes are ortho-corrected.  The ortho-correction method consisted of using a physical model of the satellite&apos;s flight during the scene acquisition, which was then complemented with Ground Control Points (GCP&apos;s) and a Digital Elevation Model (DEM). Map projection information is attached to the model.  The resulting product has excellent accuracy between the spectral bands, sub-pixel location accuracy throughout the image and excellent  preservation of radiometric characteristics. The geometric correction was done on a Country basis - according to the relevant national map projection system(s). A rigorous orbital model was used. Control point measurements were used in a weighted least squares adjustment to estimate optimal values for the orbital and attitude parameters. The adjusted parameters were used to resample the raw scene by cubic convolution in a single step, instead of the usual two step procedure of first producing a system-corrected scene and then resampling a second time, thus causing unnecessary smoothing of the data. The final pixel size after resampling is 12.5m for the panchromatic band, 25m for the multispectral bands and 60m for the thermal band. All the orthorectified scenes are well within the requirement of Root Mean Square Error (RMSE) &lt; 25m. Quality Control - Internal and External quality checking. Within the Image2000 project, quality control was performed in three steps at National and European level: a) Internal quality control, performed by the contractor in charge of ortho-rectification. b) External quality control, of one Test Image per country - performed by the JRC. c) Overall accuracy assessment of the European coverage - performed by the JRC.National level - Validation of test images: Before launching the operational ortho-rectification of a country, one test image per country was selected and validated. This in order to avoid error propagation related to errors in the definition of the projection system, or in transformation parameters used for the geometric correction of the images. European Level Overall accuracy assessment: At the completion of the image coverage, based on a sample, about 10% of all Image 2000 products were subject to external geometric quality assessment, in order to establish an overall accuracy and to ensure that the product quality corresponds to project specifications. Geometric quality requirements of Image2000: The geometric quality of Image2000 products is a RMSE less than 25 metres (x and y).  Current available results of Test Images:a) Reports of quality assessment per country/test image can be found at: http://image2000.jrc.ec.europa.eu/index.cfm/page/qc_reports . Visualisation of ground control points used during Quality Checking can be found at: http://image2000.jrc.ec.europa.eu/index.cfm/page/qc_points. Image Selection - criteria for selection: JRC developed the appropriate criteria and procedures for image selection, and data were selected in close cooperation with National Administrations. Catalogues were made available to assist in these selections, which had the following priorities: a) images should be cloud free ( i.e. 0 % or, in difficult regions &lt;5 % cloud coverage)  b) images should be acquired within the year 2000  c) images should be within a specified date range (restricted window, then extended). First priority:For the reference year 2000, cloud free images acquired within the restricted time window should be selected as a first priority. Second priority:When no cloud free images were available for this year/window, the selection searched successively: a) in extended acquisition window for year 2000; b) in restricted acquisition window for year 1999; c) in extended acquisition window for year 1999. Third priority:When no cloud free images were available on the campaigns 1999 and 2000, the search continued in 2001, in restricted, then in extended acquisition windows.</gco:CharacterString>
 					</gmd:statement>
 					<gmd:source>
 						<gmd:LI_Source>
@@ -737,7 +761,7 @@
 												<gco:Date>2000-01-01</gco:Date>
 											</gmd:date>
 											<gmd:dateType>
-												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"/>
+												<gmd:CI_DateTypeCode codeListValue="publication" codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode">publication</gmd:CI_DateTypeCode>
 											</gmd:dateType>
 										</gmd:CI_Date>
 									</gmd:date>
