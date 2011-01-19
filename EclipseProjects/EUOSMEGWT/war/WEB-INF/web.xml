@@ -8,59 +8,76 @@
       <init-param>
       	<param-name>metadataType</param-name>
       	<param-value>DATASET</param-value>
+      	<description>see eu.europa.ec.jrc.euosme.gwt.client.DataTypes</description>
       </init-param>
       <init-param>
       	<param-name>appMode</param-name>
       	<param-value>GEOPORTAL</param-value>
+      	<description>see eu.europa.ec.jrc.euosme.gwt.client.AppModes</description>
       </init-param>
       <init-param>
       	<param-name>rpcCodeList</param-name>
       	<param-value>false</param-value>
+      	<description>true to get the code list from online service, false to use local resources</description>
       </init-param>
       <init-param>
       	<param-name>apiMapstraction</param-name>
       	<param-value>openlayers</param-value>
+      	<description>type of map used</description>
       </init-param>
       <init-param>
       	<param-name>showAll</param-name>
       	<param-value>true</param-value>
-      </init-param>         
+      </init-param>   
+      <init-param>
+      	<param-name>rpcRepository</param-name>
+      	<param-value>true</param-value>
+      	<description>true to get the list of keywords from online service, false to use local resources</description>
+      </init-param>      
   </servlet>
   <servlet>
       <servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
       <servlet-class>eu.europa.ec.jrc.euosme.gwt.server.RESTfulWebServiceProxyImpl</servlet-class>
       <init-param>
-      	<param-name>username</param-name>
-      	<param-value></param-value>
-      </init-param>
-      <init-param>
-      	<param-name>password</param-name>
-      	<param-value></param-value>
+      	<param-name>limit</param-name>
+      	<param-value>200</param-value>
+      	<description>limit of keywords</description>
       </init-param>
       <init-param>
       	<param-name>codelists</param-name>
       	<param-value>http://www.inspire-geoportal.eu/INSPIRECodeLists/resources/codelists/</param-value>
+      	<description>URL for codelist service</description>
       </init-param>      
-      <init-param>
-      	<param-name>repositories</param-name>
-      	<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/eurogeoss-v3/query</param-value>      	
-      </init-param>
       <init-param>
       	<param-name>dataThemes</param-name>
       	<param-value>http://inspire-twg.jrc.ec.europa.eu/Control_Panel/Products/GimmeThesaurus/gemet/</param-value>
+      	<description>URL to get list of INSPIRE data themes</description>
       </init-param> 
       <init-param>
-      <param-name>inspireValidationService</param-name>
-      <param-value>http://www.inspire-geoportal.eu/INSPIREValidatorService/resources/validation/inspire</param-value>
+      	<param-name>inspireValidationService</param-name>
+      	<param-value>http://www.inspire-geoportal.eu/INSPIREValidatorService/resources/validation/inspire</param-value>
+      	<description>URL used to validate the file against the INSPIRE validation rules</description>
       </init-param>
       <init-param>
-      <param-name>inspireWebService</param-name>
-      <param-value>http://www.inspire-geoportal.eu/INSPIREWebServices/</param-value>
+      	<param-name>inspireWebService</param-name>
+      	<param-value>http://www.inspire-geoportal.eu/INSPIREWebServices/</param-value>
+      	<description>URL for INSPIRE web services</description>
       </init-param>
       <init-param>
-      	<param-name>limit</param-name>
-      	<param-value>200</param-value>
-      </init-param>  
+      	<param-name>repositories</param-name>
+      	<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/eurogeoss-v3/query</param-value>
+      	<description>URL to access the semantic repository and get the list of available keywords</description>      	
+      </init-param>      
+      <init-param>
+      	<param-name>username</param-name>
+      	<param-value>genesis</param-value>
+      	<description>username to access the semantic repository</description>
+      </init-param>
+      <init-param>
+      	<param-name>password</param-name>
+      	<param-value>sofarsogoodsowhat</param-value>
+      	<description>password to access the semantic repository</description>
+      </init-param>     
   </servlet>
   <servlet>
       <servlet-name>LoadServlet</servlet-name>

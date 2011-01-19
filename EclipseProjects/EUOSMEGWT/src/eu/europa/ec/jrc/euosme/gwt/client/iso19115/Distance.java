@@ -31,7 +31,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create Distance model
  * Ground sample distance
  * 
- * @version 2.1 - November 2010
+ * @version 2.1.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class Distance extends CI {
@@ -43,10 +43,10 @@ public class Distance extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** distance control declaration */
-	CharacterString distanceObj = new CharacterString(constants.distance(), "spatialResolution", false, CheckFunctions.integer);
+	CharacterString distanceObj = new CharacterString(constants.distance(), "spatialresolution", false, CheckFunctions.integer, true);
 	
 	/** UM control declaration */
-	CharacterString umObj = new CharacterString(constants.UM(), "", false, CheckFunctions.normal);
+	CharacterString umObj = new CharacterString(constants.UM(), "spatialresolution", false, CheckFunctions.normal, true);
 	
 	/** 
      * constructor Distance model

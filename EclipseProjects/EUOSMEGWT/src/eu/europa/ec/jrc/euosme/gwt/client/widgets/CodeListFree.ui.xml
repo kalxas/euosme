@@ -10,8 +10,8 @@
  				<g:HorizontalPanel ui:field="myHP"/>
 	   			<g:Button addStyleNames="infoButton" ui:field="infoButton"/>
 	   		</g:HorizontalPanel>
-	   		<g:Label ui:field="labelList"/>
- 			<g:Label styleName="error" ui:field="myError"/>
+	   		<g:Label ui:field="helpLabel"/>
+	   		<g:Label styleName="error" ui:field="myError"/>
  		</g:VerticalPanel>
  	</g:DisclosurePanel>	
 </ui:UiBinder> 

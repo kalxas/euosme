@@ -42,7 +42,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringMultiple;
  * This class includes other classes so the user could choose the keyword from INSPIRE data theme, GEMET or 
  * alternatively, type a free keyword
  * 
- * @version 1.0 - November 2010
+ * @version 2.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Keywords_INSPIRE extends CI {
@@ -54,7 +54,7 @@ public class MD_Keywords_INSPIRE extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
  	/** list of added keywords */
- 	CharacterStringMultiple keywordsObj = new CharacterStringMultiple(constants.keywordValue(),"keywordValue", true, CheckFunctions.normal);
+ 	CharacterStringMultiple keywordsObj = new CharacterStringMultiple(constants.keywordValue(),"keywordvalue", true, CheckFunctions.normal);
  	
 	/** INSPIRE Data Themes */
 	MD_Keywords_DataThemes keywordDataThemeObj = new MD_Keywords_DataThemes(constants.inspireDataThemes(), true, false);
@@ -66,7 +66,7 @@ public class MD_Keywords_INSPIRE extends CI {
 	
 	Button addGEMETButton = new Button(constants.add() + " " + constants.repository());
 	
-	/**  free keyword control declaration */
+	/** free keyword control declaration */
 	MD_Keywords keywordFreeObj = new MD_Keywords(constants.freeKeyword(), false, false);
 	
 	Button addFreeButton = new Button(constants.add() + " " + constants.freeKeyword());
@@ -123,13 +123,13 @@ public class MD_Keywords_INSPIRE extends CI {
 				String mySource = keywordFreeObj.thesaurusObj.titleObj.myTextBox.getText();
 				String myDate = keywordFreeObj.thesaurusObj.dateObj.dateObj.myDateBox.getTextBox().getText();
 				String myDateType = keywordFreeObj.thesaurusObj.dateObj.dateTypeObj.getMyValue();
-				if (!myKeyword.isEmpty() && !mySource.isEmpty()) 
+				if (!myKeyword.isEmpty()) 
 					addNew(myKeyword,mySource,myDate,myDateType);					
 			}				
 		});
 		keywordFreeObj.fieldsGroup.add(addFreeButton);
 		// set interface
-		setInterface(-1);			
+		setInterface(-1);
 	}
 
 	@Override
@@ -164,9 +164,15 @@ public class MD_Keywords_INSPIRE extends CI {
 			return;
 		}
 		// construct item value
-		if (myDate.isEmpty()) myDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
-		if (myDateType.isEmpty()) myDateType = "publication";
-		final String newItem = "(" + mySource +", " + myDateType + ", " + myDate + ") " + myString;
+		String newItemDescr = "";
+		if (!mySource.isEmpty()) {
+			if (myDate.isEmpty()) myDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
+			if (myDateType.isEmpty()) myDateType = "publication";
+			newItemDescr = "(" + mySource +", " + myDateType + ", " + myDate + ") " + myString;
+		}
+		else newItemDescr = myString;
+		final String newItem = newItemDescr;
+		
 		// check if there is a duplicate
 		if (keywordsObj.myList.contains(newItem.toUpperCase()))
 			return;
@@ -182,18 +188,24 @@ public class MD_Keywords_INSPIRE extends CI {
 		if (i==1) { // set current value
 			parentTitle = this.getMyFormName() + ".keyword[1]";
 			TreeItem val = Utilities.getSelectTreeItem(this.getMyFormName() + ".keyword[1].characterstring[1]");
-			if (val!=null) Utilities.setTextTreeItem(val,myString);
-			val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].title[1].characterstring[1]");
-			if (val!=null) Utilities.setTextTreeItem(val,mySource);
-			val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1].date[1]");
-			if (val!=null) Utilities.setTextTreeItem(val,myDate);
-			val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1]");
-			if (val!=null) Utilities.setTextTreeItem(val,myDateType);
-			val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codeListValue");
-			if (val!=null) Utilities.setTextTreeItem(val,myDateType);
+			if (val!=null) {
+				Utilities.setTextTreeItem(val,myString);
+				Utilities.ensureItemVisible(val);
+				if (!mySource.isEmpty()) {
+					val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].title[1].characterstring[1]");
+					if (val!=null) Utilities.setTextTreeItem(val,mySource);
+					val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1].date[1]");
+					if (val!=null) Utilities.setTextTreeItem(val,myDate);
+					val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1]");
+					if (val!=null) Utilities.setTextTreeItem(val,myDateType);
+					val = Utilities.getSelectTreeItem(this.getMyFormName() + ".thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codeListValue");
+					if (val!=null) Utilities.setTextTreeItem(val,myDateType);
+				}
+			}
 		}
 		else { // else add a new node
-			TreeItem myParentItem = getThesaurusParentTreeItem(mySource);			
+			TreeItem myParentItem = null;
+			if (!mySource.isEmpty()) myParentItem = getThesaurusParentTreeItem(mySource);			
 			if (myParentItem!=null) { //add a gmd:keyword/gco:CharacterString element
 				int nrKeywords = 0;
 				int lastKeywordIndex = 1;
@@ -257,75 +269,77 @@ public class MD_Keywords_INSPIRE extends CI {
 				//value of gco:CharacterString gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
 				TreeItem valueTreeItem = new TreeItem(constants.XMLValue() + myString);				
 				characterstringTreeItem.addItem(valueTreeItem);
-				//<gmd:thesaurusName> gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName
-				TreeItem thesaurusNameTreeItem = new TreeItem();
-				thesaurusNameTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1]");
-				thesaurusNameTreeItem.setText("gmd:thesaurusName");
-				MD_KeywordsTreeItem.addItem(thesaurusNameTreeItem);
-				//<gmd:CI_Citation> gmd:thesaurusName/gmd:CI_Citation
-				TreeItem CI_CitationTreeItem = new TreeItem();
-				CI_CitationTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1]");
-				CI_CitationTreeItem.setText("gmd:CI_Citation");
-				thesaurusNameTreeItem.addItem(CI_CitationTreeItem);
-				//<gmd:title> gmd:thesaurusName/gmd:CI_Citation/gmd:title
-				TreeItem titleTreeItem = new TreeItem();
-				titleTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].title[1]");
-				titleTreeItem.setText("gmd:title");
-				CI_CitationTreeItem.addItem(titleTreeItem);
-				//<gco:CharacterString> gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString
-				TreeItem characterstringThesaurusTreeItem = new TreeItem();
-				characterstringThesaurusTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].title[1].characterstring[1]");
-				characterstringThesaurusTreeItem.setText("gco:CharacterString");
-				titleTreeItem.addItem(characterstringThesaurusTreeItem);
-				//value of gco:CharacterString gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString
-				TreeItem valueThesaurusTreeItem = new TreeItem(constants.XMLValue() + mySource);				
-				characterstringThesaurusTreeItem.addItem(valueThesaurusTreeItem);
-				//<gmd:date> gmd:thesaurusName/gmd:CI_Citation/gmd:date
-				TreeItem dateTreeItem = new TreeItem();
-				dateTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1]");
-				dateTreeItem.setText("gmd:date");
-				CI_CitationTreeItem.addItem(dateTreeItem);
-				//<gmd:CI_Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date
-				TreeItem CI_DateTreeItem = new TreeItem();
-				CI_DateTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1]");
-				CI_DateTreeItem.setText("gmd:CI_Date");
-				dateTreeItem.addItem(CI_DateTreeItem);
-				//<gmd:date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date
-				TreeItem dateSubTreeItem = new TreeItem();
-				dateSubTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1]");
-				dateSubTreeItem.setText("gmd:date");
-				CI_DateTreeItem.addItem(dateSubTreeItem);				
-				//<gco:Date>2010-12-02</gco:Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date
-				TreeItem dateGcoTreeItem = new TreeItem();
-				dateGcoTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1].date[1]");
-				dateGcoTreeItem.setText("gco:Date");
-				dateSubTreeItem.addItem(dateGcoTreeItem);		
-				//value of <gco:Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date
-				TreeItem valueDateTreeItem = new TreeItem(constants.XMLValue() + myDate);				
-				dateGcoTreeItem.addItem(valueDateTreeItem);
-				//<gmd:dateType> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType
-				TreeItem dateTypeTreeItem = new TreeItem();
-				dateTypeTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1]");
-				dateTypeTreeItem.setText("gmd:dateType");
-				CI_DateTreeItem.addItem(dateTypeTreeItem);	
-				//<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode
-				TreeItem dateTypeCodeTreeItem = new TreeItem();
-				dateTypeCodeTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1]");
-				dateTypeCodeTreeItem.setText("gmd:CI_DateTypeCode");
-				dateTypeTreeItem.addItem(dateTypeCodeTreeItem);	
-				//attribute codelist
-				TreeItem codelistTreeItem = new TreeItem();		
-				codelistTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codelist[1]");
-				codelistTreeItem.setText("@codeList=http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode");
-				dateTypeCodeTreeItem.addItem(codelistTreeItem);
-				//attribute codelistValue
-				TreeItem codelistvalueTreeItem = new TreeItem();		
-				codelistvalueTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codelistvalue[1]");
-				codelistvalueTreeItem.setText("@codeListValue=" + myDateType);
-				dateTypeCodeTreeItem.addItem(codelistvalueTreeItem);
-				//value of gmd:CI_DateTypeCode
-				TreeItem valuedatetypeTreeItem = new TreeItem(constants.XMLValue() + myDateType);				
-				dateTypeCodeTreeItem.addItem(valuedatetypeTreeItem);
+				if (!mySource.isEmpty()) {
+					//<gmd:thesaurusName> gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName
+					TreeItem thesaurusNameTreeItem = new TreeItem();
+					thesaurusNameTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1]");
+					thesaurusNameTreeItem.setText("gmd:thesaurusName");
+					MD_KeywordsTreeItem.addItem(thesaurusNameTreeItem);
+					//<gmd:CI_Citation> gmd:thesaurusName/gmd:CI_Citation
+					TreeItem CI_CitationTreeItem = new TreeItem();
+					CI_CitationTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1]");
+					CI_CitationTreeItem.setText("gmd:CI_Citation");
+					thesaurusNameTreeItem.addItem(CI_CitationTreeItem);
+					//<gmd:title> gmd:thesaurusName/gmd:CI_Citation/gmd:title
+					TreeItem titleTreeItem = new TreeItem();
+					titleTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].title[1]");
+					titleTreeItem.setText("gmd:title");
+					CI_CitationTreeItem.addItem(titleTreeItem);
+					//<gco:CharacterString> gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString
+					TreeItem characterstringThesaurusTreeItem = new TreeItem();
+					characterstringThesaurusTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].title[1].characterstring[1]");
+					characterstringThesaurusTreeItem.setText("gco:CharacterString");
+					titleTreeItem.addItem(characterstringThesaurusTreeItem);
+					//value of gco:CharacterString gmd:thesaurusName/gmd:CI_Citation/gmd:title/gco:CharacterString
+					TreeItem valueThesaurusTreeItem = new TreeItem(constants.XMLValue() + mySource);				
+					characterstringThesaurusTreeItem.addItem(valueThesaurusTreeItem);
+					//<gmd:date> gmd:thesaurusName/gmd:CI_Citation/gmd:date
+					TreeItem dateTreeItem = new TreeItem();
+					dateTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1]");
+					dateTreeItem.setText("gmd:date");
+					CI_CitationTreeItem.addItem(dateTreeItem);
+					//<gmd:CI_Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date
+					TreeItem CI_DateTreeItem = new TreeItem();
+					CI_DateTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1]");
+					CI_DateTreeItem.setText("gmd:CI_Date");
+					dateTreeItem.addItem(CI_DateTreeItem);
+					//<gmd:date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date
+					TreeItem dateSubTreeItem = new TreeItem();
+					dateSubTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1]");
+					dateSubTreeItem.setText("gmd:date");
+					CI_DateTreeItem.addItem(dateSubTreeItem);				
+					//<gco:Date>2010-12-02</gco:Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date
+					TreeItem dateGcoTreeItem = new TreeItem();
+					dateGcoTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].date[1].date[1]");
+					dateGcoTreeItem.setText("gco:Date");
+					dateSubTreeItem.addItem(dateGcoTreeItem);		
+					//value of <gco:Date> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date/gco:Date
+					TreeItem valueDateTreeItem = new TreeItem(constants.XMLValue() + myDate);				
+					dateGcoTreeItem.addItem(valueDateTreeItem);
+					//<gmd:dateType> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType
+					TreeItem dateTypeTreeItem = new TreeItem();
+					dateTypeTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1]");
+					dateTypeTreeItem.setText("gmd:dateType");
+					CI_DateTreeItem.addItem(dateTypeTreeItem);	
+					//<gmd:CI_DateTypeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode> gmd:thesaurusName/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode
+					TreeItem dateTypeCodeTreeItem = new TreeItem();
+					dateTypeCodeTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1]");
+					dateTypeCodeTreeItem.setText("gmd:CI_DateTypeCode");
+					dateTypeTreeItem.addItem(dateTypeCodeTreeItem);	
+					//attribute codelist
+					TreeItem codelistTreeItem = new TreeItem();		
+					codelistTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codelist[1]");
+					codelistTreeItem.setText("@codeList=http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode");
+					dateTypeCodeTreeItem.addItem(codelistTreeItem);
+					//attribute codelistValue
+					TreeItem codelistvalueTreeItem = new TreeItem();		
+					codelistvalueTreeItem.setTitle(parentTitle + ".md_keywords[1].thesaurusname[1].ci_citation[1].date[1].ci_date[1].datetype[1].ci_datetypecode[1].@codelistvalue[1]");
+					codelistvalueTreeItem.setText("@codeListValue=" + myDateType);
+					dateTypeCodeTreeItem.addItem(codelistvalueTreeItem);
+					//value of gmd:CI_DateTypeCode
+					TreeItem valuedatetypeTreeItem = new TreeItem(constants.XMLValue() + myDateType);				
+					dateTypeCodeTreeItem.addItem(valuedatetypeTreeItem);
+				}
 				//insert created keyword element in the right place
 				myParentItem.insertItem(lastKeywordIndex+1,descriptiveKeywordsTreeItem);
 				// set selected item

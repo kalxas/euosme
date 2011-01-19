@@ -40,9 +40,11 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
 
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
 import eu.europa.ec.jrc.euosme.gwt.client.MyResources;
+import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.SuggestCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.SuggestListCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -53,7 +55,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
  * Create MD_Keywords_Gemet model
  * This class lets the user to choose a keyword from all the available repository of GEMET
  * 
- * @version 1.0 - November 2010
+ * @version 2.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Keywords_Gemet extends CI {
@@ -171,8 +173,11 @@ public class MD_Keywords_Gemet extends CI {
 		GEMETPanel.add(keywordGEMETObj);
 		GEMETPanel.setVisible(false);			
 		fieldsGroup.add(GEMETPanel);
-		// RPC call
-		requestListOfRepository(listRepository);
+		// RPC call if requested
+		if (EUOSMEGWT.rpcRepository)
+			requestListOfRepository(listRepository);
+		else
+			Utilities.setSuggestList(MyResources.INSTANCE.repositoryList().getText(), listRepository);	
 	}
 	
 	/**
@@ -192,11 +197,17 @@ public class MD_Keywords_Gemet extends CI {
 		suggestObj.getItem(0).getChild(0).setTitle(constants.loading());
 		suggestObj.getItem(0).setState(true);
 		suggestObj.setVisible(true);		
-		filterPanel.setVisible(true);	
-		SuggestCallback callback = new SuggestCallback();
-		callback.setList(suggestObj.getItem(0));
-		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-		ls.invokeGetRESTfulWebService("repository", repository, LocaleInfo.getCurrentLocale().getLocaleName(), filter, callback);		
+		
+		if (EUOSMEGWT.rpcRepository) {
+			filterPanel.setVisible(true);
+			SuggestCallback callback = new SuggestCallback();
+			callback.setList(suggestObj.getItem(0));
+			RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
+			ls.invokeGetRESTfulWebService("repository", repository, LocaleInfo.getCurrentLocale().getLocaleName(), filter, callback);
+		}
+		else {
+			Utilities.setSuggests(Utilities.getResourceRepository(listRepository.getItemText(listRepository.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+		}
     }
 	
 	/**

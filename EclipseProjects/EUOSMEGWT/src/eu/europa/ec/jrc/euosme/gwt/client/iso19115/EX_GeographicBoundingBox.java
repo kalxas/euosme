@@ -31,7 +31,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create EX_GeographicBoundingBox model
  * Geographic position of the dataset
  * 
- * @version 2.0 - October 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 
@@ -44,16 +44,16 @@ public class EX_GeographicBoundingBox extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** North control declaration */
-	public CharacterString northObj = new CharacterString(constants.north(), "", true, CheckFunctions.doublenum);
+	public CharacterString northObj = new CharacterString(constants.north(), "", true, CheckFunctions.doublenum, true);
 	
 	/** East control declaration */
-	public CharacterString eastObj = new CharacterString(constants.east(), "", true, CheckFunctions.doublenum);
+	public CharacterString eastObj = new CharacterString(constants.east(), "", true, CheckFunctions.doublenum, true);
 	
 	/** South control declaration */
-	public CharacterString southObj = new CharacterString(constants.south(), "", true, CheckFunctions.doublenum);
+	public CharacterString southObj = new CharacterString(constants.south(), "", true, CheckFunctions.doublenum, true);
 	
 	/** West control declaration */
-	public CharacterString westObj = new CharacterString(constants.west(), "", true, CheckFunctions.doublenum);
+	public CharacterString westObj = new CharacterString(constants.west(), "", true, CheckFunctions.doublenum, true);
 		
 	/** 
      * constructor EX_GeographicBoundingBox model

@@ -21,17 +21,16 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
-import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
-import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFreeMultiple;
 
 /**
  * Create MD_Constraints model
  * Restrictions on the access and use of a resource or metadata
  * 
- * @version 2.0 - October 2010
+ * @version 3.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Constraints extends CI {
@@ -43,7 +42,7 @@ public class MD_Constraints extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** Use limitation declaration */
-	public CodeListFree useLimitationObj = new CodeListFree(constants.useLimitation(), "condition", false, "12","",CheckFunctions.normal,true);
+	public CodeListFreeMultiple useLimitationObj = new CodeListFreeMultiple(constants.useLimitation(), "condition", false, "12", "", true, false);
 	
 	/** 
      * constructor MD_Constraints model

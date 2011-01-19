@@ -35,7 +35,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Information about the outcome of evaluating the obtained value (or set of values) against a 
  * specified acceptable conformance quality level
  * 
- * @version 2.0 - October 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 
@@ -51,7 +51,7 @@ public class DQ_ConformanceResult extends CI {
 	CI_Citation specificationObj = new CI_Citation(constants.specification(), true, false);
 	
 	/** codeSpace control declaration */
-	CharacterString explanationObj = new CharacterString(constants.explanation(), "", true, CheckFunctions.normal);
+	CharacterString explanationObj = new CharacterString(constants.explanation(), "", true, CheckFunctions.normal, true);
 	
 	/** degree control declaration */
 	Boolean degreeObj = new Boolean(constants.degree(),"degree",true,"");
@@ -92,7 +92,7 @@ public class DQ_ConformanceResult extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			specificationObj.setInterface(2);
 			specificationObj.removeDisclosure();
 			explanationObj.setMyValue(constants.explanationValue());

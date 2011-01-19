@@ -50,7 +50,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.TabGeographic;
 
 /**
- * @version 5.0 - December 2010
+ * @version 5.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class GeoBoundsMultiple extends Composite {
@@ -167,7 +167,7 @@ public class GeoBoundsMultiple extends Composite {
 		infoButton.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				Utilities.openInfo("boundingBox",infoButton);				
+				Utilities.openInfo("boundingbox",infoButton);				
 			}
 		});
 	}	

@@ -53,7 +53,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a label and a list box
  * At the bottom, there is a text box with the button used to add an item to the list box 
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class CodeListMultiple extends Composite {
@@ -112,6 +112,9 @@ public class CodeListMultiple extends Composite {
 	/** Relation between the form element and the tree item */
 	private TreeItem myTreeItem;
 	
+	/** true to order the suggestions alphabetically */
+	private boolean orderList = true;
+	
 	/** 
      * constructor CodeListMultiple: 0..* (String)
      * 
@@ -120,15 +123,17 @@ public class CodeListMultiple extends Composite {
      * @param required			{@link Boolean}=  it is true, the field is mandatory
      * @param myListName		{@link String} = the name of the code list
      * @param myDefaultValue	{@link String} = the default value
+     * @param order				{@link Boolean} = indicate if the list must be ordered alphabetically
      * 
      * @return	the widget composed by an horizontal panel made up a {@link Label}, a {@link ListBox} and a {@link FlexTable}
      */
-	public CodeListMultiple(String label, String help, boolean required, String myListName, String myDefaultValue) {
+	public CodeListMultiple(String label, String help, boolean required, String myListName, String myDefaultValue, boolean order) {
 
 		// Set global variables
 		isRequired = required;
 		codeListName = myListName;
 		helpAnchor = help;
+		orderList = order;
 		
 		// Initialize widget
 		initWidget(uiBinder.createAndBindUi(this));
@@ -159,7 +164,7 @@ public class CodeListMultiple extends Composite {
 		if (EUOSMEGWT.rpcCodeList)
 			invokeRESTfulWebService(codeListName, newListBox, myDefaultValue);
 		else
-			Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), newListBox, myDefaultValue);
+			Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), newListBox, myDefaultValue, order);
 		
 		//Set Error Label widget		
 		myError.setVisible(false);
@@ -180,6 +185,13 @@ public class CodeListMultiple extends Composite {
 	public void setLabel(String label) {
 		myLabel.setText(label);
 		if (isRequired==true) myLabel.setText(myLabel.getText() + " (*)");		
+	}
+	
+	/**
+	 * @param b	{@link Boolean} = true to order suggestions alphabetically
+	 */
+	public void setOrderList(boolean b) {
+		orderList = b;		
 	}
 	
 	/**
@@ -432,6 +444,7 @@ public class CodeListMultiple extends Composite {
 		CodeListRpcCallback callback = new CodeListRpcCallback();
 		callback.setList(myListRPC,myDefaultValue);
 		callback.setCodeListName(codeListName);
+		callback.setOrderList(orderList);
 		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 		ls.invokeGetRESTfulWebService("codelists", codeListName, LocaleInfo.getCurrentLocale().getLocaleName(), "", callback);
 	}	

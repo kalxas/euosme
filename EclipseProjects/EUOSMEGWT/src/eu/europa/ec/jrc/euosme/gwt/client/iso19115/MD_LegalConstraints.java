@@ -34,7 +34,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
  * Create MD_LegalConstraints model
  * Restrictions and legal prerequisites for accessing and using the resource or metadata
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_LegalConstraints extends CI {
@@ -49,10 +49,10 @@ public class MD_LegalConstraints extends CI {
  	public CharacterStringMultiple otherConstraintsObj = new CharacterStringMultiple(constants.otherConstraints(), "limitation", false, CheckFunctions.normal);
  	
  	/** Access constraints declaration */
- 	CodeListMultiple accessConstraintsObj =	new CodeListMultiple(constants.accessConstraints(),"limitation",false,"9","otherRestrictions");
+ 	CodeListMultiple accessConstraintsObj =	new CodeListMultiple(constants.accessConstraints(),"limitation",false,"9","otherRestrictions",true);
 	
  	/** Use constraints declaration */
- 	CodeListMultiple useConstraintsObj =	new CodeListMultiple(constants.useConstraints(),"",false,"9","");
+ 	CodeListMultiple useConstraintsObj =	new CodeListMultiple(constants.useConstraints(),"",false,"9","",true);
 	 	 	
  	/** 
      * constructor MD_LegalConstraints model
@@ -97,7 +97,7 @@ public class MD_LegalConstraints extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			useConstraintsObj.setVisible(false);
 			accessConstraintsObj.setVisible(false);	
 			otherConstraintsObj.setLabel(constants.accessConstraints());

@@ -31,7 +31,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create MD_Resolution model
  * Level of detail expressed as a scale factor or a ground distance
  * 
- * @version 2.0 - November 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Resolution extends CI {
@@ -43,7 +43,7 @@ public class MD_Resolution extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** equivalentScaleObj control declaration */
-	CharacterString equivalentScaleObj = new CharacterString(constants.equivalentScale(), "spatialResolution", false, CheckFunctions.integer);
+	CharacterString equivalentScaleObj = new CharacterString(constants.equivalentScale(), "spatialresolution", false, CheckFunctions.integer, true);
 	
 	/** distanceObj control declaration */
 	public Distance distanceObj =	new Distance(constants.distance(), false, false);

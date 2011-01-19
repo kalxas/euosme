@@ -35,7 +35,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
  * It refers to information about on-line sources from which the dataset, specification, 
  * or community profile name and extended metadata elements can be obtained.
  * 
- * @version 4.0 - October 2010
+ * @version 4.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class CI_OnlineResource extends CI {
@@ -47,22 +47,22 @@ public class CI_OnlineResource extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** linkage control declaration */
-	CharacterString linkageObj = new CharacterString(constants.linkage(),"resourceLocator",true,CheckFunctions.URL);
+	CharacterString linkageObj = new CharacterString(constants.linkage(), "resourcelocator", true, CheckFunctions.URL, true);
 	
 	/** protocol control declaration */
-	CharacterString protocolObj = new CharacterString(constants.protocol(),"",false, CheckFunctions.normal);
+	CharacterString protocolObj = new CharacterString(constants.protocol(), "", false, CheckFunctions.normal, true);
 	
 	/** applicationProfile control declaration */
-	CharacterString applicationProfileObj = new CharacterString(constants.applicationProfile(),"",false,CheckFunctions.normal);
+	CharacterString applicationProfileObj = new CharacterString(constants.applicationProfile(), "", false, CheckFunctions.normal, true);
 	
 	/** name control declaration */
-	CharacterString nameObj = new CharacterString(constants.name(),"",false,CheckFunctions.normal);
+	CharacterString nameObj = new CharacterString(constants.name(), "", false, CheckFunctions.normal, true);
 	
 	/** description control declaration */
-	CharacterString descriptionObj = new CharacterString(constants.description(),"",false,CheckFunctions.normal);
+	CharacterString descriptionObj = new CharacterString(constants.description(), "", false, CheckFunctions.normal, true);
 	
 	/** function control declaration */
-	CodeList functionObj = new CodeList(constants.function(),"",false,"3","");
+	CodeList functionObj = new CodeList(constants.function(), "", false, "3", "", true);
 	
 	/** 
 	 * constructor CI_OnlineResource model
@@ -110,7 +110,7 @@ public class CI_OnlineResource extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			protocolObj.setVisible(false);
 			applicationProfileObj.setVisible(false);
 			nameObj.setVisible(false);

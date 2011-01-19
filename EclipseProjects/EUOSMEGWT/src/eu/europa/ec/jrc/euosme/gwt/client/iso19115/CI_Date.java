@@ -32,7 +32,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
  * Create CI_Date model
  * It is a reference date for the cited resource
  * 
- * @version 2.1 - November 2010
+ * @version 2.1.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class CI_Date extends CI {
@@ -47,7 +47,7 @@ public class CI_Date extends CI {
 	public DateImpl dateObj =	new DateImpl(constants.date(), "", true);
 	
 	/** dateType control declaration */
-	CodeList dateTypeObj =	new CodeList(constants.dateType(),"",true,"5","");
+	CodeList dateTypeObj =	new CodeList(constants.dateType(),"",true,"5","",true);
 	
 	/** 
      * constructor CI_Date model
@@ -83,17 +83,17 @@ public class CI_Date extends CI {
 	public void setInterface(int i) {
 		if (i==0) {				
 			dateTypeObj.setMyValue("publication");
-			dateObj.setHelpAnchor("publicationDate");			
+			dateObj.setHelpAnchor("publicationdate");			
 			dateTypeObj.setVisible(false);			
 		}
 		if (i==1) {				
 			dateTypeObj.setMyValue("revision");
-			dateObj.setHelpAnchor("revisionDate");
+			dateObj.setHelpAnchor("revisiondate");
 			dateTypeObj.setVisible(false);
 		}
 		if (i==2) {				
 			dateTypeObj.setMyValue("creation");
-			dateObj.setHelpAnchor("creationDate");
+			dateObj.setHelpAnchor("creationdate");
 			dateTypeObj.setVisible(false);
 		}
 	}

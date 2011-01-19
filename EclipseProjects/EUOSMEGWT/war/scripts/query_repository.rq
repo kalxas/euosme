@@ -1,0 +1,51 @@
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl2xml:<http://www.w3.org/2006/12/owl2-xml#>
+PREFIX dct:<http://purl.org/dc/terms/>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX inspire:<http://inspire-registry.jrc.ec.europa.eu/rdfschema/inspire-schema.rdf#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?c ?l ?a ?d
+WHERE {
+  {
+    ?c skos:prefLabel ?l.
+    ?c skos:inScheme <##extraValue##>.
+    OPTIONAL {
+      ?c skos:broader ?b.
+    }
+    OPTIONAL {
+    ?c skos:narrower ?n.
+    ?n skos:inScheme ?d.
+    }
+    OPTIONAL {
+      ?c skos:prefLabel ?a.
+      FILTER ( LANG(?a) = "##clientLanguage##" )
+    }
+    FILTER ( LANG(?l) = "en" && !BOUND(?b) )
+    FILTER (regex(str(?l),"^##filter##","i"))
+  }
+  UNION
+  {
+    ?c rdfs:label ?l.
+    ?c skos:inScheme <##extraValue##>.
+    OPTIONAL {
+      ?c skos:broader ?b.
+    }
+    OPTIONAL {
+      ?c skos:narrower ?n.
+      ?n skos:inScheme ?d.
+    }
+    OPTIONAL {
+      ?c skos:member ?n.
+      ?n skos:inScheme ?d.
+    }
+    OPTIONAL {
+      ?c rdfs:label ?a.
+      FILTER ( LANG(?a) = "##clientLanguage##" )
+    }
+    FILTER ( LANG(?l) = "en" && !BOUND(?b) )
+    FILTER (regex(str(?l),"^##filter##","i"))
+  }
+}

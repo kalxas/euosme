@@ -32,7 +32,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringMultiple;
  * Create CI_Address model
  * Physical and email address at which the organization or individual may be contacted.
  * 
- * @version 2.0 - October 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 
@@ -48,16 +48,16 @@ public class CI_Address extends CI {
 	CharacterStringMultiple deliveryPointObj = new CharacterStringMultiple(constants.deliveryPoint(), "", false, CheckFunctions.normal);
 	
 	/** city control declaration */
-	CharacterString cityObj = new CharacterString(constants.city(), "", false, CheckFunctions.normal);
+	CharacterString cityObj = new CharacterString(constants.city(), "", false, CheckFunctions.normal, true);
 	
 	/** administrativeArea control declaration */
-	CharacterString administrativeAreaObj = new CharacterString(constants.administrativeArea(), "", false, CheckFunctions.normal);
+	CharacterString administrativeAreaObj = new CharacterString(constants.administrativeArea(), "", false, CheckFunctions.normal, true);
 	
 	/** postalCode control declaration */
-	CharacterString postalCodeObj = new CharacterString(constants.postalCode(), "", false, CheckFunctions.normal);
+	CharacterString postalCodeObj = new CharacterString(constants.postalCode(), "", false, CheckFunctions.normal, true);
 	
 	/** country control declaration */
-	CharacterString countryObj = new CharacterString(constants.country(), "", false, CheckFunctions.normal);
+	CharacterString countryObj = new CharacterString(constants.country(), "", false, CheckFunctions.normal, true);
 	
 	/** electronicMailAddress control declaration */
 	CharacterStringMultiple electronicMailAddressObj = new CharacterStringMultiple(constants.electronicMailAddress(), "contact", false, CheckFunctions.electronicMailAddress);

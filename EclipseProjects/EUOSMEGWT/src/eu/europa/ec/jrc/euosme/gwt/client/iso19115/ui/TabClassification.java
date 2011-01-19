@@ -38,7 +38,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
 /**
  * Create the tab Classification
  * 
- * @version 2.0 - October 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabClassification extends Composite {
@@ -59,11 +59,11 @@ public class TabClassification extends Composite {
 	
 	/** topic category control declaration */
 	@UiField(provided = true)
-	CodeListMultiple topicObj =	new CodeListMultiple(constants.topicCategory(),"topicCategory",false,"7","");
+	CodeListMultiple topicObj =	new CodeListMultiple(constants.topicCategory(),"topiccategory",false,"7","",true);
 	
 	/** service type control declaration */
 	@UiField(provided = true)
-	CodeList serviceTypeObj = new CodeList(constants.serviceType(),"serviceType",false,"10","");
+	CodeList serviceTypeObj = new CodeList(constants.serviceType(),"servicetype",false,"10","",true);
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)
@@ -105,7 +105,7 @@ public class TabClassification extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) {
 				topicObj.setVisible(false);
 				serviceTypeObj.setRequired(true);

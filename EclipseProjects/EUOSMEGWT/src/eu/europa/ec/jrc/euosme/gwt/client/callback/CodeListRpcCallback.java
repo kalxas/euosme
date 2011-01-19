@@ -32,7 +32,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 /**
  * Contains the implementation of the callback class from Codelist service
  * 
- * @version 3.0 - November 2010
+ * @version 4.0 - January 2011
  * @author 	Marzia Grasso 
  */
 public class CodeListRpcCallback implements AsyncCallback <String> {
@@ -45,6 +45,9 @@ public class CodeListRpcCallback implements AsyncCallback <String> {
 	
 	/** True if the type of list includes suggestions */
 	Boolean typeOfListIsOracle = false;
+	
+	/** True to order the list alphabetically */
+	Boolean orderList = true;
 	
 	/** Name of the code list */
 	private String myCodeListName;
@@ -59,9 +62,9 @@ public class CodeListRpcCallback implements AsyncCallback <String> {
     	if (result == null)
     		return;
     	if (typeOfListIsOracle) 
-    		Utilities.setCodeList(result, myListOracle);
+    		Utilities.setCodeList(result, myListOracle, orderList);
     	else	
-    		Utilities.setCodeList(result, myList, myDefaultValue);
+    		Utilities.setCodeList(result, myList, myDefaultValue, orderList);
     }
 
     /* (non-Javadoc)
@@ -78,9 +81,9 @@ public class CodeListRpcCallback implements AsyncCallback <String> {
     	}	
     	// set OFF-LINE code lists
     	if (typeOfListIsOracle) 
-    		Utilities.setCodeList(Utilities.getResourceCodeList(myCodeListName), myListOracle);
+    		Utilities.setCodeList(Utilities.getResourceCodeList(myCodeListName), myListOracle, orderList);
     	else	
-    		Utilities.setCodeList(Utilities.getResourceCodeList(myCodeListName), myList, myDefaultValue);    	
+    		Utilities.setCodeList(Utilities.getResourceCodeList(myCodeListName), myList, myDefaultValue, orderList);    	
     }
 	
     /**
@@ -106,5 +109,9 @@ public class CodeListRpcCallback implements AsyncCallback <String> {
 	public void setList(MultiWordSuggestOracle myListOracle) {
 		this.myListOracle = myListOracle;
 		typeOfListIsOracle = true;
+	}
+
+	public void setOrderList(boolean order) {
+		this.orderList = order;		
 	}
 }

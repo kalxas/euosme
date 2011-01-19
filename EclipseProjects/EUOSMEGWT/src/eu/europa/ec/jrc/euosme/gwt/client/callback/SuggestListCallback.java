@@ -19,27 +19,18 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client.callback;
 
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.ListBox;
-import com.google.gwt.xml.client.Document;
-import com.google.gwt.xml.client.Node;
-import com.google.gwt.xml.client.NodeList;
-import com.google.gwt.xml.client.XMLParser;
 
-import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.MyResources;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 
 /**
  * Contains the implementation of the callback class from GEMET Web service
  * 
- * @version 2.0 - October 2010
+ * @version 3.0 - January 2011
  * @author 	Marzia Grasso 
  */
 public class SuggestListCallback implements AsyncCallback <String> {
@@ -61,78 +52,15 @@ public class SuggestListCallback implements AsyncCallback <String> {
         	myList.addItem(constants.repositoryServiceFailed(), "");
         	myList.getElement().getStyle().setColor("red");        	
     	}
-    	else processResponse(result);
+    	else Utilities.setSuggestList(result, myList);
     }
 
     /* (non-Javadoc)
      * @see com.google.gwt.user.client.rpc.AsyncCallback#onFailure(java.lang.Throwable)
      */
     public void onFailure(Throwable caught) {
-    	if (EUOSMEGWT.repositoryAvailable) {
-    		EUOSMEGWT.repositoryAvailable=false;
-    		String msg=caught.getMessage();
-    		if (msg != null)
-    			Window.alert(constants.repositoryServiceFailed() + " " + msg);
-    	}	
+    	Utilities.setSuggestList(MyResources.INSTANCE.repositoryList().getText(), myList);    	
     }
-    
-    /**
-     * @param response	{@link String} = the result to parse
-     */
-    protected void processResponse(String response) {
-    	myList.clear();
-    	myList.addItem(constants.selectValue(), "");
-    	
-    	Document messageDom = XMLParser.parse(response);
-
-        NodeList nodes = messageDom.getElementsByTagName("result");
-        Map<String,String> definitions = new LinkedHashMap<String, String>();
-        for (int i = 0; i < nodes.getLength(); i++) {
-			Node currentNode = nodes.item(i);
-			String definition_en = "";
-			String definition_lang = "";
-			String definition_uri = "";
-			for (int j = 0; j < currentNode.getChildNodes().getLength(); j++) {
-				Node currentItem = currentNode.getChildNodes().item(j);
-				// uri concept
-				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("v")) {
-					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
-							definition_uri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();	    						
-					}
-				}
-				// literal in @en
-				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
-					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_en = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
-					}
-				}
-				// literal in client language
-				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("a")) {
-					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_lang = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
-					}
-				}  
-			}
-			if (!definition_en.isEmpty()) {
-				String definition;
-				definition = definition_en; 
-				if (!definition_lang.isEmpty() && definition_lang != definition) definition = definition_lang;
-				definitions.put(definition,definition_uri);						
-			}
-		}
-        if (definitions.size() >=0) {
-    		definitions = Utilities.sortMapByKey(definitions);
-    		Iterator<String> i = definitions.keySet().iterator();
-    		while (i.hasNext()) {
-	    		String definition = i.next();
-	    		String definition_uri = definitions.get(definition);
-	    		myList.addItem(definition,definition_uri);    			
-		    }	    		
-    	}
-	}
 	
     /**
      * @param newList	{@link ListBox} = the list box to populate

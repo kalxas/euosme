@@ -22,6 +22,7 @@ package eu.europa.ec.jrc.euosme.gwt.client;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -56,7 +57,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 /**
  * Utilities class
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class Utilities {	
@@ -340,6 +341,9 @@ public class Utilities {
 
         	// Get nodename
         	nodeName = getNodeName(currentNode, i, parent);        	
+        	
+        	// solve problem on ID for legal constraints
+        	if (nodeName.startsWith("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType  + "[1].resourceconstraints[1].md_legalconstraints[1]")) nodeName = nodeName.replace(".resourceconstraints[1]",".resourceconstraints[2]");
         	
         	// Create Tree Item if there is not yet and show a message
 			subTreeItem = Utilities.getSelectTreeItem(nodeName);
@@ -1268,39 +1272,28 @@ public class Utilities {
 	 */
 	public static String getResourceCodeList(String myCodeListName) {
 		String response = "";
-		if (myCodeListName.equalsIgnoreCase("2")) {
+		if (myCodeListName.equalsIgnoreCase("2")) 
 			response=MyResources.INSTANCE.codeList2().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("3")) {
+    	if (myCodeListName.equalsIgnoreCase("3")) 
     		response=MyResources.INSTANCE.codeList3().getText();   		
-    	}
-    	if (myCodeListName.equalsIgnoreCase("4")) {
+    	if (myCodeListName.equalsIgnoreCase("4")) 
     		response=MyResources.INSTANCE.codeList4().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("5")) {
+    	if (myCodeListName.equalsIgnoreCase("5")) 
     		response=MyResources.INSTANCE.codeList5().getText();    		
-    	}
-    	if (myCodeListName.equalsIgnoreCase("6")) {
+    	if (myCodeListName.equalsIgnoreCase("6")) 
     		response=MyResources.INSTANCE.codeList6().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("7")) {
+    	if (myCodeListName.equalsIgnoreCase("7")) 
     		response=MyResources.INSTANCE.codeList7().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("8")) {
+    	if (myCodeListName.equalsIgnoreCase("8")) 
     		response=MyResources.INSTANCE.codeList8().getText();	
-    	}    	
-    	if (myCodeListName.equalsIgnoreCase("9")) {
+    	if (myCodeListName.equalsIgnoreCase("9")) 
     		response=MyResources.INSTANCE.codeList9().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("10")) {
+    	if (myCodeListName.equalsIgnoreCase("10")) 
     		response=MyResources.INSTANCE.codeList10().getText();
-    	}    	
-    	if (myCodeListName.equalsIgnoreCase("11")) {
+    	if (myCodeListName.equalsIgnoreCase("11")) 
     		response=MyResources.INSTANCE.codeList11().getText();
-    	}
-    	if (myCodeListName.equalsIgnoreCase("12")) {
-    		response=MyResources.INSTANCE.codeList12().getText();
-    	}
+    	if (myCodeListName.equalsIgnoreCase("12")) 
+    		response=MyResources.INSTANCE.codeList12().getText();    	
     	return response;
 	}
 	
@@ -1310,8 +1303,9 @@ public class Utilities {
 	 * @param response			{@link String} = the response of the RPC
 	 * @param myList			{@link ListBox} = the list box to populate
 	 * @param myDefaultValue	{@link String} = the default value to select
+	 * @param order			{@link Boolean} = indicate if the list must be ordered alphabetically
 	 */
-	public static void setCodeList(String response, ListBox myList, String myDefaultValue) {
+	public static void setCodeList(String response, ListBox myList, String myDefaultValue, boolean order) {
 		JSONValue jsonValueResponse = JSONParser.parseLenient(response);
 		JSONObject jobjResponse = jsonValueResponse.isObject();	    
 	    try {
@@ -1331,7 +1325,7 @@ public class Utilities {
 	    		String code = jobjCLitem.get("code").isString().stringValue();
 	    		definitions.put(definition,code);
 	    	}	    	
-		    putList(definitions, myList, myDefaultValue);
+		    putList(definitions, myList, myDefaultValue, order);
 	    }
 	    catch (Exception e) {
 	    	GWT.log(e.getMessage());
@@ -1344,12 +1338,13 @@ public class Utilities {
 	 * @param definitions		{@link Map} = collection of strings
 	 * @param myList			{@link ListBox} = the list box to populate
 	 * @param myDefaultValue	{@link String} = the default value to select
+	 * @param order			{@link Boolean} = indicate if the list must be ordered alphabetically
 	 */
-	private static void putList(Map<String, String> definitions, ListBox myList, String myDefaultValue) {
+	private static void putList(Map<String, String> definitions, ListBox myList, String myDefaultValue, boolean order) {
   		iso19115Constants constants = GWT.create(iso19115Constants.class);
   		myList.addItem(constants.selectValue(), "");
   		if (definitions.size() >=0) {
-    		definitions = Utilities.sortMapByKey(definitions);
+    		if (order) definitions = Utilities.sortMapByKey(definitions);
     		Iterator<String> i = definitions.keySet().iterator();
     		while (i.hasNext()) {
     			String definition = i.next();
@@ -1400,8 +1395,9 @@ public class Utilities {
 	 * 
 	 * @param response		{@link String} = a response from RPC
 	 * @param myListOracle	{@link MultiWordSuggestOracle} = the suggestion box to populate
+	 * @param order			{@link Boolean} = indicate if the list must be ordered alphabetically
 	 */
-	public static void setCodeList(String response, MultiWordSuggestOracle myListOracle) {
+	public static void setCodeList(String response, MultiWordSuggestOracle myListOracle, boolean order) {
 		JSONValue jsonValueResponse = JSONParser.parseLenient(response);
 		JSONObject jobjResponse = jsonValueResponse.isObject();	    
 	    try {
@@ -1421,7 +1417,7 @@ public class Utilities {
 	    		String code = jobjCLitem.get("code").isString().stringValue();
 	    		definitions.put(definition,code);
 	    	}	    	
-		    putList(definitions, myListOracle);
+		    putList(definitions, myListOracle, order);
 	    }
 	    catch (Exception e) {
 	    	GWT.log(e.getMessage());
@@ -1433,15 +1429,20 @@ public class Utilities {
 	 * 
 	 * @param definitions	{@link Map} = collection of strings
 	 * @param myListOracle	{@link MultiWordSuggestOracle} = the suggestion box to populate
+	 * @param order			{@link Boolean} = indicate if the list must be ordered alphabetically
 	 */
-	private static void putList(Map<String, String> definitions, MultiWordSuggestOracle myListOracle) {
+	private static void putList(Map<String, String> definitions, MultiWordSuggestOracle myListOracle, boolean order) {
+		List<String> suggestions = new ArrayList<String>(); 
 		if (definitions.size() >=0) {
-    		definitions = Utilities.sortMapByKey(definitions);
+    		if (order) definitions = Utilities.sortMapByKey(definitions);
     		Iterator<String> i = definitions.keySet().iterator();
     		while (i.hasNext()) {
     			String definition = i.next();
-    			myListOracle.add(definition);	    		
-		    }	    		
+    			suggestions.add(definition);    				    		
+		    }
+    		myListOracle.addAll(suggestions);
+    		// supports the show of all the terms if requested
+    		myListOracle.setDefaultSuggestionsFromText(suggestions); 
     	}
 	}
 
@@ -1472,5 +1473,168 @@ public class Utilities {
 			}
 			parentItem.setTitle(parentItem.getTitle().replace(searchFormName, newFormName));
 		} else return;		
+	}
+		
+	/**
+	 * Populate the {@link ListBox} of repositories with the values returned back by a RPC
+	 * 
+	 * @param response			{@link String} = the response of the RPC
+	 * @param myList			{@link ListBox} = the list box to populate
+	 */
+	public static void setSuggestList(String response, ListBox myList) {
+		myList.clear();
+    	myList.addItem(constants.selectValue(), "");
+    	
+    	Document messageDom = XMLParser.parse(response);
+
+        NodeList nodes = messageDom.getElementsByTagName("result");
+        Map<String,String> definitions = new LinkedHashMap<String, String>();
+        for (int i = 0; i < nodes.getLength(); i++) {
+			Node currentNode = nodes.item(i);
+			String definition_en = "";
+			String definition_lang = "";
+			String definition_uri = "";
+			for (int j = 0; j < currentNode.getChildNodes().getLength(); j++) {
+				Node currentItem = currentNode.getChildNodes().item(j);
+				// uri concept
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("v")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
+							definition_uri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();	    						
+					}
+				}
+				// literal in @en
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
+							definition_en = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+					}
+				}
+				// literal in client language
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("a")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
+							definition_lang = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+					}
+				}  
+			}
+			if (!definition_en.isEmpty()) {
+				String definition;
+				definition = definition_en; 
+				if (!definition_lang.isEmpty() && definition_lang != definition) definition = definition_lang;
+				definitions.put(definition,definition_uri);						
+			}
+		}
+        if (definitions.size() >=0) {
+    		definitions = Utilities.sortMapByKey(definitions);
+    		Iterator<String> i = definitions.keySet().iterator();
+    		while (i.hasNext()) {
+	    		String definition = i.next();
+	    		String definition_uri = definitions.get(definition);
+	    		myList.addItem(definition,definition_uri);    			
+		    }	    		
+    	}
+	}
+	
+	/**
+	 * Populate the {@link TreeItem} of suggested keywords (of a particular repository) with the values returned back by a RPC
+	 * 
+	 * @param response			{@link String} = the response of the RPC
+	 * @param myList			{@link ListBox} = the list box to populate
+	 */
+	public static void setSuggests(String response, TreeItem myList) {
+		Document messageDom = XMLParser.parse(response);
+	
+	    NodeList nodes = messageDom.getElementsByTagName("result");
+	    Map<String,String> definitions = new LinkedHashMap<String, String>();
+	    for (int i = 0; i < nodes.getLength(); i++) {
+			Node currentNode = nodes.item(i);
+			String definition_en = "";
+			String definition_lang = "";
+			String definition_uri = "";
+			String definition_avuri = "";
+			for (int j = 0; j < currentNode.getChildNodes().getLength(); j++) {
+				Node currentItem = currentNode.getChildNodes().item(j);
+				// uri concept
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("c")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
+							definition_uri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();	    						
+					}
+				}
+				// literal in @en
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
+							definition_en = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+					}
+				}
+				// literal in language
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("a")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
+							definition_lang = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+					}
+				}  
+				// does it have narrower?
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("d")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
+							definition_avuri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+					}
+				}
+			}
+			if (!definition_en.isEmpty()) {
+				String definition;
+				definition = definition_en; 
+				if (!definition_lang.isEmpty() && definition_lang != definition) definition = definition_lang;
+				if (!definition_avuri.isEmpty()) definition_uri = "1" + definition_uri;
+				else definition_uri = "0" + definition_uri;
+				definitions.put(definition,definition_uri);					
+			}
+		}
+	    if (definitions.size() >=0) {
+			definitions = Utilities.sortMapByKey(definitions);
+			Iterator<String> i = definitions.keySet().iterator();
+			while (i.hasNext()) {
+	    		String definition = i.next();
+	    		String definition_uri = definitions.get(definition);
+	    		TreeItem s = new TreeItem();
+				if (!definition_uri.isEmpty()) s.setTitle(definition_uri.substring(1));
+				s.setText(definition);				
+				//TODO Remove EUOSMEGWT.rpcRepository clause when the local resources about narrowers are available
+				if (definition_uri.substring(0,1).equalsIgnoreCase("1") && EUOSMEGWT.rpcRepository) s.addItem(constants.loading());
+				myList.addItem(s);	    				
+		    }
+			if (myList.getChild(0) != null)
+				if (myList.getChild(0).getTitle().equalsIgnoreCase(constants.loading())) myList.getChild(0).remove();
+			myList.getTree().ensureSelectedItemVisible();
+		}
+	}
+
+	/**
+	 * Return the textual resource of a repository with the topmost concepts
+	 * 
+	 * @param myRepositoryName	{@link String} = the name of the repository
+	 * 
+	 * @return {@link String} = the text corresponding to the requested textual resource
+	 */
+	public static String getResourceRepository(String myRepositoryName) {
+		String response = "";
+		if (myRepositoryName.equalsIgnoreCase("GEMET Concepts")) 
+			response=MyResources.INSTANCE.repositoryGEMET_Concepts().getText();
+    	if (myRepositoryName.equalsIgnoreCase("GEMET Groups")) 
+    		response=MyResources.INSTANCE.repositoryGEMET_Groups().getText();   		
+    	if (myRepositoryName.equalsIgnoreCase("GEMET Themes")) 
+    		response=MyResources.INSTANCE.repositoryGEMET_Themes().getText();
+    	if (myRepositoryName.equalsIgnoreCase("GEOSS Societal Benefit Areas"))
+    		response=MyResources.INSTANCE.repositoryGEOSS_Societal_Benefit_Areas().getText();    		
+    	if (myRepositoryName.equalsIgnoreCase("INSPIRE Feature Concept Dictionary")) 
+    		response=MyResources.INSTANCE.repositoryINSPIRE_Feature_Concept_Dictionary().getText();
+    	if (myRepositoryName.equalsIgnoreCase("INSPIRE Glossary")) 
+    		response=MyResources.INSTANCE.repositoryINSPIRE_Glossary().getText();
+    	if (myRepositoryName.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) 
+    		response=MyResources.INSTANCE.repositoryISO_19119_geographic_services_taxonomy().getText();
+    	return response;
 	}
 }

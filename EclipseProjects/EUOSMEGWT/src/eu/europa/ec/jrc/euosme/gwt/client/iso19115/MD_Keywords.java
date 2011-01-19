@@ -34,7 +34,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
  * Create MD_Keywords model
  * Provides category keywords, their type, and reference source.
  * 
- * @version 4.0 - December 2010
+ * @version 4.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Keywords extends CI {
@@ -46,10 +46,10 @@ public class MD_Keywords extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** keyword control declaration */
-	CharacterString keywordObj = new CharacterString(constants.keywordValue(), "keywordValue", true, CheckFunctions.normal);
+	CharacterString keywordObj = new CharacterString(constants.keywordValue(), "keywordvalue", true, CheckFunctions.normal, false);
 	
 	/** type control declaration */
-	CodeList typeObj =	new CodeList(constants.keywordType(),"",false,"8","");
+	CodeList typeObj =	new CodeList(constants.keywordType(),"",false,"8","",true);
 	
 	/** thesaurus control declaration */
 	CI_Citation thesaurusObj = new CI_Citation(constants.originatingControlledVocabulary(),false,false);
@@ -90,7 +90,7 @@ public class MD_Keywords extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			typeObj.setVisible(false);
 		}
 		thesaurusObj.setInterface(1);		

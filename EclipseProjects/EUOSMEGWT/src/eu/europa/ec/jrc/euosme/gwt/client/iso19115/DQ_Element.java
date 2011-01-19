@@ -33,7 +33,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
  * Create DQ_Element model
  * Aspect of quantitative quality information
  * 
- * @version 2.0 - October 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class DQ_Element extends CI {
@@ -48,7 +48,7 @@ public class DQ_Element extends CI {
  	MD_Identifier mdIdentifierObj =	new MD_Identifier(constants.measureIdentification(), false, false);
 	
  	/** {@link DQ_ConformanceResult} element declaration */
-	DQ_ConformanceResult resultObj = new DQ_ConformanceResult(constants.result(),true,false);
+	DQ_ConformanceResult resultObj = new DQ_ConformanceResult(constants.result(), true, false);
 			
 	/** 
      * constructor DQ_Element model
@@ -83,7 +83,7 @@ public class DQ_Element extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			mdIdentifierObj.setInterface(0);
 			mdIdentifierObj.setVisible(false);
 			resultObj.removeDisclosure();

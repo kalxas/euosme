@@ -34,7 +34,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create CI_Citation model
  * Citation data for the resource
  * 
- * @version 4.0 - December 2010
+ * @version 4.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class CI_Citation extends CI {
@@ -46,10 +46,10 @@ public class CI_Citation extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** title control declaration */
-	CharacterString titleObj = new CharacterString(constants.title(), "", true, CheckFunctions.normal);
+	CharacterString titleObj = new CharacterString(constants.title(), "", true, CheckFunctions.normal, true);
 	
 	/** alternateTitle control declaration */
-	CharacterString alternateTitleObj = new CharacterString(constants.alternateTitle(), "", false, CheckFunctions.normal);
+	CharacterString alternateTitleObj = new CharacterString(constants.alternateTitle(), "", false, CheckFunctions.normal, true);
 	
 	/** identifier control declaration */
 	MD_Identifier identifierObj =	new MD_Identifier(constants.md_identifier(),false, true);
@@ -106,7 +106,7 @@ public class CI_Citation extends CI {
 			if (i==0) { // TAB Identification
 				alternateTitleObj.setVisible(false);
 				titleObj.setLabel(constants.resourceTitle());
-				titleObj.setHelpAnchor("resourceTitle");
+				titleObj.setHelpAnchor("resourcetitle");
 				// remove dates because are in conflict with tab temporal (publication date has the same xpath)
 				dateObj.setVisible(false);
 				dateContainerObj.setVisible(false);

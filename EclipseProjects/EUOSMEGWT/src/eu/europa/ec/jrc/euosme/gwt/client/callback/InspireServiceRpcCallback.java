@@ -64,7 +64,7 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	    		return;
 	    	}
     	}
-	    else MainPanel.myHTML.setHTML(result);
+	    else MainPanel.myHTML.setUrl("temp/" + result);
     }
 
     /* (non-Javadoc)

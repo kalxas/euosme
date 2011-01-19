@@ -31,7 +31,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create CI_Contact model
  * It refers to Information required enabling contact with the responsible person and/or organization
  * 
- * @version 3.0 - October 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class CI_Contact extends CI {
@@ -52,10 +52,10 @@ public class CI_Contact extends CI {
 	CI_OnlineResource onlineResourceObj = new CI_OnlineResource(constants.ci_onlineResource(), false, false);
 	
 	/** hoursOfService control declaration */
-	CharacterString hoursOfServiceObj = new CharacterString(constants.hoursOfService(), "",false, CheckFunctions.integer);
+	CharacterString hoursOfServiceObj = new CharacterString(constants.hoursOfService(), "", false, CheckFunctions.integer, true);
 	
 	/** contactInstructions control declaration */
-	CharacterString contactInstructionsObj = new CharacterString(constants.contactInstructions(),"", false, CheckFunctions.normal);
+	CharacterString contactInstructionsObj = new CharacterString(constants.contactInstructions(), "", false, CheckFunctions.normal, true);
 	
 	/** 
      * constructor CI_Contact model

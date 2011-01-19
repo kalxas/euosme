@@ -31,7 +31,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
  * TM_Primitive is class representing a non-decomposed element of geometry or topology. 
  * This ISO class is fully documented in ISO 19108
  * 
- * @version 3.0 - November 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TM_Primitive extends CI {
@@ -43,10 +43,10 @@ public class TM_Primitive extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** Date control declaration */
-	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "temporalExtent", true);
+	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "temporalextent", true);
 	
 	/** Date control declaration */
-	DateImpl endDateObj =	new DateImpl(constants.endDate(), "temporalExtent", true);
+	DateImpl endDateObj =	new DateImpl(constants.endDate(), "temporalextent", true);
 	
 	/** 
      * constructor TM_Primitive model

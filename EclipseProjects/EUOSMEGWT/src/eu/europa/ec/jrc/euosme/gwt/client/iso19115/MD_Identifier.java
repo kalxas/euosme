@@ -39,7 +39,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
  * Create MD_Identifier model
  * Value uniquely identifying an object within a namespace
  * 
- * @version 3.0 - October 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class MD_Identifier extends CI {
@@ -51,16 +51,16 @@ public class MD_Identifier extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** code control declaration */
-	CharacterString codeObj = new CharacterString(constants.code(), "resourceIdentifier", true, CheckFunctions.normal);
+	CharacterString codeObj = new CharacterString(constants.code(), "resourceidentifier", true, CheckFunctions.normal, true);
 	
 	/** button to get a new code */
 	Button getCodeButton = new Button();
 	
 	/** codeSpace control declaration */
-	CharacterString codeSpaceObj = new CharacterString(constants.codeSpace(), "", false, CheckFunctions.normal);
+	CharacterString codeSpaceObj = new CharacterString(constants.codeSpace(), "resourceidentifier", false, CheckFunctions.normal, true);
 	
 	/** version control declaration */
-	CharacterString versionObj = new CharacterString(constants.version(), "", false, CheckFunctions.normal);
+	CharacterString versionObj = new CharacterString(constants.version(), "", false, CheckFunctions.normal, true);
 	
 	/** 
      * constructor MD_Identifier model
@@ -98,7 +98,7 @@ public class MD_Identifier extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			if (i==0) {
 				codeObj.setMyValue("Conformity_001");
 				codeSpaceObj.setMyValue("INSPIRE");

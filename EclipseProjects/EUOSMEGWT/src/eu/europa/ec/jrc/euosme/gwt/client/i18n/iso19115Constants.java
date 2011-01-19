@@ -586,4 +586,10 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("INSPIRE services failed")	
 	String inspireServiceFailed();
+
+	@DefaultStringValue("Press ENTER to get all suggestions.")	
+	String helpCodeList();
+
+	@DefaultStringValue("INSPIRE Spatial dataset GEOSS")
+	String newSpatialDatasetGEOSS();
 }

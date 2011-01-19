@@ -35,7 +35,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
  * Create CI_ResponsibleParty model
  * Point of contact(s) associated with the resource(s) or responsible party for the metadata information
  * 
- * @version 4.0 - December 2010
+ * @version 4.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class CI_ResponsibleParty extends CI {
@@ -47,19 +47,19 @@ public class CI_ResponsibleParty extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** individualName control declaration */
-	CharacterString individualNameObj =	new CharacterString(constants.individualName(), "", false, CheckFunctions.normal);
+	CharacterString individualNameObj =	new CharacterString(constants.individualName(), "", false, CheckFunctions.normal, true);
 	
 	/** organisationName control declaration */
-	CodeListFree organisationNameObj = new CodeListFree(constants.organisationName(), "contact", false, "11","",CheckFunctions.normal,true);
+	CodeListFree organisationNameObj = new CodeListFree(constants.organisationName(), "contact", false, "11","",CheckFunctions.normal, true, true);
 	
 	/** positionName control declaration */
-	CharacterString positionNameObj = new CharacterString(constants.positionName(), "", false, CheckFunctions.normal);
+	CharacterString positionNameObj = new CharacterString(constants.positionName(), "", false, CheckFunctions.normal, true);
 	
 	/** contactInfo control declaration */
 	CI_Contact contactInfoObj =	new CI_Contact(constants.ci_contact(),false, false);
 			
 	/** role control declaration */
-	CodeList roleObj =	new CodeList(constants.role(),"organization",true,"4","");
+	CodeList roleObj =	new CodeList(constants.role(),"organization",true,"4","", true);
 	
 	/** 
      * constructor CI_ResponsibleParty model
@@ -106,7 +106,7 @@ public class CI_ResponsibleParty extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			organisationNameObj.setRequired(true);
 			individualNameObj.setVisible(false);
 			positionNameObj.setVisible(false);
@@ -133,10 +133,8 @@ public class CI_ResponsibleParty extends CI {
 				roleObj.setVisible(false);
 			}
 			organisationNameObj.setShowList(false);
-			organisationNameObj.labelList.setVisible(false);			
 		}
 		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
-			organisationNameObj.labelList.setVisible(true);
 			organisationNameObj.setShowList(true);
 		}
 	}

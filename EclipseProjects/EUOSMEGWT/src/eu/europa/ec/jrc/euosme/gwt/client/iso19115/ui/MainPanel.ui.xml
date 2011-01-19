@@ -95,7 +95,7 @@
    				<g:StackLayoutPanel unit='PX'>
   					<g:stack>
     					<g:customHeader size='30'><g:HorizontalPanel><g:Label><ui:msg description="Basic" key="Basic">Basic</ui:msg></g:Label><g:Button ui:field="refreshHTML"/></g:HorizontalPanel></g:customHeader>
-    					<g:HTML ui:field="myHTML"/>    					
+    					<g:Frame ui:field="myHTML"/>					
   					</g:stack>
   					<g:stack>
     					<g:header size='30'><ui:msg description="Advanced" key="Advanced">Advanced</ui:msg></g:header>

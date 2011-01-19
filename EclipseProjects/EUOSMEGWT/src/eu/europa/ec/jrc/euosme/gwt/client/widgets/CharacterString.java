@@ -45,7 +45,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 /**
  * Create an horizontal panel with a label and a text box
  * 
- * @version 5.0 - December 2010
+ * @version 6.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class CharacterString extends Composite {
@@ -88,21 +88,26 @@ public class CharacterString extends Composite {
 	/** Relation between the form element and the tree item */
 	private TreeItem myTreeItem;
 	
+	/** True indicates that OnBlur event updates automatically the value in the tree */
+	private boolean autoupdate=true;
+	
 	/** 
      * constructor CharacterString: 0..1 (String)
      * 
-     * @param label		{@link String} = the label of the field
-     * @param help		{@link String} = the anchor in the help
-     * @param required	{@link Boolean} = if it is true, the field is mandatory
-     * @param check		{@link CheckFunctions} = the format of the string
+     * @param label				{@link String} = the label of the field
+     * @param help				{@link String} = the anchor in the help
+     * @param required			{@link Boolean} = if it is true, the field is mandatory
+     * @param check				{@link CheckFunctions} = the format of the string
+     * @param autoupdatetree	{@link Boolean} = if it is true, automatically update correspondent tree item's value
      * 
      * @return	the widget composed by an horizontal panel made up a label and a single-line text box
      */
-	public CharacterString(String label, String help, boolean required, CheckFunctions check) {
+	public CharacterString(String label, String help, boolean required, CheckFunctions check, boolean autoupdatetree) {
 		// Set global variables
 		isRequired = required;
 		checkFunction = check;
 		helpAnchor = help;
+		autoupdate = autoupdatetree;
 		
 		// Initialize widget
 		initWidget(uiBinder.createAndBindUi(this));
@@ -266,7 +271,7 @@ public class CharacterString extends Composite {
 	 */
 	@UiHandler("myTextBox")
 	void onBlur(BlurEvent event) {
-		Utilities.setTextTreeItem(myTreeItem,myTextBox.getText());		
+		if (autoupdate) Utilities.setTextTreeItem(myTreeItem,myTextBox.getText());		
 		myCheck();
 	}
 }

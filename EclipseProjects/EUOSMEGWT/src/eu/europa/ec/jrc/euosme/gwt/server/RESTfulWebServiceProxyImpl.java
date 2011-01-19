@@ -25,6 +25,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
@@ -103,125 +104,15 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         		if (paramName.equalsIgnoreCase("repositories")) {
         			uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
         		}
-        		if (paramName.equalsIgnoreCase("narrower")) {
+        		if (paramName.equalsIgnoreCase("narrower") || paramName.equalsIgnoreCase("repository")) {
     				uri = repositories;
     				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-    				String query="PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n" +
-					"PREFIX owl2xml:<http://www.w3.org/2006/12/owl2-xml#>\n" +
-					"PREFIX dct:<http://purl.org/dc/terms/>\n" +
-					"PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>\n" +
-					"PREFIX owl:<http://www.w3.org/2002/07/owl#>\n" +
-					"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-					"PREFIX inspire:<http://inspire-registry.jrc.ec.europa.eu/rdfschema/inspire-schema.rdf#>\n" +
-					"PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n" +
-					"\n" +
-					"SELECT DISTINCT ?c ?l ?a ?d\n" +
-					"WHERE {\n" +
-					"  {\n" +
-					"    ?c skos:prefLabel ?l.\n" +
-					"    ?c skos:broader <" + extraValue + ">.\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:narrower ?n.\n" +
-					"      ?n skos:inScheme ?d.\n" +
-					"    }\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:prefLabel ?a.\n" +
-					"      FILTER ( LANG(?a) = \"" + clientLanguage + "\" )\n" +
-					"    }\n" +
-					"    FILTER ( LANG(?l) = \"en\")\n" +
-					"  }\n" +
-					"  UNION\n" +
-					"  {\n" +
-					"    ?c skos:prefLabel ?l.\n" +
-					"    <" + extraValue + "> skos:member ?c.\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:narrower ?n.\n" +
-					"      ?n skos:inScheme ?d.\n" +
-					"    }\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:prefLabel ?a.\n" +
-					"      FILTER ( LANG(?a) = \"" + clientLanguage + "\" )\n" +
-					"    }\n" +
-					"    FILTER ( LANG(?l) = \"en\")\n" +
-					"  }\n" +
-					"  UNION\n" +
-					"  {\n" +
-					"    ?c rdfs:label ?l.\n" +
-					"    ?c skos:broader <" + extraValue + ">.\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:narrower ?n.\n" +
-					"      ?n skos:inScheme ?d.\n" +
-					"    }\n" +
-					"    OPTIONAL {\n" +
-					"      ?c skos:member ?n.\n" +
-					"      ?n skos:inScheme ?d.\n" +
-					"    }\n" +
-					"    OPTIONAL {\n" +
-					"      ?c rdfs:label ?a.\n" +
-					"      FILTER ( LANG(?a) = \"" + clientLanguage + "\" )\n" +
-					"    }\n" +
-					"    FILTER ( LANG(?l) = \"en\")\n" +
-					"  }\n" +
-					"}\n";
+    				String query = getContents("query_" + paramName + ".rq");
+    				query = query.replace("##extraValue##",extraValue);
+    				query = query.replace("##clientLanguage##",clientLanguage);
+    				query = query.replace("##filter##",filter);
 					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
     				urlParameters+="&limit=" + limit + "&infer=true";    				
-        		}    		
-        		if (paramName.equalsIgnoreCase("repository")) {
-        				uri = repositories;
-        				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-        				String query="PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n" +
-        				"PREFIX owl2xml:<http://www.w3.org/2006/12/owl2-xml#>\n" +
-        				"PREFIX dct:<http://purl.org/dc/terms/>\n" +
-        				"PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>\n" +
-        				"PREFIX owl:<http://www.w3.org/2002/07/owl#>\n" +
-        				"PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
-        				"PREFIX inspire:<http://inspire-registry.jrc.ec.europa.eu/rdfschema/inspire-schema.rdf#>\n" +
-        				"PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n" +
-        				"\n" +
-        				"SELECT DISTINCT ?c ?l ?a ?d\n"+
-        				"WHERE {\n"+
-        				"  {\n" +
-        				"    ?c skos:prefLabel ?l." +
-        				"    ?c skos:inScheme <" + extraValue + ">.\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c skos:broader ?b.\n" +
-        				"    }\n" +
-        				"    OPTIONAL {\n"+
-        				"    ?c skos:narrower ?n.\n"+
-        				"    ?n skos:inScheme ?d.\n"+
-        				"    }\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c skos:prefLabel ?a.\n"+
-        				"      FILTER ( LANG(?a) = \"" + clientLanguage + "\" )\n"+
-        				"    }\n"+
-        				"    FILTER ( LANG(?l) = \"en\" && !BOUND(?b) )\n";
-        				if (!filter.isEmpty()) query+="    FILTER (regex(str(?l),\"^" + filter + "\",\"i\"))\n";
-        				query+="  }\n"+
-        				"  UNION\n"+
-        				"  {\n"+
-        				"    ?c rdfs:label ?l.\n"+
-        				"    ?c skos:inScheme <" + extraValue + ">.\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c skos:broader ?b.\n"+
-        				"    }\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c skos:narrower ?n.\n"+
-        				"      ?n skos:inScheme ?d.\n"+
-        				"    }\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c skos:member ?n.\n"+
-        				"      ?n skos:inScheme ?d.\n"+
-        				"    }\n"+
-        				"    OPTIONAL {\n"+
-        				"      ?c rdfs:label ?a.\n"+
-        				"      FILTER ( LANG(?a) = \"" + clientLanguage + "\" )\n"+
-        				"    }\n"+
-        				"    FILTER ( LANG(?l) = \"en\" && !BOUND(?b) )\n";
-        				if (!filter.isEmpty()) query+="    FILTER (regex(str(?l),\"^" + filter + "\",\"i\"))\n";
-        				query+="  }\n"+
-        				"}\n";
-        				urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-        				urlParameters+="&limit=" + limit + "&infer=true";        				
         		}
         		Authenticator.setDefault(new MyAuthenticator());
         	}        	
@@ -249,9 +140,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
                 if (status != 200)
                 	if (status == 401) return "AUTHENTICATIONFAILED";
                 	else throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
-                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();
-                //else encoding = "ISO-8859-1";
-              
+                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();              
             }           	
             if (paramName.equalsIgnoreCase("codelists")) {            	
             	uc.setDoOutput(false);
@@ -262,8 +151,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
             	int status = uc.getResponseCode();
                 if (status != 200)
                     throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
-                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();
-              
+                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();              
             }                                  
             BufferedReader d = new BufferedReader(new InputStreamReader(uc.getInputStream(), encoding));
             StringBuilder buffer = new StringBuilder(16384);
@@ -479,7 +367,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 		return null;
 	}
 	
-	public String invokeInspireMetadataConverterService(String XMLTree, String clientLanguage) 
+	public String invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename) 
  	throws RESTfulWebServiceException {
 		try {
             URL u = new URL(inspireWebService + "resources/INSPIREResource");
@@ -508,8 +396,17 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	            }
 	        } finally {
 	        	d.close();
-	        }		 
-            return buffer.toString();
+	        }
+	        // Write file
+	        ServletContext context = getServletConfig().getServletContext();
+	    	String dir = "";
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			else dir = context.getRealPath("temp");
+			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + filename ), "UTF-8"));
+         	out.append(buffer.toString());
+        	out.flush();
+       		out.close();
+       		return filename;
        } 
        catch (MalformedURLException e) {
        	throw new RESTfulWebServiceException(e.getMessage(), e);
@@ -551,5 +448,119 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
        catch (IOException e) {
            throw new RESTfulWebServiceException(e.getMessage(), e);
        }		
+	}	
+	
+	public String invokeCacheRepositoryRESTfulWebService(String resource, String repository) 
+	throws RESTfulWebServiceException {
+		//String listResource = "@Source(\"repository/" + resource + ".cache.json\")\npublic TextResource " + resource + "();";
+    	
+		try {
+	    	String uri = repositories;
+			String urlParameters = "";
+	    	String encoding = "UTF-8";
+	    	
+	    	// set temporary directory where create files
+	    	ServletContext context = getServletConfig().getServletContext();
+	    	String dir = "";
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			else dir = context.getRealPath("temp");
+			
+			// call the service for each language
+			String[] languages={"bg","cs","da","de","el","en","es","et","fi","fr","hu","it","lt","lv","mt","nl","pl","pt","ro","sk","sl","sv"};
+    		for (int i = 0; i<languages.length; i++ ) {
+    			String clientLanguage = languages[i];
+    			
+    			// query the service and, for each keyword found, create the cache file
+				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
+				String query = getContents("query_repository.rq");
+				query = query.replace("##extraValue##",repository);
+				query = query.replace("##clientLanguage##",clientLanguage);
+				query = query.replace("##filter##","");
+				urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
+				urlParameters+="&limit=" + limit + "&infer=true";    				
+    			
+				Authenticator.setDefault(new MyAuthenticator());
+        	
+    			URL u = new URL(uri);
+    			HttpURLConnection uc = (HttpURLConnection) u.openConnection();
+               	uc.setRequestMethod("POST");
+                uc.setRequestProperty("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+                uc.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
+                uc.setRequestProperty("Content-Language", clientLanguage );
+                uc.setUseCaches (false);
+                uc.setDoInput(true);
+                uc.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream (uc.getOutputStream ());
+                wr.writeBytes (urlParameters);
+                wr.flush ();
+                wr.close ();
+                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();
+                int status = uc.getResponseCode();
+	            if (status != 200)
+	                throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
+	            if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();            
+		        BufferedReader d = new BufferedReader(new InputStreamReader(uc.getInputStream(), encoding));
+		        StringBuilder buffer = new StringBuilder(16384);
+		        try {
+		        	String line;
+		            while ((line = d.readLine()) != null) {
+		            	buffer.append(line.trim());                	
+		            }
+		        } finally {
+		        	d.close();
+		        }		        
+	    		try {
+	    			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + resource + "_" + clientLanguage + ".cache.xml" ), "UTF-8"));
+	             	out.append(buffer.toString());
+	            	out.flush();
+	           		out.close();
+	           		if (clientLanguage.equalsIgnoreCase("en")) {
+	           			Writer outOriginal = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + resource + ".cache.xml" ), "UTF-8"));
+	           			outOriginal.append(buffer.toString());
+	           			outOriginal.flush();
+	           			outOriginal.close();
+	           		}
+	    		}
+	           	catch (IOException e)    {   
+	        	   	e.printStackTrace();
+	        	}
+            }	    
+    	} 
+	    catch (MalformedURLException e) {
+	    	throw new RESTfulWebServiceException(e.getMessage(), e);
+	    }
+	    catch (IOException e) {
+	        throw new RESTfulWebServiceException(e.getMessage(), e);
+	    }
+		//return listResource;
+	    return null;
 	}
-}                
+
+	private String getContents(String filename) {
+		String dir = "";
+		ServletContext context = getServletConfig().getServletContext();			
+		if (context.getRealPath("scripts")==null) dir = context.getRealPath("/euosme/scripts");
+		else dir = context.getRealPath("scripts");
+		
+		File aFile = new File(dir + "/" + filename);
+		
+	    StringBuilder contents = new StringBuilder();
+	    try {
+	    	BufferedReader input =  new BufferedReader(new FileReader(aFile));
+	    	try {
+	    		String line = null; //not declared within while loop
+	    		while (( line = input.readLine()) != null){
+	    			contents.append(line);
+	    			contents.append(System.getProperty("line.separator"));
+	    		}
+	    	}
+	    	finally {
+	    		input.close();
+	    	}
+	    }
+	    catch (IOException ex){
+	    	ex.printStackTrace();
+	    }	    
+	    return contents.toString();
+	  }
+}        

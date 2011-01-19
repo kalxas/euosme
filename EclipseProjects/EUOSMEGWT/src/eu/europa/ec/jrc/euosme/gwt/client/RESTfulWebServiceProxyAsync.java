@@ -26,7 +26,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 /**
  * Remote service asynchronous interface for {@link RESTfulWebServiceProxy}
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - January 2011
  * @author 	Marzia Grasso
  */
 public interface RESTfulWebServiceProxyAsync {
@@ -39,8 +39,10 @@ public interface RESTfulWebServiceProxyAsync {
 	
 	public void invokeValidationService(String XMLTree, AsyncCallback<String> callback);
 
-	public void invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, AsyncCallback<String> callback);
+	public void invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename, AsyncCallback<String> callback);
 
 	public void invokeInspireUUIDService(AsyncCallback<String> callback);
+
+	public void invokeCacheRepositoryRESTfulWebService(String resource, String repository, AsyncCallback<String> callback);
 	
 }

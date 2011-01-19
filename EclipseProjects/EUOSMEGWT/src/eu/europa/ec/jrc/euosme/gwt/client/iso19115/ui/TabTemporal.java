@@ -38,7 +38,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Temporal
  * 
- * @version 2.0 - November 2010
+ * @version 2.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabTemporal extends Composite {
@@ -119,7 +119,7 @@ public class TabTemporal extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			publicationDateObj.dateObj.setRequired(false);
 			revisionDateObj.dateObj.setRequired(false);
 		}

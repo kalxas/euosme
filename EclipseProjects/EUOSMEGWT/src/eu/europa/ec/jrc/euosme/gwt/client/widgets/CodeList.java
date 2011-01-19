@@ -49,7 +49,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a label and a list box 
  * The list items come from an external code list service
  * 
- * @version 5.0 - December 2010
+ * @version 6.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class CodeList extends Composite  {
@@ -90,7 +90,10 @@ public class CodeList extends Composite  {
 	private String helpAnchor="";
 	
 	/** Relation between the form element and the tree item */
-	private TreeItem myTreeItem;	
+	private TreeItem myTreeItem;
+	
+	/** true to order the suggestions alphabetically */
+	private boolean orderList = true;
 	
 	/** 
      * constructor CodeList
@@ -99,14 +102,16 @@ public class CodeList extends Composite  {
      * @param required			{@link Boolean} = if it is true, the field is mandatory
      * @param myListName		{@link String} = name of the code list to get
      * @param myDefaultValue	{@link String} = the default value
+     * @param order				{@link Boolean} = indicate if the list must be ordered alphabetically 
      * 
      * @return	the widget composed by an horizontal panel made up a label and a single-line text box
      */
-	public CodeList(String label, String help, boolean required, String myListName, String myDefaultValue) {
+	public CodeList(String label, String help, boolean required, String myListName, String myDefaultValue, boolean order) {
 		// Set global variables
 		isRequired = required;
 		codeListName = myListName;
 		helpAnchor = help;
+		orderList = order;
 		
 		// Initialize widget
 		initWidget(uiBinder.createAndBindUi(this));
@@ -123,7 +128,7 @@ public class CodeList extends Composite  {
 		if (EUOSMEGWT.rpcCodeList)
 			invokeRESTfulWebService(codeListName, myListBox, myDefaultValue);
 		else
-			Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), myListBox, myDefaultValue);
+			Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), myListBox, myDefaultValue, order);
 		
 		//Set Error Label widget	
 		myError.setVisible(false);	
@@ -225,6 +230,13 @@ public class CodeList extends Composite  {
 	}
 	
 	/**
+	 * @param b	{@link Boolean} = true to order suggestions alphabetically
+	 */
+	public void setOrderList(boolean b) {
+		orderList = b;		
+	}
+	
+	/**
      * This is called whenever a user press a key (tab, for instance) and force the field check
      * 
      * @see onKeyPress
@@ -286,6 +298,7 @@ public class CodeList extends Composite  {
 		CodeListRpcCallback callback = new CodeListRpcCallback();
 		callback.setList(myListRPC, myDefaultValue);
 		callback.setCodeListName(codeListName);
+		callback.setOrderList(orderList);
 		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 		ls.invokeGetRESTfulWebService("codelists", codeListName, LocaleInfo.getCurrentLocale().getLocaleName(), "", callback);
 	}

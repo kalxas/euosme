@@ -44,9 +44,9 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
@@ -96,8 +96,8 @@ public class MainPanel extends Composite {
 	
 	/** HTML version of the metadata */
 	@UiField
-	public static HTML myHTML;
-	
+	public static Frame myHTML;
+		
 	/** menu declaration */
 	@UiField(provided = true)
 	MenuBar menuBar = new MenuBar();
@@ -149,7 +149,6 @@ public class MainPanel extends Composite {
 		
 		/** MENU ----------------------------------------------------------------*/
 		// Menu NEW
-		
 		MenuBar newMenu = new MenuBar(true);        
         Command cmd2 = new Command() {
             public void execute() {
@@ -221,10 +220,16 @@ public class MainPanel extends Composite {
             public void execute() {     
             	CodeListRpcCallback callback = new CodeListRpcCallback();
         		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-        		ls.invokeUpdateRESTfulWebService(callback);  	
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Concepts","http://www.eionet.europa.eu/gemet/concept/", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Groups","http://www.eionet.europa.eu/gemet/group/", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Themes","http://www.eionet.europa.eu/gemet/theme/", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEOSS_Societal_Benefit_Areas","http://iaaa.unizar.es/thesaurus/SBA_EuroGEOSS", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Feature_Concept_Dictionary","http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Glossary","http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", callback);
             }			
         };
-        menuBar.addItem("Update codelist", cmdUpdate);*/
+        menuBar.addItem("cache", cmdUpdate);*/
         
         /** EVENTS management ------------------------------------------------------------*/
         // event.ONCLICK is used to add elements during load file action
@@ -254,14 +259,13 @@ public class MainPanel extends Composite {
 		refreshHTML.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				myHTML.setHTML(new Image(MyResources.INSTANCE.loadingImg()).toString());
 				//get XML tree structure
 				String myXMLTree = getXMLTree();
 				// call service via RPC
 				InspireServiceRpcCallback callback = new InspireServiceRpcCallback();
 				InspireServiceRpcCallback.setType("HTML");
 				RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-				ls.invokeInspireMetadataConverterService(myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),callback);			
+				ls.invokeInspireMetadataConverterService(myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),getFileName().replace(".xml",".htm"),callback);			
 			}			
 		});
 		refreshHTML.setHTML(constants.refresh());
@@ -526,6 +530,7 @@ public class MainPanel extends Composite {
 			if (Integer.signum(myNum)==-1) myNum=-(myNum);
 			tmpFileName = Integer.toHexString(myNum);
 			tmpFileName += ".xml";
+			fileIdentifier.setAttribute("value", tmpFileName);
 		}
 		return tmpFileName;		
 	}

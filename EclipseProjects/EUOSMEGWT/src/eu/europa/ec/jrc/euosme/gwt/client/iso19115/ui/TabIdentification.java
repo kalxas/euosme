@@ -43,7 +43,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
 /**
  * Create the tab Identification
  * 
- * @version 3.0 - December 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabIdentification extends Composite {
@@ -68,11 +68,11 @@ public class TabIdentification extends Composite {
 	
 	/** abstract control declaration */
 	@UiField(provided = true)
-	CharacterStringLong abstractObj = new CharacterStringLong(constants.resourceAbstract(), "resourceAbstract", true);
+	CharacterStringLong abstractObj = new CharacterStringLong(constants.resourceAbstract(), "resourceabstract", true);
 	
 	/** role control declaration */
 	@UiField(provided = true)
-	CodeList resourceTypeObj =	new CodeList(constants.resourceType(),"resourceType",true,"6","dataset");
+	CodeList resourceTypeObj =	new CodeList(constants.resourceType(),"resourcetype",true,"6","dataset",true);
 
 	/** onlineResource control declaration */
 	CI_OnlineResource onlineResourceObj =	new CI_OnlineResource(constants.resourceLocator(), false, true);
@@ -81,11 +81,11 @@ public class TabIdentification extends Composite {
 	
 	/** language control declaration */
 	@UiField(provided = true)
-	CodeListMultiple languageObj =	new CodeListMultiple(constants.resourceLanguage(),"resourceLanguage",true,"2","");
+	CodeListMultiple languageObj =	new CodeListMultiple(constants.resourceLanguage(),"resourcelanguage",true,"2","",true);
 
 	/** coupled resource declaration */
 	@UiField(provided = true)
-	CharacterStringMultiple operatesOnObj = new CharacterStringMultiple(constants.coupledResource(), "coupledResource", false, CheckFunctions.URL);
+	CharacterStringMultiple operatesOnObj = new CharacterStringMultiple(constants.coupledResource(), "coupledresource", false, CheckFunctions.URL);
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)
@@ -136,7 +136,7 @@ public class TabIdentification extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			CI_CitationObj.setInterface(0);
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) languageObj.setVisible(false);
 			else operatesOnObj.setVisible(false);

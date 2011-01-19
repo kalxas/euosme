@@ -41,7 +41,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  * 
- * @version 4.0 - December 2010
+ * @version 5.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class EUOSMEGWT implements EntryPoint {
@@ -56,6 +56,8 @@ public class EUOSMEGWT implements EntryPoint {
 	public static String apiMapstraction = "openlayers";
 	/** true, all the disclosure panels are opened; false, the disclosure panels are opened only if the content is required */
 	public static boolean showAll = false;
+	/** true, the application uses the online repositories; false, the application uses the local resources */
+	public static boolean rpcRepository = false;	
 	
 	// The following variables are changed during loading by the application	
 	/** Indicates the availability of online service that is connected to the respositories */

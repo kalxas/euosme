@@ -27,7 +27,7 @@ import com.google.gwt.resources.client.TextResource;
 /**
  * {@link ClientBundle} resources
  * 
- * @version 1.1 - November 2010
+ * @version 2.0 - January 2011
  * @author 	Marzia Grasso
  */
 public interface MyResources extends ClientBundle{
@@ -80,4 +80,28 @@ public interface MyResources extends ClientBundle{
 
 	@Source("codeLists/12.txt")
 	public TextResource codeList12();
+	
+	@Source("repositories/Repositories.cache.xml")
+	public TextResource repositoryList();
+	
+	@Source("repositories/GEMET_Concepts.cache.xml")
+	public TextResource repositoryGEMET_Concepts();
+
+	@Source("repositories/GEMET_Groups.cache.xml")
+	public TextResource repositoryGEMET_Groups();
+
+	@Source("repositories/GEMET_Themes.cache.xml")
+	public TextResource repositoryGEMET_Themes();
+
+	@Source("repositories/GEOSS_Societal_Benefit_Areas.cache.xml")
+	public TextResource repositoryGEOSS_Societal_Benefit_Areas();
+
+	@Source("repositories/INSPIRE_Feature_Concept_Dictionary.cache.xml")
+	public TextResource repositoryINSPIRE_Feature_Concept_Dictionary();
+	
+	@Source("repositories/INSPIRE_Glossary.cache.xml")
+	public TextResource repositoryINSPIRE_Glossary();
+	
+	@Source("repositories/ISO_19119_geographic_services_taxonomy.cache.xml")
+	public TextResource repositoryISO_19119_geographic_services_taxonomy();
 }

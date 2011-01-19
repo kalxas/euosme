@@ -29,7 +29,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 /**
  * Contains the implementation of the callback class from init configuration
  * 
- * @version 1.0 - December 2010
+ * @version 1.1 - January 2011
  * @author 	Marzia Grasso 
  */
 public class InitRpcCallback implements AsyncCallback <Map<String,String>> {
@@ -56,6 +56,8 @@ public class InitRpcCallback implements AsyncCallback <Map<String,String>> {
     	// true, all the disclosure panels are opened; false, the disclosure panels are opened only if the content is required
     	if (result.get("showAll")!=null)
     	   	EUOSMEGWT.showAll = Boolean.parseBoolean(result.get("showAll"));
+    	if (result.get("rpcRepository")!=null)
+    	   	EUOSMEGWT.rpcRepository = Boolean.parseBoolean(result.get("rpcRepository"));
     	
     	EUOSMEGWT.startup();
     }

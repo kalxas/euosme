@@ -39,7 +39,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
 /**
  * Create the tab metadata
  * 
- * @version 3.0 - December 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabMetadata extends Composite {
@@ -69,7 +69,7 @@ public class TabMetadata extends Composite {
 	
 	/** resource language control declaration */
 	@UiField(provided = true)
-	CodeList languageObj = new CodeList(constants.metadataLanguage(),"metadata_language",false,"2","eng");
+	CodeList languageObj = new CodeList(constants.metadataLanguage(),"metadata_language",false,"2","eng",true);
 	
 	/** file identifier control declaration  */
 	@UiField(provided = true)
@@ -119,7 +119,7 @@ public class TabMetadata extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			languageObj.setRequired(true);
 			responsiblePartyContainerObj.setLabel(constants.pointOfContactINSPIRE());
 			responsiblePartyObj.setInterface(0);

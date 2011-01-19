@@ -45,6 +45,8 @@ public class InitServiceProxyImpl extends RemoteServiceServlet implements InitSe
         settings.put("apiMapstraction",apiMapstraction);
         String showAll = config.getInitParameter("showAll");
         settings.put("showAll",showAll);    
+        String rpcRepository = config.getInitParameter("rpcRepository");
+        settings.put("rpcRepository",rpcRepository);
       }
     
     public InitServiceProxyImpl() { // must have

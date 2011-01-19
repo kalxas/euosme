@@ -8,28 +8,28 @@ public class CharacterString_test extends GWTTestCase {
 
 	public void testEmptyRequiredNormal() {
 		// Type empty string, check required and of type normal -> WARNING
-		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",true, CheckFunctions.normal);
+		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",true, CheckFunctions.normal, true);
 		testObj.myCheck();
 		assertTrue(testObj.myError.isVisible());		
 	}
 	
 	public void testEmptyNotRequiredNormal() {
 		// Type empty string, check not required and of type normal -> NO WARNING
-		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",false,CheckFunctions.normal);
+		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",false,CheckFunctions.normal, true);
 		testObj.myCheck();
 		assertTrue(!testObj.myError.isVisible());		
 	}
 	
 	public void testEmptyRequiredEmail() {
 		// Type empty string, check required and of type email -> WARNING
-		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",true,CheckFunctions.electronicMailAddress);
+		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",true,CheckFunctions.electronicMailAddress, true);
 		testObj.myCheck();
 		assertTrue(testObj.myError.isVisible());		
 	}
 	
 	public void testEmptyNotRequiredEmail() {
 		// Type empty string, check not required and of type email -> NO WARNING
-		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",false,CheckFunctions.electronicMailAddress);
+		CharacterString testObj = new CharacterString("CI_OnlineResource","CI_OnlineResource",false,CheckFunctions.electronicMailAddress, true);
 		testObj.myCheck();
 		assertTrue(!testObj.myError.isVisible());		
 	}

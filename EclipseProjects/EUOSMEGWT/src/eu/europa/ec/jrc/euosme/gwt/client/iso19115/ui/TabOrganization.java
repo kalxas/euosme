@@ -36,7 +36,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Organization
  * 
- * @version 3.0 - November 2010
+ * @version 3.0.1 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabOrganization extends Composite {
@@ -99,7 +99,7 @@ public class TabOrganization extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			responsiblePartyObj.setRequired(true);
 			responsiblePartyContainerObj.setRequired(true);
 			responsiblePartyObj.setInterface(1);
