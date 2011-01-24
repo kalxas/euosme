@@ -349,6 +349,10 @@ public class Utilities {
 			subTreeItem = Utilities.getSelectTreeItem(nodeName);
 			if (subTreeItem==null && !(currentNode.getNodeName().toLowerCase().endsWith("md_keywords")) && !(currentNode.getNodeName().toLowerCase().endsWith("geographicelement")) && !(nodeName.startsWith("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].citation[1].ci_citation[1].date"))) {
 				parentItem = Utilities.getSelectTreeItem(parent);
+				if (parentItem.getText().startsWith(constants.XMLValue())) {
+					parentItem = parentItem.getParentItem();
+					parentItem.removeItems();
+				}
 				if (parentItem!=null) {
 					TreeItem newItem = new TreeItem(currentNode.getNodeName());
 					newItem.setTitle(nodeName);
