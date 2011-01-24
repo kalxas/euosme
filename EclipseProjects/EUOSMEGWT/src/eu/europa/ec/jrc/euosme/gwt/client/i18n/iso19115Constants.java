@@ -589,7 +589,7 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("Press ENTER to get all suggestions.")	
 	String helpCodeList();
-
-	@DefaultStringValue("INSPIRE Spatial dataset GEOSS")
-	String newSpatialDatasetGEOSS();
+	
+	@DefaultStringValue("Unable to load selected file: unsupported schema. EUOSME accepts only ISO 19139 files.")
+	String errorSchema();
 }

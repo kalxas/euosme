@@ -480,18 +480,17 @@ public class MainPanel extends Composite {
 		        //Turn hourglass off
 				Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);
 		        if (ret.startsWith("ERROR")) {
-		        	//messagesLabel.setStyleName("error");
-					//messagesLabel.setText(ret);
-		        	//Turn hourglass off
+		        	Window.alert(constants.unableToLoadFile());
 		    	}
 		        else {
 		        	String myFileInterface = Utilities.foundInterface(ret);
-		        	if (myFileInterface.isEmpty()) {
-		        		//messagesLabel.setStyleName("error");
-						//messagesLabel.setText(constants.unableToLoadFilemd_scopecode());
-		        	}
+		        	if (myFileInterface.isEmpty()) 
+		        		Window.alert(constants.unableToLoadFilemd_scopecode());
 		        	else {
-		        		newForm(myFileInterface,ret);		        			
+		        		if (!ret.contains("xmlns:gmd=\"http://www.isotc211.org/2005/gmd\"")) 
+		        			Window.alert(constants.errorSchema());
+			        	else 
+			        		newForm(myFileInterface,ret);		        			
 		        	}
 		        }
 		    }			
