@@ -21,13 +21,12 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
-import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
-import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringMultiple;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFreeMultiple;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
 
 /**
@@ -46,8 +45,9 @@ public class MD_LegalConstraints extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
  	/** Other constraints declaration */
- 	public CharacterStringMultiple otherConstraintsObj = new CharacterStringMultiple(constants.otherConstraints(), "limitation", false, CheckFunctions.normal);
- 	
+ 	//public CharacterStringMultiple otherConstraintsObj = new CharacterStringMultiple(constants.otherConstraints(), "limitation", false, CheckFunctions.normal);
+ 	public CodeListFreeMultiple otherConstraintsObj = new CodeListFreeMultiple(constants.otherConstraints(), "limitation", false, "13", "", true, false);
+	
  	/** Access constraints declaration */
  	CodeListMultiple accessConstraintsObj =	new CodeListMultiple(constants.accessConstraints(),"limitation",false,"9","otherRestrictions",true);
 	
@@ -91,16 +91,17 @@ public class MD_LegalConstraints extends CI {
 		super.setFormName(name);
 		accessConstraintsObj.setFormName(name + ".accessconstraints[1].md_restrictioncode[1]");
 		useConstraintsObj.setFormName(name + ".useconstraints[1].md_restrictioncode[1]");
-		otherConstraintsObj.setFormName(name + ".otherconstraints[1].characterstring[1]");
-		
+		otherConstraintsObj.setFormName(name + ".otherconstraints[1].characterstring[1]");		
 	}
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			useConstraintsObj.setVisible(false);
 			accessConstraintsObj.setVisible(false);	
 			otherConstraintsObj.setLabel(constants.accessConstraints());
 		}
+		if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			otherConstraintsObj.setShowList(false);			
 	}
 }

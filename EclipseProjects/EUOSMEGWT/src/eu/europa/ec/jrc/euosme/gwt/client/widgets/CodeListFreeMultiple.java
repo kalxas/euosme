@@ -149,10 +149,10 @@ public class CodeListFreeMultiple extends Composite {
 
 		// Set global variables
 		isRequired = required;
-		codeListName = myListName;
 		helpAnchor = help;
 		showList = showOracleList;
 		orderList = order;
+		codeListName = myListName;
 		
 		// Initialize widget
 		initWidget(uiBinder.createAndBindUi(this));

@@ -110,7 +110,7 @@ public class CI_OnlineResource extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			protocolObj.setVisible(false);
 			applicationProfileObj.setVisible(false);
 			nameObj.setVisible(false);

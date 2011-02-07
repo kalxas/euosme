@@ -35,7 +35,7 @@ public class DownloadServlet extends HttpServlet {
 		ServletContext context = getServletConfig().getServletContext();
 		
 		String dir = "";
-		if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+		if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 		else dir = context.getRealPath("temp");
 		
 		try {

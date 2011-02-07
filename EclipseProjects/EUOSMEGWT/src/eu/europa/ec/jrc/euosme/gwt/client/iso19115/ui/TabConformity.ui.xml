@@ -6,6 +6,7 @@
 	<g:HTMLPanel>
     	<g:Label addStyleNames="h2" ui:field="titleLabel"/>
 		<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
+		<!-- <g:HorizontalPanel ui:field="preferredObj"/>-->
 		<widgets:CIMultiple ui:field="reportContainerObj"/>
 		<g:Label ui:field="mandatoryFieldLabel"/>
   	</g:HTMLPanel>

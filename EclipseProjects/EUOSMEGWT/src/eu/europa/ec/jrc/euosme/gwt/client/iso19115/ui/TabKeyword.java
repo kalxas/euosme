@@ -99,7 +99,7 @@ public class TabKeyword extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
 			keywordsObj.setRequired(true);
 			keywordsObj.removeDisclosure();
 			keywordsObj.setMultiple(false);

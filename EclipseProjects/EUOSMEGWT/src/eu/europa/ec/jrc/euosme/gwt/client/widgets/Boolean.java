@@ -115,11 +115,10 @@ public class Boolean extends Composite  {
 		
 		//Set Error Label widget	
 		myError.setVisible(false);
-		
 		infoButton.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);				
+				Utilities.openInfo(helpAnchor,infoButton);		
 			}			
 		});		
 	}	
@@ -128,7 +127,7 @@ public class Boolean extends Composite  {
 	 * Checking the current {@link AppModes}, this is used to remove elements, show and hide and change labels...
 	 */
 	private void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
 			myListBox.clear();
 			myListBox.addItem(constants.notEvaluated(),"");		
 			myListBox.addItem(constants.notConformant(),"false");

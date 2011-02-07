@@ -71,7 +71,6 @@ public class MD_Constraints extends CI {
 	}
 	
 	@Override
-	public void setInterface(int i) {
-		useLimitationObj.setShowList(true);		
+	public void setInterface(int i) {		
 	}
 }

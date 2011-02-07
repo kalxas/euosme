@@ -83,7 +83,7 @@ public class DQ_Element extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			mdIdentifierObj.setInterface(0);
 			mdIdentifierObj.setVisible(false);
 			resultObj.removeDisclosure();

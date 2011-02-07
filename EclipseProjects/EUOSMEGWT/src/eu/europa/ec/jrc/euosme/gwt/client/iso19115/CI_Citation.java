@@ -20,15 +20,24 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.BlurHandler;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
+import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.client.ui.TreeItem;
+import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
 
 /**
  * Create CI_Citation model
@@ -59,6 +68,9 @@ public class CI_Citation extends CI {
 	CI_Date dateObj =	new CI_Date(constants.date(),true, true);
 	CIMultiple dateContainerObj = new CIMultiple(constants.date(), dateObj, true);
 
+	/** List of specification for RDSI AppMode */
+	final CodeListFree specificationObj = new CodeListFree(constants.specifications(),"specification",false,"15","",CheckFunctions.normal,true,false);
+	
 	/** 
      * constructor CI_Citation model
      * 
@@ -73,7 +85,37 @@ public class CI_Citation extends CI {
 		fieldsGroup.add(titleObj);
 		fieldsGroup.add(alternateTitleObj);
 		fieldsGroup.add(identifierContainerObj);
-		fieldsGroup.add(dateContainerObj);		
+		fieldsGroup.add(dateContainerObj);
+		
+		specificationObj.myTextBox.getTextBox().addBlurHandler(new BlurHandler() {
+			@Override
+			public void onBlur(BlurEvent event) {
+				String[] specifications = specificationObj.myTextBox.getText().split(";");
+				String definition = specifications[0];
+				TreeItem myTreeItem = null;
+				myTreeItem = Utilities.getSelectTreeItem(specificationObj.myTextBox.getTextBox().getName());					
+				if (myTreeItem!=null) {
+					Utilities.ensureItemVisible(myTreeItem);					
+					Utilities.setTextTreeItem(myTreeItem,definition);
+				}
+			}			
+		});	
+		
+		specificationObj.myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
+			@Override
+			public void onSelection(SelectionEvent<Suggestion> event) {
+				String[] specifications = specificationObj.myTextBox.getText().split(";");
+				String definition = specifications[0];
+				String date = specifications[1];
+				String dateType = specifications[2];
+				TreeItem myTreeItem = null;
+				myTreeItem = Utilities.getSelectTreeItem(specificationObj.myTextBox.getTextBox().getName());					
+				if (myTreeItem!=null) 
+					Utilities.setTextTreeItem(myTreeItem,definition);				
+				dateObj.dateObj.myDateBox.setValue(DateTimeFormat.getFormat("yyyy-MM-dd").parse(date));
+				dateObj.dateTypeObj.setMyValue(dateType);
+			}			
+		});	
 		setInterface(-1);
 	}
 	
@@ -83,14 +125,16 @@ public class CI_Citation extends CI {
 			if(titleObj.isVisible()) titleObj.myCheck();
 			if(alternateTitleObj.isVisible()) alternateTitleObj.myCheck();
 			if(identifierObj.isVisible()) identifierObj.myCheck();	
-			if(dateObj.isVisible()) dateObj.myCheck();			
+			if(dateObj.isVisible()) dateObj.myCheck();
+			if(specificationObj.isVisible()) specificationObj.myCheck();		
 		}
 	}
 	
 	@Override
 	public void setFormName(String name) {
 		super.setFormName(name);
-		titleObj.setFormName(name + ".title[1].characterstring[1]");		
+		titleObj.setFormName(name + ".title[1].characterstring[1]");
+		specificationObj.setFormName(name + ".title[1].characterstring[1]");
 		alternateTitleObj.setFormName(name + ".alternatetitle[1].characterstring[1]");
 		identifierObj.setFormName(name + ".identifier[1].rs_identifier[1]");
 		identifierContainerObj.setFormName(name + ".identifier[1]");
@@ -100,7 +144,7 @@ public class CI_Citation extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			identifierObj.setRequired(true);
 			identifierContainerObj.setRequired(true);
 			if (i==0) { // TAB Identification
@@ -127,6 +171,11 @@ public class CI_Citation extends CI {
 				dateContainerObj.setVisible(false);
 			}
 			if (i==2) { // TAB conformity
+				fieldsGroup.clear();
+				fieldsGroup.add(specificationObj);
+				fieldsGroup.add(alternateTitleObj);
+				fieldsGroup.add(identifierContainerObj);
+				fieldsGroup.add(dateContainerObj);
 				alternateTitleObj.setVisible(false);
 				identifierObj.setVisible(false);
 				identifierContainerObj.setVisible(false);
@@ -134,9 +183,9 @@ public class CI_Citation extends CI {
 				dateObj.setMultiple(false);
 				dateObj.dateObj.setHelpAnchor("specification");
 				dateObj.removeDisclosure();
-				fieldsGroup.add(dateObj);
-				titleObj.setLabel(constants.specification());
-				titleObj.setHelpAnchor("specification");
+				fieldsGroup.add(dateObj);				
+				//titleObj.setLabel(constants.specification());
+				//titleObj.setHelpAnchor("specification");
 			}
 		}	// TAB Identification
 		else if (i==0) {

@@ -92,7 +92,7 @@ public class DQ_ConformanceResult extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			specificationObj.setInterface(2);
 			specificationObj.removeDisclosure();
 			explanationObj.setMyValue(constants.explanationValue());

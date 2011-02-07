@@ -60,6 +60,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
 import com.google.gwt.user.client.ui.FormPanel.SubmitEvent;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
@@ -132,11 +133,13 @@ public class MainPanel extends Composite {
     */
 	public MainPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
+		
 		tabs.getElement().getParentElement().setAttribute("class","prettyHeight");
-		//Set cursor to hourglass
+		
+		// Set cursor to hourglass
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		
-		// set user guide
+		// Set user guide
 		String helpHTM = MyResources.INSTANCE.help().getText();
 		helpHTM = helpHTM.substring(helpHTM.indexOf("<body>")+"<body>".length(),helpHTM.indexOf("</body>"));
 		userGuideHTM = new HTML(helpHTM);													
@@ -189,22 +192,21 @@ public class MainPanel extends Composite {
         // Menu SAVE
         Command cmdSaveFile = new Command() {
             public void execute() {
-            	saveFile();            	
+            	saveFile(".xml");            	
             }			
         };
         menuBar.addItem(constants.save(),cmdSaveFile);
         
-        // Menu Help
-        // TODO add link to userguide
-        /*MenuBar helpMenu = new MenuBar(true);
-        // INSPIRE guidelines
-        Command cmdHelpInspire = new Command() {
+        // Menu SAVE AS TEMPLATE
+        Command cmdSaveTemplate = new Command() {
             public void execute() {
-            	Window.open("http://www.inspire-geoportal.eu/InspireEditor/INSPIREEditorUserGuide.pdf", constants.inspireGuidelines(),null);
+            	saveFile(".xmlt");            	
             }			
         };
-        if (LocaleInfo.getCurrentLocale().getLocaleName().equalsIgnoreCase("EN")) helpMenu.addItem(constants.inspireGuidelines(), cmdHelpInspire);
-        */
+        menuBar.addItem(constants.saveAsTemplate(),cmdSaveTemplate);
+        
+        // Menu Help
+        MenuBar helpMenu = new MenuBar(true);
         // EUR-LEX guidelines
         Command cmdHelpRegulation = new Command() {
             public void execute() {     
@@ -212,10 +214,23 @@ public class MainPanel extends Composite {
             	Window.open(helpURL, constants.inspireGuidelines(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
             }			
         };
-        //helpMenu.addItem(constants.regulationTitle(), cmdHelpRegulation);
-        //menuBar.addItem(constants.help(),helpMenu);
-        menuBar.addItem(constants.help(), cmdHelpRegulation);
-        
+        helpMenu.addItem(constants.regulationTitle(), cmdHelpRegulation);
+        // User Guide
+        Command cmdHelpUserGuide = new Command() {
+            public void execute() {     
+            	Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3.pdf", constants.helpUserGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            }			
+        };
+        helpMenu.addItem(constants.helpUserGuide(), cmdHelpUserGuide);
+        // Developer Guide
+        Command cmdHelpDeveloperGuide = new Command() {
+            public void execute() {     
+            	Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3A.pdf ", constants.helpDeveloperGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            }			
+        };
+        helpMenu.addItem(constants.helpDeveloperGuide(), cmdHelpDeveloperGuide);
+        menuBar.addItem(constants.help(),helpMenu);
+                
         /*Command cmdUpdate = new Command() {
             public void execute() {     
             	CodeListRpcCallback callback = new CodeListRpcCallback();
@@ -238,7 +253,13 @@ public class MainPanel extends Composite {
         /** LANGUAGE management ------------------------------------------------------------*/
         // Set the correct URL to change language and set the right class for the selected language
 		String myURL = Utilities.getURL();
-		myHeader.setHTML(myHeader.getHTML().replace("#template_page#", myURL));
+		String myHeaderHTML = myHeader.getHTML();
+		myHeaderHTML = myHeaderHTML.replace("#template_page#", myURL);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			myHeaderHTML = myHeaderHTML.replace("#root_page#", "<a id=\"firstTab\" href=\"/rdsi/index.php\">IES Reference Data &amp; Services Initiative</a>"); 		
+		else
+			myHeaderHTML = myHeaderHTML.replace("#root_page#", "");
+		myHeader.setHTML(myHeaderHTML);
 		NodeList<Element> myList = myHeader.getElement().getElementsByTagName("a");
 		for (int i=0; i<myList.getLength(); i++) {
 			if (myList.getItem(i).getClassName().equalsIgnoreCase("curlang") && !myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
@@ -250,7 +271,7 @@ public class MainPanel extends Composite {
 		
         /** TREE initialization ----------------------------------------------------------*/
 		initTree("");
-		
+					
 		// add scroll bars
 		slp.getWidgetContainerElement(slp.getWidget(0)).addClassName("auto");
 		slp.getWidgetContainerElement(slp.getWidget(0)).getStyle().clearOverflow();
@@ -265,7 +286,13 @@ public class MainPanel extends Composite {
 				InspireServiceRpcCallback callback = new InspireServiceRpcCallback();
 				InspireServiceRpcCallback.setType("HTML");
 				RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-				ls.invokeInspireMetadataConverterService(myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),getFileName().replace(".xml",".htm"),callback);			
+				// get File Name
+				String myFileName = getFileName();
+				if (myFileName.toLowerCase().endsWith(".xml")) myFileName = myFileName.replace(".xml",".htm");
+				else if (myFileName.toLowerCase().endsWith(".xmlt")) myFileName = myFileName.replace(".xmlt",".htm");
+				else myFileName += ".htm";
+				// invoke the service 
+				ls.invokeInspireMetadataConverterService(myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),myFileName,callback);			
 			}			
 		});
 		refreshHTML.setHTML(constants.refresh());
@@ -294,22 +321,20 @@ public class MainPanel extends Composite {
 	 * @param loadFileXML	{@link String} = the XML file to parse
 	 */
 	private void initTree(final String loadFileXML) {
-		//Turn hourglass off
+		// Turn hourglass off
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		MainPanel.myTree.removeItems();
-		/// get XML
+		
+		// Get XML
 		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) Utilities.parseMessage(MyResources.INSTANCE.seriesXML().getText(),true);
 		else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) Utilities.parseMessage(MyResources.INSTANCE.datasetXML().getText(),true);					
 		else Utilities.parseMessage(MyResources.INSTANCE.serviceXML().getText(),true);
-		// open default tab and load user guide
+		if (!loadFileXML.isEmpty()) Utilities.parseMessage(loadFileXML,false);
+		
+		// Open default tab and load user guide
 		tabs.selectTab(0);
-		if (loadFileXML.isEmpty()) //Turn hourglass off
-			Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);
-		else {
-			@SuppressWarnings("unused")
-			String log = Utilities.parseMessage(loadFileXML,false);
-			Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);        	
-		}	
+		// Turn hourglass off		
+		Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);
 	}
 	
 	/**
@@ -348,9 +373,17 @@ public class MainPanel extends Composite {
 	/**
     * RPC save file
     */
-	private void saveFile() {
-		// get the filename
-		final String myFileName = getFileName();
+	private void saveFile(String myExtension) {
+		// set filename
+		String tmpFileName = getFileName();
+		if (tmpFileName.toLowerCase().endsWith(".xml") && myExtension.equalsIgnoreCase(".xmlt")) 
+			tmpFileName = tmpFileName.replace(".xml",".xmlt");
+		else if (tmpFileName.toLowerCase().endsWith(".xmlt") && myExtension.equalsIgnoreCase(".xml"))
+			tmpFileName = tmpFileName.replace(".xmlt",".xml");
+		else if (!(tmpFileName.toLowerCase().endsWith(".xml") || tmpFileName.toLowerCase().endsWith(".xmlt")))
+			tmpFileName += myExtension;
+		final String myFileName = tmpFileName;
+		
 		//get XML tree structure
 		String myXMLTree = getXMLTree();
 		
@@ -527,8 +560,7 @@ public class MainPanel extends Composite {
 		if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
 			Integer myNum = Random.nextInt();
 			if (Integer.signum(myNum)==-1) myNum=-(myNum);
-			tmpFileName = Integer.toHexString(myNum);
-			tmpFileName += ".xml";
+			tmpFileName = Integer.toHexString(myNum);			
 			fileIdentifier.setAttribute("value", tmpFileName);
 		}
 		return tmpFileName;		

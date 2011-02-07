@@ -102,7 +102,7 @@ public class TabConstraints extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
 			constraintsObj.otherConstraintsObj.setRequired(true);			
 			constraintsObj.removeDisclosure();
 			useLimitationObj.useLimitationObj.setRequired(true);

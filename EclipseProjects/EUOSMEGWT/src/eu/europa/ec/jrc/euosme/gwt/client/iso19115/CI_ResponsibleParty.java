@@ -87,7 +87,7 @@ public class CI_ResponsibleParty extends CI {
 		contactInfoObj.myCheck();
 		roleObj.myCheck();
 		myError.setVisible(false);
-		if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) && organisationNameObj.myTextBox.getValue().isEmpty() && individualNameObj.myTextBox.getValue().isEmpty() && positionNameObj.myTextBox.getValue().isEmpty()) {
+		if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) && organisationNameObj.myTextBox.getValue().isEmpty() && individualNameObj.myTextBox.getValue().isEmpty() && positionNameObj.myTextBox.getValue().isEmpty()) {
 			myError.setText(constants.mandatoryFieldCombined());
 			myError.setVisible(true);			
 		}	
@@ -106,7 +106,7 @@ public class CI_ResponsibleParty extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			organisationNameObj.setRequired(true);
 			individualNameObj.setVisible(false);
 			positionNameObj.setVisible(false);
@@ -135,7 +135,7 @@ public class CI_ResponsibleParty extends CI {
 			organisationNameObj.setShowList(false);
 		}
 		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
-			organisationNameObj.setShowList(true);
+			organisationNameObj.setMyValue(constants.RDSIorganisationName());
 		}
 	}
 }

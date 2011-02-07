@@ -73,7 +73,25 @@ public class TabConformity extends Composite {
 		// set style
 		titleLabel.removeStyleName("gwt-Label");
 		// set form names
-		setFormName();		
+		setFormName();
+		
+		/*preferredObj.add(specification);
+		specification.myListBox.addChangeHandler(new ChangeHandler() {
+			@Override
+			public void onChange(ChangeEvent event) {
+				String selValue = specification.myListBox.getValue(specification.myListBox.getSelectedIndex());
+				if (!selValue.isEmpty()) {
+					// selValue contains a value like Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC);2009-06-11;publication
+					String[] specifications = selValue.split(";");
+					@SuppressWarnings("unused")
+					String definition = specifications[0];
+					@SuppressWarnings("unused")
+					String date = specifications[1];
+					@SuppressWarnings("unused")
+					String dateType = specifications[3];
+				}
+			}
+	    });*/
 	}
 
 	/**

@@ -592,4 +592,25 @@ public interface iso19115Constants extends Constants {
 	
 	@DefaultStringValue("Unable to load selected file: unsupported schema. EUOSME accepts only ISO 19139 files.")
 	String errorSchema();
+
+	@DefaultStringValue("Save as template")
+	String saveAsTemplate();
+	
+	@DefaultStringValue("Error code 10007. If this error persists, please contact your system administrator.")
+	String geoCodeListError();
+	
+	@DefaultStringValue("European Commission, Joint Research Centre")
+	String RDSIorganisationName();
+
+	@DefaultStringValue("User Guide")
+	String helpUserGuide();
+	
+	@DefaultStringValue("Developers Guide")
+	String helpDeveloperGuide();
+
+	@DefaultStringValue("Countries")
+	String countries();
+
+	@DefaultStringValue("Specifications")
+	String specifications();
 }

@@ -98,7 +98,7 @@ public class MD_Identifier extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			if (i==0) {
 				codeObj.setMyValue("Conformity_001");
 				codeSpaceObj.setMyValue("INSPIRE");

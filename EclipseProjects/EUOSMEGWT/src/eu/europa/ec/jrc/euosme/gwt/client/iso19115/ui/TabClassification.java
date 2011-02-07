@@ -105,7 +105,7 @@ public class TabClassification extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) {
 				topicObj.setVisible(false);
 				serviceTypeObj.setRequired(true);

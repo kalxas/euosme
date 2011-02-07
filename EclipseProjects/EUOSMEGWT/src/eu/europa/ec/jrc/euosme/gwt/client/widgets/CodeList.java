@@ -71,6 +71,7 @@ public class CodeList extends Composite  {
 	
 	/** ListBox declaration */
 	@UiField
+	public
 	ListBox myListBox = new ListBox();
 	
 	/** Button for information */
@@ -171,7 +172,7 @@ public class CodeList extends Composite  {
 		int sel_i = 0;
 		for (int i = 0;i<myListBox.getItemCount();i++) {
 			myListBox.setItemSelected(i,false);
-			if (myListBox.getItemText(i)==myValue) sel_i = i;
+			if (myListBox.getValue(i).equalsIgnoreCase(myValue)) sel_i = i;
 		}
 		myListBox.setItemSelected(sel_i, true);
 		if (myTreeItem==null) {

@@ -81,6 +81,18 @@ public interface MyResources extends ClientBundle{
 	@Source("codeLists/12.txt")
 	public TextResource codeList12();
 	
+	@Source("codeLists/13.txt")
+	public TextResource codeList13();
+	
+	@Source("codeLists/14.txt")
+	public TextResource codeList14();
+	
+	@Source("codeLists/15.txt")
+	public TextResource codeList15();
+	
+	@Source("codeLists/12RDSI.txt")
+	public TextResource codeList12RDSI();
+	
 	@Source("repositories/Repositories.cache.xml")
 	public TextResource repositoryList();
 	

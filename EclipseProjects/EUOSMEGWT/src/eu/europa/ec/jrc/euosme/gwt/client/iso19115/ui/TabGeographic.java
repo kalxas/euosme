@@ -23,10 +23,13 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
+import com.google.gwt.dom.client.NativeEvent;
 import com.google.gwt.dom.client.Style.BorderStyle;
 import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.dom.client.Style.Position;
 import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
@@ -41,6 +44,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Event;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
@@ -53,12 +57,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.GeoBoundsMultiple;
 
 /**
  * Create the tab Geographic
  * 
- * @version 4.0 - December 2010
+ * @version 5.0 - January 2011
  * @author 	Marzia Grasso
  */
 public class TabGeographic extends Composite {
@@ -93,6 +98,9 @@ public class TabGeographic extends Composite {
 	@UiField(provided = true)
 	VerticalPanel queryPanel = new VerticalPanel();
 	
+	@UiField
+	HorizontalPanel preferredObj = new HorizontalPanel();
+	
 	/** the map */
 	Composite map; 
 	
@@ -109,6 +117,9 @@ public class TabGeographic extends Composite {
 	public
 	static
 	Button queryButton = new Button();
+	
+	/** List of BBox for some countries */
+	final CodeList country = new CodeList(constants.countries(),"boundingbox",false,"14","",true);
 	
 	/** 
     * constructor TabGeographic
@@ -148,7 +159,7 @@ public class TabGeographic extends Composite {
 	    else {
 	    	queryPanel.removeFromParent();
 	    	mxnMakeMap(EUOSMEGWT.apiMapstraction);
-	    	sinkEvents(Event.ONDBLCLICK);
+	    	//sinkEvents(Event.ONDBLCLICK);
 	    	sinkEvents(Event.ONMOUSEUP);
 	    	mapPanel.getElement().appendChild(DOM.getElementById("mapstraction"));
 	    	try {
@@ -163,6 +174,37 @@ public class TabGeographic extends Composite {
 	    		GWT.log("Problems with the map rendering");
 	    	}
 	    }
+	    
+	    
+	    preferredObj.add(country);
+	    country.myListBox.addChangeHandler(new ChangeHandler() {
+			@Override
+			public void onChange(ChangeEvent event) {
+				String selValue = country.myListBox.getValue(country.myListBox.getSelectedIndex());
+				if (!selValue.isEmpty()) {
+					// selValue contains a value like S:-21.39;W:55.84;N:51.09;E:-63.15
+					String[] coordinates = selValue.split(";");
+					String south = "";
+					String west = "";
+					String north = "";
+					String east = "";
+					for (int i = 0; i < coordinates.length; i++) {
+						if (coordinates[i].startsWith("S:")) south = coordinates[i].substring(2);
+						if (coordinates[i].startsWith("W:")) west = coordinates[i].substring(2);
+						if (coordinates[i].startsWith("N:")) north = coordinates[i].substring(2);
+						if (coordinates[i].startsWith("E:")) east = coordinates[i].substring(2);						
+					}
+					if (!north.isEmpty() && !east.isEmpty() && !south.isEmpty() && !west.isEmpty()) {
+						geoBoundsObj.newTextBoxSouth.setValue(south);
+						geoBoundsObj.newTextBoxWest.setValue(west);
+						geoBoundsObj.newTextBoxNorth.setValue(north);
+						geoBoundsObj.newTextBoxEast.setValue(east);	
+						geoBoundsObj.newButton.click();
+						setBoundsMapstraction(Double.parseDouble(south),Double.parseDouble(west),Double.parseDouble(north), Double.parseDouble(east));
+					} else Window.alert(constants.geoCodeListError());					
+				}
+			}
+	    });
 	}
 	
 	/**
@@ -187,7 +229,9 @@ public class TabGeographic extends Composite {
 	@Override
 	public void onBrowserEvent(Event event) {
 		super.onBrowserEvent(event);
-		getCenterMapstraction(EUOSMEGWT.apiMapstraction, geoBoundsObj.newTextBoxNorth.getElement(), geoBoundsObj.newTextBoxEast.getElement(), geoBoundsObj.newTextBoxSouth.getElement(), geoBoundsObj.newTextBoxWest.getElement());
+		Element targetElement =  Element.as(((NativeEvent) event).getEventTarget());
+		String targetTagName = targetElement.getTagName();
+		if (targetTagName.equalsIgnoreCase("svg") || targetTagName.equalsIgnoreCase("path")) getCenterMapstraction(EUOSMEGWT.apiMapstraction, geoBoundsObj.newTextBoxNorth.getElement(), geoBoundsObj.newTextBoxEast.getElement(), geoBoundsObj.newTextBoxSouth.getElement(), geoBoundsObj.newTextBoxWest.getElement());
 	}
 	
 	/**
@@ -201,33 +245,35 @@ public class TabGeographic extends Composite {
 	 */
 	public native static void getCenterMapstraction(String api, Element north, Element east, Element south, Element west) /*-{
 		var bounds = $wnd.mapstraction.getBounds();
-        var sw = bounds.getSouthWest();
-        var ne = bounds.getNorthEast();
-        var myNorth = 0;
-        var myEast = 0;
-        var mySouth = 0;
-        var myWest = 0;
-        if (api == "openlayers") {
-        	myNorth = (ne.lat / 20037508.34) * 180;
-  			myNorth = 180/Math.PI * (2 * Math.atan(Math.exp(myNorth * Math.PI / 180)) - Math.PI / 2);
-  			myEast = (ne.lon / 20037508.34) * 180;
-			mySouth = (sw.lat / 20037508.34) * 180;
-  			mySouth = 180/Math.PI * (2 * Math.atan(Math.exp(mySouth * Math.PI / 180)) - Math.PI / 2);
-			myWest = (sw.lon / 20037508.34) * 180;
-        }
-		else {
-			myNorth = ne.lat;
-  			myEast = ne.lon;
-			mySouth = sw.lat;
-  			myWest = sw.lon;
-		}
-		try {
-	 		north.value = myNorth;
-	 		east.value = myEast;
-	 		south.value = mySouth;
-	 		west.value = myWest;
-	 	}
-	 	catch(ex) {	}        
+		if (bounds!=null) {
+	        var sw = bounds.getSouthWest();
+	        var ne = bounds.getNorthEast();
+	        var myNorth = 0;
+	        var myEast = 0;
+	        var mySouth = 0;
+	        var myWest = 0;
+	        if (api == "openlayers") {
+	        	myNorth = (ne.lat / 20037508.34) * 180;
+	  			myNorth = 180/Math.PI * (2 * Math.atan(Math.exp(myNorth * Math.PI / 180)) - Math.PI / 2);
+	  			myEast = (ne.lon / 20037508.34) * 180;
+				mySouth = (sw.lat / 20037508.34) * 180;
+	  			mySouth = 180/Math.PI * (2 * Math.atan(Math.exp(mySouth * Math.PI / 180)) - Math.PI / 2);
+				myWest = (sw.lon / 20037508.34) * 180;
+	        }
+			else {
+				myNorth = ne.lat;
+	  			myEast = ne.lon;
+				mySouth = sw.lat;
+	  			myWest = sw.lon;
+			}
+			try {
+		 		north.value = myNorth;
+		 		east.value = myEast;
+		 		south.value = mySouth;
+		 		west.value = myWest;
+		 	}
+		 	catch(ex) {	}   
+		}     
 	}-*/;
 	
 	/**
@@ -484,9 +530,9 @@ public class TabGeographic extends Composite {
 		// initialise the map with your choice of API
 		$wnd.mapstraction = new $wnd.mxn.Mapstraction('mapstraction',api);
         $wnd.mapstraction.setCenterAndZoom(new $wnd.mxn.LatLonPoint(0, 0),5);
-        $wnd.mapstraction.addControls({pan: true,zoom: 'small', map_type: true});          
-        $wnd.mapstraction.setBounds(new $wnd.mxn.BoundingBox(31.694376,-21.595547,72.299844,33.951328));	
-        $wnd.mapstraction.setZoom(3);         
+        $wnd.mapstraction.addControls({pan: true,zoom: 'small', map_type: true});   
+        $wnd.mapstraction.setBounds(new $wnd.mxn.BoundingBox(31.694376,-21.595547,72.299844,33.951328));
+        $wnd.mapstraction.setZoom(3);
 	}-*/;
 	
 	/**
@@ -567,5 +613,18 @@ public class TabGeographic extends Composite {
 	@UiHandler("queryButton")
 	void onClickRunQuery(ClickEvent event) {
 		runQuery();
-	}		
+	}
+	
+	/**
+	 * JSNI function to set Bounds on mapstraction map
+	 * 
+	 * @param swlat	{@link Double} = SW latitude
+	 * @param swlon {@link Double} = SW longitude
+	 * @param nelat {@link Double} = NE latitude
+	 * @param nelon {@link Double} = SW longitude
+	 */
+	private native void setBoundsMapstraction(double swlat, double swlon, double nelat, double nelon) /*-{
+		var bbox = new $wnd.mxn.BoundingBox(swlat,swlon,nelat,nelon);
+		$wnd.mapstraction.setBounds(bbox);	
+	}-*/;
 }

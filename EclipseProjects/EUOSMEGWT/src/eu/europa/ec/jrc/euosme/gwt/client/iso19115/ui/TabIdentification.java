@@ -136,11 +136,12 @@ public class TabIdentification extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			CI_CitationObj.setInterface(0);
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) languageObj.setVisible(false);
 			else operatesOnObj.setVisible(false);
 			resourceTypeObj.setVisible(false);
+			CI_CitationObj.removeDisclosure();
 		}
 		else operatesOnObj.setVisible(false);
 	}

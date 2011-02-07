@@ -25,6 +25,7 @@
 					</g:HorizontalPanel>
 				</g:VerticalPanel>
 				<widgets:GeoBoundsMultiple ui:field="geoBoundsObj"/>
+				<g:HorizontalPanel ui:field="preferredObj"/>
 				<g:HorizontalPanel ui:field="mapPanel"></g:HorizontalPanel>								
 			</g:VerticalPanel>
 		</g:west>

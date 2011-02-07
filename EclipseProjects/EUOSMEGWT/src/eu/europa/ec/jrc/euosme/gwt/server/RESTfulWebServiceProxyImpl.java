@@ -166,7 +166,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
             if (paramName.equalsIgnoreCase("codelists") && saveCodeList) {         
 	            ServletContext context = getServletConfig().getServletContext();
 	    		String dir = "";
-				if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+				if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 	    		else dir = context.getRealPath("temp");
 	    		try {
 	    			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + extraValue + "_" + clientLanguage + ".txt" ), "UTF-8"));
@@ -219,7 +219,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	    	String encoding = "UTF-8";
 	    	ServletContext context = getServletConfig().getServletContext();
 			String dir = "";
-			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
 	    	for (int extraValue=2;extraValue<=11;extraValue++) {
 	    		uri = codelists + extraValue + "/values?max=" + limit;
@@ -279,7 +279,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 		String dir = "";
 		try {
 	    	ServletContext context = getServletConfig().getServletContext();			
-			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
 			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/tmp.xml" ), "UTF-8"));
          	out.append(XMLTree);
@@ -373,6 +373,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
             URL u = new URL(inspireWebService + "resources/INSPIREResource");
             HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
             urlConnection.setRequestMethod("POST");
+            urlConnection.setRequestProperty("Accept","application/vnd.eu.europa.ec.inspire.resource.rdsi+html");
             urlConnection.setRequestProperty("Content-Type","application/xml;charset=UTF-8");
             urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(XMLTree.getBytes().length));
             urlConnection.setRequestProperty("Accept-language", clientLanguage );
@@ -400,7 +401,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	        // Write file
 	        ServletContext context = getServletConfig().getServletContext();
 	    	String dir = "";
-			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
 			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + filename ), "UTF-8"));
          	out.append(buffer.toString());
@@ -462,7 +463,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	    	// set temporary directory where create files
 	    	ServletContext context = getServletConfig().getServletContext();
 	    	String dir = "";
-			if (context.getRealPath("temp")==null) dir = context.getRealPath("/euosme/temp");
+			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
 			
 			// call the service for each language

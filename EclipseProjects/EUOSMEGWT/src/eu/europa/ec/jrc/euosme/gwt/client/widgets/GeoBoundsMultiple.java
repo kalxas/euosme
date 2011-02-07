@@ -77,6 +77,11 @@ public class GeoBoundsMultiple extends Composite {
 	public
 	TextBox newTextBoxEast = new TextBox();
 		
+	/** Add Button declaration */
+	@UiField
+	public
+	Button newButton = new Button();
+	
 	/** grouping fields declaration */
 	@UiField(provided = true)
 	DisclosurePanel componentPanel = new DisclosurePanel();
@@ -92,10 +97,6 @@ public class GeoBoundsMultiple extends Composite {
 	/** ListBox declaration */
 	@UiField
 	ListBox myListBox = new ListBox(true);
-	
-	/** Add Button declaration */
-	@UiField
-	Button newButton = new Button();
 	
 	/** Button for information */
 	@UiField
@@ -511,6 +512,7 @@ public class GeoBoundsMultiple extends Composite {
 	 * @param nelon {@link Double} = SW longitude
 	 */
 	private native void setBoundsMapstraction(double swlat, double swlon, double nelat, double nelon) /*-{
-		$wnd.mapstraction.setBounds(new $wnd.mxn.BoundingBox(swlat,swlon,nelat,nelon));		
+		var bbox = new $wnd.mxn.BoundingBox(swlat,swlon,nelat,nelon);
+		$wnd.mapstraction.setBounds(bbox);	
 	}-*/;
 }

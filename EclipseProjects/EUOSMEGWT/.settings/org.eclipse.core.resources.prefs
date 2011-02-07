@@ -1,4 +1,4 @@
-#Fri Jan 14 14:52:01 CET 2011
+#Fri Feb 04 15:57:08 CET 2011
 eclipse.preferences.version=1
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_BG.txt=UTF-8
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_CS.txt=UTF-8
@@ -25,6 +25,29 @@ encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_SV.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/10_bg.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/10_cs.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_bg.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_cs.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_da.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_de.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_el.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_en.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_es.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_et.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_fi.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_fr.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_hu.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_it.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_lt.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_lv.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_mt.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_nl.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_pl.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_pt.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_ro.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_sk.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_sl.txt=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12RDSI_sv.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_bg.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_cs.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_da.txt=UTF-8

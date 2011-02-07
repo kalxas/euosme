@@ -119,7 +119,7 @@ public class TabTemporal extends Composite {
 	 * Show or hide elements according to the selected {@link AppModes}
 	 */
 	public void setInterface() {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			publicationDateObj.dateObj.setRequired(false);
 			revisionDateObj.dateObj.setRequired(false);
 		}

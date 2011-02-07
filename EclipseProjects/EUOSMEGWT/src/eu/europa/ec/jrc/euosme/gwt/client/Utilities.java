@@ -1296,8 +1296,18 @@ public class Utilities {
     		response=MyResources.INSTANCE.codeList10().getText();
     	if (myCodeListName.equalsIgnoreCase("11")) 
     		response=MyResources.INSTANCE.codeList11().getText();
-    	if (myCodeListName.equalsIgnoreCase("12")) 
-    		response=MyResources.INSTANCE.codeList12().getText();    	
+    	if (myCodeListName.equalsIgnoreCase("12")) {
+    		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+    			response=MyResources.INSTANCE.codeList12RDSI().getText();
+    		else 
+    			response=MyResources.INSTANCE.codeList12().getText();
+    	}
+    	if (myCodeListName.equalsIgnoreCase("13")) 
+    		response=MyResources.INSTANCE.codeList13().getText();  
+    	if (myCodeListName.equalsIgnoreCase("14")) 
+    		response=MyResources.INSTANCE.codeList14().getText();
+    	if (myCodeListName.equalsIgnoreCase("15")) 
+    		response=MyResources.INSTANCE.codeList15().getText();
     	return response;
 	}
 	

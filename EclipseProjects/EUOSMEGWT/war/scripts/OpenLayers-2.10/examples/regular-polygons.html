@@ -49,17 +49,19 @@
             map.addControl(new OpenLayers.Control.LayerSwitcher());
             map.addControl(new OpenLayers.Control.MousePosition());
 
-            polyOptions = {sides: 4};
+            polyOptions = {sides: 4, irregular: true};
             polygonControl = new OpenLayers.Control.DrawFeature(polygonLayer,
                                             OpenLayers.Handler.RegularPolygon,
                                             {handlerOptions: polyOptions});
-            
+           
             map.addControl(polygonControl);
             
             map.setCenter(new OpenLayers.LonLat(0, 0), 3);
             
             document.getElementById('noneToggle').checked = true;
              document.getElementById('irregularToggle').checked = false;
+             
+              polygonControl.activate();
         }
         function setOptions(options) {
             polygonControl.handler.setOptions(options);

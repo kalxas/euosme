@@ -23,9 +23,28 @@ mxn.register('openlayers', {
 					maxResolution:156543,
 					numZoomLevels:18,
 					units:'meters',
-					projection: "EPSG:41001"
+					projection: new OpenLayers.Projection("EPSG:4326")
 				}
 			);
+			/*var control = new OpenLayers.Control();
+			OpenLayers.Util.extend(control, {
+				draw: function () {
+					this.box = new OpenLayers.Handler.Box( control,
+						{"done": this.notice},
+						{keyMask: OpenLayers.Handler.MOD_SHIFT});
+					this.box.activate();
+				},			
+				notice: function (bounds) {
+				    var geom = bounds.toGeometry();
+					var feature = new OpenLayers.Feature.Vector(geom);
+					this.layers.polylines.addFeatures(feature);
+					var map = this.maps[this.api];
+					map.zoomToExtent(bounds,true);
+					var poly = new OpenLayers.Bounds(0,0,10,10).toGeometry();
+				}
+			});
+			this.maps[api].addControl(control);*/		
+
 			this.layers.geoportal = new OpenLayers.Layer.WMS("GEOPORTAL","http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",{layers: '0,2,3'/*,4,5,7,8,9,10,13,14,15,16,18,19,20,21,22,23,26,27,28,30,31,32,33,35,36,37,39,40,41'*/, version: '1.3.0', crs:'crs:84'});
 		
 			this.layers.osmmapnik = new OpenLayers.Layer.TMS(
@@ -58,43 +77,37 @@ mxn.register('openlayers', {
 					displayOutsideMaxExtent: true
 				}
 			);
-
-			this.layers.osm = new OpenLayers.Layer.TMS(
-				'OSM',
-				[
-					"http://a.tah.openstreetmap.org/Tiles/tile.php/",
-					"http://b.tah.openstreetmap.org/Tiles/tile.php/",
-					"http://c.tah.openstreetmap.org/Tiles/tile.php/"
-				],
-				{
-					type:'png',
-					getURL: function (bounds) {
-						var res = this.map.getResolution();
-						var x = Math.round ((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));
-						var y = Math.round ((this.maxExtent.top - bounds.top) / (res * this.tileSize.h));
-						var z = this.map.getZoom();
-						var limit = Math.pow(2, z);
-						if (y < 0 || y >= limit) {
-							return null;
-						} else {
-							x = ((x % limit) + limit) % limit;
-							var path = z + "/" + x + "/" + y + "." + this.type;
-							var url = this.url;
-							if (url instanceof Array) {
-								url = this.selectUrl(path, url);
-							}
-							return url + path;
-						}
-					},
-					displayOutsideMaxExtent: true
-				}
-			);
+			this.layers.polygonLayer = new OpenLayers.Layer.Vector("Polygon Layer");
+			
 			this.maps[api].addLayer(this.layers.osmmapnik);
-			this.maps[api].addLayer(this.layers.osm);
 			this.maps[api].addLayer(this.layers.geoportal);	
+			this.maps[api].addLayer(this.layers.polygonLayer);
+			/*
+			var map = this.maps[api];
+			var control = new OpenLayers.Control();
+			OpenLayers.Util.extend(control, {
+    			draw: function () {
+       		        this.box = new OpenLayers.Handler.Box( control,
+            			{"done": this.notice},
+            			{keyMask: OpenLayers.Handler.MOD_SHIFT});
+        			this.box.activate();
+    			},
+    			notice: function (bounds) {
+					OpenLayers.Console.userError(bounds);
+					var userBBoxFeature = new OpenLayers.Feature.Vector(bounds.toGeometry());
+				    if (userBBoxLayer != null)
+						userBBoxLayer.destroy();
+				    userBBoxLayer  = new OpenLayers.Layer.Vector("userBBox", {});
+			        userBBoxLayer.addFeatures(userBBoxFeature);
+					map.addLayer(userBBoxLayer);
+			       map.zoomToExtent(bounds);
+   				 }
+			});
+			map.addControl(control);*/
+			
 			this.loaded[api] = true;
 		},
-
+	
 		applyOptions: function(){
 			// var map = this.maps[this.api];
 			// var myOptions = [];
@@ -140,6 +153,21 @@ mxn.register('openlayers', {
 			if ( args.map_type ) {
 				map.addControl(new OpenLayers.Control.LayerSwitcher());
 			}
+			
+			map.addControl(new OpenLayers.Control.LayerSwitcher());
+            map.addControl(new OpenLayers.Control.MousePosition());
+
+			dosomething = function (polygon) {
+				//OpenLayers.Console.userError(polygon.geometry.getBounds());
+				if (userBBoxLayer != null)
+					userBBoxLayer.destroy();
+		        userBBoxLayer = polygon;
+				map.zoomToExtent(polygon.geometry.getBounds());
+            };
+  		    var polyOptions = {sides: 4, irregular: true };
+            polygonControl = new OpenLayers.Control.DrawFeature(this.layers.polygonLayer,OpenLayers.Handler.RegularPolygon,{featureAdded: dosomething, handlerOptions: polyOptions});
+			map.addControl(polygonControl);
+			polygonControl.activate();			
 		},
 
 		addSmallControls: function() {
@@ -252,8 +280,15 @@ mxn.register('openlayers', {
 		},
 
 		getZoomLevelForBoundingBox: function( bbox ) {
-			var map = this.maps[this.api];
 			// throw 'Not implemented';
+			if(this.loaded[this.api] === false) {
+				var me = this;
+				return -1;
+			}		
+			var map = this.maps[this.api];
+			var zoom;
+			var olbox = bbox.toProprietary(this.api); 
+		    var zoom = map.getZoomForExtent(olbox);
 			return zoom;
 		},
 
