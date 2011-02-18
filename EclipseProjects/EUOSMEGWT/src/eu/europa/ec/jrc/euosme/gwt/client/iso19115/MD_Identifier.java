@@ -24,6 +24,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
@@ -51,13 +52,13 @@ public class MD_Identifier extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** code control declaration */
-	CharacterString codeObj = new CharacterString(constants.code(), "resourceidentifier", true, CheckFunctions.normal, true);
+	CharacterString codeObj = new CharacterString(constants.code(), "", true, CheckFunctions.normal, true);
 	
 	/** button to get a new code */
 	Button getCodeButton = new Button();
 	
 	/** codeSpace control declaration */
-	CharacterString codeSpaceObj = new CharacterString(constants.codeSpace(), "resourceidentifier", false, CheckFunctions.normal, true);
+	CharacterString codeSpaceObj = new CharacterString(constants.codeSpace(), "", false, CheckFunctions.normal, true);
 	
 	/** version control declaration */
 	CharacterString versionObj = new CharacterString(constants.version(), "", false, CheckFunctions.normal, true);
@@ -68,11 +69,12 @@ public class MD_Identifier extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by MD_Identifier fields
      */
-	public MD_Identifier(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public MD_Identifier(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.HORIZONTAL);	
 		fieldsGroup.add(codeObj);
 		fieldsGroup.add(codeSpaceObj);
 		fieldsGroup.add(versionObj);
@@ -114,6 +116,7 @@ public class MD_Identifier extends CI {
 					// call service via RPC
 					InspireServiceRpcCallback callback = new InspireServiceRpcCallback();
 					callback.setCodeObj(codeObj.myTextBox);
+					InspireServiceRpcCallback.setType("XML");
 					RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 					ls.invokeInspireUUIDService(callback);
 					//TODO put the right namespace

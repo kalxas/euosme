@@ -22,8 +22,6 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
 import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -31,12 +29,13 @@ import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyPressHandler;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DisclosurePanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -48,6 +47,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.MySuggestBox;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
@@ -60,7 +60,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a label and a list box 
  * The list items come from an external code list service
  * 
- * @version 2.1 - January 2011
+ * @version 3.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class CodeListFree extends Composite  {
@@ -94,7 +94,7 @@ public class CodeListFree extends Composite  {
 	
 	/** Button for information */
 	@UiField
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 	
 	/** Label to help user */
 	@UiField
@@ -166,11 +166,13 @@ public class CodeListFree extends Composite  {
 		//Set Error Label widget	
 		myError.setVisible(false);	
 		
-		infoButton.addClickHandler(new ClickHandler() {
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);				
-			}
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
+			}	
 		});
 		
 		myTextBox.getTextBox().addFocusHandler( new FocusHandler(){
@@ -284,7 +286,7 @@ public class CodeListFree extends Composite  {
 	 * @param myValue {@link String} = set the value of myTextBox text box
 	 */
 	public void setMyValue(String myValue) {
-		this.myTextBox.setText(myValue);
+		this.myTextBox.setText(myValue);		
 	}
 
 	/**
@@ -326,7 +328,8 @@ public class CodeListFree extends Composite  {
 	 * @param newAnchor {@link String} = the new anchor
 	 */
 	public void setHelpAnchor(String newAnchor) {
-		helpAnchor=newAnchor;		
+		helpAnchor=newAnchor;
+		infoButton.setHelpAnchor(helpAnchor);
 	}
 
 	/**

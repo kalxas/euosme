@@ -29,6 +29,8 @@ import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.maps.client.geom.LatLng;
 import com.google.gwt.maps.client.geom.LatLngBounds;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -45,12 +47,13 @@ import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.TabGeographic;
 
 /**
- * @version 5.0.1 - January 2011
+ * @version 6.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class GeoBoundsMultiple extends Composite {
@@ -100,7 +103,7 @@ public class GeoBoundsMultiple extends Composite {
 	
 	/** Button for information */
 	@UiField
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 		
 	/** Constants declaration */
 	private iso19115Constants constants = GWT.create(iso19115Constants.class);
@@ -148,10 +151,6 @@ public class GeoBoundsMultiple extends Composite {
 	    // Set the name of the form element
 	    myListBox.setVisible(false);
 	    
-	    // Set the label of the button
-	    newButton.setText(constants.add());
-	    //newButton.ensureDebugId("newButton");
-
 	    myListBox.addFocusHandler(new FocusHandler(){
 			@Override
 			public void onFocus(FocusEvent event) {
@@ -165,10 +164,12 @@ public class GeoBoundsMultiple extends Composite {
 	    //Set Error Label widget		
 		myError.setVisible(false);
 		
-		infoButton.addClickHandler(new ClickHandler() {
+		// Set info button
+		infoButton.setHelpAnchor("boundingbox");
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo("boundingbox",infoButton);				
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
 			}
 		});
 	}	
@@ -350,7 +351,8 @@ public class GeoBoundsMultiple extends Composite {
 		myFlexTable.setText(row, 2, newItem.split(";")[2]); //south
 		myFlexTable.setText(row, 3, newItem.split(";")[3]); //west
 		
-		Button removeButton = new Button("x");
+		Button removeButton = new Button();
+		removeButton.addStyleName("minusButton");
 		removeButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				Integer removedIndex = myList.indexOf(newItem.toUpperCase()) + 1;

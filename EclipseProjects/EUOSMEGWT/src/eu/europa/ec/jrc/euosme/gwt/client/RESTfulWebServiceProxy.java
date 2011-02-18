@@ -32,7 +32,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  * defines the signatures of the service methods that will be exposed to the clients. 
  * The method parameters and return types must be serializable.
  * 
- * @version 4.0 - January 2011
+ * @version 5.0 - February 2011
  * @author 	Marzia Grasso
  */
 @RemoteServiceRelativePath("RESTfulWebServiceProxy")
@@ -49,7 +49,7 @@ public interface RESTfulWebServiceProxy extends RemoteService {
     public String invokeGetRESTfulWebService(String uri, String contentType, String clientLanguage, String filter)
         throws RESTfulWebServiceException;
     
-    public Map<String,String> invokeGemetService(String clientLanguage)
+    public Map<String,String> invokeGemetService(String serviceName, String clientLanguage)
     	throws RESTfulWebServiceException;
     
 	public String invokeUpdateRESTfulWebService() 

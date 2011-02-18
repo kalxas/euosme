@@ -38,7 +38,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Temporal
  * 
- * @version 2.0.1 - January 2011
+ * @version 3.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabTemporal extends Composite {
@@ -58,21 +58,21 @@ public class TabTemporal extends Composite {
 	HTML summaryHTML = new HTML(constants.temporalSummary());
 	
 	/** Date control declaration */
-	TM_Primitive extentObj = new TM_Primitive(constants.temporalExtent(), false, true);
+	TM_Primitive extentObj = new TM_Primitive(constants.temporalExtent(), false, true,"");
 	@UiField(provided = true)
-	CIMultiple extentContainerObj = new CIMultiple(constants.temporalExtent(), extentObj, false);
+	CIMultiple extentContainerObj = new CIMultiple(constants.temporalExtent(), extentObj, false, "temporalextent");
 	
 	/** Date of publication control declaration */
 	@UiField(provided = true)
-	CI_Date publicationDateObj = new CI_Date(constants.publicationDate(), false, false);
+	CI_Date publicationDateObj = new CI_Date(constants.publicationDate(), false, false,"");
 	
 	/** Date of last revision control declaration */
 	@UiField(provided = true)
-	CI_Date revisionDateObj = new CI_Date(constants.revisionDate(), false, false);
+	CI_Date revisionDateObj = new CI_Date(constants.revisionDate(), false, false,"");
 	
 	/** Date of last revision control declaration */
 	@UiField(provided = true)
-	CI_Date creationDateObj = new CI_Date(constants.creationDate(), false, false);
+	CI_Date creationDateObj = new CI_Date(constants.creationDate(), false, false,"");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)

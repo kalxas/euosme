@@ -1,0 +1,15 @@
+PREFIX dct:<http://purl.org/dc/terms/>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX inspire:<http://inspire-registry.jrc.ec.europa.eu/rdfschema/inspire-schema.rdf#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?c ?l
+WHERE {
+  {
+    ?c skos:prefLabel ?l.
+    ?c skos:inScheme <http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items>.
+    FILTER ( LANG(?l) = "en" )    
+  }
+}

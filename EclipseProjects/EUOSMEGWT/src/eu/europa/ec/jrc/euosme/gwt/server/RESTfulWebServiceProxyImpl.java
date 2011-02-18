@@ -62,6 +62,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	static String repositories = "";
 	static String limit = "200";
 	static String dataThemes = "";
+	static String dataServices = "";
 	static Boolean saveCodeList=false;
 	static String inspireValidationService = "";
 	static String inspireWebService = "";
@@ -79,6 +80,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         codelists = config.getInitParameter("codelists");
         repositories = config.getInitParameter("repositories");
         dataThemes = config.getInitParameter("dataThemes");
+        dataServices = config.getInitParameter("dataServices");
         limit = config.getInitParameter("limit");
         inspireValidationService = config.getInitParameter("inspireValidationService");
         inspireWebService = config.getInitParameter("inspireWebService");
@@ -190,11 +192,14 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
     }
 
     @SuppressWarnings("unchecked")
-	public Map<String,String> invokeGemetService(String clientLanguage) 
+	public Map<String,String> invokeGemetService(String serviceName, String clientLanguage) 
 	throws RESTfulWebServiceException {
     	try {
     		Map<String,String> definitions = new LinkedHashMap<String, String>();
-    		GemetClient instance = new GemetClient(dataThemes);    		
+    		String url = "";
+    		if (serviceName.equalsIgnoreCase("dataThemes")) url = dataThemes;
+    		else url = dataServices;
+    		GemetClient instance = new GemetClient(url);    		
     		ArrayList c = instance.getTopmostConcepts(instance.getThesaurusInspireThemes(),new Locale(clientLanguage));
     		Iterator i = c.iterator();
             while (i.hasNext()) {

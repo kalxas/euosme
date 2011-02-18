@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -60,11 +61,12 @@ public class MD_LegalConstraints extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help 
+     *  
      * @return	the widget composed by MD_LegalConstraints fields
      */
-	public MD_LegalConstraints(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public MD_LegalConstraints(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.HORIZONTAL);		
 		fieldsGroup.add(accessConstraintsObj);
 		fieldsGroup.add(useConstraintsObj);
 		fieldsGroup.add(otherConstraintsObj);

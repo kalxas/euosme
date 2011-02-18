@@ -36,7 +36,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 public class SuggestListCallback implements AsyncCallback <String> {
 	
 	/** the list box to populate */
-	static ListBox myList;
+	ListBox myList;
 	
 	/** Constants declaration */
 	private iso19115Constants constants = GWT.create(iso19115Constants.class);
@@ -65,7 +65,7 @@ public class SuggestListCallback implements AsyncCallback <String> {
     /**
      * @param newList	{@link ListBox} = the list box to populate
      */
-    public static void setList(ListBox newList) {    	
+    public void setList(ListBox newList) {    	
 		myList = newList;		
 	}   
 }

@@ -36,7 +36,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Organization
  * 
- * @version 3.0.1 - January 2011
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabOrganization extends Composite {
@@ -56,9 +56,9 @@ public class TabOrganization extends Composite {
 	HTML summaryHTML = new HTML(constants.organizationSummary());
 	
 	/** responsibleParty control declaration */
-	CI_ResponsibleParty responsiblePartyObj =	new CI_ResponsibleParty(constants.ci_responsibleParty(), false, true);
+	CI_ResponsibleParty responsiblePartyObj =	new CI_ResponsibleParty(constants.ci_responsibleParty(), false, true,"");
 	@UiField(provided = true)
-	CIMultiple responsiblePartyContainerObj = new CIMultiple(constants.ci_responsibleParty(), responsiblePartyObj, false);
+	CIMultiple responsiblePartyContainerObj = new CIMultiple(constants.ci_responsibleParty(), responsiblePartyObj, false,"party");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)

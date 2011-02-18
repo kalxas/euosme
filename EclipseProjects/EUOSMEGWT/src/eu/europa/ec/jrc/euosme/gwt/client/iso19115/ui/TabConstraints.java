@@ -36,7 +36,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.MD_Constraints;
 /**
  * Create the tab Constraints
  * 
- * @version 1.1 - November 2010
+ * @version 2.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabConstraints extends Composite {
@@ -57,10 +57,10 @@ public class TabConstraints extends Composite {
 	HTML summaryHTML = new HTML(constants.constraintsSummary());
 	
 	@UiField(provided = true)
-	MD_Constraints useLimitationObj = new MD_Constraints(constants.useLimitation(),true,false);
+	MD_Constraints useLimitationObj = new MD_Constraints(constants.useLimitation(),true,false,"");
 	
 	@UiField(provided = true)
-	MD_LegalConstraints constraintsObj =	new MD_LegalConstraints(constants.constraintsTabTitle(),true, true);
+	MD_LegalConstraints constraintsObj =	new MD_LegalConstraints(constants.constraintsTabTitle(),true, true,"");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)

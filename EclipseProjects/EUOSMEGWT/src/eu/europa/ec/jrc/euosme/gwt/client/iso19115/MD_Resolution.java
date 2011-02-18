@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
@@ -43,10 +44,10 @@ public class MD_Resolution extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** equivalentScaleObj control declaration */
-	CharacterString equivalentScaleObj = new CharacterString(constants.equivalentScale(), "spatialresolution", false, CheckFunctions.integer, true);
+	CharacterString equivalentScaleObj = new CharacterString(constants.equivalentScale(), "", false, CheckFunctions.integer, true);
 	
 	/** distanceObj control declaration */
-	public Distance distanceObj =	new Distance(constants.distance(), false, false);
+	public Distance distanceObj =	new Distance(constants.distance(), false, false,"");
 		
 	/** 
      * constructor MD_Resolution model
@@ -54,11 +55,12 @@ public class MD_Resolution extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by MD_Resolution fields
      */
-	public MD_Resolution(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public MD_Resolution(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(equivalentScaleObj);
 		fieldsGroup.add(distanceObj);
 	}

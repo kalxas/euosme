@@ -20,28 +20,35 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.VerticalAlign;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.CellPanel;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DisclosurePanel;
+import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 
 /**
  * Create CI model
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 
@@ -58,8 +65,17 @@ public class CI extends Composite {
 	
 	/** grouping fields declaration */
 	@UiField(provided = true)
+	VerticalPanel fieldsGroupVertical = new VerticalPanel();
+	
+	@UiField(provided = true)
+	HorizontalPanel fieldsGroupHorizontal = new HorizontalPanel();
+	
 	public
-	VerticalPanel fieldsGroup = new VerticalPanel();
+	CellPanel fieldsGroup;
+	
+	/** Button for information */
+	@UiField
+	InfoButton infoButton = new InfoButton();
 	
 	/** vertical panel */
 	@UiField(provided = true)
@@ -92,23 +108,29 @@ public class CI extends Composite {
 	/** Name of the element in the form */
 	private String myFormName;
 	
+	/** Global variable used to move into the user guide as an anchor */
+	private String helpAnchor="";
+	
 	/**
 	 * constructor CI model
 	 * 
 	 * @param label		{@link String} = the label in the header
 	 * @param required	{@link Boolean} = indicates if the element is required
 	 * @param multiple	{@link Boolean} = indicates if the element could be duplicated
+	 * @param help		{@link String} = the anchor in the help 
 	 */
-	public CI(String label, boolean required, boolean multiple) {
+	public CI(String label, boolean required, boolean multiple, String help, CIOrientations orientation) {
 		// Set global variables
 		isRequired = required;
 		isMultiple = multiple;
+		helpAnchor = help;
 		
 		// Add * for mandatory fields
 		if (multiple==true) {
-			removeGroupButton.setText(messages.remove(myLabel.getText()));
+			removeGroupButton.setTitle(messages.remove(myLabel.getText()));
 			removeGroupButton.setEnabled(false);
 			removeGroupButton.setVisible(true);
+			removeGroupButton.addStyleName("minusButton");			
 		}
 		setLabel(label);			
 		
@@ -117,11 +139,25 @@ public class CI extends Composite {
 		
 		//componentPanel.setOpen(required);
 		componentPanel.setOpen(true); // always opened
+		//componentPanel.getElement().getStyle().setBackgroundColor("red");
 		
 		//Set Error Label widget		
 		myError.setVisible(false);
 		
 		sinkEvents(com.google.gwt.user.client.Event.ONKEYPRESS);
+		
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
+			@Override
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
+			}	
+		});
+		
+		// Set preferred layout
+		if (orientation.equals(CIOrientations.VERTICAL)) fieldsGroup = fieldsGroupVertical;
+		else fieldsGroup = fieldsGroupHorizontal;
 	}
 	
 	/**
@@ -249,9 +285,10 @@ public class CI extends Composite {
 	protected void setLabelCount(Integer n) {
 		String oldlabel = myLabel.getText();
 		myLabel.setText(oldlabel.replace("1", n.toString()));
-		removeGroupButton.setText(messages.remove(myLabel.getText()));	
+		removeGroupButton.setTitle(messages.remove(myLabel.getText()));	
 		removeGroupButton.setEnabled(true);
 		removeGroupButton.setVisible(true);
+		removeGroupButton.getElement().getParentElement().getStyle().setVerticalAlign(VerticalAlign.MIDDLE);
 	}
 
 	/**
@@ -265,5 +302,15 @@ public class CI extends Composite {
 		myFormName = Utilities.cloneTree(myId, this.getElement().getId());
 		componentPanel.setOpen(true);
 		return myFormName;
-	}	
+	}
+	
+	/**
+	 * Set the new help anchor
+	 * 
+	 * @param newAnchor {@link String} = the new anchor
+	 */
+	public void setHelpAnchor(String newAnchor) {
+		helpAnchor=newAnchor;
+		infoButton.setHelpAnchor(helpAnchor);
+	}
 }

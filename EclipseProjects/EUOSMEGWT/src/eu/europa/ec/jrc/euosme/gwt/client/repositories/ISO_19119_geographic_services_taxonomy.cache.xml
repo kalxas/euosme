@@ -1,1 +1,716 @@
-<?xml version='1.0' encoding='utf-8'?><?xml-stylesheet type='text/xsl' href='/openrdf-workbench/transformations/tuple.xsl'?><sparql xmlns='http://www.w3.org/2005/sparql-results#' xmlns:q='http://www.openrdf.org/schema/qname#'><head><variable name='c'/><variable name='l'/><variable name='a'/><variable name='d'/><link href='info'/></head><results ordered='false' distinct='false'><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/100</uri></binding><binding name='l'><literal xml:lang='en'>Geographic human interaction services (humanInteractionService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic human interaction services (humanInteractionService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/200</uri></binding><binding name='l'><literal xml:lang='en'>Geographic model/information management service (infoManagementService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic model/information management service (infoManagementService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/300</uri></binding><binding name='l'><literal xml:lang='en'>Geographic workflow/task management services (taskManagementService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic workflow/task management services (taskManagementService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/400</uri></binding><binding name='l'><literal xml:lang='en'>Geographic processing services – spatial (spatialProcessingService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic processing services – spatial (spatialProcessingService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/500</uri></binding><binding name='l'><literal xml:lang='en'>Geographic processing services – thematic (thematicProcessingService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic processing services – thematic (thematicProcessingService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/600</uri></binding><binding name='l'><literal xml:lang='en'>Geographic processing services – temporal (temporalProcessingService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic processing services – temporal (temporalProcessingService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/700</uri></binding><binding name='l'><literal xml:lang='en'>Geographic processing services – metadata (metadataProcessingService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic processing services – metadata (metadataProcessingService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result><result><binding name='c'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/800</uri></binding><binding name='l'><literal xml:lang='en'>Geographic communication services (comService)</literal></binding><binding name='a'><literal xml:lang='en'>Geographic communication services (comService)</literal></binding><binding name='d'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding></result></results></sparql>
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type='text/xsl' href='/openrdf-workbench/transformations/tuple.xsl'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#' xmlns:q='http://www.openrdf.org/schema/qname#'>
+  <head>
+    <variable name='c'/>
+    <variable name='l'/>
+    <variable name='a'/>
+    <variable name='d'/>
+    <link href='info'/>
+  </head>
+
+  <results ordered='false' distinct='false'>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/100</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic human interaction services (humanInteractionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/101</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Catalogue viewer (humanCatalogueViewer)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/102</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic viewer (humanGeographicViewer)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/103</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic spreadsheet viewer (humanGeographicSpreadsheetViewer)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/104</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Service editor (humanServiceEditor)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/105</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Chain definition editor (humanChainDefinitionEditor)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/106</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Workflow enactment manager.(humanWorkflowEnactmentManager)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/107</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic feature editor (humanGeographicFeatureEditor)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/108</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic symbol editor (humanGeographicSymbolEditor)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/109</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature generalisation editor (humanFeatureGeneralizationEditor)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/110</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic data-structure viewer (humanGeographicDataStructureViewer)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/200</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic model/information management service (infoManagementService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/201</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature access service (infoFeatureAccessService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/202</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Map access service (infoMapAccessService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/203</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Coverage access service (infoCoverageAccessService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/204</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Sensor description service (infoSensorDescriptionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/205</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Product access service (infoProductAccessService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/206</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature type service (infoFeatureTypeService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/207</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Catalogue service (infoCatalogueService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/208</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Registry Service (infoRegistryService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/209</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Gazetteer service (infoGazetteerService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/210</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Order handling service (infoOrderHandlingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/211</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Standing order service (infoStandingOrderService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/300</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic workflow/task management services (taskManagementService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/301</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Chain definition service (chainDefinitionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/302</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Workflow enactment service (workflowEnactmentService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/303</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Subscription service (subscriptionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/400</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic processing services – spatial (spatialProcessingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/401</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Coordinate conversion service (spatialCoordinateConversionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/402</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Coordinate transformation service (spatialCoordinateTransformationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/403</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Coverage/vector conversion service (spatialCoverageVectorConversionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/404</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image coordinate conversion service (spatialImageCoordinateConversionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/405</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Rectification service (spatialRectificationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/406</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Orthorectification service (spatialOrthorectificationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/407</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Sensor geometry model adjustment service (spatialSensorGeometryModelAdjustmentService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/408</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image geometry model conversion service (spatialImageGeometryModelConversionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/409</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Subsetting service (spatialSubsettingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/410</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Sampling service (spatialSamplingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/411</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Tiling change service (spatialTilingChangeService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/412</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Dimension measurement service (spatialDimensionMeasurementService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/413</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature manipulation services (spatialFeatureManipulationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/414</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature matching service (spatialFeatureMatchingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/415</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature generalisation service (spatialFeatureGeneralizationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/416</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Route determination service (spatialRouteDeterminationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/417</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Positioning service (spatialPositioningService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/418</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Proximity analysis service (spatialProximityAnalysisService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/500</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic processing services – thematic (thematicProcessingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/501</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geoparameter calculation service (thematicGoparameterCalculationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/502</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Thematic classification service (thematicClassificationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/503</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Feature generalisation service (thematicFeatureGeneralizationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/504</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Subsetting service (thematicSubsettingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/505</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Spatial counting service (thematicSpatialCountingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/506</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Change detection service (thematicChangeDetectionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/507</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic information extraction services (thematicGeographicInformationExtractionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/508</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image processing service (thematicImageProcessingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/509</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Reduced resolution generation service (thematicReducedResolutionGenerationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/510</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image Manipulation Services (thematicImageManipulationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/511</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image understanding services (thematicImageUnderstandingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/512</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Image synthesis services (thematicImageSynthesisService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/513</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Multiband image manipulation (thematicMultibandImageManipulationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/514</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Object detection service (thematicObjectDetectionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/515</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geoparsing service (thematicGeoparsingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/516</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geocoding service (thematicGeocodingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/600</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic processing services – temporal (temporalProcessingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/601</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Temporal reference system transformation service (temporalReferenceSystemTransformationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/602</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Subsetting service (temporalSubsettingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/603</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Sampling service (temporalSamplingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/604</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Temporal proximity analysis service (temporalProximityAnalysisService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/700</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic processing services – metadata (metadataProcessingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/701</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Statistical calculation service (metadataStatisticalCalculationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/702</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic annotation services (metadataGeographicAnnotationService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/800</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic communication services (comService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/801</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Encoding service (comEncodingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/802</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Transfer service (comTransferService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/803</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic compression service (comGeographicCompressionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/804</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Geographic format conversion service (comGeographicFormatConversionService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/805</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Messaging service (comMessagingService)</literal>
+      </binding>
+
+    </result>
+    <result>
+      <binding name='c'>
+        <uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/806</uri>
+      </binding>
+      <binding name='l'>
+        <literal xml:lang='en'>Remote file and executable management (comRemoteFileAndExecutableManagement)</literal>
+      </binding>
+
+    </result>
+  </results>
+</sparql>

@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
@@ -43,13 +44,13 @@ public class CI_Contact extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** phone control declaration */
-	CI_Telephone phoneObj = new CI_Telephone(constants.ci_telephone(), false, false);
+	CI_Telephone phoneObj = new CI_Telephone(constants.ci_telephone(), false, false,"");
 	
 	/** address control declaration */
-	CI_Address addressObj = new CI_Address(constants.address(), false, false);		
+	CI_Address addressObj = new CI_Address(constants.address(), false, false,"");		
 	
 	/** onlineResource control declaration */
-	CI_OnlineResource onlineResourceObj = new CI_OnlineResource(constants.ci_onlineResource(), false, false);
+	CI_OnlineResource onlineResourceObj = new CI_OnlineResource(constants.ci_onlineResource(), false, false,"");
 	
 	/** hoursOfService control declaration */
 	CharacterString hoursOfServiceObj = new CharacterString(constants.hoursOfService(), "", false, CheckFunctions.integer, true);
@@ -63,11 +64,12 @@ public class CI_Contact extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by CI_Contact fields
      */
-	public CI_Contact(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public CI_Contact(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(phoneObj);
 		fieldsGroup.add(addressObj);
 		fieldsGroup.add(onlineResourceObj);

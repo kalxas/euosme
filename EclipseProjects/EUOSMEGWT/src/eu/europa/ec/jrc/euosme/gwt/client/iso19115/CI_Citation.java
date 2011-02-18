@@ -28,6 +28,7 @@ import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
@@ -61,12 +62,12 @@ public class CI_Citation extends CI {
 	CharacterString alternateTitleObj = new CharacterString(constants.alternateTitle(), "", false, CheckFunctions.normal, true);
 	
 	/** identifier control declaration */
-	MD_Identifier identifierObj =	new MD_Identifier(constants.md_identifier(),false, true);
-	CIMultiple identifierContainerObj = new CIMultiple(constants.md_identifier(), identifierObj, false);
+	MD_Identifier identifierObj =	new MD_Identifier(constants.md_identifier(),false, true,"");
+	CIMultiple identifierContainerObj = new CIMultiple(constants.md_identifier(), identifierObj, false,"resourceidentifier");
 	
 	/** identifier control declaration */
-	CI_Date dateObj =	new CI_Date(constants.date(),true, true);
-	CIMultiple dateContainerObj = new CIMultiple(constants.date(), dateObj, true);
+	CI_Date dateObj =	new CI_Date(constants.date(),true, true,"");
+	CIMultiple dateContainerObj = new CIMultiple(constants.date(), dateObj, true,"");
 
 	/** List of specification for RDSI AppMode */
 	final CodeListFree specificationObj = new CodeListFree(constants.specifications(),"specification",false,"15","",CheckFunctions.normal,true,false);
@@ -77,11 +78,12 @@ public class CI_Citation extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help
+     *  
      * @return	the widget composed by CI_Citation fields
      */
-	public CI_Citation(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public CI_Citation(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(titleObj);
 		fieldsGroup.add(alternateTitleObj);
 		fieldsGroup.add(identifierContainerObj);
@@ -163,11 +165,8 @@ public class CI_Citation extends CI {
 				identifierContainerObj.setVisible(false);
 				dateObj.removeDisclosure();
 				dateObj.dateObj.setLabel(constants.referenceDate());
-				dateObj.dateObj.setHelpAnchor("vocabulary");
-				dateObj.dateTypeObj.setHelpAnchor("vocabulary");
 				dateObj.setMultiple(false);
 				fieldsGroup.add(dateObj);
-				titleObj.setHelpAnchor("vocabulary");
 				dateContainerObj.setVisible(false);
 			}
 			if (i==2) { // TAB conformity
@@ -180,12 +179,9 @@ public class CI_Citation extends CI {
 				identifierObj.setVisible(false);
 				identifierContainerObj.setVisible(false);
 				dateContainerObj.setVisible(false);
-				dateObj.setMultiple(false);
-				dateObj.dateObj.setHelpAnchor("specification");
+				dateObj.setMultiple(false);				
 				dateObj.removeDisclosure();
-				fieldsGroup.add(dateObj);				
-				//titleObj.setLabel(constants.specification());
-				//titleObj.setHelpAnchor("specification");
+				fieldsGroup.add(dateObj);
 			}
 		}	// TAB Identification
 		else if (i==0) {

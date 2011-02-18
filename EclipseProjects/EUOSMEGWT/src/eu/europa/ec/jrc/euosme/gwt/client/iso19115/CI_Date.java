@@ -22,6 +22,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
@@ -55,11 +56,12 @@ public class CI_Date extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by CI_Date fields
      */
-	public CI_Date(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public CI_Date(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.HORIZONTAL);	
 		fieldsGroup.add(dateObj);
 		fieldsGroup.add(dateTypeObj);		
 	}

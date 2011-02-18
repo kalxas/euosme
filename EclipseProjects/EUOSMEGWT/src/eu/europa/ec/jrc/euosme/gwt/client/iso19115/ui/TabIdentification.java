@@ -43,7 +43,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
 /**
  * Create the tab Identification
  * 
- * @version 3.0.1 - January 2011
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabIdentification extends Composite {
@@ -64,7 +64,7 @@ public class TabIdentification extends Composite {
 	
 	/** resource declaration */
 	@UiField(provided = true)
-	CI_Citation CI_CitationObj = new CI_Citation(constants.resource(),true,false);
+	CI_Citation CI_CitationObj = new CI_Citation(constants.resource(),true,false,"");
 	
 	/** abstract control declaration */
 	@UiField(provided = true)
@@ -75,9 +75,9 @@ public class TabIdentification extends Composite {
 	CodeList resourceTypeObj =	new CodeList(constants.resourceType(),"resourcetype",true,"6","dataset",true);
 
 	/** onlineResource control declaration */
-	CI_OnlineResource onlineResourceObj =	new CI_OnlineResource(constants.resourceLocator(), false, true);
+	CI_OnlineResource onlineResourceObj =	new CI_OnlineResource(constants.resourceLocator(), false, true,"");
 	@UiField(provided = true)
-	CIMultiple onlineResourceContainerObj = new CIMultiple(constants.resourceLocator(), onlineResourceObj, false);
+	CIMultiple onlineResourceContainerObj = new CIMultiple(constants.resourceLocator(), onlineResourceObj, false,"resourcelocator");
 	
 	/** language control declaration */
 	@UiField(provided = true)
@@ -142,6 +142,7 @@ public class TabIdentification extends Composite {
 			else operatesOnObj.setVisible(false);
 			resourceTypeObj.setVisible(false);
 			CI_CitationObj.removeDisclosure();
+			//onlineResourceObj.removeDisclosure();
 		}
 		else operatesOnObj.setVisible(false);
 	}

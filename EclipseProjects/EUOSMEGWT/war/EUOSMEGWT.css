@@ -1236,8 +1236,7 @@ td.datePickerMonth {
 	margin: 5px;
 }
 .h4 {
-	margin-left: 15px;
-	margin-right: 15px;
+	margin: 15px;
 	font-style:italic;
 	width: 100%;
 	font-size: 12px;
@@ -1299,6 +1298,22 @@ form {
 	-moz-background-inline-policy:continuous;
 	-moz-background-origin:padding;
 	background:transparent url(images/info.jpg) no-repeat scroll 0 0;
+	width: 20px;
+	height: 20px;
+}
+.minusButton {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(images/minus.jpg) no-repeat scroll 0 0;
+	width: 20px;
+	height: 20px;
+}
+.plusButton {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(images/plus.jpg) no-repeat scroll 0 0;
 	width: 20px;
 	height: 20px;
 }
@@ -1667,4 +1682,7 @@ display: none;
 .suggestion {
     color: darkGray;
     font-size: 10px;
-}    
+}
+.greyPanel {
+	background-color: #F1F1F1;
+}  

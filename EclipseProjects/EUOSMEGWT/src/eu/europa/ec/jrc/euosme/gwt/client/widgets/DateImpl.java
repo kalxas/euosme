@@ -24,14 +24,13 @@ import java.util.Date;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
 import com.google.gwt.event.dom.client.FocusHandler;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DisclosurePanel;
 import com.google.gwt.user.client.ui.Label;
@@ -40,6 +39,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.datepicker.client.DateBox;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.MyDateBox;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -47,7 +47,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 /**
  * Create an horizontal panel with a label and a date box
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class DateImpl extends Composite {
@@ -77,7 +77,7 @@ public class DateImpl extends Composite {
 	
 	/** Button for information */
 	@UiField
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 	
 	/** Global variable used to move into the user guide as an anchor */
 	private String helpAnchor="";
@@ -145,11 +145,13 @@ public class DateImpl extends Composite {
 		
 		//Set Error Label widget		
 		myError.setVisible(false);
-			
-		infoButton.addClickHandler(new ClickHandler() {
+		
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);				
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
 			}
 		});
 	}	
@@ -228,6 +230,7 @@ public class DateImpl extends Composite {
 	 * @param newAnchor {@link String} = the new anchor to use
 	 */
 	public void setHelpAnchor(String newAnchor) {
-		helpAnchor=newAnchor;		
+		helpAnchor=newAnchor;
+		infoButton.setHelpAnchor(helpAnchor);		
 	}
 }

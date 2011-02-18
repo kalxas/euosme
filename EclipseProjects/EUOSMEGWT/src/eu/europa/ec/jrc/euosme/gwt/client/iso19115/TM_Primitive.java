@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
@@ -43,10 +44,10 @@ public class TM_Primitive extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** Date control declaration */
-	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "temporalextent", true);
+	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "", true);
 	
 	/** Date control declaration */
-	DateImpl endDateObj =	new DateImpl(constants.endDate(), "temporalextent", true);
+	DateImpl endDateObj =	new DateImpl(constants.endDate(), "", true);
 	
 	/** 
      * constructor TM_Primitive model
@@ -54,11 +55,12 @@ public class TM_Primitive extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help 
+     *  
      * @return	the widget composed by TM_Primitive fields
      */
-	public TM_Primitive(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public TM_Primitive(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.HORIZONTAL);
 		fieldsGroup.add(beginDateObj);
 		fieldsGroup.add(endDateObj);		
 	}

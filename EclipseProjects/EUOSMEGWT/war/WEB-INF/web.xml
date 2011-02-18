@@ -52,6 +52,11 @@
       	<param-name>dataThemes</param-name>
       	<param-value>http://inspire-twg.jrc.ec.europa.eu/Control_Panel/Products/GimmeThesaurus/gemet/</param-value>
       	<description>URL to get list of INSPIRE data themes</description>
+      </init-param>
+       <init-param>
+      	<param-name>dataServices</param-name>
+      	<param-value>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/</param-value>
+      	<description>URL to get list of ISO 19119 geographic services taxonomy</description>
       </init-param> 
       <init-param>
       	<param-name>inspireValidationService</param-name>
@@ -70,12 +75,12 @@
       </init-param>      
       <init-param>
       	<param-name>username</param-name>
-      	<param-value>genesis</param-value>
+      	<param-value></param-value>
       	<description>username to access the semantic repository</description>
       </init-param>
       <init-param>
       	<param-name>password</param-name>
-      	<param-value>sofarsogoodsowhat</param-value>
+      	<param-value></param-value>
       	<description>password to access the semantic repository</description>
       </init-param>     
   </servlet>

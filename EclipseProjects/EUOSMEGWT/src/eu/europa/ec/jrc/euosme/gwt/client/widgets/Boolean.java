@@ -21,15 +21,14 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ChangeEvent;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyPressEvent;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DisclosurePanel;
 import com.google.gwt.user.client.ui.Label;
@@ -39,6 +38,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 
@@ -46,7 +46,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a label and a list box 
  * The list items come from an external code list service
  * 
- * @version 2.0 - October 2010
+ * @version 3.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class Boolean extends Composite  {
@@ -73,7 +73,7 @@ public class Boolean extends Composite  {
 	
 	/** Button for information */
 	@UiField
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 	
 	// Declare constants
 	private iso19115Constants constants = GWT.create(iso19115Constants.class);
@@ -115,12 +115,15 @@ public class Boolean extends Composite  {
 		
 		//Set Error Label widget	
 		myError.setVisible(false);
-		infoButton.addClickHandler(new ClickHandler() {
+		
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);		
-			}			
-		});		
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
+			}
+		});
 	}	
 
 	/**

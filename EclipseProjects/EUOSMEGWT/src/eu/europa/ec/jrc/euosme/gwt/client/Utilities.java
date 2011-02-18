@@ -20,6 +20,7 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -29,6 +30,7 @@ import java.util.TreeMap;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Overflow;
+import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
@@ -57,7 +59,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 /**
  * Utilities class
  * 
- * @version 4.0 - January 2011
+ * @version 5.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class Utilities {	
@@ -337,7 +339,7 @@ public class Utilities {
         	currentNode = nodes.item(i);        	
 
         	// Continue if the node is a text or the xml root
-        	if (currentNode.getNodeName().equalsIgnoreCase("#text") || currentNode.getNodeName().equalsIgnoreCase("xml")) continue;        	
+        	if (currentNode.getNodeName().equalsIgnoreCase("#comment") || currentNode.getNodeName().equalsIgnoreCase("#text") || currentNode.getNodeName().equalsIgnoreCase("xml")) continue;        	
 
         	// Get nodename
         	nodeName = getNodeName(currentNode, i, parent);        	
@@ -1513,22 +1515,31 @@ public class Utilities {
 				// uri concept
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("v")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
-							definition_uri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();	    						
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("uri"))
+								definition_uri = currentSubItem.getFirstChild().getNodeValue();	  
+						}					
 					}
 				}
 				// literal in @en
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_en = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_en = currentSubItem.getFirstChild().getNodeValue();	  
+						}						
 					}
 				}
 				// literal in client language
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("a")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_lang = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_lang = currentSubItem.getFirstChild().getNodeValue();	  
+						}
 					}
 				}  
 			}
@@ -1572,29 +1583,41 @@ public class Utilities {
 				// uri concept
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("c")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
-							definition_uri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();	    						
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("uri"))
+								definition_uri = currentSubItem.getFirstChild().getNodeValue();	  
+						}
 					}
 				}
 				// literal in @en
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_en = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_en = currentSubItem.getFirstChild().getNodeValue();	  
+						}						
 					}
 				}
 				// literal in language
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("a")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("literal"))
-							definition_lang = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_lang = currentSubItem.getFirstChild().getNodeValue();	  
+						}						
 					}
 				}  
 				// does it have narrower?
 				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("d")) {
 					if (currentItem.getChildNodes().getLength() >= 0) {
-						if (currentItem.getChildNodes().item(0).getNodeName().equalsIgnoreCase("uri"))
-							definition_avuri = currentItem.getChildNodes().item(0).getFirstChild().getNodeValue();
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("uri"))
+								definition_avuri = currentSubItem.getFirstChild().getNodeValue();	  
+						}						
 					}
 				}
 			}
@@ -1650,5 +1673,29 @@ public class Utilities {
     	if (myRepositoryName.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) 
     		response=MyResources.INSTANCE.repositoryISO_19119_geographic_services_taxonomy().getText();
     	return response;
+	}
+
+	public static void setDefaultValues() {
+		// set metadata date to today
+	    String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
+		Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
+		TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
+		Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
+		// set identificationInfo sub type
+		String identificationInfoSubType = "md_dataidentification";
+		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) identificationInfoSubType = "sv_serviceidentification";
+		// set creation date to today
+		Utilities.valueField("md_metadata[1].identificationinfo[1]" + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]",myTodayDate);
+	    myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]");
+		Utilities.setTextTreeItem(myTreeItem,myTodayDate);
+		// set default values
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			Utilities.valueField("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].pointofcontact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].pointofcontact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]");
+			Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());			
+			Utilities.valueField("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]");
+			Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());			
+		}		
 	}
 }

@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
@@ -47,7 +48,7 @@ public class CI_OnlineResource extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** linkage control declaration */
-	CharacterString linkageObj = new CharacterString(constants.linkage(), "resourcelocator", true, CheckFunctions.URL, true);
+	CharacterString linkageObj = new CharacterString(constants.linkage(), "", true, CheckFunctions.URL, true);
 	
 	/** protocol control declaration */
 	CharacterString protocolObj = new CharacterString(constants.protocol(), "", false, CheckFunctions.normal, true);
@@ -70,11 +71,12 @@ public class CI_OnlineResource extends CI {
 	 * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     *  
+     * @param help		{@link String} = the anchor in the help 
+     * 
 	 * @return	the widget composed by CI_OnlineResource fields
 	 */
-	public CI_OnlineResource(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public CI_OnlineResource(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(linkageObj);
 		fieldsGroup.add(protocolObj);
 		fieldsGroup.add(applicationProfileObj);

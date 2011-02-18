@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
@@ -50,16 +51,16 @@ public class CI_ResponsibleParty extends CI {
 	CharacterString individualNameObj =	new CharacterString(constants.individualName(), "", false, CheckFunctions.normal, true);
 	
 	/** organisationName control declaration */
-	CodeListFree organisationNameObj = new CodeListFree(constants.organisationName(), "contact", false, "11","",CheckFunctions.normal, true, true);
+	CodeListFree organisationNameObj = new CodeListFree(constants.organisationName(), "", false, "11","",CheckFunctions.normal, true, true);
 	
 	/** positionName control declaration */
 	CharacterString positionNameObj = new CharacterString(constants.positionName(), "", false, CheckFunctions.normal, true);
 	
 	/** contactInfo control declaration */
-	CI_Contact contactInfoObj =	new CI_Contact(constants.ci_contact(),false, false);
+	CI_Contact contactInfoObj =	new CI_Contact(constants.ci_contact(),false, false,"");
 			
 	/** role control declaration */
-	CodeList roleObj =	new CodeList(constants.role(),"organization",true,"4","", true);
+	CodeList roleObj =	new CodeList(constants.role(),"",true,"4","", true);
 	
 	/** 
      * constructor CI_ResponsibleParty model
@@ -67,11 +68,12 @@ public class CI_ResponsibleParty extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by CI_ResponsibleParty fields
      */
-	public CI_ResponsibleParty(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public CI_ResponsibleParty(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(individualNameObj);
 		fieldsGroup.add(organisationNameObj);
 		fieldsGroup.add(positionNameObj);
@@ -124,18 +126,11 @@ public class CI_ResponsibleParty extends CI {
 			contactInfoObj.addressObj.postalCodeObj.setVisible(false);
 			contactInfoObj.addressObj.removeDisclosure();
 			contactInfoObj.removeDisclosure();			
-			if (i==1) {
-				organisationNameObj.setHelpAnchor("party");
+			if (i==1) 
 				roleObj.setHelpAnchor("role");
-			}
-			else {
-				roleObj.setMyValue("pointOfContact");
-				roleObj.setVisible(false);
-			}
+			else 
+				roleObj.setVisible(false);			
 			organisationNameObj.setShowList(false);
-		}
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
-			organisationNameObj.setMyValue(constants.RDSIorganisationName());
-		}
+		}		
 	}
 }

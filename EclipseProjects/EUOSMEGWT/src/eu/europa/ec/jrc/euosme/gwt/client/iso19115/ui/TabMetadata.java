@@ -39,7 +39,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
 /**
  * Create the tab metadata
  * 
- * @version 3.0.1 - January 2011
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabMetadata extends Composite {
@@ -59,9 +59,9 @@ public class TabMetadata extends Composite {
 	HTML summaryHTML = new HTML(constants.metadataSummary());
 	
 	/** responsiblePartyObj control declaration */
-	CI_ResponsibleParty responsiblePartyObj =	new CI_ResponsibleParty(constants.pointOfContact(),true, true);
+	CI_ResponsibleParty responsiblePartyObj =	new CI_ResponsibleParty(constants.pointOfContact(),true, true,"");
 	@UiField(provided = true)
-	CIMultiple responsiblePartyContainerObj = new CIMultiple(constants.pointOfContact(), responsiblePartyObj, true);
+	CIMultiple responsiblePartyContainerObj = new CIMultiple(constants.pointOfContact(), responsiblePartyObj, true, "contact");
 	
 	/** Date control declaration */
 	@UiField(provided = true)

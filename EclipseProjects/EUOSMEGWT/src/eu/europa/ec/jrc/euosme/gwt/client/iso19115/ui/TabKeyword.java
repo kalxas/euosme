@@ -27,6 +27,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
+import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -36,7 +37,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Keyword
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabKeyword extends Composite {
@@ -56,9 +57,9 @@ public class TabKeyword extends Composite {
 	HTML summaryHTML = new HTML(constants.selectKeywordInfo());
 	
 	/** INSPIRE keywords setting */
-	MD_Keywords_INSPIRE keywordsObj =	new MD_Keywords_INSPIRE(constants.keyword(), false, false);
+	MD_Keywords_INSPIRE keywordsObj =	new MD_Keywords_INSPIRE(constants.keyword(), false, false,"");
 	@UiField(provided = true)
-	CIMultiple keywordsContainerObj = new CIMultiple(constants.keyword(), keywordsObj, false);
+	CIMultiple keywordsContainerObj = new CIMultiple(constants.keyword(), keywordsObj, false,"");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)
@@ -78,6 +79,9 @@ public class TabKeyword extends Composite {
 		setFormName();
 		// set interface
 		setInterface();
+		// change summary if the data type is data service
+		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) 
+			summaryHTML.setHTML(constants.selectKeywordInfoDataService());
 	}
 
 	/**
@@ -104,6 +108,7 @@ public class TabKeyword extends Composite {
 			keywordsObj.removeDisclosure();
 			keywordsObj.setMultiple(false);
 			keywordsContainerObj.addButton.setVisible(false);
+			keywordsContainerObj.removeDisclosure();
 		}		
 	}
 }

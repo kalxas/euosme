@@ -21,6 +21,8 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -34,6 +36,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_Date;
@@ -50,7 +53,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.TM_Primitive;
 /**
  * Create CIMultiple model
  * 
- * @version 3.0 - November 2010
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class CIMultiple extends Composite {
@@ -84,11 +87,23 @@ public class CIMultiple extends Composite {
 	@UiField(provided = true)
 	VerticalPanel fieldsGroup = new VerticalPanel();
 	
+	/** Button for information */
+	@UiField
+	InfoButton infoButton = new InfoButton();
+	
+	/** vertical panel */
+	@UiField(provided = true)
+	protected
+	VerticalPanel myPanel = new VerticalPanel();
+	
 	/** the widget */
 	Composite myWidget=new Composite() {};
 	
 	/** The label used for the group */ 
 	private String groupLabel="";
+	
+	/** Global variable used to move into the user guide as an anchor */
+	private String helpAnchor="";
 	
 	/** 
      * constructor CIMultiple model
@@ -96,10 +111,12 @@ public class CIMultiple extends Composite {
 	 * @param label		{@link String} = the header
 	 * @param myWidget	{@link Composite} = the widget to duplicate
 	 * @param required	{@link Boolean} = if true at least one is mandatory
+	 * @param help		{@link String} = the anchor in the help 
 	 */
-	public CIMultiple(String label, Composite myWidget, boolean required) {
+	public CIMultiple(String label, Composite myWidget, boolean required, String help) {
 		isRequired = required;
 		groupLabel = label;
+		helpAnchor = help;
 		
 		// Add * for mandatory fields
 		setLabel(label);
@@ -112,10 +129,21 @@ public class CIMultiple extends Composite {
 		initWidget(CIUiBinder.createAndBindUi(this));
 		
 		// set add button
-		addButton.setText(messages.add(label));		
+		addButton.setTitle(messages.add(label));		
+		addButton.addStyleName("plusButton");
 		
 		if (EUOSMEGWT.showAll) setDisplay(true);
 		else setDisplay(required);
+		
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
+			@Override
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
+			}			
+		});
 	}
 	
 	/**
@@ -181,61 +209,61 @@ public class CIMultiple extends Composite {
 			// create new widget
 			Widget newObj = null;
 			if (myClass.equalsIgnoreCase("DQ_Element")) {
-		    	newObj = new DQ_Element(groupLabel,isRequired, true);
+		    	newObj = new DQ_Element(groupLabel,isRequired, true,"");
 		    	((DQ_Element) newObj).setFormName(myFormName);
 		    	((DQ_Element) newObj).setLabelCount(n);
 		    	((DQ_Element) newObj).cloneTree(myWidget.getElement().getId());	    	
 		    }
 			if (myClass.equalsIgnoreCase("EX_GeographicBoundingBox")) {
-		    	newObj = new EX_GeographicBoundingBox(groupLabel,isRequired, true);
+		    	newObj = new EX_GeographicBoundingBox(groupLabel,isRequired, true,"");
 		    	((EX_GeographicBoundingBox) newObj).setFormName(myFormName);
 		    	((EX_GeographicBoundingBox) newObj).setLabelCount(n);
 		    	((EX_GeographicBoundingBox) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 			if (myClass.equalsIgnoreCase("md_resolution")) {
-		    	newObj = new MD_Resolution(groupLabel,isRequired, true);
+		    	newObj = new MD_Resolution(groupLabel,isRequired, true,"");
 		    	((MD_Resolution) newObj).setFormName(myFormName);
 		    	((MD_Resolution) newObj).setLabelCount(n);
 		    	((MD_Resolution) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 			if (myClass.equalsIgnoreCase("distance")) {
-		    	newObj = new Distance(groupLabel,isRequired, true);
+		    	newObj = new Distance(groupLabel,isRequired, true,"");
 		    	((Distance) newObj).setFormName(myFormName);
 		    	((Distance) newObj).setLabelCount(n);
 		    	((Distance) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 			if (myClass.equalsIgnoreCase("ci_date")) {
-		    	newObj = new CI_Date(groupLabel,isRequired, true);
+		    	newObj = new CI_Date(groupLabel,isRequired, true,"");
 		    	((CI_Date) newObj).setFormName(myFormName);
 		    	((CI_Date) newObj).setLabelCount(n);
 		    	((CI_Date) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 			if (myClass.equalsIgnoreCase("tm_primitive")) {
-		    	newObj = new TM_Primitive(groupLabel,isRequired, true);
+		    	newObj = new TM_Primitive(groupLabel,isRequired, true,"");
 		    	((TM_Primitive) newObj).setFormName(myFormName);
 		    	((TM_Primitive) newObj).setLabelCount(n);
 		    	((TM_Primitive) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 			if (myClass.equalsIgnoreCase("md_keywords")) {
-		    	newObj = new MD_Keywords(groupLabel,isRequired, true);
+		    	newObj = new MD_Keywords(groupLabel,isRequired, true,"");
 		    	((MD_Keywords) newObj).setFormName(myFormName);
 		    	((MD_Keywords) newObj).setLabelCount(n);
 		    	((MD_Keywords) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 		    if (myClass.equalsIgnoreCase("ci_onlineresource")) {
-		    	newObj = new CI_OnlineResource(groupLabel,isRequired, true);
+		    	newObj = new CI_OnlineResource(groupLabel,isRequired, true,"");
 		    	((CI_OnlineResource) newObj).setFormName(myFormName);
 		    	((CI_OnlineResource) newObj).setLabelCount(n);
 		    	((CI_OnlineResource) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 		    if (myClass.equalsIgnoreCase("md_identifier")) {
-		    	newObj = new MD_Identifier(groupLabel,isRequired, true);
+		    	newObj = new MD_Identifier(groupLabel,isRequired, true,"");
 		    	((MD_Identifier) newObj).setFormName(myFormName);
 		    	((MD_Identifier) newObj).setLabelCount(n);
 		    	((MD_Identifier) newObj).cloneTree(myWidget.getElement().getId());		    	
 		    }
 		    if (myClass.equalsIgnoreCase("ci_responsibleparty")) {
-		    	newObj = new CI_ResponsibleParty(groupLabel,isRequired, true);	
+		    	newObj = new CI_ResponsibleParty(groupLabel,isRequired, true,"");	
 		    	((CI_ResponsibleParty) newObj).setFormName(myFormName);
 		    	((CI_ResponsibleParty) newObj).setLabelCount(n);
 		    	((CI_ResponsibleParty) newObj).cloneTree(myWidget.getElement().getId());
@@ -243,7 +271,25 @@ public class CIMultiple extends Composite {
 		    	else ((CI_ResponsibleParty) newObj).setInterface(1);
 		    }	
 			fieldsGroup.add(newObj);
-			setDisplay(true);			
+			setDisplay(true);
 		}		
+	}
+	
+	/**
+	 * Hide the disclosure panel to make more simple the interface 
+	 */
+	public void removeDisclosure() {
+		componentPanel.removeFromParent();
+		myPanel.add(fieldsGroup);
+	}
+	
+	/**
+	 * Set the new help anchor
+	 * 
+	 * @param newAnchor {@link String} = the new anchor
+	 */
+	public void setHelpAnchor(String newAnchor) {
+		helpAnchor=newAnchor;
+		infoButton.setHelpAnchor(helpAnchor);
 	}
 }

@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
@@ -48,7 +49,7 @@ public class DQ_ConformanceResult extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** code control declaration */
-	CI_Citation specificationObj = new CI_Citation(constants.specification(), true, false);
+	CI_Citation specificationObj = new CI_Citation(constants.specification(), true, false,"");
 	
 	/** codeSpace control declaration */
 	CharacterString explanationObj = new CharacterString(constants.explanation(), "", true, CheckFunctions.normal, true);
@@ -62,11 +63,12 @@ public class DQ_ConformanceResult extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by DQ_ConformanceResult fields
      */
-	public DQ_ConformanceResult(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);		
+	public DQ_ConformanceResult(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		fieldsGroup.add(specificationObj);
 		fieldsGroup.add(explanationObj);
 		fieldsGroup.add(degreeObj);

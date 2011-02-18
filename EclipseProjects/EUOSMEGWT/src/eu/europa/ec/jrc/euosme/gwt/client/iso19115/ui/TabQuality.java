@@ -38,7 +38,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringLong;
 /**
  * Create the tab Quality
  * 
- * @version 3.0 - December 2010
+ * @version 4.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabQuality extends Composite {
@@ -61,9 +61,9 @@ public class TabQuality extends Composite {
 	@UiField(provided = true)
 	CharacterStringLong lineageObj = new CharacterStringLong(constants.lineage(), "lineage", false);
 	
-	MD_Resolution spatialResolutionObj =	new MD_Resolution(constants.spatialResolution(), false, true);
+	MD_Resolution spatialResolutionObj =	new MD_Resolution(constants.spatialResolution(), false, true,"");
 	@UiField(provided = true)
-	CIMultiple spatialResolutionContainerObj = new CIMultiple(constants.spatialResolution(), spatialResolutionObj, false);
+	CIMultiple spatialResolutionContainerObj = new CIMultiple(constants.spatialResolution(), spatialResolutionObj, false,"spatialresolution");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)

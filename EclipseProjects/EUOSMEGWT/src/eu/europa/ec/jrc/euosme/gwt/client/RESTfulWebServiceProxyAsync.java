@@ -26,14 +26,14 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 /**
  * Remote service asynchronous interface for {@link RESTfulWebServiceProxy}
  * 
- * @version 4.0 - January 2011
+ * @version 5.0 - February 2011
  * @author 	Marzia Grasso
  */
 public interface RESTfulWebServiceProxyAsync {
 	
 	public void invokeGetRESTfulWebService(String uri, String contentType, String clientLanguage, String filter, AsyncCallback<String> callback);
     
-    public void invokeGemetService(String clientLanguage, AsyncCallback<Map<String,String>> callback);
+    public void invokeGemetService(String serviceName, String clientLanguage, AsyncCallback<Map<String,String>> callback);
     
 	public void invokeUpdateRESTfulWebService(AsyncCallback<String> callback);
 	

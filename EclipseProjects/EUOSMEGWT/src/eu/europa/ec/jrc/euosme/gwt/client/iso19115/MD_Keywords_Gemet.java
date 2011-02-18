@@ -28,8 +28,6 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.OpenEvent;
 import com.google.gwt.event.logical.shared.OpenHandler;
-import com.google.gwt.event.logical.shared.SelectionEvent;
-import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -40,6 +38,7 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
@@ -86,11 +85,12 @@ public class MD_Keywords_Gemet extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help 
+     *  
      * @return	the widget composed by MD_Keywords_Gemet fields
      */
-	public MD_Keywords_Gemet(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);
+	public MD_Keywords_Gemet(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		// Filter
 		final TextBox filterTextBox = new TextBox();
 		Button filterButton = new Button("Filter");
@@ -157,16 +157,7 @@ public class MD_Keywords_Gemet extends CI {
 					requestSubSuggestions(w);
 				}								
 			}		
-		});
-		suggestObj.addSelectionHandler(new SelectionHandler<TreeItem>()  {
-			@Override
-			public void onSelection(SelectionEvent<TreeItem> event) {
-				if(event.getSelectedItem().getParentItem()!=null) {
-					GEMETPanel.setVisible(true);
-					keywordGEMETObj.setText(constants.selectedValue() + event.getSelectedItem().getText())	;					
-				}
-			}			
-		});
+		});		
 		// GEMET Panel
 		keywordGEMETObj.getElement().getStyle().clearMarginLeft();
 		keywordGEMETObj.setText(constants.selectedValue());
@@ -229,7 +220,7 @@ public class MD_Keywords_Gemet extends CI {
 	 */
 	private void requestListOfRepository(ListBox myListRPC) {
 		SuggestListCallback callback = new SuggestListCallback();
-		SuggestListCallback.setList(myListRPC);
+		callback.setList(myListRPC);
 		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 		ls.invokeGetRESTfulWebService("repositories", "", LocaleInfo.getCurrentLocale().getLocaleName(), "", callback);
 	}

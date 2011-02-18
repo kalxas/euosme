@@ -30,6 +30,8 @@ import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.LocaleInfo;
@@ -49,6 +51,7 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.MySuggestBox;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
@@ -60,7 +63,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a label and a list box
  * At the bottom, there is a text box with the button used to add an item to the list box 
  * 
- * @version 1.0 - January 2011
+ * @version 2.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class CodeListFreeMultiple extends Composite {
@@ -102,7 +105,7 @@ public class CodeListFreeMultiple extends Composite {
 	
 	/** Button for information */
 	@UiField
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 	
 	/** Label to help user */
 	@UiField
@@ -162,10 +165,6 @@ public class CodeListFreeMultiple extends Composite {
 				
 	    myListBox.setVisible(false);
 	    
-	    // Set the label of the button
-	    newButton.setText(constants.add());
-	    //newButton.ensureDebugId("newButton");
-	    
 	    myListBox.addFocusHandler(new FocusHandler(){
 			@Override
 			public void onFocus(FocusEvent event) {
@@ -190,10 +189,12 @@ public class CodeListFreeMultiple extends Composite {
 		//Set Error Label widget		
 		myError.setVisible(false);
 		
-		infoButton.addClickHandler(new ClickHandler() {
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);				
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
 			}
 		});
 		
@@ -340,9 +341,10 @@ public class CodeListFreeMultiple extends Composite {
 		}		
 		myFlexTable.setText(row, 0, newItem);
 		  
-		// Add a button to remove this deliveryPoint from the table.
-		Button removeDeliveryPointButton = new Button("x");
-		removeDeliveryPointButton.addClickHandler(new ClickHandler() {
+		// Add a button to remove this row from the table.
+		Button removeButton = new Button();
+		removeButton.addStyleName("minusButton");
+		removeButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				Integer removedIndex = myList.indexOf(newItem.toUpperCase()) + 1;
 				myList.remove(removedIndex-1);
@@ -383,7 +385,7 @@ public class CodeListFreeMultiple extends Composite {
 		        }
 		    }
 		});
-		myFlexTable.setWidget(row, 1, removeDeliveryPointButton);
+		myFlexTable.setWidget(row, 1, removeButton);
 		
 		myTextBox.setFocus(true);
 	}

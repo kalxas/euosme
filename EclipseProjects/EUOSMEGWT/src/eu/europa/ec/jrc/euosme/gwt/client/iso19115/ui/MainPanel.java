@@ -74,7 +74,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 /**
  * Create the main panel
  * 
- * @version 4.0 - December 2010
+ * @version 5.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class MainPanel extends Composite {
@@ -252,22 +252,7 @@ public class MainPanel extends Composite {
         
         /** LANGUAGE management ------------------------------------------------------------*/
         // Set the correct URL to change language and set the right class for the selected language
-		String myURL = Utilities.getURL();
-		String myHeaderHTML = myHeader.getHTML();
-		myHeaderHTML = myHeaderHTML.replace("#template_page#", myURL);
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
-			myHeaderHTML = myHeaderHTML.replace("#root_page#", "<a id=\"firstTab\" href=\"/rdsi/index.php\">IES Reference Data &amp; Services Initiative</a>"); 		
-		else
-			myHeaderHTML = myHeaderHTML.replace("#root_page#", "");
-		myHeader.setHTML(myHeaderHTML);
-		NodeList<Element> myList = myHeader.getElement().getElementsByTagName("a");
-		for (int i=0; i<myList.getLength(); i++) {
-			if (myList.getItem(i).getClassName().equalsIgnoreCase("curlang") && !myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
-				myList.getItem(i).setClassName("lang");
-			if (myList.getItem(i).getClassName().equalsIgnoreCase("lang") && myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
-				myList.getItem(i).setClassName("curlang");
-			
-		}		
+		setHeader();
 		
         /** TREE initialization ----------------------------------------------------------*/
 		initTree("");
@@ -299,6 +284,30 @@ public class MainPanel extends Composite {
 		refreshHTML.click();
     }
 	
+	private void setHeader() {
+		String myURL = Utilities.getURL();
+		String myHeaderHTML = myHeader.getHTML();
+		myHeaderHTML = myHeaderHTML.replace("#template_page#", myURL);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			myHeaderHTML = myHeaderHTML.replace("#root_page#", "<a id=\"firstTab\" href=\"http://rdsi-portal.jrc.it/rdsi/\">IES Reference Data &amp; Services Initiative</a>"); 		
+		else
+			myHeaderHTML = myHeaderHTML.replace("#root_page#", "");
+		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
+			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDataset());
+		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString()))
+			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDatasetSeries());
+		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString()))
+			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDataService());
+        myHeader.setHTML(myHeaderHTML);
+		NodeList<Element> myList = myHeader.getElement().getElementsByTagName("a");
+		for (int i=0; i<myList.getLength(); i++) {
+			if (myList.getItem(i).getClassName().equalsIgnoreCase("curlang") && !myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
+				myList.getItem(i).setClassName("lang");
+			if (myList.getItem(i).getClassName().equalsIgnoreCase("lang") && myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
+				myList.getItem(i).setClassName("curlang");			
+		}		
+	}
+
 	/**
 	 * MenuBar - open an item in IE causes an error, this function is a workaround 
 	 * 
@@ -367,7 +376,9 @@ public class MainPanel extends Composite {
 		Tabs t = new Tabs();		
 		tabs = t;
 		this.myForm.add(tabs);
+		setHeader();
 		initTree(loadFileXML);
+		Utilities.setDefaultValues();
 	}
 	
 	/**

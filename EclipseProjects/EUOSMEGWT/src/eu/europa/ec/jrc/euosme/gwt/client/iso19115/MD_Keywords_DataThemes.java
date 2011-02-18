@@ -29,6 +29,7 @@ import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.PopupPanel;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.DataThemesCallback;
@@ -66,11 +67,12 @@ public class MD_Keywords_DataThemes extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
+     * @param help		{@link String} = the anchor in the help 
      * 
      * @return	the widget composed by MD_Keywords_DataThemes fields
      */
-	public MD_Keywords_DataThemes(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);
+	public MD_Keywords_DataThemes(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		HorizontalPanel hpDataThemes = new HorizontalPanel();
 		hpDataThemes.add(listDataThemes);
 		infoDataThemesButton.addClickHandler(new ClickHandler() {
@@ -82,7 +84,7 @@ public class MD_Keywords_DataThemes extends CI {
 				dataThemesPopupPanel.getElement().getStyle().setOverflow(Overflow.AUTO);
 			}		
 		});
-		infoDataThemesButton.addStyleName("infoButton");
+		infoDataThemesButton.addStyleName("infoButton");		
 		hpDataThemes.add(infoDataThemesButton);
 		fieldsGroup.add(hpDataThemes);
 		requestListOfDataThemes(listDataThemes);		
@@ -97,6 +99,6 @@ public class MD_Keywords_DataThemes extends CI {
 		DataThemesCallback callback = new DataThemesCallback();
 		DataThemesCallback.setList(myListRPC,dataThemesPopupPanel);
 		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-		ls.invokeGemetService(LocaleInfo.getCurrentLocale().getLocaleName(),callback);		
+		ls.invokeGemetService("dataThemes",LocaleInfo.getCurrentLocale().getLocaleName(),callback);
 	}
 }

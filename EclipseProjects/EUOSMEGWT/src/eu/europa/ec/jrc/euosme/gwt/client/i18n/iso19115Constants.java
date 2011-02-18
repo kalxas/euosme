@@ -613,4 +613,13 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("Specifications")
 	String specifications();
+
+	@DefaultStringValue("Geographic services taxonomy of EN ISO 19119")
+	String dataService();
+	
+	@DefaultStringValue("MANDATORY: Select at least a category from the Geographic services taxonomy of EN ISO 19119. OPTIONAL: Select a keyword from the available repositories.")
+	String selectKeywordInfoDataService();
+	
+	@DefaultStringValue("Apply")
+	String apply();
 }

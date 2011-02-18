@@ -73,6 +73,7 @@
 	                	<ul>
 	                    <li class="first-child">#root_page#</li>
 	                    <li>EUOSME</li>
+	                    <li>#datatype#</li>
 	                	</ul>
           				</div>
       				</div>

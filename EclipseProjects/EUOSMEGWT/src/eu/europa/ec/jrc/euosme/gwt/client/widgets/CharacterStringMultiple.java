@@ -22,6 +22,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 import java.util.ArrayList;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
@@ -29,6 +30,8 @@ import com.google.gwt.event.dom.client.FocusHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyPressEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -44,6 +47,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.InfoButton;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 
@@ -51,7 +55,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * Create an horizontal panel with a  {@link Label} and a {@link FlexTable}
  * At the bottom, there is a text box with the button used to add an item to the list box 
  * 
- * @version 4.0 - December 2010
+ * @version 5.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class CharacterStringMultiple extends Composite {
@@ -93,7 +97,7 @@ public class CharacterStringMultiple extends Composite {
 	/** Button for information */
 	@UiField
 	public
-	Button infoButton = new Button();
+	InfoButton infoButton = new InfoButton();
 	
 	/** grouping fields declaration */
 	@UiField(provided = true)
@@ -141,10 +145,6 @@ public class CharacterStringMultiple extends Composite {
 	    // Set the name of the form element
 	    myListBox.setVisible(false);
 	    
-	    // Set the label of the button
-	    newButton.setText(constants.add());
-	    //newButton.ensureDebugId("newButton");
-	    
 	    myListBox.addFocusHandler(new FocusHandler(){
 			@Override
 			public void onFocus(FocusEvent event) {
@@ -152,17 +152,19 @@ public class CharacterStringMultiple extends Composite {
 			}	    	
 	    });
 	    
-	    infoButton.addClickHandler(new ClickHandler() {
+	    // Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
 			@Override
-			public void onClick(ClickEvent event) {
-				Utilities.openInfo(helpAnchor,infoButton);				
+			public void onClose(CloseEvent<DisclosurePanel> event) {				
+				event.getTarget().setOpen(true);
 			}	
 		});
-	   
+		
 	    if (EUOSMEGWT.showAll) setDisplay(true);
 		else setDisplay(required);
 	    
-	    //Set Error Label widget		
+	    // Set Error Label widget		
 		myError.setVisible(false);
 	}	
 	
@@ -203,7 +205,7 @@ public class CharacterStringMultiple extends Composite {
 	 */
 	public void myCheck() {
 		// hide error label
-		myError.setVisible(false);
+		myError.setVisible(false);		
 		if (isRequired==true && myList.size() == 0) {
 	  	    myError.setText(constants.mandatoryField());
 	  	    myError.setVisible(true);			
@@ -289,9 +291,10 @@ public class CharacterStringMultiple extends Composite {
 		}		
 		myFlexTable.setText(row, 0, newItem);
 		  
-		// Add a button to remove this deliveryPoint from the table.
-		Button removeDeliveryPointButton = new Button("x");
-		removeDeliveryPointButton.addClickHandler(new ClickHandler() {
+		// Add a button to remove this row from the table.
+		Button removeButton = new Button();
+		removeButton.addStyleName("minusButton");
+		removeButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				Integer removedIndex = myList.indexOf(newItem.toUpperCase()) + 1;
 				myList.remove(removedIndex-1);
@@ -329,7 +332,7 @@ public class CharacterStringMultiple extends Composite {
 		        }
 		    }
 		});
-		myFlexTable.setWidget(row, 1, removeDeliveryPointButton);
+		myFlexTable.setWidget(row, 1, removeButton);
 		
 		newTextBox.setFocus(true);
 	}
@@ -414,5 +417,16 @@ public class CharacterStringMultiple extends Composite {
 		Utilities.ensureItemVisible(myTreeItem);
 		// get focus: it is lost on tree item selection 
 	 	newTextBox.setFocus(true);
+	}
+	
+	/**
+	 * OnBlur set the value to the corresponding {@link TreeItem}
+	 * 
+	 * @param event	{@link BlurEvent}
+	 */
+	@UiHandler("newTextBox")
+	void onBlur(BlurEvent event) {
+		if (!newTextBox.getText().isEmpty())
+			newButton.click();		
 	}
 }

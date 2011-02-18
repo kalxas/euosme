@@ -63,7 +63,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.GeoBoundsMultiple;
 /**
  * Create the tab Geographic
  * 
- * @version 5.0 - January 2011
+ * @version 5.1 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabGeographic extends Composite {
@@ -159,12 +159,11 @@ public class TabGeographic extends Composite {
 	    else {
 	    	queryPanel.removeFromParent();
 	    	mxnMakeMap(EUOSMEGWT.apiMapstraction);
-	    	//sinkEvents(Event.ONDBLCLICK);
 	    	sinkEvents(Event.ONMOUSEUP);
-	    	mapPanel.getElement().appendChild(DOM.getElementById("mapstraction"));
+	    	Element mapmine = DOM.getElementById("mapstraction");
+	    	mapPanel.getElement().appendChild(mapmine);
 	    	try {
 	    		Element mapDiv = mapPanel.getElement().getElementsByTagName("div").getItem(0).getElementsByTagName("div").getItem(0);
-		    	//String txt = mapDiv.getInnerHTML();
 		    	mapDiv.getStyle().setPosition(Position.ABSOLUTE);	
 		    	mapDiv = mapPanel.getElement().getElementsByTagName("div").getItem(1);
 		    	mapDiv.getStyle().setHeight(350,Unit.PX);

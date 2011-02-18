@@ -21,6 +21,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
@@ -52,7 +53,7 @@ public class MD_Keywords extends CI {
 	CodeList typeObj =	new CodeList(constants.keywordType(),"",false,"8","",true);
 	
 	/** thesaurus control declaration */
-	CI_Citation thesaurusObj = new CI_Citation(constants.originatingControlledVocabulary(),false,false);
+	CI_Citation thesaurusObj = new CI_Citation(constants.originatingControlledVocabulary(),false,false,"vocabulary");
 	
 	/** 
      * constructor MD_Keywords model
@@ -60,11 +61,12 @@ public class MD_Keywords extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help 
+     *  
      * @return	the widget composed by MD_Keywords fields
      */
-	public MD_Keywords(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);	
+	public MD_Keywords(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		fieldsGroup.add(keywordObj);
 		fieldsGroup.add(typeObj);
 		fieldsGroup.add(thesaurusObj);		

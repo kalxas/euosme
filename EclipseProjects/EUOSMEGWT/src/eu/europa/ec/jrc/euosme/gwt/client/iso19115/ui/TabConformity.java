@@ -34,7 +34,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 /**
  * Create the tab Conformity
  * 
- * @version 2.0 - November 2010
+ * @version 3.0 - February 2011
  * @author 	Marzia Grasso
  */
 public class TabConformity extends Composite {
@@ -54,9 +54,9 @@ public class TabConformity extends Composite {
 	HTML summaryHTML = new HTML(constants.conformitySummary());
 	
 	/** report declaration */
-	DQ_Element reportObj =	new DQ_Element(constants.conformity(),false, true);
+	DQ_Element reportObj =	new DQ_Element(constants.conformity(),false, true,"");
 	@UiField(provided = true)
-	CIMultiple reportContainerObj = new CIMultiple(constants.conformity(), reportObj, false);
+	CIMultiple reportContainerObj = new CIMultiple(constants.conformity(), reportObj, false,"");
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)
@@ -74,24 +74,6 @@ public class TabConformity extends Composite {
 		titleLabel.removeStyleName("gwt-Label");
 		// set form names
 		setFormName();
-		
-		/*preferredObj.add(specification);
-		specification.myListBox.addChangeHandler(new ChangeHandler() {
-			@Override
-			public void onChange(ChangeEvent event) {
-				String selValue = specification.myListBox.getValue(specification.myListBox.getSelectedIndex());
-				if (!selValue.isEmpty()) {
-					// selValue contains a value like Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC);2009-06-11;publication
-					String[] specifications = selValue.split(";");
-					@SuppressWarnings("unused")
-					String definition = specifications[0];
-					@SuppressWarnings("unused")
-					String date = specifications[1];
-					@SuppressWarnings("unused")
-					String dateType = specifications[3];
-				}
-			}
-	    });*/
 	}
 
 	/**

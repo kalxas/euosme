@@ -1,16 +1,23 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-	<g:VerticalPanel ui:field="myPanel">
-		<g:DisclosurePanel ui:field="componentPanel">
-	 		<g:customHeader>
-	   			<g:Label addStyleNames="h3" ui:field="myLabel"/>   			    				
-	   		</g:customHeader>
-	 		<g:VerticalPanel>
-	 			<g:VerticalPanel ui:field="fieldsGroup"/>
-	 			<g:Label styleName="error" ui:field="myError"/>
-	 			<g:Button ui:field="removeGroupButton" visible="false"/>							
-			</g:VerticalPanel>	 				
-		</g:DisclosurePanel>
-	</g:VerticalPanel>
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:client="urn:import:eu.europa.ec.jrc.euosme.gwt.client">
+	<g:HorizontalPanel>
+		<g:VerticalPanel ui:field="myPanel">
+			<g:DisclosurePanel ui:field="componentPanel" addStyleNames="greyPanel">
+		 		<g:customHeader>
+		   			<g:HorizontalPanel>
+	   					<g:Label addStyleNames="h3" ui:field="myLabel"/>
+	   					<client:InfoButton ui:field="infoButton"/>
+		   			</g:HorizontalPanel>	    				
+		   		</g:customHeader>	 		
+		 		<g:VerticalPanel>
+		 			<g:VerticalPanel ui:field="fieldsGroupVertical"/>
+		 			<g:HorizontalPanel ui:field="fieldsGroupHorizontal"/>
+		 			<g:Label styleName="error" ui:field="myError"/>	 										
+				</g:VerticalPanel>				 				
+			</g:DisclosurePanel>
+		</g:VerticalPanel>
+		<g:Button ui:field="removeGroupButton" visible="false"/>
+	</g:HorizontalPanel>
 </ui:UiBinder> 

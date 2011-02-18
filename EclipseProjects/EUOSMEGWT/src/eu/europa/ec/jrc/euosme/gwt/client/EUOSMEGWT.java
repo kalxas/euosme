@@ -19,20 +19,16 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client;
 
-import java.util.Date;
-
 import com.google.gwt.ajaxloader.client.AjaxLoader;
 import com.google.gwt.ajaxloader.client.AjaxLoader.AjaxLoaderOptions;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.LocaleInfo;
 
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
-import com.google.gwt.user.client.ui.TreeItem;
 
 import eu.europa.ec.jrc.euosme.gwt.client.callback.InitRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -41,7 +37,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  * 
- * @version 5.0 - January 2011
+ * @version 5.1 - February 2011
  * @author 	Marzia Grasso
  */
 public class EUOSMEGWT implements EntryPoint {
@@ -127,14 +123,6 @@ public class EUOSMEGWT implements EntryPoint {
 	private static void initPanels() {
 		MainPanel p = new MainPanel();
   		RootLayoutPanel.get().add(p);
-  		// set metadata date to today
-	    String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
-		Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
-		TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
-		Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
-	    // set creation date to today
-	    Utilities.valueField("md_metadata[1].identificationinfo[1].md_dataidentification[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]",myTodayDate);
-	    myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]");
-		Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
+  		Utilities.setDefaultValues();
 	}
 }

@@ -23,13 +23,20 @@ import java.util.Date;
 import java.util.Iterator;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.TreeItem;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
@@ -57,19 +64,24 @@ public class MD_Keywords_INSPIRE extends CI {
  	CharacterStringMultiple keywordsObj = new CharacterStringMultiple(constants.keywordValue(),"keywordvalue", true, CheckFunctions.normal);
  	
 	/** INSPIRE Data Themes */
-	MD_Keywords_DataThemes keywordDataThemeObj = new MD_Keywords_DataThemes(constants.inspireDataThemes(), true, false);
+	MD_Keywords_DataThemes keywordDataThemeObj = new MD_Keywords_DataThemes(constants.inspireDataThemes(), true, false,"");
 	
 	Button addDataThemesButton = new Button(constants.add() + " " + constants.inspireDataThemes());
 	
 	/** GEMET keywords */
-	MD_Keywords_Gemet keywordGemetObj = new MD_Keywords_Gemet(constants.repository(), false, false);
+	MD_Keywords_Gemet keywordGemetObj = new MD_Keywords_Gemet(constants.repository(), false, false,"");
 	
 	Button addGEMETButton = new Button(constants.add() + " " + constants.repository());
 	
 	/** free keyword control declaration */
-	MD_Keywords keywordFreeObj = new MD_Keywords(constants.freeKeyword(), false, false);
+	MD_Keywords keywordFreeObj = new MD_Keywords(constants.freeKeyword(), false, false,"");
 	
-	Button addFreeButton = new Button(constants.add() + " " + constants.freeKeyword());
+	Button addFreeButton = new Button(constants.apply());
+	
+	/** Categories of data services */
+	MD_Keywords_DataService keywordDataServiceObj = new MD_Keywords_DataService(constants.dataService(), true, false,"");
+	
+	Button addDataServiceButton = new Button(constants.add() + " " + constants.dataService());
 	
 	/** 
      * constructor MD_Keywords_INSPIRE model
@@ -77,32 +89,66 @@ public class MD_Keywords_INSPIRE extends CI {
      * @param label		{@link String} = the header
      * @param required	{@link Boolean} = if true, it is required
      * @param multiple	{@link Boolean} = if true, it could be added more than ones
-     * 
+     * @param help		{@link String} = the anchor in the help 
+     *  
      * @return	the widget composed by MD_Keywords_INSPIRE fields
      */
-	public MD_Keywords_INSPIRE(String label, boolean required, boolean multiple) {
-		super(label, required, multiple);	
+	public MD_Keywords_INSPIRE(String label, boolean required, boolean multiple, String help) {
+		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		// list of keywords
 		fieldsGroup.add(keywordsObj);
 		keywordsObj.newButton.setVisible(false);
 		keywordsObj.newTextBox.setVisible(false);
-		// data themes
-		fieldsGroup.add(keywordDataThemeObj);
-		addDataThemesButton.addClickHandler(new ClickHandler(){
-			@Override
-			public void onClick(ClickEvent event) {
-				if (keywordDataThemeObj.listDataThemes.getSelectedIndex()!=0) {
-					@SuppressWarnings("unused")
-					String selectedValue = keywordDataThemeObj.listDataThemes.getValue(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
-					String myKeyword = keywordDataThemeObj.listDataThemes.getItemText(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
-					//TODO Get the version of the web service
-					addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","","");						
-				}				
-			}
-		});
-		keywordDataThemeObj.fieldsGroup.add(addDataThemesButton);
+		if (!EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) {
+			// data themes
+			fieldsGroup.add(keywordDataThemeObj);
+			addDataThemesButton.setVisible(false);
+			addDataThemesButton.addClickHandler(new ClickHandler(){
+				@Override
+				public void onClick(ClickEvent event) {
+					if (keywordDataThemeObj.listDataThemes.getSelectedIndex()!=0) {
+						@SuppressWarnings("unused")
+						String selectedValue = keywordDataThemeObj.listDataThemes.getValue(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
+						String myKeyword = keywordDataThemeObj.listDataThemes.getItemText(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
+						//TODO Get the version of the web service
+						addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","","");						
+					}				
+				}
+			});
+			keywordDataThemeObj.fieldsGroup.add(addDataThemesButton);
+			keywordDataThemeObj.listDataThemes.addChangeHandler(new ChangeHandler() {			
+				@Override
+				public void onChange(ChangeEvent event) {
+					addDataThemesButton.click();					
+				}
+			});
+		}
+		else {
+			// data service
+			fieldsGroup.add(keywordDataServiceObj);
+			addDataServiceButton.setVisible(false);
+			addDataServiceButton.addClickHandler(new ClickHandler(){
+				@Override
+				public void onClick(ClickEvent event) {
+					if (keywordDataServiceObj.listDataServices.getSelectedIndex()!=0) {
+						@SuppressWarnings("unused")
+						String selectedValue = keywordDataServiceObj.listDataServices.getValue(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
+						String myKeyword = keywordDataServiceObj.listDataServices.getItemText(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
+						addNew(myKeyword,"","","");						
+					}				
+				}
+			});
+			keywordDataServiceObj.fieldsGroup.add(addDataServiceButton);
+			keywordDataServiceObj.listDataServices.addChangeHandler(new ChangeHandler() {			
+				@Override
+				public void onChange(ChangeEvent event) {
+					addDataServiceButton.click();					
+				}
+			});
+		}
 		// GEMET keyword
 		fieldsGroup.add(keywordGemetObj);
+		addGEMETButton.setVisible(false);
 		addGEMETButton.addClickHandler(new ClickHandler() {
 			@Override
 			public void onClick(ClickEvent event) {
@@ -114,6 +160,16 @@ public class MD_Keywords_INSPIRE extends CI {
 			}				
 		});
 		keywordGemetObj.fieldsGroup.add(addGEMETButton);
+		keywordGemetObj.suggestObj.addSelectionHandler(new SelectionHandler<TreeItem>()  {
+			@Override
+			public void onSelection(SelectionEvent<TreeItem> event) {
+				if(event.getSelectedItem().getParentItem()!=null) {
+					keywordGemetObj.GEMETPanel.setVisible(true);
+					keywordGemetObj.keywordGEMETObj.setText(constants.selectedValue() + event.getSelectedItem().getText());
+					addGEMETButton.click();
+				}
+			}			
+		});
 		// free keyword
 		fieldsGroup.add(keywordFreeObj);
 		addFreeButton.addClickHandler(new ClickHandler() {
