@@ -33,7 +33,12 @@
       	<param-name>rpcRepository</param-name>
       	<param-value>true</param-value>
       	<description>true to get the list of keywords from online service, false to use local resources</description>
-      </init-param>      
+      </init-param>
+      <init-param>
+      	<param-name>showHeader</param-name>
+      	<param-value>false</param-value>
+      	<description>true to show the header with the banner</description>
+      </init-param>   
   </servlet>
   <servlet>
       <servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
