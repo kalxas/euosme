@@ -100,7 +100,7 @@ public class MD_Identifier extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			if (i==0) {
 				codeObj.setMyValue("Conformity_001");
 				codeSpaceObj.setMyValue("INSPIRE");
@@ -119,8 +119,7 @@ public class MD_Identifier extends CI {
 					InspireServiceRpcCallback.setType("XML");
 					RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 					ls.invokeInspireUUIDService(callback);
-					//TODO put the right namespace
-					codeSpaceObj.myTextBox.setText("http://");
+					codeSpaceObj.myTextBox.setText("http://ies.jrc.ec.europa.eu");
 				}
 			});
 			getCodeButton.setHTML(constants.getUUID());

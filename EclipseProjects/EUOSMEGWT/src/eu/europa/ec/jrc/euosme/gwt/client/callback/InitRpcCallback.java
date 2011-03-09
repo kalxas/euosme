@@ -58,6 +58,8 @@ public class InitRpcCallback implements AsyncCallback <Map<String,String>> {
     	   	EUOSMEGWT.showAll = Boolean.parseBoolean(result.get("showAll"));
     	if (result.get("rpcRepository")!=null)
     	   	EUOSMEGWT.rpcRepository = Boolean.parseBoolean(result.get("rpcRepository"));
+    	if (result.get("showHeader")!=null)
+    	   	EUOSMEGWT.showHeader = Boolean.parseBoolean(result.get("showHeader"));
     	
     	EUOSMEGWT.startup();
     }

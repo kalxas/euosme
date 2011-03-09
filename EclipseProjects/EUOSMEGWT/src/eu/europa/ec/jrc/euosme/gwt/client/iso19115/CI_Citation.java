@@ -92,13 +92,11 @@ public class CI_Citation extends CI {
 		specificationObj.myTextBox.getTextBox().addBlurHandler(new BlurHandler() {
 			@Override
 			public void onBlur(BlurEvent event) {
-				String[] specifications = specificationObj.myTextBox.getText().split(";");
-				String definition = specifications[0];
 				TreeItem myTreeItem = null;
 				myTreeItem = Utilities.getSelectTreeItem(specificationObj.myTextBox.getTextBox().getName());					
 				if (myTreeItem!=null) {
 					Utilities.ensureItemVisible(myTreeItem);					
-					Utilities.setTextTreeItem(myTreeItem,definition);
+					Utilities.setTextTreeItem(myTreeItem,specificationObj.myTextBox.getText());
 				}
 			}			
 		});	
@@ -115,7 +113,11 @@ public class CI_Citation extends CI {
 				if (myTreeItem!=null) 
 					Utilities.setTextTreeItem(myTreeItem,definition);				
 				dateObj.dateObj.myDateBox.setValue(DateTimeFormat.getFormat("yyyy-MM-dd").parse(date));
+				myTreeItem = Utilities.getSelectTreeItem(dateObj.dateObj.myDateBox.getTextBox().getName());					
+				if (myTreeItem!=null) 
+					Utilities.setTextTreeItem(myTreeItem,date);
 				dateObj.dateTypeObj.setMyValue(dateType);
+				specificationObj.myTextBox.setText(definition);
 			}			
 		});	
 		setInterface(-1);
@@ -146,7 +148,7 @@ public class CI_Citation extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			identifierObj.setRequired(true);
 			identifierContainerObj.setRequired(true);
 			if (i==0) { // TAB Identification

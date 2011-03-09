@@ -130,7 +130,7 @@ public class Boolean extends Composite  {
 	 * Checking the current {@link AppModes}, this is used to remove elements, show and hide and change labels...
 	 */
 	private void setInterface() {
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
 			myListBox.clear();
 			myListBox.addItem(constants.notEvaluated(),"");		
 			myListBox.addItem(constants.notConformant(),"false");
@@ -208,7 +208,7 @@ public class Boolean extends Composite  {
 		// hide error label
 		myError.setVisible(false);
 		// check if it is required or not and perform the right actions
-		if (isRequired==true && myListBox.getSelectedIndex()==0) {
+		if (isRequired==true && myListBox.getSelectedIndex()==-1) {
 			myError.setText(constants.mandatoryField());
 			myError.setVisible(true);  	  		
 		}

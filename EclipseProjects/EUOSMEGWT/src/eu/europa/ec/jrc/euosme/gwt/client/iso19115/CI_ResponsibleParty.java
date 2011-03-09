@@ -30,7 +30,6 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
-import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
 
 /**
  * Create CI_ResponsibleParty model
@@ -51,7 +50,7 @@ public class CI_ResponsibleParty extends CI {
 	CharacterString individualNameObj =	new CharacterString(constants.individualName(), "", false, CheckFunctions.normal, true);
 	
 	/** organisationName control declaration */
-	CodeListFree organisationNameObj = new CodeListFree(constants.organisationName(), "", false, "11","",CheckFunctions.normal, true, true);
+	CharacterString organisationNameObj = new CharacterString(constants.organisationName(), "", false, CheckFunctions.normal, true);
 	
 	/** positionName control declaration */
 	CharacterString positionNameObj = new CharacterString(constants.positionName(), "", false, CheckFunctions.normal, true);
@@ -89,7 +88,7 @@ public class CI_ResponsibleParty extends CI {
 		contactInfoObj.myCheck();
 		roleObj.myCheck();
 		myError.setVisible(false);
-		if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) && organisationNameObj.myTextBox.getValue().isEmpty() && individualNameObj.myTextBox.getValue().isEmpty() && positionNameObj.myTextBox.getValue().isEmpty()) {
+		if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) && organisationNameObj.myTextBox.getValue().isEmpty() && individualNameObj.myTextBox.getValue().isEmpty() && positionNameObj.myTextBox.getValue().isEmpty()) {
 			myError.setText(constants.mandatoryFieldCombined());
 			myError.setVisible(true);			
 		}	
@@ -108,7 +107,7 @@ public class CI_ResponsibleParty extends CI {
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			organisationNameObj.setRequired(true);
 			individualNameObj.setVisible(false);
 			positionNameObj.setVisible(false);
@@ -128,9 +127,10 @@ public class CI_ResponsibleParty extends CI {
 			contactInfoObj.removeDisclosure();			
 			if (i==1) 
 				roleObj.setHelpAnchor("role");
-			else 
-				roleObj.setVisible(false);			
-			organisationNameObj.setShowList(false);
+			else { 
+				roleObj.setVisible(false);	
+				roleObj.setMyValue("pointOfContact");
+			}
 		}		
 	}
 }

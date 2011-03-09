@@ -1,4 +1,4 @@
-#Mon Feb 07 12:44:22 CET 2011
+#Mon Feb 28 11:55:13 CET 2011
 eclipse.preferences.version=1
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_BG.txt=UTF-8
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_CS.txt=UTF-8
@@ -54,7 +54,6 @@ encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_da.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_de.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_el.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_es.txt=UTF-8
-encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_et.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_fi.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_fr.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_hu.txt=UTF-8
@@ -68,7 +67,6 @@ encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_pt.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_ro.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_sk.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_sl.txt=UTF-8
-encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/12_sv.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/14.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/7.txt=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/codeLists/7_bg.txt=UTF-8
@@ -134,6 +132,7 @@ encoding//src/eu/europa/ec/jrc/euosme/gwt/client/i18n/iso19115Messages_ro.proper
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/i18n/iso19115Messages_sk.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/i18n/iso19115Messages_sl.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/i18n/iso19115Messages_sv.properties=UTF-8
+encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/MainPanel.java=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/MainPanelMainPanelUiBinderImplGenMessages_bg.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/MainPanelMainPanelUiBinderImplGenMessages_cs.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/MainPanelMainPanelUiBinderImplGenMessages_da.properties=UTF-8

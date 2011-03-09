@@ -20,6 +20,8 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.BlurHandler;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
@@ -62,6 +64,24 @@ public class MD_Resolution extends CI {
 	public MD_Resolution(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(equivalentScaleObj);
+		equivalentScaleObj.myTextBox.addBlurHandler(new BlurHandler() {
+			@Override
+			public void onBlur(BlurEvent event) {
+				myCheck();				
+			}			
+		});
+		distanceObj.distanceObj.myTextBox.addBlurHandler(new BlurHandler() {
+			@Override
+			public void onBlur(BlurEvent event) {
+				myCheck();				
+			}			
+		});
+		distanceObj.umObj.myTextBox.addBlurHandler(new BlurHandler() {
+			@Override
+			public void onBlur(BlurEvent event) {
+				myCheck();				
+			}			
+		});
 		fieldsGroup.add(distanceObj);
 	}
 	
@@ -83,5 +103,6 @@ public class MD_Resolution extends CI {
 		super.setFormName(name);
 		equivalentScaleObj.setFormName(name + ".equivalentscale[1].md_representativefraction[1].denominator[1].integer[1]");		
 		distanceObj.setFormName(name + ".distance[1]");
+		myError.getElement().setId("error-" + name);
 	}
 }

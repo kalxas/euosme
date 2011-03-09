@@ -527,9 +527,11 @@ public class TabGeographic extends Composite {
 	 */
 	private native void mxnMakeMap(String api) /*-{
 		// initialise the map with your choice of API
-		$wnd.mapstraction = new $wnd.mxn.Mapstraction('mapstraction',api);
+		if ($wnd.mapstraction==null) {
+			$wnd.mapstraction = new $wnd.mxn.Mapstraction('mapstraction',api);
+			$wnd.mapstraction.addControls({pan: true,zoom: 'small', map_type: true});
+		}
         $wnd.mapstraction.setCenterAndZoom(new $wnd.mxn.LatLonPoint(0, 0),5);
-        $wnd.mapstraction.addControls({pan: true,zoom: 'small', map_type: true});   
         $wnd.mapstraction.setBounds(new $wnd.mxn.BoundingBox(31.694376,-21.595547,72.299844,33.951328));
         $wnd.mapstraction.setZoom(3);
 	}-*/;

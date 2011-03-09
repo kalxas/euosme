@@ -47,6 +47,8 @@ public class InitServiceProxyImpl extends RemoteServiceServlet implements InitSe
         settings.put("showAll",showAll);    
         String rpcRepository = config.getInitParameter("rpcRepository");
         settings.put("rpcRepository",rpcRepository);
+        String showHeader = config.getInitParameter("showHeader");
+        settings.put("showHeader",showHeader);        
       }
     
     public InitServiceProxyImpl() { // must have

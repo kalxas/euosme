@@ -29,7 +29,7 @@ body {
   padding: 0px;
   background: #fff;
   direction: ltr;
-  font-size: 100%;
+  qqfont-size: 100%;
 }
 a, a:visited, a:hover {
   color: #0000AA;
@@ -1011,7 +1011,7 @@ td.datePickerMonth {
   cursor: pointer;
   cursor: hand;
   font-weight: bold;
-  font-size: 1.3em;
+  qqfont-size: 1.3em;
   padding: 3px;
   border: 1px solid #bbbbbb;
   border-bottom: 0px;
@@ -1686,3 +1686,6 @@ display: none;
 .greyPanel {
 	background-color: #F1F1F1;
 }  
+.menuCurrent {
+	font-size: 10px;
+}

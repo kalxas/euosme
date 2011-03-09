@@ -157,7 +157,7 @@ public class CI extends Composite {
 		
 		// Set preferred layout
 		if (orientation.equals(CIOrientations.VERTICAL)) fieldsGroup = fieldsGroupVertical;
-		else fieldsGroup = fieldsGroupHorizontal;
+		else fieldsGroup = fieldsGroupHorizontal;		
 	}
 	
 	/**
@@ -228,8 +228,8 @@ public class CI extends Composite {
 	public void onBrowserEvent(com.google.gwt.user.client.Event event) {
 		super.onBrowserEvent(event);
 		if (event.getKeyCode() == KeyCodes.KEY_TAB) {
-	    	this.myCheck();
-	    }
+	    	//this.myCheck();
+		} 
 	}
 	
 	/**

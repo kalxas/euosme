@@ -60,11 +60,11 @@ public class ValidationRpcCallback implements AsyncCallback <String>, RequestCal
     	int nrWrongs = 0;
     	for (int i=0;i<wrongElements.getLength();i++) {
     		String wrongElement = wrongElements.getItem(i).getInnerHTML();
-    		if (wrongElement.contains("Full XPath:")) {
+    		if (wrongElement.contains("XPath:")) {
     			nrWrongs+=1;
-	    		String warning = "<li>" + wrongElement.split("Full XPath:")[0] + "</li>";
+	    		String warning = "<li>" + wrongElement.split("XPath:")[0] + "</li>";
 	    		warningDialog += warning;
-	    		String xpath = wrongElement.split("Full XPath:")[1].trim();
+	    		String xpath = wrongElement.split("XPath:")[1].trim();
 	    		xpath = xpath.replace("/*:", ".");
 	    		xpath = xpath.replace("[namespace-uri()='http://www.isotc211.org/2005/gmd']", "");
 	    		xpath = xpath.replace("[]","");

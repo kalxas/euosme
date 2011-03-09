@@ -17,7 +17,7 @@
    </ui:style>
     <g:DockLayoutPanel ui:field="lp">
 		<g:north size='123'>
-			<g:VerticalPanel addStyleNames="{style.pretty}">
+		<g:VerticalPanel addStyleNames="{style.pretty}">
 		<g:HTML ui:field="myHeader">
 			<div id="top">
   				<!-- Banner -->
@@ -39,7 +39,7 @@
           				</div>
    	      				<div id="langsFormContainer"></div>
    	      				<div id="linkBoxArrow"></div>
-                    <div id="langsSelector">
+                   <!--   <div id="langsSelector">
        	              <ul id="official">
                            <li><a href="#template_page#bg" lang="bg" hreflang="bg" title="български" class="lang">bg</a></li>
                            <li><a href="#template_page#cs" lang="cs" hreflang="cs" title="čeština" class="lang">cs</a></li>
@@ -51,7 +51,6 @@
                            <li><a href="#template_page#et" lang="et" hreflang="et" title="eesti keel" class="lang">et</a></li>
                            <li><a href="#template_page#fi" lang="fi" hreflang="fi" title="suomi" class="lang">fi</a></li>
                            <li><a href="#template_page#fr" lang="fr" hreflang="fr" title="français" class="lang">fr</a></li>
-                           <!--<li><a href="#template_page#ga" lang="ga" hreflang="ga" title="Gaeilge" class="lang">ga</a></li>-->
                            <li><a href="#template_page#hu" lang="hu" hreflang="hu" title="magyar" class="lang">hu</a></li>
                            <li><a href="#template_page#it" lang="it" hreflang="it" title="italiano" class="lang">it</a></li>
                            <li><a href="#template_page#lt" lang="lt" hreflang="lt" title="lietuvių kalba" class="lang">lt</a></li>
@@ -66,24 +65,53 @@
                            <li><a href="#template_page#sv" lang="sv" hreflang="sv" title="svenska" class="lang">sv</a></li>
                       </ul>                              
                 			</div>
-					<div id="linkBoxLanguage"></div>
+					<div id="linkBoxLanguage"></div>-->
 				</div>
       	        	<div id="path">
           				<div>
 	                	<ul>
 	                    <li class="first-child">#root_page#</li>
 	                    <li>EUOSME</li>
-	                    <li>#datatype#</li>
+	                    <li id="datatype"></li>
 	                	</ul>
           				</div>
       				</div>
       				<!-- End banner -->
       			</div>			
 		</g:HTML>
+		<g:HTML ui:field="myLanguages">
+	        <div id="langsSelector">
+ 	              <ul id="official">
+                     <li><a href="#template_page#bg" lang="bg" hreflang="bg" title="български" class="lang">bg</a></li>
+                     <li><a href="#template_page#cs" lang="cs" hreflang="cs" title="čeština" class="lang">cs</a></li>
+                     <li><a href="#template_page#da" lang="da" hreflang="da" title="dansk" class="lang">da</a></li>
+                     <li><a href="#template_page#de" lang="de" hreflang="de" title="Deutsch" class="lang">de</a></li>
+                     <li><a href="#template_page#el" lang="el" hreflang="el" title="ελληνικά" class="lang">el</a></li>
+                     <li><a href="#template_page#en" lang="en" hreflang="en" title="English" class="curlang">en</a></li>
+                     <li><a href="#template_page#es" lang="es" hreflang="es" title="español" class="lang">es</a></li>
+                     <li><a href="#template_page#et" lang="et" hreflang="et" title="eesti keel" class="lang">et</a></li>
+                     <li><a href="#template_page#fi" lang="fi" hreflang="fi" title="suomi" class="lang">fi</a></li>
+                     <li><a href="#template_page#fr" lang="fr" hreflang="fr" title="français" class="lang">fr</a></li>
+                     <!--<li><a href="#template_page#ga" lang="ga" hreflang="ga" title="Gaeilge" class="lang">ga</a></li>-->
+                     <li><a href="#template_page#hu" lang="hu" hreflang="hu" title="magyar" class="lang">hu</a></li>
+                     <li><a href="#template_page#it" lang="it" hreflang="it" title="italiano" class="lang">it</a></li>
+                     <li><a href="#template_page#lt" lang="lt" hreflang="lt" title="lietuvių kalba" class="lang">lt</a></li>
+                     <li><a href="#template_page#lv" lang="lv" hreflang="lv" title="latviešu valoda" class="lang">lv</a></li>
+                     <li><a href="#template_page#mt" lang="mt" hreflang="mt" title="Malti" class="lang">mt</a></li>
+                     <li><a href="#template_page#nl" lang="nl" hreflang="nl" title="Nederlands" class="lang">nl</a></li>
+                     <li><a href="#template_page#pl" lang="pl" hreflang="pl" title="polski" class="lang">pl</a></li>
+                     <li><a href="#template_page#pt" lang="pt" hreflang="pt" title="português" class="lang">pt</a></li>
+                     <li><a href="#template_page#ro" lang="ro" hreflang="ro" title="română" class="lang">ro</a></li>
+                     <li><a href="#template_page#sk" lang="sk" hreflang="sk" title="slovenčina" class="lang">sk</a></li>
+                     <li><a href="#template_page#sl" lang="sl" hreflang="sl" title="slovenščina" class="lang">sl</a></li>		                          
+                     <li><a href="#template_page#sv" lang="sv" hreflang="sv" title="svenska" class="lang">sv</a></li>
+                </ul>                              
+          	</div>				      	        	
+		</g:HTML>
    		<g:MenuBar ui:field="menuBar" />
    	 		</g:VerticalPanel>
    		</g:north>
-   		<g:center addStyleNames="auto">
+   		<g:center addStyleNames="auto">   		
    			<g:SplitLayoutPanel ui:field="slp">
    			<g:center addStyleNames="auto">
    				<g:FormPanel ui:field="myForm" addStyleNames="{style.pretty2}">

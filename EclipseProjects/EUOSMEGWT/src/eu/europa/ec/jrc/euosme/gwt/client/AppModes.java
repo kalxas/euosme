@@ -26,5 +26,5 @@ package eu.europa.ec.jrc.euosme.gwt.client;
  * @author 	Marzia Grasso
  */
 public enum AppModes {
-	DEFAULT, RDSI, GEOPORTAL
+	DEFAULT, RDSI, GEOPORTAL, GEOSS
 }

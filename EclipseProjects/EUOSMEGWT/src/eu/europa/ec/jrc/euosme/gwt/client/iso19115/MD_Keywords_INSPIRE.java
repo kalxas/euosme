@@ -405,8 +405,9 @@ public class MD_Keywords_INSPIRE extends CI {
 		keywordsObj.myFlexTable.setText(row, 0, newItem);
 		final String myTitle = parentTitle;
 		// Add a button to remove this deliveryPoint from the table.
-		Button removeDeliveryPointButton = new Button("x");
-		removeDeliveryPointButton.addClickHandler(new ClickHandler() {
+		Button removeButton = new Button();
+		removeButton.addStyleName("minusButton");
+		removeButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
 				//remove from the list and the flextable
 				Integer removedIndex = keywordsObj.myList.indexOf(newItem.toUpperCase()) + 1;
@@ -469,7 +470,7 @@ public class MD_Keywords_INSPIRE extends CI {
 		        }
 		    }
 		});
-		keywordsObj.myFlexTable.setWidget(row, 1, removeDeliveryPointButton);		
+		keywordsObj.myFlexTable.setWidget(row, 1, removeButton);		
 	}
 	
 	/**

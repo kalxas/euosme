@@ -27,6 +27,7 @@ import com.google.gwt.dom.client.Document;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.dom.client.Style;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
@@ -49,6 +50,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MenuBar;
+import com.google.gwt.user.client.ui.MenuItem;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.SplitLayoutPanel;
@@ -67,6 +69,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
 import eu.europa.ec.jrc.euosme.gwt.client.MyResources;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
+import eu.europa.ec.jrc.euosme.gwt.client.callback.CodeListRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.ValidationRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -102,6 +105,7 @@ public class MainPanel extends Composite {
 	/** menu declaration */
 	@UiField(provided = true)
 	MenuBar menuBar = new MenuBar();
+	MenuItem currentFile = new MenuItem("",new Command(){public void execute() {}});
 	
 	/** main form declaration */
 	@UiField(provided = true)
@@ -114,6 +118,10 @@ public class MainPanel extends Composite {
 	/** header */
 	@UiField
 	HTML myHeader;
+	
+	/** languages */
+	@UiField
+	HTML myLanguages;
 	
 	/** DockLayoutPanel which contains all */
 	@UiField
@@ -231,20 +239,200 @@ public class MainPanel extends Composite {
         helpMenu.addItem(constants.helpDeveloperGuide(), cmdHelpDeveloperGuide);
         menuBar.addItem(constants.help(),helpMenu);
                 
-        /*Command cmdUpdate = new Command() {
+        @SuppressWarnings("unused")
+		Command cmdUpdate = new Command() {
             public void execute() {     
             	CodeListRpcCallback callback = new CodeListRpcCallback();
         		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Concepts","http://www.eionet.europa.eu/gemet/concept/", callback);
+        		ls.invokeUpdateRESTfulWebService(callback);
+        		/*ls.invokeCacheRepositoryRESTfulWebService("GEMET_Concepts","http://www.eionet.europa.eu/gemet/concept/", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Groups","http://www.eionet.europa.eu/gemet/group/", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Themes","http://www.eionet.europa.eu/gemet/theme/", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEOSS_Societal_Benefit_Areas","http://iaaa.unizar.es/thesaurus/SBA_EuroGEOSS", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Feature_Concept_Dictionary","http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Glossary","http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items", callback);
-        		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", callback);*/
             }			
         };
-        menuBar.addItem("cache", cmdUpdate);*/
+        //menuBar.addItem("cache", cmdUpdate);
+        
+        /*final String myURL = Utilities.getURL();
+		MenuBar languageMenu = new MenuBar(true);
+		// BG
+		Command cmdLanguageBG = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "bg");
+            }			
+        };
+        languageMenu.addItem("bg - български", cmdLanguageBG);
+        // CS
+        Command cmdLanguageCS= new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "cs");
+            }			
+        };
+        languageMenu.addItem("cs - čeština", cmdLanguageCS);
+        // DA
+        Command cmdLanguageDA = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "da");
+            }			
+        };
+        languageMenu.addItem("da - dansk", cmdLanguageDA);
+        // DE
+        Command cmdLanguageDE = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "de");
+            }			
+        };
+        languageMenu.addItem("de - deutsch", cmdLanguageDE);
+        // EL
+        Command cmdLanguageEL = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "el");
+            }			
+        };
+        languageMenu.addItem("el - ελληνικά", cmdLanguageEL);
+        // EN
+        Command cmdLanguageEN = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "en");
+            }			
+        };
+        languageMenu.addItem("en - english", cmdLanguageEN);
+        // ES
+        Command cmdLanguageES = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "es");
+            }			
+        };
+        languageMenu.addItem("es - español", cmdLanguageES);
+        // ET
+        Command cmdLanguageET = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "et");
+            }			
+        };
+        languageMenu.addItem("et - eesti keel", cmdLanguageET);
+        // FI
+        Command cmdLanguageFI = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "fi");
+            }			
+        };
+        languageMenu.addItem("fi - suomi", cmdLanguageFI);
+        // FR
+        Command cmdLanguageFR = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "fr");
+            }			
+        };
+        languageMenu.addItem("fr - français", cmdLanguageFR);
+        // GA
+        //Command cmdLanguageGA = new Command() {
+        //    public void execute() {     
+        //    	Window.Location.assign(myURL + "ga");
+        //    }			
+        //};
+        //languageMenu.addItem("ga - gaeilge", cmdLanguageGA);
+        // HU
+        Command cmdLanguageHU = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "hu");
+            }			
+        };
+        languageMenu.addItem("hu - magyar", cmdLanguageHU);        
+        // IT
+        Command cmdLanguageIT = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "it");
+            }			
+        };
+        languageMenu.addItem("it - italiano", cmdLanguageIT);
+        // LT
+        Command cmdLanguageLT = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "lt");
+            }			
+        };
+        languageMenu.addItem("lt - lietuvių kalba", cmdLanguageLT);
+        // LV
+        Command cmdLanguageLV = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "lv");
+            }			
+        };
+        languageMenu.addItem("lv - latviešu valoda", cmdLanguageLV);
+        // MT
+        Command cmdLanguageMT = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "mt");
+            }			
+        };
+        languageMenu.addItem("mt - malti", cmdLanguageMT);
+        // NL
+        Command cmdLanguageNL = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "nl");
+            }			
+        };
+        languageMenu.addItem("nl - nederlands", cmdLanguageNL);
+        // PL
+        Command cmdLanguagePL = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "pl");
+            }			
+        };
+        languageMenu.addItem("pl - polski", cmdLanguagePL);
+        // PT
+        Command cmdLanguagePT = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "pt");
+            }			
+        };
+        languageMenu.addItem("pt - português", cmdLanguagePT);
+        // RO
+        Command cmdLanguageRO = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "ro");
+            }			
+        };
+        languageMenu.addItem("ro - română", cmdLanguageRO);
+        // SK
+        Command cmdLanguageSK = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "sk");
+            }			
+        };
+        languageMenu.addItem("sk - slovenčina", cmdLanguageSK);
+        // SL
+        Command cmdLanguageSL = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "sl");
+            }			
+        };
+        languageMenu.addItem("sl - slovenščina", cmdLanguageSL);
+        // SV
+        Command cmdLanguageSV = new Command() {
+            public void execute() {     
+            	Window.Location.assign(myURL + "sv");
+            }			
+        };
+        languageMenu.addItem("sv - svenska", cmdLanguageSV);        
+        menuBar.addItem(constants.languages(),languageMenu);*/
+        
+        // About
+        Command cmdAbout = new Command() {
+            public void execute() {     
+            	Window.open("userguide/about.html ", constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            }			
+        };
+        menuBar.addItem(constants.about(),cmdAbout);
+        
+        // Set current file text
+        menuBar.addSeparator();
+        menuBar.addItem(currentFile);
+        currentFile.setStyleName("menuCurrent");
         
         /** EVENTS management ------------------------------------------------------------*/
         // event.ONCLICK is used to add elements during load file action
@@ -282,30 +470,52 @@ public class MainPanel extends Composite {
 		});
 		refreshHTML.setHTML(constants.refresh());
 		refreshHTML.click();
+		
+		// remove header if requested
+		if (!EUOSMEGWT.showHeader) {
+			myHeader.removeFromParent();		
+			lp.setWidgetSize(lp.getWidget(0),35);
+			myLanguages.getElement().getElementsByTagName("div").getItem(0).getStyle().setTop(7,Unit.PX);
+			myLanguages.getElement().getElementsByTagName("div").getItem(0).getStyle().setRight(10,Unit.PX);
+			NodeList<Element> myList = myLanguages.getElement().getElementsByTagName("a");
+			for (int i=0; i<myList.getLength(); i++) {
+				myList.getItem(i).getStyle().setColor("black");						
+			}
+		}
     }
 	
 	private void setHeader() {
-		String myURL = Utilities.getURL();
+		// set root page
 		String myHeaderHTML = myHeader.getHTML();
-		myHeaderHTML = myHeaderHTML.replace("#template_page#", myURL);
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
 			myHeaderHTML = myHeaderHTML.replace("#root_page#", "<a id=\"firstTab\" href=\"http://rdsi-portal.jrc.it/rdsi/\">IES Reference Data &amp; Services Initiative</a>"); 		
 		else
 			myHeaderHTML = myHeaderHTML.replace("#root_page#", "");
-		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
-			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDataset());
+		myHeader.setHTML(myHeaderHTML);
+		// set datatype
+		String datatype = constants.newSpatialDataset();;		
 		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString()))
-			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDatasetSeries());
+			datatype = constants.newSpatialDatasetSeries();
 		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString()))
-			myHeaderHTML = myHeaderHTML.replace("#datatype#", constants.newSpatialDataService());
-        myHeader.setHTML(myHeaderHTML);
-		NodeList<Element> myList = myHeader.getElement().getElementsByTagName("a");
+			datatype = constants.newSpatialDataService();
+		currentFile.setText(datatype + " - " + LocaleInfo.getCurrentLocale().getLocaleName());
+		// set language bar
+		String myURL = Utilities.getURL();
+		String myLanguagesHTML = myLanguages.getHTML();
+		myLanguagesHTML = myLanguagesHTML.replace("#template_page#", myURL);
+		myLanguages.setHTML(myLanguagesHTML);
+		NodeList<Element> myListLi = myLanguages.getElement().getElementsByTagName("li");
+		for (int i=0; i<myListLi.getLength(); i++) {
+			if (myListLi.getItem(i).getId().equalsIgnoreCase("datatype")) 
+				myListLi.getItem(i).setInnerHTML(datatype);
+		}
+		NodeList<Element> myList = myLanguages.getElement().getElementsByTagName("a");
 		for (int i=0; i<myList.getLength(); i++) {
 			if (myList.getItem(i).getClassName().equalsIgnoreCase("curlang") && !myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
 				myList.getItem(i).setClassName("lang");
 			if (myList.getItem(i).getClassName().equalsIgnoreCase("lang") && myList.getItem(i).getAttribute("lang").equalsIgnoreCase(LocaleInfo.getCurrentLocale().getLocaleName()))
 				myList.getItem(i).setClassName("curlang");			
-		}		
+		}
 	}
 
 	/**
@@ -366,8 +576,8 @@ public class MainPanel extends Composite {
 	* @param loadFileXML 	{@link String} = the XML file to parse 
     */
 	private void newForm(String myNewInterface, String loadFileXML) {
-		Element mapDiv = DOM.getElementById("mapstraction");
-		Document.get().getBody().appendChild(mapDiv);
+		Element mapDiv = DOM.getElementById("mapstraction");		
+		Document.get().getBody().appendChild(mapDiv);		
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		EUOSMEGWT.metadataType = myNewInterface;
 		identificationInfoSubType = "md_dataidentification";

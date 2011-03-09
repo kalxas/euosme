@@ -54,6 +54,8 @@ public class EUOSMEGWT implements EntryPoint {
 	public static boolean showAll = false;
 	/** true, the application uses the online repositories; false, the application uses the local resources */
 	public static boolean rpcRepository = false;	
+	/** true, to show the header with the banner; false, to hide it */
+	public static boolean showHeader = false;
 	
 	// The following variables are changed during loading by the application	
 	/** Indicates the availability of online service that is connected to the respositories */

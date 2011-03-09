@@ -226,7 +226,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 			String dir = "";
 			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
-	    	for (int extraValue=2;extraValue<=11;extraValue++) {
+	    	for (int extraValue=12;extraValue<=12;extraValue++) {
 	    		uri = codelists + extraValue + "/values?max=" + limit;
 	    		URL u = new URL(uri);
 	    		String[] languages={"bg","cs","da","de","el","en","es","et","fi","fr","hu","it","lt","lv","mt","nl","pl","pt","ro","sk","sl","sv"};
