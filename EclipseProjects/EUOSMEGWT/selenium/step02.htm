@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.inspire-geoportal.eu/EUOSME" />
+<title>Metadata on metadata</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Metadata on metadata</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://127.0.0.1:8888/EUOSMEGWT.html?gwt.codesvr=127.0.0.1:9997</td>
+	<td></td>
+</tr>
+<!--Organisation Name empty-->
+<tr>
+	<td>fireEvent</td>
+	<td>md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>focus</td>
+</tr>
+<tr>
+	<td>keyPress</td>
+	<td>md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>\9</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>error-md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<!--Organisation name filled-->
+<tr>
+	<td>type</td>
+	<td>md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>European Commission, Joint Research Centre</td>
+</tr>
+<tr>
+	<td>keyPress</td>
+	<td>md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>\9</td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>error-md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>#value = European Commission, Joint Research Centre</td>
+	<td></td>
+</tr>
+<!--Point of contact e-mail empty-->
+<tr>
+	<td>click</td>
+	<td>newButton-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyPress</td>
+	<td>new-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td>\9</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>error-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<!--Point of contact e-mail wrong mail address-->
+<tr>
+	<td>type</td>
+	<td>new-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td>@jrc.ec.europa.eu</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>newButton-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>error-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<!--Point of contact e-mail added-->
+<tr>
+	<td>type</td>
+	<td>new-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td>image2000@jrc.ec.europa.eu</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>newButton-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//table[@id='md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1]']/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[6]/td/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/table/tbody/tr/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>#value = image2000@jrc.ec.europa.eu</td>
+	<td></td>
+</tr>
+<!--Point of contact e-mail deleted-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1]']/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[6]/td/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/table/tbody/tr/td[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//table[@id='md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1]']/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[6]/td/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/table/tbody/tr/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>newButton-md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//table[@id='md_metadata[1].contact[1].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1]']/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr[6]/td/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/table/tbody/tr/td[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>#value = image2000@jrc.ec.europa.eu</td>
+	<td></td>
+</tr>
+<!--Add point of contact 2-->
+<tr>
+	<td>click</td>
+	<td>add-md_metadata[1].contact[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>md_metadata[1].contact[2].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>organisation 2</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>md_metadata[1].contact[2].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>#value = organisation 2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>new-md_metadata[1].contact[2].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td>name.surname@jrc.ec.europa.eu</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>newButton-md_metadata[1].contact[2].ci_responsibleparty[1].contactinfo[1].ci_contact[1].address[1].ci_address[1].electronicmailaddress[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>#value = name.surname@jrc.ec.europa.eu</td>
+	<td></td>
+</tr>
+<!--Delete point of contact 2-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='md_metadata[1].contact[2].ci_responsibleparty[1]']/tbody/tr/td[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>md_metadata[1].contact[2].ci_responsibleparty[1].organisationname[1].characterstring[1]</td>
+	<td></td>
+</tr>
+<!--Validate-->
+<tr>
+	<td>click</td>
+	<td>gwt-uid-60</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Incorrect elements: 14</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
