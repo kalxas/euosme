@@ -628,7 +628,7 @@ public class MainPanel extends Composite {
 		final Button openFileButton = new Button(constants.openFileButton(), new ClickHandler() {			
 			@Override
 			public void onClick(ClickEvent event) {
-				Window.open("temp/" + myFileName, "new file","");
+				Window.open("../temp/" + myFileName, "new_file","");
 				myUploadDialog.hide();	
 			}
 		});

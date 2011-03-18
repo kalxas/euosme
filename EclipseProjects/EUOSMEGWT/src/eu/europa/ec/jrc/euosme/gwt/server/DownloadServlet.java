@@ -55,7 +55,7 @@ public class DownloadServlet extends HttpServlet {
 	    catch (IOException e)    {   
 	    	e.printStackTrace();
 	    }
-	    try {
+	    try {	    	
 			ServletOutputStream out = response.getOutputStream();
 			
 			File file = new File(dir + "/" + filename);
@@ -63,8 +63,10 @@ public class DownloadServlet extends HttpServlet {
 
 			response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
 			response.setContentLength((int) file.length());
-			response.setHeader("Content-Disposition", "attachement; filename=\"" + filename + "\"");
-
+			response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");			
+			response.setHeader("Pragma", "private");
+			response.setHeader("Cache-Control", "private, must-revalidate");
+			
 			DataInputStream in = new DataInputStream(new FileInputStream(file));
 
 			int length;
