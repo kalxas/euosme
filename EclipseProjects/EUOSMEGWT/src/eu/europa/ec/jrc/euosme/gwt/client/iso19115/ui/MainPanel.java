@@ -632,17 +632,17 @@ public class MainPanel extends Composite {
 				myUploadDialog.hide();	
 			}
 		});
-		openFileButton.setVisible(false);
+		openFileButton.setVisible(true);
 		final Label infoLabel= new Label(constants.infoOnDownload());
-		infoLabel.setVisible(false);
-		myForm.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
-			@Override
-			public void onSubmitComplete(SubmitCompleteEvent event) {
-				loadingLabel.removeFromParent();
-				openFileButton.setVisible(true);
-				infoLabel.setVisible(true);
-		    }			
-		});
+		infoLabel.setVisible(true);
+//		myForm.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
+//			@Override
+//			public void onSubmitComplete(SubmitCompleteEvent event) {
+//				loadingLabel.removeFromParent();
+//				openFileButton.setVisible(true);
+//				infoLabel.setVisible(true);
+//		    }			
+//		});
 		myForm.add(panel);
 		myForm.setVisible(false);
 		HorizontalPanel myHPanel = new HorizontalPanel();
@@ -656,7 +656,7 @@ public class MainPanel extends Composite {
 		}));
 		vpanel.add(myForm);
 		vpanel.add(infoLabel);		
-		vpanel.add(loadingLabel);
+		//vpanel.add(loadingLabel);
 		vpanel.add(myHPanel);
 		myUploadDialog.add(vpanel);	
 		myUploadDialog.setHTML("<b>" + constants.saveFileButton() + "</b><br/>");

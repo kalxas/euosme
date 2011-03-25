@@ -19,6 +19,8 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
+
+
 import com.google.gwt.core.client.GWT;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
@@ -38,6 +40,8 @@ import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
  * @author 	Marzia Grasso
  */
 public class MD_LegalConstraints extends CI {
+	
+	
 	
 	/** Constants declaration */
  	protected iso19115Constants constants = GWT.create(iso19115Constants.class);
@@ -98,12 +102,13 @@ public class MD_LegalConstraints extends CI {
 	
 	@Override
 	public void setInterface(int i) {
+		
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			useConstraintsObj.setVisible(false);
 			accessConstraintsObj.setVisible(false);	
 			otherConstraintsObj.setLabel(constants.accessConstraints());
 		}
-		if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+		if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()) && !EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))
 			otherConstraintsObj.setShowList(false);			
 	}
 }

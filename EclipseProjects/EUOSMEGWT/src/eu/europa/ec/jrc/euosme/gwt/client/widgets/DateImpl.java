@@ -136,7 +136,7 @@ public class DateImpl extends Composite {
 			public void onBlur(BlurEvent event) {
 				myCheck();
 				if (myError.isVisible()) {
-					myDateBox.setFocus(true);
+					//myDateBox.setFocus(true);
 				} else {
 					Utilities.setTextTreeItem(myTreeItem,myDateBox.getTextBox().getText().split(" ")[0]);
 				}									

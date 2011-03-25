@@ -19,105 +19,32 @@ mxn.register('openlayers', {
 			this.maps[api] = new OpenLayers.Map(
 				element.id,
 				{
-					maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
-					maxResolution:156543,
-					numZoomLevels:18,
-					units:'meters',
+			        units: "degrees",
+			        maxExtent: new OpenLayers.Bounds(-180, -90, 180, 90),					
 					projection: new OpenLayers.Projection("EPSG:4326")
 				}
 			);
-			/*var control = new OpenLayers.Control();
-			OpenLayers.Util.extend(control, {
-				draw: function () {
-					this.box = new OpenLayers.Handler.Box( control,
-						{"done": this.notice},
-						{keyMask: OpenLayers.Handler.MOD_SHIFT});
-					this.box.activate();
-				},			
-				notice: function (bounds) {
-				    var geom = bounds.toGeometry();
-					var feature = new OpenLayers.Feature.Vector(geom);
-					this.layers.polylines.addFeatures(feature);
-					var map = this.maps[this.api];
-					map.zoomToExtent(bounds,true);
-					var poly = new OpenLayers.Bounds(0,0,10,10).toGeometry();
-				}
-			});
-			this.maps[api].addControl(control);*/		
-
-			this.layers.geoportal = new OpenLayers.Layer.WMS("GEOPORTAL","http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",{layers: '0,2,3'/*,4,5,7,8,9,10,13,14,15,16,18,19,20,21,22,23,26,27,28,30,31,32,33,35,36,37,39,40,41'*/, version: '1.3.0', crs:'crs:84'});
 		
-			this.layers.osmmapnik = new OpenLayers.Layer.TMS(
-				'OSM Mapnik',
-				[
-					"http://a.tile.openstreetmap.org/",
-					"http://b.tile.openstreetmap.org/",
-					"http://c.tile.openstreetmap.org/"
-				],
-				{
-					type:'png',
-					getURL: function (bounds) {
-						var res = this.map.getResolution();
-						var x = Math.round ((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));
-						var y = Math.round ((this.maxExtent.top - bounds.top) / (res * this.tileSize.h));
-						var z = this.map.getZoom();
-						var limit = Math.pow(2, z);
-						if (y < 0 || y >= limit) {
-							return null;
-						} else {
-							x = ((x % limit) + limit) % limit;
-							var path = z + "/" + x + "/" + y + "." + this.type;
-							var url = this.url;
-							if (url instanceof Array) {
-								url = this.selectUrl(path, url);
-							}
-							return url + path;
-						}
-					},
-					displayOutsideMaxExtent: true
-				}
+
+			this.layers.geoportal = new OpenLayers.Layer.WMS("WorldMap",
+					"http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",
+					{	layers: '0,2,3,4,5,7,8,9,10,13,14,15,16,18,19,20,21,22,23,26,27,28,30,31,32,33,35,36,37,39,40,41', 
+						version: '1.3.0', 
+						crs:'crs:84'},
+					{	isBaseLayer: true
+							}						
 			);
+
 			this.layers.polygonLayer = new OpenLayers.Layer.Vector("Polygon Layer");
 			
-			this.maps[api].addLayer(this.layers.osmmapnik);
+			//this.maps[api].addLayer(this.layers.osmmapnik);
 			this.maps[api].addLayer(this.layers.geoportal);	
 			this.maps[api].addLayer(this.layers.polygonLayer);
-			/*
-			var map = this.maps[api];
-			var control = new OpenLayers.Control();
-			OpenLayers.Util.extend(control, {
-    			draw: function () {
-       		        this.box = new OpenLayers.Handler.Box( control,
-            			{"done": this.notice},
-            			{keyMask: OpenLayers.Handler.MOD_SHIFT});
-        			this.box.activate();
-    			},
-    			notice: function (bounds) {
-					OpenLayers.Console.userError(bounds);
-					var userBBoxFeature = new OpenLayers.Feature.Vector(bounds.toGeometry());
-				    if (userBBoxLayer != null)
-						userBBoxLayer.destroy();
-				    userBBoxLayer  = new OpenLayers.Layer.Vector("userBBox", {});
-			        userBBoxLayer.addFeatures(userBBoxFeature);
-					map.addLayer(userBBoxLayer);
-			       map.zoomToExtent(bounds);
-   				 }
-			});
-			map.addControl(control);*/
 			
 			this.loaded[api] = true;
 		},
 	
 		applyOptions: function(){
-			// var map = this.maps[this.api];
-			// var myOptions = [];
-			// if (this.options.enableDragging) {
-			//	 myOptions.draggable = true;
-			// } 
-			// if (this.options.enableScrollWheelZoom){
-			//	 myOptions.scrollwheel = true;
-			// } 
-			// map.setOptions(myOptions);
 		},
 
 		resizeTo: function(width, height){	
@@ -133,28 +60,11 @@ mxn.register('openlayers', {
 				map.controls[i-1].deactivate();
 				map.removeControl(map.controls[i-1]);
 			}
-			if ( args.zoom == 'large' )	  {
-				map.addControl(new OpenLayers.Control.PanZoomBar());
-			}
-			else if ( args.zoom == 'small' ) {
-				map.addControl(new OpenLayers.Control.ZoomPanel());
-				if ( args.pan) {
-					map.addControl(new OpenLayers.Control.PanPanel()); 
-				}
-			}
-			else {
-				if ( args.pan){
-					map.addControl(new OpenLayers.Control.PanPanel()); 
-				}
-			}
-			if ( args.overview ) {
-				map.addControl(new OpenLayers.Control.OverviewMap());
-			}
-			if ( args.map_type ) {
-				map.addControl(new OpenLayers.Control.LayerSwitcher());
-			}
 			
-			map.addControl(new OpenLayers.Control.LayerSwitcher());
+			//map.addControl(new OpenLayers.Control.LayerSwitcher());
+			//map.addControl(new OpenLayers.Control.PanPanel());
+			//map.addControl(new OpenLayers.Control.ZoomPanel());
+			map.addControl(new OpenLayers.Control.PanZoomBar());
             map.addControl(new OpenLayers.Control.MousePosition());
 
 			dosomething = function (polygon) {
@@ -171,21 +81,21 @@ mxn.register('openlayers', {
 		},
 
 		addSmallControls: function() {
-			var map = this.maps[this.api];
-			this.addControlsArgs.pan = false;
-			this.addControlsArgs.scale = false;						
-			this.addControlsArgs.zoom = 'small';
-			map.addControl(new OpenLayers.Control.ZoomBox());
-			map.addControl(new OpenLayers.Control.LayerSwitcher({
-				'ascending':false
-			}));			
+//			var map = this.maps[this.api];
+//			this.addControlsArgs.pan = false;
+//			this.addControlsArgs.scale = false;						
+//			this.addControlsArgs.zoom = 'small';
+//			map.addControl(new OpenLayers.Control.ZoomBox());
+//			map.addControl(new OpenLayers.Control.LayerSwitcher({
+//				'ascending':false
+//			}));			
 		},
 
 		addLargeControls: function() {
-			var map = this.maps[this.api];
-			map.addControl(new OpenLayers.Control.PanZoomBar());
-			this.addControlsArgs.pan = true;
-			this.addControlsArgs.zoom = 'large';
+//			var map = this.maps[this.api];
+//			map.addControl(new OpenLayers.Control.PanZoomBar());
+//			this.addControlsArgs.pan = true;
+//			this.addControlsArgs.zoom = 'large';
 		},
 
 		addMapTypeControls: function() {
@@ -406,16 +316,18 @@ mxn.register('openlayers', {
 	LatLonPoint: {
 
 		toProprietary: function() {
-			var ollon = this.lon * 20037508.34 / 180;
-			var ollat = Math.log(Math.tan((90 + this.lat) * Math.PI / 360)) / (Math.PI / 180);
-			ollat = ollat * 20037508.34 / 180;
+			//var ollon = this.lon * 20037508.34 / 180;
+			var ollon = this.lon;
+			//var ollat = Math.log(Math.tan((90 + this.lat) * Math.PI / 360)) / (Math.PI / 180);
+			//ollat = ollat * 20037508.34 / 180;
+			var ollat = this.lat;
 			return new OpenLayers.LonLat(ollon, ollat);			
 		},
 
 		fromProprietary: function(olPoint) {
-			var lon = (olPoint.lon / 20037508.34) * 180;
-			var lat = (olPoint.lat / 20037508.34) * 180;
-			lat = 180/Math.PI * (2 * Math.atan(Math.exp(lat * Math.PI / 180)) - Math.PI / 2);
+			var lon = olPoint.lon; //(olPoint.lon / 20037508.34) * 180;
+			var lat = olPoint.lat; //(olPoint.lat / 20037508.34) * 180;
+			//lat = 180/Math.PI * (2 * Math.atan(Math.exp(lat * Math.PI / 180)) - Math.PI / 2);
 			this.lon = lon;
 			this.lat = lat;
 		}
