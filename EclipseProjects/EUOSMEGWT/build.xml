@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="EUOSMEGWT" default="war" basedir=".">
+<project name="EUOSMEGWT" default="GEOSS" basedir=".">
   <target name="war" description="Create a war file">
   	<delete file = "EUOSME.war"/>
     <zip destfile="EUOSME.war" basedir="war"/>
   </target>
+	
+  <target name="GEOSS" description="Package for GEOSS mode">
+  	<delete file = "EUOSME.war"/>  	
+    <copy file="app_mode/GEOSS/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
+    <zip destfile="EUOSME.war" basedir="war"/>
+  </target>	
+	
+  <target name="RDSI" description="Package for RDSI mode">
+  	<delete file = "EUOSME_RDSI.war"/>
+  	<copy file="app_mode/RDSI/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
+    <zip destfile="EUOSME_RDSI.war" basedir="war"/>
+  </target>	
+
+  <target name="GEOPORTAL" description="Package for GEOPORTAL mode">
+  	<delete file = "EUOSME_GEOPORTAL.war"/>
+  	<copy file="app_mode/GEOPORTAL/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
+    <zip destfile="EUOSME_GEOPORTAL.war" basedir="war"/>
+  </target>		
 </project>
