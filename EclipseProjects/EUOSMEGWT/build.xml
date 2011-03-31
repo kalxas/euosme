@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="EUOSMEGWT" default="war" basedir=".">
   <target name="war" description="Create a war file">
-  	<delete file = "EUOSMEGWT.war"/>
-    <zip destfile="EUOSMEGWT.war" basedir="war"/>
+  	<delete file = "EUOSME.war"/>
+    <zip destfile="EUOSME.war" basedir="war"/>
   </target>
 </project>

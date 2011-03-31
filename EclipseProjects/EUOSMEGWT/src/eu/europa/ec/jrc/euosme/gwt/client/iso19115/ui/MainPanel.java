@@ -728,9 +728,13 @@ public class MainPanel extends Composite {
 				myUploadDialog.hide();
 				// get results and process them
 				String ret = event.getResults();
+				//hack for IE
+				ret = ret.replaceAll(">-</A>", "></A>");
 		        DivElement div = Document.get().createDivElement();
 		        div.setInnerHTML(ret);
-		        ret = div.getInnerText(); 
+		        ret = div.getInnerText();
+		        //XML Parser don't accept space at the beginning, so we trim it  
+		        ret = ret.trim();
 		        //Turn hourglass off
 				Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);
 		        if (ret.startsWith("ERROR")) {

@@ -142,7 +142,7 @@ public class MD_Keywords_Gemet extends CI {
 		filterPanel.setVisible(false);
 		// Suggest box
 		fieldsGroup.add(suggestObj);
-		suggestObj.getElement().getStyle().setHeight(100,Unit.PX);
+		suggestObj.getElement().getStyle().setHeight(400,Unit.PX);
 		suggestObj.getElement().getStyle().setOverflow(Overflow.AUTO);
 		suggestObj.setVisible(false);
 		suggestObj.addOpenHandler(new OpenHandler<TreeItem>() {
