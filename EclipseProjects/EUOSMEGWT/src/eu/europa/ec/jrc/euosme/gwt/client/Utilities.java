@@ -1689,13 +1689,19 @@ public class Utilities {
 	    myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]");
 		Utilities.setTextTreeItem(myTreeItem,myTodayDate);
 		// set default values
-		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
-			Utilities.valueField("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].pointofcontact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {			
+			
 			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].pointofcontact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]");
-			Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());			
-			Utilities.valueField("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+			if (myTreeItem.getText().equals(getEmptyTreeItemValue())) {
+				Utilities.valueField("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].pointofcontact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+				Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());
+			}
+			
 			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]");
-			Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());			
+			if (myTreeItem.getText().equals(getEmptyTreeItemValue())) {
+				Utilities.valueField("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
+				Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());
+			}
 		}		
 	}
 }
