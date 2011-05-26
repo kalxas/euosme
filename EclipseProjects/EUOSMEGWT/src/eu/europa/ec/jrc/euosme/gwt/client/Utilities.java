@@ -1568,6 +1568,9 @@ public class Utilities {
 	 * @param myList			{@link ListBox} = the list box to populate
 	 */
 	public static void setSuggests(String response, TreeItem myList) {
+		GWT.log(" RPC response " + response, null);
+		GWT.log(" tree item " + myList.getText(), null);
+		
 		Document messageDom = XMLParser.parse(response);
 	
 	    NodeList nodes = messageDom.getElementsByTagName("result");

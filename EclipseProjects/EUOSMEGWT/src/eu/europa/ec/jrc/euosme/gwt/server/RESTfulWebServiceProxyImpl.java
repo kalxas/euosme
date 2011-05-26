@@ -63,7 +63,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	static String limit = "200";
 	static String dataThemes = "";
 	static String dataServices = "";
-	static Boolean saveCodeList=false;
+	static Boolean saveCodeList = false;
 	static String inspireValidationService = "";
 	static String inspireWebService = "";
 	
@@ -99,28 +99,69 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         	String urlParameters = "";
         	String uri = "";
         	String encoding = "UTF-8";
+        	String query = "";
         	if (paramName.equalsIgnoreCase("codelists")) {
         		uri = codelists + extraValue + "/values?max=" + limit;
         	}
         	else {
+        		
+        		// get the list of schemes
         		if (paramName.equalsIgnoreCase("repositories")) {
-        			uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
+        			//uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
+        			uri = repositories;
+        			query = getContents("query_" + paramName + ".rq"); 
+        			uri = uri + "?queryLn=SPARQL" + "&query=" + URLEncoder.encode(query, "UTF-8")+"&limit=" + limit + "&infer=true";
+
+        			
+//        			uri = repositories;
+//    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
+//    				query = getContents("query_" + paramName + ".rq");    				
+//					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
+//    				urlParameters+="&limit=" + limit + "&infer=true";
         		}
-        		if (paramName.equalsIgnoreCase("narrower") || paramName.equalsIgnoreCase("repository")) {
+        		
+        		// get the top-level concepts, build the tree
+        		else if (paramName.equalsIgnoreCase("repository")) {
     				uri = repositories;
     				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-    				String query = getContents("query_" + paramName + ".rq");
+    				query = getContents("query_" + paramName + ".rq");
     				query = query.replace("##extraValue##",extraValue);
     				query = query.replace("##clientLanguage##",clientLanguage);
     				query = query.replace("##filter##",filter);
 					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
     				urlParameters+="&limit=" + limit + "&infer=true";    				
         		}
+        		
+        		// expand one node, get its children
+        		else if (paramName.equalsIgnoreCase("narrower")) {
+    				uri = repositories;
+    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
+    				query = getContents("query_" + paramName + ".rq");
+    				query = query.replace("##extraValue##",extraValue);
+    				query = query.replace("##clientLanguage##",clientLanguage);
+    				query = query.replace("##filter##",filter);
+					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
+    				urlParameters+="&limit=" + limit + "&infer=true";    				
+        		}
+        		
+        		// search 
+        		else if (paramName.equalsIgnoreCase("search")) {
+    				uri = repositories;
+    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
+    				query = getContents("query_" + paramName + ".rq");
+//    				query = query.replace("##extraValue##",extraValue);
+    				query = query.replace("##extraValue##","http://www.eionet.europa.eu/gemet/concept/");    				
+    				query = query.replace("##clientLanguage##",clientLanguage);
+    				query = query.replace("##filter##",filter);
+					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
+    				urlParameters+="&limit=" + limit + "&infer=true";    				
+        		}        		
         		Authenticator.setDefault(new MyAuthenticator());
         	}        	
             URL u = new URL(uri);
             HttpURLConnection uc = (HttpURLConnection) u.openConnection();
-            if (paramName.equalsIgnoreCase("repository") || paramName.equalsIgnoreCase("narrower")) {
+            
+            if (paramName.equalsIgnoreCase("repository") || paramName.equalsIgnoreCase("narrower") || paramName.equalsIgnoreCase("search")) {
             	uc.setRequestMethod("POST");
                 uc.setRequestProperty("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
                 uc.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
@@ -134,7 +175,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
                 wr.close ();
                 if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();
             }    
-            if (paramName.equalsIgnoreCase("repositories")) {
+            else if (paramName.equalsIgnoreCase("repositories")) {
             	uc.setRequestProperty("Content-Type", "application/xml;charset=ISO-8859-1");
             	uc.setRequestMethod("GET");
             	uc.setUseCaches(true);
@@ -142,9 +183,10 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
                 if (status != 200)
                 	if (status == 401) return "AUTHENTICATIONFAILED";
                 	else throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
-                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();              
+                if (uc.getContentEncoding()!=null) encoding = uc.getContentEncoding();         	
             }           	
-            if (paramName.equalsIgnoreCase("codelists")) {            	
+            
+            else if (paramName.equalsIgnoreCase("codelists")) {            	
             	uc.setDoOutput(false);
             	uc.setRequestProperty("accept", "application/json");
             	uc.setRequestProperty("accept-language", clientLanguage);
@@ -226,7 +268,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 			String dir = "";
 			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
-	    	for (int extraValue=12;extraValue<=12;extraValue++) {
+	    	for (int extraValue=2;extraValue<=2;extraValue++) {
 	    		uri = codelists + extraValue + "/values?max=" + limit;
 	    		URL u = new URL(uri);
 	    		String[] languages={"bg","cs","da","de","el","en","es","et","fi","fr","hu","it","lt","lv","mt","nl","pl","pt","ro","sk","sl","sv"};
@@ -235,6 +277,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 		            HttpURLConnection uc = (HttpURLConnection) u.openConnection();
 		            uc.setDoOutput(false);
 		        	uc.setRequestProperty("accept", "application/json");
+		        	//uc.setRequestProperty("accept-language", "en");
 		        	uc.setRequestProperty("accept-language", clientLanguage);
 		        	uc.setRequestMethod("GET");
 		        	uc.setUseCaches(true);

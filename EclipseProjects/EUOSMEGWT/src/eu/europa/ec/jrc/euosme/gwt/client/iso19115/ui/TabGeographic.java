@@ -157,12 +157,12 @@ public class TabGeographic extends Composite {
 		    mapPanel.add(matchFound);
 	    }
 	    else {
-	    	queryPanel.removeFromParent();
-	    	mxnMakeMap(EUOSMEGWT.apiMapstraction);
+	    	queryPanel.removeFromParent();	    	
 	    	sinkEvents(Event.ONMOUSEUP);
-	    	Element mapmine = DOM.getElementById("mapstraction");
-	    	mapPanel.getElement().appendChild(mapmine);
-	    	try {
+	    	Element map_el = DOM.getElementById("mapstraction");
+	    	mxnMakeMap(map_el, EUOSMEGWT.apiMapstraction);
+	    	mapPanel.getElement().insertFirst(map_el);
+	    	/*try {
 	    		Element mapDiv = mapPanel.getElement().getElementsByTagName("div").getItem(0).getElementsByTagName("div").getItem(0);
 		    	mapDiv.getStyle().setPosition(Position.ABSOLUTE);	
 		    	mapDiv = mapPanel.getElement().getElementsByTagName("div").getItem(1);
@@ -171,7 +171,7 @@ public class TabGeographic extends Composite {
 	    	}
 	    	catch(Exception e) {
 	    		GWT.log("Problems with the map rendering");
-	    	}
+	    	}*/
 	    }
 	    
 	    
@@ -243,36 +243,28 @@ public class TabGeographic extends Composite {
 	 * @param west		{@link Element} = west text box
 	 */
 	public native static void getCenterMapstraction(String api, Element north, Element east, Element south, Element west) /*-{
-		var bounds = $wnd.mapstraction.getBounds();
-		if (bounds!=null) {
-	        var sw = bounds.getSouthWest();
+		var bounds = $wnd.userBBoxLayer.geometry.getBounds();
+		
+		// mapstraction bounds
+		if (bounds == null || bounds == undefined) {
+			bounds =  $wnd.mapstraction.getBounds();
+			var sw = bounds.getSouthWest();
 	        var ne = bounds.getNorthEast();
-	        var myNorth = 0;
-	        var myEast = 0;
-	        var mySouth = 0;
-	        var myWest = 0;
-	        if (api == "openlayers") {
-	        	myNorth = (ne.lat / 20037508.34) * 180;
-	  			myNorth = 180/Math.PI * (2 * Math.atan(Math.exp(myNorth * Math.PI / 180)) - Math.PI / 2);
-	  			myEast = (ne.lon / 20037508.34) * 180;
-				mySouth = (sw.lat / 20037508.34) * 180;
-	  			mySouth = 180/Math.PI * (2 * Math.atan(Math.exp(mySouth * Math.PI / 180)) - Math.PI / 2);
-				myWest = (sw.lon / 20037508.34) * 180;
-	        }
-			else {
-				myNorth = ne.lat;
-	  			myEast = ne.lon;
-				mySouth = sw.lat;
-	  			myWest = sw.lon;
-			}
-			try {
-		 		north.value = myNorth;
-		 		east.value = myEast;
-		 		south.value = mySouth;
-		 		west.value = myWest;
-		 	}
-		 	catch(ex) {	}   
-		}     
+	 		north.value = ne.lat;
+	 		east.value = ne.lon;
+	 		south.value = sw.lat;
+	 		west.value = sw.lon;	        
+		}
+		
+		// OpenLayers bounds
+		else {
+			north.value = bounds.top;
+	 		east.value = bounds.right;
+	 		south.value = bounds.bottom;
+	 		west.value = bounds.left;
+		}
+ 
+		     
 	}-*/;
 	
 	/**
@@ -525,10 +517,10 @@ public class TabGeographic extends Composite {
 	 * 
 	 * @param api	{@link String} = the map's type
 	 */
-	private native void mxnMakeMap(String api) /*-{
+	private native void mxnMakeMap(Element element, String api) /*-{
 		// initialise the map with your choice of API
 		if ($wnd.mapstraction==null) {
-			$wnd.mapstraction = new $wnd.mxn.Mapstraction('mapstraction',api);
+			$wnd.mapstraction = new $wnd.mxn.Mapstraction(element,api);
 			$wnd.mapstraction.addControls({pan: true,zoom: 'small', map_type: true});
 		}
         $wnd.mapstraction.setCenterAndZoom(new $wnd.mxn.LatLonPoint(0, 0),5);

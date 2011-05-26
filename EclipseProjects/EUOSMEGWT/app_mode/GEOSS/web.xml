@@ -1,120 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
-<web-app>  
-  <!-- Servlets -->
-  <servlet>
-      <servlet-name>InitServiceProxyImpl</servlet-name>
-      <servlet-class>eu.europa.ec.jrc.euosme.gwt.server.InitServiceProxyImpl</servlet-class>
-      <init-param>
-      	<param-name>metadataType</param-name>
-      	<param-value>DATASET</param-value>
-      	<description>see eu.europa.ec.jrc.euosme.gwt.client.DataTypes</description>
-      </init-param>
-      <init-param>
-      	<param-name>appMode</param-name>
-      	<param-value>GEOSS</param-value>
-      	<description>see eu.europa.ec.jrc.euosme.gwt.client.AppModes</description>
-      </init-param>
-      <init-param>
-      	<param-name>rpcCodeList</param-name>
-      	<param-value>false</param-value>
-      	<description>true to get the code list from online service, false to use local resources</description>
-      </init-param>
-      <init-param>
-      	<param-name>apiMapstraction</param-name>
-      	<param-value>openlayers</param-value>
-      	<description>type of map used</description>
-      </init-param>
-      <init-param>
-      	<param-name>showAll</param-name>
-      	<param-value>true</param-value>
-      </init-param>   
-      <init-param>
-      	<param-name>rpcRepository</param-name>
-      	<param-value>false</param-value>
-      	<description>true to get the list of keywords from online service, false to use local resources</description>
-      </init-param>
-      <init-param>
-      	<param-name>showHeader</param-name>
-      	<param-value>true</param-value>
-      	<description>true to show the header with the banner</description>
-      </init-param>   
-  </servlet>
-  <servlet>
-      <servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
-      <servlet-class>eu.europa.ec.jrc.euosme.gwt.server.RESTfulWebServiceProxyImpl</servlet-class>
-      <init-param>
-      	<param-name>limit</param-name>
-      	<param-value>200</param-value>
-      	<description>limit of keywords</description>
-      </init-param>
-      <init-param>
-      	<param-name>codelists</param-name>
-      	<param-value>http://www.inspire-geoportal.eu/INSPIRECodeLists/resources/codelists/</param-value>
-      	<description>URL for codelist service</description>
-      </init-param>      
-      <init-param>
-      	<param-name>dataThemes</param-name>
-      	<param-value>http://inspire-twg.jrc.ec.europa.eu/Control_Panel/Products/GimmeThesaurus/gemet/</param-value>
-      	<description>URL to get list of INSPIRE data themes</description>
-      </init-param>
-       <init-param>
-      	<param-name>dataServices</param-name>
-      	<param-value>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/</param-value>
-      	<description>URL to get list of ISO 19119 geographic services taxonomy</description>
-      </init-param> 
-      <init-param>
-      	<param-name>inspireValidationService</param-name>
-      	<param-value>http://www.inspire-geoportal.eu/INSPIREValidatorService/resources/validation/inspire</param-value>
-      	<description>URL used to validate the file against the INSPIRE validation rules</description>
-      </init-param>
-      <init-param>
-      	<param-name>inspireWebService</param-name>
-      	<param-value>http://www.inspire-geoportal.eu/INSPIREWebServices/</param-value>
-      	<description>URL for INSPIRE web services</description>
-      </init-param>
-      <init-param>
-      	<param-name>repositories</param-name>
-      	<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/eurogeoss-v3/query</param-value>
-      	<description>URL to access the semantic repository and get the list of available keywords</description>      	
-      </init-param>      
-      <init-param>
-      	<param-name>username</param-name>
-      	<param-value></param-value>
-      	<description>username to access the semantic repository</description>
-      </init-param>
-      <init-param>
-      	<param-name>password</param-name>
-      	<param-value></param-value>
-      	<description>password to access the semantic repository</description>
-      </init-param>     
-  </servlet>
-  <servlet>
-      <servlet-name>LoadServlet</servlet-name>
-      <servlet-class>eu.europa.ec.jrc.euosme.gwt.server.LoadServlet</servlet-class>
-  </servlet>  
-   <servlet>
-      <servlet-name>DownloadServlet</servlet-name>
-      <servlet-class>eu.europa.ec.jrc.euosme.gwt.server.DownloadServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-      <servlet-name>InitServiceProxyImpl</servlet-name>
-      <url-pattern>/euosmegwt/InitServiceProxy</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-      <servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
-      <url-pattern>/euosmegwt/RESTfulWebServiceProxy</url-pattern>
-  </servlet-mapping>  
-  <servlet-mapping>
-      <servlet-name>LoadServlet</servlet-name>
-      <url-pattern>/loadService</url-pattern>
-  </servlet-mapping>  
-  <servlet-mapping>
-      <servlet-name>DownloadServlet</servlet-name>
-      <url-pattern>/downloadService</url-pattern>
-  </servlet-mapping> 
-  <!-- Default page to serve -->
-  <welcome-file-list>
-    <welcome-file>EUOSMEGWT.html</welcome-file>
-  </welcome-file-list>
+<web-app>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>InitServiceProxyImpl</servlet-name>
+		<servlet-class>eu.europa.ec.jrc.euosme.gwt.server.InitServiceProxyImpl</servlet-class>
+		<init-param>
+			<param-name>metadataType</param-name>
+			<param-value>DATASET</param-value>
+			<description>see eu.europa.ec.jrc.euosme.gwt.client.DataTypes</description>
+		</init-param>
+		<init-param>
+			<param-name>appMode</param-name>
+			<param-value>GEOSS</param-value>
+			<description>see eu.europa.ec.jrc.euosme.gwt.client.AppModes</description>
+		</init-param>
+		<init-param>
+			<param-name>rpcCodeList</param-name>
+			<param-value>false</param-value>
+			<description>true to get the code list from online service, false to
+				use local resources</description>
+		</init-param>
+		<init-param>
+			<param-name>apiMapstraction</param-name>
+			<param-value>openlayers</param-value>
+			<description>type of map used</description>
+		</init-param>
+		<init-param>
+			<param-name>showAll</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>rpcRepository</param-name>
+			<param-value>true</param-value>
+			<description>true to get the list of keywords from online service,
+				false to use local resources</description>
+		</init-param>
+		<init-param>
+			<param-name>showHeader</param-name>
+			<param-value>true</param-value>
+			<description>true to show the header with the banner</description>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
+		<servlet-class>eu.europa.ec.jrc.euosme.gwt.server.RESTfulWebServiceProxyImpl</servlet-class>
+		<init-param>
+			<param-name>limit</param-name>
+			<param-value>200</param-value>
+			<description>limit of keywords</description>
+		</init-param>
+		<init-param>
+			<param-name>codelists</param-name>
+			<param-value>http://www.inspire-geoportal.eu/INSPIRECodeLists/resources/codelists/</param-value>
+			<description>URL for codelist service</description>
+		</init-param>
+		<init-param>
+			<param-name>dataThemes</param-name>
+			<param-value>http://inspire-twg.jrc.ec.europa.eu/Control_Panel/Products/GimmeThesaurus/gemet/</param-value>
+			<description>URL to get list of INSPIRE data themes</description>
+		</init-param>
+		<init-param>
+			<param-name>dataServices</param-name>
+			<param-value>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items/</param-value>
+			<description>URL to get list of ISO 19119 geographic services
+				taxonomy</description>
+		</init-param>
+		<init-param>
+			<param-name>inspireValidationService</param-name>
+			<param-value>http://www.inspire-geoportal.eu/INSPIREValidatorService/resources/validation/inspire</param-value>
+			<description>URL used to validate the file against the INSPIRE
+				validation rules</description>
+		</init-param>
+		<init-param>
+			<param-name>inspireWebService</param-name>
+			<param-value>http://www.inspire-geoportal.eu/INSPIREWebServices/</param-value>
+			<description>URL for INSPIRE web services</description>
+		</init-param>
+		<init-param>
+			<param-name>repositories</param-name>
+			<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/eurogeoss-v3/query</param-value>
+			<description>URL to access the semantic repository and get the list
+				of available keywords</description>
+		</init-param>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value></param-value>
+			<description>username to access the semantic repository</description>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value></param-value>
+			<description>password to access the semantic repository</description>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>LoadServlet</servlet-name>
+		<servlet-class>eu.europa.ec.jrc.euosme.gwt.server.LoadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadServlet</servlet-name>
+		<servlet-class>eu.europa.ec.jrc.euosme.gwt.server.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InitServiceProxyImpl</servlet-name>
+		<url-pattern>/euosmegwt/InitServiceProxy</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RESTfulWebServiceProxyImpl</servlet-name>
+		<url-pattern>/euosmegwt/RESTfulWebServiceProxy</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoadServlet</servlet-name>
+		<url-pattern>/loadService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadServlet</servlet-name>
+		<url-pattern>/downloadService</url-pattern>
+	</servlet-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>EUOSMEGWT.html</welcome-file>
+	</welcome-file-list>
 </web-app>

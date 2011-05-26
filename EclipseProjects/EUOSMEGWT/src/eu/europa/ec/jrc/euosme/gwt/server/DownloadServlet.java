@@ -19,13 +19,17 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.server;
 
+
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import org.apache.log4j.Logger;
 
 public class DownloadServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -4356636877078339046L;
+	private static Logger _log = Logger.getLogger(DownloadServlet.class);
 
 	byte[] bbuf = new byte[1024];
 
@@ -34,6 +38,9 @@ public class DownloadServlet extends HttpServlet {
 		String filename = "";
 		ServletContext context = getServletConfig().getServletContext();
 		
+		_log.info(" request original encoding: " + request.getCharacterEncoding());
+		
+		request.setCharacterEncoding("UTF-8");
 		String dir = "";
 		if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 		else dir = context.getRealPath("temp");
@@ -43,25 +50,29 @@ public class DownloadServlet extends HttpServlet {
 			if(attrArray != null) filename = attrArray[0];
 			String xmltree = "";
 			attrArray = request.getParameterValues("xmltree");
+			_log.info(" request: " + attrArray);
 			if(attrArray != null) xmltree = attrArray[0];
-			
+			_log.debug(" tree: " + xmltree);
 	    	Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + filename), "UTF-8"));
 	    	//xmltree = xmltree.replace("&amp;","&");
 	    	//xmltree = xmltree.replace("&","&amp;");
+	    	
 	    	out.append(xmltree);
         	out.flush();
        		out.close();
 	    }
 	    catch (IOException e)    {   
-	    	e.printStackTrace();
+	    	//e.printStackTrace();
+	    	_log.error(" error " + e.getMessage());
 	    }
 	    try {	    	
 			ServletOutputStream out = response.getOutputStream();
-			
+			//filename = "test.xml";
 			File file = new File(dir + "/" + filename);
 			String mimetype = context.getMimeType(filename);
 
 			response.setContentType((mimetype != null) ? mimetype : "application/octet-stream");
+			//response.setCharacterEncoding("UTF-8");
 			response.setContentLength((int) file.length());
 			response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");			
 			response.setHeader("Pragma", "private");
@@ -79,7 +90,8 @@ public class DownloadServlet extends HttpServlet {
 			out.close();
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			_log.error(" error " + e.getMessage());
 		}		
 	}	
 

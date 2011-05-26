@@ -1,0 +1,99 @@
+Rev 23: 
+EUOSME_OSOR:
+Changes: 
+ + Force IE8 and later to use IE8 standard mode. Fixes #1060
+ + Create separate log4j properties files for different app modes. Fixes #1072
+Bugs fixed:
+ + International characters are encoded incorrectly while saving. Fixes #1061
+ + Some language code values are wrong. Fixes #1063
+ + Incorrect values of Geographic coordinates after drawing a bounding box on the map. Bug 15345 on OSOR. Fixes #1064
+ + Cursor on map is shifted up. Fixes #1071
+
+Rev 22:
+EUOSME_OSOR:
+Bugs fixed:
+ + Loading file resets Organisation Name to default value (RDSI Mode). Fixes #1000
+
+Rev 21:
+EUOSME_OSOR:
+Changes: 
+ + Create separate config files for different app modes. Fixes #973
+
+Rev 20: 
+EUOSME_OSOR:
+Changes: 
+ + Keyword suggestion box has been made larger. Fixes #959
+Bugs fixed:
+ + 'Open' tab doesn't work in IE8. Fixes #961
+
+Rev 19: create tag v_1_0_1
+
+Revision 18: 
+EUOSME_OSOR:
+Changes: Change map source from openstreetmap to plurel. Fixes #953
+Bugs fixed:
+ + Calendar box still remains after move mouse to other box (in IE and Google Chrome). Fixes #914
+ + user gets stuck at "saving file" dialog (in Google Chrome and IE). Fixes #918 
+ + Suggestion list of “Limitation on public access” appears in very short time frame. Fixes #947
+ + can’t save file (in IE). Fixes #943
+
+
+Revision 17:
+EUOSME_OSOR:
+Solved bug: IE does not save. Fixes #943
+
+Revision 16: 
+EUOSMEGWT_OSOR: Task: Create a selenium test suite. Fixes #932
+
+Revision 15: 
+EUOSME_OSOR:
+Fixed problems found during the creation of selenium test suide
+Solved bug: Wrong breadcrumb. Fixes #907
+Solved bug: Layout not conform to the specifications in keyword tab. Fixes #908
+Solved bug: Validation report is wrong. Fixes #909
+Implemented feature: Add a default namespace. Fixes #911
+Solved bug: Map duplicated. Fixes #913
+Solved bug: Conformity: Degree sets to "Not evaluated" returns a message. Fixes #917
+
+Revision 14: 
+EUOSME_OSOR: Updated configuration file
+
+Revision 13: 
+EUOSME_OSOR:
+1. Enhancing usability using colors. Fixes #888
+2. Layout/UI improvements. Fixes #889
+3. Solved bug: Editor does not load files with comments. Fixes #890
+4. Solved some bugs and added some features. Fixes #891
+	a. added the type of metadata file in the path
+	b. The INSPIRE Spatial Data Theme is only a mandatory keyword if the resource is a spatial data set or datat serie
+	c. The list for ISO 19119 geographic Service taxonomy seems incomplete
+	d. The list of countries has a character encoding issue and the map seems to appear twice
+	e. Does not recognize prefilled MD responsible party
+
+
+Revision 12: 
+EUOSME: RDSI Profile Fixes #872
+
+Revision 11: 
+EUOSME_OSOR: Solved bug on Opening a file with an unsupported schema. Fixes #862
+
+Revision 10: 
+EUOSME_OSOR: Solved bug on gmd:authority saved in wrong position. The XML of the dataset was not complete. Fixes #848
+
+Revision 9:
+1. Added local resources for keywords (cache topmost concepts of available repositories). Fixes #830
+	a. added package repositories with textual version of resources
+	b. added configuration parameter in web.xml named rpcRepository (true indicates an online access to the resources)
+	c. the queries have been put out of the source into folder scripts (to be easily updated)
+2. Add drop down for limitations and/or constraints on access and use for the GEOSS profile. Fixes #831. and.  Missing add button in Constraint related to access and use. Fixes #772
+	a. extended suggest box capabilities (click ENTER to show all suggestions)
+	b. added values to code list 12 (equivalent to "Conditions applying to access and use" field)
+	c. added an option for code list to obtain an ordered (alphabetically) or unordered list. The above mentioned list must be ordered for importance (the first entered is the higher) and not alphabetically 
+3. Solved bug on html version of the file (the microsoft translator is not correctly shown). Fixes #851
+4. Solved bug on free keyword section. The input field is attached to the first keyword element in the tree and onblur the application updated automatically this value but it is not a correct solution because the keyword is added only after the user clicks on the add button. Fixes #852
+	a. added parameter autoupdate in characterstring, True indicates that OnBlur event updates automatically the value in the tree
+	b. modified addNew method in MD_Keywords_INSPIRE to consider that originated controlled vocabulary is optional
+5. Solved bug on contextual help is empty for some fields. Fixes #853
+	a. the anchor should be lowercase
+6. In Geographic tab, contextual help is shown behind the map. Fixes #854
+	a. added z-index property in the CSS	

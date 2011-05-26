@@ -1,4 +1,4 @@
-#Mon Feb 28 11:55:13 CET 2011
+#Thu May 19 15:39:08 CEST 2011
 eclipse.preferences.version=1
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_BG.txt=UTF-8
 encoding//doc/TXT_EC_Regulation_1205_2008/eurlex_CS.txt=UTF-8
@@ -178,3 +178,4 @@ encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/TabGeographicTabGeo
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/TabGeographicTabGeographicUiBinderImplGenMessages_sl.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/iso19115/ui/TabGeographicTabGeographicUiBinderImplGenMessages_sv.properties=UTF-8
 encoding//src/eu/europa/ec/jrc/euosme/gwt/client/repositories/Repositories.cache.xml=UTF-8
+encoding/<project>=UTF-8

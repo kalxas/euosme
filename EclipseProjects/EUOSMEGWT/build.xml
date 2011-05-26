@@ -7,18 +7,21 @@
 	
   <target name="GEOSS" description="Package for GEOSS mode">
   	<delete file = "EUOSME.war"/>  	
+  	<copy file="app_mode/GEOSS/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
     <copy file="app_mode/GEOSS/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
     <zip destfile="EUOSME.war" basedir="war"/>
   </target>	
 	
   <target name="RDSI" description="Package for RDSI mode">
   	<delete file = "EUOSME_RDSI.war"/>
+  	<copy file="app_mode/RDSI/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
   	<copy file="app_mode/RDSI/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
     <zip destfile="EUOSME_RDSI.war" basedir="war"/>
   </target>	
 
   <target name="GEOPORTAL" description="Package for GEOPORTAL mode">
   	<delete file = "EUOSME_GEOPORTAL.war"/>
+  	<copy file="app_mode/GEOPORTAL/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
   	<copy file="app_mode/GEOPORTAL/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
     <zip destfile="EUOSME_GEOPORTAL.war" basedir="war"/>
   </target>		

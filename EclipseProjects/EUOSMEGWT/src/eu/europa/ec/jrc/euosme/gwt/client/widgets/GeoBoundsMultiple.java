@@ -22,6 +22,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 import java.util.ArrayList;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
@@ -502,8 +503,20 @@ public class GeoBoundsMultiple extends Composite {
 		else {
 			myError.setText(constants.invalidDouble());
 			myError.setVisible(true);
-		}	
+		}
+		refreshMap();
 	}
+
+	
+	/**
+	 * Refresh mapstraction map
+	 * 
+	 * 
+	 */
+	private native void refreshMap() /*-{
+		if ($wnd.userBBoxLayer != null)
+			$wnd.mapstraction.maps["openlayers"].zoomToExtent($wnd.userBBoxLayer.geometry.getBounds());
+	}-*/;
 	
 	/**
 	 * JSNI function to set Bounds on mapstraction map

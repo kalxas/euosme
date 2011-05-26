@@ -93,8 +93,8 @@ public class MD_Keywords_Gemet extends CI {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		// Filter
 		final TextBox filterTextBox = new TextBox();
-		Button filterButton = new Button("Filter");
-		final Button filterClearButton = new Button("Clear");
+		Button filterButton = new Button("Filter");//("Search");
+		final Button filterClearButton = new Button("Clear");//("Reset");
 		fieldsGroup.add(listRepository);
 		listRepository.addChangeHandler(new ChangeHandler(){
 			@Override
@@ -121,6 +121,7 @@ public class MD_Keywords_Gemet extends CI {
 					filterPanel.setVisible(false);
 				}
 				else {
+					//requestSearch(selectedValue,filterTextBox.getText());
 					requestSuggestions(selectedValue,filterTextBox.getText());
 					filterClearButton.setEnabled(true);
 				}
@@ -172,6 +173,38 @@ public class MD_Keywords_Gemet extends CI {
 	}
 	
 	/**
+	 * Get a list of items include the pattern
+	 * 
+	 * @param repository	{@link String} = the repository
+	 * @param pattern		{@link String} = the string to use as a pattern
+	 */		
+	private void requestSearch(String repository, String pattern) {
+		if(suggestObj.getItemCount()!=0)
+			if(suggestObj.getItem(0).getChildCount()!=0)
+				if (suggestObj.getItem(0).getChild(0).getTitle().equalsIgnoreCase(constants.loading())) return;
+	
+		suggestObj.clear(); 
+		suggestObj.addItem(constants.keyword());
+		suggestObj.getItem(0).addItem(new Image(MyResources.INSTANCE.loadingImg()));
+		suggestObj.getItem(0).getChild(0).setTitle(constants.loading());
+		suggestObj.getItem(0).setState(true);
+		suggestObj.setVisible(true);		
+		
+		if (EUOSMEGWT.rpcRepository) {
+			filterPanel.setVisible(true);
+			SuggestCallback callback = new SuggestCallback();
+			callback.setList(suggestObj.getItem(0));
+			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null); 
+			RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
+			ls.invokeGetRESTfulWebService("search", repository, LocaleInfo.getCurrentLocale().getLocaleName(), pattern, callback);
+			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
+		}
+		else {
+			Utilities.setSuggests(Utilities.getResourceRepository(listRepository.getItemText(listRepository.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+		}
+	}
+	
+	/**
 	 * Get a list of definitions for the given repository
 	 * 
 	 * @param repository	{@link String} = the repository
@@ -193,8 +226,10 @@ public class MD_Keywords_Gemet extends CI {
 			filterPanel.setVisible(true);
 			SuggestCallback callback = new SuggestCallback();
 			callback.setList(suggestObj.getItem(0));
+			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null); 
 			RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 			ls.invokeGetRESTfulWebService("repository", repository, LocaleInfo.getCurrentLocale().getLocaleName(), filter, callback);
+			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
 		}
 		else {
 			Utilities.setSuggests(Utilities.getResourceRepository(listRepository.getItemText(listRepository.getSelectedIndex()).trim()), suggestObj.getItem(0));	

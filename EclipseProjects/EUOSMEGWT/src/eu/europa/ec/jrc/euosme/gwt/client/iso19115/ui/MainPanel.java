@@ -624,25 +624,26 @@ public class MainPanel extends Composite {
 		final FormPanel myForm = new FormPanel();
 		myForm.setAction("downloadService");
 		myForm.setMethod(FormPanel.METHOD_POST);
+		//myForm.setEncoding("multipart/form-data; charset=UTF-8");
 		final Label loadingLabel = new Label(constants.savingFile());
 		final Button openFileButton = new Button(constants.openFileButton(), new ClickHandler() {			
 			@Override
 			public void onClick(ClickEvent event) {
-				Window.open("../temp/" + myFileName, "new_file","");
+				if(Utilities.getUserAgent().contains("msie"))	{
+					Window.open("../temp/" + myFileName, "new_file","");
+				}
+				else {
+					Window.open("temp/" + myFileName, "new_file","");
+				}
 				myUploadDialog.hide();	
 			}
 		});
 		openFileButton.setVisible(true);
+		
+		
 		final Label infoLabel= new Label(constants.infoOnDownload());
 		infoLabel.setVisible(true);
-//		myForm.addSubmitCompleteHandler(new FormPanel.SubmitCompleteHandler() {
-//			@Override
-//			public void onSubmitComplete(SubmitCompleteEvent event) {
-//				loadingLabel.removeFromParent();
-//				openFileButton.setVisible(true);
-//				infoLabel.setVisible(true);
-//		    }			
-//		});
+
 		myForm.add(panel);
 		myForm.setVisible(false);
 		HorizontalPanel myHPanel = new HorizontalPanel();
@@ -656,12 +657,13 @@ public class MainPanel extends Composite {
 		}));
 		vpanel.add(myForm);
 		vpanel.add(infoLabel);		
-		//vpanel.add(loadingLabel);
 		vpanel.add(myHPanel);
 		myUploadDialog.add(vpanel);	
 		myUploadDialog.setHTML("<b>" + constants.saveFileButton() + "</b><br/>");
 		myUploadDialog.setModal(false);
-		myUploadDialog.center();	
+		myUploadDialog.center();
+		
+		
 		myForm.submit();
 	}
 	

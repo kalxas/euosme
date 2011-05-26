@@ -21,7 +21,7 @@ mxn.register('openlayers', {
 				{
 			        units: "degrees",
 			        maxExtent: new OpenLayers.Bounds(-180, -90, 180, 90),					
-					projection: new OpenLayers.Projection("EPSG:4326")
+					projection: new OpenLayers.Projection("EPSG:4326")					
 				}
 			);
 		
@@ -62,12 +62,14 @@ mxn.register('openlayers', {
 			}
 			
 			//map.addControl(new OpenLayers.Control.LayerSwitcher());
-			//map.addControl(new OpenLayers.Control.PanPanel());
-			//map.addControl(new OpenLayers.Control.ZoomPanel());
-			map.addControl(new OpenLayers.Control.PanZoomBar());
+			map.addControl(new OpenLayers.Control.PanPanel());
+			map.addControl(new OpenLayers.Control.ZoomPanel());
+			//map.addControl(new OpenLayers.Control.PanZoomBar({
+	        //    zoomWorldIcon: true
+	        //}));
             map.addControl(new OpenLayers.Control.MousePosition());
 
-			dosomething = function (polygon) {
+            refresh = function (polygon) {
 				//OpenLayers.Console.userError(polygon.geometry.getBounds());
 				if (userBBoxLayer != null)
 					userBBoxLayer.destroy();
@@ -75,11 +77,11 @@ mxn.register('openlayers', {
 				map.zoomToExtent(polygon.geometry.getBounds());
             };
   		    var polyOptions = {sides: 4, irregular: true };
-            polygonControl = new OpenLayers.Control.DrawFeature(this.layers.polygonLayer,OpenLayers.Handler.RegularPolygon,{featureAdded: dosomething, handlerOptions: polyOptions});
+            polygonControl = new OpenLayers.Control.DrawFeature(this.layers.polygonLayer,OpenLayers.Handler.RegularPolygon,{featureAdded: refresh, handlerOptions: polyOptions});
 			map.addControl(polygonControl);
 			polygonControl.activate();			
 		},
-
+		
 		addSmallControls: function() {
 //			var map = this.maps[this.api];
 //			this.addControlsArgs.pan = false;
