@@ -219,24 +219,54 @@ public class MainPanel extends Composite {
         Command cmdHelpRegulation = new Command() {
             public void execute() {     
             	String helpURL = GWT.getHostPageBaseURL() + "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
-            	Window.open(helpURL, constants.inspireGuidelines(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+            	if(Utilities.getUserAgent().contains("msie"))	{
+            		Window.open(helpURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+            	}
+            	else 
+            		Window.open(helpURL, constants.inspireGuidelines(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
             }			
         };
         helpMenu.addItem(constants.regulationTitle(), cmdHelpRegulation);
         // User Guide
         Command cmdHelpUserGuide = new Command() {
-            public void execute() {     
-            	Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3.pdf", constants.helpUserGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            public void execute() {
+            	if(Utilities.getUserAgent().contains("msie"))	{
+            		Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3.pdf", "","scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            	}
+            	else
+            		Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3.pdf", constants.helpUserGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
             }			
         };
         helpMenu.addItem(constants.helpUserGuide(), cmdHelpUserGuide);
         // Developer Guide
         Command cmdHelpDeveloperGuide = new Command() {
-            public void execute() {     
-            	Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3A.pdf ", constants.helpDeveloperGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            public void execute() {
+            	if(Utilities.getUserAgent().contains("msie"))	{
+            		Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3A.pdf ", "","scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+            	}
+            	else 
+            		Window.open("http://www.eurogeoss.eu/Documents/EuroGEOSS_D_2_2_3A.pdf ", constants.helpDeveloperGuide(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
             }			
         };
-        helpMenu.addItem(constants.helpDeveloperGuide(), cmdHelpDeveloperGuide);
+        helpMenu.addItem(constants.helpDeveloperGuide(), cmdHelpDeveloperGuide); 
+        helpMenu.addSeparator();
+        
+        Command cmdAbout = new Command() {
+            public void execute() {            	
+            	
+				if(Utilities.getUserAgent().contains("msie"))	{
+					String aboutUrl = "../userguide/about.html";
+					Window.open(aboutUrl, "", "scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+					//Window.open(aboutURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+					
+				}
+				else {
+					Window.open("userguide/about.html ", constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+				}
+            }			
+        };
+        helpMenu.addItem(constants.about(),cmdAbout);
+        
         menuBar.addItem(constants.help(),helpMenu);
                 
         @SuppressWarnings("unused")
@@ -422,12 +452,21 @@ public class MainPanel extends Composite {
         menuBar.addItem(constants.languages(),languageMenu);*/
         
         // About
-        Command cmdAbout = new Command() {
-            public void execute() {     
-            	Window.open("userguide/about.html ", constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
-            }			
-        };
-        menuBar.addItem(constants.about(),cmdAbout);
+//        Command cmdAbout = new Command() {
+//            public void execute() {            	
+//            	
+//				if(Utilities.getUserAgent().contains("msie"))	{
+//					String aboutUrl = "../userguide/about.html";
+//					Window.open(aboutUrl, "", "scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+//					//Window.open(aboutURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+//					
+//				}
+//				else {
+//					Window.open("userguide/about.html ", constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+//				}
+//            }			
+//        };
+//        menuBar.addItem(constants.about(),cmdAbout);
         
         // Set current file text
         menuBar.addSeparator();
@@ -522,7 +561,7 @@ public class MainPanel extends Composite {
 	 * MenuBar - open an item in IE causes an error, this function is a workaround 
 	 * 
 	 * @param event	{@link Event}
-	 */
+	 
 	@Override
 	public void onBrowserEvent(Event event) {
 		super.onBrowserEvent(event);
@@ -533,6 +572,8 @@ public class MainPanel extends Composite {
 			RootLayoutPanel.get().setWidth(rootWidth.equals("100%") ? "" : "100%");
 		}
 	}
+	*/
+	
 	
 	/**
 	 * Initialize the {@link Tree} passing an XML file

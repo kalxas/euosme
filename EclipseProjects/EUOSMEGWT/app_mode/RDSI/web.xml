@@ -32,7 +32,7 @@
 		</init-param>
 		<init-param>
 			<param-name>rpcRepository</param-name>
-			<param-value>true</param-value>
+			<param-value>false</param-value>
 			<description>true to get the list of keywords from online service,
 				false to use local resources</description>
 		</init-param>
