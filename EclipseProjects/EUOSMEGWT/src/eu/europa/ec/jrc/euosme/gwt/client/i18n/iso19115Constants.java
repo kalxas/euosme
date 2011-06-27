@@ -306,6 +306,13 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Organisations responsible for the establishment, management, maintenance and distribution of spatial data sets and services")
 	String organizationSummary();
 	
+	@DefaultStringValue("Test")
+	String testTabTitle();
+	@DefaultStringValue("Test service")
+	String testTitle();
+	@DefaultStringValue("")
+	String testSummary();	
+	
 	/** Buttons */
 	@DefaultStringValue("Cancel")
 	String cancelButton();

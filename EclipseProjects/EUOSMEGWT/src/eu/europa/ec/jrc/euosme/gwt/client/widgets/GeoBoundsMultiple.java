@@ -21,6 +21,8 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 
 import java.util.ArrayList;
 
+import org.gwtopenmaps.openlayers.client.LonLat;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -504,7 +506,13 @@ public class GeoBoundsMultiple extends Composite {
 			myError.setText(constants.invalidDouble());
 			myError.setVisible(true);
 		}
-		refreshMap();
+		
+		// refresh the map to avoid shifting cursor
+		if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+			TabGeographic.mapWidget.getMap().setCenter(TabGeographic.mapWidget.getMap().getCenter());			
+		}
+		else 		
+			refreshMap();
 	}
 
 	

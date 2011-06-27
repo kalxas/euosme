@@ -34,6 +34,7 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/xmlrpc-common-3.1.2.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/junit.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/xmlrpc-server-3.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/gwt-ol-0.5/gwt-openlayers-client-0.5.jar"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

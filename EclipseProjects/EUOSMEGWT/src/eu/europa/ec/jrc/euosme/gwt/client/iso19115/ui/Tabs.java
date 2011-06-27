@@ -81,6 +81,10 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 	
 	@UiField(provided = true)
 	Label organizationTabLabel = new Label(constants.organizationTabTitle());
+	
+//	@UiField(provided = true)
+//	Label testTabLabel = new Label(constants.testTabTitle());
+	
 		
 	/** tab content declaration */
 	@UiField(provided = true)
@@ -112,6 +116,9 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 	
 	@UiField(provided = true)
 	TabConstraints tabConstraintsObj = new TabConstraints();
+	
+//	@UiField(provided = true)
+//	TabTest tabTestObj = new TabTest();
 		
 	
 		
@@ -137,6 +144,7 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 		tabConformityObj.myCheck();
 		tabConstraintsObj.myCheck();
 		tabOrganizationObj.myCheck();
+		//tabTestObj.myCheck();
 	}
 
 	/**

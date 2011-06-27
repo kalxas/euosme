@@ -74,6 +74,14 @@
 	      		<g:Label ui:field="organizationTabLabel"/>
 	    	</g:customHeader>
 	    	<mybase:TabOrganization addStyleNames="tabcontent" ui:field="tabOrganizationObj"/>
-	  	</g:tab>			  
+	  	</g:tab>
+	  	<!-- 
+	  	<g:tab>
+	    	<g:customHeader size='10'>
+	      		<g:Label ui:field="testTabLabel"/>
+	    	</g:customHeader>
+	    	<mybase:TabTest addStyleNames="tabcontent" ui:field="tabTestObj"/>
+	  	</g:tab>
+	  	-->
  	</g:TabLayoutPanel>
 </ui:UiBinder> 

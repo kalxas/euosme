@@ -23,7 +23,7 @@
 		</init-param>
 		<init-param>
 			<param-name>apiMapstraction</param-name>
-			<param-value>openlayers</param-value>
+			<param-value>gwt-ol</param-value>
 			<description>type of map used</description>
 		</init-param>
 		<init-param>

@@ -19,6 +19,25 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui;
 
+import org.gwtopenmaps.openlayers.client.Bounds;
+import org.gwtopenmaps.openlayers.client.LonLat;
+import org.gwtopenmaps.openlayers.client.Map;
+import org.gwtopenmaps.openlayers.client.MapOptions;
+import org.gwtopenmaps.openlayers.client.control.DrawFeature;
+import org.gwtopenmaps.openlayers.client.control.DrawFeatureOptions;
+import org.gwtopenmaps.openlayers.client.control.MousePosition;
+import org.gwtopenmaps.openlayers.client.control.DrawFeature.FeatureAddedListener;
+import org.gwtopenmaps.openlayers.client.feature.VectorFeature;
+import org.gwtopenmaps.openlayers.client.geometry.Geometry;
+import org.gwtopenmaps.openlayers.client.geometry.LinearRing;
+import org.gwtopenmaps.openlayers.client.handler.RegularPolygonHandler;
+import org.gwtopenmaps.openlayers.client.handler.RegularPolygonHandlerOptions;
+import org.gwtopenmaps.openlayers.client.layer.Layer;
+import org.gwtopenmaps.openlayers.client.layer.Vector;
+import org.gwtopenmaps.openlayers.client.layer.WMS;
+import org.gwtopenmaps.openlayers.client.layer.WMSOptions;
+import org.gwtopenmaps.openlayers.client.layer.WMSParams;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Document;
@@ -33,7 +52,6 @@ import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
-import com.google.gwt.maps.client.MapWidget;
 import com.google.gwt.maps.client.geocode.Geocoder;
 import com.google.gwt.maps.client.geocode.LocationCallback;
 import com.google.gwt.maps.client.geocode.Placemark;
@@ -103,6 +121,7 @@ public class TabGeographic extends Composite {
 	
 	/** the map */
 	Composite map; 
+	public static org.gwtopenmaps.openlayers.client.MapWidget mapWidget;
 	
 	// Query Label, TextBox and Button
 	@UiField(provided = true)
@@ -151,10 +170,16 @@ public class TabGeographic extends Composite {
 		// Workaround to the problem of the map position
 	    // Issue 366: Google Map widget does not initialize correctly inside a LayoutPanel
 	    if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("google")) {
-	    	map = new MapWidget();
+	    	map = new com.google.gwt.maps.client.MapWidget();
 			nativeMakeMap(map.getElement(),geoBoundsObj.newTextBoxNorth.getElement(), geoBoundsObj.newTextBoxEast.getElement(), geoBoundsObj.newTextBoxSouth.getElement(), geoBoundsObj.newTextBoxWest.getElement(),queryTextBox.getElement());
 			mapPanel.add(map);
 		    mapPanel.add(matchFound);
+	    }
+	    else if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+	    	queryPanel.removeFromParent();
+	    	if (mapWidget == null)
+	    		initMapGwtOl();
+	        mapPanel.add(mapWidget);	
 	    }
 	    else {
 	    	queryPanel.removeFromParent();	    	
@@ -199,12 +224,84 @@ public class TabGeographic extends Composite {
 						geoBoundsObj.newTextBoxNorth.setValue(north);
 						geoBoundsObj.newTextBoxEast.setValue(east);	
 						geoBoundsObj.newButton.click();
-						setBoundsMapstraction(Double.parseDouble(south),Double.parseDouble(west),Double.parseDouble(north), Double.parseDouble(east));
+						
+						// zoom to the country bound
+						if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+							Map map = mapWidget.getMap();
+							map.zoomToExtent(new Bounds(Double.parseDouble(west),Double.parseDouble(south), Double.parseDouble(east), Double.parseDouble(north)));
+						}
+						else 
+							setBoundsMapstraction(Double.parseDouble(south),Double.parseDouble(west),Double.parseDouble(north), Double.parseDouble(east));
 					} else Window.alert(constants.geoCodeListError());					
 				}
 			}
 	    });
 	}
+	/**
+	 * initialize map widget using gwt-openlayers
+	 * 
+	 */
+	    void initMapGwtOl() {
+			MapOptions defaultMapOptions = new MapOptions();
+			defaultMapOptions.setProjection("EPSG:4326");
+			defaultMapOptions.setMaxExtent(new Bounds(-180, -90, 180, 90));
+			defaultMapOptions.setRestrictedExtent(new Bounds(-180, -90, 180, 90));
+			defaultMapOptions.setUnits("degrees");				
+			mapWidget = new org.gwtopenmaps.openlayers.client.MapWidget("500px","350px", defaultMapOptions);		
+			final Map map = mapWidget.getMap();
+			
+			WMSParams wmsParams = new WMSParams();
+			wmsParams.setFormat("image/png");
+			wmsParams.setLayers("0,2,3,4,5,7,8,9,10,13,14,15,16,18,19,20,21,22,23,26,27,28,30,31,32,33,35,36,37,39,40,41");
+			wmsParams.setStyles("");
+
+			WMSOptions wmsLayerParams = new WMSOptions();
+//			wmsLayerParams.setUntiled();
+//			wmsLayerParams.setTransitionEffect(TransitionEffect.RESIZE);
+			
+			WMS wmsLayer = new WMS(
+					"World Map",
+					"http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",
+					wmsParams,
+					wmsLayerParams);
+			map.addLayers(new Layer[] {wmsLayer});
+			// set center to Europe
+			map.setCenter(new LonLat(11,52), 3);
+			map.addControl(new MousePosition());
+			
+			FeatureAddedListener listener = new FeatureAddedListener(){
+				public void onFeatureAdded(VectorFeature vf) {
+					org.gwtopenmaps.openlayers.client.geometry.Polygon aoi =
+						org.gwtopenmaps.openlayers.client.geometry.Polygon.narrowToPolygon(vf.getGeometry().getJSObject());
+					LinearRing[] rings = aoi.getComponents();
+					if(rings!=null){ rings[0].getComponents();}
+					Geometry geo = vf.getGeometry();
+
+					//Window.alert("Feature of class " + geo.getClassName() +  " added with bounds " + geo.getBounds().toString());
+					double north = Math.floor(geo.getBounds().getUpperRightY()*100000)/100000;
+					double east = Math.floor(geo.getBounds().getUpperRightX()*100000)/100000;
+					double south = Math.floor(geo.getBounds().getLowerLeftY()*100000)/100000;
+					double west = Math.floor(geo.getBounds().getLowerLeftX()*100000)/100000;
+					geoBoundsObj.newTextBoxNorth.setValue("" + north);
+			        geoBoundsObj.newTextBoxEast.setValue("" + east);
+			        geoBoundsObj.newTextBoxSouth.setValue("" + south);
+			        geoBoundsObj.newTextBoxWest.setValue("" + west);
+			        map.zoomToExtent(geo.getBounds());
+			 		
+				}
+			};
+			Vector boxLayer = new Vector("Box Layer");
+			DrawFeatureOptions drawRegularPolygonFeatureOptions = new DrawFeatureOptions();
+			drawRegularPolygonFeatureOptions.onFeatureAdded(listener);
+			RegularPolygonHandlerOptions regularPolygonHandlerOptions = new RegularPolygonHandlerOptions();
+			regularPolygonHandlerOptions.setSides(4);
+			regularPolygonHandlerOptions.setIrregular(true);
+			regularPolygonHandlerOptions.setPersist(true);
+			drawRegularPolygonFeatureOptions.setHandlerOptions(regularPolygonHandlerOptions);
+			final DrawFeature drawRegularPolygon = new DrawFeature(boxLayer, new RegularPolygonHandler(), drawRegularPolygonFeatureOptions);
+			map.addControl(drawRegularPolygon);	
+			drawRegularPolygon.activate();
+	    }
 	
 	/**
 	 * This is called to make a client (first) check of the contained fields
