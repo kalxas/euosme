@@ -134,7 +134,8 @@ public class MD_Keywords_INSPIRE extends CI {
 						@SuppressWarnings("unused")
 						String selectedValue = keywordDataServiceObj.listDataServices.getValue(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeyword = keywordDataServiceObj.listDataServices.getItemText(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
-						addNew(myKeyword,"","","");						
+						String myKeywordService = toDefinedKeywordService(myKeyword);
+						addNew(myKeywordService,"","","");						
 					}				
 				}
 			});
@@ -155,7 +156,9 @@ public class MD_Keywords_INSPIRE extends CI {
 				//TODO get the version of the repository
 				String myKeyword = keywordGemetObj.keywordGEMETObj.getText().replace(constants.selectedValue(), "").trim();
 				String mySource = keywordGemetObj.listRepository.getItemText(keywordGemetObj.listRepository.getSelectedIndex()).trim();
-				if (keywordGemetObj.listRepository.getSelectedIndex()!=0)
+				if (keywordGemetObj.listRepository.getSelectedIndex()!=0) 
+					if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) 
+						myKeyword = toDefinedKeywordService(myKeyword);
 					addNew(myKeyword,mySource + ", version 2.3","","");					
 			}				
 		});
@@ -494,4 +497,22 @@ public class MD_Keywords_INSPIRE extends CI {
 		}
 		return null;
 	}	
+	
+	/**
+	 * 
+	 * @param myKeyword = the non-camel case of keyword
+	 * @return  the camel case of keyword (as defined in Metadata Implement Guidelines, e.g humanGeographicViewer) 
+	 */
+	public String toDefinedKeywordService(String myKeyword) {
+		String result = "";
+		if (myKeyword.indexOf("(") == -1)
+			result = myKeyword;
+		else {
+			int start = myKeyword.indexOf("(")+1;
+			int end = myKeyword.indexOf(")");
+			if (end>start) result = myKeyword.substring(start, end);
+			else result = myKeyword;
+		}		
+		return result;
+	}
 }
