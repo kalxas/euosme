@@ -107,7 +107,11 @@ public class CI_Citation extends CI {
 				String[] specifications = specificationObj.myTextBox.getText().split(";");
 				String definition = specifications[0];
 				String date = specifications[1];
-				String dateType = specifications[2];
+				String dateType = ""; 
+				if (specifications.length < 3) 
+					dateType = "publication";
+				else 
+					dateType = specifications[2];
 				TreeItem myTreeItem = null;
 				myTreeItem = Utilities.getSelectTreeItem(specificationObj.myTextBox.getTextBox().getName());					
 				if (myTreeItem!=null) 
