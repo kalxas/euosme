@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:client="urn:import:eu.europa.ec.jrc.euosme.gwt.client">
+	<g:DisclosurePanel ui:field="componentPanel">
+ 		<g:customHeader>
+   			<g:HorizontalPanel>
+   				<g:Label addStyleNames="h3" ui:field="myLabel"/>
+	   			<client:ISOInfoButton ui:field="infoButton"/>
+	   		</g:HorizontalPanel>   			     				
+   		</g:customHeader>
+   		<g:VerticalPanel>
+	   		<g:TextBox addStyleNames="svP" ui:field="myTextBox"/>	   		
+ 			<g:Label styleName="error" ui:field="myError"/>
+ 		</g:VerticalPanel>
+ 	</g:DisclosurePanel>		
+</ui:UiBinder> 

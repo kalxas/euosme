@@ -35,10 +35,12 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_Citation;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_OnlineResource;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringLong;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringMultiple;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListMultiple;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
 
 /**
  * Create the tab Identification
@@ -65,6 +67,10 @@ public class TabIdentification extends Composite {
 	/** resource declaration */
 	@UiField(provided = true)
 	CI_Citation CI_CitationObj = new CI_Citation(constants.resource(),true,false,"");
+	
+	/** parent identifier declaration */
+	@UiField(provided = true)
+	ISOCharacterString parentIdentifierObj = new ISOCharacterString(constants.parentIdentifier(), constants.parentIdentifierHelp(), false, CheckFunctions.normal, true);
 	
 	/** abstract control declaration */
 	@UiField(provided = true)
@@ -112,6 +118,7 @@ public class TabIdentification extends Composite {
 	 */
 	public void myCheck() {
 		CI_CitationObj.myCheck();
+		parentIdentifierObj.myCheck();
 		abstractObj.myCheck();
 		resourceTypeObj.myCheck();
 		onlineResourceObj.myCheck();
@@ -130,6 +137,7 @@ public class TabIdentification extends Composite {
 		onlineResourceContainerObj.setFormName("md_metadata[1].distributioninfo[1].md_distribution[1].transferoptions[1].md_digitaltransferoptions[1].online[1]");
 		languageObj.setFormName("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].language[1].languagecode[1]");
 		operatesOnObj.setFormName("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].operateson[1]");
+		parentIdentifierObj.setFormName("md_metadata[1].parentidentifier[1].characterstring[1]");
 	}
 	
 	/**
@@ -138,6 +146,11 @@ public class TabIdentification extends Composite {
 	public void setInterface() {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			CI_CitationObj.setInterface(0);
+			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				parentIdentifierObj.setVisible(true);
+			}
+			else 
+				parentIdentifierObj.setVisible(false);
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) languageObj.setVisible(false);
 			else operatesOnObj.setVisible(false);
 			resourceTypeObj.setVisible(false);

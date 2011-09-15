@@ -163,7 +163,7 @@ public class CI_Citation extends CI {
 				dateObj.setVisible(false);
 				dateContainerObj.setVisible(false);
 				dateContainerObj.removeFromParent();
-				dateObj.removeFromParent();				
+				dateObj.removeFromParent();			
 			}
 			if (i==1) { // TAB keyword
 				alternateTitleObj.setVisible(false);

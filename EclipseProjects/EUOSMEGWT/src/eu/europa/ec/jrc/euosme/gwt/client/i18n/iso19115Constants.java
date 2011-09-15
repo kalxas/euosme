@@ -78,11 +78,7 @@ public interface iso19115Constants extends Constants {
   
 	@DefaultStringValue("Contact instructions")
 	String contactInstructions();
-	
-	/** CI_Citation fields */
-	@DefaultStringValue("Citation")
-	String CI_Citation();
-	
+
 	@DefaultStringValue("Title")
 	String title();
 	
@@ -91,9 +87,6 @@ public interface iso19115Constants extends Constants {
 	
 	@DefaultStringValue("Alternate Title")
 	String alternateTitle();
-	
-	@DefaultStringValue("Resource Alternate Title")
-	String resourceAlternateTitle();	
 	
 	/** CI_Date fields */
 	@DefaultStringValue("Date type")
@@ -145,6 +138,12 @@ public interface iso19115Constants extends Constants {
 	
 	@DefaultStringValue("Version")
 	String version();
+	
+	/** Parent identifier field */
+	@DefaultStringValue("Parent identifier")
+	String parentIdentifier();
+	@DefaultStringValue("<h4><a id=\"parentIdentifier\" name=\"parentIdentifier\"> </a>Parent identifier</h4><p>File identifier of the metadata to which this metadata is a subset (child).</p><p>The value domain of this metadata element is free text.</p>")
+	String parentIdentifierHelp();	
 	
 	/** TM_Primitive fields */
 	
@@ -305,13 +304,7 @@ public interface iso19115Constants extends Constants {
 	String organizationTitle();	
 	@DefaultStringValue("Organisations responsible for the establishment, management, maintenance and distribution of spatial data sets and services")
 	String organizationSummary();
-	
-	@DefaultStringValue("Test")
-	String testTabTitle();
-	@DefaultStringValue("Test service")
-	String testTitle();
-	@DefaultStringValue("")
-	String testSummary();	
+
 	
 	/** Buttons */
 	@DefaultStringValue("Cancel")
@@ -326,12 +319,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Open file")
 	String openFileButton();
 
-	/** Tree */
-	@DefaultStringValue("#value = ")
-	String XMLValue();
-	
-	@DefaultStringValue("#EMPTY")
-	String emptyXMLValue();
+
 	
 	/** TabMetadata fields */
 	@DefaultStringValue("Metadata date")
@@ -378,9 +366,6 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("Keyword")
 	String keyword();
-	
-	@DefaultStringValue("Keyword Type")
-	String keywordType();
 	
 	@DefaultStringValue("Reference Date")
 	String referenceDate();
@@ -449,17 +434,8 @@ public interface iso19115Constants extends Constants {
 	String spatialResolution();
 	
 	/** TabConformity fields */
-	@DefaultStringValue("Measure identification")
-	String measureIdentification();
-
 	@DefaultStringValue("Specification")
 	String specification();
-
-	@DefaultStringValue("Explanation")
-	String explanation();
-
-	@DefaultStringValue("Result")
-	String result();
 
 	@DefaultStringValue("Degree")
 	String degree();
@@ -475,12 +451,6 @@ public interface iso19115Constants extends Constants {
 	
 	@DefaultStringValue("Conformant")
 	String conformant();
-	
-	@DefaultStringValue("False")
-	String isfalse();
-	
-	@DefaultStringValue("True")
-	String istrue();
 	
 	/** TabConstraints fields */
 	@DefaultStringValue("Conditions applying to access and use")
@@ -498,9 +468,6 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Input other restrictions free text or remove otherRestriction selection")
 	String mandatoryFieldCombined6();
 
-	@DefaultStringValue("Resource constraints")
-	String constraints();
-
 	@DefaultStringValue("Saving file...")
 	String savingFile();
 
@@ -509,9 +476,6 @@ public interface iso19115Constants extends Constants {
 	
 	@DefaultStringValue("Keyword from online repositories")
 	String repository();
-
-	@DefaultStringValue("Available keywords")
-	String availableKeywords();
 	
 	@DefaultStringValue("Show/hide tree")
 	String showHideTree();
@@ -546,9 +510,6 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("This data type is not supported and on saving it will be lost")
 	String errorDataType2();
 
-	@DefaultStringValue("Keyword from INSPIRE Data themes")
-	String inspireDataThemes();
-
 	@DefaultStringValue("Error Code 10001: Connection refused - INSPIRE Data themes service")
 	String dataThemesServiceFailed();
 
@@ -570,9 +531,6 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata Text with EEA relevance")
 	String regulationTitle();
 	
-	@DefaultStringValue("INSPIRE Metadata Editor User Guide")
-	String inspireGuidelines();
-	
 	@DefaultStringValue("Help")
 	String help();
 	
@@ -587,7 +545,69 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("Selected value: ")
 	String selectedValue();
+	
+	@DefaultStringValue("Error code 10007. If this error persists, please contact your system administrator.")
+	String geoCodeListError();
+	
+	
+	/** exists but not translated until revision 12 ***/
+	
+	
+	
+	
+	/** not translated until revision 12 ***/
+	@DefaultStringValue("Measure identification")
+	String measureIdentification();
 
+	@DefaultStringValue("Explanation")
+	String explanation();
+	
+	@DefaultStringValue("False")
+	String isfalse();
+	
+	@DefaultStringValue("True")
+	String istrue();	
+
+	@DefaultStringValue("Result")
+	String result();	
+
+	@DefaultStringValue("Available keywords")
+	String availableKeywords();
+
+	@DefaultStringValue("Keyword from INSPIRE Data themes")
+	String inspireDataThemes();
+	
+	@DefaultStringValue("INSPIRE Metadata Editor User Guide")
+	String inspireGuidelines();	
+
+	@DefaultStringValue("Resource constraints")
+	String constraints();	
+	
+	@DefaultStringValue("Keyword Type")
+	String keywordType();	
+	
+	@DefaultStringValue("Test")
+	String testTabTitle();
+	@DefaultStringValue("Test service")
+	String testTitle();
+	@DefaultStringValue("")
+	String testSummary();		
+	
+	/** Tree */
+	@DefaultStringValue("#value = ")
+	String XMLValue();
+	
+	@DefaultStringValue("#EMPTY")
+	String emptyXMLValue();
+	
+	@DefaultStringValue("Citation")
+	String CI_Citation();
+	
+	@DefaultStringValue("Resource Alternate Title")
+	String resourceAlternateTitle();	
+	
+	
+	
 	@DefaultStringValue("Free keyword")
 	String freeKeyword();
 
@@ -602,9 +622,6 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("Save as template")
 	String saveAsTemplate();
-	
-	@DefaultStringValue("Error code 10007. If this error persists, please contact your system administrator.")
-	String geoCodeListError();
 	
 	@DefaultStringValue("European Commission, Joint Research Centre")
 	String RDSIorganisationName();

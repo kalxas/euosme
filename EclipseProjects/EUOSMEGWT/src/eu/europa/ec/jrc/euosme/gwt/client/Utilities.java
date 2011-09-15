@@ -1246,6 +1246,27 @@ public class Utilities {
 	}
 	
 	/**
+	 * This function is used to open an information popup. 
+	 * 
+	 * @param help	{@link String} the help string
+	 *
+	 */
+	public static void openISOInfo(String help, Button infoButton) {	
+		
+		// Show the popup
+		PopupPanel pp = new PopupPanel(true,false);
+		pp.setTitle(constants.info());
+		VerticalPanel vp = new VerticalPanel();
+		vp.add(new HTML(help));
+//		Anchor link = new Anchor(constants.regulationTitle(), helpURL,"blank");
+//		vp.add(link);
+		pp.setWidget(vp);
+		pp.setPixelSize(400,200);
+		pp.showRelativeTo(infoButton);
+		pp.getElement().getStyle().setOverflow(Overflow.AUTO);
+	}	
+	
+	/**
 	 * This function finds the substring that represents the contextual help of a metadata element
 	 * in the html guide
 	 * 
