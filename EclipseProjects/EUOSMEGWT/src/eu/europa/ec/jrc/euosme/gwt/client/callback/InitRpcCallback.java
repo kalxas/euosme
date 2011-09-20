@@ -24,6 +24,7 @@ import java.util.Map;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 
 /**
@@ -62,6 +63,8 @@ public class InitRpcCallback implements AsyncCallback <Map<String,String>> {
     	   	EUOSMEGWT.showHeader = Boolean.parseBoolean(result.get("showHeader"));
     	
     	EUOSMEGWT.startup();
+    	if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+    		EUOSMEGWT.chooseResourceType();
     }
 
     /* (non-Javadoc)

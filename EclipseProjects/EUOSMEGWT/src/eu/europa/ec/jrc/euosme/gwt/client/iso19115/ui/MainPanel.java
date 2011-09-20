@@ -30,6 +30,8 @@ import com.google.gwt.dom.client.Style;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -39,6 +41,7 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.Window.ClosingEvent;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -48,9 +51,12 @@ import com.google.gwt.user.client.ui.FormPanel;
 import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.RadioButton;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.SplitLayoutPanel;
@@ -82,6 +88,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  */
 public class MainPanel extends Composite {
 	
+
 	private static MainPanelUiBinder uiBinder = GWT.create(MainPanelUiBinder.class);
 	interface MainPanelUiBinder extends UiBinder<Widget, MainPanel> {}
 	
@@ -134,6 +141,9 @@ public class MainPanel extends Composite {
 	@UiField
 	Button refreshHTML = new Button();
 	
+	
+	final PopupPanel loadingPanel = new PopupPanel();	
+	
 	/** 
     * constructor main panel
     * 
@@ -184,7 +194,14 @@ public class MainPanel extends Composite {
         // Menu LOAD
         Command cmdLoadFile = new Command() {
             public void execute() {
-            	loadFile();  
+            	loadFile(); 
+            	//chooseResourceType();
+//            	final GWTCWait wait = new GWTCWait();
+//            	wait.setCaption("loading!!!");
+//				RootLayoutPanel.get().add(wait);
+//				wait.show(5);  
+        
+
             }
         };
         menuBar.addItem(constants.load(), cmdLoadFile);
@@ -284,172 +301,8 @@ public class MainPanel extends Composite {
         		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", callback);*/
             }			
         };
-        //menuBar.addItem("cache", cmdUpdate);
-        
-        /*final String myURL = Utilities.getURL();
-		MenuBar languageMenu = new MenuBar(true);
-		// BG
-		Command cmdLanguageBG = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "bg");
-            }			
-        };
-        languageMenu.addItem("bg - български", cmdLanguageBG);
-        // CS
-        Command cmdLanguageCS= new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "cs");
-            }			
-        };
-        languageMenu.addItem("cs - čeština", cmdLanguageCS);
-        // DA
-        Command cmdLanguageDA = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "da");
-            }			
-        };
-        languageMenu.addItem("da - dansk", cmdLanguageDA);
-        // DE
-        Command cmdLanguageDE = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "de");
-            }			
-        };
-        languageMenu.addItem("de - deutsch", cmdLanguageDE);
-        // EL
-        Command cmdLanguageEL = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "el");
-            }			
-        };
-        languageMenu.addItem("el - ελληνικά", cmdLanguageEL);
-        // EN
-        Command cmdLanguageEN = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "en");
-            }			
-        };
-        languageMenu.addItem("en - english", cmdLanguageEN);
-        // ES
-        Command cmdLanguageES = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "es");
-            }			
-        };
-        languageMenu.addItem("es - español", cmdLanguageES);
-        // ET
-        Command cmdLanguageET = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "et");
-            }			
-        };
-        languageMenu.addItem("et - eesti keel", cmdLanguageET);
-        // FI
-        Command cmdLanguageFI = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "fi");
-            }			
-        };
-        languageMenu.addItem("fi - suomi", cmdLanguageFI);
-        // FR
-        Command cmdLanguageFR = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "fr");
-            }			
-        };
-        languageMenu.addItem("fr - français", cmdLanguageFR);
-        // GA
-        //Command cmdLanguageGA = new Command() {
-        //    public void execute() {     
-        //    	Window.Location.assign(myURL + "ga");
-        //    }			
-        //};
-        //languageMenu.addItem("ga - gaeilge", cmdLanguageGA);
-        // HU
-        Command cmdLanguageHU = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "hu");
-            }			
-        };
-        languageMenu.addItem("hu - magyar", cmdLanguageHU);        
-        // IT
-        Command cmdLanguageIT = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "it");
-            }			
-        };
-        languageMenu.addItem("it - italiano", cmdLanguageIT);
-        // LT
-        Command cmdLanguageLT = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "lt");
-            }			
-        };
-        languageMenu.addItem("lt - lietuvių kalba", cmdLanguageLT);
-        // LV
-        Command cmdLanguageLV = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "lv");
-            }			
-        };
-        languageMenu.addItem("lv - latviešu valoda", cmdLanguageLV);
-        // MT
-        Command cmdLanguageMT = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "mt");
-            }			
-        };
-        languageMenu.addItem("mt - malti", cmdLanguageMT);
-        // NL
-        Command cmdLanguageNL = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "nl");
-            }			
-        };
-        languageMenu.addItem("nl - nederlands", cmdLanguageNL);
-        // PL
-        Command cmdLanguagePL = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "pl");
-            }			
-        };
-        languageMenu.addItem("pl - polski", cmdLanguagePL);
-        // PT
-        Command cmdLanguagePT = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "pt");
-            }			
-        };
-        languageMenu.addItem("pt - português", cmdLanguagePT);
-        // RO
-        Command cmdLanguageRO = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "ro");
-            }			
-        };
-        languageMenu.addItem("ro - română", cmdLanguageRO);
-        // SK
-        Command cmdLanguageSK = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "sk");
-            }			
-        };
-        languageMenu.addItem("sk - slovenčina", cmdLanguageSK);
-        // SL
-        Command cmdLanguageSL = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "sl");
-            }			
-        };
-        languageMenu.addItem("sl - slovenščina", cmdLanguageSL);
-        // SV
-        Command cmdLanguageSV = new Command() {
-            public void execute() {     
-            	Window.Location.assign(myURL + "sv");
-            }			
-        };
-        languageMenu.addItem("sv - svenska", cmdLanguageSV);        
-        menuBar.addItem(constants.languages(),languageMenu);*/
+        //menuBar.addItem("cache", cmdUpdate);        
+       
         
         // About
 //        Command cmdAbout = new Command() {
@@ -521,6 +374,13 @@ public class MainPanel extends Composite {
 				myList.getItem(i).getStyle().setColor("black");						
 			}
 		}
+		
+		// loading panel		
+		loadingPanel.setGlassEnabled(true);
+		Label messagesLabel = new Label(constants.loading());
+		messagesLabel.setStyleName("infoLabel");
+		loadingPanel.add(messagesLabel);					
+		//loadingPanel.show();
     }
 	
 	private void setHeader() {
@@ -616,7 +476,9 @@ public class MainPanel extends Composite {
 	* @param myNewInterface	{@link String} = the metadata type to load 
 	* @param loadFileXML 	{@link String} = the XML file to parse 
     */
-	private void newForm(String myNewInterface, String loadFileXML) {
+	private void newForm(String myNewInterface, String loadFileXML) {	
+		
+		
 		Element mapDiv = DOM.getElementById("mapstraction");		
 		Document.get().getBody().appendChild(mapDiv);		
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
@@ -629,8 +491,38 @@ public class MainPanel extends Composite {
 		this.myForm.add(tabs);
 		setHeader();
 		initTree(loadFileXML);
-		Utilities.setDefaultValues();
+		Utilities.setDefaultValues();	
+		
+		
 	}
+	
+	/**
+	    * This is called to create a new file at startup	
+	    */
+		public void newForm() {	
+			
+			
+			Element mapDiv = DOM.getElementById("mapstraction");		
+			Document.get().getBody().appendChild(mapDiv);		
+			Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
+			
+			identificationInfoSubType = "md_dataidentification";
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) identificationInfoSubType = "sv_serviceidentification";
+			tabs.removeFromParent();
+			
+			loadingPanel.center();
+			loadingPanel.show();
+			
+			Tabs t = new Tabs();		
+			tabs = t;
+			this.myForm.add(tabs);
+			setHeader();
+			initTree("");
+			Utilities.setDefaultValues();	
+			loadingPanel.hide();
+			
+			
+		}	
 	
 	/**
     * RPC save file
@@ -810,6 +702,7 @@ public class MainPanel extends Composite {
 		myUploadDialog.setModal(true);
 		myUploadDialog.center();		
 	} 	
+	
 	
 	/**
     * Function to get the filename

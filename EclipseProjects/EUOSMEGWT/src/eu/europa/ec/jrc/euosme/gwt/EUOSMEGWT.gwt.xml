@@ -30,8 +30,8 @@ LICENSE END***/
   <inherits name="com.google.gwt.resources.Resources" />
   <inherits name="com.google.gwt.maps.GoogleMaps" />
   <inherits name="com.google.gwt.ajaxloader.AjaxLoader" />
-  <inherits name='org.gwtopenmaps.openlayers.OpenLayers'/>
-       
+  <inherits name="org.gwtopenmaps.openlayers.OpenLayers"/>
+         
   <!-- Specify the app entry point class.                         -->
   <entry-point class='eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT'/>
   

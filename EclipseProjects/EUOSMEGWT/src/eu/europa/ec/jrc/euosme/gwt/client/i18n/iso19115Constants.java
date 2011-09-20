@@ -652,4 +652,7 @@ public interface iso19115Constants extends Constants {
 
 	@DefaultStringValue("About this editor")
 	String about();
+	
+	@DefaultStringValue("OK")
+	String okButton();
 }
