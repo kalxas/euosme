@@ -63,6 +63,7 @@ import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Tree;
+import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteEvent;
@@ -336,6 +337,7 @@ public class MainPanel extends Composite {
 		
         /** TREE initialization ----------------------------------------------------------*/
 		initTree("");
+		
 					
 		// add scroll bars
 		slp.getWidgetContainerElement(slp.getWidget(0)).addClassName("auto");
@@ -450,6 +452,9 @@ public class MainPanel extends Composite {
 		else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) Utilities.parseMessage(MyResources.INSTANCE.datasetXML().getText(),true);					
 		else Utilities.parseMessage(MyResources.INSTANCE.serviceXML().getText(),true);
 		if (!loadFileXML.isEmpty()) Utilities.parseMessage(loadFileXML,false);
+		
+		//load file name
+		//getFileName();
 		
 		// Open default tab and load user guide
 		tabs.selectTab(0);
@@ -714,15 +719,24 @@ public class MainPanel extends Composite {
 	private String getFileName () {
 		// set or get (if there is one) the fileName
 		String tmpFileName = "";
-		Element fileIdentifier = Document.get().getElementById("md_metadata[1].fileidentifier[1].characterstring[1]");
-		if (fileIdentifier != null)
-			if (!fileIdentifier.getAttribute("value").isEmpty())
-				tmpFileName = fileIdentifier.getAttribute("value");
-		if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
+//		Element fileIdentifier = Document.get().getElementById("md_metadata[1].fileidentifier[1].characterstring[1]");
+//		if (fileIdentifier != null)
+//			if (!fileIdentifier.getAttribute("value").isEmpty())
+//				tmpFileName = fileIdentifier.getAttribute("value");
+		TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
+		if (myTreeItem.getText().contains("#FILENAME#")) {
+		//if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
 			Integer myNum = Random.nextInt();
 			if (Integer.signum(myNum)==-1) myNum=-(myNum);
-			tmpFileName = Integer.toHexString(myNum);			
-			fileIdentifier.setAttribute("value", tmpFileName);
+			tmpFileName = Integer.toHexString(myNum);	
+			tmpFileName += ".xml";
+			Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
+			Utilities.setTextTreeItem(myTreeItem,tmpFileName);			
+			//fileIdentifier.setAttribute("value", tmpFileName);
+		}
+		else {
+			tmpFileName = myTreeItem.getText();
+			tmpFileName = tmpFileName.replaceAll(constants.XMLValue(), "");
 		}
 		return tmpFileName;		
 	}

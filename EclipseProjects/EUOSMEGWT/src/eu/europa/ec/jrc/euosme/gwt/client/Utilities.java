@@ -1726,6 +1726,28 @@ public class Utilities {
 				Utilities.valueField("md_metadata[1].contact[1].ci_responsibleparty[1].organisationname[1].characterstring[1]",constants.RDSIorganisationName());
 				Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());
 			}
+			
+			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
+			if (myTreeItem.getText().contains("#FILENAME#")) {
+				String tmpFileName = "";
+				Integer myNum = Random.nextInt();
+				if (Integer.signum(myNum)==-1) myNum=-(myNum);
+				tmpFileName = Integer.toHexString(myNum);
+				tmpFileName += ".xml";
+				Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
+				Utilities.setTextTreeItem(myTreeItem,tmpFileName);
+			}
+//			String tmpFileName = "";
+			//Element fileIdentifier = Document.get().getElementById("md_metadata[1].fileidentifier[1].characterstring[1]");
+//			if (fileIdentifier != null)
+//				if (!fileIdentifier.getAttribute("value").isEmpty())
+//					tmpFileName = fileIdentifier.getAttribute("value");
+//			if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
+//				Integer myNum = Random.nextInt();
+//				if (Integer.signum(myNum)==-1) myNum=-(myNum);
+//				tmpFileName = Integer.toHexString(myNum);			
+//				fileIdentifier.setAttribute("value", tmpFileName);
+//			}			
 		}		
 	}
 }

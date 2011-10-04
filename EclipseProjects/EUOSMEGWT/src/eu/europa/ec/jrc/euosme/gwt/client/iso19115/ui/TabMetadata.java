@@ -28,6 +28,7 @@ import com.google.gwt.user.client.ui.Hidden;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
+import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
@@ -35,6 +36,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_ResponsibleParty;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
 
 /**
  * Create the tab metadata
@@ -72,8 +74,13 @@ public class TabMetadata extends Composite {
 	CodeList languageObj = new CodeList(constants.metadataLanguage(),"metadata_language",false,"2","eng",true);
 	
 	/** file identifier control declaration  */
+	//@UiField(provided = true)
+	//Hidden fileNameObj = new Hidden();
+	
+	/** parent identifier declaration */
 	@UiField(provided = true)
-	Hidden fileNameObj = new Hidden();
+	ISOCharacterString fileIdentifierObj = new ISOCharacterString(constants.fileIdentifier(), constants.fileIdentifierHelp(), false, CheckFunctions.normal, true);
+	
 	
 	/** Note on mandatory fields */
 	@UiField(provided = true)
@@ -102,6 +109,7 @@ public class TabMetadata extends Composite {
 		responsiblePartyObj.myCheck();
 		dateStampObj.myCheck();
 		languageObj.myCheck();
+		fileIdentifierObj.myCheck();
 	}
 	
 	/**
@@ -112,7 +120,8 @@ public class TabMetadata extends Composite {
 		responsiblePartyContainerObj.setFormName("md_metadata[1].contact[1]");	
 		dateStampObj.setFormName("md_metadata[1].datestamp[1].date[1]");
 		languageObj.setFormName("md_metadata[1].language[1].languagecode[1]");
-		fileNameObj.setID("md_metadata[1].fileidentifier[1].characterstring[1]");
+		//fileNameObj.setID("md_metadata[1].fileidentifier[1].characterstring[1]");
+		fileIdentifierObj.setFormName("md_metadata[1].fileidentifier[1].characterstring[1]");
 	}
 	
 	/**
@@ -123,6 +132,12 @@ public class TabMetadata extends Composite {
 			languageObj.setRequired(true);
 			responsiblePartyContainerObj.setLabel(constants.pointOfContactINSPIRE());
 			responsiblePartyObj.setInterface(0);
+			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				fileIdentifierObj.setVisible(true);
+			}
+			else 
+				fileIdentifierObj.setVisible(false);
+			
 		}		
 	}	
 }

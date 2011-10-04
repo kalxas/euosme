@@ -7,6 +7,7 @@
     	<g:Label addStyleNames="h2" ui:field="titleLabel"/>
 		<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
 		<widgets:CIMultiple ui:field="responsiblePartyContainerObj"/>
+		<widgets:ISOCharacterString ui:field="fileIdentifierObj"/>
 		<widgets:DateImpl ui:field="dateStampObj"/>
 		<widgets:CodeList ui:field="languageObj"/>
 		<g:Hidden ui:field="fileNameObj"/>

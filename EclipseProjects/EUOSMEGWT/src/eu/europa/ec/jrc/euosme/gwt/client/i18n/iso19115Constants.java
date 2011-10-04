@@ -145,6 +145,12 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("<h4><a id=\"parentIdentifier\" name=\"parentIdentifier\"> </a>Parent identifier</h4><p>File identifier of the metadata to which this metadata is a subset (child).</p><p>The value domain of this metadata element is free text.</p>")
 	String parentIdentifierHelp();	
 	
+	/** File identifier field */
+	@DefaultStringValue("File identifier")
+	String fileIdentifier();
+	@DefaultStringValue("<h4><a id=\"fileIdentifier\" name=\"fileIdentifier\"> </a>File identifier</h4><p>Parent metadata records (i.e. the data series) should have a unique file identifier that does not change. Do not change this File Identifier even if you update the metadata.</p><p>The value domain of this metadata element is free text.</p>")
+	String fileIdentifierHelp();		
+	
 	/** TM_Primitive fields */
 	
 	@DefaultStringValue("Begin")
