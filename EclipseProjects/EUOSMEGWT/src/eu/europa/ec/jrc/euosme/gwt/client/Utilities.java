@@ -649,6 +649,22 @@ public class Utilities {
             case (Node.ATTRIBUTE_NODE):
             	break;
             case (Node.ELEMENT_NODE):
+           		// check if it's has attributes
+        		if (currentNode.hasAttributes()) {
+        			for(int attr=0;attr<currentNode.getAttributes().getLength();attr++) {
+        				TreeItem subTreeItemAttr = Utilities.getSelectTreeItem(nodeName + ".@" + currentNode.getAttributes().item(attr).getNodeName());
+                		if (subTreeItemAttr!=null) subTreeItemAttr.setText("@" + currentNode.getAttributes().item(attr).getNodeName() + "=" + currentNode.getAttributes().item(attr).getNodeValue());
+                    	
+                		// set specification link 
+                    	if (currentNode.getAttributes().item(attr).getNodeName().equalsIgnoreCase("xlink:href")) {       		
+                    		ret = valueField(nodeName.toLowerCase() + ".@xlink:href", currentNode.getAttributes().item(attr).getNodeValue());
+                    		if (ret.contains("err")) {
+                    			log += showError(nodeName + ".@xlink:href",ret);
+                    		}
+                    	}                 		
+            		}
+        		}
+            
             	if (currentNode.getFirstChild() == null) {
             		if (currentNode.hasAttributes())
             			if (currentNode.getAttributes().getNamedItem("codeListValue")!=null)
@@ -689,14 +705,7 @@ public class Utilities {
             				if (tn.equalsIgnoreCase("textarea")) testTextArea.setInnerText(nodeValue);
             			}
             				
-            		}   
-            		// check if it's has attributes
-            		if (currentNode.hasAttributes()) {
-            			for(int attr=0;attr<currentNode.getAttributes().getLength();attr++) {
-            				TreeItem subTreeItemAttr = Utilities.getSelectTreeItem(nodeName + ".@" + currentNode.getAttributes().item(attr).getNodeName());
-	                		if (subTreeItemAttr!=null) subTreeItemAttr.setText("@" + currentNode.getAttributes().item(attr).getNodeName() + "=" + currentNode.getAttributes().item(attr).getNodeValue());	                    			
-	            		}
-            		}
+            		}    
             	}
             	if (currentNode.hasChildNodes()) {				
             		log += buildFromNodesLoad(currentNode.getChildNodes(), nodeName, currentNode);            		
@@ -937,6 +946,44 @@ public class Utilities {
 		}
 		return null;
 	}
+	
+	/**
+	 * 
+	 * @param title The title of the specification, might include the date
+	 * @return the URL of the specification
+	 */
+	public static String getURLSpecification(String title){
+		String ret = "";
+		if (title.contains("2008-12-04"))
+			//1.Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32008R1205:EN:NOT";
+		else if	(title.contains("2009-12-15"))
+			//2.Corrigendum to Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32008R1205R%2802%29:EN:NOT";
+		else if	(title.contains("2010-12-08")){
+		    if (title.contains("2007/2"))	
+			//3. Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32010R1089:EN:NOT";
+		    else if	(title.contains("976/2009"))
+				//4. Commission Regulation (EU) No 1088/2010 of 23 November 2010 amending Regulation (EC) No 976/2009 as regards download services and transformation services
+				ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32010R1088:EN:NOT";
+		}		
+		else if	(title.contains("2009-10-20"))
+			//5. Commission Regulation (EC) No 976/2009 of 19 October 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the Network Services
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32009R0976:EN:NOT";
+		else if	(title.contains("2010-03-30"))
+			//6. Commission Regulation (EU) No 268/2010 of 29 March 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards the access to spatial data sets and services of the Member States by Community institutions and bodies under harmonised conditions
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32010R0268:EN:NOT";
+		else if	(title.contains("2009-06-11"))
+			//7. Commission Decision of 5 June 2009 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards monitoring and reporting (notified under document number C(2009) 4199) (2009/442/EC)
+			ret = "http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32009D0442:EN:NOT";
+		
+		// point to localized version
+		String countryCode = LocaleInfo.getCurrentLocale().getLocaleName().toUpperCase();
+		ret = ret.replaceAll(":EN:NOT", ":" + countryCode + ":NOT");
+		
+		return ret;
+	}
 		
 	/**
 	 * Close all the branches (tree items) of the {@link Tree}
@@ -981,10 +1028,16 @@ public class Utilities {
 				   if (val.getChild(j).getText().startsWith("@")) {
 					   // add attribute
 					   String[] attrValues = val.getChild(j).getText().split("=");
-					   if (attrValues.length==1)  
+					   if (attrValues.length == 1)  
 						   myAttributes += " " + attrValues[0].substring(1) + "=\"\"";
-					   else
+					   else if(attrValues.length == 2)
 						   myAttributes += " " + attrValues[0].substring(1) + "=\"" + attrValues[1] + "\"";
+					   else if(attrValues.length > 2) {
+						   myAttributes += " " + attrValues[0].substring(1) + "=\"" + attrValues[1];
+						   for(int ja=2;ja<attrValues.length;ja++)
+							   myAttributes += "=" + attrValues[ja];
+						   myAttributes += "\"";
+					   }
 					   nr_attributes++;
 					   hasAttributes = true;
 				   }

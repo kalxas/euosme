@@ -25,8 +25,11 @@ import com.google.gwt.event.dom.client.BlurHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.client.ui.SuggestOracle;
 import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
@@ -99,31 +102,8 @@ public class CI_Citation extends CI {
 					Utilities.setTextTreeItem(myTreeItem,specificationObj.myTextBox.getText());
 				}
 			}			
-		});	
-		
-		specificationObj.myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
-			@Override
-			public void onSelection(SelectionEvent<Suggestion> event) {
-				String[] specifications = specificationObj.myTextBox.getText().split(";");
-				String definition = specifications[0];
-				String date = specifications[1];
-				String dateType = ""; 
-				if (specifications.length < 3) 
-					dateType = "publication";
-				else 
-					dateType = specifications[2];
-				TreeItem myTreeItem = null;
-				myTreeItem = Utilities.getSelectTreeItem(specificationObj.myTextBox.getTextBox().getName());					
-				if (myTreeItem!=null) 
-					Utilities.setTextTreeItem(myTreeItem,definition);				
-				dateObj.dateObj.myDateBox.setValue(DateTimeFormat.getFormat("yyyy-MM-dd").parse(date));
-				myTreeItem = Utilities.getSelectTreeItem(dateObj.dateObj.myDateBox.getTextBox().getName());					
-				if (myTreeItem!=null) 
-					Utilities.setTextTreeItem(myTreeItem,date);
-				dateObj.dateTypeObj.setMyValue(dateType);
-				specificationObj.myTextBox.setText(definition);
-			}			
-		});	
+		});			
+
 		setInterface(-1);
 	}
 	

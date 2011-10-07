@@ -447,10 +447,25 @@ public class MainPanel extends Composite {
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		MainPanel.myTree.removeItems();
 		
-		// Get XML
-		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) Utilities.parseMessage(MyResources.INSTANCE.seriesXML().getText(),true);
-		else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) Utilities.parseMessage(MyResources.INSTANCE.datasetXML().getText(),true);					
-		else Utilities.parseMessage(MyResources.INSTANCE.serviceXML().getText(),true);
+		// default XML
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) ) {
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) 
+				Utilities.parseMessage(MyResources.INSTANCE.seriesXML().getText(),true);
+			else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
+				Utilities.parseMessage(MyResources.INSTANCE.datasetXML().getText(),true);					
+			else 
+				Utilities.parseMessage(MyResources.INSTANCE.serviceXML().getText(),true);
+		}
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) 
+				Utilities.parseMessage(MyResources.INSTANCE.series_rdsiXML().getText(),true);
+			else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
+				Utilities.parseMessage(MyResources.INSTANCE.dataset_rdsiXML().getText(),true);					
+			else 
+				Utilities.parseMessage(MyResources.INSTANCE.service_rdsiXML().getText(),true);			
+		}
+		
+		// load file
 		if (!loadFileXML.isEmpty()) Utilities.parseMessage(loadFileXML,false);
 		
 		//load file name

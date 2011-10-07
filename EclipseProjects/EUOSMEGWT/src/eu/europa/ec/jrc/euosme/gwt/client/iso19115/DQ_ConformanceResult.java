@@ -20,16 +20,25 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
+import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.client.ui.TreeItem;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.Boolean;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
 
 /**
  * Create DQ_ConformanceResult model
@@ -54,6 +63,9 @@ public class DQ_ConformanceResult extends CI {
 	/** codeSpace control declaration */
 	CharacterString explanationObj = new CharacterString(constants.explanation(), "", true, CheckFunctions.normal, true);
 	
+	/** Address declaration */	
+	ISOCharacterString addressObj = new ISOCharacterString(constants.addressSpecification(), constants.addressSpecificationHelp(), false, CheckFunctions.URL, true);
+	
 	/** degree control declaration */
 	Boolean degreeObj = new Boolean(constants.degree(),"degree",true,"");
 	
@@ -70,8 +82,51 @@ public class DQ_ConformanceResult extends CI {
 	public DQ_ConformanceResult(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		fieldsGroup.add(specificationObj);
+		fieldsGroup.add(addressObj);
 		fieldsGroup.add(explanationObj);
 		fieldsGroup.add(degreeObj);
+		
+		specificationObj.specificationObj.myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
+			@Override
+			public void onSelection(SelectionEvent<Suggestion> event) {				
+				String[] specifications =specificationObj. specificationObj.myTextBox.getText().split(";");
+				String url = Utilities.getURLSpecification(specificationObj.specificationObj.myTextBox.getText());
+//				VerticalPanel parentPanel = (VerticalPanel) fieldsGroup.getParent().getParent().getParent().getParent();
+//				if (parentPanel != null){
+//					for (Widget w: parentPanel.getChildren()){
+//						
+//					}
+//				}
+				//parentPanel.addressObj.setMyValue(url);
+				String definition = specifications[0];
+				String date = specifications[1];
+				String dateType = ""; 
+				if (specifications.length < 3) 
+					dateType = "publication";
+				else 
+					dateType = specifications[2];
+				TreeItem myTreeItem = null;
+				
+				specificationObj.specificationObj.myTextBox.setText(definition);
+				myTreeItem = Utilities.getSelectTreeItem(specificationObj.specificationObj.myTextBox.getTextBox().getName());					
+				if (myTreeItem!=null) 
+					Utilities.setTextTreeItem(myTreeItem,definition);	
+				
+				
+				specificationObj.dateObj.dateObj.myDateBox.setValue(DateTimeFormat.getFormat("yyyy-MM-dd").parse(date));
+				myTreeItem = Utilities.getSelectTreeItem(specificationObj.dateObj.dateObj.myDateBox.getTextBox().getName());					
+				if (myTreeItem!=null) 
+					Utilities.setTextTreeItem(myTreeItem,date);
+				specificationObj.dateObj.dateTypeObj.setMyValue(dateType);
+				
+				
+				addressObj.setMyValue(url);
+				addressObj.myCheck();		
+				myTreeItem = Utilities.getSelectTreeItem(addressObj.myTextBox.getName());					
+				if (myTreeItem!=null) 
+					Utilities.setTextTreeItem(myTreeItem,url);				
+			}			
+		});			
 		setInterface(-1);
 	}
 	
@@ -79,26 +134,36 @@ public class DQ_ConformanceResult extends CI {
 	public void myCheck() {
 		if (this.getParent().isVisible()) {
 			specificationObj.myCheck();
+			addressObj.myCheck();
 			explanationObj.myCheck();
 			degreeObj.myCheck();
+			
 		}
 	}
 
 	@Override
 	public void setFormName(String name) {
 		super.setFormName(name);
-		specificationObj.setFormName(name + ".specification[1].ci_citation[1]");		
+		specificationObj.setFormName(name + ".specification[1].ci_citation[1]");
+		addressObj.setFormName(name+ ".specification[1].@xlink:href");
 		explanationObj.setFormName(name + ".explanation[1].characterstring[1]");
 		degreeObj.setFormName(name + ".pass[1].boolean[1]");
 	}
 	
 	@Override
 	public void setInterface(int i) {
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) ) {
+			specificationObj.setInterface(2);
+			specificationObj.removeDisclosure();
+			explanationObj.setMyValue(constants.explanationValue());
+			explanationObj.setVisible(false);
+			addressObj.setVisible(false);
+		}		
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			specificationObj.setInterface(2);
 			specificationObj.removeDisclosure();
 			explanationObj.setMyValue(constants.explanationValue());
 			explanationObj.setVisible(false);			
-		}		
+		}
 	}	
 }

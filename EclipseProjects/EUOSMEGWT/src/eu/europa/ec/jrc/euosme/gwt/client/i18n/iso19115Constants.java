@@ -149,7 +149,13 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("File identifier")
 	String fileIdentifier();
 	@DefaultStringValue("<h4><a id=\"fileIdentifier\" name=\"fileIdentifier\"> </a>File identifier</h4><p>Parent metadata records (i.e. the data series) should have a unique file identifier that does not change. Do not change this File Identifier even if you update the metadata.</p><p>The value domain of this metadata element is free text.</p>")
-	String fileIdentifierHelp();		
+	String fileIdentifierHelp();
+	
+	/** Address field */
+	@DefaultStringValue("Address")
+	String addressSpecification();
+	@DefaultStringValue("<h4><a id=\"addressSpecification\" name=\"addressSpecification\"> </a>Address</h4><p>The web address (url) of the specification</p><p></p>")
+	String addressSpecificationHelp();	
 	
 	/** TM_Primitive fields */
 	
@@ -341,7 +347,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Resource abstract")
 	String resourceAbstract();
 	
-	@DefaultStringValue("Resource type")
+	@DefaultStringValue("Please choose the resource type you want to create INSPIRE metadata for: ")
 	String resourceType();
 	
 	@DefaultStringValue("Resource locator")

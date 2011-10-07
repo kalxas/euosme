@@ -147,7 +147,10 @@ public class TabIdentification extends Composite {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			CI_CitationObj.setInterface(0);
 			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
-				parentIdentifierObj.setVisible(true);
+				if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString()))
+					parentIdentifierObj.setVisible(false);
+				else	
+					parentIdentifierObj.setVisible(true);
 			}
 			else 
 				parentIdentifierObj.setVisible(false);

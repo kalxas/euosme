@@ -45,6 +45,15 @@ public interface MyResources extends ClientBundle{
 	@Source("XMLsources/service.xml")
 	public TextResource serviceXML();
 	
+	@Source("XMLsources/dataset_rdsi.xml")
+	public TextResource dataset_rdsiXML();
+	
+	@Source("XMLsources/series_rdsi.xml")
+	public TextResource series_rdsiXML();
+	
+	@Source("XMLsources/service_rdsi.xml")
+	public TextResource service_rdsiXML();	
+	
 	@Source("userGuides/eurlex.htm")
 	public TextResource help();
 	
