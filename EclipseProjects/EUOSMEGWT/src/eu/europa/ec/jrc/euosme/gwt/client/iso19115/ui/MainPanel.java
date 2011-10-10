@@ -159,7 +159,15 @@ public class MainPanel extends Composite {
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		
 		// Set user guide
-		String helpHTM = MyResources.INSTANCE.help().getText();
+		String helpHTM = "";
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) 
+				helpHTM = MyResources.INSTANCE.rdsi_help_service().getText();
+			else 
+				helpHTM = MyResources.INSTANCE.rdsi_help_dataset().getText();
+		}
+		else 
+			helpHTM = MyResources.INSTANCE.help().getText();
 		helpHTM = helpHTM.substring(helpHTM.indexOf("<body>")+"<body>".length(),helpHTM.indexOf("</body>"));
 		userGuideHTM = new HTML(helpHTM);													
 				    

@@ -40,6 +40,7 @@ import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.ListBox;
 import com.google.gwt.user.client.ui.MultiWordSuggestOracle;
 import com.google.gwt.user.client.ui.PopupPanel;
@@ -1278,24 +1279,52 @@ public class Utilities {
 	 */
 	public static void openInfo(String helpAnchor, Button infoButton) {
 		// Get contextual help
-		String contextualHelp = getContextualHelp(helpAnchor);
-		if (helpAnchor.equalsIgnoreCase("topicCategory")) {
-			contextualHelp += "<br/>" + getContextualHelp(helpAnchor + "_annex");
+		String contextualHelp = "";
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())))
+			contextualHelp = getContextualHelpRDSI(helpAnchor);
+		else{
+			contextualHelp = getContextualHelp(helpAnchor);
+			if (helpAnchor.equalsIgnoreCase("topicCategory")) {
+				contextualHelp += "<br/>" + getContextualHelp(helpAnchor + "_annex");
+			}
 		}
+		String helpFile = "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			helpFile = "userguide/rdsi_guidelines_dataset.htm";
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) 
+				helpFile = "userguide/rdsi_guidelines_service.htm";
+		}
+		
 		// Get URL to the entire userguide
-		String helpURL = GWT.getHostPageBaseURL() + "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
+		String helpURL = GWT.getHostPageBaseURL() + helpFile;
 		
 		// Show the popup
 		PopupPanel pp = new PopupPanel(true,false);
 		pp.setTitle(constants.info());
 		VerticalPanel vp = new VerticalPanel();
 		vp.add(new HTML(contextualHelp));
-		Anchor link = new Anchor(constants.regulationTitle(), helpURL,"blank");
-		vp.add(link);
-		pp.setWidget(vp);
-		pp.setPixelSize(400,200);
-		pp.showRelativeTo(infoButton);
-		pp.getElement().getStyle().setOverflow(Overflow.AUTO);
+		Anchor link = null; 
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			link = new Anchor(constants.rdsiHelpTitle(), helpURL,"blank");
+		}
+		else 
+			link = new Anchor(constants.regulationTitle(), helpURL,"blank");		
+		vp.add(link);		
+		
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			pp.setPixelSize(400,200);
+			String linkGuidelines = "<a href=\"" + helpURL + "\" target=\"_blank\">" + constants.rdsiHelpTitle()+"</a><p></p>";
+			HTMLPanel hp = new HTMLPanel(linkGuidelines + contextualHelp);
+			pp.setWidget(hp);			
+			pp.showRelativeTo(infoButton);
+			pp.getElement().getStyle().setOverflow(Overflow.SCROLL);
+		}
+		else {
+			pp.setWidget(vp);
+			pp.setPixelSize(400,200);
+			pp.showRelativeTo(infoButton);
+			pp.getElement().getStyle().setOverflow(Overflow.AUTO);
+		}
 	}
 	
 	/**
@@ -1342,6 +1371,31 @@ public class Utilities {
 		}
 		return infoHTM.getHTML().replace("<h4></h4>","");
 	}
+	
+	/**
+	 * This function finds the substring that represents the contextual help of a metadata element
+	 * in the RDSI html guide
+	 * 
+	 * @param helpAnchor	{@link String} = the anchor in the userguide
+	 * 
+	 * @return {@link String} = contextual help string related to the anchor
+	 */
+	public static String getContextualHelpRDSI(String helpAnchor) {
+		HTML infoHTM;
+		String mainHTM = MainPanel.userGuideHTM.getHTML().toLowerCase();
+		int beginIndex = mainHTM.indexOf("id='" + helpAnchor + "'");
+		if (beginIndex==-1) beginIndex = mainHTM.indexOf("id=\"" + helpAnchor + "\"");
+		if (beginIndex==-1) beginIndex = mainHTM.indexOf("id=" + helpAnchor);
+		if (beginIndex==-1) infoHTM = new HTML("");
+		else {
+			int beginIndex2 = mainHTM.indexOf("</a>",beginIndex);
+			int endIndex = mainHTM.indexOf("<h3",beginIndex2);
+			if (endIndex==0) endIndex = mainHTM.length();
+			infoHTM = new HTML("<h3>" + MainPanel.userGuideHTM.getHTML().substring(beginIndex2, endIndex));
+		}
+		return infoHTM.getHTML().replace("<h3></h3>","");
+	}	
+	
 	
 	/**
 	 * Return the textual resource of a code list 

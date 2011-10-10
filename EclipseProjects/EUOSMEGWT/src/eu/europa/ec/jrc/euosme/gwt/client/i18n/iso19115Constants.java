@@ -543,6 +543,9 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata Text with EEA relevance")
 	String regulationTitle();
 	
+	@DefaultStringValue("RDSI Metadata for Discovery Creation Guidelines")
+	String rdsiHelpTitle();	
+	
 	@DefaultStringValue("Help")
 	String help();
 	

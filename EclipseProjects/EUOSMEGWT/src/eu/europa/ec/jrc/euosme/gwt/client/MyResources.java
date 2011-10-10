@@ -57,6 +57,12 @@ public interface MyResources extends ClientBundle{
 	@Source("userGuides/eurlex.htm")
 	public TextResource help();
 	
+	@Source("userGuides/rdsi_guidelines_dataset.htm")
+	public TextResource rdsi_help_dataset();	
+	
+	@Source("userGuides/rdsi_guidelines_service.htm")
+	public TextResource rdsi_help_service();	
+	
 	@Source("codeLists/2.txt")
 	public TextResource codeList2();
 	
