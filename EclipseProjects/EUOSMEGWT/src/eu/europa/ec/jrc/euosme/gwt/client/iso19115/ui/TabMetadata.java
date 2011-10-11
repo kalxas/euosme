@@ -77,7 +77,7 @@ public class TabMetadata extends Composite {
 	//@UiField(provided = true)
 	//Hidden fileNameObj = new Hidden();
 	
-	/** parent identifier declaration */
+	/** file identifier declaration */
 	@UiField(provided = true)
 	ISOCharacterString fileIdentifierObj = new ISOCharacterString(constants.fileIdentifier(), constants.fileIdentifierHelp(), false, CheckFunctions.normal, true);
 	
@@ -132,11 +132,7 @@ public class TabMetadata extends Composite {
 			languageObj.setRequired(true);
 			responsiblePartyContainerObj.setLabel(constants.pointOfContactINSPIRE());
 			responsiblePartyObj.setInterface(0);
-			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
-				fileIdentifierObj.setVisible(true);
-			}
-			else 
-				fileIdentifierObj.setVisible(false);
+			fileIdentifierObj.setVisible(false);
 			
 		}		
 	}	

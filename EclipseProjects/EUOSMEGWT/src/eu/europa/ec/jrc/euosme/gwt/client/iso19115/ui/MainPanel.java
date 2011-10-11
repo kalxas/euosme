@@ -506,6 +506,9 @@ public class MainPanel extends Composite {
     */
 	private void newForm(String myNewInterface, String loadFileXML) {	
 		
+		// reset filename if create new 
+		if (loadFileXML.length() == 0) 
+			EUOSMEGWT.fileName = "#FILENAME#";
 		
 		Element mapDiv = DOM.getElementById("mapstraction");		
 		Document.get().getBody().appendChild(mapDiv);		
@@ -660,7 +663,10 @@ public class MainPanel extends Composite {
 		        if (myFileUpload.getFilename().length() == 0) {
 		        	Window.alert(constants.selectFile());
 		            event.cancel();
-		        }		  
+		        }		 
+		        else {
+		        	EUOSMEGWT.fileName = myFileUpload.getFilename();
+		        }
 		        //messagesLabel.setText(constants.loadingFile());
 				//messagesLabel.setStyleName("infoLabel");
 		       //Turn hourglass off
@@ -746,20 +752,23 @@ public class MainPanel extends Composite {
 //		if (fileIdentifier != null)
 //			if (!fileIdentifier.getAttribute("value").isEmpty())
 //				tmpFileName = fileIdentifier.getAttribute("value");
-		TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
-		if (myTreeItem.getText().contains("#FILENAME#")) {
+		//TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
+		//if (myTreeItem.getText().contains("#FILENAME#")) {
 		//if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
+		if (EUOSMEGWT.fileName.equals("#FILENAME#")){
 			Integer myNum = Random.nextInt();
 			if (Integer.signum(myNum)==-1) myNum=-(myNum);
 			tmpFileName = Integer.toHexString(myNum);	
 			tmpFileName += ".xml";
-			Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
-			Utilities.setTextTreeItem(myTreeItem,tmpFileName);			
+			EUOSMEGWT.fileName = tmpFileName;
+			//Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
+			//Utilities.setTextTreeItem(myTreeItem,tmpFileName);			
 			//fileIdentifier.setAttribute("value", tmpFileName);
 		}
 		else {
-			tmpFileName = myTreeItem.getText();
-			tmpFileName = tmpFileName.replaceAll(constants.XMLValue(), "");
+			//tmpFileName = myTreeItem.getText();			
+			//tmpFileName = tmpFileName.replaceAll(constants.XMLValue(), "");
+			tmpFileName = EUOSMEGWT.fileName;
 		}
 		return tmpFileName;		
 	}

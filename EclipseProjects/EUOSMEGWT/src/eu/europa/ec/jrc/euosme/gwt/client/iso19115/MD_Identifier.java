@@ -20,9 +20,12 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ChangeEvent;
+import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.TreeItem;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
@@ -30,6 +33,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
@@ -78,6 +82,20 @@ public class MD_Identifier extends CI {
 		fieldsGroup.add(codeObj);
 		fieldsGroup.add(codeSpaceObj);
 		fieldsGroup.add(versionObj);
+		
+		codeObj.myTextBox.addChangeHandler(new ChangeHandler(){
+
+			@Override
+			public void onChange(ChangeEvent event) {
+				// set file identifier 
+				String uuid = codeObj.myTextBox.getText();
+				TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
+				Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",uuid);
+				Utilities.setTextTreeItem(myTreeItem,uuid);
+			}
+			
+		});
+		
 		setInterface(-1);
 	}
 
@@ -116,14 +134,18 @@ public class MD_Identifier extends CI {
 					// call service via RPC
 					InspireServiceRpcCallback callback = new InspireServiceRpcCallback();
 					callback.setCodeObj(codeObj.myTextBox);
+					callback.setFileIdentifier("md_metadata[1].fileidentifier[1].characterstring[1]");
+					callback.setResourceIdentifier(codeObj.myTextBox.getName());
 					InspireServiceRpcCallback.setType("XML");
 					RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
 					ls.invokeInspireUUIDService(callback);
-					codeSpaceObj.myTextBox.setText("http://ies.jrc.ec.europa.eu");
+					//codeSpaceObj.myTextBox.setText("http://ies.jrc.ec.europa.eu");
+					
+				   
 				}
 			});
 			getCodeButton.setHTML(constants.getUUID());
 			fieldsGroup.add(getCodeButton);
-		}
+		}		
 	}
 }

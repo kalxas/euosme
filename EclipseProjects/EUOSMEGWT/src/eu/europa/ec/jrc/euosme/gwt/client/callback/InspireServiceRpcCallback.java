@@ -26,10 +26,12 @@ import com.google.gwt.http.client.Response;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.TreeItem;
 import com.google.gwt.xml.client.Document;
 import com.google.gwt.xml.client.XMLParser;
 
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 
@@ -43,6 +45,12 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	
 	/** the text box corresponding to the Code object to value */
 	TextBox codeObj;
+	
+	/** file identifier **/ 
+	String fileIdentifier = "";
+	
+	/** resource identifier **/ 
+	String resourceIdentifier = "";
 	
 	/** this service could return an XML or an HTML*/
 	private static String typeOfResult = "XML";
@@ -59,6 +67,19 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	    		//<uuid><canonicalForm>d5025221-f93b-11df-b599-0017085a97ab</canonicalForm>
 	    		String uuid = uuidDocument.getElementsByTagName("canonicalForm").item(0).getFirstChild().getNodeValue();    
 	    		codeObj.setText(uuid);
+	    		
+	    		// set file identifier		
+	    		if (fileIdentifier.length() > 0) {
+					TreeItem myTreeItem = Utilities.getSelectTreeItem(fileIdentifier);
+					Utilities.valueField(fileIdentifier, uuid);
+					Utilities.setTextTreeItem(myTreeItem, uuid);
+	    		}
+	    		
+	    		// set resource identifier		
+	    		if (resourceIdentifier.length() > 0) {
+					TreeItem myTreeItem = Utilities.getSelectTreeItem(resourceIdentifier);					
+					Utilities.setTextTreeItem(myTreeItem, uuid);
+	    		}	    		
 	    	}
 	    	catch (Exception ex) {
 	    		return;
@@ -109,4 +130,18 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	public void setCodeObj(TextBox myTextBox) {
 		codeObj = myTextBox;		
 	}
+	
+	/**
+	 * @param myFileId = 
+	 */
+	public void setFileIdentifier(String myFileId) {
+		fileIdentifier = myFileId;		
+	}	
+	
+	/**
+	 * @param myFileId = 
+	 */
+	public void setResourceIdentifier(String myResourceId) {
+		resourceIdentifier = myResourceId;		
+	}	
 }

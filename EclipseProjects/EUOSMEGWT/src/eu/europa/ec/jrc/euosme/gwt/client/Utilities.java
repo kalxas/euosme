@@ -1314,7 +1314,7 @@ public class Utilities {
 		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
 			pp.setPixelSize(400,200);
 			String linkGuidelines = "<a href=\"" + helpURL + "\" target=\"_blank\">" + constants.rdsiHelpTitle()+"</a><p></p>";
-			HTMLPanel hp = new HTMLPanel(linkGuidelines + contextualHelp);
+			HTMLPanel hp = new HTMLPanel(linkGuidelines + contextualHelp);			
 			pp.setWidget(hp);			
 			pp.showRelativeTo(infoButton);
 			pp.getElement().getStyle().setOverflow(Overflow.SCROLL);
@@ -1834,27 +1834,16 @@ public class Utilities {
 				Utilities.setTextTreeItem(myTreeItem,constants.RDSIorganisationName());
 			}
 			
-			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
-			if (myTreeItem.getText().contains("#FILENAME#")) {
-				String tmpFileName = "";
-				Integer myNum = Random.nextInt();
-				if (Integer.signum(myNum)==-1) myNum=-(myNum);
-				tmpFileName = Integer.toHexString(myNum);
-				tmpFileName += ".xml";
-				Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
-				Utilities.setTextTreeItem(myTreeItem,tmpFileName);
-			}
-//			String tmpFileName = "";
-			//Element fileIdentifier = Document.get().getElementById("md_metadata[1].fileidentifier[1].characterstring[1]");
-//			if (fileIdentifier != null)
-//				if (!fileIdentifier.getAttribute("value").isEmpty())
-//					tmpFileName = fileIdentifier.getAttribute("value");
-//			if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
+//			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
+//			if (myTreeItem.getText().contains("#FILENAME#")) {
+//				String tmpFileName = "";
 //				Integer myNum = Random.nextInt();
 //				if (Integer.signum(myNum)==-1) myNum=-(myNum);
-//				tmpFileName = Integer.toHexString(myNum);			
-//				fileIdentifier.setAttribute("value", tmpFileName);
-//			}			
+//				tmpFileName = Integer.toHexString(myNum);
+//				tmpFileName += ".xml";
+//				Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
+//				Utilities.setTextTreeItem(myTreeItem,tmpFileName);
+//			}		
 		}		
 	}
 }

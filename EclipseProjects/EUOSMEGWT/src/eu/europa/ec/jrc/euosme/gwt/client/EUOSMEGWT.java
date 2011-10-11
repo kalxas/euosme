@@ -83,6 +83,10 @@ public class EUOSMEGWT implements EntryPoint {
 	/** Indicates the availability of INSPIRE services */
 	public static boolean inspireserviceAvailable = true;
 	
+	/** The filename of metadata file */
+	public static String fileName = "#FILENAME#";
+	
+	
 	// The Main Panel 
 	public static MainPanel mainPanel;
 	//public static HorizontalPanel loadingPanel;
