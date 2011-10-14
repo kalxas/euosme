@@ -142,6 +142,14 @@ public class CharacterString extends Composite {
 	}
 	
 	/**
+	 * 
+	 * @param update: auto or not
+	 */
+	public void setAutoupdate(boolean update) {
+		autoupdate = update;	
+	}
+	
+	/**
 	 * This is called to make field's validation and show an error if it fails
 	 */
 	public void myCheck() {

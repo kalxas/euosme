@@ -17,7 +17,7 @@ WHERE {
 
     OPTIONAL {
       ?c skos:prefLabel ?a.
-      FILTER ( LANG(?a) = "en" )
+      FILTER ( LANG(?a) = "it" )
     }
     FILTER ( LANG(?l) = "en")
   }
@@ -39,6 +39,7 @@ WHERE {
 
     OPTIONAL {
       ?c skos:broader ?e.
+      <##extraValue##> skos:member ?e.
     }
 
     OPTIONAL {

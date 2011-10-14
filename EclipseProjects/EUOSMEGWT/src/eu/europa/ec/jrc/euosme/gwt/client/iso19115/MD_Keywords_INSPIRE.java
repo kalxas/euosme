@@ -111,7 +111,7 @@ public class MD_Keywords_INSPIRE extends CI {
 						String selectedValue = keywordDataThemeObj.listDataThemes.getValue(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
 						String myKeyword = keywordDataThemeObj.listDataThemes.getItemText(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
 						//TODO Get the version of the web service
-						addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","2008-06-01","", false);						
+						addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","2008-06-01","");						
 					}				
 				}
 			});
@@ -135,7 +135,7 @@ public class MD_Keywords_INSPIRE extends CI {
 						String selectedValue = keywordDataServiceObj.listDataServices.getValue(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeyword = keywordDataServiceObj.listDataServices.getItemText(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeywordService = toDefinedKeywordService(myKeyword);
-						addNew(myKeywordService,"","","", false);						
+						addNew(myKeywordService,"","","");						
 					}				
 				}
 			});
@@ -159,13 +159,13 @@ public class MD_Keywords_INSPIRE extends CI {
 				if (keywordGemetObj.listScheme.getSelectedIndex()!=0) 
 					if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) {
 						myKeyword = toDefinedKeywordService(myKeyword);
-						addNew(myKeyword,mySource + ", version 2.3","","", false);					
+						addNew(myKeyword,mySource + ", version 2.3","","");					
 					}
 					else {
 						if (EUOSMEGWT.gemetPublicationDate.isEmpty())
-							addNew(myKeyword,mySource ,"","", false);
+							addNew(myKeyword,mySource ,"","");
 						else
-							addNew(myKeyword,mySource ,EUOSMEGWT.gemetPublicationDate.get(mySource),"", false);
+							addNew(myKeyword,mySource ,EUOSMEGWT.gemetPublicationDate.get(mySource),"");
 					}
 			}				
 		});
@@ -190,7 +190,7 @@ public class MD_Keywords_INSPIRE extends CI {
 				String myDate = keywordFreeObj.thesaurusObj.dateObj.dateObj.myDateBox.getTextBox().getText();
 				String myDateType = keywordFreeObj.thesaurusObj.dateObj.dateTypeObj.getMyValue();
 				if (!myKeyword.isEmpty()) 
-					addNew(myKeyword,mySource,myDate,myDateType, true);					
+					addNew(myKeyword,mySource,myDate,myDateType);					
 			}				
 		});
 		keywordFreeObj.fieldsGroup.add(addFreeButton);
@@ -221,7 +221,7 @@ public class MD_Keywords_INSPIRE extends CI {
 	 * @param myDate		{@link String} = the date related to the originating controlled vocabulary
 	 * @param myDateType	{@link String} = the date type
 	 */
-	private void addNew(final String myString, final String mySource, String myDate, String myDateType, boolean free) {
+	private void addNew(final String myString, final String mySource, String myDate, String myDateType) {
 		myError.setVisible(false);
 		//check if keyword is empty
 		if (myString.isEmpty()) {
@@ -271,8 +271,10 @@ public class MD_Keywords_INSPIRE extends CI {
 		}
 		else { // else add a new node
 			TreeItem myParentItem = null;
-			if (!mySource.isEmpty()) myParentItem = getThesaurusParentTreeItem(mySource);			
-			if (myParentItem!=null && !free) { //add a gmd:keyword/gco:CharacterString element
+			if (!mySource.isEmpty()) myParentItem = getThesaurusParentTreeItem(mySource);	
+			//add a gmd:keyword/gco:CharacterString element
+			//if (myParentItem!=null && !free) { 
+			if (myParentItem!=null) { 	
 				int nrKeywords = 0;
 				int lastKeywordIndex = 1;
 				for (int k=0;k <myParentItem.getChildCount();k++) {

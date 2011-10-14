@@ -145,7 +145,7 @@ public class CI_Citation extends CI {
 				dateContainerObj.removeFromParent();
 				dateObj.removeFromParent();			
 			}
-			if (i==1) { // TAB keyword
+			if (i==1) { // TAB keyword				
 				alternateTitleObj.setVisible(false);
 				identifierObj.setVisible(false);
 				identifierContainerObj.setVisible(false);
@@ -154,6 +154,8 @@ public class CI_Citation extends CI {
 				dateObj.setMultiple(false);
 				fieldsGroup.add(dateObj);
 				dateContainerObj.setVisible(false);
+				// do not autoupdate the free keyword field to the tree
+				titleObj.setAutoupdate(false);				
 			}
 			if (i==2) { // TAB conformity
 				fieldsGroup.clear();
