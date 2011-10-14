@@ -7,7 +7,7 @@
     	<g:Label addStyleNames="h2" ui:field="titleLabel"/>
 		<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
 		<my:CI_Citation addStyleNames="auto" ui:field="CI_CitationObj"/>
-		<widgets:ISOCharacterString ui:field="parentIdentifierObj"/>
+		<widgets:CharacterString ui:field="parentIdentifierObj"/>
 		<widgets:CharacterStringLong addStyleNames="auto" ui:field="abstractObj"/>
 		<widgets:CodeList ui:field="resourceTypeObj"/>
 		<widgets:CIMultiple ui:field="onlineResourceContainerObj"/>

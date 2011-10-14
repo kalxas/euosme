@@ -19,6 +19,12 @@ a.none 	{
 	text-decoration: none;
 }
 
+/* table */
+table 	{
+	font-size: 0.9em;	
+	margin: 5px 5px 5px 35px;
+}
+
 /* general header properties */
 h1 	{
 	font-size: 1.2em;
@@ -33,7 +39,7 @@ h2 	{
 h3 	{
 	font-size: 0.9em;
 	color: #3B4662;
-	margin: 5px 5px 5px 35px;
+	margin: 25px 5px 5px 35px;
 }
 h4 	{
 	font-size: 0.8em;

@@ -66,7 +66,7 @@ public class MD_Keywords_Gemet extends CI {
  	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
  	/** List of available repositories */
-	ListBox listRepository = new ListBox();
+	ListBox listScheme = new ListBox();
 	
 	/** suggest control declaration */
 	Tree suggestObj = new Tree(); 	
@@ -93,20 +93,22 @@ public class MD_Keywords_Gemet extends CI {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);
 		// Filter
 		final TextBox filterTextBox = new TextBox();
-		Button filterButton = new Button("Filter");//("Search");
-		final Button filterClearButton = new Button("Clear");//("Reset");
-		fieldsGroup.add(listRepository);
-		listRepository.addChangeHandler(new ChangeHandler(){
+		Button filterButton = new Button("Search");//("Filter");
+		final Button filterClearButton = new Button("Reset");//("Clear");
+		fieldsGroup.add(listScheme);
+		listScheme.addChangeHandler(new ChangeHandler(){
 			@Override
 			public void onChange(ChangeEvent event) {
-				if (listRepository.getSelectedIndex()!=0) {
-					String selectedValue = listRepository.getValue(listRepository.getSelectedIndex()).trim();
+				if (listScheme.getSelectedIndex()!=0) {
+					String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
 					if (selectedValue.isEmpty()) {
 						suggestObj.setVisible(false);
 						filterClearButton.setEnabled(false);
 						filterPanel.setVisible(false);							
 					}
-					else requestSuggestions(selectedValue,"");						
+					else
+						// populate the tree with items from selected scheme
+						requestSuggestions(selectedValue,"");						
 				}				
 			}
 		});
@@ -114,15 +116,15 @@ public class MD_Keywords_Gemet extends CI {
 		filterButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				String selectedValue = listRepository.getValue(listRepository.getSelectedIndex()).trim();
+				String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
 				if (selectedValue.isEmpty()) {
 					suggestObj.setVisible(false);
 					filterClearButton.setEnabled(false);
 					filterPanel.setVisible(false);
 				}
 				else {
-					//requestSearch(selectedValue,filterTextBox.getText());
-					requestSuggestions(selectedValue,filterTextBox.getText());
+					requestSearch(selectedValue,filterTextBox.getText());
+					//requestSuggestions(selectedValue,filterTextBox.getText());
 					filterClearButton.setEnabled(true);
 				}
 			}
@@ -130,7 +132,7 @@ public class MD_Keywords_Gemet extends CI {
 		filterClearButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				String selectedValue = listRepository.getValue(listRepository.getSelectedIndex()).trim();
+				String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
 				requestSuggestions(selectedValue,"");
 				filterClearButton.setEnabled(false);	
 				filterTextBox.setText("");
@@ -167,18 +169,19 @@ public class MD_Keywords_Gemet extends CI {
 		fieldsGroup.add(GEMETPanel);
 		// RPC call if requested
 		if (EUOSMEGWT.rpcRepository)
-			requestListOfRepository(listRepository);
+			// get the list of schemes and populate the list box
+			requestListOfRepository(listScheme);
 		else
-			Utilities.setSuggestList(MyResources.INSTANCE.repositoryList().getText(), listRepository);	
+			Utilities.setSuggestList(MyResources.INSTANCE.repositoryList().getText(), listScheme);	
 	}
 	
 	/**
 	 * Get a list of items include the pattern
 	 * 
-	 * @param repository	{@link String} = the repository
+	 * @param scheme	{@link String} = the scheme where we search in
 	 * @param pattern		{@link String} = the string to use as a pattern
 	 */		
-	private void requestSearch(String repository, String pattern) {
+	private void requestSearch(String scheme, String pattern) {
 		if(suggestObj.getItemCount()!=0)
 			if(suggestObj.getItem(0).getChildCount()!=0)
 				if (suggestObj.getItem(0).getChild(0).getTitle().equalsIgnoreCase(constants.loading())) return;
@@ -196,11 +199,11 @@ public class MD_Keywords_Gemet extends CI {
 			callback.setList(suggestObj.getItem(0));
 			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null); 
 			RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-			ls.invokeGetRESTfulWebService("search", repository, LocaleInfo.getCurrentLocale().getLocaleName(), pattern, callback);
+			ls.invokeGetRESTfulWebService("search", scheme, LocaleInfo.getCurrentLocale().getLocaleName(), pattern, callback);
 			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
 		}
 		else {
-			Utilities.setSuggests(Utilities.getResourceRepository(listRepository.getItemText(listRepository.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+			Utilities.setSuggests(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
 		}
 	}
 	
@@ -232,7 +235,7 @@ public class MD_Keywords_Gemet extends CI {
 			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
 		}
 		else {
-			Utilities.setSuggests(Utilities.getResourceRepository(listRepository.getItemText(listRepository.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+			Utilities.setSuggests(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
 		}
     }
 	
@@ -249,7 +252,7 @@ public class MD_Keywords_Gemet extends CI {
     }
 	
 	/**
-	 * Request the list of available repositories
+	 * Request the list of available schemes 
 	 * 
 	 * @param myListRPC	{@link ListBox} = the list box to populate with the list
 	 */

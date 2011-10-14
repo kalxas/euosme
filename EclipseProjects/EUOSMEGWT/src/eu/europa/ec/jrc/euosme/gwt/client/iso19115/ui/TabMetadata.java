@@ -34,6 +34,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_ResponsibleParty;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
@@ -79,7 +80,7 @@ public class TabMetadata extends Composite {
 	
 	/** file identifier declaration */
 	@UiField(provided = true)
-	ISOCharacterString fileIdentifierObj = new ISOCharacterString(constants.fileIdentifier(), constants.fileIdentifierHelp(), false, CheckFunctions.normal, true);
+	CharacterString fileIdentifierObj = new CharacterString(constants.fileIdentifier(), "", false, CheckFunctions.normal, true);
 	
 	
 	/** Note on mandatory fields */

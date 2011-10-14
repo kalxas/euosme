@@ -19,6 +19,9 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import com.google.gwt.ajaxloader.client.AjaxLoader;
 import com.google.gwt.ajaxloader.client.AjaxLoader.AjaxLoaderOptions;
 import com.google.gwt.core.client.EntryPoint;
@@ -85,6 +88,9 @@ public class EUOSMEGWT implements EntryPoint {
 	
 	/** The filename of metadata file */
 	public static String fileName = "#FILENAME#";
+	
+	/** The publication date of GEMET schemes */
+	public static Map<String,String> gemetPublicationDate = new LinkedHashMap<String, String>();
 	
 	
 	// The Main Panel 

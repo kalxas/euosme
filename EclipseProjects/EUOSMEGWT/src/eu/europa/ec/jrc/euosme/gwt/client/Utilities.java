@@ -1633,11 +1633,13 @@ public class Utilities {
 
         NodeList nodes = messageDom.getElementsByTagName("result");
         Map<String,String> definitions = new LinkedHashMap<String, String>();
+        //EUOSMEGWT.gemetPublicationDate = new LinkedHashMap<String, String>();
         for (int i = 0; i < nodes.getLength(); i++) {
 			Node currentNode = nodes.item(i);
 			String definition_en = "";
 			String definition_lang = "";
 			String definition_uri = "";
+			String definition_date = "";
 			for (int j = 0; j < currentNode.getChildNodes().getLength(); j++) {
 				Node currentItem = currentNode.getChildNodes().item(j);
 				// uri concept
@@ -1670,11 +1672,23 @@ public class Utilities {
 						}
 					}
 				}  
+				
+				// date (publication by default) 
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("d")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_date = currentSubItem.getFirstChild().getNodeValue();	  
+						}
+					}
+				} 				
 			}
 			if (!definition_en.isEmpty()) {
 				String definition;
 				definition = definition_en; 
 				if (!definition_lang.isEmpty() && definition_lang != definition) definition = definition_lang;
+				EUOSMEGWT.gemetPublicationDate.put(definition, definition_date);
 				definitions.put(definition,definition_uri);						
 			}
 		}

@@ -64,7 +64,7 @@ public class DQ_ConformanceResult extends CI {
 	CharacterString explanationObj = new CharacterString(constants.explanation(), "", true, CheckFunctions.normal, true);
 	
 	/** Address declaration */	
-	ISOCharacterString addressObj = new ISOCharacterString(constants.addressSpecification(), constants.addressSpecificationHelp(), false, CheckFunctions.URL, true);
+	CharacterString addressObj = new CharacterString(constants.addressSpecification(), "", false, CheckFunctions.URL, true);
 	
 	/** degree control declaration */
 	Boolean degreeObj = new Boolean(constants.degree(),"degree",true,"");

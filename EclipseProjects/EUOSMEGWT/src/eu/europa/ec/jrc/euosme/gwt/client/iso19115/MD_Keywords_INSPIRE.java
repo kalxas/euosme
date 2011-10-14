@@ -111,7 +111,7 @@ public class MD_Keywords_INSPIRE extends CI {
 						String selectedValue = keywordDataThemeObj.listDataThemes.getValue(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
 						String myKeyword = keywordDataThemeObj.listDataThemes.getItemText(keywordDataThemeObj.listDataThemes.getSelectedIndex()).trim();
 						//TODO Get the version of the web service
-						addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","","");						
+						addNew(myKeyword,"GEMET - INSPIRE themes, version 1.0","2008-06-01","", false);						
 					}				
 				}
 			});
@@ -135,7 +135,7 @@ public class MD_Keywords_INSPIRE extends CI {
 						String selectedValue = keywordDataServiceObj.listDataServices.getValue(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeyword = keywordDataServiceObj.listDataServices.getItemText(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeywordService = toDefinedKeywordService(myKeyword);
-						addNew(myKeywordService,"","","");						
+						addNew(myKeywordService,"","","", false);						
 					}				
 				}
 			});
@@ -155,11 +155,18 @@ public class MD_Keywords_INSPIRE extends CI {
 			public void onClick(ClickEvent event) {
 				//TODO get the version of the repository
 				String myKeyword = keywordGemetObj.keywordGEMETObj.getText().replace(constants.selectedValue(), "").trim();
-				String mySource = keywordGemetObj.listRepository.getItemText(keywordGemetObj.listRepository.getSelectedIndex()).trim();
-				if (keywordGemetObj.listRepository.getSelectedIndex()!=0) 
-					if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) 
+				String mySource = keywordGemetObj.listScheme.getItemText(keywordGemetObj.listScheme.getSelectedIndex()).trim();
+				if (keywordGemetObj.listScheme.getSelectedIndex()!=0) 
+					if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) {
 						myKeyword = toDefinedKeywordService(myKeyword);
-					addNew(myKeyword,mySource + ", version 2.3","","");					
+						addNew(myKeyword,mySource + ", version 2.3","","", false);					
+					}
+					else {
+						if (EUOSMEGWT.gemetPublicationDate.isEmpty())
+							addNew(myKeyword,mySource ,"","", false);
+						else
+							addNew(myKeyword,mySource ,EUOSMEGWT.gemetPublicationDate.get(mySource),"", false);
+					}
 			}				
 		});
 		keywordGemetObj.fieldsGroup.add(addGEMETButton);
@@ -183,7 +190,7 @@ public class MD_Keywords_INSPIRE extends CI {
 				String myDate = keywordFreeObj.thesaurusObj.dateObj.dateObj.myDateBox.getTextBox().getText();
 				String myDateType = keywordFreeObj.thesaurusObj.dateObj.dateTypeObj.getMyValue();
 				if (!myKeyword.isEmpty()) 
-					addNew(myKeyword,mySource,myDate,myDateType);					
+					addNew(myKeyword,mySource,myDate,myDateType, true);					
 			}				
 		});
 		keywordFreeObj.fieldsGroup.add(addFreeButton);
@@ -214,7 +221,7 @@ public class MD_Keywords_INSPIRE extends CI {
 	 * @param myDate		{@link String} = the date related to the originating controlled vocabulary
 	 * @param myDateType	{@link String} = the date type
 	 */
-	private void addNew(final String myString, final String mySource, String myDate, String myDateType) {
+	private void addNew(final String myString, final String mySource, String myDate, String myDateType, boolean free) {
 		myError.setVisible(false);
 		//check if keyword is empty
 		if (myString.isEmpty()) {
@@ -265,7 +272,7 @@ public class MD_Keywords_INSPIRE extends CI {
 		else { // else add a new node
 			TreeItem myParentItem = null;
 			if (!mySource.isEmpty()) myParentItem = getThesaurusParentTreeItem(mySource);			
-			if (myParentItem!=null) { //add a gmd:keyword/gco:CharacterString element
+			if (myParentItem!=null && !free) { //add a gmd:keyword/gco:CharacterString element
 				int nrKeywords = 0;
 				int lastKeywordIndex = 1;
 				for (int k=0;k <myParentItem.getChildCount();k++) {

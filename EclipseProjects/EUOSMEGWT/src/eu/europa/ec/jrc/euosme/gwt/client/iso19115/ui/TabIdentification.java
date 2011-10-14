@@ -70,7 +70,7 @@ public class TabIdentification extends Composite {
 	
 	/** parent identifier declaration */
 	@UiField(provided = true)
-	ISOCharacterString parentIdentifierObj = new ISOCharacterString(constants.parentIdentifier(), constants.parentIdentifierHelp(), false, CheckFunctions.normal, true);
+	CharacterString parentIdentifierObj = new CharacterString(constants.parentIdentifier(), "parentidentifier", false, CheckFunctions.normal, true);
 	
 	/** abstract control declaration */
 	@UiField(provided = true)

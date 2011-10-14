@@ -243,16 +243,31 @@ public class MainPanel extends Composite {
         MenuBar helpMenu = new MenuBar(true);
         // EUR-LEX guidelines
         Command cmdHelpRegulation = new Command() {
-            public void execute() {     
-            	String helpURL = GWT.getHostPageBaseURL() + "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
+            public void execute() {
+        		String helpFile = "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
+        		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+        			helpFile = "userguide/rdsi_guidelines_dataset.htm";
+        			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) 
+        				helpFile = "userguide/rdsi_guidelines_service.htm";
+        		}    
+        		//String helpURL = GWT.getHostPageBaseURL() + "userguide/eurlex_" + LocaleInfo.getCurrentLocale().getLocaleName() + ".htm";
+        		String helpURL = GWT.getHostPageBaseURL() +  helpFile;
+        		
             	if(Utilities.getUserAgent().contains("msie"))	{
             		Window.open(helpURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
             	}
-            	else 
-            		Window.open(helpURL, constants.inspireGuidelines(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+            	else {
+            		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) 
+            			Window.open(helpURL, constants.rdsiHelpTitle(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+            		else 
+            			Window.open(helpURL, constants.inspireGuidelines(),"scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+            	}
             }			
         };
-        helpMenu.addItem(constants.regulationTitle(), cmdHelpRegulation);
+        if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) 
+        	helpMenu.addItem(constants.rdsiHelpTitle(), cmdHelpRegulation);
+        else 
+        	helpMenu.addItem(constants.regulationTitle(), cmdHelpRegulation);
         // User Guide
         Command cmdHelpUserGuide = new Command() {
             public void execute() {
