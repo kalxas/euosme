@@ -33,6 +33,7 @@ import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.TreeItem;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
 import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
@@ -155,26 +156,43 @@ public class MD_Keywords_INSPIRE extends CI {
 			public void onClick(ClickEvent event) {
 				//TODO get the version of the repository
 				String myKeyword = keywordGemetObj.keywordGEMETObj.getText().replace(constants.selectedValue(), "").trim();
-				String mySource = keywordGemetObj.listScheme.getItemText(keywordGemetObj.listScheme.getSelectedIndex()).trim();
-				if (keywordGemetObj.listScheme.getSelectedIndex()!=0) 
-					if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) {
-						myKeyword = toDefinedKeywordService(myKeyword);
-						addNew(myKeyword,mySource + ", version 2.3","","");					
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+					if (keywordGemetObj.sourceGEMETObj.getText().contains("http://www.eionet.europa.eu/gemet/concept/"))
+						addNew(myKeyword,"GEMET - Concepts, version 2.4","2010-01-13","");		
+				}
+				else {
+					String mySource = keywordGemetObj.listScheme.getItemText(keywordGemetObj.listScheme.getSelectedIndex()).trim();
+					if (keywordGemetObj.listScheme.getSelectedIndex()!=0) { 
+						if (mySource.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) {
+							myKeyword = toDefinedKeywordService(myKeyword);
+							addNew(myKeyword,mySource + ", version 2.3","","");					
+						}
+						else {
+							if (EUOSMEGWT.gemetPublicationDate.isEmpty())
+								addNew(myKeyword,mySource ,"","");
+							else
+								addNew(myKeyword,mySource ,EUOSMEGWT.gemetPublicationDate.get(mySource),"");
+						}
 					}
-					else {
-						if (EUOSMEGWT.gemetPublicationDate.isEmpty())
-							addNew(myKeyword,mySource ,"","");
-						else
-							addNew(myKeyword,mySource ,EUOSMEGWT.gemetPublicationDate.get(mySource),"");
-					}
+				}
 			}				
 		});
-		keywordGemetObj.fieldsGroup.add(addGEMETButton);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			keywordGemetObj.setLabel(constants.repositoryGemet());
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))
+			keywordGemetObj.setLabel(constants.onlineRepository());
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))
+			keywordGemetObj.setLabel(constants.repository());
+			
+			
+		keywordGemetObj.fieldsGroup.add(addGEMETButton);		
 		keywordGemetObj.suggestObj.addSelectionHandler(new SelectionHandler<TreeItem>()  {
 			@Override
 			public void onSelection(SelectionEvent<TreeItem> event) {
 				if(event.getSelectedItem().getParentItem()!=null) {
 					keywordGemetObj.GEMETPanel.setVisible(true);
+					//event.getSelectedItem().getTitle()
+					keywordGemetObj.sourceGEMETObj.setText(event.getSelectedItem().getTitle());
 					keywordGemetObj.keywordGEMETObj.setText(constants.selectedValue() + event.getSelectedItem().getText());
 					addGEMETButton.click();
 				}

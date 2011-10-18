@@ -49,6 +49,8 @@ import java.util.Map;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.inspire.geoportal.viewclient.cache.gemet.Concept;
@@ -149,9 +151,8 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
     				uri = repositories;
     				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
     				query = getContents("query_" + paramName + ".rq");
-    				query = query.replace("##extraValue##",extraValue);
-//    				query = query.replace("##extraValue##","http://www.eionet.europa.eu/gemet/concept/");    				
-    				query = query.replace("##clientLanguage##",clientLanguage);
+    				query = query.replace("##extraValue##",extraValue);    				
+					query = query.replace("##clientLanguage##",clientLanguage);
     				query = query.replace("##filter##",filter);
 					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
     				urlParameters+="&limit=" + limit + "&infer=true";    				

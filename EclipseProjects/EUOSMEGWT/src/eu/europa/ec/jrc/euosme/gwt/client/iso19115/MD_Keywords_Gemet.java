@@ -38,6 +38,7 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Tree;
 import com.google.gwt.user.client.ui.TreeItem;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
@@ -75,6 +76,8 @@ public class MD_Keywords_Gemet extends CI {
 	/** panel used to add a keyword */
 	HorizontalPanel GEMETPanel = new HorizontalPanel();
 	public Label keywordGEMETObj = new Label();
+	public Label sourceGEMETObj = new Label();
+	
 	
 	/** Filter */
 	HorizontalPanel filterPanel = new HorizontalPanel();
@@ -116,24 +119,35 @@ public class MD_Keywords_Gemet extends CI {
 		filterButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
-				if (selectedValue.isEmpty()) {
-					suggestObj.setVisible(false);
-					filterClearButton.setEnabled(false);
-					filterPanel.setVisible(false);
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+					requestSearch("http://www.eionet.europa.eu/gemet/concept/",filterTextBox.getText());
+					filterClearButton.setEnabled(true);
 				}
 				else {
-					requestSearch(selectedValue,filterTextBox.getText());
-					//requestSuggestions(selectedValue,filterTextBox.getText());
-					filterClearButton.setEnabled(true);
+					String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
+					if (selectedValue.isEmpty()) {
+						suggestObj.setVisible(false);
+						filterClearButton.setEnabled(false);
+						filterPanel.setVisible(false);
+					}
+					else {
+						requestSearch(selectedValue,filterTextBox.getText());
+						//requestSuggestions(selectedValue,filterTextBox.getText());
+						filterClearButton.setEnabled(true);
+					}
 				}
 			}
 		});		
 		filterClearButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
-				requestSuggestions(selectedValue,"");
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+					requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
+				}
+				else { 
+					String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
+					requestSuggestions(selectedValue,"");
+				}
 				filterClearButton.setEnabled(false);	
 				filterTextBox.setText("");
 			}
@@ -164,13 +178,25 @@ public class MD_Keywords_Gemet extends CI {
 		// GEMET Panel
 		keywordGEMETObj.getElement().getStyle().clearMarginLeft();
 		keywordGEMETObj.setText(constants.selectedValue());
+		sourceGEMETObj.setText("");
+		sourceGEMETObj.setVisible(false);
 		GEMETPanel.add(keywordGEMETObj);
+		GEMETPanel.add(sourceGEMETObj);
 		GEMETPanel.setVisible(false);			
 		fieldsGroup.add(GEMETPanel);
+		
+		// initialize the list
 		// RPC call if requested
-		if (EUOSMEGWT.rpcRepository)
-			// get the list of schemes and populate the list box
-			requestListOfRepository(listScheme);
+		if (EUOSMEGWT.rpcRepository){
+			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				//requestListOfRepository(listScheme);
+				listScheme.setVisible(false);
+				requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
+			}
+			else
+				// get the list of schemes and populate the list box
+				requestListOfRepository(listScheme);
+		}
 		else
 			Utilities.setSuggestList(MyResources.INSTANCE.repositoryList().getText(), listScheme);	
 	}

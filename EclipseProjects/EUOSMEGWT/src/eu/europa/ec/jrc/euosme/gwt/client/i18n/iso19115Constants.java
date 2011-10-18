@@ -486,8 +486,14 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("If the download does not start automatically, please click on 'Open file' button.")
 	String infoOnDownload();
 	
-	@DefaultStringValue("Keyword from online repositories")
+	@DefaultStringValue("Keyword from repositories")
 	String repository();
+	
+	@DefaultStringValue("Keyword from online repositories")
+	String onlineRepository();	
+	
+	@DefaultStringValue("Keyword from GEMET")
+	String repositoryGemet();	
 	
 	@DefaultStringValue("Show/hide tree")
 	String showHideTree();
