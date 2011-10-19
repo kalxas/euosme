@@ -30,6 +30,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.TreeItem;
 
@@ -195,6 +196,7 @@ public class MD_Keywords_INSPIRE extends CI {
 					keywordGemetObj.sourceGEMETObj.setText(event.getSelectedItem().getTitle());
 					keywordGemetObj.keywordGEMETObj.setText(constants.selectedValue() + event.getSelectedItem().getText());
 					addGEMETButton.click();
+					DOM.scrollIntoView(event.getSelectedItem().getElement());
 				}
 			}			
 		});

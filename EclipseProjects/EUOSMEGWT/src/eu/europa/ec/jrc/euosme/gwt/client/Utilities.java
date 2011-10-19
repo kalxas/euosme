@@ -36,6 +36,7 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Button;
@@ -1791,6 +1792,7 @@ public class Utilities {
 			if (myList.getChild(0) != null)
 				if (myList.getChild(0).getTitle().equalsIgnoreCase(constants.loading())) myList.getChild(0).remove();
 			myList.getTree().ensureSelectedItemVisible();
+			DOM.scrollIntoView(myList.getChild(myList.getChildCount()-1).getElement());
 		}
 	}
 

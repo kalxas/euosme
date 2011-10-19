@@ -26,9 +26,12 @@ import com.google.gwt.event.dom.client.ChangeEvent;
 import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.logical.shared.CloseEvent;
+import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.event.logical.shared.OpenEvent;
 import com.google.gwt.event.logical.shared.OpenHandler;
 import com.google.gwt.i18n.client.LocaleInfo;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.Image;
@@ -171,10 +174,24 @@ public class MD_Keywords_Gemet extends CI {
 					w.addItem(new Image(MyResources.INSTANCE.loadingImg()));
 					w.getChild(0).setTitle(constants.loading());
 					suggestObj.ensureSelectedItemVisible();
-					requestSubSuggestions(w);
-				}								
+					requestSubSuggestions(w);					
+				}
+				else if (w.getChildCount()>1){
+					DOM.scrollIntoView(w.getChild(w.getChildCount()-1).getElement());					
+				}
+					
 			}		
-		});		
+		});	
+		suggestObj.addCloseHandler(new CloseHandler<TreeItem>(){
+
+			@Override
+			public void onClose(CloseEvent<TreeItem> event) {				
+				TreeItem w = event.getTarget();
+				//suggestObj.setSelectedItem(w);
+				DOM.scrollIntoView(w.getElement());
+			}
+			
+		});
 		// GEMET Panel
 		keywordGEMETObj.getElement().getStyle().clearMarginLeft();
 		keywordGEMETObj.setText(constants.selectedValue());
