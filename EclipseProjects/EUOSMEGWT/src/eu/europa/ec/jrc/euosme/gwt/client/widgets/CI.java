@@ -63,6 +63,9 @@ public class CI extends Composite {
 	/** Global variable used to check if the field could be multiple */ 
 	public boolean isMultiple=false;
 	
+	/** Can be closed or not **/	 
+	public boolean closeable=false;
+	
 	/** grouping fields declaration */
 	@UiField(provided = true)
 	VerticalPanel fieldsGroupVertical = new VerticalPanel();
@@ -119,11 +122,12 @@ public class CI extends Composite {
 	 * @param multiple	{@link Boolean} = indicates if the element could be duplicated
 	 * @param help		{@link String} = the anchor in the help 
 	 */
-	public CI(String label, boolean required, boolean multiple, String help, CIOrientations orientation) {
+	public CI(String label, boolean required, boolean multiple, String help, CIOrientations orientation, boolean close) {
 		// Set global variables
 		isRequired = required;
 		isMultiple = multiple;
 		helpAnchor = help;
+		closeable = close;
 		
 		// Add * for mandatory fields
 		if (multiple==true) {
@@ -148,17 +152,79 @@ public class CI extends Composite {
 		
 		// Set info button
 		infoButton.setHelpAnchor(helpAnchor);
-		componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
-			@Override
-			public void onClose(CloseEvent<DisclosurePanel> event) {				
-				event.getTarget().setOpen(true);
-			}	
-		});
+		if (!closeable){
+			componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
+				@Override
+				public void onClose(CloseEvent<DisclosurePanel> event) {				
+					event.getTarget().setOpen(true);
+				}	
+			});
+		}
 		
 		// Set preferred layout
 		if (orientation.equals(CIOrientations.VERTICAL)) fieldsGroup = fieldsGroupVertical;
 		else fieldsGroup = fieldsGroupHorizontal;		
 	}
+	
+	/**
+	 * constructor CI model
+	 * 
+	 * @param label		{@link String} = the label in the header
+	 * @param required	{@link Boolean} = indicates if the element is required
+	 * @param multiple	{@link Boolean} = indicates if the element could be duplicated
+	 * @param help		{@link String} = the anchor in the help 
+	 */
+	public CI(String label, boolean required, boolean multiple, String help, CIOrientations orientation) {
+		// Set global variables
+		isRequired = required;
+		isMultiple = multiple;
+		helpAnchor = help;
+		closeable = false;
+		
+		// Add * for mandatory fields
+		if (multiple==true) {
+			removeGroupButton.setTitle(messages.remove(myLabel.getText()));
+			removeGroupButton.setEnabled(false);
+			removeGroupButton.setVisible(true);
+			removeGroupButton.addStyleName("minusButton");			
+		}
+		setLabel(label);			
+		
+		// Initialize widget
+		initWidget(CIUiBinder.createAndBindUi(this));				
+		
+		//componentPanel.setOpen(required);
+		componentPanel.setOpen(true); // always opened
+		//componentPanel.getElement().getStyle().setBackgroundColor("red");
+		
+		//Set Error Label widget		
+		myError.setVisible(false);
+		
+		sinkEvents(com.google.gwt.user.client.Event.ONKEYPRESS);
+		
+		// Set info button
+		infoButton.setHelpAnchor(helpAnchor);
+		if (!closeable){
+			componentPanel.addCloseHandler(new CloseHandler<DisclosurePanel>() {
+				@Override
+				public void onClose(CloseEvent<DisclosurePanel> event) {				
+					event.getTarget().setOpen(true);
+				}	
+			});
+		}
+		
+		// Set preferred layout
+		if (orientation.equals(CIOrientations.VERTICAL)) fieldsGroup = fieldsGroupVertical;
+		else fieldsGroup = fieldsGroupHorizontal;		
+	}
+	
+	public void open(){
+		componentPanel.setOpen(true);
+	}
+	
+	public void close(){
+		componentPanel.setOpen(false);
+	}	
 	
 	/**
 	 * Set the header

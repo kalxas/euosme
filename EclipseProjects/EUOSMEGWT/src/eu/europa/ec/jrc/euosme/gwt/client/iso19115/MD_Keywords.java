@@ -66,7 +66,7 @@ public class MD_Keywords extends CI {
      * @return	the widget composed by MD_Keywords fields
      */
 	public MD_Keywords(String label, boolean required, boolean multiple, String help) {
-		super(label, required, multiple, help, CIOrientations.VERTICAL);
+		super(label, required, multiple, help, CIOrientations.VERTICAL, true);
 		fieldsGroup.add(keywordObj);
 		fieldsGroup.add(typeObj);
 		fieldsGroup.add(thesaurusObj);		

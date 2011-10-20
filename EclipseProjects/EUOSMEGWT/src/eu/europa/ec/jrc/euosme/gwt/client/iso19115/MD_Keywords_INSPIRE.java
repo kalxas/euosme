@@ -214,6 +214,9 @@ public class MD_Keywords_INSPIRE extends CI {
 			}				
 		});
 		keywordFreeObj.fieldsGroup.add(addFreeButton);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			keywordFreeObj.close();
+		
 		// set interface
 		setInterface(-1);
 	}

@@ -15,7 +15,7 @@
 	   		<g:CheckBox ui:field="ck_rdsi"/><g:Label>RDSI</g:Label>
 	   		</g:HorizontalPanel>
 	   		<g:HorizontalPanel>
-	   		<g:CheckBox ui:field="ck_inspire"/><g:Label>INSPIRE_EC</g:Label>
+	   		<g:CheckBox ui:field="ck_inspire"/><g:Label>INSPIRE@EC</g:Label>
 	   		</g:HorizontalPanel>
 	   		<g:HorizontalPanel>
 	   		<g:CheckBox ui:field="ck_cch"/><g:Label>CCH</g:Label>
