@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:client="urn:import:eu.europa.ec.jrc.euosme.gwt.client">
+	<g:DisclosurePanel ui:field="componentPanel">
+ 		<g:customHeader>
+ 			<g:HorizontalPanel>
+   				<g:Label addStyleNames="h3" ui:field="myLabel"/>  
+   				<client:InfoButton ui:field="infoPublishButton"/>
+   			</g:HorizontalPanel>				
+   		</g:customHeader> 		
+ 		<g:VerticalPanel> 		
+	   		<g:Label>Publish this metadata in: </g:Label>
+	   		<g:HorizontalPanel>
+	   		<g:CheckBox ui:field="ck_rdsi"/><g:Label>RDSI</g:Label>
+	   		</g:HorizontalPanel>
+	   		<g:HorizontalPanel>
+	   		<g:CheckBox ui:field="ck_inspire"/><g:Label>INSPIRE_EC</g:Label>
+	   		</g:HorizontalPanel>
+	   		<g:HorizontalPanel>
+	   		<g:CheckBox ui:field="ck_cch"/><g:Label>CCH</g:Label>
+	   		</g:HorizontalPanel>
+ 		</g:VerticalPanel>
+ 	</g:DisclosurePanel>		
+</ui:UiBinder> 

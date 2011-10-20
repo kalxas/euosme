@@ -19,6 +19,7 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -88,6 +89,9 @@ public class EUOSMEGWT implements EntryPoint {
 	
 	/** The filename of metadata file */
 	public static String fileName = "#FILENAME#";
+	
+	/** The  RDSI keywords */	
+	public static ArrayList<String> rdsi_keyword = new ArrayList<String>();
 	
 	/** The publication date of GEMET schemes */
 	public static Map<String,String> gemetPublicationDate = new LinkedHashMap<String, String>();

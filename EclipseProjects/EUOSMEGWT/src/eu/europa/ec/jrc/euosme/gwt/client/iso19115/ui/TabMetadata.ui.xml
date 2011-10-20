@@ -10,6 +10,7 @@
 		<widgets:CharacterString ui:field="fileIdentifierObj"/>
 		<widgets:DateImpl ui:field="dateStampObj"/>
 		<widgets:CodeList ui:field="languageObj"/>
+		<widgets:MD_MD_PublishInfo ui:field="publishInfoObj"/>		  
 		<g:Hidden ui:field="fileNameObj"/>
 		<g:Label ui:field="mandatoryFieldLabel"/>
 	</g:HTMLPanel>

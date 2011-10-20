@@ -30,6 +30,8 @@ import java.util.TreeMap;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Overflow;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.json.client.JSONArray;
@@ -180,7 +182,7 @@ public class Utilities {
 	  	    	buildFromNodes(messageDom.getChildNodes(), "",topTreeItem, messageDom);
 	  	    	MainPanel.myTree.addItem(topTreeItem);	  	    	
 	  	    }
-	  	    else {
+	  	    else {	  	    	
 	  	    	ret = buildFromNodesLoad(messageDom.getChildNodes(), "", messageDom);	  	    	
 	  	    }
 	  	} catch (DOMException e) { }
@@ -410,7 +412,16 @@ public class Utilities {
         							myString = keyword.getChildNodes().item(kk).getFirstChild().getNodeValue();
         						}
         						catch (Exception ex) { }
-        						if (!myString.isEmpty()) myKeywords.add(myString);
+        						if (!myString.isEmpty()){ 
+        							if (!myString.equals(constants.rdsi_rdsi())
+        								&& !myString.equals(constants.rdsi_inspire())
+        								&& !myString.equals(constants.rdsi_cch()))  
+        								myKeywords.add(myString);
+        							else {
+        								// add to the list (to be saved later)
+        								EUOSMEGWT.rdsi_keyword.add(myString); 
+        							}
+        						}
         					}
         						  	
         				}
@@ -1862,4 +1873,82 @@ public class Utilities {
 //			}		
 		}		
 	}
+	
+	/**
+	 * remove all RDSI keywords from the tree
+	 * @param keywords
+	 */
+	public static void removeKeywordRDSI() {
+			int nrKeywords = 0;			
+			int desIndex = 0;			
+			TreeItem dataIdentificationItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1]");	
+			//md_metadata[1].identificationinfo[1].md_dataidentification[1].descriptivekeywords[6].md_keywords[1].keyword[1].characterstring[1]
+			// current keyword list
+			for (int k=0;k <dataIdentificationItem.getChildCount();k++) {
+				if (dataIdentificationItem.getChild(k).getText().equalsIgnoreCase("gmd:descriptiveKeywords")) {
+					desIndex = k;
+					nrKeywords +=1;
+				}
+			}
+			TreeItem lastDescriptiveKeywords = dataIdentificationItem.getChild(desIndex);
+			lastDescriptiveKeywords.remove();
+			//MainPanel.myTree.removeItem(lastDescriptiveKeywords);
+	}
+	
+	/**
+	 * This function is used to add a keyword of RDSI
+	 * 
+	 * 
+	 * @param keyword		{@link String} = the keyword
+	 */
+	public static void addNewKeywordRDSI(ArrayList<String> keywords) {
+		  // add a gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString element plus thesaurus
+		// formname: md_metadata[1].identificationinfo[1].md_dataidentification[1].descriptivekeywords[1].md_keywords[1]
+		// parent item: md_metadata[1].identificationinfo[1].md_dataidentification[1]
+				TreeItem dataIdentificationItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1]");				
+				int nrKeywords = 0;
+				int lastKeywordIndex = 1;
+				// current keyword list
+				for (int k=0;k <dataIdentificationItem.getChildCount();k++) {
+					if (dataIdentificationItem.getChild(k).getText().equalsIgnoreCase("gmd:descriptiveKeywords")) {
+						nrKeywords +=1;
+						lastKeywordIndex=dataIdentificationItem.getChildIndex(dataIdentificationItem.getChild(k));
+					}
+				}
+				nrKeywords +=1;
+				String parentTitle = dataIdentificationItem.getTitle() + ".descriptivekeywords[" + nrKeywords + "]";
+				//gmd:descriptiveKeywords
+				TreeItem descriptiveKeywordsTreeItem = new TreeItem();
+				descriptiveKeywordsTreeItem.setTitle(parentTitle);
+				descriptiveKeywordsTreeItem.setText("gmd:descriptiveKeywords");
+				//gmd:MD_Keywords gmd:descriptiveKeywords/gmd:MD_Keywords
+				TreeItem MD_KeywordsTreeItem = new TreeItem();
+				MD_KeywordsTreeItem.setTitle(parentTitle + ".md_keywords[1]");
+				MD_KeywordsTreeItem.setText("gmd:MD_Keywords");
+				descriptiveKeywordsTreeItem.addItem(MD_KeywordsTreeItem);
+				
+				int index = 0;
+				for (String keyword:keywords){
+					index+=1;
+					//gmd:keyword gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
+					TreeItem keywordTreeItem = new TreeItem();
+					keywordTreeItem.setTitle(parentTitle + ".md_keywords[1].keyword["+index+"]");
+					keywordTreeItem.setText("gmd:keyword");
+					MD_KeywordsTreeItem.addItem(keywordTreeItem);
+					//gco:CharacterString gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+					TreeItem characterstringTreeItem = new TreeItem();
+					characterstringTreeItem.setTitle(parentTitle + ".md_keywords[1].keyword["+index+"].characterstring[1]");
+					characterstringTreeItem.setText("gco:CharacterString");
+					keywordTreeItem.addItem(characterstringTreeItem);
+					//value of gco:CharacterString gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString
+					TreeItem valueTreeItem = new TreeItem(constants.XMLValue() + keyword); 				
+					characterstringTreeItem.addItem(valueTreeItem);
+				}
+				
+				// set source
+				
+				//insert created keyword element in the right place
+				dataIdentificationItem.insertItem(lastKeywordIndex+1,descriptiveKeywordsTreeItem);
+					
+	}	
 }

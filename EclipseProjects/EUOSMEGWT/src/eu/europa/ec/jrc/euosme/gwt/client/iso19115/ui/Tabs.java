@@ -23,6 +23,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.HasLoadHandlers;
 import com.google.gwt.event.dom.client.LoadEvent;
 import com.google.gwt.event.dom.client.LoadHandler;
+import com.google.gwt.event.logical.shared.SelectionEvent;
+import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.event.shared.HandlerRegistration;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -32,6 +34,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TabLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
 
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 
 /**
@@ -90,6 +93,7 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 	@UiField(provided = true)
 	TabMetadata tabMetadataObj = new TabMetadata();
 	
+	
 	@UiField(provided = true)
 	TabOrganization tabOrganizationObj= new TabOrganization();
 	
@@ -128,7 +132,30 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 	public Tabs() {
 		this.addLoadHandler(this);
 		this.sinkEvents(Event.ONLOAD);		
-		initWidget(uiBinder.createAndBindUi(this));			
+		initWidget(uiBinder.createAndBindUi(this));		
+		
+		tabs.addSelectionHandler(new SelectionHandler<Integer>() {
+
+			@Override
+			public void onSelection(SelectionEvent<Integer> event) {				
+				// tab metadata 
+				if (event.getSelectedItem() == 0){
+//					tabMetadataObj.publishInfoObj.reset();
+//					for (String keyword:EUOSMEGWT.rdsi_keyword) {
+//						if (keyword.equals(constants.rdsi_rdsi()))
+//							tabMetadataObj.publishInfoObj.ck_rdsi.setValue(true);
+//						else if (keyword.equals(constants.rdsi_inspire()))
+//							tabMetadataObj.publishInfoObj.ck_inspire.setValue(true);
+//						else if (keyword.equals(constants.rdsi_cch()))
+//							tabMetadataObj.publishInfoObj.ck_cch.setValue(true);
+//					}
+				}
+				
+			}
+			
+		});
+			
+	
 	}	
 	
 	/**
@@ -160,5 +187,8 @@ public class Tabs extends Composite implements LoadHandler, HasLoadHandlers {
 	}
 
 	@Override
-	public void onLoad(LoadEvent event) {}
+	public void onLoad(LoadEvent event) {
+		
+		
+	}
 }

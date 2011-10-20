@@ -323,8 +323,10 @@ public class MD_Keywords_INSPIRE extends CI {
 				Utilities.ensureItemVisible(valueTreeItem);				
 			}
 			else { // add a gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword/gco:CharacterString element plus thesaurus
+				// formname: md_metadata[1].identificationinfo[1].md_dataidentification[1].descriptivekeywords[1].md_keywords[1]
 				myParentItem = Utilities.getSelectTreeItem(this.getMyFormName());
 				myParentItem = myParentItem.getParentItem().getParentItem();
+				// md_metadata[1].identificationinfo[1].md_dataidentification[1]
 				int nrKeywords = 0;
 				int lastKeywordIndex = 1;
 				for (int k=0;k <myParentItem.getChildCount();k++) {

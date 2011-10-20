@@ -19,6 +19,7 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.google.gwt.core.client.GWT;
@@ -153,7 +154,7 @@ public class MainPanel extends Composite {
 	public MainPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
 		
-		tabs.getElement().getParentElement().setAttribute("class","prettyHeight");
+		tabs.getElement().getParentElement().setAttribute("class","prettyHeight");		
 		
 		// Set cursor to hourglass
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
@@ -470,6 +471,9 @@ public class MainPanel extends Composite {
 		Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);
 		MainPanel.myTree.removeItems();
 		
+		// rdsi keyword reset
+		EUOSMEGWT.rdsi_keyword = new ArrayList<String>();
+		
 		// default XML
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) ) {
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) 
@@ -490,6 +494,19 @@ public class MainPanel extends Composite {
 		
 		// load file
 		if (!loadFileXML.isEmpty()) Utilities.parseMessage(loadFileXML,false);
+		
+		// load RDSI to metadata tab
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+			tabs.tabMetadataObj.publishInfoObj.reset();
+			for (String keyword:EUOSMEGWT.rdsi_keyword) {
+				if (keyword.equals(constants.rdsi_rdsi()))
+					tabs.tabMetadataObj.publishInfoObj.ck_rdsi.setValue(true);
+				else if (keyword.equals(constants.rdsi_inspire()))
+					tabs.tabMetadataObj.publishInfoObj.ck_inspire.setValue(true);
+				else if (keyword.equals(constants.rdsi_cch()))
+					tabs.tabMetadataObj.publishInfoObj.ck_cch.setValue(true);
+			}
+		}
 		
 		//load file name
 		//getFileName();
@@ -573,7 +590,20 @@ public class MainPanel extends Composite {
 	/**
     * RPC save file
     */
-	private void saveFile(String myExtension) {
+	private void saveFile(String myExtension) {		
+		// save RDSI keyword	
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+			EUOSMEGWT.rdsi_keyword = new ArrayList<String>();
+			if (tabs.tabMetadataObj.publishInfoObj.ck_rdsi.getValue())
+				EUOSMEGWT.rdsi_keyword.add(constants.rdsi_rdsi());
+			if (tabs.tabMetadataObj.publishInfoObj.ck_inspire.getValue())
+				EUOSMEGWT.rdsi_keyword.add(constants.rdsi_inspire());
+			if (tabs.tabMetadataObj.publishInfoObj.ck_cch.getValue())
+				EUOSMEGWT.rdsi_keyword.add(constants.rdsi_cch());
+			if (EUOSMEGWT.rdsi_keyword.size()>0)
+				Utilities.addNewKeywordRDSI(EUOSMEGWT.rdsi_keyword);
+		}
+		
 		// set filename
 		String tmpFileName = getFileName();
 		if (tmpFileName.toLowerCase().endsWith(".xml") && myExtension.equalsIgnoreCase(".xmlt")) 
@@ -586,6 +616,13 @@ public class MainPanel extends Composite {
 		
 		//get XML tree structure
 		String myXMLTree = getXMLTree();
+		
+		// remove RDSI keywords
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+			if (EUOSMEGWT.rdsi_keyword.size()>0)
+				Utilities.removeKeywordRDSI();
+		}
+			
 		
 		// Show a dialog box when saving
 		final DialogBox myUploadDialog = new DialogBox();

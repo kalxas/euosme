@@ -33,11 +33,14 @@ import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.CI_ResponsibleParty;
+import eu.europa.ec.jrc.euosme.gwt.client.iso19115.MD_Keywords_DataThemes;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.MD_MD_PublishInfo;
 
 /**
  * Create the tab metadata
@@ -73,6 +76,10 @@ public class TabMetadata extends Composite {
 	/** resource language control declaration */
 	@UiField(provided = true)
 	CodeList languageObj = new CodeList(constants.metadataLanguage(),"metadata_language",false,"2","eng",true);
+	
+	/** Publish info */	
+	@UiField(provided = true)
+	public MD_MD_PublishInfo publishInfoObj = new MD_MD_PublishInfo(constants.publish_info(), "publish_info", false);
 	
 	/** file identifier control declaration  */
 	//@UiField(provided = true)
@@ -111,6 +118,7 @@ public class TabMetadata extends Composite {
 		dateStampObj.myCheck();
 		languageObj.myCheck();
 		fileIdentifierObj.myCheck();
+		publishInfoObj.myCheck();
 	}
 	
 	/**
@@ -133,8 +141,10 @@ public class TabMetadata extends Composite {
 			languageObj.setRequired(true);
 			responsiblePartyContainerObj.setLabel(constants.pointOfContactINSPIRE());
 			responsiblePartyObj.setInterface(0);
-			fileIdentifierObj.setVisible(false);
-			
-		}		
+			fileIdentifierObj.setVisible(false);			
+		}
+		if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+			publishInfoObj.setVisible(false);
+		}
 	}	
 }
