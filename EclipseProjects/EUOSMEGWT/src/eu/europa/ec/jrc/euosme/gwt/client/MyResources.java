@@ -67,7 +67,10 @@ public interface MyResources extends ClientBundle{
 	public TextResource codeList2();
 	
 	@Source("codeLists/3.txt")
-	public TextResource codeList3();
+	public TextResource codeList3();	
+	
+	@Source("codeLists/3RDSI.txt")
+	public TextResource codeList3RDSI();	
 	
 	@Source("codeLists/4.txt")
 	public TextResource codeList4();
@@ -107,6 +110,9 @@ public interface MyResources extends ClientBundle{
 	
 	@Source("codeLists/12RDSI.txt")
 	public TextResource codeList12RDSI();
+	
+	@Source("codeLists/15RDSI.txt")
+	public TextResource codeList15RDSI();
 	
 	@Source("repositories/Repositories.cache.xml")
 	public TextResource repositoryList();

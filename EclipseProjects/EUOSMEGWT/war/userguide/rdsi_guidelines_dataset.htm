@@ -130,14 +130,24 @@
 <br><a href="#appendixi">Appendix I: Topic Category Descriptions</a>
 <br><a href="#appendixii">Appendix II: Geographic Bounding Boxes</a>
 <br><a href="#appendixiii">Appendix III: Responsible Party Role Descriptions</a>
-<br><a href="#appendixiv">Appendix IV: Codes for the Representation of Names of Languages</a>
-<br><a href="#appendixv">Appendix V: Sample Metadata XML</a>
-<br><a href="#appendixvi">Appendix VI: References</a>
+<br><a href="#appendixiv">Appendix IV: Codes for the Representation of Names of Languages (ISO 639-2)</a>
+<br><a href="#appendixv">Appendix V: Sample Metadata XML (encoding ISO 19139)</a>
+<br><a href="#appendixvi">Appendix VI: Categories for data sharing</a>
+<br><a href="#appendixvii">Appendix VII: References</a>
+
+<!--<br><a href="#appendixvi">Appendix VI: References</a>-->
 
 <!--</div>-->
 </p>
 
 <h2><a name="introduction">1. Introduction</a></h2>
+<p>This guide concerns Metadata for discovery for datasets and dataset series in the context of INSPIRE (Infrastructure for Spatial Information in Europe) [<a href="#ref1">1</a>]. Metadata for discovery is highly structured and contains a fixed number of elements so that the data it describes can be systematically searched and found. These metadata elements are defined in the INSPIRE Metadata Regulation in [<a href="#ref2">2</a>]. The structure for a specific encoding is defined in the corresponding Guidance Document in [<a href="#ref3">3</a>]. 
+</p>
+<p>
+The following instructions focus on the creation of metadata for spatial datasets and spatial data series. Spatial Data Services will be described in separate document. The document is a draft version and has been created in collaboration with Eurostat. 
+</p>
+
+<!--
 <p>All scientific units of the Institute for Environment and Sustainability (IES) of the Joint Research Centre use and produce data. It should be easy to discover, access and trace those datasets that are considered reference for the work within IES and to ascertain who are the responsible parties for their creation (or collection), their maintenance and distribution.
 </p>
 <p>
@@ -145,10 +155,181 @@ Quality-ensured metadata is an important means to reach this goal. This guide co
 </p>
 <p>
 The Reference Data and Services Initiative (RDSI) is an enterprise of IES to establish an infrastructure and governance rules to ensure optimal access to reference data. For metadata concerning spatial data RDSI is supporting INSPIRE (Infrastructure for Spatial Information in Europe) [<a href="#ref1">1</a>] and, therefore, metadata are expected to be compliant with the INSPIRE Metadata Regulation [<a href="#ref2">2</a>] and the corresponding Guidance Documents [<a href="#ref3">3</a>] and [<a href="#ref4">4</a>]. The metadata will then be collected and available to search using the RDSI Portal.  The initial focus of RDSI is on reference data.  The following instructions are, therefore, focused on the creation of metadata for spatial datasets and spatial data series.  Spatial Data Services will be described in a future stage of the project.
-</p>
+</p>-->
 
 <h2><a name="guidelines">2. Guidelines for Metadata Creation</a></h2>
-
+<p>
+These guidelines are based on the INSPIRE Metadata Regulation [<a href="#ref2">2</a>].  The following tables list all metadata elements, and each element includes the basic technical details, explanation why the element is required, guidelines on how to fill in the element, and an example. The document introduces extra restrictions or best practices to ensure harmonised metadata, and for some metadata fields it goes beyond the definitions of [<a href="#ref2">2</a>] to assist high search precision and easy evaluation of metadata.
+</p>
+<p>
+Below you find tables that provide an overview of all elements. It lists the name, the definition based on [<a href="#ref2">2</a>] and whether they are original INSPIRE elements (INSPIRE), INSPIRE elements that have been extended with additional aspects (INSPIRE++) or new elements that have been added (New element). 
+</p>
+<br>
+<h3>Identification of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>			<td>Resource Title</td>						<td>This a characteristic, and often unique, name by which the resource is known.</td>			<td>INSPIRE</td>		</tr>
+		<tr>			<td>Resource Abstract</td>				<td>This is a brief narrative summary of the content of the resource.</td>			<td>INSPIRE</td>		</tr>
+		<tr>			<td>Resource Type</td>					<td>This is the type of resource being described by the metadata.</td>			<td>INSPIRE</td>		</tr>
+		<tr>			<td>Resource Locator</td>				<td>The resource locator defines the link(s) to the resource and/or the link to additional information about the resource.</td>			<td>INSPIRE</td>		</tr>
+		<tr>			<td>Unique Resource Identifier</td>	<td>A value uniquely identifying the resource.</td>			<td>INSPIRE++</td>		</tr>
+		<tr>			<td>Resource Language</td>				<td>The language(s) used within the resource.</td>			<td>INSPIRE++</td>		</tr>
+		<tr>			<td>Parent Identifier</td>					<td></td>			<td>New element</td>		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Categorisation of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Topic Category</td>
+			<td>The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources.</td>
+			<td>INSPIRE</td>	
+		</tr>
+		<tr>
+			<td>Keyword Value</td>
+			<td>The keyword value is a commonly used word, formalised word or phrase used to describe the subject.</td>
+			<td>INSPIRE</td>
+			</tr>
+		<tr>
+			<td>Originating Controlled Vocabulary</td>
+			<td>If the keyword value originates from a controlled vocabulary (thesaurus, ontology), for example GEMET, the citation of the originating controlled vocabulary shall be provided.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Geographical Location of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Geographic Bounding Box</td>
+			<td>This is the extent of the resource in the geographic space, given as a bounding box.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Temporal Reference of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Temporal Extent</td>
+			<td>The temporal extent defines the time period covered by the content of the resource</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Date of Creation</td>
+			<td>This is the date of creation of the resource. There shall not be more than one date of creation.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Date of Publication</td>
+			<td>This is the date of publication of the resource when available, or the date of entry into force. There may be more than one date of publication.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Date of Last Revision</td>
+			<td>This is the date of last revision of the resource, if the resource has been revised. There shall not be more than one date of last revision.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Quality and Validity of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Lineage</td>
+			<td>This is a statement on process history and/or overall quality of the spatial data set. Where appropriate it may include a statement whether the data set has been validated or quality assured, whether it is the official version (if multiple versions exist), and whether it has legal validity.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Spatial Resolution</td>
+			<td>Spatial resolution refers to the level of detail of the data set. It shall be expressed as a set of zero to many resolution distances (typically for gridded data and imagery-derived products) or equivalent scales (typically for maps or map-derived products).</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Conformity of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Specification</td>
+			<td>This is a citation of the implementing rules adopted under Article 7(1) of Directive 2007/2/EC or other specification to which a particular resource conforms. A resource may conform to more than one implementing rules adopted under Article 7(1) of Directive 2007/2/EC or other specification.</td>
+			<td>INSPIRE++</td>
+		</tr>
+		<tr>
+			<td>Degree</td>
+			<td> This is the degree of conformity of the resource to the implementing rules adopted under Article 7(1) of Directive2007/2/EC or other specification.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Constraints of the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Conditions Applying to Access and Use</td>
+			<td>This metadata element defines the conditions for access and use of spatial data sets and services, and where applicable, corresponding fees as required by Article 5(2)(b) and Article 11(2)(f) of Directive 2007/2/EC.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Limitations on Public Access</td>
+			<td>When Member States limit public access to spatial data sets and spatial data services under Article 13 of Directive 2007/2/EC, this metadata element shall provide information on the limitations and the reasons for them.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Responsibility for the Resource</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Responsible Party</td>
+			<td>This is the description of the organisation responsible for the resource. This description shall include the name of the organisation and a contact e-mail address.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Responsible Party Role</td>
+			<td> This is the role of the responsible organisation.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<h3>Details about the Metadata Record</h3>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>Metadata Point of Contact</td>
+			<td> This is the description of the organisation responsible for the creation and maintenance of the metadata.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Metadata Date</td>
+			<td> The date which specifies when the metadata record was created or updated.</td>
+			<td>INSPIRE</td>
+		</tr>
+		<tr>
+			<td>Metadata Language</td>
+			<td> This is the language in which the metadata elements are expressed.</td>
+			<td>INSPIRE</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
 <h3><a id="identification" name="identification">2.1</a> Identification of the Resource</h3>
 <p>Elements that will help the user recognise the resource.</p>
 <h3><a id="resourceTitle" name="resourceTitle">2.1.1</a> Resource Title</h3>
@@ -156,6 +337,7 @@ The Reference Data and Services Initiative (RDSI) is an enterprise of IES to est
 <p>Resource Title</p>
 <h4>Why is this element required?</h4>
 <p>The title is the most informative element of your metadata record. When done correctly, with one glance the person searching for data understands which dataset he or she has in front of him.
+</p><p>
 In performing a text search within the RDSI portal, the highest priority will be given to results that find the desired search text in the title.
 </p>
 <h4>Obligation</h4>
@@ -185,7 +367,8 @@ If this data is part of a larger project, you might indicate the Project at the 
 <p>Resource Abstract</p>
 <h4>Why is this element required?</h4>
 <p>The abstract provides a clear and concise statement that enables the reader to understand the content of the dataset. 
-In performing a text search within the RDSI portal, a high priority will be given to results that find the desired search text in the abstract.
+</p><p>
+When performing a text search many search algorithms will give a high priority will be given to results that find the desired search text in the abstract.
 </p>
 <h4>Obligation</h4>
 <p>Mandatory</p>
@@ -204,11 +387,11 @@ In performing a text search within the RDSI portal, a high priority will be give
 <br>
 NOTE: Many discovery clients represent as a first preview only the first 100 characters or the first sentence of the abstract. Therefore, please summarise the most important details you would like to communicate in this first sentence.
 <h4>Examples</h4>
-<p>This data set contains the location of over 4000 Pan European airports and heliports and the most important runways, taken from different sources. 
+<p>&ldquo;This data set contains the location of over 4000 Pan European airports and heliports and the most important runways, taken from different sources. 
 </p><p>
 All the airports and heliports reported by Eurocontrol and those covered by Commission Regulation (EC) No 1358/2003 and related acts (Commission Regulation (EC) No 158/2007, Commission Regulation (EC) No 546/2005) (http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:194:0009:0033:EN:PDF) are depicted as points. The large airports are also depicted as areas (polygons) and include all – except one – of the airports covered by Commission Regulation (EC) No 1358/2003 (and related acts). The most important runways are depicted as polylines. There is also an additional layer including all the heliports available in the EuroRegionalMap v.3.0 from Eurogeographics. Airports can be identified via different codes (including TEN, IATA ICAO airport codes and the codes reported in Commission Regulation (EC) No 1358/2003 and amendments).
 </p><p>
-Dataset coverage is geographic Europe plus territories outside Europe administrated by Member States of the European Union.
+Dataset coverage is geographic Europe plus territories outside Europe administrated by Member States of the European Union.&rdquo;
 </p>
 <h4>Other comments</h4>
 <p></p>
@@ -251,9 +434,8 @@ Dataset coverage is geographic Europe plus territories outside Europe administra
 <p>Resource Locator</p>
 
 <h4>Why is this element required?</h4>
-<p>This is the 'navigation section' of your metadata record. From here you can point users to additional information, to the location where the data can be downloaded and to related view services or where additional information about the resource may be provided.</p>
-<p>Setting up the correct resource locators is important for the identification of links between the data and services.</p>
-<p>Additional to the resource locator we would like to collect the function that the locator has. This allows clients to sort the list of resource locators and provide some additional information. </p>
+<p>This is the 'navigation section' of your metadata record. From here you can point users to the location (URL) where the data can be downloaded, to related view services or to where additional information about the resource may be provided. Setting up the correct resource locators is important for the connection between the data and the services that provide access to them or for providing additional information concerning the resource.</p>
+<p>As you have seen above, the possibilities, and uses of this field, are numerous: information, application, download service view service, you name it. This multiple use comes with a problem: The person reading the metadata will only see an unsorted and uninformative list of links. If a person tries to download the data, he or she would eventually have to go through all the links separately, possibly only to find out that none of the links provided actually gives access to the data. To solve this we suggest three optional additional elements that provide more information: A human-readable title and a description, and a machine-readable function code.  This allows providing additional information for the user and to automatically sort and label the locators.</p>
 
 <h4>Obligation</h4>
 <p>Conditional</p>
@@ -262,57 +444,73 @@ Dataset coverage is geographic Europe plus territories outside Europe administra
 <p>Multiple</p>
 
 <h4>Domain</h4>
-<p>The Resource Locator consists of a Linkage and a Function.
-<br>Linkage is a URL.
-<br>Function is taken from code list provided by ISO 19115 CI_OnLineFunctionCode:
+<p>The Resource Locator consists of a Linkage, and optionally a Name, a Description and a Function.
+<br><b>Linkage</b> is a URL.
+<br><b>Name</b> is a free text.
+<br><b>Description</b> is a free text.
+<br><b>Function</b>is a codelist, extending the ISO 19115  CI_OnLineFunctionCode:
 <br>• download
 <br>• information
 <br>• search
 <br>• offlineAccess
 <br>• order
+<br><br>
+The list is extended with the following entry: 
+<br>• view
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>NOTE   The list provided by ISO 19115 is fixed, it does not allow adding terms or changing them. Therefore we provided a mapping from the most frequent types of resource locators to the given list: 
-<br>A link to a web page with additional information about the resource should have a Function of 'information'.
-<br>If it is possible to download the resource data then links for how to do this must be provided. These links should have a Function of 'download' and could be any of the following:
-<br>• A direct download link that returns the actual data.
-<br>• A link to a download service i.e. to the GetCapabilities document that provides all the details of an existing service from which the data can be obtained (the form of the link is not important; it could be a GetCapabilities request or point to a XML file within a directory available on the web.  The only requirement is that the link returns the service capabilities XML file).
-<br>• A link to a web page from where data can be requested i.e. you have to register as a member and can then make a written request for the data.
+<p><b>Name:</b>please provide a short title. In brackets after the title please provide a <b>(restricted access)</b> if there are any restrictions to the user group this webpage, application or service is available for.
+<br><b>Description:</b>Please provide a brief description. If there is a restricted access to this service please state for whom it is accessible. 
+<br><b>Function:</b>Each of the functions is used in a particular context. The context is given below:  
+<br>A link to a web page with <b>additional information</b> about the resource, e.g. with additional metadata, should have a Function of <b>&lsquo;information&rsquo;</b>.
+<br>If it is possible to <b>download</b> the resource data then links for how to do this must be provided. These could be any of the following:
+<br>• A direct download link that returns the actual data has the function: <b>download</b>.
+<br>• A link to an application that allows selecting and downloading data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
+<br>• A link to an application that allows selecting data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
+<br>• A link to a download service i.e. to the <i>GetCapabilities document</i> (in the case of an OGC WFS) that provides all the details of an existing service from which the data can be obtained (the form of the link is not important; it could be a <i>GetCapabilities document</i> request or point to a XML file within a directory available on the web.  The only requirement is that the link returns the service capabilities XML file). This has the function <b>download</b>.
 <br>
-<br>If it is possible to view the resource data then links for how to do this must be provided. These links should have a Function of 'order' and could be any of the following:
-<br>• A view client application link that allows users to see the different map layers created from the resource data.
-<br>• A link to a view service i.e. to a GetCapabilities document that provides all the details of an existing web map service from which maps created  from the resource can be obtained (again the form of this URL is not important but the link must return the service capabilities XML file).
+<br>Links to <b>order</b> the data could be provided in two different ways:
+<br>• Links pointing to a site for an online order process for obtaining the resource. This link has the function <b>order</b>. 
+<br>• Link pointing to online instructions for requesting the resource from the provider. This link has the function <b>offlineAccess</b>
 <br>
-<br>For a data series, if it is possible to search for the contained datasets that make up the series then links for how to do this must be provided. These links should have a Function of 'search' and could be any of the following:
-<br>• A discovery client application link that allows users to search for the datasets.
-<br>• A link to a discovery service i.e. to a GetCapabilities document that provides all the details of a discovery service from which metadata for the datasets can be obtained.
+<br>If it is possible to <b>view</b> the resource data then links for how to do this must be provided:
+<br>• A view application link that allows users to e.g. see the different map layers created from the resource data. This link has the function <b>view</b>.
+<br>• A link to a view service i.e. to a <i>GetCapabilities document</i> that provides all the details of an existing web map service from which maps created from the resource can be obtained (again the form of this URL is not important but the link must return the service capabilities XML file). This link has the function <b>view</b>.
+</p>
+<br>
+<br>For a data series, if it is possible to search for the contained datasets that make up the series then links for how to do this must be provided and could be any of the following:
+<br>• A search application link that allows users to search for the datasets. This link points to an application and thus has the function <b>search</b>..
+<br>• A link to a discovery service i.e. to a <i>GetCapabilities document</i> that provides all the details of a discovery service from which metadata for the datasets can be obtained. This link has the function <b>discovery</b>.
 </p>
 
 <h4>Examples</h4>
-<p>Additional information on the resource: 
+<p><b>Additional information on the resource: </b>
 <br>• Linkage - http://image2000.jrc.ec.europa.eu
+<br>• Name: Image 2000 project homepage (restricted access)
+<br>• Description: This page gives you access to all information and applications related to Image 2000. 
 <br>• Function - information
 <br>
-<br>View service related to the resource:
+<br><b>View service related to the resource:</b>
 <br>• Linkage - http://ags-sdi-public.jrc.ec.europa.eu/arcgis/services/img2k_321_mos/Mapserver/WMSServer?request=GetCapabilities&service=wms&version=1.3.0
-<br>• Function - order
+<br>• Name: Image 2000 view service for the band Combination 3-2-1
+<br>• Description: This is an open access view service that gives access to the image 2000 mosaic with the band combination 3-2-1. 
+<br>• Function - view
 <br>
-<br>View application related to the resource:
-<br>• Linkage - http://floods.jrc.ec.europa.eu/ongoing-floods.html
-<br>• Function - order
-<br>
-<br>Download link for the resource:
+<br><b>Download link for the resource:</b>
 <br>• Linkage - http://www.eea.europa.eu/data-and-maps/data/corine-land-cover-2000-raster-1
+<br>• Name: Raster data on land cover for the Corine Land Cover 2000 (CLC2000) inventory
 <br>• Function - download
 <br>
-<br>Search link for the resource:
+<br><b>Search application for the resource:</b>
 <br>• Linkage - http://cidportal.jrc.ec.europa.eu/imagearchive/main/ 
-<br>• Function - search
+<br>• Name:  Community Image Data Portal (restricted access)
+<br>• Description: The Community Image (CID) Portal is a Web portal to search and access Remote Sensing data and derived products hosted at JRC. Search and preview is open to the public. Access to the image data via a variety of online services is limited to authorized and registered users. Staff of institutions of the European Union can be granted access to most of the archive data after registration
+<br>• Function - search 
 </p>
 
 <h4>Other comments</h4>
-<p>Please note that Function is an additional element for RDSI, it is not part of the required INSPIRE Metadata.  If the Metadata Editor that you are using does not support this element then leave it out.</p>
+<p>Please note that Name, Description and Function are optional <b>additional element</b>, they are not part of the required INSPIRE Metadata.  If the Metadata Editor that you are using does not support this element then leave it out.</p>
 
 
 <h3><a id="parentIdentifier" name="parentIdentifier">2.1.5.</a> Parent Identifier</h3>
@@ -320,9 +518,10 @@ Dataset coverage is geographic Europe plus territories outside Europe administra
 <p>Parent Identifier</p>
 
 <h4>Why is this element required?</h4>
-<p>If you create a metadata record for a dataset that is part of a series, then the metadata record of the dataset should point to the metadata record of the series to state 'this is the series I am part of' or in other words, the dataset (child) has to point to the series (parent). This can be done through the element Parent Identifier, which is not an INSPIRE element, but helps enormously when dealing with datasets and data series. </p>
-<p>Imagine the following situation: </p>
-<p>In a catalogue there is a Metadata Record for a series of datasets IMAGE2000 series of individual orthorectified scenes - multispectral. In the same catalogue there is also a metadata record for each of the more than 400 single images. Currently the catalogue providers are hiding the 400 metadata records describing the images. The reason is simple: Imagine you search for Orthoimagery, and you get back more than 400 results! The records on Image 2000 clutter up the results page and you will not be able to find the information you were really looking for, e.g. the Image 2000 Mosaic, which the catalogue also contains a metadata record for. </p>
+<p>This element allows to establish relationships between metadata records, and thus also between the resources that the records describe. Example relationships are between a dataset and a dataset series (see example below), but also between a dataset and a complex information system.</p>
+<p>For example, if you create a metadata record for a dataset that is part of a series, then the metadata record of the dataset could contain a pointer to the series to state 'this is the series I am part of'. In other words, the dataset (child) has to point to the series (parent). This can be done through the element <i>Parent Identifier</i>, which is not an INSPIRE element, but helps enormously when dealing with datasets and data series. 
+Imagine the following situation: In a catalogue there is a Metadata Record for a series of datasets <i>IMAGE2000 series of individual orthorectified scenes - multispectral</i>. In the same catalogue there is also a metadata record for each of the more than 400 single images. Currently the catalogue providers are hiding the 400 metadata records describing the images. The reason is simple: Imagine you search for <i>Orthoimagery</i>, and you get back more than 400 results! The records on Image 2000 clutter up the results page and you will not be able to find the information you were really looking for, e.g. the Image 2000 Mosaic, which the catalogue also contains a metadata record for.
+</p>
 <p>If in the future the children could point to their parent, i.e. the Metadata records for datasets could point to the corresponding series, a catalogue client would be able to display the results in a hierarchic manner: First it displays only the data series, and only on request does it display also the metadata records for datasets that are contained in this series.</p>
 
 <h4>Obligation</h4>
@@ -335,34 +534,46 @@ Dataset coverage is geographic Europe plus territories outside Europe administra
 <p>Free text</p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>Enter the file identifier of the metadata to which this metadata is a subset.</p>
+<p>Enter the identifier of the series that your dataset is a part of.</p>
 
 <h4>Examples</h4>
-<p>Data series metadata:
+<p><b>Data series metadata:</b>
 <br>• Title - IMAGE2000 series of individual orthorectified scenes - multispectral
 <br>• File Identifier - Image2000_Dataseries_MS.xml
 <br>
-<br>Dataset metadata for a subset of the same resource (i.e. only for the SE2 area of the Image 2000 series):
+<br><b>Dataset metadata for a subset of the same resource (i.e. only for the SE2 area of the Image 2000 series):</b>
 <br>• Title - IMAGE2000 Product 1 (SE2) multispectral
 <br>• Parent Identifier - Image2000_Dataseries_MS.xml
 </p>
 
 <h4>Other comments</h4>
 <p>Please note that Parent Identifier is an additional element, it is not part of the required INSPIRE Metadata.</p>
-<p>This only works if the parent metadata records (i.e. the data series) have unique file identifiers that do not change (see section 2.9.3 File Identifier).</p>
+<p>We are currently working on technical solutions that support establishing this relationship: the RDSI editor now provides the possibility to establish the relationship between metadata records, by using the additional ISO element &lsquo;Parent Identifier&rsquo;. This, however, means you will have to create both records, the one of the parent and the child, in the RDSI metadata editor.</p>
 
 <h3><a id="resourceIdentifier" name="resourceIdentifier">2.1.6.</a> Unique Resource Identifier</h3>
 <h4>Metadata element name</h4>
 <p>Unique Resource Identifier</p>
 
 <h4>Why is this element required?</h4>
-<p>What is a URI? It is very important to have a value that can uniquely identify reference data. This is done through the Unique Resource Identifier (URI), a value that only exists once, like your Codice Fiscale. This value should not change, as long as the reference data it identifies exists. Only a new version of a dataset with its own identity might get a new identifier (for example IMAGE 2000 and IMAGE 2006). </p>
-<p>We distinguish between locally unique and globally unique identifiers. </p>
-<p>Is it a URL? No, a URI is often confused with a URL: But while a URL stands for Location (usually a location in the internet), URI is only an identifier. It identifies a reference dataset, but it does not necessarily tell you anything about where to find it. </p>
-<p>But if it doesn't even tell me where something is, what is it good for? The URI can be used to relate to a resource. For example, when the URI is written in a metadata record, then this is meant to say that this record describes a particular dataset. Titles can change (they might be shortened, spelling might differ etc.), and locations where the reference data is kept might change as well, but the unique resource identifier will remain the same. For this reason the URI is also used to determine relationships between reference data and the services that allow a user to view or to download the reference data. To list all the reference data it provides access to the service will use the URI of the reference data.</p>
-<p>Do I need a different URI for my local copy of reference data? No. The URI describes the resource, not a copy of it. The URI can be best compared to an ISBN of a book: Even if there are multiple copies, they all refer to the same resource, and they all have the same ISBN. Only if I modify the copy, and redistribute this modified copy to others, then I might need to register a new reference dataset which gets a new URI. However, these kinds of practices are described in a different document.</p>
-<p>Can the same resource have multiple URIs? Yes. The existence of multiple identifiers is a fact of life. For a example, a person can have multiple tax identification numbers in different countries (e.g. a German tax identification number in Germany, and a Codice Fiscale in Italy), each of which can be used to uniquely identify him. </p>
-<p>What is the difference between this URI and the File Identifier of the metadata record? The URI describes the dataset or data series while the File Identifier describes the Metadata record. </p>
+<p><b>What is a URI?</b>It is very important to have a value that can uniquely identify reference data. This is done through the Unique Resource Identifier (URI), a value that only exists once, like your Codice Fiscale. This value should not change, as long as the reference data it identifies exists. Only a new version of a dataset with its own identity might get a new identifier (for example IMAGE 2000 and IMAGE 2006). 
+The URI is also used to determine relationships between <i>reference data</i> and the <i>services</i> that allow a user to view or to download the reference data: the service will use the reference data URIs to list all the data it provides access to.
+</p>
+
+<p><b>Do I need a different URI for my local copy of reference data?</b>No. The URI describes the resource, not a copy of it. The URI can be best compared to an ISBN of a book: Even if there are multiple copies, they all refer to the same resource, and they all have the same ISBN. Only if I modify the copy, and redistribute this modified copy to others, then I might need to register a new reference dataset which gets a new URI, and, consequently, a new Metadata record. 
+</p>
+
+<p><b>Can the same resource have multiple URIs? </b>Yes. The existence of multiple identifiers is a fact of life. For example, a person can have multiple tax identification numbers in different countries (e.g. a German tax identification number in Germany, and a Codice Fiscale in Italy), each of which can be used to uniquely identify him.
+</p>
+
+<p><b>What is the difference between a URI and a URL? </b>While URI stands for Identifier, a URL stands for Location. URLs are known to all of us browsing through the web. In the context of Linked Data there is a general movement towards using URLs as URIs, which is something that we support. Note, just using a URL as an identifier means you can use a real location, but you do not have to. After all here we use it only as an identifier.
+</p>
+
+<p><b>How to build a URI?</b>We distinguish locally and globally unique URIs.
+<br>• A locally unique URI is a build through an identifier and a namespace. The identifier is unique e.g. within your action, unit or institution, and the namespace in this case ensures that in combination, namespace and identifier are unique. 
+<br>• A globally unique URI is a single string (a set of characters) that identifies the resource globally without using the help of a namespace. There are two options to generating a globally Unique Resource Identifier:
+<br>&#09;1.	Using a generated Universally Unique Identifier (UUID), provided through an algorithm that ensures uniqueness. There are online tools users can use to generate such a UUID.  
+<br>&#09;2.	Using a URL following a predefined pattern and well-defined structure that ensures uniqueness.
+</p>
 
 <h4>Obligation</h4>
 <p>Mandatory</p>
@@ -379,25 +590,31 @@ Code Space is free text.
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>There are two options to generating a Unique Resource Identifier:
-<br>1.	Randomly using a generated Universally Unique Identifier (UUID)
-<br>2.	Informatively using a well-designed ordered structure
-<br>For the random approach the generated UUID is stored as the Code.
-<br>We recommend the informative approach. In this approach the Code Space is used to identify the set of Codes.  The Code itself is the unique identifier used by your unit.
-<br>For the Code Space we recommend using JRC as a prefix in combination with the numeric identifier for your unit.  This will be the same for each metadata record created by your unit.  Having a code space ensures that no two units will have the same URI.
-<br>The Code values need to be designed in a structure that can be added to and will not have to change when new data becomes available, such as:
+<p>We suggest creating, if possible, Global Identifiers using the URL approach. We, however, we suggest guidelines for all approaches below:
+<br>
+<br><b>Globally Unique Resource Identifiers</b>
+<br>UUID: For the random approach the generated UUID is stored as the Code. Such a code can be A random code can be generated e.g. using the RDSI Metadata editor, available from http://rdsi-portal.jrc.it:8081/rdsi-metadata-editor. In INSPIRE@EC this is a code in UUID form, generated by the system.
+<br>
+<br><i>URL:</i> The Code itself is the unique identifier for each resource. We are currently working on a URL pattern which we can suggest ensuring this uniqueness and which should be moderately independent from issues related to renaming of e.g. actions and units. 
+<br>
+<br><b>Locally Unique Resource Identifiers</b>
+<br>For the Code Space we recommend using JRC as a prefix in combination with the numeric identifier for your unit (e.g. JRC-H06).  This will be the same for each metadata record created by your unit.  Having a code space ensures that no two units will have the same URI.
+<br>
+<br>The Code values need to be designed in a structure that can be added to and will not have to change when new data becomes available, for example as:
 <br>• Project Name
 <br>• Project Version
 <br>• Dataset or DataSeries
+<br>• Series Element (time or area etc.) 
 <br>
-• Series Element (time or area etc.) 
+<br>NOTE: NEVER delete an existing identifier for a resource, someone might reference this identifier and by changing it, you break this link and your resource cannot be found anymore. If you need to change your identifier (e.g. your identifier contains your institutions name and your institution changed), then you have to add a new identifier (see above, you can have multiple identifiers), but you also keep the old one. 
 </p>
 
+
 <h4>Examples</h4>
-<p>Random Approach Example:
+<p><b>Globally Unique UUID Example:</b>
 <br>Code : 550e8400-e29b-41d4-a716-446655440000
-<br>Informative Approach Examples:
 <br>
+<br><b>Locally Unique Resource Identifier Examples</b>
 <br>Data - The SDI Unit Image 2000 Multispectral Data Series :
 <br>• Code Space: JRC-H06
 <br>• Code : Image2000_MS_DataSeries
@@ -409,15 +626,10 @@ Code Space is free text.
 <br>Data - The SDI Unit Image 2000 Multispectral Dataset for Landsat TM Frame NL5 :
 <br>• Code Space : JRC-H06
 <br>• Code : Image2000_MS_Dataset_NL5 
-<br>
-<br>Data - The SDI Unit Image 2000 Multispectral Dataset for Landsat TM Frame GR1 :
-<br>• Code Space : JRC-H06
-<br>• Code : Image2000_MS_Dataset_GR1
 </p>
 
 <h4>Other comments</h4>
-<p>A random code can be generated e.g. using the RDSI Metadata editor, available from http://rdsi-portal.jrc.it:8081/rdsi-metadata-editor. </p>
-<p>In INSPIRE@EC this is a code in UUID form, generated by the system.</p>
+<p></p>
 
 
 <h3><a id="resourceLanguage" name="resourceLanguage">2.1.7.</a> Resource Language</h3>
@@ -435,16 +647,16 @@ Code Space is free text.
 <p>Multiple</p>
 
 <h4>Domain</h4>
-<p>Code list provided by ISO 639-2 which describes each language in three-letter tags.
-<br>Some commonly used values are: 
+<p>Code list provided by ISO 639-2 which describes each language in three-letter tags.</p>
+<p>Some commonly used values are: 
 <br>• eng - English 
 <br>• dut - Dutch 
 <br>• fre - French 
 <br>• ger - German 
 <br>• gre - Greek 
 <br>• ita - Italian 
-<br>• spa - Spanish
-</p>
+<br>• spa - Spanish</p>
+<p>You find the complete list of all language codes in <a href="#appendixiv">Appendix IV: Codes for the Representation of Names of Languages (ISO 639-2)</a> of this document.</p>
 
 <h4>Guidelines for how to fill in the entry</h4>
 <p>Enter the languages that fit any text contained in the resource.</p>
@@ -495,11 +707,11 @@ Code Space is free text.
 <br>• structure
 <br>• transportation
 <br>• utilitiesCommunication
-<br>See Appendix I for a brief description and examples of each Topic Category.
 </p>
+<p>See <a href="#appendixi">Appendix I: Topic Category Descriptions</a> for a brief description and examples of each Topic Category.</p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>Select all categories that closely represent the topic of the data resource. </p>
+<p>Select all categories that closely represent the topic of the data resource.</p>
 
 <h4>Examples</h4>
 <p>elevation</p>
@@ -526,8 +738,10 @@ Code Space is free text.
 <h4>Guidelines for how to fill in the entry</h4>
 <p>
 Ideally we should all use the same terms when tagging our data. In this way we prevent problems related to synonyms, antonyms, different spellings etc. For this reason we strongly recommend to only select Keyword Values from a collection of terms, linked and predefined: the General Multilingual Environmental Thesaurus (GEMET) of the European Environment Information and Observation Network (EIONET).
-<br>From GEMET, to be INSPIRE compliant, at least one of the INSPIRE Spatial Data Themes must be selected as a keyword. This selection should be done by a group of experts for each category coordinated by the relevant thematic unit. The INSPIRE Spatial Data themes can be browsed in GEMET at:   
+</p><p>
+From GEMET, to be INSPIRE compliant, at least one of the <b>INSPIRE Spatial Data Themes</b> must be selected as a keyword. This selection should be done by a group of experts for each category coordinated by the relevant thematic unit. The INSPIRE Spatial Data themes can be browsed in GEMET at:   
 <br>http://www.eionet.europa.eu/gemet/inspire_themes?langcode=en 
+<br>
 <br>For your convenience we list all themes here in alphabetical order:
 <br>• Addresses
 <br>• Administrative units
@@ -564,7 +778,7 @@ Ideally we should all use the same terms when tagging our data. In this way we p
 <br>• Transport networks
 <br>• Utility and government services
 <br>
-It is also suggested to also choose a minimum of two additional keywords from the GEMET Concept list which can be found at:
+It is also suggested to also choose a minimum of <u>two additional keywords</u> from the GEMET Concept list which can be found at:
 <br>http://www.eionet.europa.eu/gemet. 
 </p>
 
@@ -596,12 +810,12 @@ It is also suggested to also choose a minimum of two additional keywords from th
 
 <h4>Domain</h4>
 <p>The Originating Controlled Vocabulary consists of a Title, Date Type and Date.
-<br>Title is free text.
-<br>Date Type is taken from a code list provided by ISO 19115 CI_DateTypeCode:
+<br><br>Title is free text.
+<br><br>Date Type is taken from a code list provided by ISO 19115 CI_DateTypeCode:
 <br>• creation
 <br>• publication
 <br>• revision
-<br>Date is a valid date.  
+<br><br>Date is a valid date.  
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
@@ -609,12 +823,12 @@ It is also suggested to also choose a minimum of two additional keywords from th
 <p>Date is in the recommended format YYYY-MM-DD.</p>
 
 <h4>Examples</h4>
-<p>INSPIRE Spatial Data Theme:
+<p><b>INSPIRE Spatial Data Theme:</b>
 <br>• Title - GEMET - INSPIRE themes, version 1.0
 <br>• Date Type - publication
 <br>• Date - 2011-09-08
 <br>
-<br>GEMET Concepts:
+<br><b>GEMET Concepts:</b>
 <br>• Title - GEMET - Concepts, version 3.0
 <br>• Date Type - publication
 <br>• Date - 2011-07-13
@@ -652,12 +866,11 @@ Bounding box:
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>To help you find the co-ordinates for your data resource we have produced a list of the bounding-boxes for all European countries.  See Appendix II for details of this list and an explanation on where it came from.</p>
+<p>To help you find the co-ordinates for your data resource we have produced a list of the bounding-boxes for all European countries.  See <a href="#appendixii">Appendix II: Geographic Bounding Boxes</a> for details of this list and an explanation on where it came from.</p>
 <p>If the data Geographic Bounding Box for the data resource is within continental Europe then the co-ordinates entered must be based on the European Terrestrial Reference System 1989 (ETRS89) and provided in decimal degrees with precision of at least 2 decimals.  Outside continental Europe co-ordinates based on any geodetic coordinate reference system with the Greenwich Prime Meridian (such as the World Geodetic System, WGS84) are acceptable. Coordinates should be as well provided in decimal degrees with precision of at least 2 decimals.</p>
 
 <h4>Examples</h4>
-<p>
-Bounding Box for the UK:
+<p><b>Bounding Box for the UK:</b>
 <br>• North Bound Latitude: 60.84
 <br>• East Bound Latitude: 1.76
 <br>• South Bound Latitude: 49.88
@@ -673,9 +886,9 @@ Bounding Box for the UK:
 <h3><a id="temporal" name="temporal">2.4</a> Temporal Reference of the Resource</h3>
 <p>This allows users to search for data by date.</p>
 <p>Individually all temporal reference elements are conditional but one or more temporal reference must be provided.  However, it is important that all metadata records provide this information as complete as possible to aid the performance of a search by date.  At least the creation date or the temporal extent must be provided.</p>
-<p>To avoid the confusion of different styles and interpretations of dates, these guidelines fix the date (and time) representation, following ISO 8601 Data elements and interchange formats - Information interchange - Representation.</p>
+<p>To avoid the confusion of different styles and interpretations of dates, these guidelines fix the date (and time) representation, following <i>ISO 8601 Data elements and interchange formats - Information interchange - Representation</i>.</p>
 <p>Thus, we recommend to use the date format YYYY-MM-DD where YYYY is the year in the Gregorian calendar, MM is the month of the year between 01 (January) and 12 (December), and DD is the day of the month between 01 and 31. For the expressions with high precision the date format can extended with the time format hh:mm:ss where hh is the number of complete hours that have passed since midnight, mm is the number of complete minutes since the start of the hour, and ss is the number of complete seconds since the start of the minute. The capital letter T is used to separate the date and time components, which then combines into YYYY-MM-DDT hh:mm:ss. </p>
-<p>NOTE 	In case your Metadata editor tool has limitations to express the dates according to these guidelines, they might be temporarily overwritten with different rules. In this case we suggest: If the day and/or month is unknown the 01-01 of that year should be encoded. If no information on the temporal reference is available then insert the year 9999 to indicate that it is unknown. However, please note that this results in false precisions which have to be removed as soon as the tools allow for this </p>
+<p>NOTE 	In case your Metadata editor tool has limitations to express the dates according to these guidelines, they might be <b>temporarily</b> overwritten with different rules. In this case we suggest: If the day and/or month is unknown the 01-01 of that year should be encoded. If no information on the temporal reference is available then insert the 9999-01-01 to indicate that it is unknown. However, please note that this results in false precisions which have to be removed as soon as the tools allow for this </p>
 
   
 <h3><a id="temporalExtent" name="temporalExtent">2.4.1</a> Temporal Extent</h3>
@@ -847,7 +1060,7 @@ Bounding Box for the UK:
 </p>
 
 <h4>Examples</h4>
-<p>(Here the data sources are still missing) </p>
+<p>(NOTE    Here the data sources are still missing) </p>
 <p>The European mosaic is a multi-purpose and multi-scale product. To achieve this, technical specifications were defined to allow implementation of different mosaic types, based on specific user requirements. All bands were re-projected from the national projection systems to a European representation, in full resolution. The image re-projection is based on three sets of parameters: Map projection, Spheroid and Datum (7term Bursa-Wolf or 3 term Molodensky transformation according to the datum definition available for each country). All scenes orthorectified into national projection system were re-projected into geographic coordinates according to the ETRS89 specification (ETRS89 stands for European Terrestrial Reference System 1989). The re-projected pixel size is 0.0002300 deg for the multispectral bands. Re-projection of raster data to geographic coordinates implicates non-square image pixel with variable pixel size, when projected into plain and expressed in meters. </p>
 <p>Full details on the IMAGE2000 Products and Methods can be found at: http://image2000.jrc.ec.europa.eu/reports/image2000_products_and_methods.pdf </p>
 
@@ -869,20 +1082,20 @@ Bounding Box for the UK:
 
 <h4>Domain</h4>
 <p>The Spatial Resolution consists of an Equivalent Scale or Distance.
-<br>Equivalent Scale is an integer. 
-<br>Distance is a number with an accompanying unit of measure.
+<br><br>Equivalent Scale is an integer. 
+<br><br>Distance is a number with an accompanying unit of measure.
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
 <p>Distance is used typically for gridded data and imagery-derived products and represents the resolution distances.  Equivalent Scale is usually used for maps or map-derived products.</p>
 <p>An equivalent scale is generally expressed as an integer value expressing the scale denominator. For example a map with a scale of 1:25.000 gets the value"25000". </p>
-<p>To harmonise the unit of measure and to avoid different spellings, please use m for metre and km for kilometre.  </p>
+<p>To harmonise the unit of measure and to avoid different spellings, please use <b>m</b> for metre, <b>km</b> for kilometre and <b>dd</b> for decimal degrees.  </p>
 
 <h4>Examples</h4>
-<p>Distance:
-<br>• 25 m
+<p><b>Distance:</b>
+<br>• 25 <b>m</b>
 <br>
-<br>Equivalent Scale:
+<br><b>Equivalent Scale:</b>
 <br>• 25000
 </p>
 
@@ -911,36 +1124,48 @@ Bounding Box for the UK:
 
 <h4>Domain</h4>
 <p>The Specification consists of a Title, Address, Reference Date Type and Reference Date.
-<br>Title is free text.
-<br>Address is a URL (optional or recommended).
-<br>Reference Date Type is taken from a code list provided by ISO 19115 CI_DateTypeCode:
+<br><br>Title is free text.
+<br><br>Address is a URL (optional or recommended).
+<br><br>Reference Date Type is taken from a code list provided by ISO 19115 CI_DateTypeCode:
 <br>• creation
 <br>• publication
 <br>• revision
-<br>Reference Date is a valid date.  
+<br><br>Reference Date is a valid date.  
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>For legislation that can be found in Eur-lex, the title should be the same as found there.  </p>
-<p>We recommend that all metadata contains the INSPIRE legislation. Resources categorised under Annex I of the INSPIRE Directive may or may not currently be conformant to this legislation but this can be stated using the Degree element (see below). Even for resources categorised under Annex II or III of the INSPIRE Directive (to which the INSPIRE legislation does not yet apply) we would still like this included and for now marked as not conformant and then amended when the INSPIRE legislation gets updated.</p>
-<p>For INSPIRE data specifications use the title of the guidelines document as found on the INSPIRE website at http://inspire.jrc.ec.europa.eu/index.cfm. Please be aware that for Annex II and III resources the documents are still in the draft stage (see Consultations tab - Consultation on the draft legal act on the harmonization and interoperability of environmental information (as defined in Annexes II and III of the INSPIRE Directive (2/2007))).</p>
-<p>The legislation and data specifications do not only imply to INSPIRE, there could be other standards relating particularly to that type of data resource.  For example river basin management data may well be evaluated against the EU Water Framework Directive.</p>
-<p>Reference Date may be any degree of precision from century (YY) to full date (YYYY-MM-DD).</p>
+<p><b>Compliance with INSPIRE</b>
+<br>All INSPIRE compliant metadata shall include information on the degree of conformity with the INSPIRE Regulation on Spatial Data Sets and Services (http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:EN:PDF).However, if you have not tested the conformance with this specification, please do not list it (see <i>2.6.2 degree</i>, below).</p>
+<p>If you are compliant with this regulation, it is recommended to also list the Guidance documents of the corresponding INSPIRE Data Specifications (e.g. Orthoimagery, Administrative Units, Hydrography). In this case, please use the full title of the guidelines document, as found on the INSPIRE website at http://inspire.jrc.ec.europa.eu/index.cfm/pageid/2, using the pattern: "INSPIRE Data Specification on &lt;Theme Name&gt; - Guidelines". </p>
+<p>NOTE    The INSPIRE Regulation on Spatial Data Sets and Services and the corresponding guidelines currently only apply to datasets that fall under the Annex I INSPIRE Spatial Data Themes . For datasets that fall under Annex II and III the documents are still in the draft stage, therefore you cannot evaluate conformance of your data against these. Strictly speaking, even in this case you should list the regulation and state that you did not evaluate the conformance (yet). However, because of limitations in the ISO 19115 schema, the solution has been adopted is to not list the INSPIRE Regulation on Spatial Data Sets and Services if it has not been evaluated. </p>
+<p><b>What about amendments? </b>
+</br>In case that the specification that you want to state compliance with has been amended, and you want to state compliance with this amendment instead, you have to list the amendment. 
+</p>
+<p><b>What about other specifications? </b>
+</br>The specification element is not restricted to INSPIRE, there could be other standards relating particularly to your type of data resource.  For example forest fire data may well be evaluated against the Commission Regulation (EC) No 804/94 as regards forest-fire information systems. However, compliance with the Metadata Regulation itself should not be reported here, as these elements are only for compliance of the data
+</p>
+<p><b>How to fill the title? </b>
+</br>For legislation that can be found in Eur-lex (http://eur-lex.europa.eu), the title should be the same as found there.  Otherwise the title should be the same as given in the document.
+</p>
+<p><b>How to fill the date?</b>
+</br>Reference Date should be a full date (YYYY-MM-DD).
+</p>
+
 
 <h4>Examples</h4>
-<p>INSPIRE Regulation on Spatial Data Sets and Services:
+<p><b>For the INSPIRE Regulation on Spatial Data Sets and Services:</b>
 <br>• Title - Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services 
 <br>• Address - http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:EN:PDF 
 <br>• Reference Date Type  - creation
 <br>• Reference Date - 2000-09-10
 <br>
-<br>INSPIRE Data Specification on Administrative Units (Annex I):
+<br><b>For the INSPIRE Data Specification on Administrative Units (Annex I):</b>
 <br>• Title - INSPIRE Data Specification on Administrative Units - Guidelines v3.0.1
 <br>• Address - http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_AU_v3.0.1.pdf 
 <br>• Reference Date Type  - publication
 <br>• Reference Date - 2010-05-03
 <br>
-<br>EU Water Framework Directive:
+<br><b>EU Water Framework Directive:</b>
 <br>• Title -  Commission Regulation (EC) No 804/94 of 11 April 1994 laying down certain detailed rules for the application of Council Regulation (EEC) No 2158/92 as regards forest-fire information systems 
 <br>• Address - http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31994R0804:EN:NOT  
 <br>• Reference Date Type  - publication
@@ -949,6 +1174,7 @@ Bounding Box for the UK:
 
 <h4>Other comments</h4>
 <p>Please note that Address is an additional element, it is not part of the required INSPIRE Metadata.</p>
+<p>NOTE    Using free text fields that are meant to be informative bears difficulties for an automatic search: If for example you want to find all datasets that are conformant with a particular specification, then you will only be able to do so if really everybody used the same wording. This is unlikely and such a search would thus return unsatisfactory results. Therefore, in the future we would like to use unique identifiers for the INSPIRE related specifications, that can be easily interpreted by machines. We are currently looking into how such identifiers could be structured.</p>
   
 <h3><a id="degree" name="degree">2.6.2</a> Degree</h3>
 <h4>Metadata element name</h4>
@@ -971,7 +1197,13 @@ Bounding Box for the UK:
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>The data resource should be evaluated against the specification and the result recorded. </p>
+<p>The data resource should be evaluated against the specification and the result recorded. There are three degrees of conformity with a specification: conformant, not conformant and not evaluated. To express these three degrees you can adopt the following rules:
+</p><p>
+<br>• When the conformity has been evaluated, it shall be reported as follows: if the evaluation has passed, the degree is conformant (True), otherwise it is not conformant (false). 
+<br>• The absence of metadata related to the conformity to a particular specification does imply that the conformity has not been evaluated (null).
+</p><p>
+In other words: <b>if you have not tested the compliance with a particular specification, please do not list the specification.</b>
+</p>
 
 <h4>Examples</h4>
 <p>true</p>
@@ -1002,18 +1234,29 @@ Bounding Box for the UK:
 <p>Free text  </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p>Any known constraints to access and usage must be identified. Consider the following questions:  
-<br>• Under what conditions can the data be made available to the European Commission for internal use and basic publishing (text, summary tables, wms, pdf etc.)?
-<br>• Under what conditions the data can be made available to the general public i.e. acknowledgement notices or fees that would need to be paid?
-<br>• Is the data restricted for use only within the Directorate General/Institute that produces it? 
-<br>If no conditions apply enter 'no conditions apply'.
-<br>If conditions are unknown enter 'conditions unknown'.
+<p>The description should cover:
+<br>• access conditions
+<br>• use conditions
+<br>• access to the data: steps to be followed to get the data
+<br>• how to cite the data
+</p><p>
+Only general information should be provided here, for detailed information a link to a website or document containing the necessary information should be provided.
+</p><p>
+A limited number of conditions for access and use inside and outside the Commission should be established: Under what conditions can the data be made available to the European Commission for internal use and basic publishing (text, summary tables, view service, pdf etc.)? Under what conditions the data can be made available to the general public i.e. acknowledgement notices or fees that would need to be paid?
+</p><p>
+A first set of possible categories have been listed in <a href="#appendixvi">Appendix VI: Categories for data sharing</a>. This list will have to be discussed and completed based on the feedback received.
+</p><p>
+If no conditions apply enter 'no conditions apply'.
+</p><p>
+If conditions are unknown enter 'conditions unknown'.
 </p>
 
+
 <h4>Examples</h4>
-<p>From NUTS 2006:
-<br>
-Access to the detailed data (scale 100k, 1M) is restricted to the personnel of the European Commission, the Executive Agencies and EC contractors. EC contractors can access the data after signing an agreement form. The agreement form can be requested by the responsible service from European Commission - Eurostat/GISCO (ESTAT_GISCO@ec.europa.eu). Once the form has been signed, access will be provided by European Commission - Eurostat/GISCO. Data can be published in the form of electronic images, statistical tables and on paper. Subsets of this data can be made available to the general public for non-commercial use, only if the data covered either has a spatial resolution of 1:1.000.000 or smaller, or less than 20% of the data is shown. The lower scale levels (3M, 10M, 20M, 60M) are publicly available and can be used for non-commercial purposes. The source and intellectual property have always to be acknowledged for the original data and for derived data. To this end, an acknowledgement as specified below must be visible on any printed or electronic publication using the data. Acknowledgement notice, depending on the language used in the publication: English: Administrative boundaries: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Source: European Commission - Eurostat/GISCO French: Limites administratives: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Source: Commission Europ&eacute;enne - Eurostat/GISCO German: Verwaltungsgrenzen: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Quelle: Europ&auml;ische Kommission - Eurostat/GISCO For publications in languages other than English, French or German, the translation of the Acknowledgement notice in the language of the publication must be used.
+<p>From NUTS 2006:</p><p>
+Access to the detailed data (scale 100k, 1M) is restricted to the personnel of the European Commission, the Executive Agencies and EC contractors. EC contractors can access the data after signing an agreement form. The agreement form can be requested by the responsible service from European Commission - Eurostat/GISCO (ESTAT_GISCO@ec.europa.eu). Once the form has been signed, access will be provided by European Commission - Eurostat/GISCO. Data can be published in the form of electronic images, statistical tables and on paper. Subsets of this data can be made available to the general public for non-commercial use, only if the data covered either has a spatial resolution of 1:1.000.000 or smaller, or less than 20% of the data is shown. The lower scale levels (3M, 10M, 20M, 60M) are publicly available and can be used for non-commercial purposes. The source and intellectual property have always to be acknowledged for the original data and for derived data. To this end, an acknowledgement as specified below must be visible on any printed or electronic publication using the data. 
+</p><p>
+Acknowledgement notice, depending on the language used in the publication: English: Administrative boundaries: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Source: European Commission - Eurostat/GISCO French: Limites administratives: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Source: Commission Europ&eacute;enne - Eurostat/GISCO German: Verwaltungsgrenzen: &copy; EuroGeographics, &copy; FAO (UN), &copy; TurkStat Quelle: Europ&auml;ische Kommission - Eurostat/GISCO For publications in languages other than English, French or German, the translation of the Acknowledgement notice in the language of the publication must be used.
 </p>
 
 <h4>Other comments</h4>
@@ -1025,7 +1268,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 
 <h4>Why is this element required?</h4>
 <p>The purpose of this element is to highlight the restrictions of the resource data to the general public. Users that read this metadata may want to know if access to the resource is available to the general public and if not, reasons why access could be denied.</p>
-<p>Note that this element describes the reasons for the limitations on public access. The limitations themselves, if any, should be listed under Conditions Applying to Access and Use.</p>
+<p>Note that this element describes the <b>reasons for the limitations</b> on public access. The <b>limitations themselves</b>, if any, should be listed under <b>Conditions Applying to Access and Use</b>.</p>
 
 <h4>Obligation</h4>
 <p>Mandatory</p>
@@ -1048,7 +1291,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 
 <h4>Guidelines for how to fill in the entry</h4>
 <p>Enter the limitation on public access that fits the data.
-<br>If there is no limitation on public access, then you have to choose the entry 'no limitation'.
+<br><br>If there is no limitation on public access, then you have to choose the entry 'no limitation'.
 </p>
 
 <h4>Examples</h4>
@@ -1061,7 +1304,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
   
   
 <h3><a id="organization" name="organization">2.8</a> Responsibility for the Resource</h3>
-<p>Details of the organisation(s) responsible for the establishment, maintenance and distribution of the resource including how they can be contacted.</p>
+<p>Details of the organisation(s) responsible for the establishment, maintenance and distribution of the resource including contact details.</p>
   
 <h3><a id="party" name="party">2.8.1</a> Responsible Party</h3>
 <h4>Metadata element name</h4>
@@ -1085,8 +1328,8 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 
 <h4>Guidelines for how to fill in the entry</h4>
 <p>Fill in each of the organisations responsible for the resource. 
-<br>The name of the organisation should be given in full, without abbreviations. These names should come from a common codelist to be agreed for all DGs. 
-<br>For the email we suggest avoiding personal emails as people come and go.  Instead use regularly checked functional mail boxes of the unit or project responsible for the resource. This will be for your convenience, as you do not have to update your metadata if a person leaves.
+</p><p>The name of the organisation should be given in full, without abbreviations. These names should come from a common codelist to be agreed for all DGs. 
+</p><p>For the email we suggest avoiding personal emails as people come and go.  Instead use regularly checked functional mail boxes of the unit or project responsible for the resource. This will be for your convenience, as you do not have to update your metadata if a person leaves.
 </p>
 
 <h4>Examples</h4>
@@ -1095,7 +1338,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 </p>
 
 <h4>Other comments</h4>
-<p>The restriction on the affiliation of European Commission, Joint Research Centre instead of units or actions was a recommendation from the Unit head consultation carried out in the context of IES in May 2011.</p>
+<p>The restriction on the affiliation of European Commission, Joint Research Centre instead of units or actions was a recommendation from a Senior Management Consultation at JRC IES in May 2011.</p>
   
 <h3><a id="role" name="role">2.8.2</a> Responsible Party Role</h3>
 <h4>Metadata element name</h4>
@@ -1123,12 +1366,12 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 <br>• processor
 <br>• publisher
 <br>• author
-<br>See Appendix III for a brief description of each Responsible Party Role.
+<br><br>See <a href="#appendixiii">Appendix III: Responsible Party Role Descriptions</a> for a brief description of each Responsible Party Role.
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
 <p>Select all role that best represents the function performed by the responsible party.
-<br>We recommend that you provide at least the Point of Contact of the resource.
+</p><p>We recommend that you provide at least the Point of Contact of the resource.
 </p>
 
 <h4>Examples</h4>
@@ -1215,7 +1458,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 
 <h4>Domain</h4>
 <p>Code list provided by ISO 639-2 which describes each language in three-letter tags.
-<br>Some commonly used values are: 
+<br><br>Some commonly used values are: 
 <br>• eng - English 
 <br>• dut - Dutch 
 <br>• fre - French 
@@ -1223,7 +1466,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 <br>• gre - Greek 
 <br>• ita - Italian 
 <br>• spa - Spanish
-<br>You find the complete list of all codes in Appendix IV of this document. 
+<br><br>You find the complete list of all codes in <a href="#appendixiv">Appendix IV: Codes for the Representation of Names of Languages (ISO 639-2)</a> of this document. 
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
@@ -1376,10 +1619,12 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 </table>
 
 <h3><a name="appendixii">Appendix II:</a> Geographic Bounding Boxes</h3>
-<p>The original data used to extract the bounding boxes was taken from the shapefile of Countries 2006 downloaded from the GISCO database available at:</p>
-<p>http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/references/administrative_units_statistical_units_1</p>
-<p>For the European outermost regions the co-ordinate reference system of the shapefiles has been transformed from ETRS89 (EPSG:4258) to WGS84 (EPSG:4326).</p>
-<p>The Bounding Boxes for Portugal, Spain and France also include some of the Europe Outermost Regions (Azores and Madeira, Canary Islands, French Guiana, Guadeloupe, Martinique and R&eacute;union, Saint Barth&eacute;lemy and Saint Martin). In these cases a 'Continental' Bounding Box was also created that excludes the outermost region.</p>
+<p>The original data used to extract the bounding boxes was taken from the shapefile of Countries 2006 downloaded from the GISCO database available at:
+</p><p>http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/references/administrative_units_statistical_units_1
+</p><p>
+For the European outermost regions the co-ordinate reference system of the shapefiles has been transformed from ETRS89 (EPSG:4258) to WGS84 (EPSG:4326).
+</p><p>
+The Bounding Boxes for Portugal, Spain and France also include some of the Europe Outermost Regions (Azores and Madeira, Canary Islands, French Guiana, Guadeloupe, Martinique and R&eacute;union, Saint Barth&eacute;lemy and Saint Martin). In these cases a 'Continental' Bounding Box was also created that excludes the outermost region.</p>
 <br>
 <table border="1">
 	<tbody>
@@ -1479,8 +1724,7 @@ Access to the detailed data (scale 100k, 1M) is restricted to the personnel of t
 <br>
 <br>
 <br>
-<h3><a name="appendixiv">Appendix IV:</a> Codes for the Representation of Names of Languages</h3>
-Codes arranged alphabetically by alpha-3/ISO 639-2 Code</h3>
+<h3><a name="appendixiv">Appendix IV:</a> Codes for the Representation of Names of Languages (ISO 639-2)</h3>
 <br>
 <table border="1">
 	<tbody>
@@ -1974,7 +2218,7 @@ Codes arranged alphabetically by alpha-3/ISO 639-2 Code</h3>
 	</table>
 	
 	
-<h3><a name="appendixv">Appendix V:</a> Sample Metadata XML</h3>
+<h3><a name="appendixv">Appendix V:</a> Sample Metadata XML (encoding ISO 19139)</h3>
 <p>
 &lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;<br>
 &lt;gmd:MD_Metadata&nbsp;xmlns:gmd="http://www.isotc211.org/2005/gmd"&nbsp;xmlns:gco="http://www.isotc211.org/2005/gco"&nbsp;xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&nbsp;xmlns:gml="http://www.opengis.net/gml"&nbsp;xmlns:xlink="http://www.w3.org/1999/xlink"&nbsp;xsi:schemaLocation="http://www.isotc211.org/2005/gmd&nbsp;http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd"&gt;<br>
@@ -2295,7 +2539,20 @@ Codes arranged alphabetically by alpha-3/ISO 639-2 Code</h3>
 
 
 
-<h3><a name="appendixvi">Appendix VI:</a> References</h3>
+<h3><a name="appendixvi">Appendix VI:</a> Categories for data sharing</h3>
+<p>As far as the conditions for sharing are concerned the following categories could be considered (informative list, not meant to be exhaustive):
+<br>• Data can be made available to the Commission for internal use and basic publishing (text, summary tables, wms, paper maps, pdf).
+<br>• Data can be made available to the Commission for internal use and publishing with minor restrictions &lt;add link to conditions&gt;.
+<br>• Data can be made available to the Commission under specific conditions &lt;add link to conditions&gt;.
+<br>• Data can be made available to the general public under specific conditions &lt;add link to conditions&gt;.
+<br>• Data is restricted for use only within the DG that produces the data.
+<br>• Data can be made available to the general public under the basic use conditions stated in Annex III: EU basic licence condition.
+</p>
+
+
+
+
+<h3><a name="appendixvii">Appendix VII:</a> References</h3>
 <p>INSPIRE:</p>
 <p><a name="ref1">[1]</a> Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE) </p>
 <p><a name="ref2">[2]</a> Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata </p>

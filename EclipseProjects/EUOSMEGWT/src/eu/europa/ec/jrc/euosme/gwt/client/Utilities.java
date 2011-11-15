@@ -1420,8 +1420,13 @@ public class Utilities {
 		String response = "";
 		if (myCodeListName.equalsIgnoreCase("2")) 
 			response=MyResources.INSTANCE.codeList2().getText();
-    	if (myCodeListName.equalsIgnoreCase("3")) 
-    		response=MyResources.INSTANCE.codeList3().getText();   		
+    	if (myCodeListName.equalsIgnoreCase("3")) {
+    		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+    			response=MyResources.INSTANCE.codeList3RDSI().getText();
+    		else 
+    			response=MyResources.INSTANCE.codeList3().getText();    		
+    		
+    	}
     	if (myCodeListName.equalsIgnoreCase("4")) 
     		response=MyResources.INSTANCE.codeList4().getText();
     	if (myCodeListName.equalsIgnoreCase("5")) 
@@ -1448,8 +1453,12 @@ public class Utilities {
     		response=MyResources.INSTANCE.codeList13().getText();  
     	if (myCodeListName.equalsIgnoreCase("14")) 
     		response=MyResources.INSTANCE.codeList14().getText();
-    	if (myCodeListName.equalsIgnoreCase("15")) 
-    		response=MyResources.INSTANCE.codeList15().getText();
+    	if (myCodeListName.equalsIgnoreCase("15")) {    	
+    		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+    			response=MyResources.INSTANCE.codeList15RDSI().getText();
+    		else 
+    			response=MyResources.INSTANCE.codeList15().getText();    		
+    	}
     	return response;
 	}
 	
