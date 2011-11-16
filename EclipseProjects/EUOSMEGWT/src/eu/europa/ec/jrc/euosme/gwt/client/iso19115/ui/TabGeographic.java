@@ -47,9 +47,12 @@ import com.google.gwt.dom.client.Style.BorderStyle;
 import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.dom.client.Style.Position;
 import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.BlurHandler;
 import com.google.gwt.event.dom.client.ChangeEvent;
 import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.maps.client.geocode.Geocoder;
@@ -121,7 +124,7 @@ public class TabGeographic extends Composite {
 	
 	/** the map */
 	Composite map; 
-	public static org.gwtopenmaps.openlayers.client.MapWidget mapWidget;
+	public org.gwtopenmaps.openlayers.client.MapWidget mapWidget;
 	
 	// Query Label, TextBox and Button
 	@UiField(provided = true)
@@ -177,8 +180,8 @@ public class TabGeographic extends Composite {
 	    }
 	    else if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
 	    	queryPanel.removeFromParent();
-	    	if (mapWidget == null)
-	    		initMapGwtOl();
+	    	//if (mapWidget == null)
+	    	initMapGwtOl();
 	        mapPanel.add(mapWidget);	
 	    }
 	    else {
@@ -233,6 +236,25 @@ public class TabGeographic extends Composite {
 						else 
 							setBoundsMapstraction(Double.parseDouble(south),Double.parseDouble(west),Double.parseDouble(north), Double.parseDouble(east));
 					} else Window.alert(constants.geoCodeListError());					
+				}
+			}
+	    });
+	    
+	    geoBoundsObj.myListBox.addBlurHandler(new BlurHandler() {
+			@Override
+			public void onBlur(BlurEvent event) {
+				// refresh the map to avoid shifting cursor
+				if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+					mapWidget.getMap().setCenter(mapWidget.getMap().getCenter());			
+				}				
+			}	    	
+	    });
+	    
+	    geoBoundsObj.newButton.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				// refresh the map to avoid shifting cursor
+				if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+					mapWidget.getMap().setCenter(mapWidget.getMap().getCenter());			
 				}
 			}
 	    });
@@ -324,7 +346,7 @@ public class TabGeographic extends Composite {
 	 */
 	@Override
 	public void onBrowserEvent(Event event) {
-		super.onBrowserEvent(event);
+		super.onBrowserEvent(event);		
 		Element targetElement =  Element.as(((NativeEvent) event).getEventTarget());
 		String targetTagName = targetElement.getTagName();
 		if (targetTagName.equalsIgnoreCase("svg") || targetTagName.equalsIgnoreCase("path")) getCenterMapstraction(EUOSMEGWT.apiMapstraction, geoBoundsObj.newTextBoxNorth.getElement(), geoBoundsObj.newTextBoxEast.getElement(), geoBoundsObj.newTextBoxSouth.getElement(), geoBoundsObj.newTextBoxWest.getElement());

@@ -98,10 +98,12 @@ public class GeoBoundsMultiple extends Composite {
 	
 	/** FlexTable declaration */
 	@UiField
+	public
 	FlexTable myFlexTable = new FlexTable();
 	
 	/** ListBox declaration */
 	@UiField
+	public
 	ListBox myListBox = new ListBox(true);
 	
 	/** Button for information */
@@ -398,22 +400,24 @@ public class GeoBoundsMultiple extends Composite {
 		    }
 		});
 		myFlexTable.setWidget(row, 4, removeButton);
-		Button selectButton = new Button(constants.runQuery());
-		selectButton.addClickHandler(new ClickHandler() {
-			public void onClick(ClickEvent event) {
-				if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("google")) {
-					LatLng northEast = LatLng.newInstance(Double.parseDouble(newItem.split(";")[0]), Double.parseDouble(newItem.split(";")[1]));
-					LatLng southWest = LatLng.newInstance(Double.parseDouble(newItem.split(";")[2]), Double.parseDouble(newItem.split(";")[3]));
-					LatLngBounds latlngbounds = LatLngBounds.newInstance(southWest, northEast);
-					TabGeographic.queryTextBox.setText(latlngbounds.getCenter().toUrlValue());
-					TabGeographic.queryButton.click();
+		if (!EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
+			Button selectButton = new Button(constants.runQuery());
+			selectButton.addClickHandler(new ClickHandler() {
+				public void onClick(ClickEvent event) {
+					if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("google")) {
+						LatLng northEast = LatLng.newInstance(Double.parseDouble(newItem.split(";")[0]), Double.parseDouble(newItem.split(";")[1]));
+						LatLng southWest = LatLng.newInstance(Double.parseDouble(newItem.split(";")[2]), Double.parseDouble(newItem.split(";")[3]));
+						LatLngBounds latlngbounds = LatLngBounds.newInstance(southWest, northEast);
+						TabGeographic.queryTextBox.setText(latlngbounds.getCenter().toUrlValue());
+						TabGeographic.queryButton.click();
+					}
+					else {
+						setBoundsMapstraction(Double.parseDouble(newItem.split(";")[2]),Double.parseDouble(newItem.split(";")[3]),Double.parseDouble(newItem.split(";")[0]), Double.parseDouble(newItem.split(";")[1]));					
+					}
 				}
-				else {
-					setBoundsMapstraction(Double.parseDouble(newItem.split(";")[2]),Double.parseDouble(newItem.split(";")[3]),Double.parseDouble(newItem.split(";")[0]), Double.parseDouble(newItem.split(";")[1]));					
-				}
-			}
-		});	
-		myFlexTable.setWidget(row, 5, selectButton);
+			});	
+			myFlexTable.setWidget(row, 5, selectButton);
+		}
 	}
 
 	
@@ -509,7 +513,7 @@ public class GeoBoundsMultiple extends Composite {
 		
 		// refresh the map to avoid shifting cursor
 		if (EUOSMEGWT.apiMapstraction.equalsIgnoreCase("gwt-ol")) {
-			TabGeographic.mapWidget.getMap().setCenter(TabGeographic.mapWidget.getMap().getCenter());			
+			//TabGeographic.mapWidget.getMap().setCenter(TabGeographic.mapWidget.getMap().getCenter());			
 		}
 		else 		
 			refreshMap();
