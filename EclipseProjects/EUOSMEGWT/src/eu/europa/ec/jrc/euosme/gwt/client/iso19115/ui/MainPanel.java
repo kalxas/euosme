@@ -867,13 +867,13 @@ public class MainPanel extends Composite {
 		myXMLTree = myXMLTree.replace("<gmd:identificationInfo>\n<gmd:MD_DataIdentification>\n</gmd:MD_DataIdentification>\n</gmd:identificationInfo>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");
 		// Remove empty distributionInfo
-		myXMLTree = myXMLTree.replace("<gmd:distributionInfo>\n<gmd:MD_Distribution>\n<gmd:distributionFormat>\n<gmd:MD_Format>\n<gmd:name gco:nilReason=\"inapplicable\"/>\n<gmd:version gco:nilReason=\"inapplicable\"/>\n</gmd:MD_Format>\n</gmd:distributionFormat>\n</gmd:MD_Distribution>\n</gmd:distributionInfo>","");
-		myXMLTree = myXMLTree.replace("\n\n","\n");
+		myXMLTree = myXMLTree.replace("<gmd:distributionInfo>\n<gmd:MD_Distribution>\n<gmd:distributionFormat>\n<gmd:MD_Format>\n<gmd:name><gco:CharacterString>unknown</gco:CharacterString></gmd:name>\n<gmd:version><gco:CharacterString>unknown</gco:CharacterString></gmd:version>\n</gmd:MD_Format>\n</gmd:distributionFormat>\n</gmd:MD_Distribution>\n</gmd:distributionInfo>","");
+		myXMLTree = myXMLTree.replace("\n\n","\n");		
 		// Remove empty report
 		myXMLTree = myXMLTree.replace("<gmd:report>\n<gmd:DQ_DomainConsistency xsi:type=\"gmd:DQ_DomainConsistency_Type\">\n<gmd:measureIdentification>\n<gmd:RS_Identifier>\n<gmd:code>\n<gco:CharacterString>Conformity_001</gco:CharacterString>\n</gmd:code>\n<gmd:codeSpace>\n<gco:CharacterString>INSPIRE</gco:CharacterString>\n</gmd:codeSpace>\n</gmd:RS_Identifier>\n</gmd:measureIdentification>\n<gmd:result>\n<gmd:DQ_ConformanceResult xsi:type=\"gmd:DQ_ConformanceResult_Type\">\n<gmd:explanation>\n<gco:CharacterString>See the referenced specification</gco:CharacterString>\n</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>\n</gmd:result>\n</gmd:DQ_DomainConsistency>\n</gmd:report>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");
 		// Remove DQ_DomainConsistency
-		myXMLTree = myXMLTree.replace("<gmd:DQ_DomainConsistency xsi:type=\"gmd:DQ_DomainConsistency_Type\">\n<gmd:measureIdentification>\n<gmd:RS_Identifier>\n<gmd:code>\n<gco:CharacterString>Conformity_001</gco:CharacterString>\n</gmd:code>\n<gmd:codeSpace>\n<gco:CharacterString>INSPIRE</gco:CharacterString>\n</gmd:codeSpace>\n</gmd:RS_Identifier>\n</gmd:measureIdentification>\n<gmd:result>\n<gmd:DQ_ConformanceResult xsi:type=\"gmd:DQ_ConformanceResult_Type\">\n<gmd:explanation>\n<gco:CharacterString>See the referenced specification</gco:CharacterString>\n</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>\n</gmd:result>\n</gmd:DQ_DomainConsistency>","");
+		myXMLTree = myXMLTree.replace("<gmd:DQ_DomainConsistency xsi:type=\"gmd:DQ_DomainConsistency_Type\">\n<gmd:result>\n<gmd:DQ_ConformanceResult xsi:type=\"gmd:DQ_ConformanceResult_Type\">\n<gmd:explanation>\n<gco:CharacterString>See the referenced specification</gco:CharacterString>\n</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>\n</gmd:result>\n</gmd:DQ_DomainConsistency>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");
 		// set explanation in conformity (multiple)
 		myXMLTree = myXMLTree.replace("</gmd:specification>\n<gmd:pass>","</gmd:specification>\n<gmd:explanation>\n<gco:CharacterString>" + constants.explanationValue() +"</gco:CharacterString>\n</gmd:explanation>\n<gmd:pass>");
@@ -882,7 +882,7 @@ public class MainPanel extends Composite {
 		myXMLTree = myXMLTree.replace("<gmd:resourceConstraints>\n<gmd:MD_LegalConstraints>\n<gmd:accessConstraints>\n<gmd:MD_RestrictionCode codeList=\"http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode\" codeListValue=\"otherRestrictions\">otherRestrictions</gmd:MD_RestrictionCode>\n</gmd:accessConstraints>\n</gmd:MD_LegalConstraints>\n</gmd:resourceConstraints>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");		
 		//remove empty languagecode
-		myXMLTree = myXMLTree.replace("<gmd:LanguageCode codeList=\"http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#LanguageCode\" codeListValue=\"\"/>","");
+		myXMLTree = myXMLTree.replace("<gmd:LanguageCode codeList=\"http://www.loc.gov/standards/iso639-2/\" codeListValue=\"\"/>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");
 		return myXMLTree;
 	}
