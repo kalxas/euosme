@@ -22,6 +22,8 @@ package eu.europa.ec.jrc.euosme.gwt.client.widgets;
 import java.util.ArrayList;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.BlurHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.FocusEvent;
@@ -180,12 +182,13 @@ public class CodeListFreeMultiple extends Composite {
 		myTextBox.addStyleName("svP");
 		newHP.add(myTextBox);
 		
-		// Invoke RESTful service or get the list from available local resource
-		if (EUOSMEGWT.rpcCodeList)
-			invokeRESTfulWebService(codeListName, myListOracle);
-		else
-			Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), myListOracle, order);
-		
+		if (showList){
+			// Invoke RESTful service or get the list from available local resource
+			if (EUOSMEGWT.rpcCodeList)
+				invokeRESTfulWebService(codeListName, myListOracle);
+			else
+				Utilities.setCodeList(Utilities.getResourceCodeList(codeListName), myListOracle, order);
+		}
 		//Set Error Label widget		
 		myError.setVisible(false);
 		
@@ -197,45 +200,57 @@ public class CodeListFreeMultiple extends Composite {
 				event.getTarget().setOpen(true);
 			}
 		});
-		
-		myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
-			@Override
-			public void onSelection(SelectionEvent<Suggestion> event) {
-				addNew("newButton",myTextBox.getText());
-			}			
-		});	
-		
-		myTextBox.getTextBox().addFocusHandler( new FocusHandler(){
-			@Override
-			public void onFocus(FocusEvent event) {
-				// select the related tree item
-				if (myTreeItem==null) {
-					TreeItem val = null;
-					val = Utilities.getSelectTreeItem(myListBox.getName());
-					myTreeItem = val;						
+		if (showList){
+			myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
+				@Override
+				public void onSelection(SelectionEvent<Suggestion> event) {
+					addNew("newButton",myTextBox.getText());
+				}			
+			});	
+			
+			myTextBox.getTextBox().addFocusHandler( new FocusHandler(){
+				@Override
+				public void onFocus(FocusEvent event) {
+					// select the related tree item
+					if (myTreeItem==null) {
+						TreeItem val = null;
+						val = Utilities.getSelectTreeItem(myListBox.getName());
+						myTreeItem = val;						
+					}
+					// set selected item
+					if (myTreeItem!=null) {
+						Utilities.ensureItemVisible(myTreeItem);
+						// get focus: it is lost on tree item selection 
+					 	myTextBox.setFocus(true);
+					}
 				}
-				// set selected item
-				if (myTreeItem!=null) {
-					Utilities.ensureItemVisible(myTreeItem);
-					// get focus: it is lost on tree item selection 
-				 	myTextBox.setFocus(true);
+			});
+			
+			myTextBox.getTextBox().addKeyUpHandler(new KeyUpHandler() {
+				@SuppressWarnings("deprecation")
+				@Override
+				public void onKeyUp(KeyUpEvent event) {
+					if (myTextBox.isSuggestionListShowing() && !showList)
+			    		myTextBox.hideSuggestionList();				
+				}			
+			});
+			
+			// Set label for the help
+			iso19115Constants constants = GWT.create(iso19115Constants.class);
+			helpLabel.setText(constants.helpCodeList());
+			helpLabel.addStyleName("suggestion");
+		}
+		else {
+			myTextBox.getTextBox().addBlurHandler(new BlurHandler() {
+
+				@Override
+				public void onBlur(BlurEvent event) {
+					if (!myTextBox.getText().isEmpty())
+						addNew("newButton",myTextBox.getText());					
 				}
-			}
-		});
-		
-		myTextBox.getTextBox().addKeyUpHandler(new KeyUpHandler() {
-			@SuppressWarnings("deprecation")
-			@Override
-			public void onKeyUp(KeyUpEvent event) {
-				if (myTextBox.isSuggestionListShowing() && !showList)
-		    		myTextBox.hideSuggestionList();				
-			}			
-		});
-		
-		// Set label for the help
-		iso19115Constants constants = GWT.create(iso19115Constants.class);
-		helpLabel.setText(constants.helpCodeList());
-		helpLabel.addStyleName("suggestion");
+				
+			}); 
+		}
 	}	
 	
 	/**

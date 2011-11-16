@@ -21,7 +21,9 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
@@ -43,7 +45,7 @@ public class MD_Constraints extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** Use limitation declaration */
-	public CodeListFreeMultiple useLimitationObj = new CodeListFreeMultiple(constants.useLimitation(), "condition", false, "12", "", true, false);
+	public CodeListFreeMultiple useLimitationObj = null; 
 	
 	/** 
      * constructor MD_Constraints model
@@ -57,6 +59,10 @@ public class MD_Constraints extends CI {
      */
 	public MD_Constraints(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);		
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			useLimitationObj = new CodeListFreeMultiple(constants.useLimitation(), "condition", false, "12", "", false, false);
+		else 	
+			useLimitationObj = new CodeListFreeMultiple(constants.useLimitation(), "condition", false, "12", "", true, false);
 		fieldsGroup.add(useLimitationObj);		
 	}
 	
