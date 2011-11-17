@@ -49,6 +49,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.FormPanel;
+import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
 import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
@@ -725,6 +726,7 @@ public class MainPanel extends Composite {
 				Document.get().getBody().getStyle().setCursor(Style.Cursor.WAIT);		        
 		    }
 		});
+		
 		final Button submitButton = new Button(constants.submitButton(), new ClickHandler() {			
 			@Override
 			public void onClick(ClickEvent event) {
@@ -800,27 +802,29 @@ public class MainPanel extends Composite {
 	private String getFileName () {
 		// set or get (if there is one) the fileName
 		String tmpFileName = "";
-//		Element fileIdentifier = Document.get().getElementById("md_metadata[1].fileidentifier[1].characterstring[1]");
-//		if (fileIdentifier != null)
-//			if (!fileIdentifier.getAttribute("value").isEmpty())
-//				tmpFileName = fileIdentifier.getAttribute("value");
-		//TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].fileidentifier[1].characterstring[1]");
-		//if (myTreeItem.getText().contains("#FILENAME#")) {
-		//if (tmpFileName.isEmpty() || tmpFileName.equalsIgnoreCase("#FILENAME#"))  {
 		if (EUOSMEGWT.fileName.equals("#FILENAME#")){
 			Integer myNum = Random.nextInt();
 			if (Integer.signum(myNum)==-1) myNum=-(myNum);
 			tmpFileName = Integer.toHexString(myNum);	
 			tmpFileName += ".xml";
 			EUOSMEGWT.fileName = tmpFileName;
-			//Utilities.valueField("md_metadata[1].fileidentifier[1].characterstring[1]",tmpFileName);
-			//Utilities.setTextTreeItem(myTreeItem,tmpFileName);			
-			//fileIdentifier.setAttribute("value", tmpFileName);
 		}
 		else {
-			//tmpFileName = myTreeItem.getText();			
-			//tmpFileName = tmpFileName.replaceAll(constants.XMLValue(), "");
-			tmpFileName = EUOSMEGWT.fileName;
+			// fix the fake path of GWT
+			if (EUOSMEGWT.fileName.contains("/") || EUOSMEGWT.fileName.contains("\\")){
+				int lastIndexPath = -1;
+				if (EUOSMEGWT.fileName.contains("/"))
+					lastIndexPath = EUOSMEGWT.fileName.lastIndexOf("/");
+				else 
+					lastIndexPath = EUOSMEGWT.fileName.lastIndexOf("\\");
+				tmpFileName = EUOSMEGWT.fileName.substring(lastIndexPath + 1);
+				EUOSMEGWT.fileName = tmpFileName; 
+			}
+			else {
+				tmpFileName = EUOSMEGWT.fileName;
+			}
+				
+			
 		}
 		return tmpFileName;		
 	}
