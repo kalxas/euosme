@@ -1,0 +1,24 @@
+DEFINE input:inference "rdfs_entailments"
+
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct:<http://purl.org/dc/terms/>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?c ?l ?a FROM <http://semanticlab.jrc.ec.europa.eu/repositories/reference>
+WHERE {
+  {
+    ?c rdfs:label ?l.
+    ?c skos:inScheme <##extraValue##>.
+    FILTER ( LANG(?l) = "en")
+    FILTER (regex(str(?l), "##filter##", "i"))
+  }
+  UNION
+  {
+    ?c rdfs:label ?a.
+    ?c skos:inScheme <##extraValue##>.
+    FILTER ( LANG(?a) = "##clientLanguage##")
+    FILTER (regex(str(?a), "##filter##", "i"))
+  }
+}
+ORDER BY ASC(?l)

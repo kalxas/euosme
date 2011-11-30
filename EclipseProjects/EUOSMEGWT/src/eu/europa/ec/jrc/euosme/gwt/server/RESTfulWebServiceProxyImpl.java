@@ -68,6 +68,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	static Boolean saveCodeList = false;
 	static String inspireValidationService = "";
 	static String inspireWebService = "";
+	static String repoType = "";
 	
     static class MyAuthenticator extends Authenticator {
         public PasswordAuthentication getPasswordAuthentication() {
@@ -78,7 +79,8 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         kuser = config.getInitParameter("username");
-        kpass = config.getInitParameter("password"); 
+        kpass = config.getInitParameter("password");
+        repoType = config.getInitParameter("repotype");
         codelists = config.getInitParameter("codelists");
         repositories = config.getInitParameter("repositories");
         dataThemes = config.getInitParameter("dataThemes");
@@ -95,7 +97,9 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
     	throws RESTfulWebServiceException {
     	try {
     		//check user and password for semantic researches
-    		if (!paramName.equalsIgnoreCase("codelists") && kuser.isEmpty())
+    		if (!paramName.equalsIgnoreCase("codelists") &&    				
+    				((repoType.equalsIgnoreCase("sesame")) && kuser.isEmpty())
+    				)
     			return "AUTHENTICATIONFAILED";
     		
         	String urlParameters = "";
@@ -107,57 +111,45 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         	}
         	else {
         		
-        		// get the list of schemes
-        		if (paramName.equalsIgnoreCase("repositories")) {
-        			//uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
-        			uri = repositories;
-        			query = getContents("query_" + paramName + ".rq"); 
-        			uri = uri + "?queryLn=SPARQL" + "&query=" + URLEncoder.encode(query, "UTF-8")+"&limit=" + limit + "&infer=true";
-
+        		// get the list of schemes: repositories
+        		// get the top-level concepts, build the tree: repository
+        		// expand one node, get its children: narrower
+        		// search: search 
+        		if (paramName.equalsIgnoreCase("repositories") ||
+        				paramName.equalsIgnoreCase("repository") ||
+        				paramName.equalsIgnoreCase("narrower") || 
+        				paramName.equalsIgnoreCase("search")) {
         			
-//        			uri = repositories;
-//    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-//    				query = getContents("query_" + paramName + ".rq");    				
-//					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-//    				urlParameters+="&limit=" + limit + "&infer=true";
-        		}
+        			uri = repositories;
+    				if (repoType.equalsIgnoreCase("virtuoso"))    				
+    					query = getContents("query_geoss_" + paramName + ".rq");
+    				else 
+    					query = getContents("query_" + paramName + ".rq");
+    				//uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
+                    // geoss: http://semanticlab.jrc.ec.europa.eu:4433/sparql?debug=off&format=text%2Fxml&query=[add query here]
+    				if (paramName.equalsIgnoreCase("repositories")){
+	    				if (repoType.equalsIgnoreCase("virtuoso"))
+	        				uri = uri + "?debug=off&format=text%2Fxml" + "&query=" + URLEncoder.encode(query, "UTF-8");
+	        			else
+	        				uri = uri + "?queryLn=SPARQL" + "&query=" + URLEncoder.encode(query, "UTF-8")+"&limit=" + limit + "&infer=true";
+	    			}
+    				else {
+	    				query = query.replace("##extraValue##",extraValue);
+	    				query = query.replace("##clientLanguage##",clientLanguage);
+	    				query = query.replace("##filter##",filter); 
+	    				
+	    				if (repoType.equalsIgnoreCase("virtuoso"))
+	    					urlParameters="debug=off&format=text%2Fxml" + "&query=" + URLEncoder.encode(query, "UTF-8");
+	    				else {    					
+	        				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
+	    					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
+	        				urlParameters+="&limit=" + limit + "&infer=true";        				
+	    				}
+    				}
+        		}  
         		
-        		// get the top-level concepts, build the tree
-        		else if (paramName.equalsIgnoreCase("repository")) {
-    				uri = repositories;
-    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-    				query = getContents("query_" + paramName + ".rq");
-    				query = query.replace("##extraValue##",extraValue);
-    				query = query.replace("##clientLanguage##",clientLanguage);
-    				query = query.replace("##filter##",filter);
-					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-    				urlParameters+="&limit=" + limit + "&infer=true";    				
-        		}
-        		
-        		// expand one node, get its children
-        		else if (paramName.equalsIgnoreCase("narrower")) {
-    				uri = repositories;
-    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-    				query = getContents("query_" + paramName + ".rq");
-    				query = query.replace("##extraValue##",extraValue);
-    				query = query.replace("##clientLanguage##",clientLanguage);
-    				query = query.replace("##filter##",filter);
-					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-    				urlParameters+="&limit=" + limit + "&infer=true";    				
-        		}
-        		
-        		// search 
-        		else if (paramName.equalsIgnoreCase("search")) {
-    				uri = repositories;
-    				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-    				query = getContents("query_" + paramName + ".rq");
-    				query = query.replace("##extraValue##",extraValue);    				
-					query = query.replace("##clientLanguage##",clientLanguage);
-    				query = query.replace("##filter##",filter);
-					urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-    				urlParameters+="&limit=" + limit + "&infer=true";    				
-        		}        		
-        		Authenticator.setDefault(new MyAuthenticator());
+				if (!repoType.equalsIgnoreCase("virtuoso"))
+				  Authenticator.setDefault(new MyAuthenticator());
         	}        	
             URL u = new URL(uri);
             HttpURLConnection uc = (HttpURLConnection) u.openConnection();
