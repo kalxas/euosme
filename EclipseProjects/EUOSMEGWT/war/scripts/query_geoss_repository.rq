@@ -6,10 +6,10 @@ PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?c ?l ?a ?d FROM <http://semanticlab.jrc.ec.europa.eu/repositories/reference>
+SELECT DISTINCT ?c ?l ?a ?d FROM <##graphURI##>
 WHERE {
   ?c rdfs:label ?l.
-  ?c skos:inScheme <##extraValue##>.
+  ?c skos:inScheme <##scheme##>.
   OPTIONAL {
     ?c skos:broader ?b.
   }

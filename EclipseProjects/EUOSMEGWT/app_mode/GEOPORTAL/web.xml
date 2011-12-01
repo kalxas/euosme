@@ -89,6 +89,11 @@
 			<description>type of SPARQL service: virtuoso or sesame</description>
 		</init-param>	
 		<init-param>
+			<param-name>repograph</param-name>
+			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/reference</param-value>
+			<description>Default Graph URI of SPARQL service</description>
+		</init-param>		
+		<init-param>
 			<param-name>username</param-name>
 			<param-value></param-value>
 			<description>username to access the semantic repository</description>

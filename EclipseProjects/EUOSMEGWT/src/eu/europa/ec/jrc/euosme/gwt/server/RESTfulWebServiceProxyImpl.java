@@ -69,6 +69,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	static String inspireValidationService = "";
 	static String inspireWebService = "";
 	static String repoType = "";
+	static String repoGraph="";
 	
     static class MyAuthenticator extends Authenticator {
         public PasswordAuthentication getPasswordAuthentication() {
@@ -81,6 +82,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         kuser = config.getInitParameter("username");
         kpass = config.getInitParameter("password");
         repoType = config.getInitParameter("repotype");
+        repoGraph = config.getInitParameter("repograph");
         codelists = config.getInitParameter("codelists");
         repositories = config.getInitParameter("repositories");
         dataThemes = config.getInitParameter("dataThemes");
@@ -93,7 +95,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
     public RESTfulWebServiceProxyImpl() { // must have
     }
 
-    public String invokeGetRESTfulWebService(String paramName, String extraValue, String clientLanguage, String filter) 
+    public String invokeGetRESTfulWebService(String paramName, String scheme, String clientLanguage, String filter) 
     	throws RESTfulWebServiceException {
     	try {
     		//check user and password for semantic researches
@@ -107,7 +109,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         	String encoding = "UTF-8";
         	String query = "";
         	if (paramName.equalsIgnoreCase("codelists")) {
-        		uri = codelists + extraValue + "/values?max=" + limit;
+        		uri = codelists + scheme + "/values?max=" + limit;
         	}
         	else {
         		
@@ -121,8 +123,11 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         				paramName.equalsIgnoreCase("search")) {
         			
         			uri = repositories;
-    				if (repoType.equalsIgnoreCase("virtuoso"))    				
+    				if (repoType.equalsIgnoreCase("virtuoso"))  {  				
     					query = getContents("query_geoss_" + paramName + ".rq");
+    					query = query.replace("##graphURI##",repoGraph);
+    					
+    				}
     				else 
     					query = getContents("query_" + paramName + ".rq");
     				//uri = repositories + "?queryLn=SPARQL&query=PREFIX%20rdfs%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20owl2xml%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2006%2F12%2Fowl2-xml%23%3E%0APREFIX%20dct%3A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0APREFIX%20xsd%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E%0APREFIX%20owl%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23%3E%0APREFIX%20rdf%3A%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20inspire%3A%3Chttp%3A%2F%2Finspire-registry.jrc.ec.europa.eu%2Frdfschema%2Finspire-schema.rdf%23%3E%0APREFIX%20skos%3A%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0A%0ASELECT%20DISTINCT%20%3Fv%20%3Fl%0AWHERE%20{%0A%20%20{%0A%20%20%20%20%3Fv%20skos%3AprefLabel%20%3Fl.%0A%20%20%20%20%3Fv%20rdf%3Atype%20skos%3AConceptScheme.%0A%20%20}%0A}%0AORDER%20BY%20ASC%28%3Fl%29&limit=" + limit + "&infer=true";
@@ -134,7 +139,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	        				uri = uri + "?queryLn=SPARQL" + "&query=" + URLEncoder.encode(query, "UTF-8")+"&limit=" + limit + "&infer=true";
 	    			}
     				else {
-	    				query = query.replace("##extraValue##",extraValue);
+	    				query = query.replace("##scheme##",scheme);
 	    				query = query.replace("##clientLanguage##",clientLanguage);
 	    				query = query.replace("##filter##",filter); 
 	    				
@@ -206,7 +211,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 				if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 	    		else dir = context.getRealPath("temp");
 	    		try {
-	    			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + extraValue + "_" + clientLanguage + ".txt" ), "UTF-8"));
+	    			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + scheme + "_" + clientLanguage + ".txt" ), "UTF-8"));
 	             	out.append(buffer.toString());
 	            	out.flush();
 	           		out.close();

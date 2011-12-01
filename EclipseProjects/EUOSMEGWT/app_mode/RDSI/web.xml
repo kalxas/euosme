@@ -79,7 +79,7 @@
 		</init-param>
 		<init-param>
 			<param-name>repositories</param-name>
-			<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/eurogeoss-v3/query</param-value>
+			<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/reference/query</param-value>
 			<description>URL to access the semantic repository and get the list
 				of available keywords</description>
 		</init-param>
@@ -87,7 +87,12 @@
 			<param-name>repotype</param-name>
 			<param-value>sesame</param-value>
 			<description>type of SPARQL service: virtuoso or sesame</description>
-		</init-param>			
+		</init-param>		
+		<init-param>
+			<param-name>repograph</param-name>
+			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/reference</param-value>
+			<description>Default Graph URI of SPARQL service</description>
+		</init-param>    	
 		<init-param>
 			<param-name>username</param-name>
 			<param-value></param-value>
