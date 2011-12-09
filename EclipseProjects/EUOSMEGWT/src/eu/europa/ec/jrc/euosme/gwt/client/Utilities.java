@@ -1795,6 +1795,13 @@ public class Utilities {
 				else definition_uri = "0" + definition_uri;
 				definitions.put(definition,definition_uri);					
 			}
+			/*else if(!definition_lang.isEmpty()) {
+				String definition;
+				definition = definition_lang;
+				if (!definition_avuri.isEmpty()) definition_uri = "1" + definition_uri;
+				else definition_uri = "0" + definition_uri;
+				definitions.put(definition,definition_uri);
+			}*/
 		}
 	    if (definitions.size() >=0) {
 			definitions = Utilities.sortMapByKey(definitions);
@@ -1817,6 +1824,69 @@ public class Utilities {
 	}
 
 	/**
+	 * Populate the {@link TreeItem} of suggested keywords (of a particular repository) with the values from local file
+	 * 
+	 * @param response			{@link String} = the response of the RPC
+	 * @param myList			{@link ListBox} = the list box to populate
+	 */
+	public static void setSuggestLocal(String response, TreeItem myList) {
+		
+		Document messageDom = XMLParser.parse(response);
+	
+	    NodeList nodes = messageDom.getElementsByTagName("result");
+	    Map<String,String> definitions = new LinkedHashMap<String, String>();
+	    for (int i = 0; i < nodes.getLength(); i++) {
+			Node currentNode = nodes.item(i);
+			String definition_en = "";
+			String definition_lang = "";
+			String definition_uri = "";
+			String definition_avuri = "";
+			for (int j = 0; j < currentNode.getChildNodes().getLength(); j++) {
+				Node currentItem = currentNode.getChildNodes().item(j);
+				// uri concept
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("c")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("uri"))
+								definition_uri = currentSubItem.getFirstChild().getNodeValue();	  
+						}
+					}
+				}
+				// literal in @en
+				if (currentItem.getNodeName().equalsIgnoreCase("binding") && currentItem.getAttributes().getNamedItem("name").getNodeValue().equalsIgnoreCase("l")) {
+					if (currentItem.getChildNodes().getLength() >= 0) {
+						for (int x= 0; x < currentItem.getChildNodes().getLength(); x++) {
+							Node currentSubItem = currentItem.getChildNodes().item(x);
+							if (currentSubItem.getNodeName().equalsIgnoreCase("literal"))
+								definition_en = currentSubItem.getFirstChild().getNodeValue();	  
+						}						
+					}
+				}
+			}
+			if (!definition_en.isEmpty()) {
+				String definition;
+				definition = definition_en; 
+				if (!definition_lang.isEmpty() && definition_lang != definition) definition = definition_lang;
+
+					
+				definitions.put(definition,definition_uri);
+				
+				TreeItem s = new TreeItem();
+				if (!definition_uri.isEmpty()) s.setTitle(definition_uri);
+				s.setText(definition);				
+				myList.addItem(s);	
+	
+			}
+
+		}
+	    
+	    if (myList.getChild(0) != null)
+			if (myList.getChild(0).getTitle().equalsIgnoreCase(constants.loading())) myList.getChild(0).remove();
+
+	}	
+	
+	/**
 	 * Return the textual resource of a repository with the topmost concepts
 	 * 
 	 * @param myRepositoryName	{@link String} = the name of the repository
@@ -1825,20 +1895,31 @@ public class Utilities {
 	 */
 	public static String getResourceRepository(String myRepositoryName) {
 		String response = "";
-		if (myRepositoryName.equalsIgnoreCase("GEMET Concepts")) 
+		if (myRepositoryName.equalsIgnoreCase("GEMET - Concepts, version 2.4")) 
 			response=MyResources.INSTANCE.repositoryGEMET_Concepts().getText();
-    	if (myRepositoryName.equalsIgnoreCase("GEMET Groups")) 
+		else if (myRepositoryName.equalsIgnoreCase("GEMET - Groups, version 2.4")) 
     		response=MyResources.INSTANCE.repositoryGEMET_Groups().getText();   		
-    	if (myRepositoryName.equalsIgnoreCase("GEMET Themes")) 
+		else if (myRepositoryName.equalsIgnoreCase("GEMET - Themes, version 2.4")) 
     		response=MyResources.INSTANCE.repositoryGEMET_Themes().getText();
-    	if (myRepositoryName.equalsIgnoreCase("GEOSS Societal Benefit Areas"))
+		else if (myRepositoryName.equalsIgnoreCase("GEOSS - Societal Benefit Areas, version 1.0"))
     		response=MyResources.INSTANCE.repositoryGEOSS_Societal_Benefit_Areas().getText();    		
-    	if (myRepositoryName.equalsIgnoreCase("INSPIRE Feature Concept Dictionary")) 
+		else if (myRepositoryName.equalsIgnoreCase("INSPIRE - Feature Concept Dictionary, version 3")) 
     		response=MyResources.INSTANCE.repositoryINSPIRE_Feature_Concept_Dictionary().getText();
-    	if (myRepositoryName.equalsIgnoreCase("INSPIRE Glossary")) 
+		else if (myRepositoryName.equalsIgnoreCase("INSPIRE - Glossary, version 3")) 
     		response=MyResources.INSTANCE.repositoryINSPIRE_Glossary().getText();
-    	if (myRepositoryName.equalsIgnoreCase("ISO 19119 geographic services taxonomy")) 
+		else if (myRepositoryName.equalsIgnoreCase("ISO - 19119 geographic services taxonomy")) 
     		response=MyResources.INSTANCE.repositoryISO_19119_geographic_services_taxonomy().getText();
+		else if (myRepositoryName.equalsIgnoreCase("GEMET - INSPIRE themes, version 1.0")) 
+    		response=MyResources.INSTANCE.repositoryGEMET_INSPIRE_Themes().getText();
+		else if (myRepositoryName.equalsIgnoreCase("GEMET - Supergroups, version 2.4")) 
+    		response=MyResources.INSTANCE.repositoryGEMET_Supergroups().getText();
+		else if (myRepositoryName.equalsIgnoreCase("GEOSS - Earth Observation Vocabulary, version 1.0")) 
+    		response=MyResources.INSTANCE.repositoryGEOSS_Earth_Observation_Vocabulary().getText();		
+		//GEMET - INSPIRE themes, version 1.0  //http://inspire-registry.jrc.ec.europa.eu/registers/Themes/items
+		//GEMET - Supergroups, version 2.4   //http://www.eionet.europa.eu/gemet/supergroup/
+		//GEOSS - Earth Observation Vocabulary, version 1.0    //http://www.earthobservations.org/GEOSS/EO_Vocabulary
+		
+		
     	return response;
 	}
 

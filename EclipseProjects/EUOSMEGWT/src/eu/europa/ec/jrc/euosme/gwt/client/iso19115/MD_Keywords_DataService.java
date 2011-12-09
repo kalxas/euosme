@@ -106,10 +106,10 @@ public class MD_Keywords_DataService extends CI {
 			SuggestListCallback callback = new SuggestListCallback();
 			callback.setList(myListRPC);
 			RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-			ls.invokeGetRESTfulWebService("repository", "http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", LocaleInfo.getCurrentLocale().getLocaleName(), "", callback);
+			ls.invokeGetRESTfulWebService("repository", "http://inspire-registry.jrc.ec.europa.eu/registers/ISO_19119/items", LocaleInfo.getCurrentLocale().getLocaleName(), "", callback);
 		}
 		else {
-			Utilities.setSuggestList(Utilities.getResourceRepository("ISO 19119 geographic services taxonomy"), myListRPC);	
+			Utilities.setSuggestList(Utilities.getResourceRepository("ISO - 19119 geographic services taxonomy"), myListRPC);	
 		}
 	}
 }

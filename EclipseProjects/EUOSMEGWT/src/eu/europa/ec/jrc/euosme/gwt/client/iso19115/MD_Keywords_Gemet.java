@@ -246,7 +246,7 @@ public class MD_Keywords_Gemet extends CI {
 			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
 		}
 		else {
-			Utilities.setSuggests(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+			Utilities.setSuggestLocal(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
 		}
 	}
 	
@@ -278,7 +278,7 @@ public class MD_Keywords_Gemet extends CI {
 			GWT.log(" root Tree Item " + suggestObj.getItem(0).getText(), null);
 		}
 		else {
-			Utilities.setSuggests(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
+			Utilities.setSuggestLocal(Utilities.getResourceRepository(listScheme.getItemText(listScheme.getSelectedIndex()).trim()), suggestObj.getItem(0));	
 		}
     }
 	

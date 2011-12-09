@@ -514,17 +514,19 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 			
 			// call the service for each language
 			String[] languages={"bg","cs","da","de","el","en","es","et","fi","fr","hu","it","lt","lv","mt","nl","pl","pt","ro","sk","sl","sv"};
-    		for (int i = 0; i<languages.length; i++ ) {
-    			String clientLanguage = languages[i];
+    		//for (int i = 0; i<languages.length; i++ ) {
+    			String clientLanguage = "en";//languages[i];
     			
     			// query the service and, for each keyword found, create the cache file
 				urlParameters="queryLn=" + URLEncoder.encode("SPARQL", "UTF-8");
-				String query = getContents("query_repository.rq");
-				query = query.replace("##extraValue##",repository);
+				String query = getContents("query_cache.rq"); //getContents("query_repository.rq");
+				if (resource.equalsIgnoreCase("Repositories"))
+					query = getContents("query_repositories.rq");
+				query = query.replace("##scheme##",repository);
 				query = query.replace("##clientLanguage##",clientLanguage);
 				query = query.replace("##filter##","");
 				urlParameters+="&query=" + URLEncoder.encode(query, "UTF-8");
-				urlParameters+="&limit=" + limit + "&infer=true";    				
+				urlParameters+="&limit=0&infer=true";    				
     			
 				Authenticator.setDefault(new MyAuthenticator());
         	
@@ -571,7 +573,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	           	catch (IOException e)    {   
 	        	   	e.printStackTrace();
 	        	}
-            }	    
+            //}	    
     	} 
 	    catch (MalformedURLException e) {
 	    	throw new RESTfulWebServiceException(e.getMessage(), e);

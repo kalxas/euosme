@@ -137,4 +137,13 @@ public interface MyResources extends ClientBundle{
 	
 	@Source("repositories/ISO_19119_geographic_services_taxonomy.cache.xml")
 	public TextResource repositoryISO_19119_geographic_services_taxonomy();
+	
+	@Source("repositories/GEMET_INSPIRE_Themes.cache.xml")
+	public TextResource repositoryGEMET_INSPIRE_Themes();
+	
+	@Source("repositories/GEMET_Supergroups.cache.xml")
+	public TextResource repositoryGEMET_Supergroups();
+	
+	@Source("repositories/GEOSS_Earth_Observation_Vocabulary.cache.xml")
+	public TextResource repositoryGEOSS_Earth_Observation_Vocabulary();
 }

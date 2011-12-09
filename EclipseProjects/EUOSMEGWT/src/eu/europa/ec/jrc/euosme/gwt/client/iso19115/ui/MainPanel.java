@@ -317,14 +317,22 @@ public class MainPanel extends Composite {
             public void execute() {     
             	CodeListRpcCallback callback = new CodeListRpcCallback();
         		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-        		ls.invokeUpdateRESTfulWebService(callback);
-        		/*ls.invokeCacheRepositoryRESTfulWebService("GEMET_Concepts","http://www.eionet.europa.eu/gemet/concept/", callback);
+        		//ls.invokeUpdateRESTfulWebService(callback);
+        		
+        		// ls.invokeCacheRepositoryRESTfulWebService("Repositories","", callback); 
+        		
+        		
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_INSPIRE_Themes","http://inspire-registry.jrc.ec.europa.eu/registers/Themes/items", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Supergroups","http://www.eionet.europa.eu/gemet/supergroup/", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEOSS_Earth_Observation_Vocabulary","http://www.earthobservations.org/GEOSS/EO_Vocabulary", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/ISO_19119/items", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Groups","http://www.eionet.europa.eu/gemet/group/", callback);
+        		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Concepts","http://www.eionet.europa.eu/gemet/concept/", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEMET_Themes","http://www.eionet.europa.eu/gemet/theme/", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("GEOSS_Societal_Benefit_Areas","http://iaaa.unizar.es/thesaurus/SBA_EuroGEOSS", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Feature_Concept_Dictionary","http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items", callback);
         		ls.invokeCacheRepositoryRESTfulWebService("INSPIRE_Glossary","http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items", callback);
-        		ls.invokeCacheRepositoryRESTfulWebService("ISO_19119_geographic_services_taxonomy","http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items", callback);*/
+        		
             }			
         };
         //menuBar.addItem("cache", cmdUpdate);        

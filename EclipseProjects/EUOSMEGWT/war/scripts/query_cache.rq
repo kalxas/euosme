@@ -3,20 +3,13 @@ PREFIX dct:<http://purl.org/dc/terms/>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?c ?l ?a
+SELECT DISTINCT ?c ?l
 WHERE {
   {
     ?c rdfs:label ?l.
     ?c skos:inScheme <##scheme##>.
     FILTER ( LANG(?l) = "en")
-    FILTER (regex(str(?l), "##filter##", "i"))
-  }
-  UNION
-  {
-    ?c rdfs:label ?a.
-    ?c skos:inScheme <##scheme##>.
-    FILTER ( LANG(?a) = "##clientLanguage##")
-    FILTER (regex(str(?a), "##filter##", "i"))
+    FILTER (regex(str(?l), "", "i"))
   }
 }
 ORDER BY ASC(?l)

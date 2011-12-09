@@ -7,7 +7,7 @@ SELECT DISTINCT ?c ?l ?a ?d ?v
 WHERE {
   {
     ?c rdfs:label ?l.
-    ?c skos:broader <##extraValue##>.
+    ?c skos:broader <##scheme##>.
     ?c skos:inScheme ?v.
 
     OPTIONAL {
@@ -24,7 +24,7 @@ WHERE {
   UNION
   {
     ?c rdfs:label ?l.
-    <##extraValue##> skos:member ?c.
+    <##scheme##> skos:member ?c.
     ?c skos:inScheme ?v.
 
     OPTIONAL {
@@ -39,7 +39,7 @@ WHERE {
 
     OPTIONAL {
       ?c skos:broader ?e.
-      <##extraValue##> skos:member ?e.
+      <##scheme##> skos:member ?e.
     }
 
     OPTIONAL {

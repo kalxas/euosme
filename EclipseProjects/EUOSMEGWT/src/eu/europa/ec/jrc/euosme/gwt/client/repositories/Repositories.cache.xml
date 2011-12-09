@@ -1,1 +1,100 @@
-<?xml version='1.0' encoding='utf-8'?><?xml-stylesheet type='text/xsl' href='/openrdf-workbench/transformations/tuple.xsl'?><sparql xmlns='http://www.w3.org/2005/sparql-results#' xmlns:q='http://www.openrdf.org/schema/qname#'><head><variable name='v'/><variable name='l'/><link href='info'/></head><results ordered='false' distinct='false'><result><binding name='v'><uri>http://iaaa.unizar.es/thesaurus/SBA_EuroGEOSS</uri></binding><binding name='l'><literal>GEOSS Societal Benefit Areas</literal></binding></result><result><binding name='v'><uri>http://www.eionet.europa.eu/gemet/concept/</uri></binding><binding name='l'><literal xml:lang='en'>GEMET Concepts</literal></binding></result><result><binding name='v'><uri>http://www.eionet.europa.eu/gemet/group/</uri></binding><binding name='l'><literal xml:lang='en'>GEMET Groups</literal></binding></result><result><binding name='v'><uri>http://www.eionet.europa.eu/gemet/theme/</uri></binding><binding name='l'><literal xml:lang='en'>GEMET Themes</literal></binding></result><result><binding name='v'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items</uri></binding><binding name='l'><literal xml:lang='en'>INSPIRE Feature Concept Dictionary</literal></binding></result><result><binding name='v'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items</uri></binding><binding name='l'><literal xml:lang='en'>INSPIRE Glossary</literal></binding></result><result><binding name='v'><uri>http://inspire-registry.jrc.ec.europa.eu/registers/EN_ISO_19119/items</uri></binding><binding name='l'><literal xml:lang='en'>ISO 19119 geographic services taxonomy</literal></binding></result></results></sparql>
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='/openrdf-workbench/transformations/tuple.xsl'?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:q="http://www.openrdf.org/schema/qname#">
+	<head>
+		<variable name="v"/>
+		<variable name="l"/>
+		<variable name="d"/>
+		<link href="info"/>
+	</head>
+	<results ordered="false" distinct="false">
+		<result>
+			<binding name="v">
+				<uri>http://www.eionet.europa.eu/gemet/concept/</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEMET - Concepts, version 2.4</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-13</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://www.eionet.europa.eu/gemet/group/</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEMET - Groups, version 2.4</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-13</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://www.eionet.europa.eu/gemet/supergroup/</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEMET - Supergroups, version 2.4</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-13</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://www.eionet.europa.eu/gemet/theme/</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEMET - Themes, version 2.4</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-13</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://www.earthobservations.org/GEOSS/EO_Vocabulary</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEOSS - Earth Observation Vocabulary, version 1.0</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2011-05-01</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://iaaa.unizar.es/thesaurus/SBA_EuroGEOSS</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEOSS - Societal Benefit Areas, version 1.0</literal>
+			</binding>
+			<binding name="d">
+				<literal>2010-08-25</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://inspire-registry.jrc.ec.europa.eu/registers/FCD/items</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">INSPIRE - Feature Concept Dictionary, version 3</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-19</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://inspire-registry.jrc.ec.europa.eu/registers/GLOSSARY/items</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">INSPIRE - Glossary, version 3</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-12</literal>
+			</binding>
+		</result>
+	</results>
+</sparql>

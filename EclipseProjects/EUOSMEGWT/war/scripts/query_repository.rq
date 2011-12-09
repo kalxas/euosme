@@ -7,14 +7,14 @@ PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 SELECT DISTINCT ?c ?l ?a ?d
 WHERE {
   ?c rdfs:label ?l.
-  ?c skos:inScheme <##extraValue##>.
+  ?c skos:inScheme <##scheme##>.
   OPTIONAL {
     ?c skos:broader ?b.
   }
 
   OPTIONAL {
     ?b skos:member ?c.
-    ?b skos:inScheme <##extraValue##>.
+    ?b skos:inScheme <##scheme##>.
   }
 
   OPTIONAL {
