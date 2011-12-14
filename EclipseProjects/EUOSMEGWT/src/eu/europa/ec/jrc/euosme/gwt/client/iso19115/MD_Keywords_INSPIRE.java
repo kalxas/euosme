@@ -137,7 +137,8 @@ public class MD_Keywords_INSPIRE extends CI {
 						String selectedValue = keywordDataServiceObj.listDataServices.getValue(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeyword = keywordDataServiceObj.listDataServices.getItemText(keywordDataServiceObj.listDataServices.getSelectedIndex()).trim();
 						String myKeywordService = toDefinedKeywordService(myKeyword);
-						addNew(myKeywordService,"","","");						
+						//(ISO - 19119 geographic services taxonomy, publication, 2010-01-19)
+						addNew(myKeywordService,"ISO - 19119 geographic services taxonomy","2010-01-19","");						
 					}				
 				}
 			});
