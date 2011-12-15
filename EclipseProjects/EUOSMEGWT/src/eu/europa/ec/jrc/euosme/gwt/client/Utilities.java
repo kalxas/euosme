@@ -1924,11 +1924,15 @@ public class Utilities {
 	}
 
 	public static void setDefaultValues() {
+		String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
+		TreeItem myTreeItem = null;
 		// set metadata date to today
-	    String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
-		Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
-		TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
-		Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) 
+				|| (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString())) ) {
+			Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
+			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
+			Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
+		}
 		// set identificationInfo sub type
 		String identificationInfoSubType = "md_dataidentification";
 		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) identificationInfoSubType = "sv_serviceidentification";

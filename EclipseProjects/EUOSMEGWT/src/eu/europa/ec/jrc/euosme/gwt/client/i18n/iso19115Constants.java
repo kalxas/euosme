@@ -577,6 +577,10 @@ public interface iso19115Constants extends Constants {
 	
 	
 	/** not translated until revision 12 ***/
+	
+	@DefaultStringValue("Press OK if you want to update the Metadata date to today.")
+	String update_mddate();
+	
 	@DefaultStringValue("Measure identification")
 	String measureIdentification();
 

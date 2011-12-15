@@ -147,6 +147,8 @@ public class MainPanel extends Composite {
 	
 	final PopupPanel loadingPanel = new PopupPanel();	
 	
+    String originalTree;
+	
 	/** 
     * constructor main panel
     * 
@@ -292,14 +294,15 @@ public class MainPanel extends Composite {
             }			
         };
         helpMenu.addItem(constants.helpDeveloperGuide(), cmdHelpDeveloperGuide); 
-        helpMenu.addSeparator();
+       
         
         Command cmdAbout = new Command() {
             public void execute() {            	
             	
 				if(Utilities.getUserAgent().contains("msie"))	{
 					String aboutUrl = "../userguide/about.html";
-					Window.open(aboutUrl, "", "scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
+					Window.open(aboutUrl, "_blank", "scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=600,width=550");
+					Window.moveBy(0, 100);
 					//Window.open(aboutURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
 					
 				}
@@ -308,9 +311,15 @@ public class MainPanel extends Composite {
 				}
             }			
         };
-        helpMenu.addItem(constants.about(),cmdAbout);
         
+		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			helpMenu.addSeparator();
+			helpMenu.addItem(constants.about(),cmdAbout);
+		}        
         menuBar.addItem(constants.help(),helpMenu);
+		if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {
+			menuBar.addItem(constants.about(),cmdAbout);
+		}
                 
         @SuppressWarnings("unused")
 		Command cmdUpdate = new Command() {
@@ -519,6 +528,7 @@ public class MainPanel extends Composite {
 		
 		//load file name
 		//getFileName();
+
 		
 		// Open default tab and load user guide
 		tabs.selectTab(0);
@@ -565,6 +575,8 @@ public class MainPanel extends Composite {
 		initTree(loadFileXML);
 		Utilities.setDefaultValues();	
 		
+		// keep the original tree
+		originalTree = getXMLTree();		
 		
 	}
 	
@@ -631,7 +643,23 @@ public class MainPanel extends Composite {
 			if (EUOSMEGWT.rdsi_keyword.size()>0)
 				Utilities.removeKeywordRDSI();
 		}
-			
+		
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())){
+			if(!originalTree.equals(myXMLTree)){
+				boolean updateMDDate = Window.confirm(constants.update_mddate());	
+				if (updateMDDate) {
+					
+					// set metadata date to today					
+				    String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
+					Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
+					TreeItem myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
+					Utilities.setTextTreeItem(myTreeItem,myTodayDate);
+					
+					// update the string to save 
+					myXMLTree = getXMLTree();
+				}
+			}
+		}	
 		
 		// Show a dialog box when saving
 		final DialogBox myUploadDialog = new DialogBox();
@@ -690,6 +718,7 @@ public class MainPanel extends Composite {
 		
 		
 		myForm.submit();
+	
 	}
 	
 	/**
