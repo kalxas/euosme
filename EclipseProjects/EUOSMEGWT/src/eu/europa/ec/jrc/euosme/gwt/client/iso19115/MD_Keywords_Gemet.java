@@ -96,7 +96,8 @@ public class MD_Keywords_Gemet extends CI {
      * @return	the widget composed by MD_Keywords_Gemet fields
      */
 	public MD_Keywords_Gemet(String label, boolean required, boolean multiple, String help) {
-		super(label, required, multiple, help, CIOrientations.VERTICAL);
+		// closable in GEOPORTAL mode
+		super(label, required, multiple, help, CIOrientations.VERTICAL, EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()));
 		// Filter
 		final TextBox filterTextBox = new TextBox();
 		Button filterButton = new Button("Search");//("Filter");
