@@ -690,7 +690,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Language")
 	String languages();
 
-	@DefaultStringValue("About this editor")
+	@DefaultStringValue("About")
 	String about();
 	
 	@DefaultStringValue("OK")
