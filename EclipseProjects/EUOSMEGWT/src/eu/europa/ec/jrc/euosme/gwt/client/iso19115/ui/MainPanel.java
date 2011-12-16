@@ -148,6 +148,8 @@ public class MainPanel extends Composite {
 	final PopupPanel loadingPanel = new PopupPanel();	
 	
     String originalTree;
+    
+    boolean createNew;
 	
 	/** 
     * constructor main panel
@@ -511,7 +513,13 @@ public class MainPanel extends Composite {
 		}
 		
 		// load file
-		if (!loadFileXML.isEmpty()) Utilities.parseMessage(loadFileXML,false);
+		if (!loadFileXML.isEmpty()) {
+			Utilities.parseMessage(loadFileXML,false);
+			createNew = false;
+		}
+		else {
+			createNew = true;
+		}
 		
 		// load RDSI to metadata tab
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
@@ -573,7 +581,15 @@ public class MainPanel extends Composite {
 		this.myForm.add(tabs);
 		setHeader();
 		initTree(loadFileXML);
-		Utilities.setDefaultValues();	
+		
+		// create new
+		if (loadFileXML.length() == 0){
+			createNew = true;			
+		}
+		else {
+			createNew = false;			
+		}
+		Utilities.setDefaultValues(createNew);
 		
 		// keep the original tree
 		originalTree = getXMLTree();		
@@ -602,7 +618,7 @@ public class MainPanel extends Composite {
 			this.myForm.add(tabs);
 			setHeader();
 			initTree("");
-			Utilities.setDefaultValues();	
+			Utilities.setDefaultValues(true);	
 			loadingPanel.hide();
 			
 			
@@ -645,7 +661,7 @@ public class MainPanel extends Composite {
 		}
 		
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())){
-			if(!originalTree.equals(myXMLTree)){
+			if(originalTree!=null && !originalTree.equals(myXMLTree)){
 				boolean updateMDDate = Window.confirm(constants.update_mddate());	
 				if (updateMDDate) {
 					

@@ -165,7 +165,7 @@ public class EUOSMEGWT implements EntryPoint {
 	private static void initPanels() {
 		mainPanel = new MainPanel();
   		RootLayoutPanel.get().add(mainPanel);
-  		Utilities.setDefaultValues();
+  		Utilities.setDefaultValues(true);
   		
 	}
 	

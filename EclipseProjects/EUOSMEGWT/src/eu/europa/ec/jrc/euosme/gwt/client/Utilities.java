@@ -1922,8 +1922,11 @@ public class Utilities {
 		
     	return response;
 	}
-
 	public static void setDefaultValues() {
+		setDefaultValues(true);
+	}
+
+	public static void setDefaultValues(boolean createNew) {
 		String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
 		TreeItem myTreeItem = null;
 		// set metadata date to today
@@ -1932,6 +1935,29 @@ public class Utilities {
 			Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
 			myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
 			Utilities.setTextTreeItem(myTreeItem,myTodayDate);	
+		}
+		
+		else if((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))) {
+			if (createNew) {
+				// set MD date to today
+				Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
+				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
+				Utilities.setTextTreeItem(myTreeItem,myTodayDate);
+				
+				// set MD language to current chosen language
+				String languageCode = get3LettersCode(LocaleInfo.getCurrentLocale().getLocaleName());
+				Utilities.valueField("md_metadata[1].language[1].languagecode[1]", languageCode);
+				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].language[1].languagecode[1");
+				Utilities.setTextTreeItem(myTreeItem, languageCode);
+				
+				// set resource language to current chosen language (dataset and series only)
+				if (!EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) {
+					Utilities.valueField("md_metadata[1].identificationinfo[1].md_dataidentification[1].language[1].languagecode[1]", languageCode);
+					myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1].language[1].languagecode[1]");
+					Utilities.setTextTreeItem(myTreeItem, languageCode);					 
+				}
+				
+			}
 		}
 		// set identificationInfo sub type
 		String identificationInfoSubType = "md_dataidentification";
@@ -2044,5 +2070,57 @@ public class Utilities {
 				//insert created keyword element in the right place
 				dataIdentificationItem.insertItem(lastKeywordIndex+1,descriptiveKeywordsTreeItem);
 					
-	}	
+	}
+	
+	// ISO 639-1 to ISO 639-2/B
+	public static String get3LettersCode(String code2){
+		String ret="";
+		if (code2.equals("bg"))
+			ret = "bul";
+		else if (code2.equals("cs"))
+			ret = "cze";
+		else if (code2.equals("da"))
+			ret = "dan";
+		else if (code2.equals("de"))
+			ret = "ger";
+		else if (code2.equals("el"))
+			ret = "gre";
+		else if (code2.equals("en"))
+			ret = "eng";
+		else if (code2.equals("es"))
+			ret = "spa";
+		else if (code2.equals("et"))
+			ret = "est";
+		else if (code2.equals("fi"))
+			ret = "fin";
+		else if (code2.equals("fr"))
+			ret = "fre";
+		
+		else if (code2.equals("hu"))
+			ret = "hun";
+		else if (code2.equals("it"))
+			ret = "ita";
+		else if (code2.equals("lt"))
+			ret = "lit";
+		else if (code2.equals("lv"))
+			ret = "lav";
+		else if (code2.equals("mt"))
+			ret = "mlt";
+		else if (code2.equals("nl"))
+			ret = "dut";
+		else if (code2.equals("pl"))
+			ret = "pol";
+		else if (code2.equals("pt"))
+			ret = "por";
+		else if (code2.equals("ro"))
+			ret = "rum";
+		else if (code2.equals("sk"))
+			ret = "slo";
+		
+		else if (code2.equals("sl"))
+			ret = "slv";
+		else if (code2.equals("sv"))
+			ret = "swe";		
+		return ret;
+	}
 }
