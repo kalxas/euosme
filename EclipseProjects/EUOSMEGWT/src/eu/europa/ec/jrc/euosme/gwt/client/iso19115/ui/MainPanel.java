@@ -303,13 +303,18 @@ public class MainPanel extends Composite {
             	
 				if(Utilities.getUserAgent().contains("msie"))	{
 					String aboutUrl = "../userguide/about.html";
-					Window.open(aboutUrl, "_blank", "scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=600,width=550");
+					if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))) 
+						aboutUrl = "../userguide/about" + EUOSMEGWT.appMode + ".html";
+					Window.open(aboutUrl, "_blank", "scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=600,width=600");
 					Window.moveBy(0, 100);
 					//Window.open(aboutURL, "","scrollbars=yes,resizable=yes,location=no,toolbar=no,menubar=no,height=300,width=550");
 					
 				}
 				else {
-					Window.open("userguide/about.html ", constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=300,width=550");
+					String aboutUrl = "userguide/about.html";
+					if (!(EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))) 
+						aboutUrl = "userguide/about" + EUOSMEGWT.appMode + ".html";					
+					Window.open(aboutUrl, constants.about(),"scrollbars=yes,resizable=yes,location=yes,toolbar=no,menubar=no,height=600,width=600");
 				}
             }			
         };
