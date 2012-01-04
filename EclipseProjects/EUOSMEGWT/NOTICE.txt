@@ -1,7 +1,7 @@
 European Open Source Metadata Editor (EUOSME)
 This product is licenced under the EUPL © the European Union 2011
 
-Source code for this project can be downloaded from OSOR ( https://forge.osor.eu/projects/euosme/ )
+Source code for this project can be downloaded from OSOR ( https://joinup.ec.europa.eu/software/euosme/description )
 
 
 Licence Information regarding Bundled Third-Party Software
@@ -11,7 +11,7 @@ The following software is distributed with EUOSME and is provided under other li
 =====================================================================================================================================================================
 Package                                           Copyright                                   License                           Source Code Availability
 =====================================================================================================================================================================
-GEMET Client Library                              © the European Union 2011                   EUPL © the European Union 2011    http://www.osor.eu/projects/geoportal
+GEMET Client Library                              © the European Union 2011                   EUPL © the European Union 2011    https://joinup.ec.europa.eu/software/geoportal/description
 Apache Commons IO                                 © 2001-2008 The Apache Software Foundation  Apache License, Version 2.0       http://commons.apache.org/io/
 Apache Commons FileUpload                         © 2002-2008 The Apache Software Foundation  Apache License, Version 2.0       http://commons.apache.org/fileupload/
 Apache log4j                                      © 2002-2008 The Apache Software Foundation  Apache License, Version 2.0       http://logging.apache.org/log4j/1.2/
