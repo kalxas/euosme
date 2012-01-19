@@ -284,7 +284,7 @@ public interface iso19115Constants extends Constants {
 	String temporalTabTitle();
 	@DefaultStringValue("Temporal")
 	String temporalTitle();
-	@DefaultStringValue("")
+	@DefaultStringValue("Individually all temporal reference elements are conditional but one or more temporal reference must be provided.")
 	String temporalSummary();
 	
 	@DefaultStringValue("Quality&Validity")

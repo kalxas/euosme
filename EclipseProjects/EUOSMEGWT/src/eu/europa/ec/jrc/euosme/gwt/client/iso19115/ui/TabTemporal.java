@@ -75,8 +75,8 @@ public class TabTemporal extends Composite {
 	CI_Date creationDateObj = new CI_Date(constants.creationDate(), false, false,"");
 	
 	/** Note on mandatory fields */
-	@UiField(provided = true)
-	Label mandatoryFieldLabel = new Label("(*) " + constants.mandatoryField());
+	//@UiField(provided = true)
+	//Label mandatoryFieldLabel = new Label("(*) " + constants.mandatoryField());
 	
 	/** 
     * constructor TabTemporal
@@ -122,6 +122,9 @@ public class TabTemporal extends Composite {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			publicationDateObj.dateObj.setRequired(false);
 			revisionDateObj.dateObj.setRequired(false);
+			creationDateObj.dateObj.setRequired(false);
+			//extentObj.
+			
 		}
 		publicationDateObj.setInterface(0);
 		revisionDateObj.setInterface(1);

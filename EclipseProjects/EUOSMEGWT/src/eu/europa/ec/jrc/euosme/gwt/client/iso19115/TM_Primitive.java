@@ -44,10 +44,10 @@ public class TM_Primitive extends CI {
 	protected iso19115Messages messages = GWT.create(iso19115Messages.class);
 	
 	/** Date control declaration */
-	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "", true);
+	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "", false);
 	
 	/** Date control declaration */
-	DateImpl endDateObj =	new DateImpl(constants.endDate(), "", true);
+	DateImpl endDateObj =	new DateImpl(constants.endDate(), "", false);
 	
 	/** 
      * constructor TM_Primitive model
@@ -61,6 +61,8 @@ public class TM_Primitive extends CI {
      */
 	public TM_Primitive(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.HORIZONTAL);
+		beginDateObj.setRequired(required);
+		endDateObj.setRequired(required);
 		fieldsGroup.add(beginDateObj);
 		fieldsGroup.add(endDateObj);		
 	}

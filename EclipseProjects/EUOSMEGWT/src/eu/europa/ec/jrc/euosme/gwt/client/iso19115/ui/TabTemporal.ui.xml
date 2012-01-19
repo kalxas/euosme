@@ -7,9 +7,8 @@
     	<g:Label addStyleNames="h2" ui:field="titleLabel"/>
 		<g:HTML addStyleNames="h4" ui:field="summaryHTML"/>
 		<widgets:CIMultiple ui:field="extentContainerObj"/>
+		<my:CI_Date ui:field="creationDateObj"/>
 		<my:CI_Date ui:field="publicationDateObj"/>
 		<my:CI_Date ui:field="revisionDateObj"/>
-		<my:CI_Date ui:field="creationDateObj"/>			
-		<g:Label ui:field="mandatoryFieldLabel"/>
   	</g:HTMLPanel>
 </ui:UiBinder> 
