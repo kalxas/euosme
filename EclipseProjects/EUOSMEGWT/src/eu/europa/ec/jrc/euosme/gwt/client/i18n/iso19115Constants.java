@@ -53,7 +53,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Description")
 	String description();
   
-	@DefaultStringValue("Name")
+	@DefaultStringValue("Title")
 	String name();
   
 	@DefaultStringValue("Application profile")

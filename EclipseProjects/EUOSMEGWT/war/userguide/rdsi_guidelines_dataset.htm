@@ -444,11 +444,11 @@ Dataset coverage is geographic Europe plus territories outside Europe administra
 <p>Multiple</p>
 
 <h4>Domain</h4>
-<p>The Resource Locator consists of a Linkage, and optionally a Name, a Description and a Function.
+<p>The Resource Locator consists of a Linkage, and optionally a Title, a Description and a Function.
 <br><b>Linkage</b> is a URL.
-<br><b>Name</b> is a free text.
+<br><b>Title</b> is a free text.
 <br><b>Description</b> is a free text.
-<br><b>Function</b>is a codelist, extending the ISO 19115  CI_OnLineFunctionCode:
+<br><b>Function</b> is a codelist, extending the ISO 19115  CI_OnLineFunctionCode:
 <br>• download
 <br>• information
 <br>• search
@@ -460,57 +460,56 @@ The list is extended with the following entry:
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
-<p><b>Name:</b>please provide a short title. In brackets after the title please provide a <b>(restricted access)</b> if there are any restrictions to the user group this webpage, application or service is available for.
-<br><b>Description:</b>Please provide a brief description. If there is a restricted access to this service please state for whom it is accessible. 
-<br><b>Function:</b>Each of the functions is used in a particular context. The context is given below:  
-<br>A link to a web page with <b>additional information</b> about the resource, e.g. with additional metadata, should have a Function of <b>&lsquo;information&rsquo;</b>.
-<br>If it is possible to <b>download</b> the resource data then links for how to do this must be provided. These could be any of the following:
-<br>• A direct download link that returns the actual data has the function: <b>download</b>.
-<br>• A link to an application that allows selecting and downloading data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
-<br>• A link to an application that allows selecting data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
-<br>• A link to a download service i.e. to the <i>GetCapabilities document</i> (in the case of an OGC WFS) that provides all the details of an existing service from which the data can be obtained (the form of the link is not important; it could be a <i>GetCapabilities document</i> request or point to a XML file within a directory available on the web.  The only requirement is that the link returns the service capabilities XML file). This has the function <b>download</b>.
+<p><b>Title: </b>Please provide a short title. In brackets after the title please provide a <b>(restricted access)</b> if there are any restrictions to the user group this webpage, application or service is available for.
+<br><br><b>Description: </b>Please provide a brief description. If there is a restricted access to this service please state for whom it is accessible. 
+<br><br><b>Function: </b>Each of the functions is used in a particular context. The context is given below:  
+<br><br><b>- Function: information</b><br>A link to a web page with <b>additional information</b> about the resource, e.g. with additional metadata, should have a Function of <b>&lsquo;information&rsquo;</b>.
+<br><br><b>- Function: download</b><br>If it is possible to <b>download</b> the resource data then links for how to do this must be provided. These could be any of the following:
+<br><br>• A direct download link that returns the actual data has the function: <b>download</b>.
+<br><br>• A link to an application that allows selecting and downloading data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
+<br><br>• A link to an application that allows selecting data from a large database based on additional criteria such as time, location, etc has the function: <b>download</b>.
+<br><br>• A link to a download service i.e. to the <i>GetCapabilities document</i> (in the case of an OGC WFS) that provides all the details of an existing service from which the data can be obtained (the form of the link is not important; it could be a <i>GetCapabilities document</i> request or point to a XML file within a directory available on the web.  The only requirement is that the link returns the service capabilities XML file). This has the function <b>download</b>.
+
+<br><br><b>- Function: order</b><br>Links to <b>order</b> the data could be provided in two different ways:
+<br><br>• Links pointing to a site for an online order process for obtaining the resource. This link has the function <b>order</b>. 
+<br><br><b>- Function: offlineAccess</b><br>• Link pointing to online instructions for requesting the resource from the provider. This link has the function <b>offlineAccess</b>
 <br>
-<br>Links to <b>order</b> the data could be provided in two different ways:
-<br>• Links pointing to a site for an online order process for obtaining the resource. This link has the function <b>order</b>. 
-<br>• Link pointing to online instructions for requesting the resource from the provider. This link has the function <b>offlineAccess</b>
+<br><b>- Function: view</b><br>If it is possible to <b>view</b> the resource data then links for how to do this must be provided:
+<br><br>• A view application link that allows users to e.g. see the different map layers created from the resource data. This link has the function <b>view</b>.
+<br><br>• A link to a view service i.e. to a <i>GetCapabilities document</i> that provides all the details of an existing web map service from which maps created from the resource can be obtained (again the form of this URL is not important but the link must return the service capabilities XML file). This link has the function <b>view</b>.
 <br>
-<br>If it is possible to <b>view</b> the resource data then links for how to do this must be provided:
-<br>• A view application link that allows users to e.g. see the different map layers created from the resource data. This link has the function <b>view</b>.
-<br>• A link to a view service i.e. to a <i>GetCapabilities document</i> that provides all the details of an existing web map service from which maps created from the resource can be obtained (again the form of this URL is not important but the link must return the service capabilities XML file). This link has the function <b>view</b>.
-</p>
-<br>
-<br>For a data series, if it is possible to search for the contained datasets that make up the series then links for how to do this must be provided and could be any of the following:
-<br>• A search application link that allows users to search for the datasets. This link points to an application and thus has the function <b>search</b>..
-<br>• A link to a discovery service i.e. to a <i>GetCapabilities document</i> that provides all the details of a discovery service from which metadata for the datasets can be obtained. This link has the function <b>discovery</b>.
+<br><b>- Function: search</b><br>For a data series, if it is possible to search for the contained datasets that make up the series then links for how to do this must be provided and could be any of the following:
+<br><br>• A search application link that allows users to search for the datasets. This link points to an application and thus has the function <b>search</b>..
+<br><br>• A link to a discovery service i.e. to a <i>GetCapabilities document</i> that provides all the details of a discovery service from which metadata for the datasets can be obtained. This link has the function <b>discovery</b>.
 </p>
 
 <h4>Examples</h4>
 <p><b>Additional information on the resource: </b>
 <br>• Linkage - http://image2000.jrc.ec.europa.eu
-<br>• Name: Image 2000 project homepage (restricted access)
+<br>• Title: Image 2000 project homepage (restricted access)
 <br>• Description: This page gives you access to all information and applications related to Image 2000. 
 <br>• Function - information
 <br>
 <br><b>View service related to the resource:</b>
 <br>• Linkage - http://ags-sdi-public.jrc.ec.europa.eu/arcgis/services/img2k_321_mos/Mapserver/WMSServer?request=GetCapabilities&service=wms&version=1.3.0
-<br>• Name: Image 2000 view service for the band Combination 3-2-1
+<br>• Title: Image 2000 view service for the band Combination 3-2-1
 <br>• Description: This is an open access view service that gives access to the image 2000 mosaic with the band combination 3-2-1. 
 <br>• Function - view
 <br>
 <br><b>Download link for the resource:</b>
 <br>• Linkage - http://www.eea.europa.eu/data-and-maps/data/corine-land-cover-2000-raster-1
-<br>• Name: Raster data on land cover for the Corine Land Cover 2000 (CLC2000) inventory
+<br>• Title: Raster data on land cover for the Corine Land Cover 2000 (CLC2000) inventory
 <br>• Function - download
 <br>
 <br><b>Search application for the resource:</b>
 <br>• Linkage - http://cidportal.jrc.ec.europa.eu/imagearchive/main/ 
-<br>• Name:  Community Image Data Portal (restricted access)
+<br>• Title:  Community Image Data Portal (restricted access)
 <br>• Description: The Community Image (CID) Portal is a Web portal to search and access Remote Sensing data and derived products hosted at JRC. Search and preview is open to the public. Access to the image data via a variety of online services is limited to authorized and registered users. Staff of institutions of the European Union can be granted access to most of the archive data after registration
 <br>• Function - search 
 </p>
 
 <h4>Other comments</h4>
-<p>Please note that Name, Description and Function are optional <b>additional element</b>, they are not part of the required INSPIRE Metadata.  If the Metadata Editor that you are using does not support this element then leave it out.</p>
+<p>Please note that Title, Description and Function are optional <b>additional element</b>, they are not part of the required INSPIRE Metadata.  If the Metadata Editor that you are using does not support this element then leave it out.</p>
 
 
 <h3><a id="parentIdentifier" name="parentIdentifier">2.1.5.</a> Parent Identifier</h3>
@@ -568,9 +567,9 @@ The URI is also used to determine relationships between <i>reference data</i> an
 <p><b>What is the difference between a URI and a URL? </b>While URI stands for Identifier, a URL stands for Location. URLs are known to all of us browsing through the web. In the context of Linked Data there is a general movement towards using URLs as URIs, which is something that we support. Note, just using a URL as an identifier means you can use a real location, but you do not have to. After all here we use it only as an identifier.
 </p>
 
-<p><b>How to build a URI?</b>We distinguish locally and globally unique URIs.
-<br>• A locally unique URI is a build through an identifier and a namespace. The identifier is unique e.g. within your action, unit or institution, and the namespace in this case ensures that in combination, namespace and identifier are unique. 
-<br>• A globally unique URI is a single string (a set of characters) that identifies the resource globally without using the help of a namespace. There are two options to generating a globally Unique Resource Identifier:
+<p><b>How to build a URI?</b> We distinguish locally and globally unique URIs.
+<br>• A locally unique URI is build through an identifier and a codespace. The identifier is unique e.g. within your action, unit or institution, and the codespace in this case ensures that in combination, codespace and identifier are unique. 
+<br>• A globally unique URI is a single string (a set of characters) that identifies the resource globally without using the help of a codespace. There are two options to generating a globally Unique Resource Identifier:
 <br>&#09;1.	Using a generated Universally Unique Identifier (UUID), provided through an algorithm that ensures uniqueness. There are online tools users can use to generate such a UUID.  
 <br>&#09;2.	Using a URL following a predefined pattern and well-defined structure that ensures uniqueness.
 </p>
@@ -582,11 +581,11 @@ The URI is also used to determine relationships between <i>reference data</i> an
 <p>Multiple</p>
 
 <h4>Domain</h4>
-<p>The Unique Resource Identifier consists of a Code and Code Space.
+<p>The Unique Resource Identifier consists of a Code and Codespace.
 <br>
 Code is free text.
 <br>
-Code Space is free text.
+Codespace is free text.
 </p>
 
 <h4>Guidelines for how to fill in the entry</h4>
@@ -598,7 +597,7 @@ Code Space is free text.
 <br><i>URL:</i> The Code itself is the unique identifier for each resource. We are currently working on a URL pattern which we can suggest ensuring this uniqueness and which should be moderately independent from issues related to renaming of e.g. actions and units. 
 <br>
 <br><b>Locally Unique Resource Identifiers</b>
-<br>For the Code Space we recommend using JRC as a prefix in combination with the numeric identifier for your unit (e.g. JRC-H06).  This will be the same for each metadata record created by your unit.  Having a code space ensures that no two units will have the same URI.
+<br>For the Codespace we recommend using JRC as a prefix in combination with the numeric identifier for your unit (e.g. JRC-H06).  This will be the same for each metadata record created by your unit.  Having a code space ensures that no two units will have the same URI.
 <br>
 <br>The Code values need to be designed in a structure that can be added to and will not have to change when new data becomes available, for example as:
 <br>• Project Name
@@ -612,20 +611,20 @@ Code Space is free text.
 
 <h4>Examples</h4>
 <p><b>Globally Unique UUID Example:</b>
-<br>Code : 550e8400-e29b-41d4-a716-446655440000
+<br>Code: 550e8400-e29b-41d4-a716-446655440000
 <br>
 <br><b>Locally Unique Resource Identifier Examples</b>
 <br>Data - The SDI Unit Image 2000 Multispectral Data Series :
-<br>• Code Space: JRC-H06
-<br>• Code : Image2000_MS_DataSeries
+<br>• Codespace: JRC-H06
+<br>• Code: Image2000_MS_DataSeries
 <br>
 <br>Data - The SDI Unit Image 2000 Panchromatic Data Series :
-<br>• Code Space : JRC-H06
-<br>• Code : Image2000_PAN_DataSeries 
+<br>• Codespace: JRC-H06
+<br>• Code: Image2000_PAN_DataSeries 
 <br>
 <br>Data - The SDI Unit Image 2000 Multispectral Dataset for Landsat TM Frame NL5 :
-<br>• Code Space : JRC-H06
-<br>• Code : Image2000_MS_Dataset_NL5 
+<br>• Codespace: JRC-H06
+<br>• Code: Image2000_MS_Dataset_NL5 
 </p>
 
 <h4>Other comments</h4>

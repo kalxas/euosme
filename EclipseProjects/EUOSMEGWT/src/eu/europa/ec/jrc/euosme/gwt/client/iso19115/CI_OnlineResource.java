@@ -29,6 +29,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterStringLong;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 
 /**
@@ -60,7 +61,7 @@ public class CI_OnlineResource extends CI {
 	CharacterString nameObj = new CharacterString(constants.name(), "", false, CheckFunctions.normal, true);
 	
 	/** description control declaration */
-	CharacterString descriptionObj = new CharacterString(constants.description(), "", false, CheckFunctions.normal, true);
+	CharacterStringLong descriptionObj = new CharacterStringLong(constants.description(), "", false);
 	
 	/** function control declaration */
 	CodeList functionObj = new CodeList(constants.function(), "", false, "3", "", true);
@@ -122,8 +123,8 @@ public class CI_OnlineResource extends CI {
 		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			protocolObj.setVisible(false);
 			applicationProfileObj.setVisible(false);
-			nameObj.setVisible(false);
-			descriptionObj.setVisible(false);						
+			nameObj.setVisible(true);
+			descriptionObj.setVisible(true);						
 		}
 	}
 }
