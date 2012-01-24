@@ -814,12 +814,18 @@ public class MainPanel extends Composite {
 				// get results and process them
 				String ret = event.getResults();
 				//hack for IE
-				ret = ret.replaceAll(">-</A>", "></A>");
+				if (ret.contains(">-</A>")) 
+					ret = ret.replaceAll(">-</A>", "></A>");
 		        DivElement div = Document.get().createDivElement();
 		        div.setInnerHTML(ret);
 		        ret = div.getInnerText();
 		        //XML Parser don't accept space at the beginning, so we trim it  
 		        ret = ret.trim();
+		        // IE automatically convert &amp; to & 
+		        // we need to convert them back 
+		        if(Utilities.getUserAgent().contains("msie")){
+		        	ret = ret.replaceAll("&", "&amp;");
+		        }		        
 		        //Turn hourglass off
 				Document.get().getBody().getStyle().setCursor(Style.Cursor.DEFAULT);
 		        if (ret.startsWith("ERROR")) {
