@@ -69,7 +69,7 @@ public class Boolean extends Composite  {
 	
 	/** ListBox declaration */
 	@UiField
-	ListBox myListBox = new ListBox();
+	public ListBox myListBox = new ListBox();
 	
 	/** Button for information */
 	@UiField
@@ -197,7 +197,7 @@ public class Boolean extends Composite  {
 	 */
 	@UiHandler("myListBox")
 	void onChange(ChangeEvent event) {
-		Utilities.setTextTreeItem(myTreeItem,getMyValue());	
+		Utilities.setTextTreeItem(myTreeItem,getMyValue());		
 		myCheck();
 	}
 	
@@ -212,6 +212,17 @@ public class Boolean extends Composite  {
 			myError.setText(constants.mandatoryField());
 			myError.setVisible(true);  	  		
 		}
+		
+		
+		// change to inapplicable if no evaluate
+		/* 
+		if (getMyValue().isEmpty() && EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {		
+			String nameNilReason = myListBox.getName().replace(".pass[1].boolean[1]", ".pass[1].@gco:nilReason");
+			TreeItem nilReasonItem = Utilities.getSelectTreeItem(nameNilReason);
+			Utilities.setTextTreeItem(nilReasonItem, "inapplicable");
+		}	
+		*/
+		
 	}
 	
 	/**

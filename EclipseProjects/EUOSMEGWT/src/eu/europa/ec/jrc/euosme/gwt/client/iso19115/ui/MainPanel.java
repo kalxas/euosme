@@ -919,10 +919,16 @@ public class MainPanel extends Composite {
 		// Remove empty resource information
 		String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
 		myXMLTree = myXMLTree.replace("<gmd:citation>\n<gmd:CI_Citation>\n<gmd:date>\n<gmd:CI_Date>\n<gmd:date>\n<gco:Date>"+ myTodayDate + "</gco:Date>\n</gmd:date>\n<gmd:dateType>\n<gmd:CI_DateTypeCode codeList=\"http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_DateTypeCode\" codeListValue=\"creation\">creation</gmd:CI_DateTypeCode>\n</gmd:dateType>\n</gmd:CI_Date>\n</gmd:date>\n</gmd:CI_Citation>\n</gmd:citation>","");
-		myXMLTree = myXMLTree.replace("\n\n","\n");
+		myXMLTree = myXMLTree.replace("\n\n","\n");		
 		// Degree not evaluated
-		myXMLTree = myXMLTree.replace("</gmd:explanation>\n</gmd:DQ_ConformanceResult>","</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>");
-		myXMLTree = myXMLTree.replace("\n\n","\n");
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+			myXMLTree = myXMLTree.replace("</gmd:explanation>\n</gmd:DQ_ConformanceResult>", "</gmd:explanation>\n<gmd:pass gco:nilReason=\"inapplicable\"></gmd:pass>\n</gmd:DQ_ConformanceResult>");
+			myXMLTree = myXMLTree.replace("\n\n","\n");
+		}
+		else {
+			myXMLTree = myXMLTree.replace("</gmd:explanation>\n</gmd:DQ_ConformanceResult>", "</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>");
+			myXMLTree = myXMLTree.replace("\n\n","\n");
+		}
 		// Remove empty distance
 		myXMLTree = myXMLTree.replace("<gmd:distance>\n<gco:Distance uom=\"\"/>\n</gmd:distance>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");

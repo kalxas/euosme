@@ -68,6 +68,7 @@ public class DQ_ConformanceResult extends CI {
 	
 	/** degree control declaration */
 	Boolean degreeObj = new Boolean(constants.degree(),"degree",true,"");
+	CharacterString noDegree = new CharacterString(constants.degree(), "", false, CheckFunctions.normal, true);
 	
 	/** 
      * constructor DQ_ConformanceResult model
@@ -85,6 +86,8 @@ public class DQ_ConformanceResult extends CI {
 		fieldsGroup.add(addressObj);
 		fieldsGroup.add(explanationObj);
 		fieldsGroup.add(degreeObj);
+		
+	    
 		
 		specificationObj.specificationObj.myTextBox.addSelectionHandler(new SelectionHandler<Suggestion>() {
 			@Override
@@ -136,9 +139,14 @@ public class DQ_ConformanceResult extends CI {
 			specificationObj.myCheck();
 			addressObj.myCheck();
 			explanationObj.myCheck();
-			degreeObj.myCheck();
-			
+			degreeObj.myCheck();		
 		}
+		
+//		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+//			if (degreeObj.getMyValue().isEmpty()) {
+//				noDegree.setMyValue("inapplicable");
+//			}
+//		}			
 	}
 
 	@Override
@@ -148,6 +156,7 @@ public class DQ_ConformanceResult extends CI {
 		addressObj.setFormName(name+ ".specification[1].@xlink:href");
 		explanationObj.setFormName(name + ".explanation[1].characterstring[1]");
 		degreeObj.setFormName(name + ".pass[1].boolean[1]");
+		noDegree.setFormName(name + ".pass[1].@gco:nilReason");
 	}
 	
 	@Override
