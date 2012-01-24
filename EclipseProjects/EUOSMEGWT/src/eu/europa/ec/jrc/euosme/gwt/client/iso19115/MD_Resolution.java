@@ -23,8 +23,10 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
@@ -91,7 +93,9 @@ public class MD_Resolution extends CI {
 			equivalentScaleObj.myCheck();
 			distanceObj.myCheck();
 			myError.setVisible(false);
-			if ((equivalentScaleObj.getMyValue().isEmpty() && distanceObj.distanceObj.getMyValue().isEmpty()) || (!equivalentScaleObj.getMyValue().isEmpty() && !distanceObj.distanceObj.getMyValue().isEmpty())) {
+			if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()) &&
+					((equivalentScaleObj.getMyValue().isEmpty() && distanceObj.distanceObj.getMyValue().isEmpty())
+							|| (!equivalentScaleObj.getMyValue().isEmpty() && !distanceObj.distanceObj.getMyValue().isEmpty()))) {
 				myError.setText(constants.mandatoryFieldCombined3());
 				myError.setVisible(true);			
 			}

@@ -87,7 +87,7 @@ public class TabIdentification extends Composite {
 	
 	/** language control declaration */
 	@UiField(provided = true)
-	CodeListMultiple languageObj =	new CodeListMultiple(constants.resourceLanguage(),"resourcelanguage",true,"2","",true);
+	CodeListMultiple languageObj =	new CodeListMultiple(constants.resourceLanguage(),"resourcelanguage",false,"2","",true);
 
 	/** coupled resource declaration */
 	@UiField(provided = true)
@@ -150,7 +150,8 @@ public class TabIdentification extends Composite {
 				if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString()))
 					parentIdentifierObj.setVisible(false);
 				else	
-					parentIdentifierObj.setVisible(true);
+					//parentIdentifierObj.setVisible(true);
+					parentIdentifierObj.setVisible(false);
 			}
 			else 
 				parentIdentifierObj.setVisible(false);

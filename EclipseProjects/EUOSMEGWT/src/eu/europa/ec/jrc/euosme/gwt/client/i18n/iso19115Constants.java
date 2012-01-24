@@ -133,7 +133,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Code")
 	String code();
 	
-	@DefaultStringValue("Namespace")
+	@DefaultStringValue("Codespace")
 	String codeSpace();
 	
 	@DefaultStringValue("Version")

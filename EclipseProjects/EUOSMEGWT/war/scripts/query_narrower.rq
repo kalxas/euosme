@@ -17,7 +17,7 @@ WHERE {
 
     OPTIONAL {
       ?c skos:prefLabel ?a.
-      FILTER ( LANG(?a) = "it" )
+      FILTER ( LANG(?a) = "##clientLanguage##" )
     }
     FILTER ( LANG(?l) = "en")
   }

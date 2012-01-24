@@ -27,6 +27,8 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.Widget;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.iso19115.DQ_Element;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CIMultiple;
@@ -57,7 +59,7 @@ public class TabConformity extends Composite {
 	DQ_Element reportObj =	new DQ_Element(constants.conformity(),false, true,"");
 	@UiField(provided = true)
 	CIMultiple reportContainerObj = new CIMultiple(constants.conformity(), reportObj, false,"");
-	
+
 	/** Note on mandatory fields */
 	@UiField(provided = true)
 	Label mandatoryFieldLabel = new Label("(*) " + constants.mandatoryField());
@@ -74,6 +76,10 @@ public class TabConformity extends Composite {
 		titleLabel.removeStyleName("gwt-Label");
 		// set form names
 		setFormName();
+		
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+			reportContainerObj.setLabel(constants.conformity() + " (*)");
+		}
 	}
 
 	/**

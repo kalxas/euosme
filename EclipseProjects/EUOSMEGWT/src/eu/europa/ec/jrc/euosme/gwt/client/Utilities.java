@@ -1459,6 +1459,8 @@ public class Utilities {
     		else 
     			response=MyResources.INSTANCE.codeList15().getText();    		
     	}
+    	if (myCodeListName.equalsIgnoreCase("16")) 
+    		response=MyResources.INSTANCE.codeList16().getText();    	
     	return response;
 	}
 	

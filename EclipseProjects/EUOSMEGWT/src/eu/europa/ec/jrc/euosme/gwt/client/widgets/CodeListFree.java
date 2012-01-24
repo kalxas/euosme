@@ -152,6 +152,8 @@ public class CodeListFree extends Composite  {
 		myTextBox.addStyleName("svP");
 		myHP.add(myTextBox);
 		
+		
+		
 		// Set Label widget
 		setLabel(label);
 		
@@ -236,6 +238,10 @@ public class CodeListFree extends Composite  {
 		helpLabel.addStyleName("suggestion");
 	}	
 
+	public void setBoxWidth(String s){
+		myTextBox.setWidth(s);
+	}
+	
 	/**
 	 * Set the header
 	 * 

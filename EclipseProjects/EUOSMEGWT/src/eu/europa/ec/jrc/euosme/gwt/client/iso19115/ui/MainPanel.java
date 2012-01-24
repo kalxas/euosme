@@ -198,12 +198,16 @@ public class MainPanel extends Composite {
             }
         };
         newMenu.addItem(constants.newSpatialDatasetSeries(),cmd2a);
-        Command cmd2b = new Command() {
-            public void execute() {
-            	newForm(DataTypes.DATA_SERVICE.toString(),"");  
-            }
-        };
-        newMenu.addItem(constants.newSpatialDataService(),cmd2b);
+        
+        if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {	        
+	        Command cmd2b = new Command() {
+	            public void execute() {
+	            	newForm(DataTypes.DATA_SERVICE.toString(),"");  
+	            }
+	        };
+	        newMenu.addItem(constants.newSpatialDataService(),cmd2b);
+        }
+        
         menuBar.addItem(constants.newFile(), newMenu);
         
         // Menu LOAD

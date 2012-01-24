@@ -21,12 +21,16 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
 
+import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
 
 /**
  * Create Distance model
@@ -49,6 +53,10 @@ public class Distance extends CI {
 	/** UM control declaration */
 	CharacterString umObj = new CharacterString(constants.UM(), "spatialresolution", false, CheckFunctions.normal, true);
 	
+	/** UM for RDSI */
+	CodeListFree umRDSIObj = new CodeListFree(constants.UM(),"spatialresolution", false,"16","", CheckFunctions.normal, true, false);
+//	(String label, String help, boolean required, String myListName, String myDefaultValue, CheckFunctions check, boolean showOracleList, boolean order)
+//	final CodeListFree specificationObj = new CodeListFree(constants.specifications(),"specification",false,"15","",CheckFunctions.normal,true,false);
 	/** 
      * constructor Distance model
      * 
@@ -62,23 +70,35 @@ public class Distance extends CI {
 	public Distance(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.HORIZONTAL);	
 		fieldsGroup.add(distanceObj);
-		fieldsGroup.add(umObj);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) 
+			fieldsGroup.add(umObj);
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			fieldsGroup.add(umRDSIObj);
+			//umRDSIObj.setBoxWidth("40px");			
 	}
 	
 	@Override
 	public void myCheck() {
 		if (this.getParent().isVisible()) {
 			distanceObj.myCheck();
-			umObj.myCheck();
-			myError.setVisible(false);
-			if (!distanceObj.getMyValue().isEmpty() && umObj.getMyValue().isEmpty()) {
-				myError.setText(constants.mandatoryFieldCombined4());
-				myError.setVisible(true);		
+			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) 
+			{
+				umObj.myCheck();				
+				myError.setVisible(false);
+				if (!distanceObj.getMyValue().isEmpty() && umObj.getMyValue().isEmpty()) {
+					myError.setText(constants.mandatoryFieldCombined4());
+					myError.setVisible(true);		
+				}
+				else if (distanceObj.getMyValue().isEmpty()) {
+					myError.setText(constants.mandatoryFieldCombined5());
+					myError.setVisible(true);		
+				}				
 			}
-			else if (distanceObj.getMyValue().isEmpty() && !umObj.getMyValue().isEmpty()) {
-				myError.setText(constants.mandatoryFieldCombined5());
-				myError.setVisible(true);		
-			}
+			else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+			{
+				umRDSIObj.myCheck();
+				myError.setVisible(false);				
+			}			
 		}
 	}
 	
@@ -87,5 +107,6 @@ public class Distance extends CI {
 		super.setFormName(name);
 		distanceObj.setFormName(name + ".distance[1]");		
 		umObj.setFormName(name + ".distance[1].@uom");
+		umRDSIObj.setFormName(name + ".distance[1].@uom");
 	}	
 }

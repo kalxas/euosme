@@ -190,7 +190,7 @@ public class EUOSMEGWT implements EntryPoint {
 	    rb0.setValue(true);	    
 	    panel.add(rb0);
 	    panel.add(rb1);
-	    panel.add(rb2);	
+	    //panel.add(rb2);	
 	    
 	    final HorizontalPanel myHPanel = new HorizontalPanel();		    
 		
