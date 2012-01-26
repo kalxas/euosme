@@ -605,7 +605,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Who is this metadata for?")
 	String publish_info();
 	
-	@DefaultStringValue("<h4>RDSI</h4><p>IES Reference Data & Services Initiative</p><h4>INSPIRE@EC</h4><p>INSPIRE at EC</p><h4>CCH</h4><p>Climate Change Clearing House</p>")
+	@DefaultStringValue("<h4>RDSI</h4><p>IES Reference Data & Services Initiative</p><h4>INSPIRE@EC</h4><p>INSPIRE at EC</p><h4>CHM</h4><p>Climate Change Clearing House</p>")
 	String publish_info_help();	
 	
 	@DefaultStringValue("INSPIRE Metadata Editor User Guide")
@@ -648,7 +648,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("INSPIRE@EC")
 	String rdsi_inspire();
 	
-	@DefaultStringValue("CCH")
+	@DefaultStringValue("CHM")
 	String rdsi_cch();
 
 	@DefaultStringValue("INSPIRE services failed")	

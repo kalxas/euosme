@@ -18,7 +18,7 @@
 	   		<g:CheckBox ui:field="ck_inspire"/><g:Label>INSPIRE@EC</g:Label>
 	   		</g:HorizontalPanel>
 	   		<g:HorizontalPanel>
-	   		<g:CheckBox ui:field="ck_cch"/><g:Label>CCH</g:Label>
+	   		<g:CheckBox ui:field="ck_cch"/><g:Label>CHM</g:Label>
 	   		</g:HorizontalPanel>
  		</g:VerticalPanel>
  	</g:DisclosurePanel>		
