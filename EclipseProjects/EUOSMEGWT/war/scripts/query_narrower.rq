@@ -1,14 +1,17 @@
+DEFINE input:inference "rdfs_entailments"
+
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dct:<http://purl.org/dc/terms/>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 
-SELECT DISTINCT ?c ?l ?a ?d ?v
+SELECT DISTINCT ?c ?l ?a ?d 
+FROM <##graphURI##>
+FROM <##graphURI2##>
 WHERE {
   {
     ?c rdfs:label ?l.
     ?c skos:broader <##scheme##>.
-    ?c skos:inScheme ?v.
 
     OPTIONAL {
       ?c skos:narrower ?n.
@@ -25,16 +28,15 @@ WHERE {
   {
     ?c rdfs:label ?l.
     <##scheme##> skos:member ?c.
-    ?c skos:inScheme ?v.
 
     OPTIONAL {
-      ?c skos:narrower ?n.
-      ?n skos:inScheme ?d.
-    }
-
-    OPTIONAL {
-      ?c skos:member ?n.
-      ?n skos:inScheme ?d.
+     {
+        ?c skos:narrower ?n.
+        ?n skos:inScheme ?d.
+      } UNION {
+        ?c skos:member ?n.
+        ?n skos:inScheme ?d.
+      }
     }
 
     OPTIONAL {
@@ -50,3 +52,6 @@ WHERE {
   }
 }
 ORDER BY ASC(?a) ASC(?l)
+
+
+

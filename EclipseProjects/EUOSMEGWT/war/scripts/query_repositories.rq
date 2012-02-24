@@ -1,15 +1,22 @@
+DEFINE input:inference "rdfs_entailments"
+
 PREFIX dct:<http://purl.org/dc/terms/>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT ?v ?l ?d
+FROM <##graphURI##>
+FROM <##graphURI2##> 
 WHERE {
   {
     ?v skos:prefLabel ?l.
     ?v rdf:type skos:ConceptScheme.
+
     OPTIONAL {
       ?v dct:issued ?d.
     }
+
+    FILTER ( LANG(?l) = "en" )
   }
 }
 ORDER BY ASC(?l)

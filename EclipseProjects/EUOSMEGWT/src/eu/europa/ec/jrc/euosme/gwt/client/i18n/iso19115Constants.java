@@ -492,7 +492,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Keyword from online repositories")
 	String onlineRepository();	
 	
-	@DefaultStringValue("Keyword from GEMET")
+	@DefaultStringValue("Keyword from GEMET and DROUGHT")
 	String repositoryGemet();	
 	
 	@DefaultStringValue("Show/hide tree")

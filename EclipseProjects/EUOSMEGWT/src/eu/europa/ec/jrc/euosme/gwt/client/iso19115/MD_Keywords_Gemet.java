@@ -123,7 +123,7 @@ public class MD_Keywords_Gemet extends CI {
 		filterButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
 					requestSearch("http://www.eionet.europa.eu/gemet/concept/",filterTextBox.getText());
 					filterClearButton.setEnabled(true);
 				}
@@ -145,7 +145,7 @@ public class MD_Keywords_Gemet extends CI {
 		filterClearButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
 					requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
 				}
 				else { 
@@ -208,8 +208,10 @@ public class MD_Keywords_Gemet extends CI {
 		if (EUOSMEGWT.rpcRepository){
 			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
 				//requestListOfRepository(listScheme);
-				listScheme.setVisible(false);
-				requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
+				//listScheme.setVisible(false);				
+				Utilities.setSuggestList(MyResources.INSTANCE.schemeRDSIList().getText(), listScheme);
+				listScheme.setSelectedIndex(2);
+				requestSuggestions("http://www.eionet.europa.eu/gemet/","");
 			}
 			else
 				// get the list of schemes and populate the list box

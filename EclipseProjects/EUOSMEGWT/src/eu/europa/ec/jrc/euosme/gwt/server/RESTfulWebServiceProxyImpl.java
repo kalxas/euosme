@@ -70,6 +70,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	static String inspireWebService = "";
 	static String repoType = "";
 	static String repoGraph="";
+	static String repoGraph2="";
 	
     static class MyAuthenticator extends Authenticator {
         public PasswordAuthentication getPasswordAuthentication() {
@@ -83,6 +84,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         kpass = config.getInitParameter("password");
         repoType = config.getInitParameter("repotype");
         repoGraph = config.getInitParameter("repograph");
+        repoGraph2 = config.getInitParameter("repograph2");
         codelists = config.getInitParameter("codelists");
         repositories = config.getInitParameter("repositories");
         dataThemes = config.getInitParameter("dataThemes");
@@ -123,9 +125,15 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
         				paramName.equalsIgnoreCase("search")) {
         			
         			uri = repositories;
-    				if (repoType.equalsIgnoreCase("virtuoso"))  {  				
-    					query = getContents("query_geoss_" + paramName + ".rq");
+    				if (repoType.equalsIgnoreCase("virtuoso"))  {
+    					if (repoGraph2 == null)
+    						query = getContents("query_geoss_" + paramName + ".rq");
+    					else {
+    						query = getContents("query_" + paramName + ".rq");
+    						query = query.replace("##graphURI2##",repoGraph2);
+    					}
     					query = query.replace("##graphURI##",repoGraph);
+    					
     					
     				}
     				else 

@@ -32,7 +32,7 @@
 		</init-param>
 		<init-param>
 			<param-name>rpcRepository</param-name>
-			<param-value>false</param-value>
+			<param-value>true</param-value>
 			<description>true to get the list of keywords from online service,
 				false to use local resources</description>
 		</init-param>
@@ -79,20 +79,24 @@
 		</init-param>
 		<init-param>
 			<param-name>repositories</param-name>
-			<param-value>https://semanticlab.jrc.ec.europa.eu/openrdf-workbench/repositories/reference/query</param-value>
-			<description>URL to access the semantic repository and get the list
-				of available keywords</description>
+			<param-value>http://semanticlab.jrc.ec.europa.eu:4433/sparql</param-value>
+			<description>URL to access the semantic repository and get the list of available keywords</description>
 		</init-param>
 		<init-param>
 			<param-name>repotype</param-name>
-			<param-value>sesame</param-value>
+			<param-value>virtuoso</param-value>
 			<description>type of SPARQL service: virtuoso or sesame</description>
-		</init-param>		
+		</init-param>			
 		<init-param>
 			<param-name>repograph</param-name>
 			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/reference</param-value>
 			<description>Default Graph URI of SPARQL service</description>
-		</init-param>    	
+		</init-param>	
+		<init-param>
+			<param-name>repograph2</param-name>
+			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/thematic</param-value>
+			<description>Additional Graph URI of SPARQL service</description>
+		</init-param>			
 		<init-param>
 			<param-name>username</param-name>
 			<param-value></param-value>

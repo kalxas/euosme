@@ -54,6 +54,60 @@ public class ValidationRpcCallback implements AsyncCallback <String>, RequestCal
     public void onSuccess(String result) {
     	if (result == null)
     		return;
+    	getOldValidationMsg(result);
+    }
+    
+    public void getNewValidationMsg(String result) {
+    	String warningDialog = "";
+    	
+		HTML resultHTM = new HTML(result);
+		int nrSchema = 0; 
+		int nrInspire = 0;
+		
+		String smrSchema ="";
+		String smrInspire ="";
+		
+		NodeList<Element> errorElements = resultHTM.getElement().getElementsByTagName("ul");
+		for (int j=0;j<errorElements.getLength();j++) {
+			String typeOfError = errorElements.getItem(j).getClassName();
+			
+			if (typeOfError.equals("schemaError")) {
+				Element schemaErrorElement = errorElements.getItem(j).getFirstChildElement(); 
+				while (schemaErrorElement != null) {					
+					String warning = "<li>" + schemaErrorElement.getInnerHTML() + "</li>";
+					smrSchema += warning;
+					nrSchema++;
+					schemaErrorElement = schemaErrorElement.getNextSiblingElement();
+				}				
+			}
+			else if (typeOfError.equals("inspireError")) {
+				Element schemaErrorElement = errorElements.getItem(j).getFirstChildElement(); 
+				while (schemaErrorElement != null) {					
+					String warning = "<li>" + schemaErrorElement.getInnerHTML() + "</li>";
+					smrInspire += warning;
+					nrInspire++;
+					schemaErrorElement = schemaErrorElement.getNextSiblingElement();
+				}				
+			} 
+		}		
+		warningDialog = "<p>ISO Schema errors: " + nrSchema + "</p><ul>" + smrSchema + "</ul> " + 
+		                "<p>INSPIRE validation errors: " + nrInspire + "</p><ul>" + smrInspire + "</ul>";
+    	final DialogBox resultValidation = new DialogBox(false,false);
+    	resultValidation.setHTML(warningDialog);
+    	resultValidation.add(new Button(constants.close(), new ClickHandler(){
+			@Override
+			public void onClick(ClickEvent event) {
+				resultValidation.hide();				
+			}}));
+    	resultValidation.center();
+    	resultValidation.setSize("400","300");
+    	try {
+    		resultValidation.getElement().getElementsByTagName("div").getItem(0).getStyle().setOverflow(Overflow.AUTO);
+    	}
+    	catch (Exception ex) {	}    	
+    }
+    
+    public void getOldValidationMsg(String result) {
     	String warningDialog = "";
 		HTML resultHTM = new HTML(result);
     	NodeList<Element> wrongElements = resultHTM.getElement().getElementsByTagName("li");
@@ -90,7 +144,7 @@ public class ValidationRpcCallback implements AsyncCallback <String>, RequestCal
     	try {
     		resultValidation.getElement().getElementsByTagName("div").getItem(0).getStyle().setOverflow(Overflow.AUTO);
     	}
-    	catch (Exception ex) {	}    	
+    	catch (Exception ex) {	} 
     }
     
     /* (non-Javadoc)

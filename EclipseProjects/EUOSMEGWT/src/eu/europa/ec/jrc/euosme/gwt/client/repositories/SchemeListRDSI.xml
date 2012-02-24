@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='/openrdf-workbench/transformations/tuple.xsl'?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#" xmlns:q="http://www.openrdf.org/schema/qname#">
+	<head>
+		<variable name="v"/>
+		<variable name="l"/>
+		<variable name="d"/>
+		<link href="info"/>
+	</head>
+	<results ordered="false" distinct="false">
+		<result>
+			<binding name="v">
+				<uri>http://www.eionet.europa.eu/gemet/</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">GEMET, version 2.4</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2010-01-13</literal>
+			</binding>
+		</result>
+		<result>
+			<binding name="v">
+				<uri>http://eurogeoss.eu/DroughtVocabulary</uri>
+			</binding>
+			<binding name="l">
+				<literal xml:lang="en">EuroGEOSS - Drought Vocabulary, version 1.0</literal>
+			</binding>
+			<binding name="d">
+				<literal xml:lang="en">2011-04-20</literal>
+			</binding>
+		</result>		
+	</results>
+</sparql>

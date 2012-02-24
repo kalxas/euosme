@@ -120,6 +120,9 @@ public interface MyResources extends ClientBundle{
 	@Source("repositories/Repositories.cache.xml")
 	public TextResource repositoryList();
 	
+	@Source("repositories/SchemeListRDSI.xml")
+	public TextResource schemeRDSIList();	
+	
 	@Source("repositories/GEMET_Concepts.cache.xml")
 	public TextResource repositoryGEMET_Concepts();
 

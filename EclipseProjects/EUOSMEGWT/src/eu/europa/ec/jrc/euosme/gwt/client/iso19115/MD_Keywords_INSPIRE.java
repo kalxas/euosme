@@ -159,8 +159,12 @@ public class MD_Keywords_INSPIRE extends CI {
 				//TODO get the version of the repository
 				String myKeyword = keywordGemetObj.keywordGEMETObj.getText().replace(constants.selectedValue(), "").trim();
 				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
-					if (keywordGemetObj.sourceGEMETObj.getText().contains("http://www.eionet.europa.eu/gemet/concept/"))
-						addNew(myKeyword,"GEMET - Concepts, version 2.4","2010-01-13","");		
+					if (keywordGemetObj.sourceGEMETObj.getText().contains("http://www.eionet.europa.eu/gemet/concept/")
+							&& !keywordGemetObj.sourceGEMETObj.getText().equals("http://www.eionet.europa.eu/gemet/concept/"))
+						addNew(myKeyword,"GEMET - Concepts, version 2.4","2010-01-13","");	
+					else if (keywordGemetObj.sourceGEMETObj.getText().contains("http://eurogeoss.eu/DroughtVocabulary")){
+						addNew(myKeyword,"EuroGEOSS - Drought Vocabulary, version 1.0","2011-04-20","");
+					}
 				}
 				else {
 					String mySource = keywordGemetObj.listScheme.getItemText(keywordGemetObj.listScheme.getSelectedIndex()).trim();
