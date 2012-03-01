@@ -51,8 +51,9 @@ public class MD_LegalConstraints extends CI {
 	
  	/** Other constraints declaration */
  	//public CharacterStringMultiple otherConstraintsObj = new CharacterStringMultiple(constants.otherConstraints(), "limitation", false, CheckFunctions.normal);
- 	public CodeListFreeMultiple otherConstraintsObj = new CodeListFreeMultiple(constants.otherConstraints(), "limitation", false, "13", "", true, false);
-	
+ 	public CodeListFreeMultiple otherConstraintsObj = new CodeListFreeMultiple(constants.otherConstraints(), "limitation", true, "13", "", true, false);	
+	public CodeListMultiple otherConstraintsRDSIObj =	new CodeListMultiple(constants.otherConstraints(),"limitation",true,"13","",false);
+ 	
  	/** Access constraints declaration */
  	CodeListMultiple accessConstraintsObj =	new CodeListMultiple(constants.accessConstraints(),"limitation",false,"9","otherRestrictions",true);
 	
@@ -74,6 +75,7 @@ public class MD_LegalConstraints extends CI {
 		fieldsGroup.add(accessConstraintsObj);
 		fieldsGroup.add(useConstraintsObj);
 		fieldsGroup.add(otherConstraintsObj);
+		fieldsGroup.add(otherConstraintsRDSIObj);
 		setInterface(-1);
 	}
 	
@@ -84,9 +86,19 @@ public class MD_LegalConstraints extends CI {
 			useConstraintsObj.myCheck();
 			myError.setVisible(false);
 			if (useConstraintsObj.getMyValues().contains("otherRestrictions".toUpperCase()) || accessConstraintsObj.getMyValues().contains("otherRestrictions".toUpperCase())) {
-				if (otherConstraintsObj.getMyValues().isEmpty()) {
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) )
+				{
+					if (otherConstraintsObj.getMyValues().isEmpty()) {
 					myError.setText(constants.mandatoryFieldCombined6());
 					myError.setVisible(true);
+					}
+				}
+				else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+					otherConstraintsRDSIObj.myCheck();
+					if (otherConstraintsRDSIObj.getMyValues().isEmpty()) {
+						myError.setText(constants.mandatoryFieldCombined6());
+						myError.setVisible(true);
+						}
 				}
 			}			
 		}
@@ -98,17 +110,25 @@ public class MD_LegalConstraints extends CI {
 		accessConstraintsObj.setFormName(name + ".accessconstraints[1].md_restrictioncode[1]");
 		useConstraintsObj.setFormName(name + ".useconstraints[1].md_restrictioncode[1]");
 		otherConstraintsObj.setFormName(name + ".otherconstraints[1].characterstring[1]");		
+		otherConstraintsRDSIObj.setFormName(name + ".otherconstraints[1].characterstring[1]");	
 	}
 	
 	@Override
 	public void setInterface(int i) {
 		
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
 			useConstraintsObj.setVisible(false);
 			accessConstraintsObj.setVisible(false);	
+			otherConstraintsRDSIObj.setVisible(false);
 			otherConstraintsObj.setLabel(constants.accessConstraints());
 		}
-		if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()) && !EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()))
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+			useConstraintsObj.setVisible(false);
+			accessConstraintsObj.setVisible(false);	
+			otherConstraintsObj.setVisible(false);
+			otherConstraintsRDSIObj.setLabel(constants.accessConstraints());
+		}
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))
 			otherConstraintsObj.setShowList(false);			
 	}
 }

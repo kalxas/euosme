@@ -602,7 +602,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Keyword from INSPIRE Data themes")
 	String inspireDataThemes();
 	
-	@DefaultStringValue("Who is this metadata for?")
+	@DefaultStringValue("Where do you want to publish your metadata?")
 	String publish_info();
 	
 	@DefaultStringValue("<h4>RDSI</h4><p>IES Reference Data & Services Initiative</p><h4>INSPIRE@EC</h4><p>INSPIRE at EC</p><h4>CHM</h4><p>Climate Change Clearing House</p>")
