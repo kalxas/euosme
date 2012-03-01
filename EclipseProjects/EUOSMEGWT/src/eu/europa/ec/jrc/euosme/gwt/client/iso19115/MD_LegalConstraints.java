@@ -128,7 +128,7 @@ public class MD_LegalConstraints extends CI {
 			otherConstraintsObj.setVisible(false);
 			otherConstraintsRDSIObj.setLabel(constants.accessConstraints());
 		}
-		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))
-			otherConstraintsObj.setShowList(false);			
+//		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()))
+//			otherConstraintsObj.setShowList(false);			
 	}
 }

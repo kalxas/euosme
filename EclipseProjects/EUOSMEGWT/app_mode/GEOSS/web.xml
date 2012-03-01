@@ -92,7 +92,12 @@
 			<param-name>repograph</param-name>
 			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/reference</param-value>
 			<description>Default Graph URI of SPARQL service</description>
-		</init-param>			
+		</init-param>
+		<init-param>
+			<param-name>repograph2</param-name>
+			<param-value>http://semanticlab.jrc.ec.europa.eu/repositories/thematic</param-value>
+			<description>Additional Graph URI of SPARQL service</description>
+		</init-param>
 		<init-param>
 			<param-name>username</param-name>
 			<param-value></param-value>

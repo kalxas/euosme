@@ -123,35 +123,35 @@ public class MD_Keywords_Gemet extends CI {
 		filterButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
-					requestSearch("http://www.eionet.europa.eu/gemet/concept/",filterTextBox.getText());
-					filterClearButton.setEnabled(true);
+//				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
+//					requestSearch("http://www.eionet.europa.eu/gemet/concept/",filterTextBox.getText());
+//					filterClearButton.setEnabled(true);
+//				}
+				//else {
+				String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
+				if (selectedValue.isEmpty()) {
+					suggestObj.setVisible(false);
+					filterClearButton.setEnabled(false);
+					filterPanel.setVisible(false);
 				}
 				else {
-					String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
-					if (selectedValue.isEmpty()) {
-						suggestObj.setVisible(false);
-						filterClearButton.setEnabled(false);
-						filterPanel.setVisible(false);
-					}
-					else {
-						requestSearch(selectedValue,filterTextBox.getText());
-						//requestSuggestions(selectedValue,filterTextBox.getText());
-						filterClearButton.setEnabled(true);
-					}
+					requestSearch(selectedValue,filterTextBox.getText());
+					//requestSuggestions(selectedValue,filterTextBox.getText());
+					filterClearButton.setEnabled(true);
 				}
+				//}
 			}
 		});		
 		filterClearButton.addClickHandler(new ClickHandler()  {
 			@Override
 			public void onClick(ClickEvent event) {
-				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
-					requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
-				}
-				else { 
+//				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()+"9")){
+//					requestSuggestions("http://www.eionet.europa.eu/gemet/theme/","");
+//				}
+				//else { 
 					String selectedValue = listScheme.getValue(listScheme.getSelectedIndex()).trim();
 					requestSuggestions(selectedValue,"");
-				}
+				//}
 				filterClearButton.setEnabled(false);	
 				filterTextBox.setText("");
 			}
