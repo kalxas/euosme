@@ -11,7 +11,7 @@
    			</g:HorizontalPanel>				
    		</g:customHeader> 		
  		<g:VerticalPanel>
- 			<client:MyDateBox addStyleNames="svP" ui:field="myDateBox"/>
+ 		    <client:MyDateBox addStyleNames="svP" ui:field="myDateBox"/>
 	   		<g:Label styleName="error" ui:field="myError"/>
  		</g:VerticalPanel>
  	</g:DisclosurePanel>		

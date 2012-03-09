@@ -543,6 +543,10 @@ public class MainPanel extends Composite {
 			}
 		}
 		
+		// load Date type
+		tabs.tabTemporalObj.extentObj.endDateObj.loadType();
+
+		
 		//load file name
 		//getFileName();
 
@@ -935,6 +939,9 @@ public class MainPanel extends Composite {
 			myXMLTree = myXMLTree.replace("</gmd:explanation>\n</gmd:DQ_ConformanceResult>", "</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>");
 			myXMLTree = myXMLTree.replace("\n\n","\n");
 		}
+		// Encode "Now" for temporal end date
+		myXMLTree = myXMLTree.replace("<gml:endPosition>now</gml:endPosition>", "<gml:endPosition indeterminatePosition=\"now\"></gml:endPosition>");
+		myXMLTree = myXMLTree.replace("\n\n","\n");		
 		// Remove empty distance
 		myXMLTree = myXMLTree.replace("<gmd:distance>\n<gco:Distance uom=\"\"/>\n</gmd:distance>","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");

@@ -26,6 +26,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.DateImpl;
+import eu.europa.ec.jrc.euosme.gwt.client.widgets.EndDateImpl;
 
 /**
  * Create TM_PRIMITIVE model
@@ -47,7 +48,8 @@ public class TM_Primitive extends CI {
 	DateImpl beginDateObj =	new DateImpl(constants.beginDate(), "", false);
 	
 	/** Date control declaration */
-	DateImpl endDateObj =	new DateImpl(constants.endDate(), "", false);
+	public EndDateImpl endDateObj =	new EndDateImpl(constants.endDate(), "", false);
+	
 	
 	/** 
      * constructor TM_Primitive model
@@ -62,9 +64,9 @@ public class TM_Primitive extends CI {
 	public TM_Primitive(String label, boolean required, boolean multiple, String help) {
 		super(label, required, multiple, help, CIOrientations.HORIZONTAL);
 		beginDateObj.setRequired(required);
-		endDateObj.setRequired(required);
+		endDateObj.setRequired(required);		
 		fieldsGroup.add(beginDateObj);
-		fieldsGroup.add(endDateObj);		
+		fieldsGroup.add(endDateObj);			
 	}
 	
 	@Override
@@ -74,11 +76,21 @@ public class TM_Primitive extends CI {
 			beginDateObj.myCheck();
 			endDateObj.myCheck();
 			myError.setVisible(false);
-			if (endDateObj.getMyValue().toString().isEmpty() || beginDateObj.getMyValue().toString().isEmpty()) {
+			if (beginDateObj.getMyValue().toString().isEmpty()) {
 				myError.setText(constants.mandatoryFieldCombined2());
 				myError.setVisible(true);
 			}
 		}		
+	}
+	@Override
+	public void setLabelCount(Integer n){
+		super.setLabelCount(n);
+		endDateObj.setIndex(n);
+		//endDateObj.loadType();
+	}
+	
+	public void loadType() {
+		endDateObj.loadType();
 	}
 	
 	@Override

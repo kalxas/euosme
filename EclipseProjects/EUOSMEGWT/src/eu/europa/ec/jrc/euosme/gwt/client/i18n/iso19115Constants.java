@@ -165,6 +165,9 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("End")
 	String endDate();
 	
+	@DefaultStringValue("now")
+	String now();	
+	
 	@DefaultStringValue("Please enter valid dates in the format YYYY-MM-DD or YYYY-MM-DDTHH:MI:SS")
 	String mandatoryFieldCombined2();	
 	

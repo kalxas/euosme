@@ -114,6 +114,9 @@ public class CI extends Composite {
 	/** Global variable used to move into the user guide as an anchor */
 	private String helpAnchor="";
 	
+	/**	 Set the number of the current widget. This value increases duplicating the widget. */	 
+	private Integer labelCount;	
+	
 	/**
 	 * constructor CI model
 	 * 
@@ -239,6 +242,13 @@ public class CI extends Composite {
 		}			
 	}
 	
+	/** get the index number (in case multiple) */ 
+	public Integer getLabelCount() {
+		if (!isMultiple || labelCount == null) 
+			return 1;
+		else 
+			return labelCount;
+	}
 	/**
 	 * Handle the click event on remove button: delete the widget from the DOM and delete the corresponding {@link TreeItem}
 	 * 
@@ -349,6 +359,7 @@ public class CI extends Composite {
 	 * @param n	{@link Integer} = the widget number
 	 */
 	protected void setLabelCount(Integer n) {
+		labelCount = n;
 		String oldlabel = myLabel.getText();
 		myLabel.setText(oldlabel.replace("1", n.toString()));
 		removeGroupButton.setTitle(messages.remove(myLabel.getText()));	

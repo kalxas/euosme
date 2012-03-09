@@ -55,6 +55,8 @@ public class DateImpl extends Composite {
 	private static DateImplUiBinder uiBinder = GWT.create(DateImplUiBinder.class);
 	interface DateImplUiBinder extends UiBinder<Widget, DateImpl> {	}
 
+	final iso19115Constants constants = GWT.create(iso19115Constants.class);
+	
 	/** grouping fields declaration */
 	@UiField(provided = true)
 	DisclosurePanel componentPanel = new DisclosurePanel();

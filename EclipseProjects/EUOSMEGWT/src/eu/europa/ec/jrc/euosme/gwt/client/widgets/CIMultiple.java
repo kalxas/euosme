@@ -242,7 +242,8 @@ public class CIMultiple extends Composite {
 		    	newObj = new TM_Primitive(groupLabel,isRequired, true,"");
 		    	((TM_Primitive) newObj).setFormName(myFormName);
 		    	((TM_Primitive) newObj).setLabelCount(n);
-		    	((TM_Primitive) newObj).cloneTree(myWidget.getElement().getId());		    	
+		    	((TM_Primitive) newObj).cloneTree(myWidget.getElement().getId());	
+		    	((TM_Primitive) newObj).loadType();
 		    }
 			if (myClass.equalsIgnoreCase("md_keywords")) {
 		    	newObj = new MD_Keywords(groupLabel,isRequired, true,"");
