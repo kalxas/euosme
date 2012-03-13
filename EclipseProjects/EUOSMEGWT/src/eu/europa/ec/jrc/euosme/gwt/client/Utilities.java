@@ -359,7 +359,9 @@ public class Utilities {
 					parentItem = parentItem.getParentItem();
 					parentItem.removeItems();
 				}
-				if (parentItem!=null) {
+				if (parentItem!=null && 
+						 // there was the old style to define language. We remove it from old metadata.
+						(!nodeName.contains("language"))) {
 					TreeItem newItem = new TreeItem(currentNode.getNodeName());
 					newItem.setTitle(nodeName);
 					newItem.setState(false);
@@ -692,7 +694,7 @@ public class Utilities {
 	            	nodeValue = nodeValue.trim();
 	            	if (nodeValue.isEmpty()) nodeValue = null;
             	}
-            	if (nodeValue!= null) {
+            	if (nodeValue != null && subTreeItem != null && subTreeItem.getText() != null ) {
             		if (subTreeItem.getText().startsWith(constants.XMLValue()))      				
         				subTreeItem.setText(constants.XMLValue() + nodeValue);
             		else			
