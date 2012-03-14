@@ -349,19 +349,25 @@ public class Utilities {
         	nodeName = getNodeName(currentNode, i, parent);        	
         	
         	// solve problem on ID for legal constraints
-        	if (nodeName.startsWith("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType  + "[1].resourceconstraints[1].md_legalconstraints[1]")) nodeName = nodeName.replace(".resourceconstraints[1]",".resourceconstraints[2]");
+        	if (nodeName.startsWith("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType  + "[1].resourceconstraints[1].md_legalconstraints[1]")) 
+        		nodeName = nodeName.replace(".resourceconstraints[1]",".resourceconstraints[2]");
         	
         	// Create Tree Item if there is not yet and show a message
 			subTreeItem = Utilities.getSelectTreeItem(nodeName);
 			if (subTreeItem==null && !(currentNode.getNodeName().toLowerCase().endsWith("md_keywords")) && !(currentNode.getNodeName().toLowerCase().endsWith("geographicelement")) && !(nodeName.startsWith("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].citation[1].ci_citation[1].date"))) {
 				parentItem = Utilities.getSelectTreeItem(parent);
-				if (parentItem.getText().startsWith(constants.XMLValue())) {
+				if (parentItem!=null && parentItem.getText().startsWith(constants.XMLValue())) {
 					parentItem = parentItem.getParentItem();
 					parentItem.removeItems();
 				}
 				if (parentItem!=null && 
 						 // there was the old style to define language. We remove it from old metadata.
-						(!nodeName.contains("language"))) {
+						(!nodeName.contains("language"))
+						// there are several ways to define limitation and constraints. Currently we don't support others than the way we choose in the template. 
+						// However, they should be supported in the later releases.
+				        && (!nodeName.contains("accessconstraints")) 
+				        && (!nodeName.contains("uselimitation"))
+				             ) {
 					TreeItem newItem = new TreeItem(currentNode.getNodeName());
 					newItem.setTitle(nodeName);
 					newItem.setState(false);
@@ -394,6 +400,7 @@ public class Utilities {
 					subTreeItem=newItem;
 					//show a message to tell that the data type is not supported but it will remain unchanged
 					log += constants.warning() + nodeName + " " + constants.errorDataType1() + "\n";
+					//GWT.log(" Keep as it is: " + nodeName);
 				} else log += constants.error() + nodeName + " " + constants.errorDataType2() + "\n"; //if parentItem is null, show a message that tell the also it will not be saved
 			}
 			
@@ -664,7 +671,12 @@ public class Utilities {
             case (Node.ATTRIBUTE_NODE):
             	break;
             case (Node.ELEMENT_NODE):
-           		// check if it's has attributes
+				// there are several ways to define limitation and constraints. Currently we don't support others than the way we choose in the template. 
+				// However, they should be supported in the later releases.
+		        if (currentNode.getNodeName().toLowerCase().contains("md_restrictioncode"))
+		        	break;
+            
+           		// check if it's has attributes            	
         		if (currentNode.hasAttributes()) {
         			for(int attr=0;attr<currentNode.getAttributes().getLength();attr++) {
         				TreeItem subTreeItemAttr = Utilities.getSelectTreeItem(nodeName + ".@" + currentNode.getAttributes().item(attr).getNodeName());

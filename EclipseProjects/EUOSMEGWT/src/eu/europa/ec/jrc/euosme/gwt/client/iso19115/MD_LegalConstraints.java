@@ -99,6 +99,8 @@ public class MD_LegalConstraints extends CI {
 						myError.setText(constants.mandatoryFieldCombined6());
 						myError.setVisible(true);
 						}
+			
+				
 				}
 			}			
 		}
@@ -109,8 +111,12 @@ public class MD_LegalConstraints extends CI {
 		super.setFormName(name);
 		accessConstraintsObj.setFormName(name + ".accessconstraints[1].md_restrictioncode[1]");
 		useConstraintsObj.setFormName(name + ".useconstraints[1].md_restrictioncode[1]");
-		otherConstraintsObj.setFormName(name + ".otherconstraints[1].characterstring[1]");		
-		otherConstraintsRDSIObj.setFormName(name + ".otherconstraints[1].characterstring[1]");	
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString())) {
+			otherConstraintsObj.setFormName(name + ".otherconstraints[1].characterstring[1]");		
+		}
+		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
+			otherConstraintsRDSIObj.setFormName(name + ".otherconstraints[1].characterstring[1]");
+		}
 	}
 	
 	@Override
@@ -124,7 +130,7 @@ public class MD_LegalConstraints extends CI {
 		}
 		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			useConstraintsObj.setVisible(false);
-			accessConstraintsObj.setVisible(false);	
+			accessConstraintsObj.setVisible(false);				
 			otherConstraintsObj.setVisible(false);
 			otherConstraintsRDSIObj.setLabel(constants.accessConstraints());
 		}
