@@ -22,6 +22,7 @@ package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;
+import com.google.gwt.user.client.ui.Label;
 
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
@@ -52,6 +53,9 @@ public class MD_Resolution extends CI {
 	
 	/** distanceObj control declaration */
 	public Distance distanceObj =	new Distance(constants.distance(), false, false,"");
+	
+	/** text to help user fill correctly **/ 
+	Label helpText = new Label(constants.equivalentScaleHelp());
 		
 	/** 
      * constructor MD_Resolution model
@@ -85,6 +89,8 @@ public class MD_Resolution extends CI {
 			}			
 		});
 		fieldsGroup.add(distanceObj);
+		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
+				fieldsGroup.add(helpText);
 	}
 	
 	@Override

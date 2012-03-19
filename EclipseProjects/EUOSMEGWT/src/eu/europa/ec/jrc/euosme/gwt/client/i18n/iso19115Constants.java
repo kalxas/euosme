@@ -430,6 +430,9 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Equivalent Scale")
 	String equivalentScale();
 	
+	@DefaultStringValue("Input either (Equivalent scale) or (Resolution distance and Unit of measure)")
+	String equivalentScaleHelp();	
+	
 	@DefaultStringValue("Distance")
 	String distance();
 
