@@ -31,6 +31,7 @@ import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.TreeItem;
 
@@ -194,17 +195,25 @@ public class MD_Keywords_INSPIRE extends CI {
 		keywordGemetObj.fieldsGroup.add(addGEMETButton);		
 		keywordGemetObj.suggestObj.addSelectionHandler(new SelectionHandler<TreeItem>()  {
 			@Override
-			public void onSelection(SelectionEvent<TreeItem> event) {
+			public void onSelection(final SelectionEvent<TreeItem> event) {
 				if(event.getSelectedItem().getParentItem()!=null) {
 					keywordGemetObj.GEMETPanel.setVisible(true);
 					//event.getSelectedItem().getTitle()
 					keywordGemetObj.sourceGEMETObj.setText(event.getSelectedItem().getTitle());
 					keywordGemetObj.keywordGEMETObj.setText(constants.selectedValue() + event.getSelectedItem().getText());
 					addGEMETButton.click();
-					DOM.scrollIntoView(event.getSelectedItem().getElement());
+					//hack for IE and Chrome, keep the selected item visible
+					Timer scrollTimer = new Timer() {
+					    public void run() {
+					    	DOM.scrollIntoView(event.getSelectedItem().getElement());	
+					    }
+					}; 					
+					scrollTimer.schedule(200); 									
+					//DOM.scrollIntoView(event.getSelectedItem().getParentItem().getElement());
 				}
 			}			
 		});
+		
 		// free keyword
 		fieldsGroup.add(keywordFreeObj);
 		addFreeButton.addClickHandler(new ClickHandler() {
