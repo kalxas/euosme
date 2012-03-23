@@ -516,7 +516,8 @@ public class Utilities {
                 				if (currentNode.getChildNodes().item(jj).getChildNodes().item(kk).getAttributes().getNamedItem("codeListValue").getNodeValue().equalsIgnoreCase("creation")) dateType = 3;        						
         					}
         				}
-        			}
+        			}    			
+    				
         			if (currentNode.getChildNodes().item(jj).getNodeName().toLowerCase().startsWith("gmd:date")) 
         				for (int kk = 0; kk < currentNode.getChildNodes().item(jj).getChildNodes().getLength(); kk++) { 
         					if (currentNode.getChildNodes().item(jj).getChildNodes().item(kk).getNodeName().toLowerCase().startsWith("gco:date")) {
@@ -526,8 +527,10 @@ public class Utilities {
         		}
         		TreeItem subTreeItemBB = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType  + "[1].citation[1].ci_citation[1].date[" + dateType +  "].ci_date[1].date[1].date[1]");
 				if (subTreeItemBB!=null) 
-					subTreeItemBB.setText(constants.XMLValue() + dateValue);            		                    			
+					subTreeItemBB.setText(constants.XMLValue() + dateValue);
+					//setTextTreeItem(subTreeItemBB,dateValue);
 				ret = valueField("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType  + "[1].citation[1].ci_citation[1].date[" + dateType +  "].ci_date[1].date[1].date[1]", dateValue);
+				
 				continue;
         	}
         	
@@ -1979,9 +1982,11 @@ public class Utilities {
 		String identificationInfoSubType = "md_dataidentification";
 		if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) identificationInfoSubType = "sv_serviceidentification";
 		// set creation date to today
-		Utilities.valueField("md_metadata[1].identificationinfo[1]" + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]",myTodayDate);
-	    myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]");
-		Utilities.setTextTreeItem(myTreeItem,myTodayDate);
+		if (createNew){
+			Utilities.valueField("md_metadata[1].identificationinfo[1]" + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]",myTodayDate);
+		    myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1]." + identificationInfoSubType + "[1].citation[1].ci_citation[1].date[3].ci_date[1].date[1].date[1]");
+			Utilities.setTextTreeItem(myTreeItem,myTodayDate);
+		}
 		// set default values
 		if ((EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))) {			
 			
