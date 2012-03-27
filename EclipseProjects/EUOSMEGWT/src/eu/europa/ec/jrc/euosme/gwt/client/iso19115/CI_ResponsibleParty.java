@@ -20,6 +20,7 @@ LICENSE END***/
 package eu.europa.ec.jrc.euosme.gwt.client.iso19115;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.Label;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
@@ -52,6 +53,9 @@ public class CI_ResponsibleParty extends CI {
 	/** organisationName control declaration */
 	CharacterString organisationNameObj = new CharacterString(constants.organisationName(), "", false, CheckFunctions.normal, true);
 	
+	/** text to help user fill correctly **/ 
+	Label helpText = new Label(constants.responsiblePartyHelp());
+	
 	/** positionName control declaration */
 	CharacterString positionNameObj = new CharacterString(constants.positionName(), "", false, CheckFunctions.normal, true);
 	
@@ -75,6 +79,7 @@ public class CI_ResponsibleParty extends CI {
 		super(label, required, multiple, help, CIOrientations.VERTICAL);	
 		fieldsGroup.add(individualNameObj);
 		fieldsGroup.add(organisationNameObj);
+		fieldsGroup.add(helpText);
 		fieldsGroup.add(positionNameObj);
 		fieldsGroup.add(contactInfoObj);
 		fieldsGroup.add(roleObj);
@@ -109,6 +114,9 @@ public class CI_ResponsibleParty extends CI {
 	public void setInterface(int i) {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			organisationNameObj.setRequired(true);
+			if (!EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+				helpText.setVisible(false);
+			}
 			individualNameObj.setVisible(false);
 			positionNameObj.setVisible(false);
 			contactInfoObj.setRequired(true);

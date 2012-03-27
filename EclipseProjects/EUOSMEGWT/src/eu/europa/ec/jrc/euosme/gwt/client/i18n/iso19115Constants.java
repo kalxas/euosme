@@ -433,6 +433,9 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Input either (Equivalent scale) or (Resolution distance and Unit of measure)")
 	String equivalentScaleHelp();	
 	
+	@DefaultStringValue("An example: <Protection and Conservation of European Seas (PROCAS)>-<Water Resources Unit (H01)>-<Institute for Environment and Sustainability (IES)>-Joint Research Centre (JRC)-European Commission")
+	String responsiblePartyHelp();
+	
 	@DefaultStringValue("Distance")
 	String distance();
 
@@ -669,7 +672,7 @@ public interface iso19115Constants extends Constants {
 	@DefaultStringValue("Save as template")
 	String saveAsTemplate();
 	
-	@DefaultStringValue("European Commission, Joint Research Centre")
+	@DefaultStringValue("<Action name>-<Unit name>-<Institute name>-Organisation name")
 	String RDSIorganisationName();
 
 	@DefaultStringValue("User Guide")
