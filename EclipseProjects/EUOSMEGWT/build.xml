@@ -1,28 +1,93 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="EUOSMEGWT" default="GEOSS" basedir=".">
-  <target name="war" description="Create a war file">
+		
+	  <!-- Configure path to GWT SDK
+	<property name="gwt.sdk" location="E:\\software\\eclipse\\galileo35\\eclipse-SDK-3.5.1-win32\\eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle.2.1.1_2.1.1.v201012170127\\gwt-2.1.1" />
+	When configuring Hudson add the following in the properties (replace /home/tomcat6-hud/software/gwt/gwt-2.1.1 with the actual path to the desired GWT SDK):
+	
+	gwt.sdk= /home/tomcat6-hud/software/gwt/gwt-2.1.1
+		
+	-->
+    <property name="gwt.module.name" value="eu.europa.ec.jrc.euosme.gwt.EUOSMEGWT"/>
+    <property name="server.resources.name" value="server_resources"/>
+    <property name="jar.name" value="buildtutorial.jar"/>
+    <property name="war.name" value="buildtutorial.war"/>
+    <property name="src.dir" location="src"/>
+    <property name="server.resources.dir" location="war/${server.resources.name}"/>
+    <property name="build.dir" location="build"/>   
+    <property name="build.server.resources.dir" location="war/WEB-INF/classes/server_resources"/>       
+    <property name="lib.dir" location="war/WEB-INF/lib"/>
+    <property name="gwt.client.dir" location="com/rubiconred/soauiext/client"/>
+
+	  <path id="project.class.path">
+	    <pathelement location="war/WEB-INF/classes"/>
+	    <pathelement location="${gwt.sdk}/gwt-user.jar"/>
+	    <fileset dir="${gwt.sdk}" includes="gwt-dev*.jar"/>
+	    <!-- Add any additional non-server libs (such as JUnit) -->
+	    <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/>
+	  </path>
+
+	  <target name="libs" description="Copy libs to WEB-INF/lib">
+	    <mkdir dir="war/WEB-INF/lib" />
+	    <copy todir="war/WEB-INF/lib" file="${gwt.sdk}/gwt-servlet.jar" />
+	    <!-- Add any additional server libs that need to be copied -->
+	  </target>
+
+	  <target name="javac" depends="libs" description="Compile java source">
+	    <mkdir dir="war/WEB-INF/classes"/>
+	    <javac srcdir="src" includes="**" encoding="utf-8"
+	        destdir="war/WEB-INF/classes"
+	        source="1.5" target="1.5" nowarn="true"
+	        debug="true" debuglevel="lines,vars,source">
+	      <classpath refid="project.class.path"/>
+	    </javac>
+	    <copy todir="war/WEB-INF/classes">
+	      <fileset dir="src" excludes="**/*.java"/>
+	    </copy>
+	  </target>
+
+	  <target name="gwtc" depends="javac" description="GWT compile to JavaScript">
+	    <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+	      <classpath>
+	        <pathelement location="src"/>
+	        <path refid="project.class.path"/>
+	      </classpath>
+	      <!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+	      <jvmarg value="-Xmx1024M"/>
+	      <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+	      <arg value="eu.europa.ec.jrc.euosme.gwt.EUOSMEGWT"/>
+	    	  <arg value="-localWorkers" />
+	    	  <arg value="4" />
+
+	    </java>
+	  </target>
+
+	
+
+  <target name="war" depends="gwtc" description="Create a war file">
   	<delete file = "EUOSME.war"/>
     <zip destfile="EUOSME.war" basedir="war"/>
   </target>
-	
-  <target name="GEOSS" description="Package for GEOSS mode">
-  	<delete file = "EUOSME.war"/>  	
+
+  <target name="GEOSS" depends="war" description="Package for GEOSS mode">
   	<copy file="app_mode/GEOSS/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
     <copy file="app_mode/GEOSS/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
-    <zip destfile="EUOSME.war" basedir="war"/>
+    <zip destfile="EUOSME_GEOSS.war" basedir="war"/>
   </target>	
 	
-  <target name="RDSI" description="Package for RDSI mode">
-  	<delete file = "EUOSME_RDSI.war"/>
+  <target name="RDSI" depends="war" description="Package for RDSI mode">
   	<copy file="app_mode/RDSI/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
   	<copy file="app_mode/RDSI/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
     <zip destfile="EUOSME_RDSI.war" basedir="war"/>
   </target>	
 
-  <target name="GEOPORTAL" description="Package for GEOPORTAL mode">
-  	<delete file = "EUOSME_GEOPORTAL.war"/>
+  <target name="GEOPORTAL" depends="war" description="Package for GEOPORTAL mode">
   	<copy file="app_mode/GEOPORTAL/log4j.properties" tofile="war/WEB-INF/classes/log4j.properties" overwrite="true"/>
   	<copy file="app_mode/GEOPORTAL/web.xml" tofile="war/WEB-INF/web.xml" overwrite="true"/>
     <zip destfile="EUOSME_GEOPORTAL.war" basedir="war"/>
-  </target>		
+  </target>	
+
+	  <target name="ALL" depends="GEOSS,RDSI,GEOPORTAL" description="Package for GEOPORTAL mode"/>
+	
+	
 </project>
