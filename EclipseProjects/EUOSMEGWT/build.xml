@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="EUOSMEGWT" default="GEOSS" basedir=".">
-	  <!-- Configure path to GWT SDK
-	<property name="gwt.sdk" location="E:\\software\\eclipse\\galileo35\\eclipse-SDK-3.5.1-win32\\eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle.2.1.1_2.1.1.v201012170127\\gwt-2.1.1" />
+<!-- Configure path to GWT SDK
+	property name="gwt.sdk" location="E:\\software\\eclipse\\galileo35\\eclipse-SDK-3.5.1-win32\\eclipse\\plugins\\com.google.gwt.eclipse.sdkbundle.2.1.1_2.1.1.v201012170127\\gwt-2.1.1" 
 	When configuring Hudson add the following in the properties (replace /home/tomcat6-hud/software/gwt/gwt-2.1.1 with the actual path to the desired GWT SDK):
 	gwt.sdk= /home/tomcat6-hud/software/gwt/gwt-2.1.1
 	-->
