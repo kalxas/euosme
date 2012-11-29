@@ -327,7 +327,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	    }
 		return null;
 	}
-	
+	/*
 	public String invokeValidationService(String XMLTree) 
  	throws RESTfulWebServiceException {
 		String dir = "";
@@ -420,6 +420,52 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 		}
 		return null;
 	}
+	*/
+	
+	public String invokeValidationService(String XMLTree) 
+ 	throws RESTfulWebServiceException {
+		try {
+			URL u = new URL(inspireWebService + "resources/INSPIREResourceTester");
+            HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
+            urlConnection.setRequestMethod("POST");
+            urlConnection.setRequestProperty("Accept","application/xml");
+            urlConnection.setRequestProperty("Content-Type","text/plain;charset=UTF-8");
+            urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(XMLTree.getBytes().length));
+            //urlConnection.setRequestProperty("Accept-language", clientLanguage );
+            urlConnection.setUseCaches (false);
+            urlConnection.setDoInput(true);
+            urlConnection.setDoOutput(true);
+            DataOutputStream wr = new DataOutputStream (urlConnection.getOutputStream ());
+            wr.writeBytes (XMLTree);
+            wr.flush ();
+            wr.close ();
+            int status = urlConnection.getResponseCode();
+            if (status != 201)
+                throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
+           
+            BufferedReader d = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
+	        StringBuilder buffer = new StringBuilder(16384);
+	        try {
+	        	String line;
+	            while ((line = d.readLine()) != null) {
+	            	buffer.append(line.trim());                	
+	            }
+	        } finally {
+	        	d.close();
+	        }
+	        // Write file
+	        ServletContext context = getServletConfig().getServletContext();
+	    	String dir = "";
+       		return buffer.toString();
+       } 
+       catch (MalformedURLException e) {
+       	throw new RESTfulWebServiceException(e.getMessage(), e);
+       }
+       catch (IOException e) {
+           throw new RESTfulWebServiceException(e.getMessage(), e);
+       }		
+	}
+	
 	
 	public String invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename) 
  	throws RESTfulWebServiceException {

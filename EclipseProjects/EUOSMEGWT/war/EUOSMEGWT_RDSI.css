@@ -1067,7 +1067,7 @@ td.datePickerMonth {
 
 /** Most GWT widgets already have a style name defined */
 .gwt-DialogBox {
-  width: 400px;
+  width: 600px;
   z-index: 99999;
   background-color: GhostWhite;
   border: 5px solid #d0e4f6;
