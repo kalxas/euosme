@@ -430,13 +430,21 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
             urlConnection.setRequestMethod("POST");
             urlConnection.setRequestProperty("Accept","application/xml");
             urlConnection.setRequestProperty("Content-Type","text/plain;charset=UTF-8");
-            urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(XMLTree.getBytes().length));
             //urlConnection.setRequestProperty("Accept-language", clientLanguage );
             urlConnection.setUseCaches (false);
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
+            
+            byte[] data=XMLTree.getBytes("UTF-8");
+            urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(data.length));
+            
             DataOutputStream wr = new DataOutputStream (urlConnection.getOutputStream ());
-            wr.writeBytes (XMLTree);
+            //wr.writeBytes (XMLTree);
+            
+            //out.writeInt(data.length);
+            
+            wr.write(data);            
+            
             wr.flush ();
             wr.close ();
             int status = urlConnection.getResponseCode();
