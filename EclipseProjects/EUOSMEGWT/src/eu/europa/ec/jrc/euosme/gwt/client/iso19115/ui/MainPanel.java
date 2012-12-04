@@ -924,7 +924,9 @@ public class MainPanel extends Composite {
 		// Remove empty temporal element
 		myXMLTree = myXMLTree.replace("<gmd:extent>\n<gmd:EX_Extent>\n<gmd:temporalElement>\n<gmd:EX_TemporalExtent>\n<gmd:extent>\n<gml:TimePeriod gml:id=\"IDcd3b1c4f-b5f7-439a-afc4-3317a4cd89be\" xsi:type=\"gml:TimePeriodType\">\n</gml:TimePeriod>\n</gmd:extent>\n</gmd:EX_TemporalExtent>\n</gmd:temporalElement>\n</gmd:EX_Extent>\n</gmd:extent>\n","");
 		myXMLTree = myXMLTree.replace("\n\n","\n");
-		myXMLTree = myXMLTree.replace("<gmd:temporalElement>\n<gmd:EX_TemporalExtent>\n<gmd:extent>\n<gml:TimePeriod gml:id=\"IDcd3b1c4f-b5f7-439a-afc4-3317a4cd89be\" xsi:type=\"gml:TimePeriodType\">\n</gml:TimePeriod>\n</gmd:extent>\n</gmd:EX_TemporalExtent>\n</gmd:temporalElement>","");
+		//myXMLTree = myXMLTree.replace("<gmd:temporalElement>\n<gmd:EX_TemporalExtent>\n<gmd:extent>\n<gml:TimePeriod gml:id=\"IDcd3b1c4f-b5f7-439a-afc4-3317a4cd89be\" xsi:type=\"gml:TimePeriodType\">\n</gml:TimePeriod>\n</gmd:extent>\n</gmd:EX_TemporalExtent>\n</gmd:temporalElement>","");
+		myXMLTree = myXMLTree.replace("<gmd:temporalElement>\n<gmd:EX_TemporalExtent>\n<gmd:extent>\n<gml:TimePeriod gml:id=\"IDcd3b1c4f-b5f7-439a-afc4-3317a4cd89be\" xsi:type=\"gml:TimePeriodType\">\n<gml:endPosition>now</gml:endPosition>\n</gml:TimePeriod>\n</gmd:extent>\n</gmd:EX_TemporalExtent>\n</gmd:temporalElement>","");
+			
 		myXMLTree = myXMLTree.replace("\n\n","\n");
 		// Remove empty resource information
 		String myTodayDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
