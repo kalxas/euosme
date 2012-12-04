@@ -58,7 +58,7 @@ public interface RESTfulWebServiceProxy extends RemoteService {
 	public String invokeValidationService(String XMLTree)
 		throws RESTfulWebServiceException;
 
-	public String invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename)
+	public String invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename)
 		throws RESTfulWebServiceException;
 
 	public String invokeInspireUUIDService()

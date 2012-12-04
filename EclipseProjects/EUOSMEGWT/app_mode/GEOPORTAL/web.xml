@@ -74,8 +74,7 @@
 		</init-param>
 		<init-param>
 			<param-name>inspireWebService</param-name>
-			<!--<param-value>http://www.inspire-geoportal.eu/INSPIREWebServices/</param-value>-->
-			<param-value>http://inspire-geoportal.ec.europa.eu/GeoportalProxyWebServices/</param-value>
+			<param-value>http://localhost/GeoportalProxyWebServices/</param-value>
 			<description>URL for INSPIRE web services</description>
 		</init-param>
 		<init-param>

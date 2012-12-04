@@ -39,7 +39,7 @@ public interface RESTfulWebServiceProxyAsync {
 	
 	public void invokeValidationService(String XMLTree, AsyncCallback<String> callback);
 
-	public void invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename, AsyncCallback<String> callback);
+	public void invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename, AsyncCallback<String> callback);
 
 	public void invokeInspireUUIDService(AsyncCallback<String> callback);
 

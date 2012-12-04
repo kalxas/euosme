@@ -411,8 +411,14 @@ public class MainPanel extends Composite {
 				if (myFileName.toLowerCase().endsWith(".xml")) myFileName = myFileName.replace(".xml",".htm");
 				else if (myFileName.toLowerCase().endsWith(".xmlt")) myFileName = myFileName.replace(".xmlt",".htm");
 				else myFileName += ".htm";
-				// invoke the service 
-				ls.invokeInspireMetadataConverterService(myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),myFileName,callback);			
+				
+				// invoke the service
+				String acceptType = "text/html"; 
+				if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
+					acceptType = "application/vnd.eu.europa.ec.inspire.resource.rdsi+html";
+				}
+
+				ls.invokeInspireMetadataConverterService(acceptType, myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),myFileName,callback);			
 			}			
 		});
 		refreshHTML.setHTML(constants.refresh());

@@ -475,13 +475,13 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	}
 	
 	
-	public String invokeInspireMetadataConverterService(String XMLTree, String clientLanguage, String filename) 
+	public String invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename) 
  	throws RESTfulWebServiceException {
 		try {
             URL u = new URL(inspireWebService + "resources/INSPIREResource");
             HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
             urlConnection.setRequestMethod("POST");
-            urlConnection.setRequestProperty("Accept","application/vnd.eu.europa.ec.inspire.resource.rdsi+html");
+            urlConnection.setRequestProperty("Accept",acceptType);
             urlConnection.setRequestProperty("Content-Type","application/xml;charset=UTF-8");
             urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(XMLTree.getBytes().length));
             urlConnection.setRequestProperty("Accept-language", clientLanguage );
@@ -512,7 +512,13 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 			if (context.getRealPath("temp")==null) dir = context.getRealPath("/temp");
 			else dir = context.getRealPath("temp");
 			Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dir + "/" + filename ), "UTF-8"));
-         	out.append(buffer.toString());
+         	out.append(
+         			buffer.toString().replace(
+       				"url(\"/schemas/altova/inspireResource.css\");", 
+       				"url(\"http://inspire-geoportal.ec.europa.eu/schemas/altova/inspireResource.css\");")
+         			);
+       		
+
         	out.flush();
        		out.close();
        		return filename;
