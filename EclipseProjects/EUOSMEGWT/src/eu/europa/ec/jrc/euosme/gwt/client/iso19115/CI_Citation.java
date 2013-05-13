@@ -33,6 +33,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
 import eu.europa.ec.jrc.euosme.gwt.client.CheckFunctions;
+import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
@@ -135,6 +136,13 @@ public class CI_Citation extends CI {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			identifierObj.setRequired(true);
 			identifierContainerObj.setRequired(true);
+			if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString())){
+				identifierObj.setRequired(false);
+				identifierContainerObj.setRequired(false);
+				
+				identifierContainerObj.setVisible(false);
+				identifierObj.setVisible(false);
+			}
 			if (i==0) { // TAB Identification
 				alternateTitleObj.setVisible(false);
 				titleObj.setLabel(constants.resourceTitle());
@@ -143,7 +151,8 @@ public class CI_Citation extends CI {
 				dateObj.setVisible(false);
 				dateContainerObj.setVisible(false);
 				dateContainerObj.removeFromParent();
-				dateObj.removeFromParent();			
+				dateObj.removeFromParent();
+
 			}
 			if (i==1) { // TAB keyword				
 				alternateTitleObj.setVisible(false);

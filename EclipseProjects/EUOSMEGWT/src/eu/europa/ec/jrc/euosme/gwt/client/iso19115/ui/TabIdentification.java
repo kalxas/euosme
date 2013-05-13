@@ -147,20 +147,29 @@ public class TabIdentification extends Composite {
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			CI_CitationObj.setInterface(0);
 			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
-				if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString()))
+				if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString())){
 					parentIdentifierObj.setVisible(false);
-				else	
+					}
+				else{	
 					//parentIdentifierObj.setVisible(true);
 					parentIdentifierObj.setVisible(false);
+					}
 			}
-			else 
+			else{ 
 				parentIdentifierObj.setVisible(false);
-			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) languageObj.setVisible(false);
-			else operatesOnObj.setVisible(false);
+			}
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())){ 
+				languageObj.setVisible(false);
+				}
+			else{ 
+				operatesOnObj.setVisible(false);
+				}
 			resourceTypeObj.setVisible(false);
 			CI_CitationObj.removeDisclosure();
 			//onlineResourceObj.removeDisclosure();
 		}
-		else operatesOnObj.setVisible(false);
+		else{
+			operatesOnObj.setVisible(false);
+			}
 	}
 }

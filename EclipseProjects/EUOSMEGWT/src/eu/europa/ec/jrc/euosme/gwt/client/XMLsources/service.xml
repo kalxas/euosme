@@ -126,7 +126,7 @@
 			</gmd:resourceConstraints>
 			<gmd:resourceConstraints>
 				<gmd:MD_LegalConstraints>
-					<gmd:accessConstraints><gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" codeListValue=""></gmd:MD_RestrictionCode></gmd:accessConstraints>
+					<gmd:accessConstraints><gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</gmd:MD_RestrictionCode></gmd:accessConstraints>
 					<gmd:otherConstraints><gco:CharacterString></gco:CharacterString></gmd:otherConstraints>
 				</gmd:MD_LegalConstraints>
 			</gmd:resourceConstraints>			
@@ -147,7 +147,7 @@
 				</gmd:EX_Extent>
 			</gmd:extent>
 			<srv:serviceType><gco:LocalName></gco:LocalName></srv:serviceType>
-			<srv:operatesOn href=""></srv:operatesOn>								
+			
 		</srv:SV_ServiceIdentification>
 	</gmd:identificationInfo>
 	<gmd:distributionInfo>
