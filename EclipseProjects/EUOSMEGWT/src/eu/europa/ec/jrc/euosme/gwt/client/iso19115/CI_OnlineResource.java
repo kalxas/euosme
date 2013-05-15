@@ -119,7 +119,7 @@ public class CI_OnlineResource extends CI {
 			nameObj.setVisible(false);
 			descriptionObj.setVisible(false);
 			functionObj.setVisible(false);
-			linkageObj.setVisible(false);
+			linkageObj.setVisible(true);
 			linkageObj.setRequired(false);
 		} else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString())) {
 			protocolObj.setVisible(false);

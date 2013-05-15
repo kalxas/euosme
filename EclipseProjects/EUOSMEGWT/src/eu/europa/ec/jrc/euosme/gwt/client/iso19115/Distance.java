@@ -29,7 +29,6 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
-import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeList;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CodeListFree;
 
 /**

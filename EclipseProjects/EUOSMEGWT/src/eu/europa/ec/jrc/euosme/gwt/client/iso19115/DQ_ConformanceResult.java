@@ -24,8 +24,6 @@ import com.google.gwt.event.logical.shared.SelectionEvent;
 import com.google.gwt.event.logical.shared.SelectionHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.user.client.ui.TreeItem;
-import com.google.gwt.user.client.ui.VerticalPanel;
-import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
 
 import eu.europa.ec.jrc.euosme.gwt.client.CIOrientations;
@@ -38,7 +36,6 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Messages;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.Boolean;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CI;
 import eu.europa.ec.jrc.euosme.gwt.client.widgets.CharacterString;
-import eu.europa.ec.jrc.euosme.gwt.client.widgets.ISOCharacterString;
 
 /**
  * Create DQ_ConformanceResult model
