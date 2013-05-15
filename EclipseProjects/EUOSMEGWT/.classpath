@@ -36,7 +36,7 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/xmlrpc-server-3.1.2.jar"/>
 	<classpathentry kind="lib" path="lib/gwt-ol-0.5/gwt-openlayers-client-0.5.jar"/>
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/gwt-2.1.1"/>
-	<classpathentry kind="lib" path="E:/quaglan/software/apache/httpcomponents-client-4.2.5-bin/httpcomponents-client-4.2.5/lib/httpclient-4.2.5.jar"/>
-	<classpathentry kind="lib" path="E:/quaglan/software/apache/httpcomponents-client-4.2.5-bin/httpcomponents-client-4.2.5/lib/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpcore-4.2.4.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
