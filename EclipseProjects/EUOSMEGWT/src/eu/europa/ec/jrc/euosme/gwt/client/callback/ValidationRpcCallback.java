@@ -40,7 +40,9 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.xml.client.Document;
 import com.google.gwt.xml.client.XMLParser;
 
+import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback.returnType;
 import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
+import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
 
 /**
  * Contains the implementation of the callback class from Validation service
@@ -48,7 +50,7 @@ import eu.europa.ec.jrc.euosme.gwt.client.i18n.iso19115Constants;
  * @version 1.1 - December 2010
  * @author Marzia Grasso
  */
-public class ValidationRpcCallback implements AsyncCallback<String>,
+public class ValidationRpcCallback implements  AsyncCallback <InspireServiceRpcCallback.returnType>,
 		RequestCallback {
 
 	/** Constants declaration */
@@ -60,14 +62,23 @@ public class ValidationRpcCallback implements AsyncCallback<String>,
 	 * @see
 	 * com.google.gwt.user.client.rpc.AsyncCallback#onSuccess(java.lang.Object)
 	 */
-	public void onSuccess(String result) {
+	public void onSuccess(InspireServiceRpcCallback.returnType result) {
 		if (result == null)
 			return;
 		// getOldValidationMsg(result);
-		getNewValidationMsg(result);
+		getNewValidationMsg(result.getText());
+
+		try {
+			MainPanel.myHTML.getElement().getElementsByTagName("div")
+					.getItem(0).getStyle().setOverflow(Overflow.AUTO);
+		} catch (Exception ex) {
+		}
+
+		MainPanel.myHTML.setUrl(result.getUrl());
+		
 	}
 
-	public void getNewValidationMsg(String result) {
+	public void getNewValidationMsg( String result) {
 		String warningDialog = "";
 
 		// HTML resultHTM = new HTML(result);
@@ -241,3 +252,4 @@ public class ValidationRpcCallback implements AsyncCallback<String>,
 		Window.alert(ret);
 	}
 }
+

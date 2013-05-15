@@ -31,8 +31,6 @@ import com.google.gwt.dom.client.Style;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.event.logical.shared.CloseEvent;
-import com.google.gwt.event.logical.shared.CloseHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.LocaleInfo;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -42,25 +40,20 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.Window.ClosingEvent;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.DialogBox;
+import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.FileUpload;
 import com.google.gwt.user.client.ui.FormPanel;
-import com.google.gwt.user.client.ui.FormPanel.SubmitCompleteHandler;
 import com.google.gwt.user.client.ui.Frame;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
-import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.MenuBar;
 import com.google.gwt.user.client.ui.MenuItem;
 import com.google.gwt.user.client.ui.PopupPanel;
-import com.google.gwt.user.client.ui.RadioButton;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
-import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.SplitLayoutPanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
@@ -74,9 +67,9 @@ import com.google.gwt.user.client.ui.FormPanel.SubmitEvent;
 import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
 import eu.europa.ec.jrc.euosme.gwt.client.DataTypes;
 import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
+import eu.europa.ec.jrc.euosme.gwt.client.MyResources;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxyAsync;
-import eu.europa.ec.jrc.euosme.gwt.client.MyResources;
 import eu.europa.ec.jrc.euosme.gwt.client.Utilities;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.CodeListRpcCallback;
 import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback;
@@ -418,7 +411,8 @@ public class MainPanel extends Composite {
 					acceptType = "application/vnd.eu.europa.ec.inspire.resource.rdsi+html";
 				}
 
-				ls.invokeInspireMetadataConverterService(acceptType, myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),myFileName,callback);			
+				//ls.invokeInspireMetadataConverterService(acceptType, myXMLTree,LocaleInfo.getCurrentLocale().getLocaleName(),myFileName,callback);
+				ls.invokeValidationService(myXMLTree, LocaleInfo.getCurrentLocale().getLocaleName(), callback);
 			}			
 		});
 		refreshHTML.setHTML(constants.refresh());
@@ -571,9 +565,9 @@ public class MainPanel extends Composite {
 		//get XML tree structure
 		String myXMLTree = getXMLTree();
 		// call validation service via RPC
-		AsyncCallback<String> callback = new ValidationRpcCallback();
+		 AsyncCallback <InspireServiceRpcCallback.returnType> callback = new ValidationRpcCallback();
 		RESTfulWebServiceProxyAsync ls = RESTfulWebServiceProxy.Util.getInstance();
-		ls.invokeValidationService(myXMLTree, callback);
+		ls.invokeValidationService(myXMLTree, LocaleInfo.getCurrentLocale().getLocaleName(), callback);
 	}
 	
 	/**
@@ -713,7 +707,7 @@ public class MainPanel extends Composite {
 		myForm.setAction("downloadService");
 		myForm.setMethod(FormPanel.METHOD_POST);
 		//myForm.setEncoding("multipart/form-data; charset=UTF-8");
-		final Label loadingLabel = new Label(constants.savingFile());
+		//final Label loadingLabel = new Label(constants.savingFile());
 		final Button openFileButton = new Button(constants.openFileButton(), new ClickHandler() {			
 			@Override
 			public void onClick(ClickEvent event) {

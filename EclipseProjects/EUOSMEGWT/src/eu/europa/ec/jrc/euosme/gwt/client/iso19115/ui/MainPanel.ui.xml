@@ -118,7 +118,7 @@
    					<mybase:Tabs ui:field="tabs"/>   							
 				</g:FormPanel>   			
    			</g:center>
-   			<g:east size='250'>   			
+   			<g:east size='400'>   			
    				<g:StackLayoutPanel unit='PX'>
   					<g:stack>
     					<g:customHeader size='30'><g:HorizontalPanel><g:Label><ui:msg description="Basic" key="Basic">Basic</ui:msg></g:Label><g:Button ui:field="refreshHTML"/></g:HorizontalPanel></g:customHeader>

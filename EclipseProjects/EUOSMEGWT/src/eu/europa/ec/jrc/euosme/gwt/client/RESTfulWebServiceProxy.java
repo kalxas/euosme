@@ -25,6 +25,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
+import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback.returnType;
+
 /**
  * Remote service interface (syncronous)
  * 
@@ -52,17 +54,12 @@ public interface RESTfulWebServiceProxy extends RemoteService {
     public Map<String,String> invokeGemetService(String serviceName, String clientLanguage)
     	throws RESTfulWebServiceException;
     
-	public String invokeUpdateRESTfulWebService() 
-		throws RESTfulWebServiceException;
+	public returnType invokeUpdateRESTfulWebService()    	throws RESTfulWebServiceException;
+
 	
-	public String invokeValidationService(String XMLTree)
-		throws RESTfulWebServiceException;
-
-	public String invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename)
-		throws RESTfulWebServiceException;
-
-	public String invokeInspireUUIDService()
-		throws RESTfulWebServiceException;
+	public returnType invokeValidationService(String XMLTree, String clientLanguage) throws RESTfulWebServiceException;
+	
+public returnType invokeInspireUUIDService() throws RESTfulWebServiceException;
 	
 	public String invokeCacheRepositoryRESTfulWebService(String resource, String repository)
 		throws RESTfulWebServiceException;

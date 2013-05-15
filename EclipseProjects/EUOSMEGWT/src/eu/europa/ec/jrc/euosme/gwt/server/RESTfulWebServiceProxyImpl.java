@@ -35,6 +35,14 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
+import org.apache.http.Header;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.HttpParams;
+
 import java.net.Authenticator;
 import java.net.MalformedURLException;
 import java.net.PasswordAuthentication;
@@ -44,15 +52,21 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestBuilder;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
-import eu.europa.ec.jrc.euosme.gwt.client.AppModes;
-import eu.europa.ec.jrc.euosme.gwt.client.EUOSMEGWT;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceException;
 import eu.europa.ec.jrc.euosme.gwt.client.RESTfulWebServiceProxy;
+import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback;
+import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback.returnType;
 import eu.inspire.geoportal.viewclient.cache.gemet.Concept;
 import eu.inspire.geoportal.viewclient.cache.gemet.GemetClient;
 
@@ -265,7 +279,7 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	    }	   
 	 }
     
-	public String invokeUpdateRESTfulWebService() 
+	public InspireServiceRpcCallback.returnType invokeUpdateRESTfulWebService() 
 	throws RESTfulWebServiceException {
 		try {
 	    	String uri = "";
@@ -422,15 +436,19 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	}
 	*/
 	
-	public String invokeValidationService(String XMLTree) 
+	public InspireServiceRpcCallback.returnType invokeValidationService(String XMLTree, String clientLanguage) 
  	throws RESTfulWebServiceException {
+        HttpURLConnection urlConnection = null;
+        
 		try {
+		
 			URL u = new URL(inspireWebService + "resources/INSPIREResourceTester");
-            HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection();
+
+            urlConnection = (HttpURLConnection) u.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setRequestProperty("Accept","application/xml");
             urlConnection.setRequestProperty("Content-Type","text/plain;charset=UTF-8");
-            //urlConnection.setRequestProperty("Accept-language", clientLanguage );
+            urlConnection.setRequestProperty("Accept-language", clientLanguage );
             urlConnection.setUseCaches (false);
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
@@ -448,8 +466,12 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
             wr.flush ();
             wr.close ();
             int status = urlConnection.getResponseCode();
-            if (status != 201)
+            if (status != 201){
                 throw (new RESTfulWebServiceException("Invalid HTTP response status code " + status + " from web service server."));
+            }
+            
+            List<String> listLocation = urlConnection.getHeaderFields().get("Location");
+            String url = listLocation.get(0); 
            
             BufferedReader d = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
 	        StringBuilder buffer = new StringBuilder(16384);
@@ -462,9 +484,42 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	        	d.close();
 	        }
 	        // Write file
+
 	        ServletContext context = getServletConfig().getServletContext();
 	    	String dir = "";
-       		return buffer.toString();
+	    	InspireServiceRpcCallback.returnType retVal = new InspireServiceRpcCallback.returnType();
+	    	retVal.setText(buffer.toString());
+
+	    	retVal.setUrl(url);
+	    	//Try to fetch translated page
+
+	        try {
+		    	HttpClient httpClient = new DefaultHttpClient();
+		        HttpParams httpParams = httpClient.getParams();
+		        HttpRequestBase req = null;
+		        
+		        req = new HttpGet(url);
+	        	req.setHeader("Accept-Language", clientLanguage);
+	        	req.setHeader("Accept", "text/html");
+	        	
+		        HttpResponse response = httpClient.execute(req);
+		        Header loc = response.getFirstHeader("Content-Location");
+		        String fileName = loc.getValue();
+		        String fullUrl = url + "/" + fileName;
+		        retVal.setUrl(fullUrl);
+
+	        	
+	          
+	        	  
+
+	        } catch (Exception e) {
+	          // Code omitted for clarity
+	        	e.getMessage();
+	        }
+	        
+
+       		return retVal;
+ 
        } 
        catch (MalformedURLException e) {
        	throw new RESTfulWebServiceException(e.getMessage(), e);
@@ -472,9 +527,14 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
        catch (IOException e) {
            throw new RESTfulWebServiceException(e.getMessage(), e);
        }		
+       finally{
+    	   if (urlConnection != null){
+    		   urlConnection.disconnect();    	   
+    	   }
+       }
 	}
 	
-	
+	/*
 	public String invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename) 
  	throws RESTfulWebServiceException {
 		try {
@@ -529,9 +589,9 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
        catch (IOException e) {
            throw new RESTfulWebServiceException(e.getMessage(), e);
        }		
-	}
+	}*/
 	
-	public String invokeInspireUUIDService() 
+	public returnType invokeInspireUUIDService() 
  	throws RESTfulWebServiceException {
 		try {
             URL u = new URL(inspireWebService + "resources/UUID ");
@@ -555,7 +615,9 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	        } finally {
 	        	d.close();
 	        }		 
-            return buffer.toString();
+	        InspireServiceRpcCallback.returnType retVal = new InspireServiceRpcCallback.returnType();
+            retVal.setText(buffer.toString());
+            return retVal;
        } 
        catch (MalformedURLException e) {
        	throw new RESTfulWebServiceException(e.getMessage(), e);
@@ -680,4 +742,6 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	    }	    
 	    return contents.toString();
 	  }
+
+	
 }        

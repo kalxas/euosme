@@ -23,6 +23,8 @@ import java.util.Map;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
+import eu.europa.ec.jrc.euosme.gwt.client.callback.InspireServiceRpcCallback;
+
 /**
  * Remote service asynchronous interface for {@link RESTfulWebServiceProxy}
  * 
@@ -35,14 +37,18 @@ public interface RESTfulWebServiceProxyAsync {
     
     public void invokeGemetService(String serviceName, String clientLanguage, AsyncCallback<Map<String,String>> callback);
     
-	public void invokeUpdateRESTfulWebService(AsyncCallback<String> callback);
+	public void invokeUpdateRESTfulWebService(AsyncCallback<InspireServiceRpcCallback.returnType> callback);
 	
-	public void invokeValidationService(String XMLTree, AsyncCallback<String> callback);
+	void invokeValidationService(String XMLTree, String clientLanguage,
+			AsyncCallback<InspireServiceRpcCallback.returnType> callback);
 
-	public void invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename, AsyncCallback<String> callback);
+	//public void invokeInspireMetadataConverterService(String acceptType, String XMLTree, String clientLanguage, String filename, AsyncCallback<String> callback);
 
-	public void invokeInspireUUIDService(AsyncCallback<String> callback);
+	public void invokeInspireUUIDService(AsyncCallback<InspireServiceRpcCallback.returnType> callback);
 
 	public void invokeCacheRepositoryRESTfulWebService(String resource, String repository, AsyncCallback<String> callback);
+/*
+	public void invokeValidationService(String myXMLTree, String localeName,
+			InspireServiceRpcCallback callback);*/
 	
 }

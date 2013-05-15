@@ -19,6 +19,8 @@ LICENSE END***/
 
 package eu.europa.ec.jrc.euosme.gwt.client.callback;
 
+import java.io.Serializable;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.http.client.Request;
 import com.google.gwt.http.client.RequestCallback;
@@ -41,7 +43,28 @@ import eu.europa.ec.jrc.euosme.gwt.client.iso19115.ui.MainPanel;
  * @version 1.0 - December 2010
  * @author 	Marzia Grasso 
  */
-public class InspireServiceRpcCallback implements AsyncCallback <String>, RequestCallback {
+public class InspireServiceRpcCallback implements AsyncCallback <InspireServiceRpcCallback.returnType>, RequestCallback {
+
+	public static class returnType implements Serializable {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+		private String url;
+		private String text;
+		public void setUrl(String url) {
+			this.url = url;
+		}
+		public String getUrl() {
+			return url;
+		}
+		public void setText(String text) {
+			this.text = text;
+		}
+		public String getText() {
+			return text;
+		}
+	}
 	
 	/** the text box corresponding to the Code object to value */
 	TextBox codeObj;
@@ -58,12 +81,15 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	/* (non-Javadoc)
 	 * @see com.google.gwt.user.client.rpc.AsyncCallback#onSuccess(java.lang.Object)
 	 */
-	public void onSuccess(String result) {
+	public void onSuccess(returnType result) {
     	if (result == null)
     		return;
-    	if (typeOfResult.equalsIgnoreCase("XML")) {
+    	String url = result.getUrl();
+    	if (url != null){
+    	    MainPanel.myHTML.setUrl(url);
+    	} else if (typeOfResult.equalsIgnoreCase("XML")) {
 	    	try {
-	    		Document uuidDocument = XMLParser.parse(result);
+	    		Document uuidDocument = XMLParser.parse(result.getText());
 	    		//<uuid><canonicalForm>d5025221-f93b-11df-b599-0017085a97ab</canonicalForm>
 	    		String uuid = uuidDocument.getElementsByTagName("canonicalForm").item(0).getFirstChild().getNodeValue();    
 	    		codeObj.setText(uuid);
@@ -85,7 +111,7 @@ public class InspireServiceRpcCallback implements AsyncCallback <String>, Reques
 	    		return;
 	    	}
     	}
-	    else MainPanel.myHTML.setUrl("temp/" + result);
+
     }
 
     /* (non-Javadoc)
