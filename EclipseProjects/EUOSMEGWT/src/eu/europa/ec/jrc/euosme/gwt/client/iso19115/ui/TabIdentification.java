@@ -136,7 +136,7 @@ public class TabIdentification extends Composite {
 		onlineResourceObj.setFormName("md_metadata[1].distributioninfo[1].md_distribution[1].transferoptions[1].md_digitaltransferoptions[1].online[1].ci_onlineresource[1]");
 		onlineResourceContainerObj.setFormName("md_metadata[1].distributioninfo[1].md_distribution[1].transferoptions[1].md_digitaltransferoptions[1].online[1]");
 		languageObj.setFormName("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].language[1].languagecode[1]");
-		operatesOnObj.setFormName("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].operateson[1]");
+		operatesOnObj.setFormName("md_metadata[1].identificationinfo[1]." + MainPanel.identificationInfoSubType + "[1].operateson[1].@xlink:href");
 		parentIdentifierObj.setFormName("md_metadata[1].parentidentifier[1].characterstring[1]");
 	}
 	
@@ -149,10 +149,12 @@ public class TabIdentification extends Composite {
 			if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())){
 				if (EUOSMEGWT.metadataType.equals(DataTypes.DATA_SERVICE.toString())){
 					parentIdentifierObj.setVisible(false);
+					operatesOnObj.setVisible(true);
 					}
 				else{	
 					//parentIdentifierObj.setVisible(true);
 					parentIdentifierObj.setVisible(false);
+					operatesOnObj.setVisible(false);
 					}
 			}
 			else{ 
