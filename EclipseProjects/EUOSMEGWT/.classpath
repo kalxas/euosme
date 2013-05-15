@@ -38,5 +38,7 @@
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/gwt-2.1.1"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/httpclient-4.2.5.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
