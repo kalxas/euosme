@@ -492,9 +492,9 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 
 	    	retVal.setUrl(url);
 	    	//Try to fetch translated page
-
+	    	HttpClient httpClient = null;
 	        try {
-		    	HttpClient httpClient = new DefaultHttpClient();
+		    	httpClient = new DefaultHttpClient();
 		        HttpParams httpParams = httpClient.getParams();
 		        HttpRequestBase req = null;
 		        
@@ -515,6 +515,10 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
 	        } catch (Exception e) {
 	          // Code omitted for clarity
 	        	e.getMessage();
+	        } finally{
+	        	if (httpClient != null){
+	            httpClient.getConnectionManager().shutdown();
+	        	}
 	        }
 	        
 
