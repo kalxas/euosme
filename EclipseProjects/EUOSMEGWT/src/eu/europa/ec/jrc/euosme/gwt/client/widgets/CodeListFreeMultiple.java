@@ -234,6 +234,18 @@ public class CodeListFreeMultiple extends Composite {
 			    		myTextBox.hideSuggestionList();				
 				}			
 			});
+
+			
+			myTextBox.getTextBox().addBlurHandler(new BlurHandler() {
+
+				@Override
+				public void onBlur(BlurEvent event) {
+					if (!myTextBox.getText().isEmpty())
+						addNew("newButton",myTextBox.getText());					
+				}
+				
+			}); 
+	
 			
 			// Set label for the help
 			iso19115Constants constants = GWT.create(iso19115Constants.class);
