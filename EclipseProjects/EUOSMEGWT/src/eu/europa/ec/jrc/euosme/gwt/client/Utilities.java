@@ -1560,7 +1560,7 @@ public class Utilities {
 			// clone parent of characterString element
 			TreeItem pcloneMyTreeItem = new TreeItem();
 			int j = newId.lastIndexOf("[1]");
-			myFormName = newId.substring(0,j);
+			myFormName = newId.substring(0,j+3);
 			j = myFormName.lastIndexOf("]");
 			pcloneMyTreeItem.setTitle(myFormName.substring(0,j+1));
 			pcloneMyTreeItem.setText(myTreeItem.getParentItem().getText());
