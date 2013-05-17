@@ -38,6 +38,8 @@ import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.regexp.shared.MatchResult;
+import com.google.gwt.regexp.shared.RegExp;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Random;
 import com.google.gwt.user.client.ui.Anchor;
@@ -1058,11 +1060,53 @@ public class Utilities {
 				   if (val.getChild(j).getText().startsWith("@")) {
 					   // add attribute
 					   String[] attrValues = val.getChild(j).getText().split("=");
-					   if (attrValues.length == 1)  
+					   
+					   String inputStr = val.getChild(j).getText();
+					   String patternStr = "@((?:[^:]+:)?(?:[^:]+))=(.*)";
+					   RegExp regExp = RegExp.compile(patternStr);
+					   MatchResult matcher = regExp.exec(inputStr);
+					   boolean matchFound = regExp.test(inputStr);
+
+					   String attrName = null;
+					   String attrValue = null;
+					   
+					   if (matchFound) {
+					       // Get all groups for this match
+					       for (int curIdx=0; curIdx<=matcher.getGroupCount(); curIdx++) {
+					           String groupStr = matcher.getGroup(curIdx);
+					           System.out.println(" " + curIdx + ": " + groupStr);
+					           if (curIdx == 1){
+					        	   attrName = groupStr;
+					           } else if  (curIdx == 2){
+					        	   attrValue = groupStr;
+					           }
+					       }
+						   if (attrValue == null){
+							   myAttributes += " " + attrName + "=\"\"";
+						   } else {
+							   myAttributes += " " + attrName + "=\"" + clearValue(attrValue) + "\"";
+						   }
+							   /*
+						   } else if(attrValues.length > 2) {
+							   myAttributes += " " + attrValues[0].substring(1) + "=\"" + attrValues[1];
+							   for(int ja=2;ja<attrValues.length;ja++)
+								   myAttributes += "=" + attrValues[ja];
+							   myAttributes += "\"";
+						   }*/
+						   nr_attributes++;
+						   hasAttributes = true;
+					       
+					   }else{
+						   attrName = attrName + "";
+						   
+					   }
+					   
+					   /*
+					   if (attrValues.length == 1){
 						   myAttributes += " " + attrValues[0].substring(1) + "=\"\"";
-					   else if(attrValues.length == 2)
+					   } else if(attrValues.length == 2){
 						   myAttributes += " " + attrValues[0].substring(1) + "=\"" + attrValues[1] + "\"";
-					   else if(attrValues.length > 2) {
+					   } else if(attrValues.length > 2) {
 						   myAttributes += " " + attrValues[0].substring(1) + "=\"" + attrValues[1];
 						   for(int ja=2;ja<attrValues.length;ja++)
 							   myAttributes += "=" + attrValues[ja];
@@ -1070,6 +1114,7 @@ public class Utilities {
 					   }
 					   nr_attributes++;
 					   hasAttributes = true;
+					   */
 				   }
 				   else if (val.getChild(j).getText().startsWith(constants.XMLValue())) {
 					   myValue = val.getChild(j).getText();
