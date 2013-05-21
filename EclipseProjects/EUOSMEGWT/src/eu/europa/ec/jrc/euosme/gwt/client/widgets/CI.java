@@ -259,8 +259,14 @@ public class CI extends Composite {
 		this.removeFromParent();
 		TreeItem myTreeItem = Utilities.getSelectTreeItem(this.getElement().getId());
 		if (myTreeItem!=null) {
-			if (myTreeItem.getParentItem()!=null) myTreeItem.getParentItem().remove();
-			else myTreeItem.remove();
+			if (myTreeItem.getParentItem()!=null){
+				//myTreeItem.getParentItem().remove();
+				myTreeItem.remove();
+				
+			}
+			else{
+				myTreeItem.remove();
+			}
 		}
 	}
 	

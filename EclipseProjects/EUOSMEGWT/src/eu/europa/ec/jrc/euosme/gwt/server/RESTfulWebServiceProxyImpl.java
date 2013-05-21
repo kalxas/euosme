@@ -268,6 +268,12 @@ public class RESTfulWebServiceProxyImpl extends RemoteServiceServlet implements 
                 Concept concept = (Concept) i.next();
                 String preferredLabel = concept.getPreferredLabel().getPropertyValue().getString();
                 String definition = concept.getDefinition().getPropertyValue().getString();
+                //Quick fix while we update the our GEMET clone 
+                if ("nl".equals(clientLanguage)){
+                	if ("Gebieden met natuurrisico'es".equals(preferredLabel)){
+                		preferredLabel = "Gebieden met natuurrisico's";
+                	}
+                }
                 @SuppressWarnings("unused")
 				String definition_uri = concept.getUri();
                 definitions.put(preferredLabel,definition);
