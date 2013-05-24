@@ -2007,20 +2007,28 @@ public class Utilities {
 				Utilities.valueField("md_metadata[1].datestamp[1].date[1]", myTodayDate);
 				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].datestamp[1].date[1]");
 				Utilities.setTextTreeItem(myTreeItem,myTodayDate);
-				
+
 				// set MD language to current chosen language
 				String languageCode = get3LettersCode(LocaleInfo.getCurrentLocale().getLocaleName());
 				Utilities.valueField("md_metadata[1].language[1].languagecode[1]", languageCode);
-				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].language[1].languagecode[1");
+				
+				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].language[1].languagecode[1].@codeListValue");
 				Utilities.setTextTreeItem(myTreeItem, languageCode);
 				
+				myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].language[1].languagecode[1]");
+				Utilities.setTextTreeItem(myTreeItem, languageCode);
+
 				// set resource language to current chosen language (dataset and series only)
 				if (!EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATA_SERVICE.toString())) {
 					Utilities.valueField("md_metadata[1].identificationinfo[1].md_dataidentification[1].language[1].languagecode[1]", languageCode);
+
+					myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1].language[1].languagecode[1].@codeListValue");
+					Utilities.setTextTreeItem(myTreeItem, languageCode);					 
+					
 					myTreeItem = Utilities.getSelectTreeItem("md_metadata[1].identificationinfo[1].md_dataidentification[1].language[1].languagecode[1]");
 					Utilities.setTextTreeItem(myTreeItem, languageCode);					 
 				}
-				
+
 			}
 		}
 		// set identificationInfo sub type

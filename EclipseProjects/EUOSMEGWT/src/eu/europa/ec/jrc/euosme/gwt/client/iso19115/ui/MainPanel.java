@@ -502,24 +502,33 @@ public class MainPanel extends Composite {
 		
 		// rdsi keyword reset
 		EUOSMEGWT.rdsi_keyword = new ArrayList<String>();
+
+		String languageCode= Utilities.get3LettersCode(LocaleInfo.getCurrentLocale().getLocaleName());
+		String template = "";
 		
 		// default XML
 		if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOSS.toString()) || EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.GEOPORTAL.toString()) ) {
+			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())){ 
+				template = Utilities.parseMessage(MyResources.INSTANCE.seriesXML().getText(),true);
+			} else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())){
+				template = MyResources.INSTANCE.datasetXML().getText();
+			} else{ 
+				template = MyResources.INSTANCE.serviceXML().getText();
+			}
+		} else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
 			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) 
-				Utilities.parseMessage(MyResources.INSTANCE.seriesXML().getText(),true);
+				template = MyResources.INSTANCE.series_rdsiXML().getText();
 			else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
-				Utilities.parseMessage(MyResources.INSTANCE.datasetXML().getText(),true);					
+				template = MyResources.INSTANCE.dataset_rdsiXML().getText();					
 			else 
-				Utilities.parseMessage(MyResources.INSTANCE.serviceXML().getText(),true);
+				template = MyResources.INSTANCE.service_rdsiXML().getText();			
 		}
-		else if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString())) {
-			if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET_SERIES.toString())) 
-				Utilities.parseMessage(MyResources.INSTANCE.series_rdsiXML().getText(),true);
-			else if (EUOSMEGWT.metadataType.equalsIgnoreCase(DataTypes.DATASET.toString())) 
-				Utilities.parseMessage(MyResources.INSTANCE.dataset_rdsiXML().getText(),true);					
-			else 
-				Utilities.parseMessage(MyResources.INSTANCE.service_rdsiXML().getText(),true);			
-		}
+		template = template.replace(
+				"<gmd:language><gmd:LanguageCode codeList=\"http://www.loc.gov/standards/iso639-2/\" codeListValue=\"eng\">eng</gmd:LanguageCode></gmd:language>",						
+				"<gmd:language><gmd:LanguageCode codeList=\"http://www.loc.gov/standards/iso639-2/\" codeListValue=\"" + languageCode + "\">" + languageCode + "</gmd:LanguageCode></gmd:language>"						
+				 );
+		
+		Utilities.parseMessage(template,true);
 		
 		// load file
 		if (!loadFileXML.isEmpty()) {
