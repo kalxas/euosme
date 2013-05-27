@@ -962,7 +962,7 @@ public class MainPanel extends Composite {
 					"<gmd:pass gco:nilReason=\"template\"/>,");
 			myXMLTree = myXMLTree.replace(
 					"<gmd:pass><gco:Boolean></gco:Boolean></gmd:pass>", 
-					"<gmd:pass gco:nilReason=\"template\"/>,");
+					"<gmd:pass gco:nilReason=\"template\"/>");
 		}
 		// Encode "Now" for temporal end date
 		myXMLTree = myXMLTree.replace("<gml:endPosition>now</gml:endPosition>", "<gml:endPosition indeterminatePosition=\"now\"></gml:endPosition>");
