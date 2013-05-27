@@ -959,7 +959,7 @@ public class MainPanel extends Composite {
 			
 			myXMLTree = myXMLTree.replace(
 					"<gmd:pass></gmd:pass>", 
-					"<gmd:pass gco:nilReason=\"template\"/>,");
+					"<gmd:pass gco:nilReason=\"template\"/>");
 			myXMLTree = myXMLTree.replace(
 					"<gmd:pass><gco:Boolean></gco:Boolean></gmd:pass>", 
 					"<gmd:pass gco:nilReason=\"template\"/>");
