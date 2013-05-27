@@ -950,8 +950,19 @@ public class MainPanel extends Composite {
 			myXMLTree = myXMLTree.replace("\n\n","\n");
 		}
 		else {
-			myXMLTree = myXMLTree.replace("</gmd:explanation>\n</gmd:DQ_ConformanceResult>", "</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>");
+		
+			myXMLTree = myXMLTree.replace(
+					"</gmd:explanation>\n</gmd:DQ_ConformanceResult>", 
+					"</gmd:explanation>\n<gmd:pass></gmd:pass>\n</gmd:DQ_ConformanceResult>");
 			myXMLTree = myXMLTree.replace("\n\n","\n");
+
+			
+			myXMLTree = myXMLTree.replace(
+					"<gmd:pass></gmd:pass>", 
+					"<gmd:pass gco:nilReason=\"template\"/>,");
+			myXMLTree = myXMLTree.replace(
+					"<gmd:pass><gco:Boolean></gco:Boolean></gmd:pass>", 
+					"<gmd:pass gco:nilReason=\"template\"/>,");
 		}
 		// Encode "Now" for temporal end date
 		myXMLTree = myXMLTree.replace("<gml:endPosition>now</gml:endPosition>", "<gml:endPosition indeterminatePosition=\"now\"></gml:endPosition>");

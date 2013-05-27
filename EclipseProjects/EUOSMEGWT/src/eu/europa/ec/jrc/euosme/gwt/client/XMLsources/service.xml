@@ -379,9 +379,7 @@
 							<gmd:explanation>
 								<gco:CharacterString>See the referenced specification</gco:CharacterString>
 							</gmd:explanation>
-							<gmd:pass>
-								<gco:Boolean/>
-							</gmd:pass>
+							<gmd:pass><gco:Boolean></gco:Boolean></gmd:pass>
 						</gmd:DQ_ConformanceResult>
 					</gmd:result>
 				</gmd:DQ_DomainConsistency>
