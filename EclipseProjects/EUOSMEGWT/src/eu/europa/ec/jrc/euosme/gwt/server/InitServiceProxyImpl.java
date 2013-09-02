@@ -48,7 +48,10 @@ public class InitServiceProxyImpl extends RemoteServiceServlet implements InitSe
         String rpcRepository = config.getInitParameter("rpcRepository");
         settings.put("rpcRepository",rpcRepository);
         String showHeader = config.getInitParameter("showHeader");
-        settings.put("showHeader",showHeader);        
+        settings.put("showHeader",showHeader);
+        //Endpoint of the WMS service used in the Geographic Bounding Box
+        String wmsEndpoint = config.getInitParameter("wmsEndpoint");
+        settings.put("wmsEndpoint",wmsEndpoint);
       }
     
     public InitServiceProxyImpl() { // must have

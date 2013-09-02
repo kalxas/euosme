@@ -41,6 +41,11 @@
 			<param-value>true</param-value>
 			<description>true to show the header with the banner</description>
 		</init-param>
+		<init-param>
+			<param-name>wmsEndpoint</param-name>
+			<param-value>http://ags-sdi-public.jrc.ec.europa.eu/arcgis/services/world-release4-ETRS89/MapServer/WMSServer</param-value>
+			<description>Endpoint of the OGC WMS Service used in the Geographic tab</description>
+		</init-param>
 	</servlet>
 	<servlet>
 		<servlet-name>RESTfulWebServiceProxyImpl</servlet-name>

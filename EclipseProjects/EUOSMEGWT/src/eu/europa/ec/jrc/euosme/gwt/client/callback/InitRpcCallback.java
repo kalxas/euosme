@@ -61,7 +61,10 @@ public class InitRpcCallback implements AsyncCallback <Map<String,String>> {
     	   	EUOSMEGWT.rpcRepository = Boolean.parseBoolean(result.get("rpcRepository"));
     	if (result.get("showHeader")!=null)
     	   	EUOSMEGWT.showHeader = Boolean.parseBoolean(result.get("showHeader"));
-    	
+
+    	if (result.get("wmsEndpoint")!=null)
+    	   	EUOSMEGWT.wmsEndpoint = result.get("wmsEndpoint");
+
     	EUOSMEGWT.startup();
     	if (EUOSMEGWT.appMode.equalsIgnoreCase(AppModes.RDSI.toString()))
     		EUOSMEGWT.chooseResourceType();

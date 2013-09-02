@@ -280,10 +280,11 @@ public class TabGeographic extends Composite {
 			WMSOptions wmsLayerParams = new WMSOptions();
 //			wmsLayerParams.setUntiled();
 //			wmsLayerParams.setTransitionEffect(TransitionEffect.RESIZE);
-			
+			String wmsEndpoint = EUOSMEGWT.wmsEndpoint;
 			WMS wmsLayer = new WMS(
 					"World Map",
-					"http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",
+					//"http://plurel.jrc.ec.europa.eu/ArcGIS/services/worldwithEGM/mapserver/wmsserver",
+					wmsEndpoint,
 					wmsParams,
 					wmsLayerParams);
 			map.addLayers(new Layer[] {wmsLayer});
